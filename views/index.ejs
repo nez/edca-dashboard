@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--  <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet"> -->
+  <link rel='stylesheet' href='/stylesheets/navbar-fixed-top.css' />
+  <title><%= title %></title>
+  <!-- <link rel='stylesheet' href='/stylesheets/main.css'/> -->
+  <!-- <link rel='stylesheet' href='/stylesheets/bootstrap-grid-system.css' /> -->
+  <link rel='stylesheet' href='/stylesheets/buttons.css'/>
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart'], 'language':'es'});
+      google.charts.setOnLoadCallback(drawSeriesChart);
+
+      function drawSeriesChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['ID',                      'Fecha de firma', 'Periodo', 'Tipo',             'Monto'],
+          ['LO-009KDH999-N5-2014',     new Date('2015-01-05'),              1.67,      'Licitación',              39724276.56],
+          ['SO-009KDH999-N24-2015',    new Date('2015-02-20'),              1.36,      'Adjudicación directa',   521999.84],
+          ['SO-009KDH999-N23-2015',    new Date('2015-02-23'),               1.84,      'Adjudicación directa',   638000],
+          ['SO-009KDH999-N26-2015',    new Date('2015-02-20'),              2.78,      'Adjudicación directa',   79716203],
+          ['IO-009KDH999-N11-2015',    new Date('2015-03-20'),              2,         'Invitación a 3',         61801570],
+          ['IO-009KDH999-N10-2015',    new Date(),              1.7,       'Invitación a 3',         73137148],
+          ['LO-099KDH999-N20-2015',    new Date(),              4.77,      'Licitación',             31090763],
+          ['LO-099KDH999-T15-2015',    new Date(),              2.96,      'Licitación',             7485600],
+          ['LO-009KDH999-N46-2015',    new Date(),               1.54,      'Licitación',             141850000],
+          ['LO-009KDH999-N42-2015',    new Date(),              2.05,      'Licitación',             307007000],
+          ['LO-009KDH999-N45-2015',    new Date(),              2.05,      'Licitación',             307007000],
+          ['IO-009KDH999-N41-2015',    78.09,              2.05,      'Invitación a 3',         307007000],
+          ['IO-009KDH999-N54-2015',    78.09,              2.05,      'Invitación a 3',         307007000],
+          ['LO-009KDH999-N47-2015',    78.09,              2.05,      'Licitación',             307007000],
+          ['LO-009KDH999-N50-2015',    78.09,              2.05,      'Licitación',             307007000],
+          ['LO-009KDH999-T52-2015',    78.09,              2.05,      'Licitación',             307007000],
+          ['LO-009KDH999-N79-2015',    78.09,              2.05,      'Licitación',             307007000],
+          ['LO-009KDH999-N80-2015',    78.09,              2.05,      'Licitación',             307007000],
+          ['LO-009KDH999-N78-2015',    78.09,              2.05,      'Licitación',             307007000],
+          ['LO-009KDH999-N86-2015',    78.09,              2.05,      'Licitación',             307007000],
+          ['LO-009KDH999-N87-2015',    78.09,              2.05,      'Licitación',             307007000],
+          ['AO-009KDH999-E26-2016',    78.09,              2.05,      'Adjudicación directa',   307007000],
+          ['AO-009KDH999-E20-2016',    78.09,              2.05,      'Adjudicación directa',   307007000],
+          ['IO-009KDH999-E15-2016',    78.09,              2.05,      'Invitación a 3',         307007000],
+          ['IO-009KDH999-E96-2015',    78.09,              2.05,      'Invitación a 3',         307007000]
+        ]);
+
+        var options = {
+          //title: 'Correlation between life expectancy, fertility rate ',
+          hAxis: {title: 'Fecha de firma'},
+          vAxis: {title: 'Periodo'},
+          bubble: {textStyle: {fontSize: 11}}
+        };
+
+        var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+</head>
+<body>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">datos.gob.mx</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Datos</a></li>
+        <li><a href="#">Herramientas</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Acerca</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<nav class="row top-buffer">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Contrataciones abiertas</a>
+    </div>
+  </div>
+</nav>
+
+<br>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h3 style="text-align: center">GRUPO AEROPORTUARIO<br>
+            <small>de la Ciudad de México</small>
+          </h3>
+          <h2>25 <small>contratos</small></h2>
+          <h2>29 <small>contratistas</small></h2>
+          <h2>N <small>millones de pesos</small></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-5">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <strong>CONTRATACIONES EN EL TIEMPO</strong>
+          <div style="height: 220px" id="series_chart_div" ></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <strong>TIPOS DE CONTRATACIÓN</strong>
+          <div  style="height: 220px" id="chart4"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Buscar..." aria-describedby="basic-addon1">
+        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="list-group">
+    <button type="button" class="list-group-item">Cras justo odio</button>
+    <button type="button" class="list-group-item">Dapibus ac facilisis in</button>
+    <button type="button" class="list-group-item">Morbi leo risus</button>
+    <button type="button" class="list-group-item">Porta ac consectetur ac</button>
+    <button type="button" class="list-group-item">Vestibulum at eros</button>
+  </div>
+
+</div>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/bower_components/jqplot/jquery.jqplot.js"></script>
+<script src="/bower_components/jqplot/plugins/jqplot.donutRenderer.js"></script>
+<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.highlighter.js"></script>
+<link rel="stylesheet" type="text/css" href="/bower_components/jqplot/jquery.jqplot.css" />
+<script>
+
+  $(document).ready(function(){
+    var data = [
+      ['Licitaciones', 65],['Invitacion a 3', 19], ['Adjudicaciones<br> <b>MDP</b>', 16]
+    ];
+
+    var plot4 = $.jqplot('chart4', [data], {
+      //title: 'TIPOS DE CONTRATACION',
+      seriesDefaults: {
+        // make this a donut chart.
+        renderer:$.jqplot.DonutRenderer,
+        rendererOptions:{
+          // Donut's can be cut into slices like pies.
+          sliceMargin: 3,
+          // Pies and donuts can start at any arbitrary angle.
+          startAngle: -90,
+          showDataLabels: true,
+          // By default, data labels show the percentage of the donut/pie.
+          // You can show the data 'value' or data 'label' instead.
+          //dataLabels: 'value',
+          // "totalLabel=true" uses the centre of the donut for the total amount
+          totalLabel: true
+        },
+          seriesColors: ['#00cc99', '#ff4d4d', 'purple']
+      },
+      grid: {
+        drawBorder: false,
+        drawGridLines: true,        // wether to draw lines across the grid or not.
+        shadow: false,
+        backgroundColor: 'rgb(255, 255, 255)'
+      },
+      highlighter: {
+        show: true,
+        useAxesFormatters: false,
+        tooltipFormatString: '%s'
+      }
+    });
+  });
+
+</script>
+</body>
+</html>

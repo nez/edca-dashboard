@@ -1,0 +1,23 @@
+{
+  "name": "dashboard_edca",
+  "authors": [
+    "Mario Torres <mario291187@gmail.com>"
+  ],
+  "description": "Contrataciones abiertas",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "d3": "^3.5.17",
+    "font-awesome": "fontawesome#^4.6.3",
+    "jqplot": "*"
+  }
+}
