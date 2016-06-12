@@ -20,39 +20,44 @@
       function drawSeriesChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['ID',                      'Fecha de firma', 'Periodo', 'Tipo',             'Monto'],
-          ['LO-009KDH999-N5-2014',     new Date('2015-01-05'),              1.67,      'Licitación',              39724276.56],
-          ['SO-009KDH999-N24-2015',    new Date('2015-02-20'),              1.36,      'Adjudicación directa',   521999.84],
-          ['SO-009KDH999-N23-2015',    new Date('2015-02-23'),               1.84,      'Adjudicación directa',   638000],
-          ['SO-009KDH999-N26-2015',    new Date('2015-02-20'),              2.78,      'Adjudicación directa',   79716203],
-          ['IO-009KDH999-N11-2015',    new Date('2015-03-20'),              2,         'Invitación a 3',         61801570],
-          ['IO-009KDH999-N10-2015',    new Date(),              1.7,       'Invitación a 3',         73137148],
-          ['LO-099KDH999-N20-2015',    new Date(),              4.77,      'Licitación',             31090763],
-          ['LO-099KDH999-T15-2015',    new Date(),              2.96,      'Licitación',             7485600],
-          ['LO-009KDH999-N46-2015',    new Date(),               1.54,      'Licitación',             141850000],
-          ['LO-009KDH999-N42-2015',    new Date(),              2.05,      'Licitación',             307007000],
-          ['LO-009KDH999-N45-2015',    new Date(),              2.05,      'Licitación',             307007000],
-          ['IO-009KDH999-N41-2015',    78.09,              2.05,      'Invitación a 3',         307007000],
-          ['IO-009KDH999-N54-2015',    78.09,              2.05,      'Invitación a 3',         307007000],
-          ['LO-009KDH999-N47-2015',    78.09,              2.05,      'Licitación',             307007000],
-          ['LO-009KDH999-N50-2015',    78.09,              2.05,      'Licitación',             307007000],
-          ['LO-009KDH999-T52-2015',    78.09,              2.05,      'Licitación',             307007000],
-          ['LO-009KDH999-N79-2015',    78.09,              2.05,      'Licitación',             307007000],
-          ['LO-009KDH999-N80-2015',    78.09,              2.05,      'Licitación',             307007000],
-          ['LO-009KDH999-N78-2015',    78.09,              2.05,      'Licitación',             307007000],
-          ['LO-009KDH999-N86-2015',    78.09,              2.05,      'Licitación',             307007000],
-          ['LO-009KDH999-N87-2015',    78.09,              2.05,      'Licitación',             307007000],
-          ['AO-009KDH999-E26-2016',    78.09,              2.05,      'Adjudicación directa',   307007000],
-          ['AO-009KDH999-E20-2016',    78.09,              2.05,      'Adjudicación directa',   307007000],
-          ['IO-009KDH999-E15-2016',    78.09,              2.05,      'Invitación a 3',         307007000],
-          ['IO-009KDH999-E96-2015',    78.09,              2.05,      'Invitación a 3',         307007000]
+          ['ID',                      'Fecha de firma',                    'Periodo', 'Tipo',             'Monto MXN'],
+          ['LO-009KDH999-N5-2014',     new Date('2015-01-02'),              1.67,      'Licitación',              39724276.56],
+          ['SO-009KDH999-N24-2015',    new Date('2015-02-19'),              1.36,      'Adjudicación directa',   521999.84],
+          ['SO-009KDH999-N23-2015',    new Date('2015-02-20'),               1.84,      'Adjudicación directa',   638000],
+          ['SO-009KDH999-N26-2015',    new Date('2015-02-19'),              2.78,      'Adjudicación directa',   539400],
+          ['IO-009KDH999-N11-2015',    new Date('2015-03-19'),              2,         'Invitación a 3',         9429941.46],
+          ['IO-009KDH999-N10-2015',    new Date('2015-03-20'),              1.7,       'Invitación a 3',         2501985.67],
+          ['LO-099KDH999-N20-2015',    new Date('2015-05-14'),              4.77,      'Licitación',             5844840.96],
+          ['LO-099KDH999-T15-2015',    new Date('2015-05-29'),              2.96,      'Licitación',             13514000],
+          ['LO-009KDH999-N46-2015',    new Date('2015-07-21'),               1.54,      'Licitación',            16684244.272],
+          ['LO-009KDH999-N42-2015',    new Date('2015-07-21'),              2.05,      'Licitación',             13832891.6792],
+          ['LO-009KDH999-N45-2015',    new Date('2015-07-21'),              2.05,      'Licitación',             21963669.4016],
+          ['IO-009KDH999-N41-2015',    new Date('2015-07-29'),              2.05,      'Invitación a 3',         38949488.17],
+          ['IO-009KDH999-N54-2015',    new Date('2015-08-28'),              2.05,      'Invitación a 3',         3812525.54],
+          ['LO-009KDH999-N47-2015',    new Date('2015-09-10'),              2.05,      'Licitación',             129973731.2],
+          ['LO-009KDH999-N50-2015',    new Date('2015-10-09'),              2.05,      'Licitación',             223329692.62],
+          ['LO-009KDH999-T52-2015',    new Date('2015-10-23'),              2.05,      'Licitación',             158629469.03],
+          ['LO-009KDH999-N79-2015',    new Date('2015-12-14'),              2.05,      'Licitación',             2044851759.9544],
+          ['LO-009KDH999-N80-2015',    new Date('2015-12-31'),              2.05,      'Licitación',             705599669.9],
+          ['LO-009KDH999-N78-2015',    new Date('2015-12-31'),              2.05,      'Licitación',             572943111],
+          ['LO-009KDH999-N86-2015',    new Date('2015-12-31'),              2.05,      'Licitación',             11276263.6272],
+          ['LO-009KDH999-N87-2015',    new Date('2015-12-31'),              2.05,      'Licitación',             13970275.444],
+          ['AO-009KDH999-E26-2016',    new Date('2016-01-14'),              2.05,      'Adjudicación directa',   4286458.44],
+          ['AO-009KDH999-E20-2016',    new Date('2016-01-21'),              2.05,      'Adjudicación directa',   8909803.13],
+          ['IO-009KDH999-E15-2016',    new Date('2016-03-10'),              2.05,      'Invitación a 3',         12715541.31],
+          ['IO-009KDH999-E96-2015',    new Date('2016-03-23'),              2.05,      'Invitación a 3',         91640000]
         ]);
 
         var options = {
-          //title: 'Correlation between life expectancy, fertility rate ',
+          //title: 'Contrataciones en el tiempo',
           hAxis: {title: 'Fecha de firma'},
           vAxis: {title: 'Periodo'},
-          bubble: {textStyle: {fontSize: 11}}
+          bubble: {textStyle: {fontSize: 11}},
+            series: {
+                'Licitación': {color: '#00cc99'},
+                'Invitación a 3': {color: '#ff4d4d'},
+                'Adjudicación directa': {color: 'purple'}
+            }
         };
 
         var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
@@ -104,30 +109,29 @@
           <h3 style="text-align: center">GRUPO AEROPORTUARIO<br>
             <small>de la Ciudad de México</small>
           </h3>
-          <h2>25 <small>contratos</small></h2>
-          <h2>29 <small>contratistas</small></h2>
-          <h2>N <small>millones de pesos</small></h2>
-        </div>
+          <h3>25 <small>contratos</small></h3>
+          <h3>29 <small>contratistas</small></h3>
+          <h3>N <small>millones de pesos</small></h3>
+        <!--</div>
       </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">-->
+            <hr>
+                <h4 style="text-align: center">TIPOS DE CONTRATACIÓN</h4>
+                <div  style="height: 220px" id="chart4"></div>
+            </div>
+        </div>
     </div>
 
-    <div class="col-sm-5">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <strong>CONTRATACIONES EN EL TIEMPO</strong>
-          <div style="height: 220px" id="series_chart_div" ></div>
-        </div>
+      <div class="col-sm-8">
+          <div class="panel panel-default">
+              <div class="panel-body">
+                  <h3 style="text-align: center">CONTRATACIONES EN EL TIEMPO</h3>
+                  <div  style="height: 450px" id="series_chart_div" ></div>
+              </div>
+          </div>
       </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <strong>TIPOS DE CONTRATACIÓN</strong>
-          <div  style="height: 220px" id="chart4"></div>
-        </div>
-      </div>
-    </div>
     </div>
 
   <div class="row">
