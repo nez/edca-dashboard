@@ -76,7 +76,7 @@
                 series: {
                     'Licitación': {color: '#00cc99'},
                     'Invitación a 3': {color: '#ff4d4d'},
-                    'Adjudicación directa': {color: 'purple'}
+                    'Adjudicación directa': {color: '#673AB7'}
                 }
             };
 
@@ -129,9 +129,9 @@
                 <div class="col-sm-4">
                     <img src="/images/gacm1.png" >
                     <h4 style="color: #00cc99">GACM</h4>
-                    <h2 style="color: purple">25 <small>contratos</small></h2>
-                    <h2 style="color: purple">29 <small>contratistas</small></h2>
-                    <h2 style="color: purple">43,389 <small>millones de pesos</small></h2>
+                    <h2 style="color: #673AB7">25 <small>contratos</small></h2>
+                    <h2 style="color: #673AB7">29 <small>contratistas</small></h2>
+                    <h2 style="color: #673AB7">43,389 <small>millones de pesos</small></h2>
 
                 </div>
                 <div class="col-sm-8">
@@ -428,7 +428,7 @@
                     // "totalLabel=true" uses the centre of the donut for the total amount
                     totalLabel: true
                 },
-                seriesColors: ['#00cc99', '#ff4d4d', 'purple']
+                seriesColors: ['#00cc99', '#ff4d4d', '#673AB7']
             },
             grid: {
                 drawBorder: false,
@@ -489,7 +489,7 @@
         ];
 
         plot2 = $.jqplot('chart2', [s1, s2], {
-            seriesColors: ['#00cc99', 'purple'],//'#ff4d4d'],
+            seriesColors: ['#00cc99', '#673AB7'],//'#ff4d4d'],
             series : [{label: 'Avance físico'},{label: 'Avance financiero'}],
             seriesDefaults: {
                 renderer:$.jqplot.BarRenderer,

@@ -7,4 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 
+router.get('/tree',function (req, res) {
+    res.render('tree');
+});
+
 module.exports = router;
