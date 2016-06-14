@@ -4,12 +4,14 @@
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--  <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet"> -->
-    <link rel='stylesheet' href='/stylesheets/navbar-fixed-top.css' />
+    <!--<link rel='stylesheet' href='/stylesheets/navbar-fixed-top.css' />-->
     <title><%= title %></title>
-    <!-- <link rel='stylesheet' href='/stylesheets/main.css'/> -->
+    <link rel='stylesheet' href='/stylesheets/main.css'/>
     <!-- <link rel='stylesheet' href='/stylesheets/bootstrap-grid-system.css' /> -->
-    <link rel='stylesheet' href='/stylesheets/buttons.css'/>
+    <!--<link rel='stylesheet' href='/stylesheets/buttons.css'/>-->
+
+    <link rel="import" href="/bower_components/polymer/polymer.html">
+    <link rel="import" href="/dgm-navbar/dgm-navbar.html">
 
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -85,47 +87,47 @@
 
 </head>
 <body>
-<!-- Fixed navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">datos.gob.mx</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Datos</a></li>
-                <li><a href="#">Herramientas</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Acerca</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
 
-<nav class="row top-buffer">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Contrataciones abiertas</a>
+<dgm-navbar></dgm-navbar>
+<section id="banner">
+    <div class="container-fluid fixed">
+        <p>Grupo Aeroportuario de la Ciudad de México</p>
+        <!---<div class="row">
+            <div class="col-xs-6 heading">Red Compartida</div>
+            <div class="col-xs-6 links">
+                <div onmousedown='draw_chart("Planeación")' class='select-box select-box-first select-box-active Planeación'>Planeación</div>
+                <div onmousedown='draw_chart("Concurso")' class='select-box Concurso'>Concurso</div>
+                <div title="La información se publicará conforme se genere durante el proyecto." data-toggle="tooltip" data-placement="bottom" class='select-box select-box-inactive Adjudicación'>Adjudicación</div>
+                <div title="La información se publicará conforme se genere durante el proyecto." data-toggle="tooltip" data-placement="bottom" class='select-box select-box-inactive Contratación'>Contratación</div>
+                <div title="La información se publicará conforme se genere durante el proyecto." data-toggle="tooltip" data-placement="bottom" class='select-box select-box-inactive Implementación'>Implementación</div>
+            </div>
+        </div>-->
+    </div>
+</section>
+
+<section id="highlights">
+    <div class="content">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class='col-xs-12'><h3 class="jumbo-title">Estándar de Contrataciones Abiertas</h3></div>
+            </div>
+            <div class="row">
+                <div class='col-xs-12'><p>Visualiza y descarga los Datos Abiertos de las etapas de planeación y concurso de la Red Compartida. Durante el desarrollo del proyecto, trabajaremos junto con la Alianza para las Contrataciones Abiertas para continuar publicando datos accesibles, comparables y oportunos sobre las siguientes etapas de adjudicación, contratación e implementación, conforme estos se generen. Este proyecto es parte de un piloto para adaptar el Estándar de Datos para Contrataciones Abiertas a un modelo de alianza público privado.</p></div>
+                <!--<div class='col-xs-1'></div>
+                <div class='col-xs-3'><img src='gacm.png'/></div>-->
+            </div>
         </div>
     </div>
-</nav>
-
-<br>
+</section>
 
 <div class="container">
+    <br>
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-4">
-                    <h3 style="text-align: center">GRUPO AEROPORTUARIO<br>
-                        <small>de la Ciudad de México</small>
-                    </h3>
+                    <img src="/images/gacm1.png" >
                     <h4 style="color: #00cc99">GACM</h4>
                     <h2 style="color: purple">25 <small>contratos</small></h2>
                     <h2 style="color: purple">29 <small>contratistas</small></h2>
@@ -395,6 +397,12 @@
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.pointLabels.js"></script>
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.highlighter.js"></script>
 <link rel="stylesheet" type="text/css" href="/bower_components/jqplot/jquery.jqplot.css" />
+
+<script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+<link rel="import" href="/dgm-footer/dgm-footer.html">
+
+<dgm-footer></dgm-footer>
+
 <script>
 
     //donut chart
@@ -494,27 +502,30 @@
                     renderer: $.jqplot.CategoryAxisRenderer,
                     //tickRenderer: $.jqplot.CanvasAxisTickRenderer,
                     //labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
-                    /*tickOptions:{
-                        show: false
-                    }
+
+                    tickOptions:{
+                       show: false,
+                        textColor: 'white'
+                    },
+                    /*
                     rendererOptions: {
                         drawBaseline: false
                     }*/
                     drawMajorGridlines: false,
-                    ticks: ticks
+                    //ticks: ticks
                 },
                 yaxis:{
                     //drawMajorGridlines: false,
-                    label: "Porcentaje de avance",
+                    label: "Porcentaje de avance (%)",
                     labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
                     min: 0,
                     max: 100
                 }
             },
             legend: {
-                show: true,
-                location: 'ne',
-                placement: 'inside'
+                show: false,  // Sin leyenda
+                location: 's',
+                placement: 'outside'
             },
             grid: {
                 drawBorder: false,
@@ -789,5 +800,6 @@
     });
 
 </script>
+
 </body>
 </html>
