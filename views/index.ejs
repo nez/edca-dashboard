@@ -50,9 +50,20 @@
 
             var options = {
                 //title: 'Contrataciones en el tiempo',
-                hAxis: {title: 'Fecha de firma'},
-                vAxis: {title: 'Vigencia en meses'},
-                bubble: {textStyle: {fontSize: 11}},
+                hAxis: {
+                    title: 'Fecha de firma',
+                    titleTextStyle: {italic: false}
+                },
+                vAxis: {
+                    title: 'Vigencia en meses',
+                    titleTextStyle: {italic: false}
+                },
+                bubble: {textStyle: {
+                    //no text
+                    color: 'none',
+                    fontSize: 11,
+                    auraColor: 'none'
+                }},
                 series: {
                     'Licitación': {color: '#00cc99'},
                     'Invitación a 3': {color: '#ff4d4d'},
@@ -101,34 +112,38 @@
 <br>
 
 <div class="container">
-
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="panel panel-default">
-                <div class="panel-body">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4">
                     <h3 style="text-align: center">GRUPO AEROPORTUARIO<br>
                         <small>de la Ciudad de México</small>
                     </h3>
-                    <h3>25 <small>contratos</small></h3>
-                    <h3>29 <small>contratistas</small></h3>
-                    <h3>N <small>millones de pesos</small></h3>
-                    <!--</div>
-      </div>
+                    <h4 style="color: #00cc99">GACM</h4>
+                    <h3 style="color: purple">25 <small>contratos</small></h3>
+                    <h3 style="color: purple">29 <small>contratistas</small></h3>
+                    <h3 style="color: purple">43,389 <small>millones de pesos</small></h3>
 
-        <div class="panel panel-default">
-            <div class="panel-body">-->
-                    <hr>
-                    <h4 style="text-align: center">TIPOS DE CONTRATACIÓN</h4>
-                    <div  style="height: 220px" id="chart4"></div>
+                </div>
+                <div class="col-sm-8">
+                    <h4 style="text-align: left; color: #00cc99">AVANCE FÍSICO Y FINANCIERO POR CONTRATO</h4>
+                    <div id="chart2"></div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="col-sm-8">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h3 style="text-align: center">CONTRATACIONES EN EL TIEMPO</h3>
-                    <div  style="height: 450px; align-content: center;" id="series_chart_div" ></div>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4 style="text-align: left; color: #00cc99">TIPOS DE CONTRATACIÓN</h4>
+                    <div  style="height: 270px" id="chart4"></div>
+                </div>
+                <div class="col-sm-8">
+                    <h4 style="text-align: left; color: #00cc99">TIPOS DE CONTRATACIÓN</h4>
+                    <div  style="height: 400px; align-content: center;" id="series_chart_div" ></div>
                 </div>
             </div>
         </div>
@@ -365,10 +380,17 @@
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/bower_components/jqplot/jquery.jqplot.js"></script>
 <script src="/bower_components/jqplot/plugins/jqplot.donutRenderer.js"></script>
+<script src="/bower_components/jqplot/plugins/jqplot.barRenderer.js"></script>
+<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
+<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.categoryAxisRenderer.js"></script>
+<!--<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>-->
+<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.pointLabels.js"></script>
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.highlighter.js"></script>
 <link rel="stylesheet" type="text/css" href="/bower_components/jqplot/jquery.jqplot.css" />
 <script>
 
+    //donut chart
     $(document).ready(function(){
         var data = [
             ['Licitaciones', 14],['Invitaciones a 3', 6], ['Adjudicaciones directas', 5]
@@ -406,6 +428,104 @@
                 tooltipFormatString: '%s'
             }
         });
+
+        //bar chart
+        //avance fisico
+        var s1 = [
+            47.16, 85.15, 30.25,
+            90, 21.23, 10.01,
+            6.4, 4.33, 1.11,
+            1.58, 25.93,12.27,
+            40, 18
+        ];
+
+        //avance financiero
+        var s2 = [
+            (5708930.68 / 14382969.2 )*100,(5344833.89 / 11924906.62)*100, (4504538.98/ 18934197.76 )*100,
+            (2565511.85/3286908.92)*100, (8620689.66/112046320.57)*100, (13609080.34/192525597.09)*100,
+            0, (169601426.76/1762803241.34)*100, (57514449.48/608275577.5)*100,
+            100, 0, 0,
+            0, 0
+        ];
+
+
+        var ticks = [
+            /*'LO-00<br>9KDH9<br>99-N5<br>-2014', 'SO-00<br>9KDH9<br>99-N24<br>-2015', 'SO-00<br>9KDH9<br>99-N23<br>-2015', 'SO-00<br>9KDH9<br>99-N26<br>-2015', 'IO-00<br>9KDH9<br>99-N11<br>-2015',
+
+            'IO-00<br>9KDH9<br>99-N10<br>-2015', 'LO-09<br>9KDH9<br>99-N20<br>-2015', 'LO-09<br>9KDH9<br>99-T15<br>-2015',*/ 'LO-00<br>9KDH9<br>99-N46<br>-2015','LO-00<br>9KDH9<br>99-N42<br>-2015',
+
+            'LO-00<br>9KDH9<br>99-N45<br>-2015', /*'IO-00<br>9KDH9<br>99-N41<br>-2015',*/ 'IO-00<br>9KDH9<br>99-N54<br>-2015', 'LO-00<br>9KDH9<br>99-N47<br>-2015', 'LO-00<br>9KDH9<br>99-N50<br>-2015',
+
+            'LO-00<br>9KDH9<br>99-T52<br>-2015', 'LO-00<br>9KDH9<br>99-N79<br>-2015', 'LO-00<br>9KDH9<br>99-N80<br>-2015', 'LO-00<br>9KDH9<br>99-N78<br>-2015' ,'LO-00<br>9KDH9<br>99-N86<br>-2015' ,
+
+            'LO-00<br>9KDH9<br>99-N87<br>-2015' ,'AO-00<br>9KDH9<br>99-E26<br>-2016', 'AO-00<br>9KDH9<br>99-E20<br>-2016'/*, 'IO-00<br>9KDH9<br>99-E15<br>-2016' ,'IO-00<br>9KDH9<br>99-E96<br>-2015'*/
+        ];
+
+        var ticks1 = [
+            /*'LO-00<br>9KDH9<br>99-N5<br>-2014', 'SO-00<br>9KDH9<br>99-N24<br>-2015', 'SO-00<br>9KDH9<br>99-N23<br>-2015', 'SO-00<br>9KDH9<br>99-N26<br>-2015', 'IO-00<br>9KDH9<br>99-N11<br>-2015',
+
+             'IO-00<br>9KDH9<br>99-N10<br>-2015', 'LO-09<br>9KDH9<br>99-N20<br>-2015', 'LO-09<br>9KDH9<br>99-T15<br>-2015',*/ 'LO-009KDH999-N46-2015','LO-009KDH999-N42-2015',
+
+            'LO-009KDH999-N45-2015', /*'IO-00<br>9KDH9<br>99-N41<br>-2015',*/ 'IO-009KDH999-N54-2015', 'LO-009KDH999-N47-2015', 'LO-009KDH999-N50-2015',
+
+            'LO-009KDH999-T52-2015', 'LO-009KDH999-N79-2015', 'LO-009KDH999-N80-2015', 'LO-009KDH999-N78-2015' ,'LO-009KDH999-N86-2015' ,
+
+            'LO-009KDH999-N87-2015' ,'AO-009KDH999-E26-2016', 'AO-009KDH999-E20-2016'/*, 'IO-00<br>9KDH9<br>99-E15<br>-2016' ,'IO-00<br>9KDH9<br>99-E96<br>-2015'*/
+        ];
+
+        plot2 = $.jqplot('chart2', [s1, s2], {
+            seriesColors: ['#00cc99', 'purple'],//'#ff4d4d'],
+            series : [{label: 'Avance físico'},{label: 'Avance financiero'}],
+            seriesDefaults: {
+                renderer:$.jqplot.BarRenderer,
+                pointLabels: {
+                    show: false //bar value
+                }
+            },
+            axes: {
+                xaxis: {
+                    renderer: $.jqplot.CategoryAxisRenderer,
+                    //tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                    //labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                    /*tickOptions:{
+                        show: false
+                    }
+                    rendererOptions: {
+                        drawBaseline: false
+                    }*/
+                    ticks: ticks
+                },
+                yaxis:{
+                    label: "Porcentaje de avance",
+                    labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                    min: 0,
+                    max: 100
+                }
+            },
+            legend: {
+                show: true,
+                location: 'ne',
+                placement: 'inside'
+            },
+            grid: {
+                drawBorder: false,
+                drawGridLines: true,        // wether to draw lines across the grid or not.
+                shadow: false,
+                backgroundColor: 'rgb(255, 255, 255)'
+            },
+            highlighter: {
+                show: true,
+                sizeAdjust: 0.5,
+            //useAxesFormatters: false,
+                //dataLabels: 'value',
+                //tooltipFormatString: '%s'
+                tooltipContentEditor: function(current, serie, index, plot ){
+                    return "<p>Contrato: <br><b>"+ticks1[index] +"</b></p>"+
+                            "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p>";
+                }
+            }
+        });
+
     });
 
     var contracts = [
