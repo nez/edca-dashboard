@@ -52,11 +52,18 @@
                 //title: 'Contrataciones en el tiempo',
                 hAxis: {
                     title: 'Fecha de firma',
-                    titleTextStyle: {italic: false}
+                    titleTextStyle: {italic: false},
+                    gridlines: {
+                        color: 'transparent'
+                    }
+
                 },
                 vAxis: {
                     title: 'Vigencia en meses',
                     titleTextStyle: {italic: false}
+                    /*gridlines: {
+                        color: 'transparent'
+                    }*/
                 },
                 bubble: {textStyle: {
                     //no text
@@ -120,9 +127,9 @@
                         <small>de la Ciudad de México</small>
                     </h3>
                     <h4 style="color: #00cc99">GACM</h4>
-                    <h3 style="color: purple">25 <small>contratos</small></h3>
-                    <h3 style="color: purple">29 <small>contratistas</small></h3>
-                    <h3 style="color: purple">43,389 <small>millones de pesos</small></h3>
+                    <h2 style="color: purple">25 <small>contratos</small></h2>
+                    <h2 style="color: purple">29 <small>contratistas</small></h2>
+                    <h2 style="color: purple">43,389 <small>millones de pesos</small></h2>
 
                 </div>
                 <div class="col-sm-8">
@@ -493,9 +500,11 @@
                     rendererOptions: {
                         drawBaseline: false
                     }*/
+                    drawMajorGridlines: false,
                     ticks: ticks
                 },
                 yaxis:{
+                    //drawMajorGridlines: false,
                     label: "Porcentaje de avance",
                     labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
                     min: 0,
