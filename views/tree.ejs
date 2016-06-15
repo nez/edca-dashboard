@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-  <head>
-  <style>
-    html{
-    font: 10px sans-serif;
-}
-.node{
-    cursor: pointer;
-}
-.node circle{
-    stroke: #00cc99;
-    opacity: .8;
-    stroke-width: 1.5px;
-}
-.link{
-    fill: none;
-    stroke: lightgray;
-    stroke-width: 5.5px;
-    opacity:.4;
-}
-div.tooltip {
-    position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 28px;
-    padding: 2px;
-    font: 12px sans-serif;
-    background: #424242;
-    color: white;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-    }
+<head>
+    <style>
+        html{
+            font: 10px sans-serif;
+        }
+        .node{
+            cursor: pointer;
+        }
+        .node circle{
+            stroke: #00cc99;
+            opacity: .8;
+            stroke-width: 1.5px;
+        }
+        .link{
+            fill: none;
+            stroke: lightgray;
+            stroke-width: 5.5px;
+            opacity:.4;
+        }
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 60px;
+            height: 28px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: #424242;
+            color: white;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
 
-    text {
-  font: 8px sans-serif;
-  pointer-events: none;
-  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
-}
+        text {
+            font: 8px sans-serif;
+            pointer-events: none;
+            text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+        }
 
-  </style>
+    </style>
 
 
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
@@ -73,19 +73,27 @@ div.tooltip {
                 <div class='col-xs-12'><h3 class="jumbo-title">Estándar de Contrataciones Abiertas</h3></div>
             </div>
             <div class="row">
-                <div class='col-xs-12'><p>Visualiza y descarga los Datos Abiertos de las etapas de planeación y concurso de la Red Compartida. Durante el desarrollo del proyecto, trabajaremos junto con la Alianza para las Contrataciones Abiertas para continuar publicando datos accesibles, comparables y oportunos sobre las siguientes etapas de adjudicación, contratación e implementación, conforme estos se generen. Este proyecto es parte de un piloto para adaptar el Estándar de Datos para Contrataciones Abiertas a un modelo de alianza público privado.</p></div>
+                <div class='col-xs-12'>
+                    <p>
+                        Visualiza y descarga los Datos Abiertos de las etapas de
+                        planeación y concurso de la Red Compartida. Durante el desarrollo del proyecto,
+                        trabajaremos junto con la Alianza para las Contrataciones Abiertas para continuar
+                        publicando datos accesibles, comparables y oportunos sobre las siguientes etapas
+                        de adjudicación, contratación e implementación, conforme estos se generen.
+                        Este proyecto es parte de un piloto para adaptar el Estándar de Datos para Contrataciones Abiertas a un modelo de alianza público privado.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
+<br>
 <div class="container">
-    <div class="panel panel-default">
-    </div>
+    <div id="arbol"></div>
 </div>
 
 <dgm-footer></dgm-footer>
-<script src="/javascript/foldableTree.js"></script>
+<script src="/javascripts/foldableTree.js"></script>
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
