@@ -1,6 +1,6 @@
 var json =
 {
-  "name": "Proceso de Contratación",
+  "name": "Contratos abiertos",
   "text":"",
     "children": [
         {
@@ -560,6 +560,7 @@ var circles = svgContainer.selectAll("circle")
       .enter()
       .append("circle");
 
+
 var circleAttributes = circles
       .attr("cx", function (d) { return d.x_axis; })
       .attr("cy", function (d) { return d.y_axis; })
@@ -571,21 +572,29 @@ var circleAttributes = circles
         d3.select(this).style("fill", "#00cc99");
         if(d3.select(this).attr("cx") == 300){
           root = json;
+          d3.select("#jumbo")
+            .style("opacity", 0)
+            .style("height", 0);
           update(root);
         }else if(d3.select(this).attr("cx") == 400){
           root = json_plan;
+          d3.select("#jumbo").style("height", 0).style("opacity", 0);
           update(root);
         }else if(d3.select(this).attr("cx") == 500){
           root = json_lic;
+          d3.select("#jumbo").style("height", 0).style("opacity", 0);
           update(root);
         }else if(d3.select(this).attr("cx") == 600){
           root = json_adj;
+          d3.select("#jumbo").style("height", 0).style("opacity", 0);
           update(root);
         }else if(d3.select(this).attr("cx") == 700){
           root = json_cont;
+          d3.select("#jumbo").style("height", 0).style("opacity", 0);
           update(root);
         }else if(d3.select(this).attr("cx") == 800){
           root = json_imp;
+          d3.select("#jumbo").style("height", 0).style("opacity", 0);
           update(root);
         }
       });
