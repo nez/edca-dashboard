@@ -13,7 +13,11 @@
     <link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="/dgm-navbar/dgm-navbar.html">
 
-
+<style>
+    div.google-visualization-tooltip > ul > li > span {
+        /*color: #ff0000 !important;*/
+    }
+</style>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart'], 'language':'es'});
@@ -51,7 +55,9 @@
             ]);
 
             var options = {
+                //'legend': 'left',
                 //title: 'Contrataciones en el tiempo',
+                tooltip: {isHtml: true},
                 hAxis: {
                     title: 'Fecha de firma',
                     titleTextStyle: {italic: false},
@@ -62,7 +68,7 @@
                 },
                 vAxis: {
                     title: 'Vigencia en meses',
-                    titleTextStyle: {italic: false}
+                    titleTextStyle: {italic: false},
                     /*gridlines: {
                         color: 'transparent'
                     }*/
@@ -74,9 +80,11 @@
                     auraColor: 'none'
                 }},
                 series: {
+
                     'Licitación': {color: '#00cc99'},
                     'Invitación a 3': {color: '#ff4d4d'},
                     'Adjudicación directa': {color: '#673AB7'}
+
                 }
             };
 
@@ -135,7 +143,7 @@
 
                 </div>
                 <div class="col-sm-8">
-                    <h4 style="text-align: left; color: #00cc99">AVANCE FÍSICO Y FINANCIERO POR CONTRATO</h4>
+                    <h3 style="text-align: left; color: #00cc99">Avance físico y financiero por contrato</h3>
                     <div id="chart2"></div>
                 </div>
             </div>
@@ -147,12 +155,12 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-4">
-                    <h4 style="text-align: left; color: #00cc99">TIPOS DE CONTRATACIÓN</h4>
+                    <h3 style="text-align: left; color: #00cc99">Tipos de contratación</h3>
                     <div  style="height: 270px" id="chart4"></div>
                 </div>
                 <div class="col-sm-8">
-                    <h4 style="text-align: left; color: #00cc99">TIPOS DE CONTRATACIÓN</h4>
-                    <div  style="height: 400px; align-content: center;" id="series_chart_div" ></div>
+                    <h3 style="text-align: left; color: #00cc99">Contrataciones en el tiempo</h3>
+                    <div  style="height: 400px; align-content: left;" id="series_chart_div" ></div>
                 </div>
             </div>
         </div>
@@ -184,7 +192,7 @@
             <tr><td>1</td>
                 <td>LO-009KDH999-N5-2014</td>
                 <td>2015</td>
-                <td>SERVICIO DE EXTRACCIÓN DE ADEMES Y RESTITUCIÓN DE TERRENO.</td>
+                <td>Servicio de extracción de ademes y restitución de terreno.</td>
                 <td>$39724276.56</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -192,7 +200,7 @@
                 <td>2</td>
                 <td>SO-009KDH999-N24-2015</td>
                 <td>2015</td>
-                <td>PLAN ACCIONES DE MONITOREO Y CONSERVACION DE AVES PARA EL NAICM.</td>
+                <td>Plan de acciones de monitoreo y conservación de aves para el NAICM.</td>
                 <td>$521999.84</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -200,7 +208,7 @@
                 <td>3</td>
                 <td>SO-009KDH999-N23-2015</td>
                 <td>2015</td>
-                <td>ELABORACION DEL PROGRAMA DE MONITOREO DE RUIDO PERIMETRAL PARA LAS ETAPAS DE PREPARACION DEL SITO, CONSTRUCCION, Y, OPERACIÓN Y MANTENIMIENTO DEL NAICM.</td>
+                <td>Elaboración del programa de monitoreo de ruido perimetral para las etapas de preparación del sitio, construcción, y, operación y mantenimiento del NAICM.</td>
                 <td>$638000.00</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -208,7 +216,7 @@
                 <td>4</td>
                 <td>SO-009KDH999-N26-2015</td>
                 <td>2015</td>
-                <td>PLAN DE MONITOREO, REGISTRO Y VERIFICACION DE EMISION DE GASES DE EFECTO INVERNADERO PARA EL NAICM.</td>
+                <td>Plan de monitoreo, registro y verificación de emisión de gases de efecto invernadero para el NAICM.</td>
                 <td>$539400.00</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -216,7 +224,7 @@
                 <td>5</td>
                 <td>IO-009KDH999-N11-2015</td>
                 <td>2015</td>
-                <td>CONSTRUCCION DE CAMINOS DE ACCESO A ZONA DEL EDIFICIO TERMINAL DE LA PRIMERA ETAPA, NECESARIOS PARA LA CARACTERIZACIÓN GEOTÉCNICA INICIAL.</td>
+                <td>Construcción de caminos de acceso a zona del edificio terminal de la primera etapa, necesarios para la caracterización geotécnica inical.</td>
                 <td>$9429941.46</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -224,7 +232,7 @@
                 <td>6</td>
                 <td>IO-009KDH999-N10-2015</td>
                 <td>2015</td>
-                <td>SERVICIOS DE SUPERVISIÓN PARA LA OBRA: EXTRACCIÓN DE ADEMES Y RESTITUCIÓN DEL TERRENO QUE OCUPAN DICHOS ELEMENTOS UBICADOS EN LA POLIGONAL PARA EL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Servicios de supervisión para la obra: extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México.</td>
                 <td>$2501985.67</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -232,7 +240,7 @@
                 <td>7</td>
                 <td>LO-099KDH999-N20-2015</td>
                 <td>2015</td>
-                <td>CONSTRUCCION DE CAMINOS DE ACCESOS Y PLATAFORMAS PARA EXPLORACIÓN GEOTÉCNICA PARA LA PISTA NO 2 DEL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Construcción de caminos de accesos y plataformas para exploración geotécnica para la pista No. 2 del Nuevo Aeropuerto Internacional de la Ciudad de México.</td>
                 <td>$5844840.96</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -240,7 +248,7 @@
                 <td>8</td>
                 <td>LO-099KDH999-T15-2015</td>
                 <td>2015</td>
-                <td>ESTUDIO DE LAS CARACTERISTICAS TÉCNICAS DE INFRAESTRUCTURA Y DISEÑO ESQUEMATICO DE LA TERMINAL DE CARGA DEL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Estudio de las caracteristicas técnicas de infraestructura y diseño esquematico de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México.</td>
                 <td>$13514000.00</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -248,7 +256,7 @@
                 <td>9</td>
                 <td>LO-009KDH999-N46-2015</td>
                 <td>2015</td>
-                <td>PLAN DE MONITOREO Y CONSERVACIÓN DE AVES DEL PROYECTO DEL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Plan de monitoreo y conservación de aves del proyecto del nuevo Aeropuerto Internacional de la Ciudad de México.</td>
                 <td>$16684244.272</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -256,7 +264,7 @@
                 <td>10</td>
                 <td>LO-009KDH999-N42-2015</td>
                 <td>2015</td>
-                <td>IMPLEMENTACIÓN DEL PROGRAMA  DE RESCATE DE FLORA Y FAUNA PARA EL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Implementación del programa de rescate de flora y fauna para el nuevo Aeropuerto Internacional de la Ciudad de México.</td>
                 <td>$13832891.6792</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -264,7 +272,7 @@
                 <td>11</td>
                 <td>LO-009KDH999-N45-2015</td>
                 <td>2015</td>
-                <td>IMPLEMENTACIÓN DEL PLAN DE RESTAURACIÓN ECOLÓGICA PARA EL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Implementación del plan de restauración ecológica para el Nuevo Aeropuerto Internacional de la Ciudad de México.</td>
                 <td>$21963669.4016</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -272,7 +280,7 @@
                 <td>12</td>
                 <td>IO-009KDH999-N41-2015</td>
                 <td>2015</td>
-                <td>LA ELABORACIÓN DEL ESTUDIO DE LAS CARACTERÍSTICAS TOPOGRÁFICAS DEL TERRENO DEL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO (NAICM).</td>
+                <td>La elaboración del estudio de las características topográficas del terreno del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).</td>
                 <td>$38949488.17</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -280,7 +288,7 @@
                 <td>13</td>
                 <td>IO-009KDH999-N54-2015</td>
                 <td>2015</td>
-                <td>SUPERVISIÓN PARA: CONSTRUCCIÓN DEL PROYECTO INTEGRAL CONSISTENTE EN BARDA Y CAMINO PERIMETRAL, ALUMBRADO, SERVICIOS INDUCIDOS Y CASETAS DE ACCESO PARA EL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO (PRIMERA ETAPA).</td>
+                <td>Supervisión para: construcción del proyecto integral consistente en barda y camino perimetral, alumbrado, servicios inducidos y casetas de acceso para el Nuevo Aeropuerto Internacional de la Ciudad de México (primera etapa).</td>
                 <td>$3812525.54</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -288,7 +296,7 @@
                 <td>14</td>
                 <td>LO-009KDH999-N47-2015</td>
                 <td>2015</td>
-                <td>DESARROLLO DEL PROYECTO EJECUTIVO, CONSTRUCCIÓN, EQUIPAMIENTO DE MOBILARIO E INSTALACIONES COMPLEMENTARIAS PARA EL CAMPAMENTO DEL GRUPO AEROPORTUARIO DE LA CIUDAD DE MÉXICO EN EL SITIO DEL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Desarrollo del proyecto ejecutivo, construcción, equipamiento de mobiliario e instalaciones complementarias para el campamento del Grupo Aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México.</td>
                 <td>$129973731.20</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -296,7 +304,7 @@
                 <td>15</td>
                 <td>LO-009KDH999-N50-2015</td>
                 <td>2015</td>
-                <td>TRABAJOS RELATIVOS A LA CONSTRUCCIÓN DEL DRENAJE PLUVIAL TEMPORAL DEL NUEVO AEROPUERTO DE LA CIUDAD DE MÉXICO.</td>
+                <td>Trabajos relativos a la construcción del drenaje pluvial temporal del Nuevo Aeropuerto de la Ciudad de México.</td>
                 <td>$223329692.62</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -304,7 +312,7 @@
                 <td>16</td>
                 <td>LO-009KDH999-T52-2015</td>
                 <td>2015</td>
-                <td>DISEÑAR E INSTRUMENTAR EL MODELO VIRTUAL  DE INFORMACIÓN PARA LA CONSTRUCCIÓN DEL BIM DEL NAICM.</td>
+                <td>Diseñar e instrumentar el modelo virtual de información para la construcción del BIM del NAICM.</td>
                 <td>$158629469.03</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -312,7 +320,7 @@
                 <td>17</td>
                 <td>LO-009KDH999-N79-2015</td>
                 <td>2015</td>
-                <td>CONVOCATORIA DE NIVELACIÓN Y LIMPIEZA DEL TERRENO DEL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Convocatoria de nivelación y limpieza del terreno del Nuevo Aeropuerto Internacional de la Ciudad de México.</td>
                 <td>$2044851759.9544</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -320,7 +328,7 @@
                 <td>18</td>
                 <td>LO-009KDH999-N80-2015</td>
                 <td>2015</td>
-                <td>CONVOCATORIA DE CONSTRUCCIÓN DE LOS CAMINOS PROVISIONALES DE ACCESO AL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO (NAICM) EJECUTANDO TRABAJOS DE TERRACERIA, ESTRUCTURAS Y OBRAS DE DRENAJE, PAVIMENTACIÓN Y SEÑALAMIENTO.</td>
+                <td>Convocatoria de construcción de los caminos provisionales de acceso al Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) ejecutando trabajos de terraceria, estructuras y obras de drenaje, pavimentación y señalamiento.</td>
                 <td>$705599669.90</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -328,7 +336,7 @@
                 <td>19</td>
                 <td>LO-009KDH999-N78-2015</td>
                 <td>2015</td>
-                <td>CONVOCATORIA DE CARGA, ACARREO Y DESCARGA FUERA DEL POLIGONO DEL MATERIAL EXISTENTE PRODUCTO DE DEPOSITOS DE DEMOLICIONES, DESPERDICIOS Y DESAZOLVE.</td>
+                <td>Convocatoria de carga, acarreo y descarga fuera del poligono del material existente producto de depositos de demoliciones, desperdicios y desazolve.</td>
                 <td>$572943111.00</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -336,7 +344,7 @@
                 <td>20</td>
                 <td>LO-009KDH999-N86-2015</td>
                 <td>2015</td>
-                <td>SUPERVISIÓN TÉCNICA, ADMINISTRATIVA Y DE CONTROL DE CALIDAD PARA LOS TRABAJOS DE NIVELACIÓN Y LIMPIEZA DEL TERRENO DEL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Supervisión técnica, administrativa y de control de calidad para los trabajos de nivelación y limpieza del terreno del Nuevo Aeropuerto Internacional de la Ciudad de México.</td>
                 <td>$11276263.6272</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -344,7 +352,7 @@
                 <td>21</td>
                 <td>LO-009KDH999-N87-2015</td>
                 <td>2015</td>
-                <td>SUPERVISIÓN TÉCNICA, ADMINISTRATIVA Y DE CONTROL DE CALIDAD PARA LOS TRABAJOS DE CONSTRUCCIÓN DE LOS CAMINOS PROVISIONALES DE ACCESO AL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO (NAICM) EJECUTANDO TRABAJOS DE TERRACERIA, ESTRUCTURAS Y OBRAS DE DRENAJE, PAVIMENTACIÓN Y SEÑALAMIENTO.</td>
+                <td>Supervisión técnica, administrativa y de control de calidad para los trabajos de construcción de los caminos provisionales de acceso al Nuevo Aeropuerto Intenacional de la Ciudad de México (NAICM) ejecutanto trabajos de terraceria, estructuras y obras de drenaje, pavimentación y señalamiento.</td>
                 <td>$13970275.444</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -352,7 +360,7 @@
                 <td>22</td>
                 <td>AO-009KDH999-E26-2016</td>
                 <td>2016</td>
-                <td>SUPERVISIÓN DEL PROYECTO EJECUTIVO, CONTRUCCIÓN, EQUIPAMENTO, MOBILIARIO E INSTALACIONES COMPLEMENTARIAS PARA EL CAMPAMENTO DEL GRUPO AEROPORTUARIO DE LA CIUDAD DE MÉXICO EN EL SITIO DEL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Supervisión del proyecto ejecutivo, construcción, equipamiento, mobiliario e instalaciones complementarias para el campamento del Grupo Aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México.</td>
                 <td>$4286458.44</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -360,7 +368,7 @@
                 <td>23</td>
                 <td>AO-009KDH999-E20-2016</td>
                 <td>2016</td>
-                <td>SUPERVISIÓN DE LA CONSTRUCCIÓN DEL DRENAJE PLUVIAL TEMPORAL DEL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Supervisión de la construcción del drenaje pluvial temporal del Nuevo Aeropuerto Intenacional de la Ciudad de México.</td>
                 <td>$8909803.13</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -368,7 +376,7 @@
                 <td>24</td>
                 <td>IO-009KDH999-E15-2016</td>
                 <td>2016</td>
-                <td>CONSTRUCCIÓN DE ACCESOS Y PLATAFORMAS PARA EXPLORACIÓN GEOTÉCNICA, REHABILITACIÓN DE TRAMOS DE PRUEBA Y BACHEO SOMERO DE CAMINOS EXISTENTES DENTRO DEL TERRENO PARA EL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno para el Nuevo Aeropuerto Internacional de la Ciudad de México.</td>
                 <td>$12715541.31</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -376,7 +384,7 @@
                 <td>25</td>
                 <td>IO-009KDH999-E96-2015</td>
                 <td>2016</td>
-                <td>INTEGRACIÓN DE LA ESTRATEGIA GLOBAL Y MODELO DE NEGOCIOS PARA EL NUEVO AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO.</td>
+                <td>Integración de la estratégia global y modelo de negocios para el Nuevo Aeropuerto Internacional de la Ciudad de México.</td>
                 <td>$91640000.00</td>
                 <td><a href="" class="btn btn-default"><i class="fa fa-download"></i></a></td>
             </tr>
@@ -426,7 +434,8 @@
                     // You can show the data 'value' or data 'label' instead.
                     //dataLabels: 'value',
                     // "totalLabel=true" uses the centre of the donut for the total amount
-                    totalLabel: true
+                    totalLabel: true,
+                    shadow: false
                 },
                 seriesColors: ['#00cc99', '#ff4d4d', '#673AB7']
             },
@@ -488,10 +497,13 @@
             'LO-009KDH999-N87-2015' ,'AO-009KDH999-E26-2016', 'AO-009KDH999-E20-2016'/*, 'IO-00<br>9KDH9<br>99-E15<br>-2016' ,'IO-00<br>9KDH9<br>99-E96<br>-2015'*/
         ];
 
+        /*
+
         plot2 = $.jqplot('chart2', [s1, s2], {
             seriesColors: ['#00cc99', '#673AB7'],//'#ff4d4d'],
             series : [{label: 'Avance físico'},{label: 'Avance financiero'}],
             seriesDefaults: {
+                shadow: false,
                 renderer:$.jqplot.BarRenderer,
                 pointLabels: {
                     show: false //bar value
@@ -507,10 +519,69 @@
                        show: false,
                         textColor: 'white'
                     },
-                    /*
+
                     rendererOptions: {
-                        drawBaseline: false
-                    }*/
+                        drawBaseline: true
+                    },
+                    drawMajorGridlines: false,
+                    //ticks: ticks
+                },
+                yaxis:{
+                    drawMajorGridlines: false,
+                    label: "Porcentaje de avance (%)",
+                    labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                    min: 0,
+                    max: 100
+                }
+            },
+            legend: {
+                show: false,  // Sin leyenda
+                location: 's',
+                placement: 'outside'
+            },
+            grid: {
+                drawBorder: false,
+                drawGridLines: true,        // wether to draw lines across the grid or not.
+                shadow: false,
+                backgroundColor: 'rgb(255, 255, 255)'
+            },
+            highlighter: {
+                show: true,
+                sizeAdjust: 0.5,
+            //useAxesFormatters: false,
+                //dataLabels: 'value',
+                //tooltipFormatString: '%s'
+                tooltipContentEditor: function(current, serie, index, plot ){
+                    return "<p>Contrato: <br><b>"+ticks1[index] +"</b></p>"+
+                            "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p>";
+                }
+            }
+        });*/
+
+
+        plot2 = $.jqplot('chart2', [s1, s2], {
+            seriesColors: ['#00cc99', '#673AB7'],//'#ff4d4d'],
+            series : [{label: 'Avance físico'},{label: 'Avance financiero'}],
+            seriesDefaults: {
+                shadow: false,
+                renderer:$.jqplot.BarRenderer,
+                pointLabels: {
+                    show: false //bar value
+                }
+            },
+            axes: {
+                xaxis: {
+                    renderer: $.jqplot.CategoryAxisRenderer,
+                    //tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                    //labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                    tickOptions:{
+                        show: false,
+                        textColor: 'white'
+                    },
+                    /*
+                     rendererOptions: {
+                     drawBaseline: false
+                     }*/
                     drawMajorGridlines: false,
                     //ticks: ticks
                 },
@@ -536,7 +607,7 @@
             highlighter: {
                 show: true,
                 sizeAdjust: 0.5,
-            //useAxesFormatters: false,
+                //useAxesFormatters: false,
                 //dataLabels: 'value',
                 //tooltipFormatString: '%s'
                 tooltipContentEditor: function(current, serie, index, plot ){
