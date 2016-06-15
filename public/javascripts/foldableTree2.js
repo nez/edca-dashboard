@@ -279,6 +279,30 @@ var div = d3.select("#arbol").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
+var barCircles = [
+  {"x_axis":100, "y_axis":30,  "radius":20, "color": "#00cc99"},
+  {"x_axis":100, "y_axis":60,  "radius":20, "color": "#00cc99"},
+  {"x_axis":100, "y_axis":90,  "radius":20, "color": "#00cc99"},
+  {"x_axis":100, "y_axis":120, "radius":20, "color": "#00cc99"},
+  {"x_axis":100, "y_axis":150, "radius":20, "color": "#00cc99"},
+  {"x_axis":100, "y_axis":180, "radius":20, "color": "#00cc99"}
+];
+
+var svgContainer = d3.select("body").append("svg")
+      .attr("width", 200)
+      .attr("height", 200);
+
+var circles = svgContainer.selectAll("circle")
+      .data(barCircles)
+      .enter()
+      .append("circle");
+
+var circleAttributes = circles
+      .attr("cx", function (d) { return d.x_axis; })
+      .attr("cy", function (d) { return d.y_axis; })
+      .attr("r", function (d) { return d.radius; })
+      .style("fill", function(d) { return d.color; });
+
 function update(source)
 {
     // Compute the new tree layout.
