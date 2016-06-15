@@ -491,7 +491,7 @@ var json_imp =      {
 };
 
 var width = 1200;
-var height = 650;
+var height = 450;
 var maxLabel = 150;
 var duration = 500;
 var radius = 5;
@@ -503,6 +503,9 @@ var margin = {top: 30, right: 20, bottom: 30, left: 50},
 
 var i = 0;
 var root;
+
+//---------------------------
+//---------------------------
 
 var tree = d3.layout.tree()
     .size([height, width]);
@@ -530,27 +533,27 @@ var div = d3.select("#arbol").append("div")
 
 /*------------Circle bar---------------*/
 var barCircles = [
-  {"x_axis":100, "y_axis":60, "radius":10, "color": "#9e9e9e"},
-  {"x_axis":130, "y_axis":60, "radius":10, "color": "#9e9e9e"},
-  {"x_axis":160, "y_axis":60, "radius":10, "color": "#9e9e9e"},
-  {"x_axis":190, "y_axis":60, "radius":10, "color": "#9e9e9e"},
-  {"x_axis":70,  "y_axis":60, "radius":10, "color": "#9e9e9e"},
-  {"x_axis":40,  "y_axis":60, "radius":10, "color": "#9e9e9e"}
+  {"x_axis":300, "y_axis":10, "radius":10, "color": "#424242"},
+  {"x_axis":400, "y_axis":10, "radius":10, "color": "#424242"},
+  {"x_axis":500, "y_axis":10, "radius":10, "color": "#424242"},
+  {"x_axis":600, "y_axis":10, "radius":10, "color": "#424242"},
+  {"x_axis":700, "y_axis":10, "radius":10, "color": "#424242"},
+  {"x_axis":800, "y_axis":10, "radius":10, "color": "#424242"}
 ];
 
-/*
- var line = svgContainer.append("line")
-      .attr("x1", 40)
-      .attr("y1", 60)
-      .attr("x2", 190)
-      .attr("y2", 600)
-      .attr("stroke-width", 5)
-      .attr("stroke", "#9e9e9e");
-*/
+var svgContainer = d3.select("#bolitas").append("svg")
+      .attr("width",  1000)
+      .attr("height", 50);
 
-var svgContainer = d3.select("body").append("svg")
-      .attr("width", 200)
-      .attr("height", 200);
+var line = svgContainer.append("line")
+      .attr("x1", 300)
+      .attr("y1", 10)
+      .attr("x2", 800)
+      .attr("y2", 10)
+      .attr("stroke-width", 15)
+      .attr("stroke", "#9e9e9e")
+      .style("opacity",.3);
+
 
 var circles = svgContainer.selectAll("circle")
       .data(barCircles)
@@ -561,27 +564,27 @@ var circleAttributes = circles
       .attr("cx", function (d) { return d.x_axis; })
       .attr("cy", function (d) { return d.y_axis; })
       .attr("r", function (d) { return d.radius; })
-      .style("opacity", function(d) { return .6; })
+      .style("opacity", function(d) { return .8; })
       .style("fill", function(d) { return d.color; })
       .on("click", function(d){
-        svgContainer.selectAll("circle").style("fill", "#9e9e9e");
+        svgContainer.selectAll("circle").style("fill", "#424242");
         d3.select(this).style("fill", "#00cc99");
-        if(d3.select(this).attr("cx") == 40){
+        if(d3.select(this).attr("cx") == 300){
           root = json;
           update(root);
-        }else if(d3.select(this).attr("cx") == 70){
+        }else if(d3.select(this).attr("cx") == 400){
           root = json_plan;
           update(root);
-        }else if(d3.select(this).attr("cx") == 100){
+        }else if(d3.select(this).attr("cx") == 500){
           root = json_lic;
           update(root);
-        }else if(d3.select(this).attr("cx") == 130){
+        }else if(d3.select(this).attr("cx") == 600){
           root = json_adj;
           update(root);
-        }else if(d3.select(this).attr("cx") == 160){
+        }else if(d3.select(this).attr("cx") == 700){
           root = json_cont;
           update(root);
-        }else if(d3.select(this).attr("cx") == 190){
+        }else if(d3.select(this).attr("cx") == 800){
           root = json_imp;
           update(root);
         }
