@@ -1,6 +1,47 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-<head>
+  <head>
+  <style>
+    html{
+    font: 10px sans-serif;
+}
+.node{
+    cursor: pointer;
+}
+.node circle{
+    stroke: #00cc99;
+    opacity: .8;
+    stroke-width: 1.5px;
+}
+.link{
+    fill: none;
+    stroke: lightgray;
+    stroke-width: 5.5px;
+    opacity:.4;
+}
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: #424242;
+    color: white;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    }
+
+    text {
+  font: 8px sans-serif;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+  </style>
+
+
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -9,7 +50,7 @@
     <link rel='stylesheet' href='/stylesheets/main.css'/>
     <!-- <link rel='stylesheet' href='/stylesheets/bootstrap-grid-system.css' /> -->
     <!--<link rel='stylesheet' href='/stylesheets/buttons.css'/>-->
-
+    <script src="http://d3js.org/d3.v3.min.js"></script>
     <link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="/dgm-navbar/dgm-navbar.html">
 
@@ -40,14 +81,11 @@
 
 <div class="container">
     <div class="panel panel-default">
-
-        <!-- Aquí -->
-
     </div>
 </div>
 
 <dgm-footer></dgm-footer>
-
+<script src="/javascript/foldableTree.js"></script>
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
