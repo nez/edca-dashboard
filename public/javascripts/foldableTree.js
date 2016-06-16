@@ -533,12 +533,12 @@ var div = d3.select("#arbol").append("div")
 
 /*------------Circle bar---------------*/
 var barCircles = [
-  {"x_axis":300, "y_axis":10, "radius":10, "color": "#424242"},
-  {"x_axis":400, "y_axis":10, "radius":10, "color": "#424242"},
-  {"x_axis":500, "y_axis":10, "radius":10, "color": "#424242"},
-  {"x_axis":600, "y_axis":10, "radius":10, "color": "#424242"},
-  {"x_axis":700, "y_axis":10, "radius":10, "color": "#424242"},
-  {"x_axis":800, "y_axis":10, "radius":10, "color": "#424242"}
+  {"x_axis":50, "y_axis":18, "radius":10, "color": "#424242"},
+//  {"x_axis":170, "y_axis":18, "radius":10, "color": "#424242"},
+  {"x_axis":207, "y_axis":18, "radius":10, "color": "#424242"},
+  {"x_axis":370, "y_axis":18, "radius":10, "color": "#424242"},
+  {"x_axis":530, "y_axis":18, "radius":10, "color": "#424242"},
+  {"x_axis":695, "y_axis":18, "radius":10, "color": "#424242"}
 ];
 
 var svgContainer = d3.select("#bolitas").append("svg")
@@ -546,10 +546,10 @@ var svgContainer = d3.select("#bolitas").append("svg")
       .attr("height", 50);
 
 var line = svgContainer.append("line")
-      .attr("x1", 300)
-      .attr("y1", 10)
-      .attr("x2", 800)
-      .attr("y2", 10)
+      .attr("x1", 50)
+      .attr("y1", 18)
+      .attr("x2", 700)
+      .attr("y2", 18)
       .attr("stroke-width", 15)
       .attr("stroke", "#9e9e9e")
       .style("opacity",.3);
@@ -567,48 +567,34 @@ var circleAttributes = circles
       .attr("r", function (d) { return d.radius; })
       .style("opacity", function(d) { return .8; })
       .style("fill", function(d) { return d.color; })
-      .on("click", function(d){
+      .on("mouseover", function(d){
         svgContainer.selectAll("circle").style("fill", "#424242");
         d3.select(this).style("fill", "#00cc99");
-        if(d3.select(this).attr("cx") == 300){
-          root = json;
-          d3.select("#jumbo")
-            .style("opacity", 0)
-            .style("height", 0);
-          update(root);
-        }else if(d3.select(this).attr("cx") == 400){
+        if(d3.select(this).attr("cx") == 50){
           root = json_plan;
-          d3.select("#jumbo").style("height", 0).style("opacity", 0);
           update(root);
-        }else if(d3.select(this).attr("cx") == 500){
+        }else if(d3.select(this).attr("cx") == 207){
           root = json_lic;
-          d3.select("#jumbo").style("height", 0).style("opacity", 0);
           update(root);
-        }else if(d3.select(this).attr("cx") == 600){
+        }else if(d3.select(this).attr("cx") == 370){
           root = json_adj;
-          d3.select("#jumbo").style("height", 0).style("opacity", 0);
           update(root);
-        }else if(d3.select(this).attr("cx") == 700){
+        }else if(d3.select(this).attr("cx") == 530){
           root = json_cont;
-          d3.select("#jumbo").style("height", 0).style("opacity", 0);
           update(root);
-        }else if(d3.select(this).attr("cx") == 800){
+        }else if(d3.select(this).attr("cx") == 695){
           root = json_imp;
-          d3.select("#jumbo").style("height", 0).style("opacity", 0);
           update(root);
         }
       });
-
-var ball = svgContainer.selectAll("circle")
-      .enter()
-      .append("g")
-      .append("text")
-      .attr("x", function(d){
-            var spacing = computeRadius(d) + 5;
-        })
-      .attr("dx", "3")
-      .text(function(d){ return d.label; });
 /*--------------------------------------------*/
+
+window.onload = function(){
+  root = json;
+  update(root);
+};
+
+
 
 function update(source)
 {
@@ -692,19 +678,21 @@ function update(source)
 
     // Update the links…
     var link = svg.selectAll("path.link")
-        .data(links, function(d){ return d.target.id; })
-        .on("click", function(d) {
+          .data(links, function(d){ return d.target.id; });
+/*          .on("hover", function(d){
+            d3.select(this).style("stroke", "#00cc99");
+          })
+          .on("click", function(d) {
             d.style("stroke", function(d){ return d.children || d._children ? "#9E9E9E" : "#00cc99"; });
-        });
-
+          });*/
 
     // Enter any new links at the parent's previous position.
     link.enter().insert("path", "g")
-        .attr("class", "link")
-        .attr("d", function(d){
-            var o = {x: source.x0, y: source.y0};
-            return diagonal({source: o, target: o});
-        });
+    .attr("class", "link")
+    .attr("d", function(d){
+      var o = {x: source.x0, y: source.y0};
+      return diagonal({source: o, target: o});
+    });
 
     // Transition links to their new position.
     link.transition()
@@ -772,5 +760,3 @@ function collapse(d){
         d.children = null;
     }
 }
-
-//update(root);
