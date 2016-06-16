@@ -494,7 +494,7 @@ var width = 1200;
 var height = 450;
 var maxLabel = 150;
 var duration = 500;
-var radius = 5;
+var radius = 3;
 
 // Set the dimensions of the canvas / graph
 var margin = {top: 30, right: 20, bottom: 30, left: 50},
@@ -603,7 +603,7 @@ function update(source)
     var links = tree.links(nodes);
 
     // Normalize for fixed-depth.
-    nodes.forEach(function(d) { d.y = d.depth * maxLabel; });
+    nodes.forEach(function(d) { d.y = d.depth * maxLabel*1.2; });
 
     // Update the nodes…
     var node = svg.selectAll("g.node")
@@ -619,13 +619,13 @@ function update(source)
         .on("click", click)
         .on("mouseover", function(d) {
             div.transition()
-                .duration(200)
-                .style("opacity", d.text.length>0?.9:0);
+            .duration(200)
+            .style("opacity", d.text.length>0?.9:0);
             div.html(d.text)
-                .style("left", (d3.event.pageX) + "px")
-                .style("top",  (d3.event.pageY - 10) + "px")
-                .style("width",   /*d.text.length*10  + "px"*/ 300 + "px")
-                .style("height",  /*d.text.length*10  + "px"*/ "auto");
+            .style("left", (d3.event.pageX) + "px")
+            .style("top",  (d3.event.pageY - 10) + "px")
+            .style("width",   /*d.text.length*10  + "px"*/ 300 + "px")
+            .style("height",  /*d.text.length*10  + "px"*/ "auto");
         })
         .on("mouseout", function(d) {
             div.transition()
@@ -643,42 +643,44 @@ function update(source)
         });
 
     nodeEnter.append("text")
-        .attr("x", function(d){
-            var spacing = computeRadius(d) + 5;
-            return d.children || d._children ? -spacing : spacing;
-        })
-        .attr("dy", "3")
-        .attr("text-anchor", function(d){ return d.children || d._children ? "end" : "start"; })
-        .text(function(d){ return d.name; })
-        .style("fill-opacity", 0);
+    .attr("x", function(d){
+      var spacing = computeRadius(d) + 5;
+      return d.children || d._children ? -spacing : spacing;
+    })
+    .attr("dy", "3")
+    .attr("text-anchor", function(d){ return d.children || d._children ? "end" : "start"; })
+    .text(function(d){ return d.name; })
+    .style("fill-opacity", 0);
+
 
 
     // Transition nodes to their new position.
-    var nodeUpdate = node.transition()
+  var nodeUpdate = node.transition()
         .duration(duration)
         .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
 
-    nodeUpdate.select("circle")
-        .attr("r", function(d){ return computeRadius(d); })
-        .style("fill", function(d) { return d._children ? "white" : "#00cc99"; })
-        .style("stroke", function(d){
-            return d._children ? "#9E9E9E" : "#00cc99";
-        });
+  nodeUpdate.select("circle")
+    .attr("r", function(d){ return computeRadius(d); })
+    .style("fill", function(d) { return d._children ? "white" : "#00cc99"; })
+    .style("stroke", function(d){
+      return d._children ? "#9E9E9E" : "#00cc99";
+    });
 
-    nodeUpdate.select("text").style("fill-opacity", 1);
+  nodeUpdate.select("text").style("fill-opacity", 1)
+    .style("color", "#424242");
 
-    // Transition exiting nodes to the parent's new position.
-    var nodeExit = node.exit().transition()
+  // Transition exiting nodes to the parent's new position.
+  var nodeExit = node.exit().transition()
         .duration(duration)
         .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
         .remove();
 
-    nodeExit.select("circle").attr("r", 0);
-    nodeExit.select("text").style("fill-opacity", 0);
+  nodeExit.select("circle").attr("r", 0);
+  nodeExit.select("text").style("fill-opacity", 0);
 
-    // Update the links…
-    var link = svg.selectAll("path.link")
-          .data(links, function(d){ return d.target.id; });
+  // Update the links…
+  var link = svg.selectAll("path.link")
+        .data(links, function(d){ return d.target.id; });
 /*          .on("hover", function(d){
             d3.select(this).style("stroke", "#00cc99");
           })
