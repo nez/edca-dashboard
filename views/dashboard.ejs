@@ -57,8 +57,15 @@
             var options = {
                 //'legend': 'left',
                 //title: 'Contrataciones en el tiempo',
+                chartArea:{
+                    width: '75%',
+                    heigth: '90%',
+                    left: '75',
+                    top: '30'
+                },
+                backgroundColor: 'transparent',
                 tooltip: {isHtml: true},
-                 legend :{ position: 'bottom'},
+                legend :{ position: 'bottom'},
                 hAxis: {
                     title: 'Fecha de firma',
                     titleTextStyle: {
@@ -133,51 +140,69 @@
 </section>
 
 <div class="container">
+
+    <!-- <div class="col-xs-12" style=" background: #eee ">
+        jkdjskjsjsdkjs
+    </div>-->
+
     <br>
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-sm-4">
-                    <!--<img src="/images/gacm1.png" >-->
-                    <h3 style="color: #00cc99"><b>GACM</b></h3>
-                    <h2 style="color: #673AB7"><b>25</b> <small>contratos</small></h2>
-                    <h2 style="color: #673AB7"><b>29</b> <small>contratistas</small></h2>
-                    <h2 style="color: #673AB7"><b>43,389</b> <small>millones de pesos</small></h2>
+    <!--<div class="panel panel-default" style="background: #eee;">
+        <div class="panel-body">-->
+    <div class="row">
+        <div class="col-sm-12" style="background: #eee;">
+            <div class="col-sm-4">
+                <!--<img src="/images/gacm1.png" >-->
+                <h3 style="color: #00cc99"><b>GACM</b></h3>
+                <h2 style="color: #673AB7"><b>25</b> <small>contratos</small></h2>
+                <h2 style="color: #673AB7"><b>29</b> <small>contratistas</small></h2>
+                <h2 style="color: #673AB7"><b>43,389</b> <small>millones de pesos</small></h2>
 
+            </div>
+            <div class="col-sm-8">
+                <h3 style="text-align: left; color: #00cc99"><b>Avance físico y financiero por contrato</b></h3>
+                <div id="chart2"></div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ordenar por <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-serie = 's1' id="sort1">Avance físico</a></li>
+                        <li><a href="#" data-serie = 's2' id="sort2">Avance financiero</a></li>
+                    </ul>
                 </div>
-                <div class="col-sm-8">
-                    <h3 style="text-align: left; color: #00cc99"><b>Avance físico y financiero por contrato</b></h3>
-                    <div id="chart2"></div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Ordenar por <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" data-serie = 's1' id="sort1">Avance físico</a></li>
-                            <li><a href="#" data-serie = 's2' id="sort2">Avance financiero</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <!--
+        </div>
+    </div>-->
+
+    <br>
+
+
+    <!--<div class="panel panel-default" style="background: #eee">
+        <div class="panel-body">-->
+
+    <div class="row">
+        <div class="col-sm-12" style="background: #eee">
+            <div class="col-sm-4" style="background: #eee;">
+                <h3 style="text-align: left; color: #00cc99"><b>Tipos de contratación</b></h3>
+                <div  style="color: white; height: 270px; width: 260px;" id="chart4"></div>
+            </div>
+            <div class="col-sm-8" style="background: #eee;">
+                <h3 style="text-align: left; color: #00cc99"><b>Contrataciones en el tiempo</b></h3>
+                <div  style="height: 400px; width: 850px; align-content: left;" id="series_chart_div" ></div>
+                <br>
             </div>
         </div>
     </div>
 
-
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-sm-4">
-                    <h3 style="text-align: left; color: #00cc99"><b>Tipos de contratación</b></h3>
-                    <div  style="color: white; height: 270px; width: 260px;" id="chart4"></div>
-                </div>
-                <div class="col-sm-8">
-                    <h3 style="text-align: left; color: #00cc99"><b>Contrataciones en el tiempo</b></h3>
-                    <div  style="height: 400px; align-content: left;" id="series_chart_div" ></div>
-                </div>
-            </div>
+    <!--
         </div>
-    </div>
-
+    </div>-->
+    <br>
     <div class="row">
         <div class="col-sm-4">
             <div class="input-group">
@@ -243,7 +268,7 @@
                 drawBorder: false,
                 drawGridLines: true,        // wether to draw lines across the grid or not.
                 shadow: false,
-                backgroundColor: 'rgb(255, 255, 255)'
+                backgroundColor: '#eee'//'rgb(255, 255, 255)'
             },
             highlighter: {
                 show: true,
@@ -318,7 +343,7 @@
 
         }
 
-       // console.log(bardata);
+        // console.log(bardata);
         var barinfo = sortbyserie('s1',bardata);
 
         var ticks = [
@@ -377,7 +402,7 @@
                 drawBorder: false,
                 drawGridLines: true,        // wether to draw lines across the grid or not.
                 shadow: false,
-                backgroundColor: 'rgb(255, 255, 255)'
+                backgroundColor: '#eeee'//'rgb(255, 255, 255)'
             },
             highlighter: {
                 show: true,
