@@ -567,7 +567,7 @@ var circleAttributes = circles
       .attr("r", function (d) { return d.radius; })
       .style("opacity", function(d) { return .8; })
       .style("fill", function(d) { return d.color; })
-      .on("mouseover", function(d){
+      .on("click", function(d){
         svgContainer.selectAll("circle").style("fill", "#424242");
         d3.select(this).style("fill", "#00cc99");
         if(d3.select(this).attr("cx") == 80){
