@@ -490,11 +490,11 @@ var json_imp =      {
         ]
 };
 
-var width = 1200;
-var height = 450;
+var width    = 1200;
+var height   = 450;
 var maxLabel = 150;
 var duration = 500;
-var radius = 3;
+var radius   = 3;
 
 // Set the dimensions of the canvas / graph
 var margin = {top: 30, right: 20, bottom: 30, left: 50},
@@ -532,9 +532,8 @@ var div = d3.select("#arbol").append("div")
 
 
 /*------------Circle bar---------------*/
-var barCircles = [
+var barCircles  = [
   {"x_axis":80, "y_axis":18, "radius":10, "color": "#424242"},
-//  {"x_axis":170, "y_axis":18, "radius":10, "color": "#424242"},
   {"x_axis":300, "y_axis":18, "radius":10, "color": "#424242"},
   {"x_axis":550, "y_axis":18, "radius":10, "color": "#424242"},
   {"x_axis":800, "y_axis":18, "radius":10, "color": "#424242"},
@@ -613,11 +612,22 @@ function update(source)
 
     // Enter any new nodes at the parent's previous position.
     var nodeEnter = node.enter()
-        .append("g")
-        .attr("class", "node")
-        .attr("transform", function(d){ return "translate(" + source.y0 + "," + source.x0 + ")"; })
-        .on("click", click)
-        .on("mouseover", function(d) {
+          .append("g")
+          .attr("class", "node")
+          .attr("transform", function(d){ return "translate(" + source.y0 + "," + source.x0 + ")"; })
+          .on("click",function(d){
+            if (d.children){
+              d._children = d.children;
+              d.children = null;
+                }
+            else{
+              d.children = d._children;
+              d._children = null;
+            }
+            update(d);
+          })
+
+          .on("mouseover", function(d) {
             div.transition()
             .duration(200)
             .style("opacity", d.text.length>0?.9:0);
@@ -691,7 +701,7 @@ function update(source)
     })
     .on("mouseover", function(d){
       d3.select(this).style("stroke", "#00cc99");
-      d3.select(this).style("stroke-width", "8px");
+      d3.select(this).style("stroke-width", "9px");
     })
     .on("mouseout", function(d){
       d3.select(this).style("stroke", "#9E9E9E");
@@ -748,13 +758,13 @@ function nbEndNodes(n)
 function click(d)
 {
     if (d.children){
-        d._children = d.children;
-        d.children = null;
+      d._children = d.children;
+      d.children = null;
     }
-    else{
-        d.children = d._children;
-        d._children = null;
-    }
+  else{
+    d.children = d._children;
+    d._children = null;
+  }
     update(d);
 }
 
@@ -765,3 +775,8 @@ function collapse(d){
         d.children = null;
     }
 }
+
+$('#refresh').on("click", function(event){
+  root = json;
+  update(root);
+});
