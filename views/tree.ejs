@@ -34,9 +34,11 @@
         }
 
         text {
-            font: 10px sans-serif;
-            pointer-events: none;
-            text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+        font: 11px sans-serif;
+        color: #424242 !important;
+        pointer-events: none;
+        font-weight: bold;
+        text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
         }
 
     </style>
@@ -73,14 +75,10 @@
                 <div class='col-xs-12'><h3 class="jumbo-title">Estándar de Contrataciones Abiertas</h3></div>
             </div>
             <div class="row">
-                <div class='col-xs-12'>
+              <div class='col-xs-12'>
+                <h1 style="color:#fff">Contrato: <b style="color:#00cc99">LO-009KDH999-N50-2015</b></h1>
                     <p>
-                        Visualiza y descarga los Datos Abiertos de las etapas de
-                        planeación y concurso de la Red Compartida. Durante el desarrollo del proyecto,
-                        trabajaremos junto con la Alianza para las Contrataciones Abiertas para continuar
-                        publicando datos accesibles, comparables y oportunos sobre las siguientes etapas
-                        de adjudicación, contratación e implementación, conforme estos se generen.
-                        Este proyecto es parte de un piloto para adaptar el Estándar de Datos para Contrataciones Abiertas a un modelo de alianza público privado.
+
                     </p>
                 </div>
             </div>
@@ -90,14 +88,15 @@
 <br>
 <div class="container">
   <div class="row">
-    <div class='col-md-12' id="bolitas"></div>
+    <div class='col-md-8 col-md-offset-2' id="bolitas" style="background:#e0e0e0">
+          <div style="position:absolute;bottom:40px;right:670px"><p><b>Planeación</b></p></div>
+          <div style="position:absolute;bottom:40px;right:520px"><p><b>Licitación</b></p></div>
+          <div style="position:absolute;bottom:40px;right:350px"><p><b>Adjudicación</b></p></div>
+          <div style="position:absolute;bottom:40px;right:180px"><p><b>Contratación</b></p></div>
+          <div style="position:absolute;bottom:40px;right:10px"><p><b>Implementación</b></p></div>
+      <br></div>
   </div>
-  <div class="container" id="jumbo">
-  <div class="jumbotron">
-    <h1>Contrato: <b style="color:#00cc99">Número</b></h1>
-    <p>Navega a través de las distintas etapas del proceso de contratación y descubre información relevante.</p>
-  </div>
-</div>
+  <br>
   <div id="arbol"></div>
 </div>
 
