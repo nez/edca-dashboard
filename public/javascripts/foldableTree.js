@@ -533,22 +533,22 @@ var div = d3.select("#arbol").append("div")
 
 /*------------Circle bar---------------*/
 var barCircles = [
-  {"x_axis":50, "y_axis":18, "radius":10, "color": "#424242"},
+  {"x_axis":80, "y_axis":18, "radius":10, "color": "#424242"},
 //  {"x_axis":170, "y_axis":18, "radius":10, "color": "#424242"},
-  {"x_axis":207, "y_axis":18, "radius":10, "color": "#424242"},
-  {"x_axis":370, "y_axis":18, "radius":10, "color": "#424242"},
-  {"x_axis":530, "y_axis":18, "radius":10, "color": "#424242"},
-  {"x_axis":695, "y_axis":18, "radius":10, "color": "#424242"}
+  {"x_axis":300, "y_axis":18, "radius":10, "color": "#424242"},
+  {"x_axis":550, "y_axis":18, "radius":10, "color": "#424242"},
+  {"x_axis":800, "y_axis":18, "radius":10, "color": "#424242"},
+  {"x_axis":1040, "y_axis":18, "radius":10, "color": "#424242"}
 ];
 
 var svgContainer = d3.select("#bolitas").append("svg")
-      .attr("width",  1000)
+      .attr("width",  1500)
       .attr("height", 50);
 
 var line = svgContainer.append("line")
-      .attr("x1", 50)
+      .attr("x1", 80)
       .attr("y1", 18)
-      .attr("x2", 700)
+      .attr("x2", 1040)
       .attr("y2", 18)
       .attr("stroke-width", 15)
       .attr("stroke", "#9e9e9e")
@@ -567,22 +567,22 @@ var circleAttributes = circles
       .attr("r", function (d) { return d.radius; })
       .style("opacity", function(d) { return .8; })
       .style("fill", function(d) { return d.color; })
-      .on("mouseover", function(d){
+      .on("click", function(d){
         svgContainer.selectAll("circle").style("fill", "#424242");
         d3.select(this).style("fill", "#00cc99");
-        if(d3.select(this).attr("cx") == 50){
+        if(d3.select(this).attr("cx") == 80){
           root = json_plan;
           update(root);
-        }else if(d3.select(this).attr("cx") == 207){
+        }else if(d3.select(this).attr("cx") == 300){
           root = json_lic;
           update(root);
-        }else if(d3.select(this).attr("cx") == 370){
+        }else if(d3.select(this).attr("cx") == 550){
           root = json_adj;
           update(root);
-        }else if(d3.select(this).attr("cx") == 530){
+        }else if(d3.select(this).attr("cx") == 800){
           root = json_cont;
           update(root);
-        }else if(d3.select(this).attr("cx") == 695){
+        }else if(d3.select(this).attr("cx") == 1040){
           root = json_imp;
           update(root);
         }
