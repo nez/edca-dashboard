@@ -603,7 +603,7 @@ function update(source)
     var links = tree.links(nodes);
 
     // Normalize for fixed-depth.
-    nodes.forEach(function(d) { d.y = d.depth * maxLabel*1.2; });
+    nodes.forEach(function(d) { d.y = d.depth * maxLabel*1.4; });
 
     // Update the nodes…
     var node = svg.selectAll("g.node")
