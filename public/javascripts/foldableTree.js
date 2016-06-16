@@ -654,7 +654,7 @@ function update(source)
 
 
 
-    // Transition nodes to their new position.
+  // Transition nodes to their new position.
   var nodeUpdate = node.transition()
         .duration(duration)
         .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
@@ -681,20 +681,23 @@ function update(source)
   // Update the links…
   var link = svg.selectAll("path.link")
         .data(links, function(d){ return d.target.id; });
-/*          .on("hover", function(d){
-            d3.select(this).style("stroke", "#00cc99");
-          })
-          .on("click", function(d) {
-            d.style("stroke", function(d){ return d.children || d._children ? "#9E9E9E" : "#00cc99"; });
-          });*/
 
-    // Enter any new links at the parent's previous position.
-    link.enter().insert("path", "g")
+  // Enter any new links at the parent's previous position.
+  link.enter().insert("path", "g")
     .attr("class", "link")
     .attr("d", function(d){
       var o = {x: source.x0, y: source.y0};
       return diagonal({source: o, target: o});
-    });
+    })
+    .on("mouseover", function(d){
+      d3.select(this).style("stroke", "#00cc99");
+      d3.select(this).style("stroke-width", "8px");
+    })
+    .on("mouseout", function(d){
+      d3.select(this).style("stroke", "#9E9E9E");
+      d3.select(this).style("stroke-width", "5.5px");
+    })
+  ;
 
     // Transition links to their new position.
     link.transition()
