@@ -252,23 +252,66 @@
         //bar chart
         //avance fisico
 
-        var s1 = [
-            47.16, 85.15, 30.25,
-            90, 21.23, 10.01,
-            6.4, 4.33, 1.11,
-            1.58, 25.93,12.27,
-            18, 40
+        var bardata = [
+            { id : 'LO-009KDH999-N46-2015', s1 : 47.26, s2 : (5708930.68 / 14382969.2 )*100 },
+            { id : 'LO-009KDH999-N42-2015', s1 : 85.15, s2 : (5344833.89 / 11924906.62)*100 },
+            { id : 'LO-009KDH999-N45-2015', s1 : 30.25, s2 : (4504538.98/ 18934197.76 )*100 },
+            { id : 'IO-009KDH999-N54-2015', s1 : 90, s2 : (2565511.85/3286908.92)*100},
+            { id : 'LO-009KDH999-N47-2015', s1 : 21.23, s2 : (8620689.66/112046320.57)*100 },
+            { id : 'LO-009KDH999-N50-2015', s1 : 10.01, s2 :(13609080.34/192525597.09)*100 },
+            { id : 'LO-009KDH999-T52-2015', s1 : 6.4, s2 :0 },
+            { id : 'LO-009KDH999-N79-2015', s1 : 4.33, s2 : (169601426.76/1762803241.34)*100 },
+            { id : 'LO-009KDH999-N80-2015', s1 : 1.11, s2 :(57514449.48/608275577.5)*100 },
+            { id : 'LO-009KDH999-N78-2015', s1 : 1.58, s2 : (49391647.5/493916475)*100 },
+            { id : 'LO-009KDH999-N86-2015', s1 : 25.93, s2 :0 },
+            { id : 'LO-009KDH999-N87-2015', s1 : 12.27, s2 :0 },
+            { id : 'AO-009KDH999-E26-2016', s1 : 18, s2 :0 },
+            { id : 'AO-009KDH999-E20-2016', s1 : 40, s2 :0 }
         ];
 
-        //avance financiero
-        var s2 = [
-            (5708930.68 / 14382969.2 )*100,(5344833.89 / 11924906.62)*100, (4504538.98/ 18934197.76 )*100,
-            (2565511.85/3286908.92)*100, (8620689.66/112046320.57)*100, (13609080.34/192525597.09)*100,
-            0, (169601426.76/1762803241.34)*100, (57514449.48/608275577.5)*100,
-            (49391647.5/493916475)*100, 0, 0,
-            0, 0
-        ];
 
+        function sortbyserie(serie, data ) {
+
+            var s1 = [ ];
+            var s2 = [ ];
+            var ticks = [ ];
+
+            if ( serie == "s1") {
+                bardata.sort(function (a, b) {
+
+                    if (a.s1 < b.s1) {
+                        return -1
+                    }
+                    if (a.s1 > b.s1) {
+                        return 1
+                    }
+                    return 0;
+                });
+
+            } else {
+                bardata.sort(function (a,b) {
+
+                    if  (a.s2 < b.s2) { return -1}
+                    if  (a.s2 > b.s2) { return 1}
+                    return 0;
+                });
+
+            }
+
+            for ( var i =0; i< data.length;i++){
+                s1.push(data[i].s1);
+                s2.push(data[i].s2);
+                ticks.push(data[i].id);
+
+            }
+
+            return [ s1 , s2 , ticks ];
+
+        }
+
+
+       // console.log(bardata);
+        var barinfo = sortbyserie('s1',bardata);
 
         var ticks = [
             /*'LO-00<br>9KDH9<br>99-N5<br>-2014', 'SO-00<br>9KDH9<br>99-N24<br>-2015', 'SO-00<br>9KDH9<br>99-N23<br>-2015', 'SO-00<br>9KDH9<br>99-N26<br>-2015', 'IO-00<br>9KDH9<br>99-N11<br>-2015',
@@ -281,82 +324,8 @@
 
             'LO-00<br>9KDH9<br>99-N87<br>-2015' ,'AO-00<br>9KDH9<br>99-E26<br>-2016', 'AO-00<br>9KDH9<br>99-E20<br>-2016'/*, 'IO-00<br>9KDH9<br>99-E15<br>-2016' ,'IO-00<br>9KDH9<br>99-E96<br>-2015'*/
         ];
-
-        var ticks1 = [
-            /*'LO-00<br>9KDH9<br>99-N5<br>-2014', 'SO-00<br>9KDH9<br>99-N24<br>-2015', 'SO-00<br>9KDH9<br>99-N23<br>-2015', 'SO-00<br>9KDH9<br>99-N26<br>-2015', 'IO-00<br>9KDH9<br>99-N11<br>-2015',
-
-             'IO-00<br>9KDH9<br>99-N10<br>-2015', 'LO-09<br>9KDH9<br>99-N20<br>-2015', 'LO-09<br>9KDH9<br>99-T15<br>-2015',*/ 'LO-009KDH999-N46-2015','LO-009KDH999-N42-2015',
-
-            'LO-009KDH999-N45-2015', /*'IO-00<br>9KDH9<br>99-N41<br>-2015',*/ 'IO-009KDH999-N54-2015', 'LO-009KDH999-N47-2015', 'LO-009KDH999-N50-2015',
-
-            'LO-009KDH999-T52-2015', 'LO-009KDH999-N79-2015', 'LO-009KDH999-N80-2015', 'LO-009KDH999-N78-2015' ,'LO-009KDH999-N86-2015' ,
-
-            'LO-009KDH999-N87-2015' ,'AO-009KDH999-E26-2016', 'AO-009KDH999-E20-2016'/*, 'IO-00<br>9KDH9<br>99-E15<br>-2016' ,'IO-00<br>9KDH9<br>99-E96<br>-2015'*/
-        ];
-
-        /*
-
-        plot2 = $.jqplot('chart2', [s1, s2], {
-            seriesColors: ['#00cc99', '#673AB7'],//'#ff4d4d'],
-            series : [{label: 'Avance físico'},{label: 'Avance financiero'}],
-            seriesDefaults: {
-                shadow: false,
-                renderer:$.jqplot.BarRenderer,
-                pointLabels: {
-                    show: false //bar value
-                }
-            },
-            axes: {
-                xaxis: {
-                    renderer: $.jqplot.CategoryAxisRenderer,
-                    //tickRenderer: $.jqplot.CanvasAxisTickRenderer,
-                    //labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
-
-                    tickOptions:{
-                       show: false,
-                        textColor: 'white'
-                    },
-
-                    rendererOptions: {
-                        drawBaseline: true
-                    },
-                    drawMajorGridlines: false,
-                    //ticks: ticks
-                },
-                yaxis:{
-                    drawMajorGridlines: false,
-                    label: "Porcentaje de avance (%)",
-                    labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
-                    min: 0,
-                    max: 100
-                }
-            },
-            legend: {
-                show: false,  // Sin leyenda
-                location: 's',
-                placement: 'outside'
-            },
-            grid: {
-                drawBorder: false,
-                drawGridLines: true,        // wether to draw lines across the grid or not.
-                shadow: false,
-                backgroundColor: 'rgb(255, 255, 255)'
-            },
-            highlighter: {
-                show: true,
-                sizeAdjust: 0.5,
-            //useAxesFormatters: false,
-                //dataLabels: 'value',
-                //tooltipFormatString: '%s'
-                tooltipContentEditor: function(current, serie, index, plot ){
-                    return "<p>Contrato: <br><b>"+ticks1[index] +"</b></p>"+
-                            "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p>";
-                }
-            }
-        });*/
-
-
-        plot2 = $.jqplot('chart2', [s1, s2], {
+        
+        plot2 = $.jqplot('chart2', [barinfo[0], barinfo[1]], {
             seriesColors: ['#00cc99', '#673AB7'],//'#ff4d4d'],
             series : [{label: 'Avance físico'},{label: 'Avance financiero'}],
             seriesDefaults: {
@@ -409,7 +378,7 @@
                 //dataLabels: 'value',
                 //tooltipFormatString: '%s'
                 tooltipContentEditor: function(current, serie, index, plot ){
-                    return "<p>Contrato: <br><b>"+ticks1[index] +"</b></p>"+
+                    return "<p>Contrato: <br><b>"+barinfo[2][index] +"</b></p>"+
                             "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p>";
                 }
             }
