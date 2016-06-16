@@ -140,9 +140,9 @@
                 <div class="col-sm-4">
                     <!--<img src="/images/gacm1.png" >-->
                     <h3 style="color: #00cc99"><b>GACM</b></h3>
-                    <h2 style="color: #673AB7">25 <small>contratos</small></h2>
-                    <h2 style="color: #673AB7">29 <small>contratistas</small></h2>
-                    <h2 style="color: #673AB7">43,389 <small>millones de pesos</small></h2>
+                    <h2 style="color: #673AB7"><b>25</b> <small>contratos</small></h2>
+                    <h2 style="color: #673AB7"><b>29</b> <small>contratistas</small></h2>
+                    <h2 style="color: #673AB7"><b>43,389</b> <small>millones de pesos</small></h2>
 
                 </div>
                 <div class="col-sm-8">
@@ -251,6 +251,7 @@
 
         //bar chart
         //avance fisico
+
         var s1 = [
             47.16, 85.15, 30.25,
             90, 21.23, 10.01,
@@ -370,17 +371,17 @@
                     renderer: $.jqplot.CategoryAxisRenderer,
                     //tickRenderer: $.jqplot.CanvasAxisTickRenderer,
                     //labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
-                    //label: 'Contratos',
+                    label: 'Contratos',
                     tickOptions:{
-                        show: true,
-                        //textColor: 'white'
+                        show: false,
+                        textColor: 'white'
                     },
                     /*
                      rendererOptions: {
                      drawBaseline: false
                      }*/
                     drawMajorGridlines: false,
-                    ticks: ticks
+                    //ticks: ticks
                 },
                 yaxis:{
                     //drawMajorGridlines: false,
