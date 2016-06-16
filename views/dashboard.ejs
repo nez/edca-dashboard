@@ -126,7 +126,7 @@
             <div class="row">
                 <div class='col-xs-8'><p>Visualiza y descarga los Datos Abiertos de las etapas de planeación y concurso de la Red Compartida. Durante el desarrollo del proyecto, trabajaremos junto con la Alianza para las Contrataciones Abiertas para continuar publicando datos accesibles, comparables y oportunos sobre las siguientes etapas de adjudicación, contratación e implementación, conforme estos se generen. Este proyecto es parte de un piloto para adaptar el Estándar de Datos para Contrataciones Abiertas a un modelo de alianza público privado.</p></div>
                 <div class='col-xs-1'></div>
-                <div class='col-xs-3'><img src='/images/gacm1.png'/></div>
+                <div class='col-xs-3'><img src='/images/Logo-GACM.png'/></div>
             </div>
         </div>
     </div>
@@ -148,6 +148,15 @@
                 <div class="col-sm-8">
                     <h3 style="text-align: left; color: #00cc99"><b>Avance físico y financiero por contrato</b></h3>
                     <div id="chart2"></div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Ordenar por <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" data-serie = 's1' id="sort1">Avance físico</a></li>
+                            <li><a href="#" data-serie = 's2' id="sort2">Avance financiero</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -309,7 +318,6 @@
 
         }
 
-
        // console.log(bardata);
         var barinfo = sortbyserie('s1',bardata);
 
@@ -324,7 +332,7 @@
 
             'LO-00<br>9KDH9<br>99-N87<br>-2015' ,'AO-00<br>9KDH9<br>99-E26<br>-2016', 'AO-00<br>9KDH9<br>99-E20<br>-2016'/*, 'IO-00<br>9KDH9<br>99-E15<br>-2016' ,'IO-00<br>9KDH9<br>99-E96<br>-2015'*/
         ];
-        
+
         plot2 = $.jqplot('chart2', [barinfo[0], barinfo[1]], {
             seriesColors: ['#00cc99', '#673AB7'],//'#ff4d4d'],
             series : [{label: 'Avance físico'},{label: 'Avance financiero'}],
@@ -383,6 +391,28 @@
                 }
             }
         });
+
+
+        $('#sort1, #sort2').click(function () {
+
+            barinfo = sortbyserie( $(this).data('serie'),bardata);
+
+            //console.log()
+            var s1 =[];
+            var s2 =[];
+
+            //console.log(barinfo);
+
+            for (var i=0; i< barinfo[0].length;i++){
+                s1.push([i, barinfo[0][i]]);
+                s2.push([i, barinfo[1][i]]);
+            }
+            plot2.series[0].data  = s1;
+            plot2.series[1].data  = s2;
+            plot2.replot();
+            //console.log(s1.length);
+            //console.log(s2.length);
+        })
 
     });
 
