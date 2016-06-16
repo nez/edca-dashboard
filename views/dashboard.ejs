@@ -13,11 +13,11 @@
     <link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="/dgm-navbar/dgm-navbar.html">
 
-<style>
-    div.google-visualization-tooltip > ul > li > span {
-        /*color: #ff0000 !important;*/
-    }
-</style>
+    <style>
+        div.google-visualization-tooltip > ul > li > span {
+            /*color: #ff0000 !important;*/
+        }
+    </style>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart'], 'language':'es'});
@@ -58,9 +58,14 @@
                 //'legend': 'left',
                 //title: 'Contrataciones en el tiempo',
                 tooltip: {isHtml: true},
+                 legend :{ position: 'bottom'},
                 hAxis: {
                     title: 'Fecha de firma',
-                    titleTextStyle: {italic: false},
+                    titleTextStyle: {
+                        italic: false,
+                        fontName: 'Open Sans',
+                        fontSize: '14pt'
+                    },
                     gridlines: {
                         color: 'transparent'
                     }
@@ -68,7 +73,11 @@
                 },
                 vAxis: {
                     title: 'Vigencia en meses',
-                    titleTextStyle: {italic: false},
+                    titleTextStyle: {
+                        italic: false,
+                        fontName: 'Open Sans',
+                        fontSize: '14pt'
+                    }
                     /*gridlines: {
                         color: 'transparent'
                     }*/
@@ -76,11 +85,11 @@
                 bubble: {
                     stroke: 'none',
                     textStyle: {
-                    //no text
-                    color: 'none',
-                    fontSize: 11,
-                    auraColor: 'none'
-                }},
+                        //no text
+                        color: 'none',
+                        fontSize: 11,
+                        auraColor: 'none'
+                    }},
                 series: {
 
                     'Licitación': {color: '#00cc99'},
@@ -129,8 +138,8 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-4">
-                    <img src="/images/gacm1.png" >
-                    <h4 style="color: #00cc99">GACM</h4>
+                    <!--<img src="/images/gacm1.png" >-->
+                    <h3 style="color: #00cc99"><b>GACM</b></h3>
                     <h2 style="color: #673AB7">25 <small>contratos</small></h2>
                     <h2 style="color: #673AB7">29 <small>contratistas</small></h2>
                     <h2 style="color: #673AB7">43,389 <small>millones de pesos</small></h2>
@@ -150,7 +159,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <h3 style="text-align: left; color: #00cc99"><b>Tipos de contratación</b></h3>
-                    <div  style="color: white; height: 270px" id="chart4"></div>
+                    <div  style="color: white; height: 270px; width: 260px;" id="chart4"></div>
                 </div>
                 <div class="col-sm-8">
                     <h3 style="text-align: left; color: #00cc99"><b>Contrataciones en el tiempo</b></h3>
@@ -235,7 +244,7 @@
                 tooltipContentEditor: function(current, serie, index, plot ){
                     return plot.data;
                     //return "<p>Contrato: <br><b>"+ticks1[index] +"</b></p>"+
-                      //      "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p>";
+                    //      "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p>";
                 }
             }
         });
@@ -255,7 +264,7 @@
             (5708930.68 / 14382969.2 )*100,(5344833.89 / 11924906.62)*100, (4504538.98/ 18934197.76 )*100,
             (2565511.85/3286908.92)*100, (8620689.66/112046320.57)*100, (13609080.34/192525597.09)*100,
             0, (169601426.76/1762803241.34)*100, (57514449.48/608275577.5)*100,
-            100, 0, 0,
+            (49391647.5/493916475)*100, 0, 0,
             0, 0
         ];
 
@@ -361,16 +370,17 @@
                     renderer: $.jqplot.CategoryAxisRenderer,
                     //tickRenderer: $.jqplot.CanvasAxisTickRenderer,
                     //labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                    //label: 'Contratos',
                     tickOptions:{
-                        show: false,
-                        textColor: 'white'
+                        show: true,
+                        //textColor: 'white'
                     },
                     /*
                      rendererOptions: {
                      drawBaseline: false
                      }*/
                     drawMajorGridlines: false,
-                    //ticks: ticks
+                    ticks: ticks
                 },
                 yaxis:{
                     //drawMajorGridlines: false,
