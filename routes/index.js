@@ -11,4 +11,9 @@ router.get('/tree',function (req, res) {
     res.render('tree');
 });
 
+
+router.get('/dashboard',function (req, res) {
+    res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas' });
+});
+
 module.exports = router;
