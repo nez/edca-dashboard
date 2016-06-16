@@ -598,6 +598,16 @@ var circleAttributes = circles
           update(root);
         }
       });
+
+var ball = svgContainer.selectAll("circle")
+      .enter()
+      .append("g")
+      .append("text")
+      .attr("x", function(d){
+            var spacing = computeRadius(d) + 5;
+        })
+      .attr("dx", "3")
+      .text(function(d){ return d.label; });
 /*--------------------------------------------*/
 
 function update(source)
