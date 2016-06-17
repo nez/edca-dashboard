@@ -15,7 +15,13 @@
 
     <style>
         div.google-visualization-tooltip > ul > li > span {
-            /*color: #ff0000 !important;*/
+            /*color: #f6f6f6 !important;*/
+        }
+
+        .jqplot-highlighter-tooltip, .jqplot-canvasOverlay-tooltip {
+            z-index: 2;
+            background: white !IMPORTANT;
+            font-color: black;
         }
     </style>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -110,7 +116,6 @@
                 series: {
 
                     'Licitación': {
-                        //annotations: {textStyle: { fontSize: 18, color : 'red'}},
                         color: '#00cc99',
                         //fontName: 'Open Sans'
                     },
@@ -128,6 +133,10 @@
 
             var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
             chart.draw(data, options);
+        }
+
+        function createCustomHTMLContent(flagURL, totalGold, totalSilver, totalBronze) {
+
         }
     </script>
 
@@ -261,7 +270,7 @@
     //donut chart
     $(document).ready(function(){
         var data = [
-            ['Licitaciones', 14],['Invitaciones a 3', 6], ['Adjudicaciones directas:', 5]
+            ['Licitaciones', 14],['Invitaciones a tres', 6], ['Adjudicaciones directas:', 5]
         ];
 
         var plot4 = $.jqplot('chart4', [data], {
@@ -296,7 +305,8 @@
                 dataLabels: 'value',
                 //tooltipFormatString: '%s'
                 tooltipContentEditor: function(current, serie, index, plot ){
-                    return plot.data;
+                    //return "<div class='col-sm-2'><p style='color: black'>"+plot.data[serie][index]+"</p></div>";
+                    return "<div class='col-sm-2'><p style='color: black'>"+data[index][1]+" "+data[index][0]+"</p></div>";
                     //return "<p>Contrato: <br><b>"+ticks1[index] +"</b></p>"+
                     //      "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p>";
                 }
@@ -431,8 +441,8 @@
                 //dataLabels: 'value',
                 //tooltipFormatString: '%s'
                 tooltipContentEditor: function(current, serie, index, plot ){
-                    return "<p>Contrato: <br><b>"+barinfo[2][index] +"</b></p>"+
-                            "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p>";
+                    return "<div class='col-sm-2'><p>Contrato: <br><b>"+barinfo[2][index] +"</b></p>"+
+                            "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p></div>";
                 }
             }
         });
