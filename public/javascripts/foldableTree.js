@@ -528,7 +528,7 @@ root.children.forEach(collapse);
 // Define the div for the tooltip
 var div = d3.select("#arbol").append("div")
     .attr("class", "tooltip")
-      .style("opacity", 0);
+    .style("opacity", 0);
 
 
 /*------------Circle bar---------------*/
