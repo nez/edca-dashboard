@@ -452,11 +452,8 @@
 
             barinfo = sortbyserie( $(this).data('serie'),bardata);
 
-            //console.log()
             var s1 =[];
             var s2 =[];
-
-            //console.log(barinfo);
 
             for (var i=0; i< barinfo[0].length;i++){
                 s1.push([i, barinfo[0][i]]);
@@ -465,8 +462,6 @@
             plot2.series[0].data  = s1;
             plot2.series[1].data  = s2;
             plot2.replot();
-            //console.log(s1.length);
-            //console.log(s2.length);
         })
 
     });
