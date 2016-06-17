@@ -5,6 +5,10 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'Estandar de Datos de Contrataciones Abiertas' });
 });
+/* GET home page. */
+router.get('/luis', function(req, res, next) {
+    res.render('index1', { title: 'Estandar de Datos de Contrataciones Abiertas' });
+});
 
 
 router.get('/tree',function (req, res) {
