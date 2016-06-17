@@ -15,7 +15,13 @@
 
     <style>
         div.google-visualization-tooltip > ul > li > span {
-            /*color: #ff0000 !important;*/
+            /*color: #f6f6f6 !important;*/
+        }
+
+        .jqplot-highlighter-tooltip, .jqplot-canvasOverlay-tooltip {
+            z-index: 2;
+            background: white !IMPORTANT;
+            font-color: black;
         }
     </style>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -57,10 +63,22 @@
             var options = {
                 //'legend': 'left',
                 //title: 'Contrataciones en el tiempo',
+                chartArea:{
+                    width: '75%',
+                    heigth: '90%',
+                    left: '75',
+                    top: '30'
+                },
+                backgroundColor: 'transparent',
                 tooltip: {isHtml: true},
-                 legend :{ position: 'bottom'},
+
                 hAxis: {
                     title: 'Fecha de firma',
+                    textStyle: {
+                        italic: false,
+                        fontName: 'Open Sans',
+                        fontSize: '11pt'
+                    },
                     titleTextStyle: {
                         italic: false,
                         fontName: 'Open Sans',
@@ -73,6 +91,11 @@
                 },
                 vAxis: {
                     title: 'Vigencia en meses',
+                    textStyle: {
+                        italic: false,
+                        fontName: 'Open Sans',
+                        fontSize: '11pt'
+                    },
                     titleTextStyle: {
                         italic: false,
                         fontName: 'Open Sans',
@@ -92,15 +115,28 @@
                     }},
                 series: {
 
-                    'Licitación': {color: '#00cc99'},
+                    'Licitación': {
+                        color: '#00cc99',
+                        //fontName: 'Open Sans'
+                    },
                     'Invitación a 3': {color: '#ff4d4d'},
                     'Adjudicación directa': {color: '#673AB7'}
 
+                },
+                legend: {
+                    position: 'bottom',
+                    textStyle : {
+                        fontName: 'Open Sans'
+                    }
                 }
             };
 
             var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
             chart.draw(data, options);
+        }
+
+        function createCustomHTMLContent(flagURL, totalGold, totalSilver, totalBronze) {
+
         }
     </script>
 
@@ -126,49 +162,76 @@
             <div class="row">
                 <div class='col-xs-8'><p>Visualiza y descarga los Datos Abiertos de las etapas de planeación y concurso de la Red Compartida. Durante el desarrollo del proyecto, trabajaremos junto con la Alianza para las Contrataciones Abiertas para continuar publicando datos accesibles, comparables y oportunos sobre las siguientes etapas de adjudicación, contratación e implementación, conforme estos se generen. Este proyecto es parte de un piloto para adaptar el Estándar de Datos para Contrataciones Abiertas a un modelo de alianza público privado.</p></div>
                 <div class='col-xs-1'></div>
-                <div class='col-xs-3'><img src='/images/gacm1.png'/></div>
+                <div class='col-xs-3'><img src='/images/Logo-GACM.png'/></div>
             </div>
         </div>
     </div>
 </section>
 
 <div class="container">
+
+    <!-- <div class="col-xs-12" style=" background: #eee ">
+        jkdjskjsjsdkjs
+    </div>-->
+
     <br>
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-sm-4">
-                    <!--<img src="/images/gacm1.png" >-->
-                    <h3 style="color: #00cc99"><b>GACM</b></h3>
-                    <h2 style="color: #673AB7"><b>25</b> <small>contratos</small></h2>
-                    <h2 style="color: #673AB7"><b>29</b> <small>contratistas</small></h2>
-                    <h2 style="color: #673AB7"><b>43,389</b> <small>millones de pesos</small></h2>
+    <!--<div class="panel panel-default" style="background: #eee;">
+        <div class="panel-body">-->
+    <div class="row">
+        <div class="col-sm-12" style="background: #eee;">
+            <div class="col-sm-4">
+                <!--<img src="/images/gacm1.png" >-->
+                <h3 style="color: #00cc99"><b>GACM</b></h3>
+                <h2 style="color: #673AB7"><b>25</b> <small>contratos</small></h2>
+                <h2 style="color: #673AB7"><b>29</b> <small>contratistas</small></h2>
+                <h2 style="color: #673AB7"><b>43,389</b> <small>millones de pesos</small></h2>
 
+            </div>
+            <div class="col-sm-8">
+                <h3 style="text-align: left; color: #00cc99"><b>Avance físico y financiero por contrato</b></h3>
+                <div id="chart2"></div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ordenar por <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-serie = 's1' id="sort1">Avance físico</a></li>
+                        <li><a href="#" data-serie = 's2' id="sort2">Avance financiero</a></li>
+                    </ul>
                 </div>
-                <div class="col-sm-8">
-                    <h3 style="text-align: left; color: #00cc99"><b>Avance físico y financiero por contrato</b></h3>
-                    <div id="chart2"></div>
-                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <!--
+        </div>
+    </div>-->
+
+    <br>
+
+
+    <!--<div class="panel panel-default" style="background: #eee">
+        <div class="panel-body">-->
+
+    <div class="row">
+        <div class="col-sm-12" style="background: #eee">
+            <div class="col-sm-4" style="background: #eee;">
+                <h3 style="text-align: left; color: #00cc99"><b>Tipos de contratación</b></h3>
+                <div  style="color: white; height: 270px; width: 260px;" id="chart4"></div>
+            </div>
+            <div class="col-sm-8" style="background: #eee;">
+                <h3 style="text-align: left; color: #00cc99"><b>Contrataciones en el tiempo</b></h3>
+                <div  style="height: 400px; width: 850px; align-content: left;" id="series_chart_div" ></div>
+                <br>
             </div>
         </div>
     </div>
 
-
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-sm-4">
-                    <h3 style="text-align: left; color: #00cc99"><b>Tipos de contratación</b></h3>
-                    <div  style="color: white; height: 270px; width: 260px;" id="chart4"></div>
-                </div>
-                <div class="col-sm-8">
-                    <h3 style="text-align: left; color: #00cc99"><b>Contrataciones en el tiempo</b></h3>
-                    <div  style="height: 400px; align-content: left;" id="series_chart_div" ></div>
-                </div>
-            </div>
+    <!--
         </div>
-    </div>
-
+    </div>-->
+    <br>
     <div class="row">
         <div class="col-sm-4">
             <div class="input-group">
@@ -207,7 +270,7 @@
     //donut chart
     $(document).ready(function(){
         var data = [
-            ['Licitaciones', 14],['Invitaciones a 3', 6], ['Adjudicaciones directas:', 5]
+            ['Licitaciones', 14],['Invitaciones a tres', 6], ['Adjudicaciones directas:', 5]
         ];
 
         var plot4 = $.jqplot('chart4', [data], {
@@ -234,7 +297,7 @@
                 drawBorder: false,
                 drawGridLines: true,        // wether to draw lines across the grid or not.
                 shadow: false,
-                backgroundColor: 'rgb(255, 255, 255)'
+                backgroundColor: '#eee'//'rgb(255, 255, 255)'
             },
             highlighter: {
                 show: true,
@@ -242,7 +305,8 @@
                 dataLabels: 'value',
                 //tooltipFormatString: '%s'
                 tooltipContentEditor: function(current, serie, index, plot ){
-                    return plot.data;
+                    //return "<div class='col-sm-2'><p style='color: black'>"+plot.data[serie][index]+"</p></div>";
+                    return "<div class='col-sm-2'><p style='color: black'>"+data[index][1]+" "+data[index][0]+"</p></div>";
                     //return "<p>Contrato: <br><b>"+ticks1[index] +"</b></p>"+
                     //      "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p>";
                 }
@@ -309,8 +373,7 @@
 
         }
 
-
-       // console.log(bardata);
+        // console.log(bardata);
         var barinfo = sortbyserie('s1',bardata);
 
         var ticks = [
@@ -324,7 +387,7 @@
 
             'LO-00<br>9KDH9<br>99-N87<br>-2015' ,'AO-00<br>9KDH9<br>99-E26<br>-2016', 'AO-00<br>9KDH9<br>99-E20<br>-2016'/*, 'IO-00<br>9KDH9<br>99-E15<br>-2016' ,'IO-00<br>9KDH9<br>99-E96<br>-2015'*/
         ];
-        
+
         plot2 = $.jqplot('chart2', [barinfo[0], barinfo[1]], {
             seriesColors: ['#00cc99', '#673AB7'],//'#ff4d4d'],
             series : [{label: 'Avance físico'},{label: 'Avance financiero'}],
@@ -369,7 +432,7 @@
                 drawBorder: false,
                 drawGridLines: true,        // wether to draw lines across the grid or not.
                 shadow: false,
-                backgroundColor: 'rgb(255, 255, 255)'
+                backgroundColor: '#eee'//'rgb(255, 255, 255)'
             },
             highlighter: {
                 show: true,
@@ -378,11 +441,28 @@
                 //dataLabels: 'value',
                 //tooltipFormatString: '%s'
                 tooltipContentEditor: function(current, serie, index, plot ){
-                    return "<p>Contrato: <br><b>"+barinfo[2][index] +"</b></p>"+
-                            "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p>";
+                    return "<div class='col-sm-2'><p>Contrato: <br><b>"+barinfo[2][index] +"</b></p>"+
+                            "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p></div>";
                 }
             }
         });
+
+
+        $('#sort1, #sort2').click(function () {
+
+            barinfo = sortbyserie( $(this).data('serie'),bardata);
+
+            var s1 =[];
+            var s2 =[];
+
+            for (var i=0; i< barinfo[0].length;i++){
+                s1.push([i, barinfo[0][i]]);
+                s2.push([i, barinfo[1][i]]);
+            }
+            plot2.series[0].data  = s1;
+            plot2.series[1].data  = s2;
+            plot2.replot();
+        })
 
     });
 
