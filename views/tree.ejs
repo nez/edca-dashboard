@@ -34,11 +34,11 @@
         }
 
         text {
-        font: 11px sans-serif;
-        color: #424242 !important;
-        pointer-events: none;
-        font-weight: bold;
-        text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+            font: 11px sans-serif;
+            color: #424242 !important;
+            pointer-events: none;
+            font-weight: bold;
+            text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
         }
 
     </style>
@@ -61,11 +61,14 @@
 
 <body>
 <dgm-navbar></dgm-navbar>
+
 <section id="banner">
     <div class="container-fluid fixed">
         <p class="text-left"><b>Grupo Aeroportuario de la Ciudad de México</b></p>
     </div>
 </section>
+
+<% if (typeof contract != 'undefined'){%>
 
 <section id="highlights">
     <div class="content">
@@ -75,14 +78,14 @@
                 <div class='col-xs-12'><h3 class="jumbo-title" style="color:#424242">Estándar de Contrataciones Abiertas</h3></div>
             </div>
             <div class="row">
-              <div class='col-xs-12' id="datosContract">
-                <h1 style="color:#424242">Contrato: <b style="color:#00cc99">LO-009KDH999-N50-2015</b></h1>
-                <hr style="border-color:#BDBDBD">
-                <p style="color:#424242"> <font size="2">Fecha de firma: <b>2015-09-10</b> </font></p>
-                <p style="color:#424242"> <font size="2">Monto: <b>192525597.09</b></font></p>
-                <p style="color:#424242"> <font size="2">Vigencia: <b>2016-03-07</b></font></p>
-                <p style="color:#424242"> <font size="2">Tipo: <b>Licitación</b></font></p>
-                <button type="button" class="btn btn-primary" style="width:150px;height:40px;position:absolute;bottom:10px;right:10px;background-color:#00cc99;align:top;border-radius:25px;outline:none;" id="refresh"><b>Árbol completo</b></button>
+                <div class='col-xs-12' id="datosContract">
+                    <h1 style="color:#424242">Contrato: <b style="color:#00cc99"> <%= contract.product %></b></h1>
+                    <hr style="border-color:#BDBDBD">
+                    <p style="color:#424242"> <font size="2">Fecha de firma: <b>2015-09-10</b> </font></p>
+                    <p style="color:#424242"> <font size="2">Monto: <b>192525597.09</b></font></p>
+                    <p style="color:#424242"> <font size="2">Vigencia: <b>2016-03-07</b></font></p>
+                    <p style="color:#424242"> <font size="2">Tipo: <b>Licitación</b></font></p>
+                    <button type="button" class="btn btn-primary" style="width:150px;height:40px;position:absolute;bottom:10px;right:10px;background-color:#00cc99;align:top;border-radius:25px;outline:none;" id="refresh"><b>Árbol completo</b></button>
                 </div>
             </div>
         </div>
@@ -90,18 +93,26 @@
 </section>
 <br>
 <div class="container">
-  <div class="row">
-    <div class='col-md-12' id="bolitas" style="background:#e0e0e0">
-          <div style="position:absolute;bottom:40px;right:1025px"><p><b>Planeación</b></p></div>
-          <div style="position:absolute;bottom:40px;right:820px"><p><b>Licitación</b></p></div>
-          <div style="position:absolute;bottom:40px;right:550px"><p><b>Adjudicación</b></p></div>
-          <div style="position:absolute;bottom:40px;right:300px"><p><b>Contratación</b></p></div>
-          <div style="position:absolute;bottom:40px;right:50px"><p><b>Implementación</b></p></div>
-      <br></div>
-  </div>
-  <br>
-  <div id="arbol"></div>
+    <div class="row">
+        <div class='col-md-12' id="bolitas" style="background:#e0e0e0">
+            <div style="position:absolute;bottom:40px;right:1025px"><p><b>Planeación</b></p></div>
+            <div style="position:absolute;bottom:40px;right:820px"><p><b>Licitación</b></p></div>
+            <div style="position:absolute;bottom:40px;right:550px"><p><b>Adjudicación</b></p></div>
+            <div style="position:absolute;bottom:40px;right:300px"><p><b>Contratación</b></p></div>
+            <div style="position:absolute;bottom:40px;right:50px"><p><b>Implementación</b></p></div>
+            <br></div>
+    </div>
+    <br>
+    <div id="arbol"></div>
 </div>
+<% } else { %>
+
+<div class="container">
+    <br>
+    <div class="alert alert-danger" role="alert">Registro no encontrado</div>
+</div>
+
+<%}%>
 
 <dgm-footer></dgm-footer>
 <script src="/javascripts/foldableTree.js"></script>
