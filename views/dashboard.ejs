@@ -33,6 +33,7 @@
             width: auto;
             border-color: transparent !important;
             background: transparent !important;
+            padding: 5px;
         }
 
     </style>
@@ -323,7 +324,7 @@
                 //tooltipFormatString: '%s'
                 tooltipContentEditor: function(current, serie, index, plot ){
                     //return "<div class='col-sm-2'><p style='color: black'>"+plot.data[serie][index]+"</p></div>";
-                    return "<div class='col-sm-2'><p style='color: black'>"+data[index][1]+" "+data[index][0]+"</p></div>";
+                    return "<div class='col-sm-2'><p style='color: black'><b>"+data[index][1]+" "+data[index][0]+"</b></p></div>";
                     //return "<p>Contrato: <br><b>"+ticks1[index] +"</b></p>"+
                     //      "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p>";
                 }
@@ -446,13 +447,13 @@
             axes: {
                 xaxis: {
                     renderer: $.jqplot.CategoryAxisRenderer,
-                    //tickRenderer: $.jqplot.CanvasAxisTickRenderer,
-                    //labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                    tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                    labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
                     label: 'Contratos',
-                    tickOptions:{
+                   /* tickOptions:{
                         show: false,
-                        textColor: 'white'
-                    },
+                        //textColor: 'white'
+                    },*/
                     /*
                      rendererOptions: {
                      drawBaseline: false
@@ -475,7 +476,7 @@
                     numberRows: 1
                 },
                 location: 's',
-               placement: 'outside'
+                placement: 'outsideGrid'
             },
             grid: {
                 drawBorder: false,
@@ -486,6 +487,7 @@
             highlighter: {
                 show: true,
                 sizeAdjust: 0.5,
+                showAxesFormatters: false,
                 //useAxesFormatters: false,
                 //dataLabels: 'value',
                 //tooltipFormatString: '%s'
