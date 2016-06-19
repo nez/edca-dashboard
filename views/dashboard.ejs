@@ -229,7 +229,7 @@
             </div>
             <div class="col-sm-8" style="background: #eee;">
                 <h3 style="text-align: left; color: #00cc99"><b>Contrataciones en el tiempo</b></h3>
-                <div style="overflow: auto">
+                <div style="overflow-x: auto">
                 <div  style="height: 400px; width: 850px; align-content: left;" id="series_chart_div" ></div>
                 </div>
                 <br>
@@ -323,23 +323,63 @@
         });
 
         //bar chart
-        //avance fisico
-
         var bardata = [
-            { id : 'LO-009KDH999-N46-2015', s1 : 47.26, s2 : (5708930.68 / 14382969.2 )*100 },
-            { id : 'LO-009KDH999-N42-2015', s1 : 85.15, s2 : (5344833.89 / 11924906.62)*100 },
-            { id : 'LO-009KDH999-N45-2015', s1 : 30.25, s2 : (4504538.98/ 18934197.76 )*100 },
-            { id : 'IO-009KDH999-N54-2015', s1 : 90, s2 : (2565511.85/3286908.92)*100},
-            { id : 'LO-009KDH999-N47-2015', s1 : 21.23, s2 : (8620689.66/112046320.57)*100 },
-            { id : 'LO-009KDH999-N50-2015', s1 : 10.01, s2 :(13609080.34/192525597.09)*100 },
-            { id : 'LO-009KDH999-T52-2015', s1 : 6.4, s2 :0 },
-            { id : 'LO-009KDH999-N79-2015', s1 : 4.33, s2 : (169601426.76/1762803241.34)*100 },
-            { id : 'LO-009KDH999-N80-2015', s1 : 1.11, s2 :(57514449.48/608275577.5)*100 },
-            { id : 'LO-009KDH999-N78-2015', s1 : 1.58, s2 : (49391647.5/493916475)*100 },
-            { id : 'LO-009KDH999-N86-2015', s1 : 25.93, s2 :0 },
-            { id : 'LO-009KDH999-N87-2015', s1 : 12.27, s2 :0 },
-            { id : 'AO-009KDH999-E26-2016', s1 : 18, s2 :0 },
-            { id : 'AO-009KDH999-E20-2016', s1 : 40, s2 :0 }
+            {
+                product: 'Plan de monitoreo y conservación de aves del proyecto del<br> Nuevo Aeropuerto Internacional de la Ciudad de México.',
+                id : 'LO-009KDH999-N46-2015', s1 : 47.26, s2 : (5708930.68 / 14382969.2 )*100
+            },
+            {
+                product: 'Implementación del programa de rescate de flora y fauna <br>para el Nuevo Aeropuerto Internacional de la Ciudad de México.',
+                id : 'LO-009KDH999-N42-2015', s1 : 85.15, s2 : (5344833.89 / 11924906.62)*100
+            },
+            {
+                product: 'Implementación del plan de restauración ecológica para el <br>Nuevo Aeropuerto Internacional de la Ciudad de México.',
+                id : 'LO-009KDH999-N45-2015', s1 : 30.25, s2 : (4504538.98/ 18934197.76 )*100
+            },
+            {
+                product: 'Supervisión para: construcción del proyecto integral <br>consistente en barda y camino perimetral, alumbrado, <br>servicios inducidos y casetas de acceso para el <br>Nuevo Aeropuerto Internacional de la Ciudad de México <br>(primera etapa).',
+                id : 'IO-009KDH999-N54-2015', s1 : 90, s2 : (2565511.85/3286908.92)*100
+            },
+            {
+                product: 'Desarrollo del proyecto ejecutivo, construcción, equipamiento<br> de mobiliario e instalaciones complementarias para el campamento<br> del Grupo Aeroportuario de la Ciudad de México en el sitio<br> del Nuevo Aeropuerto Internacional de la Ciudad de México.',
+                id : 'LO-009KDH999-N47-2015', s1 : 21.23, s2 : (8620689.66/112046320.57)*100
+            },
+            {
+                product: 'Trabajos relativos a la construcción del drenaje pluvial <br>temporal del Nuevo Aeropuerto de la Ciudad de México.',
+                id : 'LO-009KDH999-N50-2015', s1 : 10.01, s2 :(13609080.34/192525597.09)*100
+            },
+            {
+                product: 'Diseñar e instrumentar el modelo virtual de información <br>para la construcción del BIM del NAICM.',
+                id : 'LO-009KDH999-T52-2015', s1 : 6.4, s2 :0
+            },
+            {
+                product: 'Convocatoria de nivelación y limpieza del terreno del <br> Nuevo Aeropuerto Internacional de la Ciudad de México.',
+                id : 'LO-009KDH999-N79-2015', s1 : 4.33, s2 : (169601426.76/1762803241.34)*100
+            },
+            {
+                product: 'Convocatoria de construcción de los caminos provisionales de acceso<br> al Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)<br> ejecutando trabajos de terraceria, estructuras y obras de drenaje,<br>pavimentación y señalamiento.',
+                id : 'LO-009KDH999-N80-2015', s1 : 1.11, s2 :(57514449.48/608275577.5)*100
+            },
+            {
+                product: 'Convocatoria de carga, acarreo y descarga fuera del poligono del material<br> existente producto de depositos de demoliciones, desperdicios y desazolve.',
+                id : 'LO-009KDH999-N78-2015', s1 : 1.58, s2 : (49391647.5/493916475)*100
+            },
+            {
+                product: 'Supervisión técnica, administrativa y de control de calidad para<br> los trabajos de nivelación y limpieza del terreno del<br> Nuevo Aeropuerto Internacional de la Ciudad de México.',
+                id : 'LO-009KDH999-N86-2015', s1 : 25.93, s2 :0
+            },
+            {
+                product: 'Supervisión técnica, administrativa y de control de calidad para<br> los trabajos de construcción de los caminos provisionales<br> de acceso al Nuevo Aeropuerto Intenacional de la<br> Ciudad de México (NAICM) ejecutanto trabajos de terraceria,<br> estructuras y obras de drenaje, pavimentación y señalamiento.',
+                id : 'LO-009KDH999-N87-2015', s1 : 12.27, s2 :0
+            },
+            {
+                product: 'Supervisión del proyecto ejecutivo, construcción, equipamiento, <br>mobiliario e instalaciones complementarias para el campamento del <br>Grupo Aeroportuario de la Ciudad de México en el sitio del<br> Nuevo Aeropuerto Internacional de la Ciudad de México.',
+                id : 'AO-009KDH999-E26-2016', s1 : 18, s2 :0
+            },
+            {
+                product: 'Supervisión de la construcción del drenaje pluvial temporal del <br>Nuevo Aeropuerto Intenacional de la Ciudad de México.',
+                id : 'AO-009KDH999-E20-2016', s1 : 40, s2 :0
+            }
         ];
 
 
@@ -374,7 +414,7 @@
             for ( var i =0; i< data.length;i++){
                 s1.push(data[i].s1);
                 s2.push(data[i].s2);
-                ticks.push(data[i].id);
+                ticks.push(data[i].product);
 
             }
 
@@ -382,20 +422,7 @@
 
         }
 
-        // console.log(bardata);
         var barinfo = sortbyserie('s1',bardata);
-
-        var ticks = [
-            /*'LO-00<br>9KDH9<br>99-N5<br>-2014', 'SO-00<br>9KDH9<br>99-N24<br>-2015', 'SO-00<br>9KDH9<br>99-N23<br>-2015', 'SO-00<br>9KDH9<br>99-N26<br>-2015', 'IO-00<br>9KDH9<br>99-N11<br>-2015',
-
-            'IO-00<br>9KDH9<br>99-N10<br>-2015', 'LO-09<br>9KDH9<br>99-N20<br>-2015', 'LO-09<br>9KDH9<br>99-T15<br>-2015',*/ 'LO-00<br>9KDH9<br>99-N46<br>-2015','LO-00<br>9KDH9<br>99-N42<br>-2015',
-
-            'LO-00<br>9KDH9<br>99-N45<br>-2015', /*'IO-00<br>9KDH9<br>99-N41<br>-2015',*/ 'IO-00<br>9KDH9<br>99-N54<br>-2015', 'LO-00<br>9KDH9<br>99-N47<br>-2015', 'LO-00<br>9KDH9<br>99-N50<br>-2015',
-
-            'LO-00<br>9KDH9<br>99-T52<br>-2015', 'LO-00<br>9KDH9<br>99-N79<br>-2015', 'LO-00<br>9KDH9<br>99-N80<br>-2015', 'LO-00<br>9KDH9<br>99-N78<br>-2015' ,'LO-00<br>9KDH9<br>99-N86<br>-2015' ,
-
-            'LO-00<br>9KDH9<br>99-N87<br>-2015' ,'AO-00<br>9KDH9<br>99-E26<br>-2016', 'AO-00<br>9KDH9<br>99-E20<br>-2016'/*, 'IO-00<br>9KDH9<br>99-E15<br>-2016' ,'IO-00<br>9KDH9<br>99-E96<br>-2015'*/
-        ];
 
         plot2 = $.jqplot('chart2', [barinfo[0], barinfo[1]], {
             title: "Avances al de de 2016",
