@@ -30,6 +30,13 @@
             font-color: black !IMPORTANT;
             border: white !IMPORTANT;
         }
+
+        .jqplot-table-legend {
+            width: auto;
+            border-color: transparent !important;
+            background: transparent !important;
+        }
+
     </style>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -74,6 +81,7 @@
                     width: '75%',
                     heigth: '90%',
                     left: '75',
+                    right: '10',
                     top: '30'
                 },
                 backgroundColor: 'transparent',
@@ -227,11 +235,11 @@
                 <h3 style="text-align: left; color: #00cc99"><b>Tipos de contratación</b></h3>
                 <div  style="color: white; height: 270px; width: 260px;" id="chart4"></div>
             </div>
-            <div class="col-sm-8" style="background: #eee;">
+            <div class="col-sm-8" style="background: #eee; overflow: auto">
                 <h3 style="text-align: left; color: #00cc99"><b>Contrataciones en el tiempo</b></h3>
-                <div style="overflow-x: auto">
-                <div  style="height: 400px; width: 850px; align-content: left;" id="series_chart_div" ></div>
-                </div>
+
+                <div  style="height: 400px; width: 700px; align-content: left;" id="series_chart_div" ></div>
+
                 <br>
             </div>
         </div>
@@ -262,6 +270,7 @@
 <script src="/bower_components/jqplot/plugins/jqplot.donutRenderer.js"></script>
 <script src="/bower_components/jqplot/plugins/jqplot.barRenderer.js"></script>
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js"></script>
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.categoryAxisRenderer.js"></script>
 <!--<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>-->
@@ -461,9 +470,13 @@
                 }
             },
             legend: {
-                show: false,  // Sin leyenda
+                renderer: $.jqplot.EnhancedLegendRenderer,
+                show: true,
+                rendererOptions: {
+                    numberRows: 1
+                },
                 location: 's',
-                placement: 'outside'
+               placement: 'outside'
             },
             grid: {
                 drawBorder: false,
