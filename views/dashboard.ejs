@@ -4,14 +4,11 @@
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--<link rel='stylesheet' href='/stylesheets/navbar-fixed-top.css' />-->
-    <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/main.css'/>
-    <!-- <link rel='stylesheet' href='/stylesheets/bootstrap-grid-system.css' /> -->
-    <!--<link rel='stylesheet' href='/stylesheets/buttons.css'/>-->
-
     <link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="/dgm-navbar/dgm-navbar.html">
+
+    <title><%= title %></title>
 
     <style>
         div.google-visualization-tooltip > ul > li > span {
@@ -20,14 +17,15 @@
             font-family: "Open Sans" !important;
         }
         div.google-visualization-tooltip {
-            /*background: red;*/
+            background: #f6f6f6;
             border: white !important;
         }
 
         .jqplot-highlighter-tooltip, .jqplot-canvasOverlay-tooltip {
             z-index: 2;
-            background: white !IMPORTANT;
+            background: #f6f6f6 !IMPORTANT;
             font-color: black !IMPORTANT;
+            font-family: "Open Sans" !important;
             border: white !IMPORTANT;
         }
 
@@ -38,6 +36,7 @@
         }
 
     </style>
+
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart'], 'language':'es'});
@@ -156,7 +155,7 @@
     </script>
 
 </head>
-<body>
+<body style="background: #eee">
 
 <dgm-navbar></dgm-navbar>
 <section id="banner">
@@ -193,7 +192,7 @@
     <!--<div class="panel panel-default" style="background: #eee;">
         <div class="panel-body">-->
     <div class="row">
-        <div class="col-sm-12" style="background: #eee;">
+        <div class="col-sm-12" style=" background: white;">
             <div class="col-sm-4">
                 <!--<img src="/images/gacm1.png" >-->
                 <h3 style="color: #00cc99"><b>NAICM</b></h3>
@@ -230,12 +229,12 @@
         <div class="panel-body">-->
 
     <div class="row">
-        <div class="col-sm-12" style="background: #eee">
-            <div class="col-sm-4" style="background: #eee;">
+        <div class="col-sm-12" style="background: white">
+            <div class="col-sm-4" style="background: white;">
                 <h3 style="text-align: left; color: #00cc99"><b>Tipos de contratación</b></h3>
                 <div  style="color: white; height: 270px; width: 260px;" id="chart4"></div>
             </div>
-            <div class="col-sm-8" style="background: #eee; overflow: auto">
+            <div class="col-sm-8" style="background: white; overflow: auto">
                 <h3 style="text-align: left; color: #00cc99"><b>Contrataciones en el tiempo</b></h3>
 
                 <div  style="height: 400px; width: 700px; align-content: left;" id="series_chart_div" ></div>
@@ -315,7 +314,7 @@
                 drawBorder: false,
                 drawGridLines: true,        // wether to draw lines across the grid or not.
                 shadow: false,
-                backgroundColor: '#eee'//'rgb(255, 255, 255)'
+                backgroundColor: 'white'//'rgb(255, 255, 255)'
             },
             highlighter: {
                 show: true,
@@ -482,7 +481,7 @@
                 drawBorder: false,
                 drawGridLines: true,        // wether to draw lines across the grid or not.
                 shadow: false,
-                backgroundColor: '#eee'//'rgb(255, 255, 255)'
+                backgroundColor: 'white'//'rgb(255, 255, 255)'
             },
             highlighter: {
                 show: true,
