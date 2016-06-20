@@ -10,7 +10,7 @@ var contracts = [
         product : 'Servicio de extracción de ademes y restitución de terreno.',
         amount: '$39724276.56',
         download_url : '',
-        url :'/contrataciones-abiertas/tree/1'
+        url :'/contrataciones-abiertas/contrato/1'
     },
     {
         number : '2',
@@ -20,7 +20,7 @@ var contracts = [
         product : 'Plan acciones de monitoreo y conservación de aves para el NAICM.',
         amount: '$521999.84',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/2'
+        url : '/contrataciones-abiertas/contrato/2'
     },
     {
         number : '3',
@@ -30,7 +30,7 @@ var contracts = [
         product : 'Elaboración del programa de monitoreo de ruido perimetral para las etapas de preparación del sitio, construcción, y, operación y mantenimiento del NAICM.',
         amount: '$638000.00',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/3'
+        url : '/contrataciones-abiertas/contrato/3'
     },
     {
         number : '4',
@@ -40,7 +40,7 @@ var contracts = [
         product : 'Plan de monitoreo, registro y verificación de emisión de gases de efecto invernadero para el NAICM.',
         amount: '$539400.00',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/4'
+        url : '/contrataciones-abiertas/contrato/4'
     },
     {
         number : '5',
@@ -50,7 +50,7 @@ var contracts = [
         product : 'Construcción de caminos de acceso a zona del edificio terminal de la primera etapa, necesarios para la caracterización geotécnica inical.',
         amount: '$9429941.46',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/5'
+        url : '/contrataciones-abiertas/contrato/5'
     },
     {
         number : '6',
@@ -60,7 +60,7 @@ var contracts = [
         product : 'Servicios de supervisión para la obra: extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México.',
         amount: '$2501985.67',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/6'
+        url : '/contrataciones-abiertas/contrato/6'
     },
     {
         number : '7',
@@ -70,7 +70,7 @@ var contracts = [
         product : 'Construcción de caminos de accesos y plataformas para exploración geotécnica para la pista No 2 del Nuevo Aeropuerto Internacional de la Ciudad de México.',
         amount: '$5844840.96',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/7'
+        url : '/contrataciones-abiertas/contrato/7'
     },
     {
         number : '8',
@@ -80,7 +80,7 @@ var contracts = [
         product : 'Estudio de las caracteristicas técnicas de infraestructura y diseño esquematico de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México.',
         amount: '$13514000.00',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/8'
+        url : '/contrataciones-abiertas/contrato/8'
     },
     {
         number : '9',
@@ -90,7 +90,7 @@ var contracts = [
         product : 'Plan de monitoreo y conservación de aves del proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México.',
         amount: '$16684244.272',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/9'
+        url : '/contrataciones-abiertas/contrato/9'
     },
     {
         number : '10',
@@ -100,7 +100,7 @@ var contracts = [
         product : 'Implementación del programa de rescate de flora y fauna para el Nuevo Aeropuerto Internacional de la Ciudad de México.',
         amount: '$13832891.6792',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/10'
+        url : '/contrataciones-abiertas/contrato/10'
     },
     {
         number : '11',
@@ -110,7 +110,7 @@ var contracts = [
         product : 'Implementación del plan de restauración ecológica para el Nuevo Aeropuerto Internacional de la Ciudad de México.',
         amount: '$21963669.4016',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/11'
+        url : '/contrataciones-abiertas/contrato/11'
     },
     {
         number : '12',
@@ -120,7 +120,7 @@ var contracts = [
         product : 'La elaboración del estudio de las características topográficas del terreno del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).',
         amount: '$38949488.17',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/12'
+        url : '/contrataciones-abiertas/contrato/12'
     },
     {
         number : '13',
@@ -130,7 +130,7 @@ var contracts = [
         product : 'Supervisión para: construcción del proyecto integral consistente en barda y camino perimetral, alumbrado, servicios inducidos y casetas de acceso para el Nuevo Aeropuerto Internacional de la Ciudad de México (primera etapa).',
         amount: '$3812525.54',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/13'
+        url : '/contrataciones-abiertas/contrato/13'
     },
     {
         number : '14',
@@ -140,7 +140,7 @@ var contracts = [
         product : 'Desarrollo del proyecto ejecutivo, construcción, equipamiento de mobiliario e instalaciones complementarias para el campamento del Grupo Aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México.',
         amount: '$129973731.20',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/14'
+        url : '/contrataciones-abiertas/contrato/14'
     },
     {
         number : '15',
@@ -150,7 +150,7 @@ var contracts = [
         product : 'Trabajos relativos a la construcción del drenaje pluvial temporal del Nuevo Aeropuerto de la Ciudad de México.',
         amount: '$223329692.62',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/15'
+        url : '/contrataciones-abiertas/contrato/15'
     },
     {
         number : '16',
@@ -160,7 +160,7 @@ var contracts = [
         product : 'Diseñar e instrumentar el modelo virtual de información para la construcción del BIM del NAICM.',
         amount: '$158629469.03',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/16'
+        url : '/contrataciones-abiertas/contrato/16'
     },
     {
         number : '17',
@@ -170,7 +170,7 @@ var contracts = [
         product : 'Convocatoria de nivelación y limpieza del terreno del Nuevo Aeropuerto Internacional de la Ciudad de México.',
         amount: '$2044851759.9544',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/17'
+        url : '/contrataciones-abiertas/contrato/17'
     },
     {
         number : '18',
@@ -180,7 +180,7 @@ var contracts = [
         product : 'Convocatoria de construcción de los caminos provisionales de acceso al Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) ejecutando trabajos de terraceria, estructuras y obras de drenaje, pavimentación y señalamiento.',
         amount: '$705599669.90',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/18'
+        url : '/contrataciones-abiertas/contrato/18'
     },
     {
         number : '19',
@@ -190,7 +190,7 @@ var contracts = [
         product : 'Convocatoria de carga, acarreo y descarga fuera del poligono del material existente producto de depositos de demoliciones, desperdicios y desazolve.',
         amount: '$572943111.00',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/19'
+        url : '/contrataciones-abiertas/contrato/19'
     },
     {
         number : '20',
@@ -200,7 +200,7 @@ var contracts = [
         product : 'Supervisión técnica, administrativa y de control de calidad para los trabajos de nivelación y limpieza del terreno del Nuevo Aeropuerto Internacional de la Ciudad de México.',
         amount: '$11276263.6272',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/20'
+        url : '/contrataciones-abiertas/contrato/20'
     },
     {
         number : '21',
@@ -210,7 +210,7 @@ var contracts = [
         product : 'Supervisión técnica, administrativa y de control de calidad para los trabajos de construcción de los caminos provisionales de acceso al Nuevo Aeropuerto Intenacional de la Ciudad de México (NAICM) ejecutanto trabajos de terraceria, estructuras y obras de drenaje, pavimentación y señalamiento.',
         amount: '$13970275.444',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/21'
+        url : '/contrataciones-abiertas/contrato/21'
     },
     {
         number : '22',
@@ -220,7 +220,7 @@ var contracts = [
         product : 'Supervisión del proyecto ejecutivo, construcción, equipamiento, mobiliario e instalaciones complementarias para el campamento del Grupo Aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México.',
         amount: '$4286458.44',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/22'
+        url : '/contrataciones-abiertas/contrato/22'
     },
     {
         number : '23',
@@ -230,7 +230,7 @@ var contracts = [
         product : 'Supervisión de la construcción del drenaje pluvial temporal del Nuevo Aeropuerto Intenacional de la Ciudad de México.',
         amount: '$8909803.13',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/23'
+        url : '/contrataciones-abiertas/contrato/23'
     },
     {
         number : '24',
@@ -240,7 +240,7 @@ var contracts = [
         product : 'Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno para el Nuevo Aeropuerto Internacional de la Ciudad de México.',
         amount: '$12715541.31',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/24'
+        url : '/contrataciones-abiertas/contrato/24'
     },
     {
         number : '25',
@@ -250,7 +250,7 @@ var contracts = [
         product : 'Integración de la estratégia global y modelo de negocios para el Nuevo Aeropuerto Internacional de la Ciudad de México.',
         amount: '$91640000.00',
         download_url : '',
-        url : '/contrataciones-abiertas/tree/25'
+        url : '/contrataciones-abiertas/contrato/25'
     }
 ];
 
@@ -263,18 +263,21 @@ router.get('/luis', function(req, res, next) {
     res.render('index1', { title: 'Estandar de Datos de Contrataciones Abiertas' });
 });
 
-router.get('/tree/:n',function (req, res) {
-    res.render('tree',{  contract : contracts[ req.params.n -1 ] });
-});
-
 router.post('/contracts', function (req, res) {
     res.json(contracts);
 });
 
+/* contract details */
+router.get('/contrato/:id',function (req, res) {
+    res.render('tree',{  contract : contracts[ req.params.id -1 ] });
+});
+
+/* dashboard contract list (1st page) */
 router.get('/contratos/',function (req, res) {
     res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas', contracts : contracts });
 });
 
+/* dashboard contract list by page */
 router.get('/contratos/:page',function (req, res) {
     res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas', contracts : contracts });
 });
