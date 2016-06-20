@@ -47,7 +47,3 @@ var ctable = $('#ctable');
 $('#buscar').keyup(function () {
     searchbykeyword($(this).val(), ctable);
 });
-
-$(document).ready(function(){
-    searchbykeyword('', ctable);
-});

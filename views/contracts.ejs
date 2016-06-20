@@ -1,0 +1,24 @@
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>#</th><th>Producto o servicio</th><th>Año</th><th style='width: 180px'>Contrato</th><th>Monto (IVA)</th><th>Descarga</th><th>Explora</th>
+    </tr>
+    </thead>
+    <% for (var i = 0; i < contracts.length;i++){%>
+    <tbody>
+    <tr>
+        <td><%= contracts [i].number %></td>
+        <td><%= contracts [i].product %></td>
+        <td><%= contracts [i].year %></td>
+        <td><%= contracts [i].id_naicm %></td>
+        <td><%= contracts [i].amount %></td>
+        <td> <a href="<%= contracts[i].download_url%>" class='btn btn-default'> <i class='fa fa-download'></i></a></td>
+        <td> <a href="<%= contracts[i].url%>" class='btn btn-default'> <i class='fa fa-line-chart'></i></a></td>
+
+    </tr>
+
+    </tbody>
+    <%}%>
+
+</table>

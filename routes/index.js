@@ -268,11 +268,15 @@ router.get('/tree/:n',function (req, res) {
 });
 
 router.post('/contracts', function (req, res) {
-    res.json(contracts);
+    res.send(contracts);
 });
 
-router.get('/dashboard',function (req, res) {
-    res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas' });
+router.get('/contratos/',function (req, res) {
+    res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas', contracts : contracts });
+});
+
+router.get('/contratos/:page',function (req, res) {
+    res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas', contracts : contracts });
 });
 
 module.exports = router;
