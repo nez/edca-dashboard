@@ -268,7 +268,7 @@ router.get('/tree/:n',function (req, res) {
 });
 
 router.post('/contracts', function (req, res) {
-    res.send(contracts);
+    res.json(contracts);
 });
 
 router.get('/contratos/',function (req, res) {
