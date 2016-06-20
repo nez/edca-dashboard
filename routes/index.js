@@ -9,7 +9,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Servicio de extracción de ademes y restitución de terreno.',
-        amount: '$39724276.56',
+        amount: 39724276.56,
+        currency: 'MXN',
         download_url : '',
         url :'/contrataciones-abiertas/contrato/1'
     },
@@ -20,7 +21,8 @@ var contracts = [
         type: 'Adjudicación directa',
         year: '2015',
         product : 'Plan acciones de monitoreo y conservación de aves para el NAICM.',
-        amount: '$521999.84',
+        amount: 521999.84,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/2'
     },
@@ -31,7 +33,8 @@ var contracts = [
         type: 'Adjudicación directa',
         year: '2015',
         product : 'Elaboración del programa de monitoreo de ruido perimetral para las etapas de preparación del sitio, construcción, y, operación y mantenimiento del NAICM.',
-        amount: '$638000.00',
+        amount: 638000.00,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/3'
     },
@@ -42,7 +45,8 @@ var contracts = [
         type: 'Adjudicación directa',
         year: '2015',
         product : 'Plan de monitoreo, registro y verificación de emisión de gases de efecto invernadero para el NAICM.',
-        amount: '$539400.00',
+        amount: 539400.00,
+        currency: 'MXN',
         download_url : 'Adjudicación directa',
         url : '/contrataciones-abiertas/contrato/4'
     },
@@ -53,7 +57,8 @@ var contracts = [
         type: 'Invitación a tres',
         year: '2015',
         product : 'Construcción de caminos de acceso a zona del edificio terminal de la primera etapa, necesarios para la caracterización geotécnica inical.',
-        amount: '$9429941.46',
+        amount: 9429941.46,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/5'
     },
@@ -64,7 +69,8 @@ var contracts = [
         type: 'Invitación a tres',
         year: '2015',
         product : 'Servicios de supervisión para la obra: extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México.',
-        amount: '$2501985.67',
+        amount: 2501985.67,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/6'
     },
@@ -75,7 +81,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Construcción de caminos de accesos y plataformas para exploración geotécnica para la pista No 2 del Nuevo Aeropuerto Internacional de la Ciudad de México.',
-        amount: '$5844840.96',
+        amount: 5844840.96,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/7'
     },
@@ -86,7 +93,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Estudio de las caracteristicas técnicas de infraestructura y diseño esquematico de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México.',
-        amount: '$13514000.00',
+        amount: 13514000.00,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/8'
     },
@@ -97,7 +105,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Plan de monitoreo y conservación de aves del proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México.',
-        amount: '$16684244.272',
+        amount: 16684244.272,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/9'
     },
@@ -108,7 +117,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Implementación del programa de rescate de flora y fauna para el Nuevo Aeropuerto Internacional de la Ciudad de México.',
-        amount: '$13832891.6792',
+        amount: 13832891.6792,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/10'
     },
@@ -119,7 +129,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Implementación del plan de restauración ecológica para el Nuevo Aeropuerto Internacional de la Ciudad de México.',
-        amount: '$21963669.4016',
+        amount: 21963669.4016,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/11'
     },
@@ -130,7 +141,8 @@ var contracts = [
         type: 'Invitación a tres',
         year: '2015',
         product : 'La elaboración del estudio de las características topográficas del terreno del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).',
-        amount: '$38949488.17',
+        amount: 38949488.17,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/12'
     },
@@ -141,7 +153,8 @@ var contracts = [
         type: 'Invitación a tres',
         year: '2015',
         product : 'Supervisión para: construcción del proyecto integral consistente en barda y camino perimetral, alumbrado, servicios inducidos y casetas de acceso para el Nuevo Aeropuerto Internacional de la Ciudad de México (primera etapa).',
-        amount: '$3812525.54',
+        amount: 3812525.54,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/13'
     },
@@ -152,7 +165,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Desarrollo del proyecto ejecutivo, construcción, equipamiento de mobiliario e instalaciones complementarias para el campamento del Grupo Aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México.',
-        amount: '$129973731.20',
+        amount: 129973731.20,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/14'
     },
@@ -163,7 +177,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Trabajos relativos a la construcción del drenaje pluvial temporal del Nuevo Aeropuerto de la Ciudad de México.',
-        amount: '$223329692.62',
+        amount: 223329692.62,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/15'
     },
@@ -174,7 +189,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Diseñar e instrumentar el modelo virtual de información para la construcción del BIM del NAICM.',
-        amount: '$158629469.03',
+        amount: 158629469.03,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/16'
     },
@@ -185,7 +201,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Convocatoria de nivelación y limpieza del terreno del Nuevo Aeropuerto Internacional de la Ciudad de México.',
-        amount: '$2044851759.9544',
+        amount: 2044851759.9544,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/17'
     },
@@ -196,7 +213,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Convocatoria de construcción de los caminos provisionales de acceso al Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) ejecutando trabajos de terraceria, estructuras y obras de drenaje, pavimentación y señalamiento.',
-        amount: '$705599669.90',
+        amount: 705599669.90,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/18'
     },
@@ -207,7 +225,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Convocatoria de carga, acarreo y descarga fuera del poligono del material existente producto de depositos de demoliciones, desperdicios y desazolve.',
-        amount: '$572943111.00',
+        amount: 572943111.00,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/19'
     },
@@ -218,7 +237,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Supervisión técnica, administrativa y de control de calidad para los trabajos de nivelación y limpieza del terreno del Nuevo Aeropuerto Internacional de la Ciudad de México.',
-        amount: '$11276263.6272',
+        amount: 11276263.6272,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/20'
     },
@@ -229,7 +249,8 @@ var contracts = [
         type: 'Licitación pública',
         year: '2015',
         product : 'Supervisión técnica, administrativa y de control de calidad para los trabajos de construcción de los caminos provisionales de acceso al Nuevo Aeropuerto Intenacional de la Ciudad de México (NAICM) ejecutanto trabajos de terraceria, estructuras y obras de drenaje, pavimentación y señalamiento.',
-        amount: '$13970275.444',
+        amount: 13970275.444,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/21'
     },
@@ -240,7 +261,8 @@ var contracts = [
         type: 'Adjudicación directa',
         year: '2016',
         product : 'Supervisión del proyecto ejecutivo, construcción, equipamiento, mobiliario e instalaciones complementarias para el campamento del Grupo Aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México.',
-        amount: '$4286458.44',
+        amount: 4286458.44,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/22'
     },
@@ -251,7 +273,8 @@ var contracts = [
         type: 'Adjudicación directa',
         year: '2016',
         product : 'Supervisión de la construcción del drenaje pluvial temporal del Nuevo Aeropuerto Intenacional de la Ciudad de México.',
-        amount: '$8909803.13',
+        amount: 8909803.13,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/23'
     },
@@ -262,7 +285,8 @@ var contracts = [
         type: 'Invitación a tres',
         year: '2016',
         product : 'Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno para el Nuevo Aeropuerto Internacional de la Ciudad de México.',
-        amount: '$12715541.31',
+        amount: 12715541.31,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/24'
     },
@@ -273,11 +297,13 @@ var contracts = [
         type: 'Invitación a tres',
         year: '2016',
         product : 'Integración de la estratégia global y modelo de negocios para el Nuevo Aeropuerto Internacional de la Ciudad de México.',
-        amount: '$91640000.00',
+        amount: 91640000.00,
+        currency: 'MXN',
         download_url : '',
         url : '/contrataciones-abiertas/contrato/25'
     }
 ];
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

@@ -29,7 +29,7 @@ function searchbykeyword ( keyword, table ){
                     "<td>"+contracts[i].product+"</td>"+
                     "<td>"+contracts[i].year+"</td>"+
                     "<td>"+contracts[i].id_naicm+"</td>"+
-                    "<td>"+contracts[i].amount+"</td>"+
+                    "<td>"+contracts[i].amount+" "+contracts[i].currency+"</td>"+
                     "<td> <a href='"+contracts[i].download_url+"' class='btn btn-default'> <i class='fa fa-download'></i></a></td>"+
                     "<td> <a href='"+contracts[i].url+"' class='btn btn-default'> <i class='fa fa-line-chart'></i></a></td></tr>";
             }
