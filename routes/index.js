@@ -358,4 +358,17 @@ router.get('/contratos/:page',function (req, res) {
     res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas', contracts : contracts });
 });
 
+/* supplier details */
+router.get('/proveedor/:id', function (req, res ) {
+    var data = {};
+    res.render('supplier', { data : data});
+});
+
+/* buyer details */
+router.get('/dependencia/:id', function (req, res ) {
+    var data = {};
+    res.render('supplier', { data : data});
+});
+
+
 module.exports = router;
