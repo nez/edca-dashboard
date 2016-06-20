@@ -1,6 +1,6 @@
 function searchbykeyword ( keyword, table ){
 
-    $.post('/contracts', function (contracts) {
+    $.post('/contrataciones-abiertas/contracts', function (contracts) {
 
         var html = "<table class='table table-striped'>"+
             "<thead>"+
