@@ -606,11 +606,20 @@ var circleAttributes = circles
               .data([name])
               .enter()
               .append("p");
+        if(name == "Planeación"){
+          var etapa_data = d3.select("#etapa_desglo")
+                .selectAll("p")
+                .data(json_plan.children)
+                .enter()
+                .append("p")
+                .text(function(d){return d.name;});
+        }
       })
       .on("mouseout", function(d){
         d3.select(this).transition()
             .duration(200).attr("r", function(d){return 10;});
       });
+
 /*---------------------------------------------------*/
 /* Div con Información adicional sobre los contratos */
 /*---------------------------------------------------*/

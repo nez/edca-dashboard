@@ -6,7 +6,7 @@ var radius   = 3;
 
 // Set the dimensions of the canvas / graph
 var margin = {top: 30, right: 20, bottom: 30, left: 50},
-    width = 3000 - margin.left - margin.right,
+    width = 1200 - margin.left - margin.right,
     height = 260 - margin.top - margin.bottom;
 
 var data = [];
@@ -15,7 +15,7 @@ for (var i = 0; i < 100; i++) {
 }
 
 var svgContainer = d3.select("#bars").append("svg")
-      .attr("width",  3000)
+      .attr("width",  width)
       .attr("height", 200);
 
 
