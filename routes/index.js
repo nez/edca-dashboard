@@ -343,11 +343,7 @@ router.get('/luis', function(req, res, next) {
     res.render('index1', { title: 'Estandar de Datos de Contrataciones Abiertas' });
 });
 
-router.post('/contracts', function (req, res) {
-    res.json(contracts);
-});
-
-/* contract details */
+/* GET contract details */
 router.get('/contrato/:id',function (req, res) {
     edca_db.one('select * from contract where id = $1 ', [ req.params.id ]).then(function (data) {
         res.render('tree',{  contract : data });
@@ -359,30 +355,20 @@ router.get('/contrato/:id',function (req, res) {
 
 });
 
-/* find contract */
-router.post ('/find-contracts/', function (req, res ) {
-    edca_db.manyOrNone("select * from contract where title ilike '%$1#%' or contractid ilike '%$1#%' ", [req.body.keyword]).then(function (data) {
-        res.render (  'contracts', {contracts: data });
-    }).catch(function (error) {
-       console.log("ERROR: ", error); 
-    });
-    
-});
-
-
 /* dashboard contract list (1st page) */
 router.get('/contratos/',function (req, res) {
+
     edca_db.many('select * from contract').then(function (data) {
         res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas', contracts : data });
-        }).catch(function (error) {
+    }).catch(function (error) {
         console.log("ERROR: ", error);
     });
 });
 
-/* dashboard contract list by page */
+/* dashboard contract list by page
 router.get('/contratos/:page',function (req, res) {
     res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas', contracts : contracts });
-});
+});*/
 
 /* supplier details */
 router.get('/proveedor/:id', function (req, res ) {
@@ -396,5 +382,20 @@ router.get('/dependencia/:id', function (req, res ) {
     res.render('supplier', { data : data});
 });
 
+
+/* DATA */
+router.post('/contracts', function (req, res) {
+    res.json(contracts);
+});
+
+/* find contract */
+router.post ('/find-contracts/', function (req, res ) {
+    edca_db.manyOrNone("select * from contract where title ilike '%$1#%' or contractid ilike '%$1#%' ", [req.body.keyword]).then(function (data) {
+        res.render (  'contracts', {contracts: data });
+    }).catch(function (error) {
+        console.log("ERROR: ", error); 
+    });
+
+});
 
 module.exports = router;
