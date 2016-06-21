@@ -344,8 +344,12 @@ router.get('/luis', function(req, res, next) {
 });
 
 /* GET contract details */
-router.get('/contrato/:id',function (req, res) {
-    edca_db.one('select * from contract where id = $1 ', [ req.params.id ]).then(function (data) {
+router.get('/contrato/:cpid',function (req, res) {
+    edca_db.one('select tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, contract.value_currency ' +
+        'from tender, contract ' +
+        'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ', [
+        req.params.cpid 
+    ]).then(function (data) {
         res.render('tree',{  contract : data });
 
     }).catch(function (error) {
