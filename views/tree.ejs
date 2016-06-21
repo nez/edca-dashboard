@@ -79,13 +79,14 @@
             </div>
             <div class="row">
                 <div class='col-xs-12' id="datosContract">
-                    <h1 style="color:#424242">Contrato: <b style="color:#00cc99"> <%= contract.product %></b></h1>
+                    <h1 style="color:#424242">Contrato: <b style="color:#00cc99"> <%= contract.title %></b></h1>
                     <hr style="border-color:#BDBDBD">
-                    <p style="color:#424242"> <font size="2">Fecha de firma: <b><%= contract.date_signed%></b> </font></p>
-                    <p style="color:#424242"> <font size="2">Monto: <b><%= contract.amount%></b></font></p>
-                    <p style="color:#424242"> <font size="2">Moneda: <b><%= contract.currency%></b></font></p>
+                    <p style="color:#424242"> <font size="2">Identificador: <b><%= contract.contractid%></b> </font></p>
+                    <p style="color:#424242"> <font size="2">Fecha de firma: <b><%= contract.datesigned%></b> </font></p>
+                    <p style="color:#424242"> <font size="2">Monto: <b><%= contract.value_amount%></b></font></p>
+                    <p style="color:#424242"> <font size="2">Moneda: <b><%= contract.value_currency%></b></font></p>
                     <p style="color:#424242"> <font size="2">Vigencia: <b>2016-03-07</b></font></p>
-                    <p style="color:#424242"> <font size="2">Tipo: <b><%= contract.type %></b></font></p>
+                    <p style="color:#424242"> <font size="2">Tipo: <b><%= contract.procurementmethod %></b></font></p>
                     <button type="button" class="btn btn-primary" style="width:150px;height:40px;position:absolute;bottom:10px;right:10px;background-color:#00cc99;align:top;border-radius:25px;outline:none;" id="refresh"><b>Árbol completo</b></button>
                 </div>
             </div>

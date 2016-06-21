@@ -14,13 +14,13 @@
     <tbody>
     <% for (var i = 0; i < contracts.length;i++){%>
     <tr>
-        <td><%= contracts [i].number %></td>
-        <td><%= contracts [i].product %></td>
-        <td><%= contracts [i].year %></td>
-        <td><%= contracts [i].id_naicm %></td>
-        <td><%= contracts [i].amount %> <%= contracts [i].currency%></td>
-        <td> <a href="<%= contracts[i].download_url%>" class='btn btn-default'> <i class='fa fa-download'></i></a></td>
-        <td> <a href="<%= contracts[i].url%>" class='btn btn-default'> <i class='fa fa-line-chart'></i></a></td>
+        <td><%= i+1 %></td>
+        <td><%= contracts [i].title %></td>
+        <td><%= contracts [i].datesigned %></td>
+        <td><%= contracts [i].contractid %></td>
+        <td><%= contracts [i].value_amount %> <%= contracts [i].value_currency %></td>
+        <td> <a href="" class='btn btn-default'> <i class='fa fa-download'></i></a></td>
+        <td> <a href="<%= "/contrataciones-abiertas/contrato/"+contracts[i].contractingprocess_id %>" data-id ="<%= contracts[i].contractingprocess_id %>" class='btn btn-default'> <i class='fa fa-line-chart'></i></a></td>
     </tr>
     <%}%>
     </tbody>

@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
+var pgp = require('pg-promise')();
+var edca_db  = pgp("postgres://tester:test@localhost/edca");
+
+
 var contracts = [
     {
         number : '1',
@@ -339,23 +343,63 @@ router.get('/luis', function(req, res, next) {
     res.render('index1', { title: 'Estandar de Datos de Contrataciones Abiertas' });
 });
 
-router.post('/contracts', function (req, res) {
-    res.json(contracts);
-});
+/* GET contract details */
+router.get('/contrato/:cpid',function (req, res) {
+    edca_db.one('select tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, contract.value_currency ' +
+        'from tender, contract ' +
+        'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ', [
+        req.params.cpid 
+    ]).then(function (data) {
+        res.render('tree',{  contract : data });
 
-/* contract details */
-router.get('/contrato/:id',function (req, res) {
-    res.render('tree',{  contract : contracts[ req.params.id -1 ] });
+    }).catch(function (error) {
+        console.log("ERROR: ", error);
+        res.render ('tree' );
+    });
+
 });
 
 /* dashboard contract list (1st page) */
 router.get('/contratos/',function (req, res) {
-    res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas', contracts : contracts });
+
+    edca_db.many('select * from contract').then(function (data) {
+        res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas', contracts : data });
+    }).catch(function (error) {
+        console.log("ERROR: ", error);
+    });
 });
 
-/* dashboard contract list by page */
+/* dashboard contract list by page
 router.get('/contratos/:page',function (req, res) {
     res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas', contracts : contracts });
+});*/
+
+/* supplier details */
+router.get('/proveedor/:id', function (req, res ) {
+    var data = {};
+    res.render('supplier', { data : data});
+});
+
+/* buyer details */
+router.get('/dependencia/:id', function (req, res ) {
+    var data = {};
+    res.render('supplier', { data : data});
+});
+
+
+/* DATA */
+router.post('/contracts', function (req, res) {
+    res.json(contracts);
+});
+
+/* find contract */
+router.post ('/find-contracts/', function (req, res ) {
+    edca_db.manyOrNone("select * from contract where title ilike '%$1#%' or contractid ilike '%$1#%' ", [req.body.keyword]).then(function (data) {
+        res.render (  'contracts', {contracts: data });
+    }).catch(function (error) {
+        console.log("ERROR: ", error); 
+    });
+
 });
 
 module.exports = router;
