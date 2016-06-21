@@ -533,11 +533,11 @@ var div = d3.select("#arbol").append("div")
 
 /*------------Circle bar---------------*/
 var barCircles  = [
-  {"x_axis":80, "y_axis":18, "radius":10, "color": "#424242"},
-  {"x_axis":300, "y_axis":18, "radius":10, "color": "#424242"},
-  {"x_axis":550, "y_axis":18, "radius":10, "color": "#424242"},
-  {"x_axis":800, "y_axis":18, "radius":10, "color": "#424242"},
-  {"x_axis":1040, "y_axis":18, "radius":10, "color": "#424242"}
+  {"x_axis":80, "y_axis":18, "radius":10, "color": "#424242",   "name":"Planeación"},
+  {"x_axis":300, "y_axis":18, "radius":10, "color": "#424242",  "name":"Licitación"},
+  {"x_axis":550, "y_axis":18, "radius":10, "color": "#424242",  "name":"Adjudicación"},
+  {"x_axis":800, "y_axis":18, "radius":10, "color": "#424242",  "name":"Contratación"},
+  {"x_axis":1040, "y_axis":18, "radius":10, "color": "#424242", "name":"Implementación"}
 ];
 
 var svgContainer = d3.select("#bolitas").append("svg")
@@ -568,25 +568,56 @@ var circleAttributes = circles
       .style("fill", function(d) { return d.color; })
       .on("click", function(d){
         svgContainer.selectAll("circle").style("fill", "#424242");
-        d3.select(this).style("fill", "#00cc99");
-        if(d3.select(this).attr("cx") == 80){
+        var s_circle = d3.select(this);
+        s_circle.style("fill", "#00cc99");
+        if(s_circle.attr("cx") == 80){
           root = json_plan;
           update(root);
-        }else if(d3.select(this).attr("cx") == 300){
+        }else if(s_circle.attr("cx") == 300){
           root = json_lic;
           update(root);
-        }else if(d3.select(this).attr("cx") == 550){
+        }else if(s_circle.attr("cx") == 550){
           root = json_adj;
           update(root);
-        }else if(d3.select(this).attr("cx") == 800){
+        }else if(s_circle.attr("cx") == 800){
           root = json_cont;
           update(root);
-        }else if(d3.select(this).attr("cx") == 1040){
+        }else if(s_circle.attr("cx") == 1040){
           root = json_imp;
           update(root);
         }
+        var name = d.name;
+        console.log(name);
+        var add_data = d3.select("#add_data")
+              .style("display","block")
+              .selectAll("#etapa")
+              .data([name])
+              .transition()
+              .duration(1000)
+              .text(function(d){return d;})
+              .style("font-weight","bold");
+
+      })
+      .on("mouseover", function(d){
+        d3.select(this).transition()
+          .duration(200).attr("r", function(d){return 12;});
+        var add_data = d3.select("#add_data")
+              .selectAll("#etapa")
+              .data([name])
+              .enter()
+              .append("p");
+      })
+      .on("mouseout", function(d){
+        d3.select(this).transition()
+            .duration(200).attr("r", function(d){return 10;});
       });
-/*--------------------------------------------*/
+/*---------------------------------------------------*/
+/* Div con Información adicional sobre los contratos */
+/*---------------------------------------------------*/
+
+
+/*---------------------------------------------------*/
+
 
 window.onload = function(){
   root = json;
@@ -777,6 +808,11 @@ function collapse(d){
 }
 
 $('#refresh').on("click", function(event){
+  var add_data = d3.select("#add_data")
+        .transition()
+        .duration(200)
+        .style("display","none");
   root = json;
+  svgContainer.selectAll("circle").style("fill", "#424242");
   update(root);
 });

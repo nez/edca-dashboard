@@ -338,7 +338,10 @@ function update(source)
             div.transition()
                 .duration(500)
                 .style("opacity", 0);
-        });
+        })
+        .on("mouseover", function(d){
+        d3.select(this).attr("r", "10");
+      });
 
     nodeEnter.append("circle")
         .attr("r", 0)
