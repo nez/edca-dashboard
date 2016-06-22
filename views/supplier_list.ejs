@@ -1,3 +1,4 @@
 <% for ( var i = 0; i < suppliers.length; i++){ %>
-<p><%= suppliers[i].name %></p>
+<p>Razón social: <%= suppliers[i].identifier_legalname %></p>
+<p>RFC: <%= suppliers[i].identifier_id %></p>
 <%}%>
