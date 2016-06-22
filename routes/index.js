@@ -22,7 +22,7 @@ router.get('/contratos/',function (req, res) {
 
 /* GET contract details */
 router.get('/contrato/:cpid',function (req, res) {
-    edca_db.one('select tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, contract.value_currency ' +
+    edca_db.one('select tender.contractingprocess_id as cpid, tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, contract.value_currency ' +
         'from tender, contract ' +
         'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ', [
         req.params.cpid
