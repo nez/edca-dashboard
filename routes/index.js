@@ -8,10 +8,6 @@ var edca_db  = pgp("postgres://tester:test@localhost/edca");
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'Estandar de Datos de Contrataciones Abiertas' });
 });
-/* GET home page. */
-router.get('/luis', function(req, res, next) {
-    res.render('index1', { title: 'Estandar de Datos de Contrataciones Abiertas' });
-});
 
 /* GET contract details */
 router.get('/contrato/:cpid',function (req, res) {
@@ -26,7 +22,6 @@ router.get('/contrato/:cpid',function (req, res) {
         console.log("ERROR: ", error);
         res.render ('tree' );
     });
-
 });
 
 /* dashboard contract list (1st page) */
@@ -53,7 +48,10 @@ router.get('/proveedor/:supplierid', function (req, res ) {
 router.get('/entidad-compradora/:cpid', function (req, res ) {
     edca_db.one('select * from buyer where id = $1 ',[ req.params.cpid ]).then(function(data){
         res.render('buyer', { buyer : data});
-    })
+    }).catch(function (error) {
+        res.render('buyer');
+        console.log("ERROR: ", error);
+    });
 });
 
 
@@ -67,6 +65,11 @@ router.post ('/find-contracts/', function (req, res ) {
         console.log("ERROR: ", error); 
     });
 
+});
+
+/* GET home page. */
+router.get('/luis', function(req, res, next) {
+    res.render('index1', { title: 'Estandar de Datos de Contrataciones Abiertas' });
 });
 
 /*
