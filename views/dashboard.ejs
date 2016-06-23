@@ -142,6 +142,11 @@
                 <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
             </div>
         </div>
+
+        <div class="col-sm-8">
+            <div id="d3bar"></div>
+        </div>
+
     </div>
     <br>
 
@@ -168,9 +173,146 @@
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.highlighter.js"></script>
 <link rel="stylesheet" type="text/css" href="/bower_components/jqplot/jquery.jqplot.css" />
 
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
 <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="/javascripts/dashboard.js"></script>
+
+<style>
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .bar {
+        fill: orange;
+    }
+
+    .bar:hover {
+        fill: orangered ;
+    }
+
+    .x.axis path {
+        display: none;
+    }
+
+    .d3-tip {
+        line-height: 1;
+        font-weight: bold;
+        padding: 12px;
+        background: #f6f6f6;
+        color: black;
+        border-radius: 2px;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+        box-sizing: border-box;
+        display: inline;
+        font-size: 10px;
+        width: 100%;
+        line-height: 1;
+        color: #f6f6f6;
+        //color: rgba(0, 0, 0, 0.8);
+        content: "\25BC";
+        position: absolute;
+        text-align: center;
+    }
+
+    /* Style northward tooltips differently */
+    .d3-tip.n:after {
+        margin: -1px 0 0 0;
+        top: 100%;
+        left: 0;
+    }
+</style>
+
+<script>
+    var margin = {top: 40, right: 20, bottom: 30, left: 70},
+            width = 750 - margin.left - margin.right,
+            height = 350 - margin.top - margin.bottom;
+
+    var formatPercent = d3.format(".0%");
+
+    var x = d3.scale.ordinal()
+            .rangeRoundBands([0, width], .1);
+
+    var y = d3.scale.linear()
+            .range([height, 0]);
+
+    var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+
+    var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .tickFormat(formatPercent);
+
+    var tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+                return "<strong>Porcentaje de avance:</strong> <span style='color:red'>" + d.s1 + "</span>";
+            })
+
+    var svg = d3.select("#d3bar").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.call(tip);
+
+    d3.csv("/data.tsv", type, function(error, data) {
+        x.domain(data.map(function(d) { return d.product; } ));
+        y.domain([0, d3.max(data, function(d) { return d.s1; })]);
+
+        svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis);
+
+        svg.append("g")
+                .attr("class", "y axis")
+                .call(yAxis)
+                /*.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0)
+                .attr("dy", ".71em")
+                .style("text-anchor", "end")*/
+                .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left)
+                .attr("x", 0 - (height / 2))
+                .attr("dy", "1em")
+                .style("text-anchor", "middle")
+                .text("Porcentaje de avance (%)");
+
+        svg.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", function(d) { return x(d.product); })
+                .attr("width", x.rangeBand())
+                .attr("y", function(d) { return y(d.s1); })
+                .attr("height", function(d) { return height - y(d.s1); })
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide)
+
+    });
+
+    function type(d) {
+        d.s1 = +d.s1;
+        return d;
+    }
+
+</script>
 
 </body>
 </html>

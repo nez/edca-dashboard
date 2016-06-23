@@ -1,0 +1,72 @@
+[
+  {
+    "product": "Plan de monitoreo y conservación de aves del proyecto del<br> Nuevo Aeropuerto Internacional de la Ciudad de México.",
+    "id" : "LO-009KDH999-N46-2015",
+    "s1" : 0.4726//, "s2" : (5708930.68 / 14382969.2 )*100
+  },
+  {
+    "product": "Implementación del programa de rescate de flora y fauna <br>para el Nuevo Aeropuerto Internacional de la Ciudad de México.",
+    "id" : "LO-009KDH999-N42-2015",
+    "s1" : 0.8515//, "s2" : (5344833.89 / 11924906.62)*100
+  },
+  {
+    "product": "Implementación del plan de restauración ecológica para el <br>Nuevo Aeropuerto Internacional de la Ciudad de México.",
+    "id" : "LO-009KDH999-N45-2015",
+    "s1" : 0.3025//, "s2" : (4504538.98/ 18934197.76 )*100
+  },
+  {
+    "product": "Supervisión para: construcción del proyecto integral <br>consistente en barda y camino perimetral, alumbrado, <br>servicios inducidos y casetas de acceso para el <br>Nuevo Aeropuerto Internacional de la Ciudad de México <br>(primera etapa).",
+    "id" : "IO-009KDH999-N54-2015",
+    "s1" : 0.90//, "s2" : (2565511.85/3286908.92)*100
+  },
+  {
+    "product": "Desarrollo del proyecto ejecutivo, construcción, equipamiento<br> de mobiliario e instalaciones complementarias para el campamento<br> del Grupo Aeroportuario de la Ciudad de México en el sitio<br> del Nuevo Aeropuerto Internacional de la Ciudad de México.",
+    "id" : "LO-009KDH999-N47-2015",
+    "s1" : 0.2123//, "s2" : (8620689.66/112046320.57)*100
+  },
+  {
+    "product": "Trabajos relativos a la construcción del drenaje pluvial <br>temporal del Nuevo Aeropuerto de la Ciudad de México.",
+    "id" : "LO-009KDH999-N50-2015",
+    "s1" : 0.1001//, "s2" :(13609080.34/192525597.09)*100
+  },
+  {
+    "product": "Diseñar e instrumentar el modelo virtual de información <br>para la construcción del BIM del NAICM.",
+    "id" : "LO-009KDH999-T52-2015",
+    "s1" : 0.064//, "s2" :0
+  },
+  {
+    "product": "Convocatoria de nivelación y limpieza del terreno del <br> Nuevo Aeropuerto Internacional de la Ciudad de México.",
+    "id" : "LO-009KDH999-N79-2015",
+    "s1" : 0.0433//, "s2" : (169601426.76/1762803241.34)*100
+  },
+  {
+    "product": "Convocatoria de construcción de los caminos provisionales de acceso<br> al Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)<br> ejecutando trabajos de terraceria, estructuras y obras de drenaje,<br>pavimentación y señalamiento.",
+    "id" : "LO-009KDH999-N80-2015",
+    "s1" : 0.0111//"s2" :(57514449.48/608275577.5)*100
+  },
+  {
+    "product": "Convocatoria de carga, acarreo y descarga fuera del poligono del material<br> existente producto de depositos de demoliciones, desperdicios y desazolve.",
+    "id" : "LO-009KDH999-N78-2015",
+    "s1" : 0.0158//, "s2" : (49391647.5/493916475)*100
+  },
+  {
+    "product": "Supervisión técnica, administrativa y de control de calidad para<br> los trabajos de nivelación y limpieza del terreno del<br> Nuevo Aeropuerto Internacional de la Ciudad de México.",
+    "id" : "LO-009KDH999-N86-2015",
+    "s1" : 0.2593//, "s2" :0
+  },
+  {
+    "product": "Supervisión técnica, administrativa y de control de calidad para<br> los trabajos de construcción de los caminos provisionales<br> de acceso al Nuevo Aeropuerto Intenacional de la<br> Ciudad de México (NAICM) ejecutanto trabajos de terraceria,<br> estructuras y obras de drenaje, pavimentación y señalamiento.",
+    "id" : "LO-009KDH999-N87-2015",
+    "s1" : 0.1227//, "s2" :0
+  },
+  {
+    "product": "Supervisión del proyecto ejecutivo, construcción, equipamiento, <br>mobiliario e instalaciones complementarias para el campamento del <br>Grupo Aeroportuario de la Ciudad de México en el sitio del<br> Nuevo Aeropuerto Internacional de la Ciudad de México.",
+    "id" : "AO-009KDH999-E26-2016",
+    "s1" : 0.18//, "s2" :0
+  },
+  {
+    "product": "Supervisión de la construcción del drenaje pluvial temporal del <br>Nuevo Aeropuerto Intenacional de la Ciudad de México.",
+    "id" : "AO-009KDH999-E20-2016",
+    "s1" : 0.40//, "s2" :0
+  }
+]

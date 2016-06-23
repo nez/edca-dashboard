@@ -108,6 +108,7 @@ $(document).ready(function(){
             id : 'AO-009KDH999-E20-2016', s1 : 40, s2 :0
         }
     ];
+    
 
     //SORT JQPLOT BAR CHART SERIES
     function sortbyserie(serie, data ) {
