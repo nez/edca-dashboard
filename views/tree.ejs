@@ -43,18 +43,16 @@
 
     </style>
 
-
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--<link rel='stylesheet' href='/stylesheets/navbar-fixed-top.css' />-->
-    <title>Contrataciones Abiertas</title>
-    <link rel='stylesheet' href='/stylesheets/main.css'/>
-    <!-- <link rel='stylesheet' href='/stylesheets/bootstrap-grid-system.css' /> -->
-    <!--<link rel='stylesheet' href='/stylesheets/buttons.css'/>-->
-    <script src="http://d3js.org/d3.v3.min.js"></script>
     <link rel="import" href="/bower_components/polymer/polymer.html">
+    <link rel='stylesheet' href='/stylesheets/main.css'/>
     <link rel="import" href="/dgm-navbar/dgm-navbar.html">
+    <link rel="import" href="/dgm-footer/dgm-footer.html">
+
+    <title>Contrataciones Abiertas</title>
+
 
 </head>
 
@@ -87,6 +85,10 @@
                     <p style="color:#424242"> <font size="2">Moneda: <b><%= contract.value_currency%></b></font></p>
                     <p style="color:#424242"> <font size="2">Vigencia: <b>2016-03-07</b></font></p>
                     <p style="color:#424242"> <font size="2">Tipo: <b><%= contract.procurementmethod %></b></font></p>
+                    <p>
+                        <a  class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/entidad-compradora/" %>"><b>Datos del comprador</b></a>
+                        <a  class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/proveedores/" %>"><b>Proveedores</b></a>
+                    </p>
                     <button type="button" class="btn btn-primary" style="width:150px;height:40px;position:absolute;bottom:10px;right:10px;background-color:#00cc99;align:top;border-radius:25px;outline:none;" id="refresh"><b>Árbol completo</b></button>
                 </div>
             </div>
@@ -146,6 +148,6 @@
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-<link rel="import" href="/dgm-footer/dgm-footer.html">
+<script src="http://d3js.org/d3.v3.min.js"></script>
 </body>
 </html>

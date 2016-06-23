@@ -10,25 +10,29 @@
     <link rel="import" href="/dgm-navbar/dgm-navbar.html">
     <link rel="import" href="/dgm-footer/dgm-footer.html">
 
-    <title>Contrataciones Abiertas - Proveedores</title>
+    <title>Contrataciones Abiertas - Entidad compradora</title>
 </head>
 
 <body>
 <dgm-navbar></dgm-navbar>
+
+
+
+
 <div class="container">
-    <% if ( typeof supplier != 'undefined') { %>
 
-    <section>
-        <b>Razón social: <%= supplier.name %></b>
-        <b>RFC: <%= supplier.name %></b>
-    </section>
+    <% if (typeof buyer != 'undefined'){%>
 
-    <% } else{%>
+<p> <%= buyer.name %></p>
+
+
+    <%}else {%>
     <div class="alert alert-danger" role="alert">
-        Proveedor no encontrado
+        Contrato no encontrado
     </div>
     <%}%>
 </div>
+
 <dgm-footer></dgm-footer>
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

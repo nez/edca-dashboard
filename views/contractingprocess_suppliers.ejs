@@ -16,11 +16,10 @@
 <body>
 <dgm-navbar></dgm-navbar>
 <div class="container">
-    <% if ( typeof supplier != 'undefined') { %>
+    <% if ( typeof suppliers != 'undefined') { %>
 
     <section>
-        <b>Razón social: <%= supplier.name %></b>
-        <b>RFC: <%= supplier.name %></b>
+        <% include supplier_list %>
     </section>
 
     <% } else{%>
