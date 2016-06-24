@@ -559,7 +559,6 @@ var circles = svgContainer.selectAll("circle")
       .enter()
       .append("circle");
 
-
 var circleAttributes = circles
       .attr("cx", function (d) { return d.x_axis; })
       .attr("cy", function (d) { return d.y_axis; })
@@ -587,7 +586,6 @@ var circleAttributes = circles
           update(root);
         }
         var name = d.name;
-        console.log(name);
         var add_data = d3.select("#add_data")
               .style("display","block")
               .selectAll("#etapa")
@@ -596,6 +594,55 @@ var circleAttributes = circles
               .duration(1000)
               .text(function(d){return d;})
               .style("font-weight","bold");
+
+        // Select data
+        var data;
+        switch(name){
+        case "Planeación":
+          data = json_plan.children;
+          break;
+        case "Licitación":
+          data = json_lic.children;
+          break;
+        case "Adjudicación":
+          data = json_adj.children;
+          break;
+        case "Contratación":
+          data = json_cont.children;
+          break;
+        case "Implementación":
+          data = json_imp.children;
+          break;
+        default:
+          data = json_plan.children;
+        }
+
+        // Clean data
+        d3.select("#etapa_desglo")
+          .selectAll("div")
+          .remove();
+
+        // Fill in data.
+        for(i = 0; i < data.length; i++){
+          d3.select("#etapa_desglo")
+            .selectAll("p" + i)
+            .data(["" + data[i].name + ""])
+            .enter()
+            .append("div")
+            .attr("id","child" + i)
+            .text(function(d){ return d;})
+            .style("font-weight", "bold");
+
+          d3.select("#child" + i)
+            .selectAll("p")
+            .data(["" + data[i].text + ""])
+            .enter()
+            .append("p")
+            .text(function(d){ return d;})
+            .append("hr")
+            .style("border-color","#BDBDBD");
+
+        }
 
       })
       .on("mouseover", function(d){
@@ -606,14 +653,6 @@ var circleAttributes = circles
               .data([name])
               .enter()
               .append("p");
-        if(name == "Planeación"){
-          var etapa_data = d3.select("#etapa_desglo")
-                .selectAll("p")
-                .data(json_plan.children)
-                .enter()
-                .append("p")
-                .text(function(d){return d.name;});
-        }
       })
       .on("mouseout", function(d){
         d3.select(this).transition()
