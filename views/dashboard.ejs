@@ -71,12 +71,6 @@
 </section>
 
 <div class="container">
-
-    <!-- <div class="col-xs-12" style=" background: #eee ">
-        jkdjskjsjsdkjs
-    </div>-->
-
-    <br>
     <!--<div class="panel panel-default" style="background: #eee;">
         <div class="panel-body">-->
     <div class="row">
@@ -88,8 +82,9 @@
                 <h2 style="color: #673AB7"><b>4,146</b> <small>millones de pesos</small></h2>
 
             </div>
-            <div class="col-sm-8" >
+            <div class="col-sm-8" style="overflow: auto;">
                 <h3 style="text-align: left; color: #00cc99"><b>Avance físico y financiero por contrato</b></h3>
+                <!--
                 <div id="chart2" style="max-width:700px; height: 350px;"></div>
                 <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -101,7 +96,8 @@
                     </ul>
                 </div>
                 <br>
-                <br>
+                <br> -->
+                <div id="d3bar"></div>
             </div>
         </div>
     </div>
@@ -142,11 +138,6 @@
                 <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
             </div>
         </div>
-
-        <div class="col-sm-8">
-            <div id="d3bar"></div>
-        </div>
-
     </div>
     <br>
 
@@ -179,7 +170,7 @@
 <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="/javascripts/dashboard.js"></script>
-
+<!--
 <style>
 
     .axis path,
@@ -198,12 +189,13 @@
     }
 
     .x.axis path {
-        display: none;
+        /*display: none;*/
     }
 
     .d3-tip {
         line-height: 1;
-        font-weight: bold;
+        /*font-weight: bold;*/
+        font-family: "Open Sans";
         padding: 12px;
         background: #f6f6f6;
         color: black;
@@ -214,11 +206,11 @@
     .d3-tip:after {
         box-sizing: border-box;
         display: inline;
-        font-size: 10px;
+        font-size: 9px;
         width: 100%;
         line-height: 1;
         color: #f6f6f6;
-        //color: rgba(0, 0, 0, 0.8);
+        /*color: rgba(0, 0, 0, 0.8);*/
         content: "\25BC";
         position: absolute;
         text-align: center;
@@ -230,10 +222,11 @@
         top: 100%;
         left: 0;
     }
+
 </style>
 
 <script>
-    var margin = {top: 40, right: 20, bottom: 30, left: 70},
+    var margin = {top: 40, right: 20, bottom: 40, left: 70},
             width = 750 - margin.left - margin.right,
             height = 350 - margin.top - margin.bottom;
 
@@ -247,7 +240,9 @@
 
     var xAxis = d3.svg.axis()
             .scale(x)
-            .orient("bottom");
+            .orient("bottom")
+            .tickValues({})
+            .tickSize(0);
 
     var yAxis = d3.svg.axis()
             .scale(y)
@@ -258,7 +253,7 @@
             .attr('class', 'd3-tip')
             .offset([-10, 0])
             .html(function(d) {
-                return "<strong>Porcentaje de avance:</strong> <span style='color:red'>" + d.s1 + "</span>";
+                return "<p>contrato</p>"+d.product+"<p>Avance físico:</p> <strong>" + (d.s1 * 100) + "%</strong>";
             })
 
     var svg = d3.select("#d3bar").append("svg")
@@ -271,12 +266,22 @@
 
     d3.csv("/data.tsv", type, function(error, data) {
         x.domain(data.map(function(d) { return d.product; } ));
-        y.domain([0, d3.max(data, function(d) { return d.s1; })]);
+
+        y.domain([0, 1]);//d3.max(data, function(d) { return d.s1; })]);
+
 
         svg.append("g")
                 .attr("class", "x axis")
                 .attr("transform", "translate(0," + height + ")")
-                .call(xAxis);
+                .call(xAxis)
+                .append("text")
+                .style("text-anchor", "middle")
+                //.attr("y", 0 - margin.left)
+                .attr("y", 40 )
+                .attr("x", width/2 )
+                //.attr("x", 0 - (height / 2))
+                //.attr("dy", "7em")
+                .text("Contratos");
 
         svg.append("g")
                 .attr("class", "y axis")
@@ -292,7 +297,7 @@
                 .attr("x", 0 - (height / 2))
                 .attr("dy", "1em")
                 .style("text-anchor", "middle")
-                .text("Porcentaje de avance (%)");
+                .text("Avance");
 
         svg.selectAll(".bar")
                 .data(data)
@@ -305,6 +310,13 @@
                 .on('mouseover', tip.show)
                 .on('mouseout', tip.hide)
 
+        svg.append("text")
+                .attr("x", (width / 2))
+                .attr("y", 0 - (margin.top / 2))
+                .attr("text-anchor", "middle")
+                .style("font-size", "16px")
+                //.style("text-decoration", "underline")
+                .text("Avances");
     });
 
     function type(d) {
@@ -312,6 +324,194 @@
         return d;
     }
 
+</script>
+-->
+
+
+<style>
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .bar {
+        fill: steelblue;
+    }
+
+    .x.axis path {
+        /*display: none;*/
+    }
+
+    .d3-tip {
+        width: 250px;
+        line-height: 1;
+        /*font-weight: bold;*/
+        font-family: "Open Sans";
+        font-size: 11px;
+        padding: 12px;
+        background: #f6f6f6;
+        color: black;
+        border-radius: 2px;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+        box-sizing: border-box;
+        display: inline;
+        font-size: 9px;
+        width: 100%;
+        line-height: 1;
+        color: #f6f6f6;
+        /*color: rgba(0, 0, 0, 0.8);*/
+        content: "\25BC";
+        position: absolute;
+        text-align: center;
+    }
+
+    /* Style northward tooltips differently */
+    .d3-tip.n:after {
+        margin: -1px 0 0 0;
+        top: 100%;
+        left: 0;
+    }
+</style>
+
+<script>
+    var margin = {top: 40, right: 20, bottom: 40, left: 70},
+            width = 730 - margin.left - margin.right,
+            height = 350 - margin.top - margin.bottom;
+
+    var x0 = d3.scale.ordinal()
+            .rangeRoundBands([0, width], .1);
+
+    var x1 = d3.scale.ordinal();
+
+    var y = d3.scale.linear()
+            .range([height, 0]);
+
+    var color = d3.scale.ordinal()
+            .range([ '#00cc99', '#673AB7' ]);//, "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+    var xAxis = d3.svg.axis()
+            .scale(x0)
+            .orient("bottom")
+            .tickValues({})
+            .tickSize(0);
+
+
+    var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .tickFormat(d3.format(".0%"));
+            //.tickFormat(d3.format(".2s"));
+
+    var tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+                return "<p>Contrato</p><p><b>"+ d.product+"</b></p><p>"+d.name+"</p> <strong>"+ d3.format(".0%")(d.value) +"</strong>";
+            })
+
+    var svg = d3.select("#d3bar").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.call(tip);
+
+    d3.csv("/data.csv", function(error, data) {
+        if (error) throw error;
+
+        var ageNames = d3.keys(data[0]).filter(function(key) { return key !== "Producto"; });
+        //console.log(ageNames);
+
+        data.sort();
+        data.forEach(function(d) {
+            d.ages = ageNames.map(function(name) { return {name: name, value: +d[name], product : d['Producto']}; });
+        });
+
+        x0.domain(data.map(function(d) { return d.Producto; }));
+        x1.domain(ageNames).rangeRoundBands([0, x0.rangeBand()]);
+        y.domain([0, 1]);//d3.max(data, function(d) { return d3.max(d.ages, function(d) { return d.value; }); })]);
+
+        svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis)
+                .append("text")
+                .style("text-anchor", "middle")
+                .attr("y", 30 )
+                .attr("x", width/2 )
+                .text("Contratos");
+
+        svg.append("g")
+                .attr("class", "y axis")
+                .call(yAxis)
+                .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left)
+                .attr("x", 0 - (height / 2))
+                .attr("dy", "1em")
+                .style("text-anchor", "middle")
+                .text("Avance");
+
+        var producto = svg.selectAll(".producto")
+                .data(data)
+                .enter().append("g")
+                .attr("class", "producto")
+                .attr("transform", function(d) { return "translate(" + x0(d.Producto) + ",0)"; });
+
+        producto.selectAll("rect")
+                .data(function(d) { return d.ages; })
+                .enter().append("rect")
+                .attr("width", x1.rangeBand())
+                .attr("x", function(d) {return x1(d.name);})
+                .attr("y", function(d) { return y(d.value); })
+                .attr("height", function(d) { return height - y(d.value); })
+                .style("fill", function(d) { return color(d.name); })
+                .text( function (d) {
+                    return d.Producto;
+                })
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide);
+
+
+        svg.append("text")
+                .attr("x", (width / 2))
+                .attr("y", 0 - (margin.top / 2))
+                .attr("text-anchor", "middle")
+                .style("font-size", "16px")
+                //.style("text-decoration", "underline")
+                .text("Avances al 10 de julio de 2016");
+
+        var legend = svg.selectAll(".legend")
+                .data(ageNames.slice().reverse())
+                .enter().append("g")
+                .attr("class", "legend")
+                //.attr("transform","translate(50,30)")
+                 .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+
+
+
+
+        legend.append("rect")
+                .attr("x", width - 18)
+                .attr("width", 18)
+                .attr("height", 18)
+                .style("fill", color);
+
+        legend.append("text")
+                .attr("x", width - 24)
+                .attr("y", 9)
+                .attr("dy", ".35em")
+                .style("text-anchor", "end")
+                .text(function(d) { return d; });
+
+    });
 </script>
 
 </body>

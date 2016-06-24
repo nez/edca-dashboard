@@ -110,6 +110,7 @@ $(document).ready(function(){
     ];
     
 
+/*
     //SORT JQPLOT BAR CHART SERIES
     function sortbyserie(serie, data ) {
 
@@ -169,14 +170,14 @@ $(document).ready(function(){
                 tickRenderer: $.jqplot.CanvasAxisTickRenderer,
                 labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
                 label: 'Contratos',
-                /* tickOptions:{
-                 show: false,
+                //tickOptions:{
+                 //show: false,
                  //textColor: 'white'
-                 },*/
-                /*
-                 rendererOptions: {
-                 drawBaseline: false
-                 }*/
+                 //},
+
+                // rendererOptions: {
+                //drawBaseline: false
+                 //}
                 drawMajorGridlines: false,
                 //ticks: ticks
             },
@@ -233,7 +234,7 @@ $(document).ready(function(){
         plot2.series[1].data  = s2;
         plot2.replot();
     });
-
+*/
     // FIND CONTRACTS
     function searchbykeyword ( keyword, table ){
         $.post('/contrataciones-abiertas/find-contracts', { keyword: keyword }, function (contracts) {
