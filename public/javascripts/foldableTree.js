@@ -631,14 +631,21 @@ var circleAttributes = circles
             .append("div")
             .attr("id","child" + i)
             .text(function(d){ return d;})
-            .style("font-weight", "bold");
+            .style("font-weight", "bold")
+            .style("color","#424242");;
 
           d3.select("#child" + i)
             .selectAll("p")
-            .data(["" + data[i].text + ""])
+            .data([data[i]])
             .enter()
+            .append("div")
+            .attr("id", "#child-child" + i)
             .append("p")
-            .text(function(d){ return d;})
+            .text(function(d){ if(d.hasOwnProperty('children') == false){ return d.text;}else{
+              for(j = 0; j < d.children.length; j++){
+                return d.children[j].text;
+              }
+            }})
             .append("hr")
             .style("border-color","#BDBDBD");
 
@@ -797,7 +804,7 @@ function update(source)
     // Transition exiting nodes to the parent's new position.
     link.exit().transition()
         .duration(duration)
-        .attr("d", function(d){
+    .attr("d", function(d){
             var o = {x: source.x, y: source.y};
             return diagonal({source: o, target: o});
         })
