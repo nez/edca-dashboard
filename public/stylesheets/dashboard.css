@@ -1,0 +1,75 @@
+/* google charts */
+div.google-visualization-tooltip > ul > li > span {
+    /*color: #f6f6f6 !important;*/
+    font-size: 8pt !important;
+    font-family: "Open Sans" !important;
+}
+div.google-visualization-tooltip {
+    background: #f6f6f6;
+    border: white !important;
+    width: 250px;
+}
+
+.jqplot-highlighter-tooltip, .jqplot-canvasOverlay-tooltip {
+    z-index: 2;
+    background: #f6f6f6 !IMPORTANT;
+    font-color: black !IMPORTANT;
+    font-family: "Open Sans" !important;
+    border: white !IMPORTANT;
+}
+
+.jqplot-table-legend {
+    width: auto;
+    border-color: transparent !important;
+    background: transparent !important;
+    padding: 5px;
+}
+
+/* d3 charts */
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.bar {
+    fill: steelblue;
+}
+
+.x.axis path {
+    /*display: none;*/
+}
+
+.d3-tip {
+    width: 250px;
+    line-height: 1;
+    /*font-weight: bold;*/
+    font-family: "Open Sans";
+    font-size: 11px;
+    padding: 12px;
+    background: #f6f6f6;
+    color: black;
+    border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 9px;
+    width: 100%;
+    line-height: 1;
+    color: #f6f6f6;
+    /*color: rgba(0, 0, 0, 0.8);*/
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}

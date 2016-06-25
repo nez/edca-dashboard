@@ -5,39 +5,14 @@
     <!-- Bootstrap core CSS -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/main.css'/>
+    <link rel="stylesheet" type="text/css" href="/bower_components/jqplot/jquery.jqplot.css" />
+    <link rel="stylesheet" href="/stylesheets/dashboard.css">
     <link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="/dgm-navbar/dgm-navbar.html">
     <link rel="import" href="/dgm-footer/dgm-footer.html">
 
     <title><%= title %></title>
 
-    <style>
-        div.google-visualization-tooltip > ul > li > span {
-            /*color: #f6f6f6 !important;*/
-            font-size: 8pt !important;
-            font-family: "Open Sans" !important;
-        }
-        div.google-visualization-tooltip {
-            background: #f6f6f6;
-            border: white !important;
-        }
-
-        .jqplot-highlighter-tooltip, .jqplot-canvasOverlay-tooltip {
-            z-index: 2;
-            background: #f6f6f6 !IMPORTANT;
-            font-color: black !IMPORTANT;
-            font-family: "Open Sans" !important;
-            border: white !IMPORTANT;
-        }
-
-        .jqplot-table-legend {
-            width: auto;
-            border-color: transparent !important;
-            background: transparent !important;
-            padding: 5px;
-        }
-
-    </style>
 </head>
 <body style="background: #eee">
 
@@ -154,6 +129,7 @@
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/bower_components/jqplot/jquery.jqplot.js"></script>
 <script src="/bower_components/jqplot/plugins/jqplot.donutRenderer.js"></script>
+
 <script src="/bower_components/jqplot/plugins/jqplot.barRenderer.js"></script>
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js"></script>
@@ -162,7 +138,6 @@
 <!--<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>-->
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.pointLabels.js"></script>
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.highlighter.js"></script>
-<link rel="stylesheet" type="text/css" href="/bower_components/jqplot/jquery.jqplot.css" />
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
@@ -171,55 +146,6 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="/javascripts/dashboard.js"></script>
 
-<style>
-    .axis path,
-    .axis line {
-        fill: none;
-        stroke: #000;
-        shape-rendering: crispEdges;
-    }
-
-    .bar {
-        fill: steelblue;
-    }
-
-    .x.axis path {
-        /*display: none;*/
-    }
-
-    .d3-tip {
-        width: 250px;
-        line-height: 1;
-        /*font-weight: bold;*/
-        font-family: "Open Sans";
-        font-size: 11px;
-        padding: 12px;
-        background: #f6f6f6;
-        color: black;
-        border-radius: 2px;
-    }
-
-    /* Creates a small triangle extender for the tooltip */
-    .d3-tip:after {
-        box-sizing: border-box;
-        display: inline;
-        font-size: 9px;
-        width: 100%;
-        line-height: 1;
-        color: #f6f6f6;
-        /*color: rgba(0, 0, 0, 0.8);*/
-        content: "\25BC";
-        position: absolute;
-        text-align: center;
-    }
-
-    /* Style northward tooltips differently */
-    .d3-tip.n:after {
-        margin: -1px 0 0 0;
-        top: 100%;
-        left: 0;
-    }
-</style>
 
 <script>
     var margin = {top: 40, right: 20, bottom: 40, left: 70},
