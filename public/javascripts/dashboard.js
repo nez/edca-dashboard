@@ -75,7 +75,7 @@ function drawSeriesChart() {
 
         var newData = [];
 
-        newData.push( ['ID','Fecha de firma','Vigencia (meses)','Tipo', 'Monto MXN']);
+        newData.push( ['ID','Fecha de firma','Vigencia (días naturales)','Tipo', 'Monto MXN']);
 
         for (i=0; i< data.length;i++){
                 newData.push([ data[i].title, new Date(data[i].datesigned), data[i].vigencia.days, data[i].procurementmethod, Number(data[i].value_amount ) ]  );
@@ -146,7 +146,7 @@ function drawSeriesChart() {
 
         },
         vAxis: {
-            title: 'Vigencia en meses',
+            title: 'Vigencia en días naturales',
             textStyle: {
                 italic: false,
                 fontName: 'Open Sans',
