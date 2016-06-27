@@ -71,13 +71,17 @@ google.charts.setOnLoadCallback(drawSeriesChart);
 
 function drawSeriesChart() {
 
+    $.get('/contrataciones-abiertas/bubble-chart-data', function (data) {
+
+        var newData = [];
+
+        newData.push( ['ID','Fecha de firma','Vigencia (meses)','Tipo', 'Monto MXN']);
+
+        for (i=0; i< data.length;i++){
+                newData.push([ data[i].title, new Date(data[i].datesigned), data[i].vigencia.days, data[i].procurementmethod, Number(data[i].value_amount ) ]  );
+        }
+
 /*
-    var jsonData = $.ajax({
-        url: "/contrataciones-abiertas/data",
-        dataType: "json",
-        async: false
-    }).responseText;
-*/
     var data = google.visualization.arrayToDataTable([
         ['ID',                      'Fecha de firma',                    'Vigencia (meses)', 'Tipo',             'Monto MXN'],
         ['LO-009KDH999-N5-2014',     new Date('2015-01-02'),              6,      'Licitación',              39724276.56],
@@ -89,14 +93,14 @@ function drawSeriesChart() {
         ['LO-099KDH999-N20-2015',    new Date('2015-05-14'),              1,      'Licitación',             5844840.96],
         ['LO-099KDH999-T15-2015',    new Date('2015-05-29'),              3,      'Licitación',             13514000],
         ['LO-009KDH999-N46-2015',    new Date('2015-07-21'),              18,      'Licitación',            16684244.272],
-        ['LO-009KDH999-N42-2015: Plan de monitoreo y conservación de aves del proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México.',    new Date('2015-07-21'),              18,      'Licitación',             13832891.6792],
+        ['LO-009KDH999-N42-2015',    new Date('2015-07-21'),              18,      'Licitación',             13832891.6792],
         ['LO-009KDH999-N45-2015',    new Date('2015-07-21'),              18,      'Licitación',             21963669.4016],
         ['IO-009KDH999-N41-2015',    new Date('2015-07-29'),              2,      'Invitación a 3',         38949488.17],
         ['IO-009KDH999-N54-2015',    new Date('2015-08-28'),              3.5,      'Invitación a 3',         3812525.54],
         ['LO-009KDH999-N47-2015',    new Date('2015-09-10'),              7,      'Licitación',             129973731.2],
         ['LO-009KDH999-N50-2015',    new Date('2015-10-09'),              4,      'Licitación',             223329692.62],
         ['LO-009KDH999-T52-2015',    new Date('2015-10-23'),              48,      'Licitación',             158629469.03],
-        ['LO-009KDH999-N79-2015: ',    new Date('2015-12-14'),              12,      'Licitación',             2044851759.9544],
+        ['LO-009KDH999-N79-2015',    new Date('2015-12-14'),              12,      'Licitación',             2044851759.9544],
         ['LO-009KDH999-N80-2015',    new Date('2015-12-31'),              13,      'Licitación',             705599669.9],
         ['LO-009KDH999-N78-2015',    new Date('2015-12-31'),              9,      'Licitación',             572943111],
         ['LO-009KDH999-N86-2015',    new Date('2015-12-31'),              12,      'Licitación',             11276263.6272],
@@ -106,8 +110,9 @@ function drawSeriesChart() {
         ['IO-009KDH999-E15-2016',    new Date('2016-03-10'),              3,      'Invitación a 3',         12715541.31],
         ['IO-009KDH999-E96-2015',    new Date('2016-03-23'),              8,      'Invitación a 3',         91640000]
     ]);
+    */
 
-    //var data = new google.visualization.DataTable(jsonData);
+    var data = google.visualization.arrayToDataTable(newData);
 
     var options = {
         //'legend': 'left',
@@ -117,7 +122,8 @@ function drawSeriesChart() {
             heigth: '90%',
             left: '75',
             right: '10',
-            top: '30'
+            top: '30',
+            //bottom: '10'
         },
         backgroundColor: 'transparent',
         tooltip: {isHtml: true},
@@ -165,12 +171,12 @@ function drawSeriesChart() {
             }},
         series: {
 
-            'Licitación': {
+            'Licitación Pública': {
                 color: '#00cc99',
                 //fontName: 'Open Sans'
             },
-            'Invitación a 3': {color: '#ff4d4d'},
-            'Adjudicación directa': {color: '#673AB7'}
+            'Invitación a cuando menos tres personas': {color: '#ff4d4d'},
+            'Adjudicación Directa': {color: '#673AB7'}
 
         },
         legend: {
@@ -183,6 +189,7 @@ function drawSeriesChart() {
 
     var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
     chart.draw(data, options);
+    });
 }
 
 
@@ -247,8 +254,6 @@ function drawSeriesChart() {
  id : 'AO-009KDH999-E20-2016', s1 : 40, s2 :0
  }
  ];
-
-
 
  //SORT JQPLOT BAR CHART SERIES
  function sortbyserie(serie, data ) {
