@@ -18,7 +18,7 @@
         <td><%= contracts [i].title %></td>
         <td><%= contracts [i].datesigned %></td>
         <td><%= contracts [i].contractid %></td>
-        <td><%= contracts [i].value_amount %> <%= contracts [i].value_currency %></td>
+        <td><%= parseFloat(contracts [i].value_amount).toFixed(2) %> <%= contracts [i].value_currency %></td>
         <td> <a href="" class='btn btn-default'> <i class='fa fa-download'></i></a></td>
         <td> <a href="<%= "/contrataciones-abiertas/contrato/"+contracts[i].contractingprocess_id %>" data-id ="<%= contracts[i].contractingprocess_id %>" class='btn btn-default'> <i class='fa fa-line-chart'></i></a></td>
     </tr>

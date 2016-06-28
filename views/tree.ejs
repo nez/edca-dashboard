@@ -81,10 +81,10 @@
                     <hr style="border-color:#BDBDBD">
                     <p style="color:#424242"> <font size="2">Identificador: <b><%= contract.contractid%></b> </font></p>
                     <p style="color:#424242"> <font size="2">Fecha de firma: <b><%= contract.datesigned%></b> </font></p>
-                    <p style="color:#424242"> <font size="2">Monto: <b><%= contract.value_amount%></b></font></p>
-                    <p style="color:#424242"> <font size="2">Moneda: <b><%= contract.value_currency%></b></font></p>
-                    <p style="color:#424242"> <font size="2">Vigencia: <b>2016-03-07</b></font></p>
-                    <p style="color:#424242"> <font size="2">Tipo: <b><%= contract.procurementmethod %></b></font></p>
+                    <p style="color:#424242"> <font size="2">Monto: <b><%= parseFloat(contract.value_amount).toFixed(2)%></b></font></p>
+                    <p style="color:#424242"> <font size="2">Moneda: <label><%= contract.value_currency%></label></font></p>
+                    <p style="color:#424242"> <font size="2">Vigencia: <label><%= contract.period_startdate%> - <%= contract.period_enddate %></label></font></p>
+                    <p style="color:#424242"> <font size="2">Tipo: <label><%= contract.procurementmethod %></label></font></p>
                     <p>
                     <hr style="border-color:#BDBDBD">
                       <br>
