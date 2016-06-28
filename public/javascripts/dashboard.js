@@ -1,57 +1,67 @@
 // DONUT CHART
-$(document).ready(function(){
-    var data = [
-        ['Licitaciones', 14],['Invitaciones a tres', 6], ['Adjudicaciones directas:', 5]
-    ];
+$(document).ready(function () {
+     /*var data1 = [
+     ['Licitaciones', 14],['Invitaciones a tres', 6], ['Adjudicaciones directas:', 5]
+     ];*/
 
-    var plot4 = $.jqplot('chart4', [data], {
-        //title: 'TIPOS DE CONTRATACION',
-        seriesDefaults: {
-            // make this a donut chart.
-            renderer:$.jqplot.DonutRenderer,
-            rendererOptions:{
-                // Donut's can be cut into slices like pies.
-                sliceMargin: 3,
-                // Pies and donuts can start at any arbitrary angle.
-                startAngle: -90,
-                showDataLabels: true,
-                // By default, data labels show the percentage of the donut/pie.
-                // You can show the data 'value' or data 'label' instead.
-                //dataLabels: 'value',
-                // "totalLabel=true" uses the centre of the donut for the total amount
-                totalLabel: true,
-                shadow: false
-            },
-            seriesColors: ['#00cc99', '#ff4d4d', '#673AB7']
-        },
-        grid: {
-            drawBorder: false,
-            drawGridLines: true,        // wether to draw lines across the grid or not.
-            shadow: false,
-            backgroundColor: 'white'//'rgb(255, 255, 255)'
-        },
-        highlighter: {
-            show: true,
+    $.get('/contrataciones-abiertas/donut-chart-data', function (data) {
 
-            sizeAdjust: 1,
-            tooltipLocation: 'n',
-            tooltipAxes: 'yref',
-            useAxesFormatters: false,
+var newData = [];
 
-            //dataLabels: 'value',
-            //tooltipFormatString: '%s'
-            tooltipContentEditor: function(current, serie, index, plot ){
-                //return "<div class='col-sm-2'><p style='color: black'>"+plot.data[serie][index]+"</p></div>";
-                return "<div class='col-sm-2'><p style='color: black'><b>"+data[index][1]+" "+data[index][0]+"</b></p></div>";
-                //return "<p>Contrato: <br><b>"+ticks1[index] +"</b></p>"+
-                //      "<p>Avance "+(serie==0?'fisico':'financiero')+":<br> <b>"+ parseInt(plot.data[serie][index])+ "%</b></p>";
-            }
+        for (var i =0; i< data.length;i++){
+            newData.push ( [ data[i].procurementmethod , Number(data [i].count) ] );
+
         }
+
+        console.log (newData);
+
+        var plot4 = $.jqplot('chart4', [newData], {
+            //title: 'TIPOS DE CONTRATACION',
+            seriesDefaults: {
+                // make this a donut chart.
+                renderer: $.jqplot.DonutRenderer,
+                rendererOptions: {
+                    // Donut's can be cut into slices like pies.
+                    sliceMargin: 3,
+                    // Pies and donuts can start at any arbitrary angle.
+                    startAngle: -90,
+                    showDataLabels: true,
+                    // By default, data labels show the percentage of the donut/pie.
+                    // You can show the data 'value' or data 'label' instead.
+                    //dataLabels: 'value',
+                    // "totalLabel=true" uses the centre of the donut for the total amount
+                    totalLabel: true,
+                    shadow: false
+                },
+                seriesColors: ['#00cc99', '#ff4d4d', '#673AB7']
+            },
+            grid: {
+                drawBorder: false,
+                drawGridLines: true,        // wether to draw lines across the grid or not.
+                shadow: false,
+                backgroundColor: 'white'//'rgb(255, 255, 255)'
+            },
+            highlighter: {
+                show: true,
+
+                sizeAdjust: 1,
+                tooltipLocation: 'n',
+                tooltipAxes: 'yref',
+                useAxesFormatters: false,
+
+                //dataLabels: 'value',
+                //tooltipFormatString: '%s'
+                tooltipContentEditor: function (current, serie, index, plot) {
+                    //return "<div class='col-sm-2'><p style='color: black'><b>" + data[index][1] + " " + data[index][0] + "</b></p></div>";
+                    return "<div class='col-sm-2'><p style='color: black'><b>" +  newData[index][0] + ": "+newData[index][1]+"</b></p></div>";
+                }
+            }
+        });
     });
 
     // FIND CONTRACTS
-    function searchbykeyword ( keyword, table ){
-        $.post('/contrataciones-abiertas/find-contracts', { keyword: keyword }, function (contracts) {
+    function searchbykeyword(keyword, table) {
+        $.post('/contrataciones-abiertas/find-contracts', {keyword: keyword}, function (contracts) {
             table.html(contracts);
         });
     }
@@ -66,7 +76,7 @@ $(document).ready(function(){
 
 
 // BUBBLE CHART (GCHART)
-google.charts.load('current', {'packages':['corechart'], 'language':'es'});
+google.charts.load('current', {'packages': ['corechart'], 'language': 'es'});
 google.charts.setOnLoadCallback(drawSeriesChart);
 
 function drawSeriesChart() {
@@ -75,120 +85,121 @@ function drawSeriesChart() {
 
         var newData = [];
 
-        newData.push( ['ID','Fecha de firma','Vigencia (días naturales)','Tipo', 'Monto MXN']);
+        newData.push(['ID', 'Fecha de firma', 'Vigencia (días naturales)', 'Tipo', 'Monto MXN']);
 
-        for (i=0; i< data.length;i++){
-                newData.push([ data[i].title, new Date(data[i].datesigned), data[i].vigencia.days, data[i].procurementmethod, Number(data[i].value_amount ) ]  );
+        for (i = 0; i < data.length; i++) {
+            newData.push([data[i].title, new Date(data[i].datesigned), data[i].vigencia.days, data[i].procurementmethod, Number(data[i].value_amount)]);
         }
 
-/*
-    var data = google.visualization.arrayToDataTable([
-        ['ID',                      'Fecha de firma',                    'Vigencia (meses)', 'Tipo',             'Monto MXN'],
-        ['LO-009KDH999-N5-2014',     new Date('2015-01-02'),              6,      'Licitación',              39724276.56],
-        ['SO-009KDH999-N24-2015',    new Date('2015-02-19'),              1,      'Adjudicación directa',   521999.84],
-        ['SO-009KDH999-N23-2015',    new Date('2015-02-20'),               1,      'Adjudicación directa',   638000],
-        ['SO-009KDH999-N26-2015',    new Date('2015-02-19'),              1,      'Adjudicación directa',   539400],
-        ['IO-009KDH999-N11-2015',    new Date('2015-03-19'),              2,         'Invitación a 3',         9429941.46],
-        ['IO-009KDH999-N10-2015',    new Date('2015-03-20'),              6,       'Invitación a 3',         2501985.67],
-        ['LO-099KDH999-N20-2015',    new Date('2015-05-14'),              1,      'Licitación',             5844840.96],
-        ['LO-099KDH999-T15-2015',    new Date('2015-05-29'),              3,      'Licitación',             13514000],
-        ['LO-009KDH999-N46-2015',    new Date('2015-07-21'),              18,      'Licitación',            16684244.272],
-        ['LO-009KDH999-N42-2015',    new Date('2015-07-21'),              18,      'Licitación',             13832891.6792],
-        ['LO-009KDH999-N45-2015',    new Date('2015-07-21'),              18,      'Licitación',             21963669.4016],
-        ['IO-009KDH999-N41-2015',    new Date('2015-07-29'),              2,      'Invitación a 3',         38949488.17],
-        ['IO-009KDH999-N54-2015',    new Date('2015-08-28'),              3.5,      'Invitación a 3',         3812525.54],
-        ['LO-009KDH999-N47-2015',    new Date('2015-09-10'),              7,      'Licitación',             129973731.2],
-        ['LO-009KDH999-N50-2015',    new Date('2015-10-09'),              4,      'Licitación',             223329692.62],
-        ['LO-009KDH999-T52-2015',    new Date('2015-10-23'),              48,      'Licitación',             158629469.03],
-        ['LO-009KDH999-N79-2015',    new Date('2015-12-14'),              12,      'Licitación',             2044851759.9544],
-        ['LO-009KDH999-N80-2015',    new Date('2015-12-31'),              13,      'Licitación',             705599669.9],
-        ['LO-009KDH999-N78-2015',    new Date('2015-12-31'),              9,      'Licitación',             572943111],
-        ['LO-009KDH999-N86-2015',    new Date('2015-12-31'),              12,      'Licitación',             11276263.6272],
-        ['LO-009KDH999-N87-2015',    new Date('2015-12-31'),              12,      'Licitación',             13970275.444],
-        ['AO-009KDH999-E26-2016',    new Date('2016-01-14'),              6,      'Adjudicación directa',   4286458.44],
-        ['AO-009KDH999-E20-2016',    new Date('2016-01-21'),              6,      'Adjudicación directa',   8909803.13],
-        ['IO-009KDH999-E15-2016',    new Date('2016-03-10'),              3,      'Invitación a 3',         12715541.31],
-        ['IO-009KDH999-E96-2015',    new Date('2016-03-23'),              8,      'Invitación a 3',         91640000]
-    ]);
-    */
+        /*
+         var data = google.visualization.arrayToDataTable([
+         ['ID',                      'Fecha de firma',                    'Vigencia (meses)', 'Tipo',             'Monto MXN'],
+         ['LO-009KDH999-N5-2014',     new Date('2015-01-02'),              6,      'Licitación',              39724276.56],
+         ['SO-009KDH999-N24-2015',    new Date('2015-02-19'),              1,      'Adjudicación directa',   521999.84],
+         ['SO-009KDH999-N23-2015',    new Date('2015-02-20'),               1,      'Adjudicación directa',   638000],
+         ['SO-009KDH999-N26-2015',    new Date('2015-02-19'),              1,      'Adjudicación directa',   539400],
+         ['IO-009KDH999-N11-2015',    new Date('2015-03-19'),              2,         'Invitación a 3',         9429941.46],
+         ['IO-009KDH999-N10-2015',    new Date('2015-03-20'),              6,       'Invitación a 3',         2501985.67],
+         ['LO-099KDH999-N20-2015',    new Date('2015-05-14'),              1,      'Licitación',             5844840.96],
+         ['LO-099KDH999-T15-2015',    new Date('2015-05-29'),              3,      'Licitación',             13514000],
+         ['LO-009KDH999-N46-2015',    new Date('2015-07-21'),              18,      'Licitación',            16684244.272],
+         ['LO-009KDH999-N42-2015',    new Date('2015-07-21'),              18,      'Licitación',             13832891.6792],
+         ['LO-009KDH999-N45-2015',    new Date('2015-07-21'),              18,      'Licitación',             21963669.4016],
+         ['IO-009KDH999-N41-2015',    new Date('2015-07-29'),              2,      'Invitación a 3',         38949488.17],
+         ['IO-009KDH999-N54-2015',    new Date('2015-08-28'),              3.5,      'Invitación a 3',         3812525.54],
+         ['LO-009KDH999-N47-2015',    new Date('2015-09-10'),              7,      'Licitación',             129973731.2],
+         ['LO-009KDH999-N50-2015',    new Date('2015-10-09'),              4,      'Licitación',             223329692.62],
+         ['LO-009KDH999-T52-2015',    new Date('2015-10-23'),              48,      'Licitación',             158629469.03],
+         ['LO-009KDH999-N79-2015',    new Date('2015-12-14'),              12,      'Licitación',             2044851759.9544],
+         ['LO-009KDH999-N80-2015',    new Date('2015-12-31'),              13,      'Licitación',             705599669.9],
+         ['LO-009KDH999-N78-2015',    new Date('2015-12-31'),              9,      'Licitación',             572943111],
+         ['LO-009KDH999-N86-2015',    new Date('2015-12-31'),              12,      'Licitación',             11276263.6272],
+         ['LO-009KDH999-N87-2015',    new Date('2015-12-31'),              12,      'Licitación',             13970275.444],
+         ['AO-009KDH999-E26-2016',    new Date('2016-01-14'),              6,      'Adjudicación directa',   4286458.44],
+         ['AO-009KDH999-E20-2016',    new Date('2016-01-21'),              6,      'Adjudicación directa',   8909803.13],
+         ['IO-009KDH999-E15-2016',    new Date('2016-03-10'),              3,      'Invitación a 3',         12715541.31],
+         ['IO-009KDH999-E96-2015',    new Date('2016-03-23'),              8,      'Invitación a 3',         91640000]
+         ]);
+         */
 
-    var data = google.visualization.arrayToDataTable(newData);
+        var data = google.visualization.arrayToDataTable(newData);
 
-    var options = {
-        //'legend': 'left',
-        //title: 'Contrataciones en el tiempo',
-        chartArea:{
-            width: '75%',
-            heigth: '90%',
-            left: '75',
-            right: '10',
-            top: '30',
-            //bottom: '10'
-        },
-        backgroundColor: 'transparent',
-        tooltip: {isHtml: true},
-
-        hAxis: {
-            title: 'Fecha de firma',
-            textStyle: {
-                italic: false,
-                fontName: 'Open Sans',
-                fontSize: '11pt'
+        var options = {
+            //'legend': 'left',
+            //title: 'Contrataciones en el tiempo',
+            chartArea: {
+                width: '75%',
+                heigth: '90%',
+                left: '75',
+                right: '10',
+                top: '30',
+                //bottom: '10'
             },
-            titleTextStyle: {
-                italic: false,
-                fontName: 'Open Sans',
-                fontSize: '14pt'
+            backgroundColor: 'transparent',
+            tooltip: {isHtml: true},
+
+            hAxis: {
+                title: 'Fecha de firma',
+                textStyle: {
+                    italic: false,
+                    fontName: 'Open Sans',
+                    fontSize: '11pt'
+                },
+                titleTextStyle: {
+                    italic: false,
+                    fontName: 'Open Sans',
+                    fontSize: '14pt'
+                },
+                gridlines: {
+                    color: 'transparent'
+                }
+
             },
-            gridlines: {
-                color: 'transparent'
+            vAxis: {
+                title: 'Vigencia en días naturales',
+                textStyle: {
+                    italic: false,
+                    fontName: 'Open Sans',
+                    fontSize: '11pt'
+                },
+                titleTextStyle: {
+                    italic: false,
+                    fontName: 'Open Sans',
+                    fontSize: '14pt'
+                }
+                /*gridlines: {
+                 color: 'transparent'
+                 }*/
+            },
+            bubble: {
+                stroke: 'none',
+                textStyle: {
+                    //no text
+                    color: 'none',
+                    fontSize: 11,
+                    auraColor: 'none'
+                }
+            },
+            series: {
+
+                'Licitación Pública': {
+                    color: '#00cc99',
+                    //fontName: 'Open Sans'
+                },
+                'Invitación a cuando menos tres personas': {color: '#ff4d4d'},
+                'Adjudicación Directa': {color: '#673AB7'}
+
+            },
+            legend: {
+                position: 'bottom',
+                textStyle: {
+                    fontName: 'Open Sans'
+                }
             }
+        };
 
-        },
-        vAxis: {
-            title: 'Vigencia en días naturales',
-            textStyle: {
-                italic: false,
-                fontName: 'Open Sans',
-                fontSize: '11pt'
-            },
-            titleTextStyle: {
-                italic: false,
-                fontName: 'Open Sans',
-                fontSize: '14pt'
-            }
-            /*gridlines: {
-             color: 'transparent'
-             }*/
-        },
-        bubble: {
-            stroke: 'none',
-            textStyle: {
-                //no text
-                color: 'none',
-                fontSize: 11,
-                auraColor: 'none'
-            }},
-        series: {
-
-            'Licitación Pública': {
-                color: '#00cc99',
-                //fontName: 'Open Sans'
-            },
-            'Invitación a cuando menos tres personas': {color: '#ff4d4d'},
-            'Adjudicación Directa': {color: '#673AB7'}
-
-        },
-        legend: {
-            position: 'bottom',
-            textStyle : {
-                fontName: 'Open Sans'
-            }
-        }
-    };
-
-    var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
-    chart.draw(data, options);
+        var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+        chart.draw(data, options);
     });
 }
 

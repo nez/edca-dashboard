@@ -19,7 +19,6 @@ router.get('/contratos/',function (req, res) {
         var q3 = this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;');
         var q4 = this.one('select count (*) as total from contractingprocess');
         var q5 = this.one('select sum(value_amount) as total from contract');
-        //datos de la donita
 
         return this.batch([q1,q2, q3, q4, q5]);
     }).then(function (data) {
@@ -109,6 +108,14 @@ router.get('/bubble-chart-data', function (req, res) {
         res.send(error);
         console.log("ERROR: ",error)
     });
+});
+
+router.get('/donut-chart-data', function (req, res) {
+   edca_db.many('select procurementmethod, count(*) from tender group by procurementmethod;').then(function (data) {
+       res.json (data);
+   }).catch(function (error) {
+       console.log("ERROR: ", error)
+   }); 
 });
 
 
