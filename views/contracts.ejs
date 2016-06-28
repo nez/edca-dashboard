@@ -1,4 +1,4 @@
-
+<!--
 <table class="table table-striped">
     <thead>
     <tr>
@@ -12,16 +12,62 @@
     </tr>
     </thead>
     <tbody>
-    <% for (var i = 0; i < contracts.length;i++){%>
+    <% for (var i = 0; i < contracts.length;i++){ %>
     <tr>
-        <td><%= i+1 %></td>
+        <td><%= i + 1 %></td>
         <td><%= contracts [i].title %></td>
         <td><%= contracts [i].datesigned %></td>
         <td><%= contracts [i].contractid %></td>
         <td><%= parseFloat(contracts [i].value_amount).toFixed(2) %> <%= contracts [i].value_currency %></td>
         <td> <a href="" class='btn btn-default'> <i class='fa fa-download'></i></a></td>
-        <td> <a href="<%= "/contrataciones-abiertas/contrato/"+contracts[i].contractingprocess_id %>" data-id ="<%= contracts[i].contractingprocess_id %>" class='btn btn-default'> <i class='fa fa-line-chart'></i></a></td>
+        <td> <a href="<%= "/contrataciones-abiertas/contrato/" + contracts[i].contractingprocess_id %>" data-id ="<%= contracts[i].contractingprocess_id %>" class='btn btn-default'> <i class='fa fa-line-chart'></i></a></td>
     </tr>
-    <%}%>
+    <% } %>
     </tbody>
 </table>
+
+-->
+
+
+<% for (var i = 0; i < contracts.length;i++){ %>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title"> <%= contracts [i].contractid %> </div>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-11">
+                <h4><strong><%= contracts [i].title %> </strong></h4>
+                <p>Fecha de firma: <strong><%= contracts [i].datesigned %> </strong></p>
+                <p>
+                    Monto:
+                    <strong><%= parseFloat(contracts [i].value_amount).toFixed(2) %> <%= contracts [i].value_currency %> </strong>
+                </p>
+                <p><strong>Proveedor(es)</strong></p>
+
+                <div class="list-group">
+
+                <%
+                for (var j = 0; j < suppliers.length ;j++){
+                if (suppliers[j].contractingprocess_id == contracts[i].contractingprocess_id ){
+                %>
+                    <a href="<%= "/contrataciones-abiertas/proveedor/" +suppliers[j].id%>" class="list-group-item">
+                        <h4 class="list-group-item-heading"><%= suppliers[j].identifier_id %></h4>
+                        <p class="list-group-item-text"> <%= suppliers[j].identifier_legalname %></p>
+                        <p class="list-group-item-text"> <%= suppliers[j].identifier_uri %></p>
+                    </a>
+                <% }
+                } %>
+                </div>
+            </div>
+            <div class="col-sm-1" style="text-align: center">
+                <p><a href="" class='btn btn-default'> <i class='fa fa-download'></i></a></p>
+                <p><a href="<%= "/contrataciones-abiertas/contrato/" + contracts[i].contractingprocess_id %>"
+                      data-id="<%= contracts[i].contractingprocess_id %>" class='btn btn-default'> <i
+                                class='fa fa-line-chart'></i></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% } %>

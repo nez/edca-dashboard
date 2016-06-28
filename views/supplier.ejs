@@ -15,13 +15,23 @@
 
 <body>
 <dgm-navbar></dgm-navbar>
+<br>
 <div class="container">
     <% if ( typeof supplier != 'undefined') { %>
 
-    <section>
-        <b>Razón social: <%= supplier.name %></b>
-        <b>RFC: <%= supplier.name %></b>
-    </section>
+    <div class="panel panel-default">
+        <div class="panel-body">
+        <p>Razón social: <%= supplier.name %></p>
+        <p>RFC: <%= supplier.name %></p>
+        <p>Página web: <%= supplier.identifier_uri %></p>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+        Otros contratos ...
+        </div>
+    </div>
 
     <% } else{%>
     <div class="alert alert-danger" role="alert">
