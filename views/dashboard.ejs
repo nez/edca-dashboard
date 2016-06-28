@@ -95,13 +95,13 @@
                         <!--<div class="col-sm-12" style=" background: white;">-->
                         <div class="col-sm-4">
                             <h3 style="color: #00cc99"><b>NAICM</b></h3>
-                            <h2 style="color: #673AB7"><b>25</b>
+                            <h2 style="color: #673AB7"><b><%= metadata.contract_count %></b>
                                 <small>contratos</small>
                             </h2>
-                            <h2 style="color: #673AB7"><b>28</b>
+                            <h2 style="color: #673AB7"><b><%= metadata.supplier_count %></b>
                                 <small>contratistas</small>
                             </h2>
-                            <h2 style="color: #673AB7"><b>4,146</b>
+                            <h2 style="color: #673AB7"><b><%=parseInt(metadata.contract_value_amount_total/ 1000000) %></b>
                                 <small>millones de pesos</small>
                             </h2>
 
