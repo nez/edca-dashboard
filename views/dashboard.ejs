@@ -11,8 +11,6 @@
     <link rel="import" href="/dgm-navbar/dgm-navbar.html">
     <link rel="import" href="/dgm-footer/dgm-footer.html">
 
-    <title><%= title %></title>
-
     <style>
         .pill-container{
             margin-top:20px;
@@ -21,7 +19,6 @@
         .all-container{
             max-width: 1070px;
         }
-
 
         .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
             color:#FFFFFF;
@@ -32,8 +29,9 @@
         .nav-pills > li > a, .nav-pills > li > a:hover, .nav-pills > li > a:focus {
             color:#4d4d4d;
         }
-
     </style>
+
+    <title><%= title %></title>
 
 </head>
 <body style="background: #eee">
@@ -151,53 +149,6 @@
             </div>
         </div>
     </div>
-    <!--
-    <div class="row">
-        <div class="col-sm-12" style=" background: white;">
-            <div class="col-sm-4">
-                <h3 style="color: #00cc99"><b>NAICM</b></h3>
-                <h2 style="color: #673AB7"><b>25</b> <small>contratos</small></h2>
-                <h2 style="color: #673AB7"><b>28</b> <small>contratistas</small></h2>
-                <h2 style="color: #673AB7"><b>4,146</b> <small>millones de pesos</small></h2>
-
-            </div>
-            <div class="col-sm-8" style="overflow: auto;">
-                <h3 style="text-align: left; color: #00cc99"><b>Avance físico y financiero por contrato</b></h3>
-                <div id="chart2" style="max-width:700px; height: 350px;"></div>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Ordenar por <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" data-serie = 's1' id="sort1">Avance físico</a></li>
-                        <li><a href="#" data-serie = 's2' id="sort2">Avance financiero</a></li>
-                    </ul>
-                </div>
-                <br>
-                <br>
-            </div>
-        </div>
-    </div>
-
-    <br>
-
-    <div class="row">
-        <div class="col-sm-12" style="background: white">
-            <div class="col-sm-4">
-                <h3 style="text-align: left; color: #00cc99"><b>Tipos de contratación</b></h3>
-                <div  style="color: white; height: 270px; width: 260px;" id="chart4"></div>
-            </div>
-            <div class="col-sm-8">
-                <h3 style="text-align: left; color: #00cc99"><b>Contrataciones en el tiempo</b></h3>
-
-                <div  style="height: 400px; width: 700px; align-content: left;" id="series_chart_div" ></div>
-
-                <br>
-            </div>
-        </div>
-    </div>
--->
-    <!-- <br> -->
 
     <div class="row">
         <div class="col-sm-4">
@@ -225,7 +176,7 @@
 <script src="/bower_components/jqplot/jquery.jqplot.js"></script>
 <script src="/bower_components/jqplot/plugins/jqplot.donutRenderer.js"></script>
 
-<script src="/bower_components/jqplot/plugins/jqplot.barRenderer.js"></script>
+<!--<script src="/bower_components/jqplot/plugins/jqplot.barRenderer.js"></script>-->
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js"></script>
 <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
@@ -240,161 +191,6 @@
 <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="/javascripts/dashboard.js"></script>
-
-
-<script>
-    var margin = {top: 40, right: 20, bottom: 40, left: 70},
-            width = 730 - margin.left - margin.right,
-            height = 350 - margin.top - margin.bottom;
-
-    var x0 = d3.scale.ordinal()
-            .rangeRoundBands([0, width], .1);
-
-    var x1 = d3.scale.ordinal();
-
-    var y = d3.scale.linear()
-            .range([height, 0]);
-
-    var color = d3.scale.ordinal()
-            .range(['#00cc99', '#673AB7']);//, "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
-
-    var xAxis = d3.svg.axis()
-            .scale(x0)
-            .orient("bottom")
-            .tickValues({})
-            .tickSize(0);
-
-
-    var yAxis = d3.svg.axis()
-            .scale(y)
-            .orient("left")
-            .tickFormat(d3.format(".0%"));
-    //.tickFormat(d3.format(".2s"));
-
-    var tip = d3.tip()
-            .attr('class', 'd3-tip')
-            .offset([-10, 0])
-            .html(function (d) {
-                return "<p>Contrato</p><p><b>" + d.product + "</b></p><p>" + d.name + "</p> <strong>" + d3.format(".0%")(d.value) + "</strong>";
-            })
-
-    var svg = d3.select("#d3bar").append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    svg.call(tip);
-
-    d3.csv("/data.csv", function (error, data) {
-        if (error) throw error;
-
-        var ageNames = d3.keys(data[0]).filter(function (key) {
-            return key !== "Producto";
-        });
-        //console.log(ageNames);
-
-        data.sort();
-        data.forEach(function (d) {
-            d.ages = ageNames.map(function (name) {
-                return {name: name, value: +d[name], product: d['Producto']};
-            });
-        });
-
-        x0.domain(data.map(function (d) {
-            return d.Producto;
-        }));
-        x1.domain(ageNames).rangeRoundBands([0, x0.rangeBand()]);
-        y.domain([0, 1]);//d3.max(data, function(d) { return d3.max(d.ages, function(d) { return d.value; }); })]);
-
-        svg.append("g")
-                .attr("class", "x axis")
-                .attr("transform", "translate(0," + height + ")")
-                .call(xAxis)
-                .append("text")
-                .style("text-anchor", "middle")
-                .attr("y", 30)
-                .attr("x", width / 2)
-                .text("Contratos");
-
-        svg.append("g")
-                .attr("class", "y axis")
-                .call(yAxis)
-                .append("text")
-                .attr("transform", "rotate(-90)")
-                .attr("y", 0 - margin.left)
-                .attr("x", 0 - (height / 2))
-                .attr("dy", "1em")
-                .style("text-anchor", "middle")
-                .text("Avance");
-
-        var producto = svg.selectAll(".producto")
-                .data(data)
-                .enter().append("g")
-                .attr("class", "producto")
-                .attr("transform", function (d) {
-                    return "translate(" + x0(d.Producto) + ",0)";
-                });
-
-        producto.selectAll("rect")
-                .data(function (d) {
-                    return d.ages;
-                })
-                .enter().append("rect")
-                .attr("width", x1.rangeBand())
-                .attr("x", function (d) {
-                    return x1(d.name);
-                })
-                .attr("y", function (d) {
-                    return y(d.value);
-                })
-                .attr("height", function (d) {
-                    return height - y(d.value);
-                })
-                .style("fill", function (d) {
-                    return color(d.name);
-                })
-                .text(function (d) {
-                    return d.Producto;
-                })
-                .on('mouseover', tip.show)
-                .on('mouseout', tip.hide);
-
-
-        svg.append("text")
-                .attr("x", (width / 2))
-                .attr("y", 0 - (margin.top / 2))
-                .attr("text-anchor", "middle")
-                .style("font-size", "16px")
-                //.style("text-decoration", "underline")
-                .text("Avances al 10 de julio de 2016");
-
-        var legend = svg.selectAll(".legend")
-                .data(ageNames.slice().reverse())
-                .enter().append("g")
-                .attr("class", "legend")
-                //.attr("transform","translate(50,30)")
-                .attr("transform", function (d, i) {
-                    return "translate(0," + i * 20 + ")";
-                });
-
-        legend.append("rect")
-                .attr("x", width - 18)
-                .attr("width", 18)
-                .attr("height", 18)
-                .style("fill", color);
-
-        legend.append("text")
-                .attr("x", width - 24)
-                .attr("y", 9)
-                .attr("dy", ".35em")
-                .style("text-anchor", "end")
-                .text(function (d) {
-                    return d;
-                });
-
-    });
-</script>
 
 </body>
 </html>
