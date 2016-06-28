@@ -1,19 +1,16 @@
 // DONUT CHART
 $(document).ready(function () {
-     /*var data1 = [
+    /*var data1 = [
      ['Licitaciones', 14],['Invitaciones a tres', 6], ['Adjudicaciones directas:', 5]
      ];*/
 
     $.get('/contrataciones-abiertas/donut-chart-data', function (data) {
 
-var newData = [];
+        var newData = [];
 
-        for (var i =0; i< data.length;i++){
-            newData.push ( [ data[i].procurementmethod , Number(data [i].count) ] );
-
+        for (var i = 0; i < data.length; i++) {
+            newData.push([data[i].procurementmethod, Number(data [i].count)]);
         }
-
-        console.log (newData);
 
         var plot4 = $.jqplot('chart4', [newData], {
             //title: 'TIPOS DE CONTRATACION',
@@ -53,7 +50,7 @@ var newData = [];
                 //tooltipFormatString: '%s'
                 tooltipContentEditor: function (current, serie, index, plot) {
                     //return "<div class='col-sm-2'><p style='color: black'><b>" + data[index][1] + " " + data[index][0] + "</b></p></div>";
-                    return "<div class='col-sm-2'><p style='color: black'><b>" +  newData[index][0] + ": "+newData[index][1]+"</b></p></div>";
+                    return "<div class='col-sm-2'><p style='color: black'><b>" + newData[index][0] + ": " + newData[index][1] + "</b></p></div>";
                 }
             }
         });
@@ -83,9 +80,7 @@ function drawSeriesChart() {
 
     $.get('/contrataciones-abiertas/bubble-chart-data', function (data) {
 
-        var newData = [];
-
-        newData.push(['ID', 'Fecha de firma', 'Vigencia (días naturales)', 'Tipo', 'Monto MXN']);
+        var newData =[ ['ID', 'Fecha de firma', 'Vigencia (días naturales)', 'Tipo', 'Monto MXN'] ];
 
         for (i = 0; i < data.length; i++) {
             newData.push([data[i].title, new Date(data[i].datesigned), data[i].vigencia.days, data[i].procurementmethod, Number(data[i].value_amount)]);
@@ -122,7 +117,6 @@ function drawSeriesChart() {
          ]);
          */
 
-        var data = google.visualization.arrayToDataTable(newData);
 
         var options = {
             //'legend': 'left',
@@ -199,7 +193,8 @@ function drawSeriesChart() {
         };
 
         var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
-        chart.draw(data, options);
+        //chart.draw( data  , options);
+        chart.draw( google.visualization.arrayToDataTable(newData) , options);
     });
 }
 
