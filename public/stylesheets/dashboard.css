@@ -73,3 +73,21 @@ div.google-visualization-tooltip {
     top: 100%;
     left: 0;
 }
+
+.pill-container{
+    margin-top:20px;
+}
+
+.all-container{
+    max-width: 1070px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color:#FFFFFF;
+    font-weight: bold;
+    background-color:#00cc99;
+}
+
+.nav-pills > li > a, .nav-pills > li > a:hover, .nav-pills > li > a:focus {
+    color:#4d4d4d;
+}
