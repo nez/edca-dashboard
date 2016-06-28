@@ -78,7 +78,8 @@ router.post ('/find-contracts/', function (req, res ) {
 });
 
 router.get('/bubble-chart-data', function (req, res) {
-    edca_db.manyOrNone('select contract.title, contract.datesigned, (contract.period_enddate - contract.period_startdate) as vigencia, tender.procurementmethod, contract.value_amount from tender,contract where tender.contractingprocess_id = contract.contractingprocess_id  ').then(function (data) {
+    edca_db.manyOrNone('select contract.title, contract.datesigned, (contract.period_enddate - contract.period_startdate) as vigencia,' +
+        ' tender.procurementmethod, contract.value_amount from tender,contract where tender.contractingprocess_id = contract.contractingprocess_id  ').then(function (data) {
         res.send(data);
     }).catch(function (error) {
         res.send(error);

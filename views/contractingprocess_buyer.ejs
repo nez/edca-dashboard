@@ -20,12 +20,28 @@
 
 
 <div class="container">
+    <br>
 
     <% if (typeof buyer != 'undefined'){%>
 
-<p> <%= buyer.name %></p>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-title"><%= buyer.name%></div>
+        </div>
+        <div class="panel-body">
+            <p>Nombre legal: <label> <%= buyer.identifier_legalname%></label></p>
+            <p>
+            URL: <label>
+            <%= buyer.identifier_uri %></label>
+            </p>
+            <p> Dirección: <label><%= buyer.identifier_streetaddress %></label></p>
+            <p>Estado:<label> <%= buyer.identifier_region%></label></p>
+            <p>Código postal: <label><%= buyer.identifier_postalcode %></label></p>
+        </div>
 
 
+
+    </div>
     <%}else {%>
     <div class="alert alert-danger" role="alert">
         Contrato no encontrado
