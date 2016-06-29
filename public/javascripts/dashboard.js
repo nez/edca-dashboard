@@ -273,7 +273,7 @@ d3.csv("/data.csv", function (error, data) {
             .ticks(5)
     }
 
-  /*  svg.append("g")
+    /*  svg.append("g")
         .attr("class", "grid")
         .attr("transform", "translate(0," + height + ")")
         .call(make_x_axis()
@@ -353,7 +353,4 @@ d3.csv("/data.csv", function (error, data) {
         .text(function (d) {
             return d;
         });
-
-
-
 });
