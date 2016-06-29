@@ -1,52 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
-    <style>
-        html{
-            font: 10px sans-serif;
-        }
-        .node{
-            cursor: pointer;
-        }
-        .node circle{
-            stroke: #00cc99;
-            opacity: .8;
-            stroke-width: 1.5px;
-        }
-        .link{
-            fill: none;
-            stroke: lightgray;
-            stroke-width: 5.5px;
-            opacity:.4;
-        }
-        div.tooltip {
-            position: absolute;
-            text-align: center;
-            width: 60px;
-            height: 28px;
-            padding: 2px;
-            font: 12px sans-serif;
-            background: #424242;
-            color: white;
-            border: 0px;
-            border-radius: 8px;
-            pointer-events: none;
-        }
-
-        text {
-            font: 11px sans-serif;
-            color: #424242 !important;
-            pointer-events: none;
-            font-weight: bold;
-            text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
-        }
-
-    </style>
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel='stylesheet' href='/stylesheets/main.css'/>
+    <link rel='stylesheet' href='/stylesheets/contrato.css'/>
     <link rel="import" href="/dgm-navbar/dgm-navbar.html">
     <link rel="import" href="/dgm-footer/dgm-footer.html">
 
@@ -77,7 +37,7 @@
             <div class="row">
                 <div class='col-xs-12' id="datosContract">
                     <h1 style="color:#424242"><b style="color:#00cc99"> <%= contract.title %></b></h1>
-                    <hr style="border-color:#BDBDBD">
+                    <!--<hr style="border-color:#BDBDBD">
                     <p style="color:#424242"> <font size="2">Identificador: <b><%= contract.contractid%></b> </font></p>
                     <p style="color:#424242"> <font size="2">Fecha de firma: <b><%= contract.datesigned%></b> </font></p>
                     <p style="color:#424242"> <font size="2">Monto: <b><%= parseFloat(contract.value_amount).toFixed(2)%></b></font></p>
@@ -86,13 +46,11 @@
                     <p style="color:#424242"> <font size="2">Tipo: <label><%= contract.procurementmethod %></label></font></p>
                     <p>
                     <hr style="border-color:#BDBDBD">
-                      <br>
-                        <a  class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/entidad-compradora/" %>"><b>Detalles del comprador</b></a>
-                        <a  class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/proveedores/" %>"><b>Proveedor (es)</b></a>
-
+                    <br>
+                    <a  class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/entidad-compradora/" %>"><b>Detalles del comprador</b></a>
+                    <a  class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/proveedores/" %>"><b>Proveedor (es)</b></a>
                     <button class="btn btn-default" > <i class="fa fa-download"></i> </button>
-                    </p>
-                    <button type="button" class="btn btn-primary" style="width:150px;height:40px;position:absolute;bottom:10px;right:10px;background-color:#00cc99;align:top;border-radius:25px;outline:none;" id="refresh"><b>Árbol completo</b></button>
+                    <button type="button" class="btn btn-primary" style="width:150px;height:40px;position:absolute;bottom:10px;right:10px;background-color:#00cc99;align:top;border-radius:25px;outline:none;" id="refresh"><b>Árbol completo</b></button>-->
                 </div>
             </div>
         </div>
@@ -100,7 +58,27 @@
 </section>
 <br>
 
+
+
+
 <div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>Identificador: <b><%= contract.contractid%></b> </p>
+            <p>Fecha de firma: <b><%= contract.datesigned%></b></p>
+            <p>Monto: <b><%= parseFloat(contract.value_amount).toFixed(2)%></b></p>
+            <p>Moneda: <b><%= contract.value_currency%></b></p>
+            <p>Vigencia: <b><%= contract.period_startdate%> - <%= contract.period_enddate %></b></p>
+            <p>Tipo: <b><%= contract.procurementmethod %></b></p>
+            <p>
+                <a  class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/entidad-compradora/" %>"><b>Detalles del comprador</b></a>
+                <a  class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/proveedores/" %>"><b>Proveedor (es)</b></a>
+                <button class="btn btn-default" > <i class="fa fa-download"></i> </button>
+                <button class="btn btn-default" id="refresh"><b>Árbol completo</b></button>
+            </p>
+        </div>
+    </div>
+
     <div class="row">
         <div class='col-md-12' id="bolitas" style="background:#e0e0e0">
             <div style="position:absolute;bottom:40px;right:1025px"><p><b>Planeación</b></p></div>
@@ -113,31 +91,32 @@
     </div>
     <br>
     <div class="row">
-      <div class='col-md-12' id="add_data" style="display:none;background-color:#e0e0e0">
-        <div class='col-md-4' id="etapa_data" style="background-color:#e0e0e0">
-          <p>Etapa</p>
-          <p id="etapa"></p>
+        <div class='col-md-12' id="add_data" style="display:none;background-color:#e0e0e0">
+            <div class='col-md-4' id="etapa_data" style="background-color:#e0e0e0">
+                <p>Etapa</p>
+                <p id="etapa"></p>
+            </div>
+            <div class='col-md-4' id="id_etapa_data" style="background-color:#e0e0e0">
+                <p>ID</p>
+                <p><b>IO-1234233-32</b></p>
+            </div>
+            <div class='col-md-4' id="avance_etapa_data" style="background-color:#e0e0e0">
+                <p>Avance</p>
+                <p><b>5%</b></p>
+            </div>
+            <br>
+            <br>
+            <hr style="border-color:#BDBDBD">
+            <div class='col-md-12' id="etapa_desglo" style="background-color:#e0e0e0">
+            </div>
+            <br>
+            <hr style="border-color:#BDBDBD">
         </div>
-        <div class='col-md-4' id="id_etapa_data" style="background-color:#e0e0e0">
-          <p>ID</p>
-          <p><b>IO-1234233-32</b></p>
-        </div>
-        <div class='col-md-4' id="avance_etapa_data" style="background-color:#e0e0e0">
-          <p>Avance</p>
-          <p><b>5%</b></p>
-        </div>
-        <br>
-        <br>
-        <hr style="border-color:#BDBDBD">
-        <div class='col-md-12' id="etapa_desglo" style="background-color:#e0e0e0">
-        </div>
-        <br>
-        <hr style="border-color:#BDBDBD">
-      </div>
     </div>
     <br>
     <div id="arbol"></div>
 </div>
+
 <% } else { %>
 
 <div class="container">

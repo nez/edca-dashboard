@@ -118,10 +118,9 @@ router.get('/donut-chart-data', function (req, res) {
    }); 
 });
 
+router.get('/tree-chart-data/:stage', function (req, res) {
 
-/* GET home page. */
-router.get('/luis', function(req, res, next) {
-    res.render('index1', { title: 'Estandar de Datos de Contrataciones Abiertas' });
+    /* case ...*/
 });
 
 /*

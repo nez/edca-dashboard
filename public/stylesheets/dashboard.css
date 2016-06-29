@@ -2,10 +2,13 @@
 div.google-visualization-tooltip > ul > li > span {
     /*color: #f6f6f6 !important;*/
     font-size: 8pt !important;
+    line-height: 1.2em;
     font-family: "Open Sans" !important;
 }
 div.google-visualization-tooltip {
     background: #f6f6f6;
+    font-size: 8pt !important;
+    line-height: 1.2em;
     border: white !important;
     width: 250px;
 }
@@ -47,6 +50,7 @@ div.google-visualization-tooltip {
     /*font-weight: bold;*/
     font-family: "Open Sans";
     font-size: 11px;
+    font-color: black !important;
     padding: 12px;
     background: #f6f6f6;
     color: black;
@@ -56,8 +60,6 @@ div.google-visualization-tooltip {
 /* Creates a small triangle extender for the tooltip */
 .d3-tip:after {
     box-sizing: border-box;
-    display: inline;
-    font-size: 9px;
     width: 100%;
     line-height: 1;
     color: #f6f6f6;

@@ -198,8 +198,8 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function (d) {
-        return "<p>Contrato</p><p><b>" + d.product + "</b></p><p>" + d.name + "</p> <strong>" + d3.format(".0%")(d.value) + "</strong>";
-    })
+        return "<p>Contrato</p><strong>" + d.product + "</strong><br><br><p>" + d.name + "</p> <strong>" + d3.format(".0%")(d.value) + "</strong>";
+    });
 
 var svg = d3.select("#d3bar").append("svg")
     .attr("width", width + margin.left + margin.right)
