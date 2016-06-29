@@ -166,6 +166,7 @@ function drawSeriesChart() {
 // BAR CHART
 
 
+
 var margin = {top: 40, right: 20, bottom: 40, left: 70},
     width = 730 - margin.left - margin.right,
     height = 350 - margin.top - margin.bottom;
@@ -209,15 +210,21 @@ var svg = d3.select("#d3bar").append("svg")
 
 svg.call(tip);
 
+
+
+
 d3.csv("/data.csv", function (error, data) {
     if (error) throw error;
 
     var ageNames = d3.keys(data[0]).filter(function (key) {
         return key !== "Producto";
     });
-    //console.log(ageNames);
 
-    data.sort();
+    // SORT!!!
+    data.sort(function(a, b) {
+        return d3['descending'](a['Avance físico'], b['Avance físico']);
+    });
+
     data.forEach(function (d) {
         d.ages = ageNames.map(function (name) {
             return {name: name, value: +d[name], product: d['Producto']};
@@ -251,6 +258,36 @@ d3.csv("/data.csv", function (error, data) {
         .style("text-anchor", "middle")
         .text("Avance");
 
+    /* grid */
+    function make_x_axis() {
+        return d3.svg.axis()
+            .scale(x0)
+            .orient("bottom")
+            .ticks(5)
+    }
+
+    function make_y_axis() {
+        return d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .ticks(5)
+    }
+
+  /*  svg.append("g")
+        .attr("class", "grid")
+        .attr("transform", "translate(0," + height + ")")
+        .call(make_x_axis()
+            .tickSize(-height, 0, 0)
+            .tickFormat("")
+        );
+*/
+    svg.append("g")
+        .attr("class", "grid")
+        .call(make_y_axis()
+            .tickSize(-width, 0, 0)
+            .tickFormat("")
+        );
+    /* end grid code */
     var producto = svg.selectAll(".producto")
         .data(data)
         .enter().append("g")
@@ -258,6 +295,7 @@ d3.csv("/data.csv", function (error, data) {
         .attr("transform", function (d) {
             return "translate(" + x0(d.Producto) + ",0)";
         });
+
 
     producto.selectAll("rect")
         .data(function (d) {
@@ -315,5 +353,7 @@ d3.csv("/data.csv", function (error, data) {
         .text(function (d) {
             return d;
         });
+
+
 
 });

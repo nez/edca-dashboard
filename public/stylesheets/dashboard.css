@@ -76,6 +76,14 @@ div.google-visualization-tooltip {
     left: 0;
 }
 
+.grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+.grid path {
+    stroke-width: 0;
+}
+
 .pill-container{
     margin-top:20px;
 }
