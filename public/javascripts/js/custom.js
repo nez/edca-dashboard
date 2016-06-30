@@ -38,7 +38,11 @@ var initialise_form = function (selectionOptions) {
     var groupSelect = $('#group-everything-by');
     for (var opt in selectionOptions) {
         var lookup = selectionOptions[opt];
-        groupSelect.append('<option value="' + lookup.key + '">' + lookup.title + '</option>');
+
+        if ( lookup.title != 'Proveedor'  && lookup.title != 'ID de contrato') {
+            console.log(lookup.title);
+            groupSelect.append('<option value="' + lookup.key + '">' + lookup.title + '</option>');
+        }
     }
     var ResetGrouping = function () {
         var groupBy = groupSelect.val();
@@ -106,8 +110,7 @@ function render_filters_colors_and_groups(csv) {
         var lookup = keyToLookup(key);
 
         
-        
-        
+
         
         
         // SELECCIONA LOS CAMPOS A FILTRAR
