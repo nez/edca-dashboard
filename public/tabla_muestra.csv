@@ -1,0 +1,68 @@
+Proveedor,Razón social,ID de contrato,Producto o servicio,Tipo de contratación,Vigencia,Monto
+Agregación/Distribución,Torres,Altura de backhaul,DGCI,Infraestructura Pasiva,Semestral,1
+Radiodifusión AM,Sala de Transmisión,"Código identificador, Capacidad Disponible de Aire Acondicionado, Capacidad Total de Aire Acondicionado","DGCI, UCE",Infraestructura Pasiva,Anual,3
+Radiodifusión AM,Sistema de tierra,"Código identificador, Tipo, Espacio de Instalación del sistema de tierra",DGCI,Infraestructura Pasiva,Anual,3
+Radiodifusión AM,Sitio de Transmisión,"Código identificador, Altura sobre el nivel del mar, Capacidad disponible de Subestación Eléctrica, Capacidad disponible en Planta de Emergencia, Capacidad total de Subestación Eléctrica, Capacidad total en Planta de Emergencia, Espacio disponible, Fuente de Poder Ininterrumpible (UPS), Tipo de Instalación del sistema de tierra","DGCI, UCE",Infraestructura Pasiva,Anual,9
+Radiodifusión AM,Torres,"Código identificador, Altura de centros de radiación, Espacio disponible en torre, Uso de la torre",DGCI,Infraestructura Pasiva,Semestral,4
+Radiodifusión FM,Antena FM,"Código identificador, Apertura, Distribución, Montaje, Tipo",DGCI,Infraestructura Activa,Semestral,5
+Radiodifusión FM,Sala de Transmisión,"Código identificador, Capacidad Disponible de Aire Acondicionado, Capacidad Total de Aire Acondicionado, Espacio disponible, Espacio Total","DGCI, UCE",Infraestructura Pasiva,Anual,5
+Radiodifusión FM,Sitio de Transmisión,"Código identificador, Altura sobre el nivel del mar, Capacidad disponible de Subestación Eléctrica, Capacidad disponible en Planta de Emergencia, Capacidad total de Subestación Eléctrica, Capacidad total en Planta de Emergencia, Fuente de Poder Ininterrumpible (UPS), Modalidad de Operación, Superficie disponible del Terreno, Superficie ocupada del Terreno, Superficie total del Terreno","DGCI, UCE",Infraestructura Pasiva,Anual,11
+Radiodifusión FM,Torres,"Código identificador, Altura de centros de radiación, Carga Máxima, Espacio disponible, Sección, Tipo de Torre, Uso de la torre, Viento máximo admisible",DGCI,Infraestructura Pasiva,Semestral,8
+Radiodifusión TV,Antena TV,"Código identificador, Apertura, Distribución, Montaje, Tipo",DGCI,Infraestructura Activa,Semestral,5
+Radiodifusión TV,Sala de Transmisión,"Código identificador, Capacidad Disponible de Aire Acondicionado, Capacidad Total de Aire Acondicionado, Espacio disponible, Espacio Total","DGCI, UCE",Infraestructura Pasiva,Anual,5
+Radiodifusión TV,Sitio de Transmisión,"Código identificador, Altura sobre el nivel del mar, Capacidad disponible de Subestación Eléctrica, Capacidad disponible en Planta de Emergencia, Capacidad total de Subestación Eléctrica, Capacidad total en Planta de Emergencia, Fuente de Poder Ininterrumpible (UPS), Modalidad de Operación, Superficie disponible del Terreno, Superficie ocupada del Terreno, Superficie total del Terreno","DGCI, UCE",Infraestructura Pasiva,Anual,11
+Radiodifusión TV,Torres,"Código identificador, Altura de centros de radiación, Carga Máxima, Espacio disponible, Sección, Tipo, Viento máximo admisible",DGCI,Infraestructura Pasiva,Semestral,7
+Telefonía Fija,Broadband Remote Access Server,"Código identificador, Broadband Remote Access Server, Capacidad, Capacidad","DGRIRST, UCE",Infraestructura Activa,Anual,4
+Telefonía Fija,Central TDM,"Código identificador, Capacidad, Capacidad","DGRIRST, UCE",Infraestructura Activa,Anual,3
+Telefonía Fija,Central telefónica,"Código identificador, Área de cobertura de las centrales telefónicas, Capacidad, Capacidad","DGRIRST, DGCI, UCE",Infraestructura Activa,Semestral,4
+Telefonía Fija,Central Telefónica,"Capacidad Disponible para el servicio de conmutación de circuitos, Capacidad Disponible para el servicio de conmutación de paquetes, Espacio para coubicación externa, Espacio para coubicación interna, Capacidad Instalada para el servicio de conmutación de circuitos, Capacidad Instalada para el servicio de conmutación de circuitos, Numero de puertos ópticos instalados para la red de acceso, Puertos ópticos en servicio, Pares de cobre disponibles, Pares de cobre instalados, Pares de cobre en servicio, Marca, Modelo","DGCI, UCE",Infraestructura Activa,Semestral,13
+Telefonía Fija,Ductos,"Código identificador, Área total, Área para el mantenimiento, Área ocupada, Diámetro, Subducto","DGCI, UCE",Derecho de vía,Semestral,6
+Telefonía Fija,Enlace de transporte,"Código identificador, Capacidad TX/RX, Jerarquía digital asignada, Redundancia física, Tecnología de transporte, Tipo de enlace","DGRIRST, UCE",Infraestructura Activa,Anual,6
+Telefonía Fija,Enlace Satelital,"Código identificador, Ancho de banda por transpondedor, Área de cobertura, Capacidad, Frecuencias soportadas RX, Frecuencias soportadas TX, Numero de Transponders","DGRIRST, UCE",Infraestructura Activa,Anual,7
+Telefonía Fija,Fibra óptica,Código identificador,"DGCI, UCE",Medio de Transmisión,Semestral,1
+Telefonía Fija,Media Gateway,"Código identificador, Capacidad de los Media Gateways, Capacidad de los Media Gateways","DGRIRST, UCE",Infraestructura Activa,Anual,3
+Telefonía Fija,Postes,"Código identificador, Capacidad de carga máxima","DGCI, UCE",Derecho de vía,Semestral,2
+Telefonía Fija,Pozos,"Código identificador, Tamaño","DGCI, UCE",Derecho de vía,Semestral,2
+Telefonía Fija,Puntos de interconexión,"Código identificador, Capacidad de puertos IP, Capacidad de puertos TDM, Número de puertos para interconexión IP, Número de puertos para interconexión TDM, Puntos de interconexión por tecnología.","DGRIRST, UCE",Infraestructura Activa,Anual,6
+Telefonía Fija,Red de transmisión,"Código identificador, Longitud por tipo de despliegue y por tipo de medio, Mapa",DGRIRST,Infraestructura Activa,Anual,3
+Telefonía Fija,SCP,"Código identificador, Capacidad de los SCP's","DGRIRST, UCE",Infraestructura Activa,Anual,2
+Telefonía Fija,Session Border Controller,"Código identificador, Capacidad de Sesiones simultáneas, Capacidad de Sesiones simultáneas","DGRIRST, UCE",Infraestructura Activa,Anual,3
+Telefonía Fija,Soft-Switch,"Código identificador, Capacidad del Soft-Switch, Capacidad del Soft-Switch","DGRIRST, UCE",Infraestructura Activa,Anual,3
+Telefonía Fija,STP,"Código identificador, Capacidad de los STP's","DGRIRST, UCE",Infraestructura Activa,Anual,2
+Telefonía Fija,Trunk Gateway,"Código identificador, Capacidad , Capacidad de Procesamiento","DGRIRST, UCE",Infraestructura Activa,Anual,3
+Telefonía Móvil,Antena GSM,"Código identificador, Altura de la antena, Azimut, Fabricante de la Antena, Ganancia del equipo TMA, Modelo de la Antena, Objetivo de cobertura, Patrón de radiación, PIRE, Tilt Eléctrico, Tilt Mecánico","DGRT, UCE",Infraestructura Activa,Por evento,11
+Telefonía Móvil,Antena LTE,"Código identificador, Altura de la antena, Anchura de haz, Azimut, Clase MIMO, Ganancia de la Antena, Modelo, Patrón de radiación, PIRE, Polarización, Tilt Eléctrico, Tilt Mecánico, Tipo","DGRT",Infraestructura Activa,Por evento,13
+Telefonía Móvil,Antena WCDMA,"Código identificador, Altura de la antena, Azimut, Clase MIMO, Fabricante, Modelo, Patrón de radiación, PIRE, Tilt Eléctrico, Tilt Mecánico, Tipo de cobertura","DGRT",Infraestructura Activa,Por evento,11
+Telefonía Móvil,BSC,"Código identificador, Capacidad física de las BSC's, Capacidad física de las BSC's, Fabricante, Modelo","DGRIRST, DGRT, UCE",Infraestructura Activa,Por evento,5
+Telefonía Móvil,BTS,"Código identificador, BCCH, BSIC, LAC, Número de sectores habilitados en la BTS, Número de vecinos Inter-Tecnología definidos, Número de vecinos Intra-Tecnología definidos, Número Máximo de Vecinos Inter-Tecnología, Número Máximo de Vecinos Intra-Tecnología, Sensibilidad de recepción","DGRT",Infraestructura Activa,Por evento,10
+Telefonía Móvil,EIR,"Código identificador, Fabricante, Modelo",DGRT,Infraestructura Activa,Por evento,3
+Telefonía Móvil,eNodeB,"Código identificador, Banda de frecuencias utilizadas para el enlace ascendente, Banda de frecuencias utilizadas para el enlace descendente, Bandas de Frecuencias para Carrier Aggregation, Número de sectores habilitados en el eNodeB, Número de Vecinos Inter-Tecnología definidos, Número de Vecinos Intra-Tecnología definidos, Versión LTE, Sensibilidad de recepción","DGRT, DGRIRST",Infraestructura Activa,Por evento,9
+Telefonía Móvil,Equipo receptor,"Código identificador, Número de antenas de transmisión, Número de antenas de recepción, Categoría",DGRT,Infraestructura Activa,Semestral,4
+Telefonía Móvil,GGSN,"Código identificador, Capacidad del GGSN, Fabricante, Modelo","DGRIRST, DGRT, UCE",Infraestructura Activa,Por evento,4
+Telefonía Móvil,GMSC,"Código identificador, Fabricante, Modelo",DGRT,Infraestructura Activa,Por evento,3
+Telefonía Móvil,GPRS PCU,Código identificador,DGRIRST,Infraestructura Activa,Anual,1
+Telefonía Móvil,HLR,"Código identificador, Capacidad en términos de usuarios simultáneos, Fabricante, Modelo","DGRIRST, DGRT, UCE",Infraestructura Activa,Por evento,4
+Telefonía Móvil,HSS,"Código identificador, Fabricante, Modelo",DGRT,Infraestructura Activa,Por evento,3
+Telefonía Móvil,MGW,"Código identificador, Fabricante, Modelo",DGRT,Infraestructura Activa,Por evento,3
+Telefonía Móvil,MME,"Código identificador, Capacidad física de MME's, Fabricante, Modelo, Capacidad de procesamiento en la Hora Pico (para MSC 4G), Capacidad en términos de Busy Hour Erlang (para MSC 4G)","DGRIRST, DGRT, UCE",Infraestructura Activa,Por evento,6
+Telefonía Móvil,MMSC,"Código identificador, Capacidad del MMSC","DGRIRST, UCE",Infraestructura Activa,Por evento,2
+Telefonía Móvil,MSC,"Código identificador, Capacidad de procesamiento en la Hora Pico (para MSC 2G), Capacidad de procesamiento en la Hora Pico (para MSC 3G), Capacidad en términos de Busy Hour Erlang (para MSC 2G), Capacidad en términos de Busy Hour Erlang (para MSC 3G), Fabricante, Modelo, Puertos E1 (para MSC 2G), Puertos E1 (para MSC 3G), Puertos E1 (para MSC 4G), Puertos Ethernet (para MSC 2G), Puertos Ethernet (para MSC 3G), Puertos Ethernet (para MSC 4G), Puertos STM1 (para MSC 2G), Puertos STM1 (para MSC 3G), Puertos STM1 (para MSC 4G), Utilización","DGRIRST, DGRT, UCE",Infraestructura Activa,Por evento,17
+Telefonía Móvil,NodeB,"Código identificador, Banda de frecuencias utilizadas para el enlace ascendente, Banda de frecuencias utilizadas para el enlace descendente, Número de RRUs por sitio, Número de sectores habilitados en el Nodo B, Número de vecinos Inter-Tecnología definidos, Número de vecinos Intra-Tecnología definidos, Potencia de transmisión del RRU, Sensibilidad de recepción, Tecnologías Celulares Habilitadas","DGRIRST, DGRT, UCE",Infraestructura Activa,Semestral,10
+Telefonía Móvil,PCRF,"Código identificador, Fabricante, Modelo",DGRT,Infraestructura Activa,Semestral,3
+Telefonía Móvil,P-GW,"Código identificador, Fabricante, Modelo",DGRT,Infraestructura Activa,Semestral,3
+Telefonía Móvil,Repetidor,"Código identificador, Figura de Ruido, Ganancia de Antena Donadora, Ganancia máxima del sistema, PIRE",DGRT,Infraestructura Activa,Semestral,5
+Telefonía Móvil,RNC,"Código identificador, Capacidad física de RNC's, Capacidad física de RNC's, Fabricante, Modelo","DGRIRST, DGRT, UCE",Infraestructura Activa,Semestral,5
+Telefonía Móvil,RRU GSM,"Código identificador, Figura de Ruido, Número de portadoras por RRU, Número de RRUs por sitio, Potencia de RRU dedicada para GSM",DGRT,Infraestructura Activa,Semestral,5
+Telefonía Móvil,SDP,"Código identificador, Capacidad de los SDP's","DGRIRST, UCE",Infraestructura Activa,Anual,2
+Telefonía Móvil,Sector GSM,"Código identificador, Fabricante, Número de TRX Instalados",DGRT,Infraestructura Activa,Semestral,3
+Telefonía Móvil,Sector LTE,Código identificador,"DGRT, UCE",Infraestructura Activa,Semestral,1
+Telefonía Móvil,Sector WCDMA,"Código identificador, PSC",DGRT,Infraestructura Activa,Semestral,2
+Telefonía Móvil,SGSN,"Código identificador, Capacidad del SGSN, Fabricante, Modelo","DGRIRST, DGRT, UCE",Infraestructura Activa,Semestral,4
+Telefonía Móvil,S-GW,"Código identificador, Fabricante, Modelo",DGRT,Infraestructura Activa,Semestral,3
+Telefonía Móvil,SMSC,"Código identificador, Capacidad del SMSC","DGRIRST, UCE",Infraestructura Activa,Semestral,2
+Telefonía Móvil,Torres,"Código identificador, Altura , Carga Máxima, Tipo de torre, Viento máximo admisible, Altura del edificio","DGCI, DGRT",Infraestructura Pasiva,Semestral,6
+Telefonía Móvil,Transcodificadores,Código identificador,DGRIRST,Infraestructura Activa,Semestral,1
+Telefonía Móvil,VLR,"Código identificador, Fabricante, Modelo",DGRT,Infraestructura Activa,Semestral,3
+Telefonía Móvil,Emplazamiento,"Código identificador, Nombre del arrendatario",DGCI,Medio de transmisión,Semestral,2
+Telefonía Móvil,Enlaces,"Código identificador, Capacidad de los enlaces de backhaul, Capacidad de los enlaces de BSC - MSC, Capacidad de los enlaces de la red troncal, Capacidad de los enlaces de RNC - MSC, Longitud de los enlaces de la red troncal, Topología de los enlaces de backhaul, Topología de los enlaces de BSC - MSC, Topología de los enlaces de RNC - MSC","DGRIRST, UCE",Medio de transmisión,Semestral,9
+Telefonía Móvil,Puntos de interconexión,"Código identificador, Capacidad de puertos IP, Capacidad de puertos TDM, Número de puertos para interconexión IP, Número de puertos para interconexión TDM, Puntos de interconexión por tecnología., Puntos de interconexión por tecnología.","DGRIRST, UCE",Medio de transmisión,Por evento,7

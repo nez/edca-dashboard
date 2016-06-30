@@ -1,0 +1,119 @@
+/*.container {
+    width: 90% !important;
+}*/
+
+.tooltip {
+  font-family: 'Raleway', sans-serif;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+  -moz-border-radius:2px;
+	border-radius: 2px;
+  /*border: 1px solid #000;*/
+  background: #000;
+	opacity: .9;
+	/* color: #eeeeee; */
+  color: white;
+	padding: 10px;
+	width: 300px;
+	font-size: 12px;
+	z-index: 10;
+  text-align: center;
+  /*font-weight:bold;*/
+}
+
+.top_labels {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  writing-mode: vertical-rl;
+  fill: #000;
+  -ms-writing-mode: lr-tb;
+}
+
+#chartWrapper {
+  position: relative;
+  margin-top: 50px;
+}
+
+.scaleCircle {
+    stroke-width:1;
+    stroke:#999;
+    stroke-dasharray:2 2;
+    fill:none;
+}
+
+.scaleCircleLabel {
+    color: #999;
+    /*font-size:13px;*/
+}
+/*
+body {
+  font-family: 'Raleway', sans-serif;
+  padding-top: 10px;
+}*/
+
+a {
+  outline : none !important;
+}
+
+p.pie {
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.imgSnii {
+    height: 50px;
+    float: right;
+}
+
+a.disabled {
+   pointer-events: none;
+   cursor: default;
+}
+
+::selection {
+  background: #96CA45; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #96CA45; /* Gecko Browsers */
+}
+
+label {
+    max-width: 100%;
+    margin-bottom: 3px;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 600px;
+    overflow-x: hidden;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+}
+
+.text-centrado {
+   text-align: center;
+   vertical-align: middle !important;
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    vertical-align: top;
+    /*padding-bottom: 100%; /* aspect ratio */
+    /*overflow: inherit;*/
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
