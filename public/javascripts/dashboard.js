@@ -53,18 +53,33 @@ $(document).ready(function () {
         });
     });
 
+
     // FIND CONTRACTS
-    function searchbykeyword(keyword, table) {
-        $.post('/contrataciones-abiertas/find-contracts', {keyword: keyword}, function (contracts) {
+    function searchbykeyword(keyword, table, param, filter ) {
+        $.post('/contrataciones-abiertas/find-contracts', {keyword: keyword, orderby : param, filter: filter }, function (contracts) {
             table.html(contracts);
         });
     }
 
     //FIND CONTRACTS EVENT
+    var ob = $('#orderby');
     var ctable = $('#ctable');
-    $('#buscar').keyup(function () {
-        searchbykeyword($(this).val(), ctable);
+    var buscar = $('#buscar');
+    var filter = $('#filtrar');
+
+    buscar.keyup(function () {
+        searchbykeyword($(this).val(), ctable, ob.val() , filter.val() );
     });
+
+
+    filter.change(function () {
+        searchbykeyword( buscar.val(), ctable, ob.val(), filter.val() );
+    });
+
+    ob.change(function () {
+        searchbykeyword( buscar.val(), ctable, ob.val(), filter.val() );
+    });
+
 
 });
 

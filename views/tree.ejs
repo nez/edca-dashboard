@@ -37,29 +37,12 @@
             <div class="row">
                 <div class='col-xs-12' id="datosContract">
                     <h1 style="color:#424242"><b style="color:#00cc99"> <%= contract.title %></b></h1>
-                    <!--<hr style="border-color:#BDBDBD">
-                    <p style="color:#424242"> <font size="2">Identificador: <b><%= contract.contractid%></b> </font></p>
-                    <p style="color:#424242"> <font size="2">Fecha de firma: <b><%= contract.datesigned%></b> </font></p>
-                    <p style="color:#424242"> <font size="2">Monto: <b><%= parseFloat(contract.value_amount).toFixed(2)%></b></font></p>
-                    <p style="color:#424242"> <font size="2">Moneda: <label><%= contract.value_currency%></label></font></p>
-                    <p style="color:#424242"> <font size="2">Vigencia: <label><%= contract.period_startdate%> - <%= contract.period_enddate %></label></font></p>
-                    <p style="color:#424242"> <font size="2">Tipo: <label><%= contract.procurementmethod %></label></font></p>
-                    <p>
-                    <hr style="border-color:#BDBDBD">
-                    <br>
-                    <a  class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/entidad-compradora/" %>"><b>Detalles del comprador</b></a>
-                    <a  class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/proveedores/" %>"><b>Proveedor (es)</b></a>
-                    <button class="btn btn-default" > <i class="fa fa-download"></i> </button>
-                    <button type="button" class="btn btn-primary" style="width:150px;height:40px;position:absolute;bottom:10px;right:10px;background-color:#00cc99;align:top;border-radius:25px;outline:none;" id="refresh"><b>Árbol completo</b></button>-->
                 </div>
             </div>
         </div>
     </div>
 </section>
 <br>
-
-
-
 
 <div class="container">
     <div class="panel panel-default">
@@ -87,8 +70,27 @@
             <div style="position:absolute;bottom:40px;right:300px"><p><b>Contratación</b></p></div>
             <div style="position:absolute;bottom:40px;right:50px"><p><b>Implementación</b></p></div>
             <br>
+            <br>
         </div>
+
+
+        <!-- breadcrumb -->
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <ol class="breadcrumb">
+                        <li class="active">Planeación</li>
+                        <li>Licitación</li>
+                        <li>Adjudicación</li>
+                        <li>Contratación</li>
+                        <li>Implementación</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
     </div>
+
     <br>
     <div class="row">
         <div class='col-md-12' id="add_data" style="display:none;background-color:#e0e0e0">
