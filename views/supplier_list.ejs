@@ -6,7 +6,7 @@
     <div class="panel-body">
         <p>Razón social: <b><%= suppliers[i].identifier_legalname %></b></p>
         <p>RFC: <b><%= suppliers[i].identifier_id %></b></p>
-        <p>Sitio web: <b><%= suppliers[i].identifier_uri %></b></p>
+        <p>Sitio web: <b><a href="<%= suppliers[i].identifier_uri %>"><%= suppliers[i].identifier_uri %></a></b></p>
         <a href="#" class="btn btn-default">Ver más</a>
     </div>
 </div>

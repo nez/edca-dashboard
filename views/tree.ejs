@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" lang="es-MX" xml:lang="es-MX">
 <head>
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -48,14 +48,14 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <p>Identificador: <b><%= contract.contractid%></b> </p>
-            <p>Fecha de firma: <b><%= contract.datesigned%></b></p>
+            <p>Fecha de firma: <b><%= contract.datesigned.toLocaleDateString()%></b></p>
             <p>Monto: <b><%= parseFloat(contract.value_amount).toFixed(2)%></b></p>
             <p>Moneda: <b><%= contract.value_currency%></b></p>
-            <p>Vigencia: <b><%= contract.period_startdate%> - <%= contract.period_enddate %></b></p>
+            <p>Vigencia: <b><%= contract.period_startdate.toLocaleDateString()%> a <%= contract.period_enddate.toLocaleDateString() %></b></p>
             <p>Tipo: <b><%= contract.procurementmethod %></b></p>
             <p>
-                <a  class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/entidad-compradora/" %>"><b>Detalles del comprador</b></a>
-                <a  class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/proveedores/" %>"><b>Proveedor (es)</b></a>
+                <a class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/entidad-compradora/" %>"><b>Detalles del comprador</b></a>
+                <a class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/proveedores/" %>"><b>Proveedor (es)</b></a>
                 <button class="btn btn-default" > <i class="fa fa-download"></i> </button>
                 <button class="btn btn-default" id="refresh"><b>Árbol completo</b></button>
             </p>

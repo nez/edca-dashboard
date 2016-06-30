@@ -6,7 +6,7 @@
             <div class="col-sm-11">
                 <h4><strong><%= contracts [i].title %> </strong></h4>
                 <p>Identificador: <strong><%= contracts [i].contractid %></strong></p>
-                <p>Fecha de firma: <strong><%= contracts [i].datesigned %> </strong></p>
+                <p>Fecha de firma: <strong><%= contracts [i].datesigned.toLocaleDateString() %> </strong></p>
                 <p>
                     Monto:
                     <strong><%= parseFloat(contracts [i].value_amount).toFixed(2) %> <%= contracts [i].value_currency %> </strong>

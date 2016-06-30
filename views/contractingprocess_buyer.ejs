@@ -25,14 +25,14 @@
     <% if (typeof buyer != 'undefined'){%>
 
     <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title"><%= buyer.name%></div>
-        </div>
         <div class="panel-body">
+            <p>Nombre: <label><%= buyer.name%></label></p>
+
+
             <p>Nombre legal: <label> <%= buyer.identifier_legalname%></label></p>
             <p>
-            URL: <label>
-            <%= buyer.identifier_uri %></label>
+            Sitio web: <label>
+            <a href="<%= buyer.identifier_uri %>"><%= buyer.identifier_uri %></a></label>
             </p>
             <p> Dirección: <label><%= buyer.identifier_streetaddress %></label></p>
             <p>Estado:<label> <%= buyer.identifier_region%></label></p>

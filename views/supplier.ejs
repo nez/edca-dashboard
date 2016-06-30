@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/html" lang="es-MX" xml:lang="es-MX">
 <head>
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -21,9 +21,9 @@
 
     <div class="panel panel-default">
         <div class="panel-body">
-        <p>Razón social: <%= supplier.name %></p>
-        <p>RFC: <%= supplier.name %></p>
-        <p>Página web: <%= supplier.identifier_uri %></p>
+        <p>Razón social: <b><%= supplier.name %></b></p>
+        <p>RFC: <b><%= supplier.name %></b></p>
+        <p>Página web: <b> <a href="<%= supplier.identifier_uri %>"><%= supplier.identifier_uri %></a></b></p>
         </div>
     </div>
 
