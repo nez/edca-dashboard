@@ -87,7 +87,7 @@ BubbleChart = (function() {
     BubbleChart.prototype.buscar = function(filterText) {
         filterText = filterText.toLowerCase();
         if (filterText !== ""){
-            var filtrados = this.data.filter(function(d) { return d['Razón social'].toLowerCase().indexOf(filterText) === 0 });  //!!!
+            var filtrados = this.data.filter(function(d) { return d['Razón social'].toLowerCase().indexOf(filterText) != -1 }); //=== 0 });  //!!!
             if (Object.keys(filtrados).length !== 0){
                 var names = {};
 
