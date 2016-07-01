@@ -139,43 +139,64 @@ router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
     switch ( req.params.stage ){
         case 'planning':
             edca_db.tx(function (t) {
-                var q1 = this.one('',[ req.params.cpid ]);
-                var q2 = this.one('',[ req.params.cpid ]);
-                return [ q1, q2 ];
+                var q1 = this.one('select * from budget where contractingprocess_id = $1',[ req.params.cpid ]);
+                var q2 = this.manyOrNone('select * from planningdocuments where contractingprocess_id = $1',[ req.params.cpid ]);
+                return this.batch([ q1, q2 ]);
             }).then(function ( data ) {
+
+
+                res.json({
+                    "name": "Planeación",
+                    "text":"",
+                    "children": [
+                        {
+                            "name": "Presupuesto",
+                            "text":"",
+                            "children": [
+                                {
+                                    "name": "Fuente",
+                                    "text": data[0].budget_source
+                                },
+                                {
+                                    "name": "ID",
+                                    "text": data[0].budget_bugetid
+                                },
+                                {
+                                    "name": "Descripción",
+                                    "text": data[0].budget_description
+                                },
+                                {
+                                    "name": "Total",
+                                    "text": data[0].budget_amount
+                                },
+                                {
+                                    "name": "Proyecto presupuestario",
+                                    "text": data[0].budget_project
+                                }
+                            ]
+                        },
+                        {
+                            "name":"Fundamento",
+                            "text":'Dado que las precipitaciones locales escurrierón hacia las zonas más bajas del polígono, lo que antiguamente fuera el lago de Texcoco, durante la construcción del NAICM se requeririó; un drenaje pluvial provisional de funcionamiento temporal dentro del perímetro de la construcción, que permita asegurar la protección de dichas obras. Lo anterior, con el objetivo de asegurar que las zonas donde se esté desarrollando los trabajos permanezcan secas.'
+                        },
+                        {
+                            "name": "Documentos",
+                            "text":"",
+                            "children": [
+                                {"name": "Estudio factibilidad", "text":"Factibilidad técnica, legal y ambiental del proyecto de desarrollo del Nuevo Aeropuerto Internacional de la Ciudad de México"},
+                                {"name": "Evaluación necesidades", "text":"Términos de referencia para la construcción del drenaje pluvial temporal para la protección de la zona durante la construcción de la primera fase del NAICM publicados en CompraNet el 24 de junio de 2015"},
+                                {"name": "Estudio mercado", "text":"No aplica"}
+                            ]
+                        }
+                    ]
+                });
+
+
+
 
             }).catch(function (error) {
                 res.send(error);
                 console.log(error);
-            });
-
-            res.json({
-                "name": "Planeación",
-                "text":"",
-                "children": [
-                    {
-                        "name": "Presupuesto",
-                        "text":"",
-                        "children": [
-                            {"name": "Fuente","text":"Presupuesto de Egresos de la Fedración 2015 y 2016"},
-                            {"name": "ID","text":"1409JZL0005"},
-                            {"name": "Descripción","text":"Transferencias a fideicomisos públicos"},
-                            {"name": "Total","text":"$490,000,000.00"},
-                            {"name": "Proyecto presupuestario","text":"Nuevo Aeropuerto Internacional de la Ciudad de México"}
-                        ]
-                    },
-                    {"name":"Fundamento",
-                        "text":'Dado que las precipitaciones locales escurrierón hacia las zonas más bajas del polígono, lo que antiguamente fuera el lago de Texcoco, durante la construcción del NAICM se requeririó; un drenaje pluvial provisional de funcionamiento temporal dentro del perímetro de la construcción, que permita asegurar la protección de dichas obras. Lo anterior, con el objetivo de asegurar que las zonas donde se esté desarrollando los trabajos permanezcan secas.'},
-                    {
-                        "name": "Documentos",
-                        "text":"",
-                        "children": [
-                            {"name": "Estudio factibilidad", "text":"Factibilidad técnica, legal y ambiental del proyecto de desarrollo del Nuevo Aeropuerto Internacional de la Ciudad de México"},
-                            {"name": "Evaluación necesidades", "text":"Términos de referencia para la construcción del drenaje pluvial temporal para la protección de la zona durante la construcción de la primera fase del NAICM publicados en CompraNet el 24 de junio de 2015"},
-                            {"name": "Estudio mercado", "text":"No aplica"}
-                        ]
-                    }
-                ]
             });
             break;
         case 'tender':
