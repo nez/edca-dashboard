@@ -20,59 +20,51 @@ window.log = function() {
         return window.console = {};
     }
 })());
-
-var initialise_form = function (selectionOptions) {
+var initialise_form = function(selectionOptions) {
     var filterers = $('.filter_block input');
     filterers.change(function() {
         var filters = [];
         var targets = [];
-        filterers.filter(function () {
+        filterers.filter(function() {
             return !this.checked
-        }).each(function (k,v) {
+        }).each(function(k, v) {
             filters[k] = v.value;
             targets[k] = $(v).data('target');
         });
-        use_filters(filters,targets);
+        use_filters(filters, targets);
     });
-
     var groupSelect = $('#group-everything-by');
     for (var opt in selectionOptions) {
         var lookup = selectionOptions[opt];
-
-        if ( lookup.title != 'Proveedor'  && lookup.title != 'ID de contrato') {
+        if (lookup.title != 'Proveedor' && lookup.title != 'ID de contrato') {
             console.log(lookup.title);
             groupSelect.append('<option value="' + lookup.key + '">' + lookup.title + '</option>');
         }
     }
-    var ResetGrouping = function () {
+    var ResetGrouping = function() {
         var groupBy = groupSelect.val();
         group_by(groupBy);
     };
-
     groupSelect.change(ResetGrouping);
-
     var colorSelect = $('#color-everything-by');
     for (var opt in selectionOptions) {
         var lookup = selectionOptions[opt];
         colorSelect.append('<option value="' + lookup.key + '">' + lookup.title + '</option>');
     }
-    var ResetColors = function () {
+    var ResetColors = function() {
         var colorBy = colorSelect.val();
         color_by(colorBy);
     };
-
-    $('#clear_filters').click(function () {
-        if($(this).hasClass('select')) {
+    $('#clear_filters').click(function() {
+        if ($(this).hasClass('select')) {
             $('.filter_block input').prop('checked', 'checked');
-        }
-        else {
+        } else {
             $('.filter_block input').prop('checked', false);
         }
         $(this).toggleClass('select clear');
         filterers.change();
         return false;
     });
-
     colorSelect.change(ResetColors);
 };
 
@@ -82,37 +74,33 @@ function get_distinct_values(csv, keyType, key) {
         var value = csv[i][key];
         allValues[value] = true;
     }
-
     var allValuesArray = [];
-    for (var i in allValues)
-        allValuesArray.push(i);
-
+    for (var i in allValues) allValuesArray.push(i);
     allValuesArray.sort();
     return allValuesArray
 }
 
 function keyToLookup(key) {
     var firstPartEnds = key.indexOf(':');
-    if (firstPartEnds <= 0)
-        return { key: key, type: key, title: key };
-
+    if (firstPartEnds <= 0) return {
+        key: key,
+        type: key,
+        title: key
+    };
     var firstPart = key.substring(0, firstPartEnds);
     var secondPart = key.substring(firstPartEnds + 1);
-
-    return { key: key, type: firstPart, title: secondPart };
+    return {
+        key: key,
+        type: firstPart,
+        title: secondPart
+    };
 }
 
 function render_filters_colors_and_groups(csv) {
     var first = csv[0];
-
     var lookups = [];
     for (var key in first) {
         var lookup = keyToLookup(key);
-
-        
-
-        
-        
         // SELECCIONA LOS CAMPOS A FILTRAR
         switch (lookup.type) {
             case "Proveedor":
@@ -124,13 +112,6 @@ function render_filters_colors_and_groups(csv) {
             default:
                 break;
         }
-        
-        
-        
-        
-        
-        
-        
     }
     var filterList = $('#filter-list');
     for (var i in lookups) {
@@ -148,28 +129,25 @@ function render_filters_colors_and_groups(csv) {
 
 function hide_color_chart() {
     var colorbar = $('#color-hints');
-    colorbar.fadeOut(500, function () {
+    colorbar.fadeOut(500, function() {
         $(this).empty();
     });
 }
+
 function show_color_chart(what_to_color_by, color_mapper) {
     var colorbar = $('#color-hints');
     //console.log(color_mapper);
-    colorbar.fadeOut(500, function () {
+    colorbar.fadeOut(500, function() {
         colorbar.empty();
-
         var lookup = keyToLookup(what_to_color_by);
         $('<h4>' + lookup.title + ':</h4>').appendTo(colorbar);
-
         var table = $('<table class="table" />');
         for (var key in color_mapper) {
             var row = $('<tr/>');
-
             var cell = $('<td/>');
             var square = $('<div style="width: 15px; height: 15px; background: ' + color_mapper[key] + ';">&nbsp;</div>');
             square.appendTo(cell);
             cell.appendTo(row);
-
             cell = $('<td/>');
             cell.text(' ' + key + ' ');
             cell.appendTo(row);

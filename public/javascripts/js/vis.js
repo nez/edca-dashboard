@@ -30,7 +30,7 @@ BubbleChart = (function() {
         this.create_nodes = __bind(this.create_nodes, this);
         this.data = data;
         this.width = 1140;
-        this.height = 800;
+        this.height = 650;
         this.tooltip = CustomTooltip("my_tooltip", 150);
         this.center = {
             x: this.width / 2,
@@ -103,7 +103,7 @@ BubbleChart = (function() {
         var that,
             _this = this;
         /*this.vis = d3.select("#vis").append("svg").attr("width", this.width).attr("height", this.height).attr("id", "svg_vis");*/
-        this.vis = d3.select("#vis").append("svg").attr("id", "svg_vis").attr("preserveAspectRatio", "xMinYMin meet").attr("viewBox", "0 0 1140 750");
+        this.vis = d3.select("#vis").append("svg").attr("id", "svg_vis").attr("preserveAspectRatio", "xMinYMin meet").attr("viewBox", "0 0 1110 650");
         this.circles = this.vis.selectAll("circle").data(this.nodes, function(d) {
             return d.id;
         });
@@ -234,7 +234,7 @@ BubbleChart = (function() {
             x_position = _this.width * position / total_slots;
             _this.group_centers[i] = {
                 x: x_position,
-                y: _this.height / 1.55 // Separación entre las etiquetas y los nodos
+                y: _this.height / 1.6 // Separación entre las etiquetas y los nodos
             };
             _this.group_labels[i] = x_position;
             position = position + 1;
