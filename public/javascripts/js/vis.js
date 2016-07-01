@@ -50,7 +50,7 @@ BubbleChart = (function() {
         this.data = data;
 
         this.width = 1140;
-        this.height = 750;
+        this.height = 800;
         this.tooltip = CustomTooltip("my_tooltip", 150);
         this.center = {
             x: this.width / 2,
@@ -87,15 +87,15 @@ BubbleChart = (function() {
     BubbleChart.prototype.buscar = function(filterText) {
         filterText = filterText.toLowerCase();
         if (filterText !== ""){
-            var filtrados = this.data.filter(function(d) { return d.Proveedor.toLowerCase().indexOf(filterText) === 0 });  //!!!
+            var filtrados = this.data.filter(function(d) { return d['Razón social'].toLowerCase().indexOf(filterText) === 0 });  //!!!
             if (Object.keys(filtrados).length !== 0){
                 var names = {};
 
-                filtrados.forEach(function(x) { names[x["Proveedor"]] = "red"; });   //!!!
+                filtrados.forEach(function(x) { names[x["Razón social"]] = "red"; });   //!!!
 
                 //console.log(names);
                 this.circles.transition().duration(600).style("fill", function(d) {
-                    return names[d.original.Proveedor]; //!!!
+                    return names[d.original['Razón social']]; //!!!
                 });
                 hide_color_chart();
             }
