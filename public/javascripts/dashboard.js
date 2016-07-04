@@ -55,8 +55,12 @@ $(document).ready(function () {
 
 
     // FIND CONTRACTS
-    function searchbykeyword(keyword, table, param, filter ) {
-        $.post('/contrataciones-abiertas/find-contracts', {keyword: keyword, orderby : param, filter: filter }, function (contracts) {
+    function searchbykeyword(keyword, table, param, filter) {
+        $.post('/contrataciones-abiertas/find-contracts', {
+            keyword: keyword,
+            orderby: param,
+            filter: filter
+        }, function (contracts) {
             table.html(contracts);
         });
     }
@@ -68,16 +72,16 @@ $(document).ready(function () {
     var filter = $('#filtrar');
 
     buscar.keyup(function () {
-        searchbykeyword($(this).val(), ctable, ob.val() , filter.val() );
+        searchbykeyword($(this).val(), ctable, ob.val(), filter.val());
     });
 
 
     filter.change(function () {
-        searchbykeyword( buscar.val(), ctable, ob.val(), filter.val() );
+        searchbykeyword(buscar.val(), ctable, ob.val(), filter.val());
     });
 
     ob.change(function () {
-        searchbykeyword( buscar.val(), ctable, ob.val(), filter.val() );
+        searchbykeyword(buscar.val(), ctable, ob.val(), filter.val());
     });
 
 
@@ -92,7 +96,7 @@ function drawSeriesChart() {
 
     $.get('/contrataciones-abiertas/bubble-chart-data', function (data) {
 
-        var newData =[ ['ID', 'Fecha de firma', 'Vigencia (días naturales)', 'Tipo', 'Monto MXN'] ];
+        var newData = [['ID', 'Fecha de firma', 'Vigencia (días naturales)', 'Tipo', 'Monto MXN']];
 
         for (i = 0; i < data.length; i++) {
             newData.push([data[i].title, new Date(data[i].datesigned), data[i].vigencia.days, data[i].procurementmethod, Number(data[i].value_amount)]);
@@ -174,14 +178,11 @@ function drawSeriesChart() {
 
         var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
         //chart.draw( data  , options);
-        chart.draw( google.visualization.arrayToDataTable(newData) , options);
+        chart.draw(google.visualization.arrayToDataTable(newData), options);
     });
 }
 
 // BAR CHART
-
-
-
 var margin = {top: 40, right: 20, bottom: 40, left: 70},
     width = 730 - margin.left - margin.right,
     height = 350 - margin.top - margin.bottom;
@@ -226,8 +227,6 @@ var svg = d3.select("#d3bar").append("svg")
 svg.call(tip);
 
 
-
-
 d3.csv("/data.csv", function (error, data) {
     if (error) throw error;
 
@@ -236,7 +235,7 @@ d3.csv("/data.csv", function (error, data) {
     });
 
     // SORT!!!
-    data.sort(function(a, b) {
+    data.sort(function (a, b) {
         return d3['descending'](a['Avance físico'], b['Avance físico']);
     });
 
@@ -289,13 +288,13 @@ d3.csv("/data.csv", function (error, data) {
     }
 
     /*  svg.append("g")
-        .attr("class", "grid")
-        .attr("transform", "translate(0," + height + ")")
-        .call(make_x_axis()
-            .tickSize(-height, 0, 0)
-            .tickFormat("")
-        );
-*/
+     .attr("class", "grid")
+     .attr("transform", "translate(0," + height + ")")
+     .call(make_x_axis()
+     .tickSize(-height, 0, 0)
+     .tickFormat("")
+     );
+     */
     svg.append("g")
         .attr("class", "grid")
         .call(make_y_axis()
@@ -333,8 +332,16 @@ d3.csv("/data.csv", function (error, data) {
         .text(function (d) {
             return d.Producto;
         })
-        .on('mouseover', tip.show)
-        .on('mouseout', tip.hide);
+        //.on('mouseover', tip.show)
+        //.on('mouseout', tip.hide)
+        .on("mouseover", function (d) {
+            tip.show(d);
+            d3.select(this).style({opacity: '0.7'});
+        })
+        .on("mouseout", function (d) {
+            tip.hide(d);
+            d3.select(this).style({opacity: '1.0'});
+        });
 
 
     svg.append("text")

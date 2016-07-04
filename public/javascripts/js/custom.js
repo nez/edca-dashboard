@@ -37,7 +37,6 @@ var initialise_form = function(selectionOptions) {
     for (var opt in selectionOptions) {
         var lookup = selectionOptions[opt];
         if (lookup.title != 'Proveedor' && lookup.title != 'ID de contrato') {
-            console.log(lookup.title);
             groupSelect.append('<option value="' + lookup.key + '">' + lookup.title + '</option>');
         }
     }
