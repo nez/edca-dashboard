@@ -52,50 +52,10 @@ body {
   padding-top: 10px;
 }*/
 
-a {
-  outline : none !important;
-}
-
-p.pie {
-  font-size: 12px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.imgSnii {
-    height: 50px;
-    float: right;
-}
-
-a.disabled {
-   pointer-events: none;
-   cursor: default;
-}
-
-::selection {
-  background: #96CA45; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: #96CA45; /* Gecko Browsers */
-}
-
-label {
-    max-width: 100%;
-    margin-bottom: 3px;
-}
-
 .scrollable-menu {
     height: auto;
     max-height: 600px;
     overflow-x: hidden;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
 }
 
 .text-centrado {
