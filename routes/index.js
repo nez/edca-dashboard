@@ -14,7 +14,9 @@ router.get('/', function(req, res, next) {
 router.get('/contratos/',function (req, res) {
 
     edca_db.tx(function (t) {
-        var q1 = this.many('select * from contract order by title');
+        var q1 = this.many('select contract.contractingprocess_id, contract.id, contract.title, contract.contractid, ' +
+            'contract.datesigned, contract.value_amount, tender.procurementmethod from tender, contract ' +
+            ' where tender.contractingprocess_id = contract.contractingprocess_id order by contract.title');
         var q2 = this.many('select * from supplier');
         var q3 = this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;');
         var q4 = this.one('select count (*) as total from contractingprocess');
@@ -87,23 +89,13 @@ router.get('/proveedor/:supplierid', function (req, res ) {
 router.post ('/find-contracts/', function (req, res ) {
     edca_db.tx(function (t) {
 
-        var q1;
-        //console.log(req.body.filter);
+        var q1 = this.manyOrNone("select contract.contractingprocess_id, contract.id, contract.title, contract.contractid," +
+                "contract.datesigned, contract.value_amount, tender.procurementmethod " +
+                " from contract, tender where contract.contractingprocess_id = tender.contractingprocess_id " +
+                "and (contract.title ilike '%$1#%' or contract.contractid ilike '%$1#%') " +
+            ( req.body.filter != 'Todo'?" and tender.procurementmethod ilike '$3#%' ":"")+
+            "order by $2~", [req.body.keyword, req.body.orderby, req.body.filter]);
 
-        switch ( req.body.filter ) {
-            case 'LP':
-                q1 = this.manyOrNone("select * from contract where (title ilike '%$1#%' or contractid ilike '%$1#%') and contractid ilike 'LP%' order by $2~", [req.body.keyword, req.body.orderby]);
-                break;
-            case 'ITP':
-                q1 = this.manyOrNone("select * from contract where (title ilike '%$1#%' or contractid ilike '%$1#%') and contractid ilike 'ITP%' order by $2~", [req.body.keyword, req.body.orderby]);
-                break;
-            case 'AD':
-                q1 = this.manyOrNone("select * from contract where (title ilike '%$1#%' or contractid ilike '%$1#%') and contractid ilike 'AD%' order by $2~", [req.body.keyword, req.body.orderby]);
-                break;
-            default:
-                q1 = this.manyOrNone("select * from contract where title ilike '%$1#%' or contractid ilike '%$1#%' order by $2~", [req.body.keyword, req.body.orderby]);
-                break;
-        }
 
         var q2 = this.manyOrNone("select * from supplier"); //hacer join suppliers -> contracts
 
