@@ -28,6 +28,15 @@ div.google-visualization-tooltip {
     padding: 5px;
 }
 
+.well{
+    border: none;
+}
+.panel{
+    border: none;
+}
+.navbar{
+    border: none;
+}
 /* d3 charts */
 .axis path,
 .axis line {
