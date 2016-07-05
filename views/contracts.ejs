@@ -1,16 +1,53 @@
 <% for (var i = 0; i < contracts.length;i++){ %>
-<!--<div class="panel panel-default">
-    <div class="panel-body">-->
+
 <div class="well well-sm">
         <div class="row">
+
+
+            <div class="col-sm-1">
+                <img src="/images/icono_con.png">
+            </div>
             <div class="col-sm-11">
                 <h4><strong><%= contracts [i].title %> </strong></h4>
-                <p>Identificador: <strong><%= contracts [i].contractid %></strong></p>
+                <%= contracts [i].contractid %>
+
+            </div>
+
+            </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+                <h3><b>$<%= parseFloat(contracts [i].value_amount).toFixed(2) %> <!--<%= contracts [i].value_currency %>--> </b></h3>
+        </div>
+        <div class="col-sm-3">
+            <p>Tipo</p>
+
+
+        </div>
+        <div class="col-sm-2">
+            <p>Proveedores:</p>
+
+        </div>
+        <div class="col-sm-2">
+            <p>Etapa:</p>
+        </div>
+        <div class="col-sm-2">
+            <div class="btn-group" role="group" aria-label="...">
+            <a href="" class='btn btn-default'> <i class='fa fa-download'></i></a>
+            <a href="<%= "/contrataciones-abiertas/contrato/" + contracts[i].contractingprocess_id %>"
+                  data-id="<%= contracts[i].contractingprocess_id %>" class='btn btn-default'> <i
+                            class='fa fa-line-chart'></i></a>
+                </div>
+
+        </div>
+
+
+
+<!--
+            <div class="col-sm-12">
                 <p>Fecha de firma: <strong><%= contracts [i].datesigned.toLocaleDateString() %> </strong></p>
-                <p>
-                    Monto:
-                    <strong><%= parseFloat(contracts [i].value_amount).toFixed(2) %> <%= contracts [i].value_currency %> </strong>
-                </p>
+
+
                 <p><strong>Proveedor(es)</strong></p>
 
                 <div class="list-group">
@@ -28,14 +65,9 @@
                 } %>
                 </div>
             </div>
-            <div class="col-sm-1" style="text-align: center">
-                <p><a href="" class='btn btn-default'> <i class='fa fa-download'></i></a></p>
-                <p><a href="<%= "/contrataciones-abiertas/contrato/" + contracts[i].contractingprocess_id %>"
-                      data-id="<%= contracts[i].contractingprocess_id %>" class='btn btn-default'> <i
-                                class='fa fa-line-chart'></i></a></p>
-            </div>
+        -->
+
         </div>
     </div>
-<!--</div>-->
 
 <% } %>
