@@ -140,19 +140,19 @@ function show_color_chart(what_to_color_by, color_mapper) {
         colorbar.empty();
         var lookup = keyToLookup(what_to_color_by);
         $('<h4>' + lookup.title + ':</h4>').appendTo(colorbar);
-        var table = $('<table class="table" />');
+        var row = $('<div class="row" />');
         for (var key in color_mapper) {
-            var row = $('<tr/>');
-            var cell = $('<td/>');
-            var square = $('<div style="width: 15px; height: 15px; background: ' + color_mapper[key] + ';">&nbsp;</div>');
+            /*var i = Object.keys(color_mapper).indexOf(key) + 1;
+            if (i%4 == 0){
+                row = $('<div class="row" />');
+            }*/
+            var cell = $('<div class="col-md-3" />');
+            var square = $('<div style="width: 15px; height: 15px; background: ' + color_mapper[key] + ';  display: inline-block; vertical-align: middle;">&nbsp;</div><p style="display: inline;"> '+ key +' </p>');
             square.appendTo(cell);
             cell.appendTo(row);
-            cell = $('<td/>');
-            cell.text(' ' + key + ' ');
             cell.appendTo(row);
-            row.appendTo(table);
         }
-        table.appendTo(colorbar);
+        row.appendTo(colorbar);
         colorbar.fadeIn(500);
     });
 }
