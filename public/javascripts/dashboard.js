@@ -184,7 +184,7 @@ function drawSeriesChart() {
 
 // BAR CHART
 var margin = {top: 40, right: 20, bottom: 40, left: 70},
-    width = 730 - margin.left - margin.right,
+    width = 1100 - margin.left - margin.right,
     height = 350 - margin.top - margin.bottom;
 
 var x0 = d3.scale.ordinal()
