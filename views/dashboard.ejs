@@ -54,15 +54,19 @@
 
 <div class="container">
     <br>
-
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <ul class="nav nav-pills ">
-                <li role="presentation" class="active"><a data-toggle="pill" href="#home">Contratos <i class="fa fa-file-code-o"></i> </a></li>
-                <li role="presentation"><a data-toggle="pill" href="#menu1">Proveedores <i class="fa fa-users"></i></a></li>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <ul class="nav nav-pills nav-justified">
+                <li role="presentation" class="active"><a data-toggle="pill" href="#home">Contratos
+                        <!--<i class="fa fa-file-code-o"></i>--> </a></li>
+                <li role="presentation"><a data-toggle="pill" href="#menu1">Proveedores
+                        <!--<i class="fa fa-users"></i>--></a></li>
             </ul>
         </div>
+        <div class="col-sm-3"></div>
     </div>
+    <br>
 
     <div class="tab-content">
         <!-- Contratos -->
@@ -80,7 +84,8 @@
                             <h2 style="color: #673AB7"><b><%= metadata.supplier_count %></b>
                                 <small>contratistas</small>
                             </h2>
-                            <h2 style="color: #673AB7"><b><%=parseInt(metadata.contract_value_amount_total/ 1000000) %></b>
+                            <h2 style="color: #673AB7">
+                                <b><%= parseInt(metadata.contract_value_amount_total / 1000000) %></b>
                                 <small>millones de pesos</small>
                             </h2>
 
@@ -125,15 +130,19 @@
                     <!--<h3 style="text-align: left; color: #00cc99"><b>Proveedores</b></h3>-->
 
 
-
                     <nav class="navbar navbar-default" role="navigation">
                         <div id="navbar" class="navbar-collapse collapse">
-                            <ul id= "visualizador" class="nav navbar-nav">
+                            <ul id="visualizador" class="nav navbar-nav">
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Filtrar <span class="caret"></span></strong></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                       aria-haspopup="true" aria-expanded="false"><strong>Filtrar <span
+                                                    class="caret"></span></strong></a>
                                     <ul id="filtros" class="dropdown-menu scrollable-menu">
-                                        <li class="dropdown-header"><p id="clear_filters" class="clear" style="color:#96CA45; cursor:pointer"><strong>Mostrar/Quitar todos</strong></p>
-                                        </li><li class="divider"></li>
+                                        <li class="dropdown-header"><p id="clear_filters" class="clear"
+                                                                       style="color:#96CA45; cursor:pointer"><strong>Mostrar/Quitar
+                                                    todos</strong></p>
+                                        </li>
+                                        <li class="divider"></li>
                                         <div id="filter-list"></div>
                                     </ul>
                                 </li>
@@ -148,7 +157,8 @@
                                     </select>
                                 </div>
                                 <div id="search_form" class="navbar-form navbar-left">
-                                    <input type="text" class="form-control" id="buscar_bubble" value="" placeholder="Buscar proveedores"/>
+                                    <input type="text" class="form-control" id="buscar_bubble" value=""
+                                           placeholder="Buscar proveedores"/>
                                 </div>
                             </ul>
                         </div>
@@ -160,7 +170,11 @@
                             <div id="vis" class="svg-container"></div>
                         </div>
                     </div>
-                    <div class="row"><div class="col-sm-12"><div id='color-hints'></div></div></div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id='color-hints'></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -177,16 +191,16 @@
 
 
         <div class="col-sm-4">
-            <select class="form-control" id = "filtrar">
-                <option value = "T">Mostrar todo</option>
-                <option value = "AD">Adjudicaciones directas</option>
-                <option value = "ITP">Invitaciónes a tres</option>
-                <option value = "LP">Licitaciones Públicas</option>
+            <select class="form-control" id="filtrar">
+                <option value="T">Mostrar todo</option>
+                <option value="AD">Adjudicaciones directas</option>
+                <option value="ITP">Invitaciónes a tres</option>
+                <option value="LP">Licitaciones Públicas</option>
             </select>
         </div>
         <div class="col-sm-4">
             <!-- ordenar -->
-            <select class="form-control" id = "orderby">
+            <select class="form-control" id="orderby">
                 <option value="title">Ordenar por nombre</option>
                 <option value="value_amount">Ordenar por monto</option>
                 <option value="datesigned">Ordenar por fecha de firma</option>

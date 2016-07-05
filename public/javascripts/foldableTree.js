@@ -490,8 +490,8 @@ var json_imp =      {
     ]
 };
 
-var width    = 1200;
-var height   = 450;
+//var width    = 1200;
+//var height   = 450;
 var maxLabel = 150;
 var duration = 500;
 var radius   = 3;
@@ -504,7 +504,6 @@ var margin = {top: 30, right: 20, bottom: 30, left: 50},
 var i = 0;
 var root;
 
-//---------------------------
 //---------------------------
 
 var tree = d3.layout.tree()
@@ -642,9 +641,10 @@ var circleAttributes = circles
                 .attr("id", "#child-child" + i)
                 .append("p")
                 .text(function(d){ if(d.hasOwnProperty('children') == false){ return d.text;}else{
-                    for(j = 0; j < d.children.length; j++){
+                    /*for(j = 0; j < d.children.length; j++){
                         return d.children[j].text;
-                    }
+                    }*/
+                    return d.children[0].text;
                 }})
                 .append("hr")
                 .style("border-color","#BDBDBD");
@@ -669,10 +669,6 @@ var circleAttributes = circles
 /*---------------------------------------------------*/
 /* Div con Información adicional sobre los contratos */
 /*---------------------------------------------------*/
-
-
-/*---------------------------------------------------*/
-
 
 window.onload = function(){
     root = json;

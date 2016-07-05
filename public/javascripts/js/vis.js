@@ -75,7 +75,7 @@ BubbleChart = (function() {
                 });
                 hide_color_chart();
             } else {
-                alert("No hay resultados");
+                alert("La búsqueda no produjo resultados");
                 color_by($('#color-everything-by').val());
             }
         } else {
