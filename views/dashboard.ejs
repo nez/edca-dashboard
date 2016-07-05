@@ -30,39 +30,43 @@
 
 <dgm-navbar></dgm-navbar>
 
+<!--<div class="panel panel-default bgimg">
+    <div class="panel-body">-->
+<div class="bgimg">
+    <br>
+    <br>
+    <div class="container">
+        <p style="color: white; text-align: center">Estándar de contrataciones abiertas</p>
+        <br>
+        <p style="text-align: center">
+            <img src='/images/logo_gacm.svg' style="max-width:500px"/>
+        </p>
+        <br>
+        <div class="row" style="text-align: center">
+            <div class="col-sm-4" style="color:white;">
+                CONTRATOS
+                <br>
+                <%= metadata.contract_count %>
+            </div>
+            <div class="col-sm-4" style="color: white">
+                CONTRATISTAS
+                <br>
+                <%= metadata.supplier_count %>
+            </div>
+            <div class="col-sm-4" style="color: white">
+                MONTO TOTAL
+                <br>
+                $<%= parseInt(metadata.contract_value_amount_total / 1000000) %>
+                <small>millones</small>
+            </div>
+        </div>
+        <br><br>
+    </div>
+    <!--</div>-->
+</div>
+
 <div class="container">
     <br>
-    <div class="panel panel-default bgimg">
-        <div class="panel-body">
-            <br>
-            <p style="color: white; text-align: center">Estándar de contrataciones abiertas</p>
-            <br>
-            <p style="text-align: center">
-                <img src='/images/logo_gacm.svg' style="max-width:500px"/>
-            </p>
-            <br>
-            <div class="row" style="text-align: center">
-                <div class="col-sm-4" style="color:white;">
-                    CONTRATOS
-                    <br>
-                    <%= metadata.contract_count %>
-                </div>
-                <div class="col-sm-4" style="color: white">
-                    CONTRATISTAS
-                    <br>
-                    <%= metadata.supplier_count %>
-                </div>
-                <div class="col-sm-4" style="color: white">
-                    MONTO TOTAL
-                    <br>
-                    $<%= parseInt(metadata.contract_value_amount_total / 1000000) %>
-                    <small>millones</small>
-                </div>
-            </div>
-            <br>
-        </div>
-    </div>
-
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
