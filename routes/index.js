@@ -14,23 +14,25 @@ router.get('/', function(req, res, next) {
 router.get('/contratos/',function (req, res) {
 
     edca_db.tx(function (t) {
-        var q1 = this.many('select contract.contractingprocess_id, contract.id, contract.title, contract.contractid, ' +
-            'contract.datesigned, contract.value_amount, tender.procurementmethod from tender, contract ' +
-            ' where tender.contractingprocess_id = contract.contractingprocess_id order by contract.title');
-        var q2 = this.many('select * from supplier');
-        var q3 = this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;');
-        var q4 = this.one('select count (*) as total from contractingprocess');
-        var q5 = this.one('select sum(value_amount) as total from contract');
 
-        return this.batch([q1,q2, q3, q4, q5]);
+        var q1 = this.many('select contract.contractingprocess_id, contract.id, contract.title, contract.contractid, ' +
+            'contract.datesigned, contract.value_amount, tender.procurementmethod,' +
+            '(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )' +
+            ' from tender, contract ' +
+            ' where tender.contractingprocess_id = contract.contractingprocess_id order by contract.title');
+
+        var q2 = this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;');
+        var q3 = this.one('select count (*) as total from contractingprocess');
+        var q4 = this.one('select sum(value_amount) as total from contract');
+
+        return this.batch([q1,q2, q3, q4]);
     }).then(function (data) {
         res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas',
             contracts : data[0],
-            suppliers: data [1],
             metadata : {
-                supplier_count: data[2].total,
-                contract_count: data[3].total,
-                contract_value_amount_total: data [4].total
+                supplier_count: data[1].total,
+                contract_count: data[2].total,
+                contract_value_amount_total: data[3].total
             }
         });
     }).catch(function (error) {
@@ -87,21 +89,15 @@ router.get('/proveedor/:supplierid', function (req, res ) {
 
 /* find contract */
 router.post ('/find-contracts/', function (req, res ) {
-    edca_db.tx(function (t) {
 
-        var q1 = this.manyOrNone("select contract.contractingprocess_id, contract.id, contract.title, contract.contractid," +
-                "contract.datesigned, contract.value_amount, tender.procurementmethod " +
-                " from contract, tender where contract.contractingprocess_id = tender.contractingprocess_id " +
-                "and (contract.title ilike '%$1#%' or contract.contractid ilike '%$1#%') " +
-            ( req.body.filter != 'Todo'?" and tender.procurementmethod ilike '$3#%' ":"")+
-            "order by $2~", [req.body.keyword, req.body.orderby, req.body.filter]);
-
-
-        var q2 = this.manyOrNone("select * from supplier"); //hacer join suppliers -> contracts
-
-        return this.batch([q1, q2]);
-    }).then(function (data) {
-        res.render (  'contracts', {contracts: data[0], suppliers: data[1] });
+    edca_db.manyOrNone("select contract.contractingprocess_id, contract.id, contract.title, contract.contractid," +
+        "contract.datesigned, contract.value_amount, tender.procurementmethod, " +
+        "(select count(*) as nsuppliers from supplier where supplier. contractingprocess_id = tender.contractingprocess_id )" +
+        " from contract, tender where contract.contractingprocess_id = tender.contractingprocess_id " +
+        "and (contract.title ilike '%$1#%' or contract.contractid ilike '%$1#%') " +
+        ( req.body.filter != 'Todo'?" and tender.procurementmethod ilike '$3#%' ":"")+
+        "order by $2~", [req.body.keyword, req.body.orderby, req.body.filter]).then(function (data) {
+        res.render (  'contracts', {contracts: data });
     }).catch(function (error) {
         console.log("ERROR: ", error); 
     });

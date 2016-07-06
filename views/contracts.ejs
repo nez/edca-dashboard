@@ -1,77 +1,53 @@
 <% for (var i = 0; i < contracts.length;i++){ %>
 
 <div class="well well-sm">
-        <div class="row">
+    <div class="row">
 
 
-            <div class="col-sm-1">
-                <img src="/images/icono_con.png">
-            </div>
-            <div class="col-sm-11">
-                <h4><strong><%= contracts [i].title %> </strong></h4>
-                <%= contracts [i].contractid %>
+        <div class="col-sm-1">
+            <img src="/images/icono_con.png">
+        </div>
+        <div class="col-sm-11">
+            <h4><strong><%= contracts [i].title %> </strong></h4>
+            <%= contracts [i].contractid %>
 
-            </div>
+        </div>
 
-            </div>
+    </div>
 
     <div class="row">
         <div class="col-sm-3">
-                <h3><b>$<%= parseFloat(contracts [i].value_amount).toFixed(2) %></b></h3>
+            <h3><b>$<%= parseFloat(contracts [i].value_amount).toFixed(2) %></b></h3>
         </div>
         <div class="col-sm-3">
             <p>Tipo
                 <br>
-            <b><%= contracts[i].procurementmethod %></b>
+                <b><%= contracts[i].procurementmethod %></b>
             </p>
 
         </div>
         <div class="col-sm-2">
-            <p>Proveedores:</p>
+            <p>Proveedores:<br>
+                <b><%= contracts[i].nsuppliers %></b>
+            </p>
 
         </div>
         <div class="col-sm-2">
             <p>Fecha de firma:<br>
-            <b><%= contracts [i].datesigned.toLocaleDateString() %></b>
+                <b><%= contracts [i].datesigned.toLocaleDateString() %></b>
             </p>
         </div>
         <div class="col-sm-2">
             <div class="btn-group" role="group" aria-label="...">
-            <a href="" class='btn btn-default'> <i class='fa fa-download'></i></a>
-            <a href="<%= "/contrataciones-abiertas/contrato/" + contracts[i].contractingprocess_id %>"
-                  data-id="<%= contracts[i].contractingprocess_id %>" class='btn btn-default'> <i
+                <a href="" class='btn btn-default'> <i class='fa fa-download'></i></a>
+                <a href="<%= "/contrataciones-abiertas/contrato/" + contracts[i].contractingprocess_id %>"
+                   data-id="<%= contracts[i].contractingprocess_id %>" class='btn btn-default'> <i
                             class='fa fa-line-chart'></i></a>
-                </div>
-
-        </div>
-
-
-
-<!--
-            <div class="col-sm-12">
-                <p>Fecha de firma: <strong><%= contracts [i].datesigned.toLocaleDateString() %> </strong></p>
-
-
-                <p><strong>Proveedor(es)</strong></p>
-
-                <div class="list-group">
-
-                <%
-                for (var j = 0; j < suppliers.length ;j++){
-                if (suppliers[j].contractingprocess_id == contracts[i].contractingprocess_id ){
-                %>
-                    <a href="<%= "/contrataciones-abiertas/proveedor/" +suppliers[j].id%>" class="list-group-item">
-                        <h4 class="list-group-item-heading"><%= suppliers[j].identifier_id %></h4>
-                        <p class="list-group-item-text"> <%= suppliers[j].identifier_legalname %></p>
-                        <p class="list-group-item-text"> <%= suppliers[j].identifier_uri %></p>
-                    </a>
-                <% }
-                } %>
-                </div>
             </div>
-        -->
 
         </div>
+
     </div>
+</div>
 
 <% } %>
