@@ -497,8 +497,13 @@ var duration = 500;
 var radius   = 3;
 
 // Set the dimensions of the canvas / graph
-var margin = {top: 30, right: 20, bottom: 30, left: 50},
-    width = 1500 - margin.left - margin.right,
+var margin = {
+    top: 30,
+    right: 20,
+    bottom: 30,
+    left: 50
+},
+    width = 1100 - margin.left - margin.right,
     height = 670 - margin.top - margin.bottom;
 
 var i = 0;
@@ -532,21 +537,21 @@ var div = d3.select("#arbol").append("div")
 
 /*------------Circle bar---------------*/
 var barCircles  = [
-    {"x_axis":80, "y_axis":18, "radius":10, "color": "#424242",   "name":"Planeación"},
-    {"x_axis":300, "y_axis":18, "radius":10, "color": "#424242",  "name":"Licitación"},
-    {"x_axis":550, "y_axis":18, "radius":10, "color": "#424242",  "name":"Adjudicación"},
-    {"x_axis":800, "y_axis":18, "radius":10, "color": "#424242",  "name":"Contratación"},
-    {"x_axis":1040, "y_axis":18, "radius":10, "color": "#424242", "name":"Implementación"}
+    {"x_axis":150, "y_axis":18, "radius":10, "color": "#424242",   "name":"Planeación"},
+    {"x_axis":310, "y_axis":18, "radius":10, "color": "#424242",  "name":"Licitación"},
+    {"x_axis":470, "y_axis":18, "radius":10, "color": "#424242",  "name":"Adjudicación"},
+    {"x_axis":630, "y_axis":18, "radius":10, "color": "#424242",  "name":"Contratación"},
+    {"x_axis":790, "y_axis":18, "radius":10, "color": "#424242", "name":"Implementación"}
 ];
 
 var svgContainer = d3.select("#bolitas").append("svg")
-    .attr("width",  1500)
+    .attr("width",  800)
     .attr("height", 50);
 
 var line = svgContainer.append("line")
-    .attr("x1", 80)
+    .attr("x1", 160)
     .attr("y1", 18)
-    .attr("x2", 1040)
+    .attr("x2", 800)
     .attr("y2", 18)
     .attr("stroke-width", 15)
     .attr("stroke", "#9e9e9e")
@@ -568,52 +573,40 @@ var circleAttributes = circles
         svgContainer.selectAll("circle").style("fill", "#424242");
         var s_circle = d3.select(this);
         s_circle.style("fill", "#00cc99");
-        if(s_circle.attr("cx") == 80){
-            root = json_plan;
-            update(root);
-        }else if(s_circle.attr("cx") == 300){
-            root = json_lic;
-            update(root);
-        }else if(s_circle.attr("cx") == 550){
-            root = json_adj;
-            update(root);
-        }else if(s_circle.attr("cx") == 800){
-            root = json_cont;
-            update(root);
-        }else if(s_circle.attr("cx") == 1040){
-            root = json_imp;
-            update(root);
-        }
-        var name = d.name;
+
+        var data;
+
         var add_data = d3.select("#add_data")
             .style("display","block")
             .selectAll("#etapa")
-            .data([name])
+            .data([d.name])
             .transition()
             .duration(1000)
             .text(function(d){return d;})
             .style("font-weight","bold");
 
-        // Select data
-        var data;
-        switch(name){
-            case "Planeación":
-                data = json_plan.children;
-                break;
-            case "Licitación":
-                data = json_lic.children;
-                break;
-            case "Adjudicación":
-                data = json_adj.children;
-                break;
-            case "Contratación":
-                data = json_cont.children;
-                break;
-            case "Implementación":
-                data = json_imp.children;
-                break;
-            default:
-                data = json_plan.children;
+        if ( d.name == 'Planeación'){
+            root = json_plan;
+            update(root);
+            data = json_plan.children;
+        }else if( d.name == 'Licitación'){
+            root = json_lic;
+            update(root);
+            data = json_lic.children;
+        }else if( d.name == 'Adjudicación' ){
+            data = json_adj.children;
+            root = json_adj;
+            update(root);
+        }else if( d.name == 'Contrato'){
+            root = json_cont;
+            update(root);
+            data = json_cont.children;
+        }else if( d.name == 'Implementación'){
+            root = json_imp;
+            update(root);
+            data = json_imp.children;
+        } else {
+            data = json_plan.children;
         }
 
         // Clean data
@@ -622,7 +615,7 @@ var circleAttributes = circles
             .remove();
 
         // Fill in data.
-        for(i = 0; i < data.length; i++){
+        for(var i = 0; i < data.length; i++){ // var i?
             d3.select("#etapa_desglo")
                 .selectAll("p" + i)
                 .data(["" + data[i].name + ""])
@@ -677,8 +670,7 @@ window.onload = function(){
 
 
 
-function update(source)
-{
+function update(source){
     // Compute the new tree layout.
     var nodes = tree.nodes(root).reverse();
     var links = tree.links(nodes);
@@ -788,8 +780,7 @@ function update(source)
         .on("mouseout", function(d){
             d3.select(this).style("stroke", "#9E9E9E");
             d3.select(this).style("stroke-width", "5.5px");
-        })
-    ;
+        });
 
     // Transition links to their new position.
     link.transition()
@@ -813,14 +804,12 @@ function update(source)
     });
 }
 
-function computeRadius(d)
-{
+function computeRadius(d){
     if(d.children || d._children) return radius + (radius * nbEndNodes(d) / 10);
     else return radius;
 }
 
-function nbEndNodes(n)
-{
+function nbEndNodes(n){
     nb = 0;
     if(n.children){
         n.children.forEach(function(c){
@@ -837,8 +826,7 @@ function nbEndNodes(n)
     return nb;
 }
 
-function click(d)
-{
+function click(d){
     if (d.children){
         d._children = d.children;
         d.children = null;

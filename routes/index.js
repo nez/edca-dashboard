@@ -9,7 +9,6 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'Estandar de Datos de Contrataciones Abiertas' });
 });
 
-
 /* dashboard contract list (1st page) */
 router.get('/contratos/',function (req, res) {
 
@@ -162,7 +161,7 @@ router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
 
             });
         }
-         if (documents.length > 0) {return documents;}
+        if (documents.length > 0) {return documents;}
     }
 
 
@@ -218,7 +217,7 @@ router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
             });
         }
 
-         if (suppliers.length > 0 ){return suppliers;}
+        if (suppliers.length > 0 ){return suppliers;}
     }
     
     switch ( req.params.stage ){
