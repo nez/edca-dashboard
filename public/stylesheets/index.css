@@ -1,0 +1,14 @@
+.bgimg {
+    background: #eee;
+    background-image: url('/images/bgc.png');
+    background-size: 1024px 270px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+body{
+    background-color: #eee;
+}
+.panel{
+    border:none;
+}

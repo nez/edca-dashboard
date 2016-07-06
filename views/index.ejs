@@ -5,19 +5,10 @@
     <!-- Bootstrap core CSS -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/main.css'/>
+    <link rel='stylesheet' href='/stylesheets/index.css'/>
     <link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="/dgm-navbar/dgm-navbar.html">
     <link rel="import" href="/dgm-footer/dgm-footer.html">
-
-    <style type="text/css">
-        .bgimg {
-            background: #eee;
-            background-image: url('/images/bg.png');
-            background-size: 1024px 370px;
-            background-position: bottom;
-            background-repeat: no-repeat;
-        }
-    </style>
 
     <title>Contrataciones Abiertas</title>
 </head>
@@ -25,18 +16,55 @@
 
 <body>
 <dgm-navbar></dgm-navbar>
+
+<!--
 <section id="banner">
     <div class="container-fluid fixed">
         <p class="text-left"><b>Contrataciones Abiertas</b></p>
     </div>
 </section>
+-->
+<%  metadata = {}%>
 
-<section id="highlights" class="bgimg">
-    <div class="content">
-        <!--<div class="overlay" style="background: #eee"></div>-->
-        <div class="container-fluid">
-            <div class="row" >
-                <div  class="col-sm-12">
+<div  class="bgimg" style="background-color: #333">
+    <div class="container">
+        <br>
+        <br>
+        <center>
+            <img src="/images/icono_con.png" style="width: 80px" >
+        </center>
+        <h2 style="text-align: center; color: white"><b>Contrataciones Abiertas</b></h2>
+        <h4 style="text-align: center; color: white">Lorem ipsim dolor sit amet secularum</h4>
+        <br>
+        <div class="row" style="text-align: center">
+            <div class="col-sm-4" style="color:white;">
+                CONTRATOS
+                <br>
+                <%= metadata.contract_count %>
+            </div>
+            <div class="col-sm-4" style="color: white">
+                CONTRATISTAS
+                <br>
+                <%= metadata.supplier_count %>
+            </div>
+            <div class="col-sm-4" style="color: white">
+                MONTO TOTAL
+                <br>
+                $<%= parseInt(metadata.contract_value_amount_total / 1000000) %>
+                <small>millones</small>
+            </div>
+        </div>
+
+        <br>
+        <br>
+    </div>
+</div>
+<br>
+<br>
+
+<div class="container">
+    <div class="row" >
+        <!-- <div  class="col-sm-12">
                   <br>
                     <center>
                     <img src="/images/icono_con.png" >
@@ -45,30 +73,31 @@
                     <h4 style="text-align: center; color: #666666;">Lorem ipsim dolor sit amet secularum</h4>
                     <br>
                     <br>
-                </div>
-                <section>
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-default" style="align-content: center">
-                            <div class="panel-body">
-                                <center>
-                                    <a href="/contrataciones-abiertas/contratos"><img src="/images/gacm.png"  alt="GACM"></a></center>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <center>
-                                    <a href="http://datos.gob.mx/redcompartida/"> <img src="/images/banner-red-compartida.png"></a>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-2"></div>
-                </section>
-            </div>
+                </div>--->
 
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+            <div class="panel panel-default" style="align-content: center">
+                <div class="panel-body">
+                    <center>
+                        <a href="/contrataciones-abiertas/contratos"><img src="/images/gacm.png"  alt="GACM"></a></center>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <center>
+                        <a href="http://datos.gob.mx/redcompartida/"> <img src="/images/banner-red-compartida.png"></a>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+
+    </div>
+
+    <!--
             <div class="row">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-5">
@@ -87,25 +116,23 @@
                 </div>
                 <div class="col-sm-1"></div>
             </div>
-        </div>
-    </div>
-</section>
-  <br>
 
-<div class="container">
-    <h4><b>Avances</b></h4>
-    <hr>
+-->
+</div>
+<br>
+<div style="background-color: white">
 
-    <div class="row">
-        <section>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </section>
+    <div class="container">
+        <h4><b>Avances</b></h4>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
 </div>
+
 
 <dgm-footer></dgm-footer>
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>

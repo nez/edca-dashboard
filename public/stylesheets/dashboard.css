@@ -1,3 +1,6 @@
+body{
+    background-color: #eee;
+}
 /* google charts */
 div.google-visualization-tooltip > ul > li > span {
     /*color: #f6f6f6 !important;*/

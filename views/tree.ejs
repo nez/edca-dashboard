@@ -11,22 +11,20 @@
     <link rel="import" href="/dgm-footer/dgm-footer.html">
 
     <title>Contrataciones Abiertas</title>
-
-
 </head>
-
 
 <body>
 <dgm-navbar></dgm-navbar>
-
+<!--
 <section id="banner">
     <div class="container-fluid fixed">
         <p class="text-left"><b>Grupo Aeroportuario de la Ciudad de México</b></p>
     </div>
-</section>
+</section>-->
 
 <% if (typeof contract != 'undefined'){%>
 
+<!--
 <section id="highlights">
     <div class="content">
         <div class="overlay" style="background-color:#E0E0E0"></div>
@@ -42,11 +40,13 @@
         </div>
     </div>
 </section>
-<br>
+-->
 
+<br>
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-body">
+            <p><b><%= contract.title %></b></p>
             <p>Identificador: <b><%= contract.contractid%></b> </p>
             <p>Fecha de firma: <b><%= contract.datesigned.toLocaleDateString()%></b></p>
             <p>Monto: <b><%= parseFloat(contract.value_amount).toFixed(2)%></b></p>
@@ -62,6 +62,7 @@
         </div>
     </div>
 
+    <!--
     <div class="row">
         <div class='col-md-12' id="bolitas" style="background:#e0e0e0">
             <div style="position:absolute;bottom:40px;right:1025px"><p><b>Planeación</b></p></div>
@@ -75,7 +76,13 @@
 
     </div>
     <br>
-    <div id="arbol"></div>
+    -->
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div id="arbol"></div>
+        </div>
+    </div>
+
 
     <br>
     <div class="row">
