@@ -6,7 +6,24 @@ var edca_db  = pgp("postgres://tester:test@localhost/edca");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Estandar de Datos de Contrataciones Abiertas' });
+
+    edca_db.tx(function (t) {
+        var q1 = this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;');
+        var q2 = this.one('select count (*) as total from contractingprocess');
+        var q3 = this.one('select sum(value_amount) as total from contract');
+
+        return this.batch([q1,q2, q3]);
+    }).then(function (data) {
+        res.render('index',{ title: 'Estandar de Datos de Contrataciones Abiertas',
+            metadata : {
+                supplier_count: data[0].total,
+                contract_count: data[1].total,
+                contract_value_amount_total: data[2].total
+            }
+        });
+    }).catch(function (error) {
+        console.log("ERROR: ", error);
+    });
 });
 
 /* dashboard contract list (1st page) */
@@ -47,7 +64,6 @@ router.get('/contrato/:cpid',function (req, res) {
         req.params.cpid
     ]).then(function (data) {
         res.render('tree',{  contract : data });
-
     }).catch(function (error) {
         console.log("ERROR: ", error);
         res.render ('tree' );
