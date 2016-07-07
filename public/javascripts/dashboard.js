@@ -109,7 +109,7 @@ function drawSeriesChart() {
                 width: '75%',
                 heigth: '90%',
                 left: '75',
-                right: '10',
+                right: '30',
                 top: '30',
                 //bottom: '10'
             },
@@ -350,7 +350,7 @@ d3.csv("/data.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", "16px")
         //.style("text-decoration", "underline")
-        .text("Avances al 10 de julio de 2016");
+        .text("Avances al 7 de julio de 2016");
 
     var legend = svg.selectAll(".legend")
         .data(ageNames.slice().reverse())

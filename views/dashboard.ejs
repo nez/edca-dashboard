@@ -36,7 +36,7 @@
     <br>
     <br>
     <div class="container">
-        <p style="color: white; text-align: center">Estándar de contrataciones abiertas</p>
+        <!--<p style="color: white; text-align: center">Estándar de contrataciones abiertas</p>-->
         <br>
         <p style="text-align: center">
             <img src='/images/logo_gacm.svg' style="max-width:500px"/>
@@ -44,14 +44,17 @@
         <br>
         <div class="row" style="text-align: center">
             <div class="col-sm-4" style="color:white;">
-                CONTRATOS
+                CONTRATOS VIGENTES
                 <br>
-                <%= metadata.contract_count %>
+                100
+                <!--<%= metadata.contract_count %>-->
             </div>
             <div class="col-sm-4" style="color: white">
-                CONTRATISTAS
+                CONTRATOS ABIERTOS
                 <br>
-                <%= metadata.supplier_count %>
+                100%
+                <!--<%= metadata.contract_count %>-->
+                <!--<%= metadata.supplier_count %>-->
             </div>
             <div class="col-sm-4" style="color: white">
                 MONTO TOTAL
@@ -71,9 +74,9 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <ul class="nav nav-pills nav-justified">
-                <li role="presentation" class="active"><a data-toggle="pill" href="#home">Contratos
+                <li role="presentation" class="active"><a data-toggle="pill" href="#home">Explorar contratos
                         <!--<i class="fa fa-file-code-o"></i>--> </a></li>
-                <li role="presentation"><a data-toggle="pill" href="#menu1">Proveedores
+                <li role="presentation"><a data-toggle="pill" href="#menu1">Explorar proveedores
                         <!--<i class="fa fa-users"></i>--></a></li>
             </ul>
         </div>
@@ -102,7 +105,7 @@
                             <h3 style="text-align: left;"><b>Tipos de contratación</b></h3>
                             <div style="color: white; height: 270px; width: 260px;" id="chart4"></div>
                         </div>
-                        <div class="col-sm-8" style="overflow: auto;">
+                        <div class="col-sm-8" ><!--style="overflow: auto;">-->
                             <h3 style="text-align: left;"><b>Contrataciones en el tiempo</b></h3>
 
                             <div style="height: 400px; width: 700px; align-content: left;" id="series_chart_div"></div>
@@ -118,6 +121,9 @@
         <div id="menu1" class="tab-pane fade">
             <div class="panel panel-default">
                 <div class="panel-body">
+                    <h3 style="text-align: left;"><b>Información general de proveedores</b>
+                    </h3>
+
 
                     <!--<h3 style="text-align: left; color: #00cc99"><b>Proveedores</b></h3>-->
                     <nav class="navbar navbar-default" role="navigation">
