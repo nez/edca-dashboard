@@ -122,7 +122,7 @@ function render_filters_colors_and_groups(csv) {
     for (var i in lookups) {
         var lookup = lookups[i];
         var values = get_distinct_values(csv, lookup.type, lookup.key);
-        var item = $('<div class="filter_block dropdown-header"><li class="filter_title"><p style="color:#96CA45;"><strong>' + lookup.title + '</strong></p></li></div>');
+        var item = $('<div class="filter_block dropdown-header"><li class="filter_title"><p style="color:#00cc99;"><strong>' + lookup.title + '</strong></p></li></div>');
         for (var j in values) {
             var checkbox = $('<li class="sub-filter-block"><label style="cursor:pointer"><input style="cursor:pointer" data-target="' + lookup.key + '" type="checkbox" checked="checked" value="' + values[j] + '"/> ' + values[j] + '</label></li>');
             checkbox.appendTo(item);
