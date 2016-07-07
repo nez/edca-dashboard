@@ -67,6 +67,12 @@ var initialise_form = function(selectionOptions) {
     colorSelect.change(ResetColors);
 };
 
+$('#filtros').on({
+"click":function(e){
+    e.stopPropagation();
+  }
+});
+
 function get_distinct_values(csv, keyType, key) {
     var allValues = {};
     for (var i in csv) {
