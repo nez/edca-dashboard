@@ -110,9 +110,10 @@ BubbleChart = (function() {
         that = this;
         this.circles.enter().append("circle").attr("r", 100).style("fill", function(d) {
             return '#00cc99';
-        }).attr("stroke-width", 2).attr("stroke", function(d) {
+        })/*.attr("stroke-width", 2).attr("stroke", function(d) {
             return '#404040';
-        }).attr("id", function(d) {
+        })*/.attr("stroke", "none")
+            .attr("id", function(d) {
             return "bubble_" + d.id;
         }).attr("opacity", 0).on("mouseover", function(d, i) {
             return that.show_details(d, i, this);
@@ -292,12 +293,12 @@ BubbleChart = (function() {
     };
     BubbleChart.prototype.show_details = function(data, i, element) {
         var content, key, title, value, _ref;
-        d3.select(element).attr("stroke", "black").style("fill-opacity", 0.8);
+        //d3.select(element).attr("stroke", "black").style("fill-opacity", 0.8);
         content = data.original['Razón social']; //.Elemento;
         this.tooltip.showTooltip(content, d3.event);
     };
     BubbleChart.prototype.hide_details = function(data, i, element) {
-        d3.select(element).attr("stroke", "#404040").style("fill-opacity", 0.5);
+        //d3.select(element).attr("stroke", "#404040").style("fill-opacity", 0.5);
         this.tooltip.hideTooltip();
     };
     // FUNCIÓN QUE OBTIENE LA INFORMACIÓN DE CADA ELEMENTO Y LO MUESTRA EN EL MODAL "modalInfo"
