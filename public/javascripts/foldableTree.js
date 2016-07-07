@@ -528,7 +528,7 @@ root.x0 = height / 2;
 root.y0 = 0;
 
 /* original code */
-
+/*
 update(root);
 
 d3.select(self.frameElement).style("height", "500px");
@@ -631,10 +631,10 @@ function click(d) {
     }
     update(d);
 }
+*/
 
 
 
-/*
 root.children.forEach(collapse);
 
 // Define the div for the tooltip
@@ -963,4 +963,4 @@ $('#refresh').on("click", function(event){
     svgContainer.selectAll("circle").style("fill", "#424242");
     update(root);
     update ( json );
-});*/
+});

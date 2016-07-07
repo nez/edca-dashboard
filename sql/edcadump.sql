@@ -1850,7 +1850,6 @@ COPY budget (id, contractingprocess_id, planning_id, budget_source, budget_budge
 15	15	15	Presupuesto de Egresos de la Fedración 2015 y 2016	46101	Transferencias a fideicomisos públicos	17000000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 16	16	16	Presupuesto de Egresos de la Fedración 2015 y 2016	46101	Transferencias a fideicomisos públicos	20000000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 18	17	18	Presupuesto de Egresos de la Federación 2016	46101	Transferencias a fideicomisos públicos	122000000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2016/docs/09/r09_kdh_pie.pdf
-1	1	1	Presupuesto de Egresos de la Fedración 2015 y 2016	46101	Términos de referencia "Extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Cuidad de México".  Públicados en CompraNet el 24 de noviembre de 2014	54520000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 20	19	19	Presupuesto de Egresos de la Federación 2015 y 2016	46101	Transferencias a fideicomisos públicos	1276500	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2016/docs/09/r09_kdh_pie.pdf
 11	11	11	Presupuesto de Egresos de la Federación 2015 y 2016	1409JZL0005	Programa anual de obras públicas y servicios relacionados con las mismas de GACM correspondiente al ejercicio fiscal 2015	18500000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México		http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 8	8	8	Presupuesto de Egresos de la Federación 2015 y 2016		Transferencias a fideicomisos públicos.	150000000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	
@@ -1868,6 +1867,7 @@ COPY budget (id, contractingprocess_id, planning_id, budget_source, budget_budge
 12	12	12	Presupuesto de Egresos de la Federación 2015 y 2016	46101	Transferencias a fideicomisos públicos	490000000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_pief.pdf
 24	24	24	Presupuesto de Egresos de la Fedración 2015 	46101	Transferencias a fideicomisos públicos	10400000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 25	25	25	Presupuesto de Egresos de la Fedración 2015 y 2016	46101	Transferencias a fideicomisos públicos	16000000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
+1	1	1	Presupuesto de Egresos de la Federación 2015 y 2016	46101	Términos de referencia "Extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Cuidad de México".  Públicados en CompraNet el 24 de noviembre de 2014	54520000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 \.
 
 
@@ -2200,11 +2200,11 @@ COPY planning (id, contractingprocess_id, rationale) FROM stdin;
 21	21	Limpiar la zona donde se alojarán las pistas y edificios principales del Nuevo Aeropuerto Internacional de la Ciudad de México, para ello, se deberán retirar fuera del poligono los materiales producto de depósitos, de demoliciones, desperdicios y desazolve, realizando su carga y acarreo correspondiente, así como su deposito en bancos autorizados por la autoridad competente. 
 23	22	El objetivo principal es proporcionar una plataforma de trabajo en el sitio en que se llevarán acabo las futuras actividadesde construcción, esta plataforma de trabajo se realizará para el alcance de la construcción completa del contrato del ingeniero civil marstro e incluye todos los pavimentos de lado aire para pista2 y pista 3con las calles de rodaje y plataformas en el medio, ademas incluye los edificios para las plantas centrales de servicios, la zona de combustibles, las áreas de mantenimiento  y las estaciones de bomberos y rescate y la calle de rodaje transversal para la pista 6.
 22	23	Construir la infraestructura de caminos provisionales en la etapa de construcción, para el equipo y maquinaria de construcción de todos los contratistasque participen en la construcción del Nuevo Aeropuerto Internacional de la Ciudad de México, que consiste en terracerías, estructuras, obras de drenaje, pavimentaciób y señalamiento. 
-1	1	
 24	24	
 25	25	
 8	8	
 12	12	
+1	1	
 \.
 
 
