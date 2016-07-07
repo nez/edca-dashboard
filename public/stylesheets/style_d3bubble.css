@@ -20,10 +20,9 @@
 
 .top_labels {
     font-family: 'Open Sans'; /*'Raleway', sans-serif;*/
-    font-size: 15px;
+    font-size: 12px;
     writing-mode: vertical-rl;
     fill: #000;
-    -ms-writing-mode: lr-tb;
 }
 
 #chartWrapper {

@@ -30,7 +30,7 @@ BubbleChart = (function() {
         this.create_nodes = __bind(this.create_nodes, this);
         this.data = data;
         this.width = 1140;
-        this.height = 650;
+        this.height = 600;
         this.tooltip = CustomTooltip("my_tooltip", 150);
         this.center = {
             x: this.width / 2,
@@ -103,7 +103,7 @@ BubbleChart = (function() {
         var that,
             _this = this;
         /*this.vis = d3.select("#vis").append("svg").attr("width", this.width).attr("height", this.height).attr("id", "svg_vis");*/
-        this.vis = d3.select("#vis").append("svg").attr("id", "svg_vis").attr("preserveAspectRatio", "xMinYMin meet").attr("viewBox", "0 0 1110 650");
+        this.vis = d3.select("#vis").append("svg").attr("id", "svg_vis").attr("preserveAspectRatio", "xMinYMin meet").attr("viewBox", "0 0 1110 600");
         this.circles = this.vis.selectAll("circle").data(this.nodes, function(d) {
             return d.id;
         });
@@ -119,9 +119,9 @@ BubbleChart = (function() {
             return that.show_details(d, i, this);
         }).on("mouseout", function(d, i) {
             return that.hide_details(d, i, this);
-        }).on("click", function(d, i) {
+        })/*.on("click", function(d, i) {
             return that.muestra_info(d, i, this);
-        });
+        })*/;
         this.circles.transition().duration(2000).style("fill-opacity", .5).attr("opacity", 2).attr("r", function(d) {
             return d.radius;
         });
@@ -134,7 +134,7 @@ BubbleChart = (function() {
     };
     BubbleChart.prototype.start = function() {
         this.force = d3.layout.force().nodes(this.nodes).size([this.width, this.height]);
-        return this.circles.call(this.force.drag);
+        return this.circles.call(this.force.drag); // Efecto de arrastrar
     };
     BubbleChart.prototype.display_group_all = function() {
         var _this = this;
@@ -285,7 +285,7 @@ BubbleChart = (function() {
         }).attr("y", 10).attr("text-anchor", "start").text(function(d) {
             return d;
         });
-        //console.log(labels);
+        console.log(group_labels[d]);
     };
     BubbleChart.prototype.hide_labels = function() {
         var labels;
