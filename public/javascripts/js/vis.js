@@ -115,14 +115,14 @@ BubbleChart = (function() {
         })*/.attr("stroke", "none")
             .attr("id", function(d) {
             return "bubble_" + d.id;
-        }).attr("opacity", 0).on("mouseover", function(d, i) {
+        }).on("mouseover", function(d, i) {
             return that.show_details(d, i, this);
         }).on("mouseout", function(d, i) {
             return that.hide_details(d, i, this);
         })/*.on("click", function(d, i) {
             return that.muestra_info(d, i, this);
         })*/;
-        this.circles.transition().duration(2000).style("fill-opacity", .5).attr("opacity", 2).attr("r", function(d) {
+        this.circles.transition().duration(2000).style("fill-opacity", 0.55).attr("opacity", 2).attr("r", function(d) {
             return d.radius;
         });
     };
@@ -293,12 +293,12 @@ BubbleChart = (function() {
     };
     BubbleChart.prototype.show_details = function(data, i, element) {
         var content, key, title, value, _ref;
-        //d3.select(element).attr("stroke", "black").style("fill-opacity", 0.8);
+        d3.select(element)./*attr("stroke", "black").*/style("fill-opacity", 0.85);
         content = data.original['Razón social']; //.Elemento;
         this.tooltip.showTooltip(content, d3.event);
     };
     BubbleChart.prototype.hide_details = function(data, i, element) {
-        //d3.select(element).attr("stroke", "#404040").style("fill-opacity", 0.5);
+        d3.select(element)./*attr("stroke", "#404040").*/style("fill-opacity", 0.55);
         this.tooltip.hideTooltip();
     };
     // FUNCIÓN QUE OBTIENE LA INFORMACIÓN DE CADA ELEMENTO Y LO MUESTRA EN EL MODAL "modalInfo"
