@@ -14,13 +14,8 @@
 
 <body>
 <dgm-navbar></dgm-navbar>
-
-
-
-
 <div class="container">
     <br>
-
     <% if (typeof buyer != 'undefined'){%>
 
     <div class="panel panel-default">
@@ -28,15 +23,13 @@
             <p>Nombre: <label><%= buyer.name%></label></p>
             <p>Nombre legal: <label> <%= buyer.identifier_legalname%></label></p>
             <p>
-            Sitio web: <label>
-            <a href="<%= buyer.identifier_uri %>"><%= buyer.identifier_uri %></a></label>
+                Sitio web: <label>
+                    <a href="<%= buyer.identifier_uri %>"><%= buyer.identifier_uri %></a></label>
             </p>
             <p> Dirección: <label><%= buyer.identifier_streetaddress %></label></p>
             <p>Estado:<label> <%= buyer.identifier_region%></label></p>
             <p>Código postal: <label><%= buyer.identifier_postalcode %></label></p>
         </div>
-
-
 
     </div>
     <%}else {%>

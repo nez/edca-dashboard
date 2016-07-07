@@ -56,7 +56,7 @@
             <div class="col-sm-4" style="color: white">
                 MONTO TOTAL
                 <br>
-                $<%= parseInt(metadata.contract_value_amount_total / 1000000) %>
+                $<%= ( parseInt(metadata.contract_value_amount_total / 1000000) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); %>
                 <small>millones</small>
             </div>
         </div>
