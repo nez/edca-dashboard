@@ -111,7 +111,7 @@ function drawSeriesChart() {
                 left: '75',
                 right: '30',
                 top: '10',
-                bottom: '30'
+                //bottom: '30'
             },
             backgroundColor: 'transparent',
             tooltip: {isHtml: true},
