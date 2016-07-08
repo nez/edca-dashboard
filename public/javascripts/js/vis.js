@@ -103,7 +103,7 @@ BubbleChart = (function() {
         var that,
             _this = this;
         /*this.vis = d3.select("#vis").append("svg").attr("width", this.width).attr("height", this.height).attr("id", "svg_vis");*/
-        this.vis = d3.select("#vis").append("svg").attr("id", "svg_vis").attr("preserveAspectRatio", "xMinYMin meet").attr("viewBox", "0 0 1110 600");
+        this.vis = d3.select("#vis").append("svg").attr("id", "svg_vis").attr("preserveAspectRatio", "xMinYMin meet").attr("viewBox", "0 0 1140 600");
         this.circles = this.vis.selectAll("circle").data(this.nodes, function(d) {
             return d.id;
         });
@@ -285,7 +285,6 @@ BubbleChart = (function() {
         }).attr("y", 10).attr("text-anchor", "start").text(function(d) {
             return d;
         });
-        console.log(group_labels[d]);
     };
     BubbleChart.prototype.hide_labels = function() {
         var labels;

@@ -228,8 +228,8 @@ var tip = d3.tip()
     });
 
 var svg = d3.select("#d3bar").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "0 0 1100 350")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
