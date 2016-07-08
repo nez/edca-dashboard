@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 var pgp = require('pg-promise')();
+
+console.log( process.env.EDCA_DB);
+//var edca_db  = pgp( EDCA_DB );
 var edca_db  = pgp("postgres://tester:test@localhost/edca");
 
 /* GET home page. */
