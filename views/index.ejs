@@ -10,6 +10,18 @@
     <link rel="import" href="/dgm-navbar/dgm-navbar.html">
     <link rel="import" href="/dgm-footer/dgm-footer.html">
 
+    <style>
+        .hover {
+            opacity: 0.3;
+            filter: alpha(opacity=30); /* For IE8 and earlier */
+        }
+
+        .iconito {
+            background-color: #0c9;
+            border-radius: 100px;
+            padding: 5px 5px;
+        }
+    </style>
     <title>Contrataciones Abiertas</title>
 </head>
 
@@ -29,26 +41,6 @@
 
         <br>
         <br>
-        <!--
-        <div class="row" style="text-align: center">
-            <div class="col-sm-4" style="color:white;">
-                CONTRATOS
-                <br>
-                <%= metadata.contract_count %>
-            </div>
-            <div class="col-sm-4" style="color: white">
-                CONTRATISTAS
-                <br>
-                <%= metadata.supplier_count %>
-            </div>
-            <div class="col-sm-4" style="color: white">
-                MONTO TOTAL
-                <br>
-                $<%=  (parseInt(metadata.contract_value_amount_total / 1000000) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%>
-                <small>millones</small>
-            </div>
-        </div> -->
-
         <br>
         <br>
     </div>
@@ -65,7 +57,7 @@
             <div class="panel panel-default" style="align-content: center">
                 <div class="panel-body">
                     <center>
-                        <a href="/contrataciones-abiertas/contratos"><img src="/images/gacm.png"  alt="GACM"></a></center>
+                        <a href="/contrataciones-abiertas/contratos"><img src="/images/gacm.png"  alt="GACM" id="img1"></a></center>
                 </div>
             </div>
         </div>
@@ -73,7 +65,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <center>
-                        <a href="http://datos.gob.mx/redcompartida/"> <img src="/images/banner-red-compartida.png"></a>
+                        <a href="http://datos.gob.mx/redcompartida/"> <img src="/images/banner-red-compartida.png" id="img2"></a>
                     </center>
                 </div>
             </div>
@@ -82,27 +74,6 @@
 
     </div>
 
-    <!--
-            <div class="row">
-                <div class="col-sm-1"></div>
-                <div class="col-sm-5">
-                    <div class="panel panel-default" style="background: #eee; text-align: center">
-                        <div class="panel-body">
-                            <b>Ronda 1</b> ESPERALO PRONTO
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5">
-                    <div class="panel panel-default" style="background: #eee; text-align: center">
-                        <div class="panel-body">
-                            <b>Contrataciones salud</b> ESPERALO PRONTO
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-1"></div>
-            </div>
-
--->
 </div>
 <br>
 <div style="background-color: white">
@@ -114,70 +85,132 @@
 
         <div class="row">
 
+
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-2">
+                        <img src="/images/icono_con1.png" class="iconito">
+                    </div>
+                    <div class="col-sm-10">
+                        <p><b>Avances de México en contrataciones abiertas</b>
+                            <br>
+                            23 de junio de 2016
+                        </p>
+
+                        <a href="http://www.open-contracting.org/why-open-contracting/worldwide/mexico/">
+                            Ir a publicación <i class="fa fa-caret-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
             <div class="col-sm-4">
                 <div class="row">
                     <div class="col-sm-2">
-                        <img src="/images/icono_con.png" style="max-width: 40px">
+                        <img src="/images/icono_con1.png" class="iconito">
                     </div>
                     <div class="col-sm-10">
-                    5 de marzo de 2016
-                    <h4><b>¿Cómo transformar la información pública en un activo público? La Política de Datos Abiertos en México</b></h4>
-
-                    <a href="http://www.tm.org.mx/politica-de-datos-abiertos/">
-                        Ir a publicación <i class="fa fa-caret-right"></i>
-                    </a>
+                        <p><b>Columna: Contrataciones Abiertas, la transparencia en acción</b>
+                            <br>
+                            6 de junio de 2016
+                        </p>
+                        <a href="http://www.eluniversal.com.mx/entrada-de-opinion/articulo/alejandra-lagunes/nacion/2016/06/6/contrataciones-abiertas-la">
+                            Ir a publicación <i class="fa fa-caret-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="col-sm-4">
-                12 de mayo 2016
-                <h4><b>México se convierte en miembro fundador de la Alianza de Contrataciones 5 (C5)</b></h4>
-                <a href="http://www.gob.mx/presidencia/articulos/mexico-en-la-alianza-de-contrataciones-5-c5?idiom=es">
-                    Ir a publicación <i class="fa fa-caret-right"></i>
-                </a>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <img src="/images/icono_con1.png" class="iconito">
+                    </div>
+                    <div class="col-sm-10">
+                        <p><b>México se convirtió en miembro fundador de la alianza de contrataciones abiertas C5</b>
+                            <br>
+                            22 de mayo 2016
+                        </p>
+                        <a href="http://www.noticiasmvs.com/?seccionId=44afde0a54bc734&postsViejos=5#!/noticias/mexico-se-convirtio-en-miembro-fundador-de-la-alianza-de-contrataciones-5-c5-989">
+                            Ir a publicación <i class="fa fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-sm-4">
-                12 de mayo de 2016
-                <h4><b>Cumbre Global Anticorrupción - Compromisos de México en materia de contrataciones abiertas</b></h4>
-                <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/522966/Mexico.pdf">
-                    Ir a publicación 1 <i class="fa fa-caret-right"></i>
-                </a>
-                <br>
-                <a href="http://www.open-contracting.org/news/pledge-make-public-contracting-open-default-major-step-fighting-corruption/">
-                    Ir a publicación 2 <i class="fa fa-caret-right"></i>
-                </a>
-            </div>
-
-            <div class="col-sm-4">
-                22 de mayo 2016
-                <h4><b>México se convirtió en miembro fundador de la alianza de contrataciones abiertas C5</b></h4>
-                <a href="http://www.noticiasmvs.com/?seccionId=44afde0a54bc734&postsViejos=5#!/noticias/mexico-se-convirtio-en-miembro-fundador-de-la-alianza-de-contrataciones-5-c5-989">
-                    Ir a publicación <i class="fa fa-caret-right"></i>
-                </a>
-            </div>
-
-
-            <div class="col-sm-4">
-                6 de junio de 2016
-                <h4><b>Columna: Contrataciones Abiertas, la transparencia en acción</b></h4>
-                <a href="http://www.eluniversal.com.mx/entrada-de-opinion/articulo/alejandra-lagunes/nacion/2016/06/6/contrataciones-abiertas-la">
-                    Ir a publicación <i class="fa fa-caret-right"></i>
-                </a>
-            </div>
-
-            <div class="col-sm-4">
-                23 de junio de 2016
-                <h4><b>Avances de México en contrataciones abiertas</b></h4>
-                <a href="http://www.open-contracting.org/why-open-contracting/worldwide/mexico/">
-                    Ir a publicación <i class="fa fa-caret-right"></i>
-                </a>
-            </div>
         </div>
         <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <img src="/images/icono_con1.png" class="iconito">
+                    </div>
+                    <div class="col-sm-10">
+                        <p><b>Cumbre Global Anticorrupción - Compromisos de México en materia de contrataciones abiertas</b>
+                            <br>
+                            12 de mayo de 2016
+                        </p>
+                        <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/522966/Mexico.pdf">
+                            Ir a publicación 1 <i class="fa fa-caret-right"></i>
+                        </a>
+                        <br>
+                        <a href="http://www.open-contracting.org/news/pledge-make-public-contracting-open-default-major-step-fighting-corruption/">
+                            Ir a publicación 2 <i class="fa fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <img src="/images/icono_con1.png" class="iconito">
+                    </div>
+                    <div class="col-sm-10">
+                        <p><b>México se convierte en miembro fundador de la Alianza de Contrataciones 5 (C5)</b>
+                            <br>
+                            12 de mayo 2016
+                        </p>
+                        <a href="http://www.gob.mx/presidencia/articulos/mexico-en-la-alianza-de-contrataciones-5-c5?idiom=es">
+                            Ir a publicación <i class="fa fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <img src="/images/icono_con1.png" class="iconito">
+                    </div>
+                    <div class="col-sm-10">
+                        <p><b>¿Cómo transformar la información pública en un activo público? La Política de Datos Abiertos en México</b>
+                            <br>
+                            5 de marzo de 2016
+                        </p>
+
+                        <a href="http://www.tm.org.mx/politica-de-datos-abiertos/">
+                            Ir a publicación <i class="fa fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
     </div>
+
+    <br>
 </div>
+
 
 
 <dgm-footer></dgm-footer>
@@ -185,5 +218,15 @@
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
+
+<script>
+    $( "#img1, #img2" ).hover(
+            function() {
+                $( this ).addClass( "hover" );
+            }, function() {
+                $( this ).removeClass( "hover" );
+            }
+    );
+</script>
 </body>
 </html>

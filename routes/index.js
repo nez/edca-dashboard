@@ -6,7 +6,7 @@ var edca_db  = pgp("postgres://tester:test@localhost/edca");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-
+/*
     edca_db.tx(function (t) {
         var q1 = this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;');
         var q2 = this.one('select count (*) as total from contractingprocess');
@@ -23,7 +23,9 @@ router.get('/', function(req, res, next) {
         });
     }).catch(function (error) {
         console.log("ERROR: ", error);
-    });
+    });*/
+
+    res.render('index',{ title: 'Estandar de Datos de Contrataciones Abiertas'});
 });
 
 /* dashboard contract list (1st page) */
