@@ -106,8 +106,8 @@ function drawSeriesChart() {
             //'legend': 'left',
             //title: 'Contrataciones en el tiempo',
             chartArea: {
-                width: '75%',
-                heigth: '90%',
+                width: '100%',
+                heigth: '100%',
                 left: '75',
                 right: '30',
                 top: '30',
@@ -179,6 +179,15 @@ function drawSeriesChart() {
         var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
         //chart.draw( data  , options);
         chart.draw(google.visualization.arrayToDataTable(newData), options);
+        function resizeHandler () {
+            chart.draw(google.visualization.arrayToDataTable(newData), options);
+        }
+        if (window.addEventListener) {
+            window.addEventListener('resize', resizeHandler, false);
+        }
+        else if (window.attachEvent) {
+            window.attachEvent('onresize', resizeHandler);
+        }
     });
 }
 
