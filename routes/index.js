@@ -14,8 +14,6 @@ if ( typeof process.env.EDCA_DB != "undefined" ){
     edca_db = pgp("postgres://tester:test@localhost/edca");
 }
 
-
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
 /*

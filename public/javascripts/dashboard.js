@@ -110,8 +110,8 @@ function drawSeriesChart() {
                 heigth: '100%',
                 left: '75',
                 right: '30',
-                top: '30',
-                //bottom: '10'
+                top: '10',
+                bottom: '30'
             },
             backgroundColor: 'transparent',
             tooltip: {isHtml: true},
@@ -134,6 +134,7 @@ function drawSeriesChart() {
 
             },
             vAxis: {
+                //maxValue: 2000,
                 title: 'Vigencia en días naturales',
                 textStyle: {
                     italic: false,
