@@ -9,7 +9,13 @@
 
         </div>
         <div class="col-sm-11">
-            <h4><strong><%= contracts [i].title %> </strong></h4>
+
+            <h4><b>
+                    <a href="<%= "/contrataciones-abiertas/contrato/" + contracts[i].contractingprocess_id %>" >
+                        <%= contracts [i].title %>
+                    </a>
+                </b></h4>
+
             <%= contracts [i].contractid %>
         </div>
     </div>
@@ -37,12 +43,14 @@
             </p>
         </div>
         <div class="col-sm-2">
-            <div class="btn-group" role="group" aria-label="...">
+
                 <a href="" class='btn btn-default'> <i class='fa fa-download'></i></a>
+            <!--
                 <a href="<%= "/contrataciones-abiertas/contrato/" + contracts[i].contractingprocess_id %>"
                    data-id="<%= contracts[i].contractingprocess_id %>" class='btn btn-default'> <i
                             class='fa fa-line-chart'></i></a>
-            </div>
+                            -->
+
         </div>
     </div>
 </div>
