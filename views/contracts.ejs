@@ -33,7 +33,7 @@
         </div>
         <div class="col-sm-2">
             <p>Proveedores:<br>
-                <b><%= contracts[i].nsuppliers %></b>
+                <b> <a href= "<%= "/contrataciones-abiertas/contrato/"+ contracts[i].id +"/proveedores" %>" > <%= contracts[i].nsuppliers %> </a></b>
             </p>
 
         </div>
@@ -43,14 +43,7 @@
             </p>
         </div>
         <div class="col-sm-2">
-
                 <a href="" class='btn btn-default'> <i class='fa fa-download'></i></a>
-            <!--
-                <a href="<%= "/contrataciones-abiertas/contrato/" + contracts[i].contractingprocess_id %>"
-                   data-id="<%= contracts[i].contractingprocess_id %>" class='btn btn-default'> <i
-                            class='fa fa-line-chart'></i></a>
-                            -->
-
         </div>
     </div>
 </div>
