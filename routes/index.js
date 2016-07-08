@@ -3,9 +3,18 @@ var router = express.Router();
 
 var pgp = require('pg-promise')();
 
-console.log( process.env.EDCA_DB);
-//var edca_db  = pgp( EDCA_DB );
-var edca_db  = pgp("postgres://tester:test@localhost/edca");
+var edca_db;
+
+if ( typeof process.env.EDCA_DB != "undefined" ){
+    console.log("EDCA_DB: ", process.env.EDCA_DB);
+    edca_db = pgp( process.env.EDCA_DB );
+} else {
+    console.log("Warning: EDCA_DB env variable is not set\n " +
+        " defaulting to -> postgres://tester:test@localhost/edca")
+    edca_db = pgp("postgres://tester:test@localhost/edca");
+}
+
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
