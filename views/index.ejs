@@ -10,18 +10,6 @@
     <link rel="import" href="/dgm-navbar/dgm-navbar.html">
     <link rel="import" href="/dgm-footer/dgm-footer.html">
 
-    <style>
-        .hover {
-            opacity: 0.3;
-            filter: alpha(opacity=30); /* For IE8 and earlier */
-        }
-
-        .iconito {
-            background-color: #0c9;
-            border-radius: 100px;
-            padding: 5px 5px;
-        }
-    </style>
     <title>Contrataciones Abiertas</title>
 </head>
 
@@ -47,7 +35,7 @@
                 <%= metadata.contract_count %>
             </div>
             <div class="col-sm-4">TOTAL DE PROVEEDORES<br>
-            <%= metadata.supplier_count %>
+                <%= metadata.supplier_count %>
             </div>
             <div class="col-sm-4">MONTO TOTAL<br>
                 $<%= ( parseInt(metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
