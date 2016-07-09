@@ -1,6 +1,6 @@
-body{
+/*body{
     background-color: #eee;
-}
+}*/
 /* google charts */
 div.google-visualization-tooltip > ul > li > span {
     /*color: #f6f6f6 !important;*/
@@ -105,7 +105,7 @@ div.google-visualization-tooltip {
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-    color:#FFFFFF;
+    color: #FFFFFF;
     font-weight: bold;
     background-color:#00cc99;
 }

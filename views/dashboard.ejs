@@ -36,9 +36,6 @@
 <body>
 
 <dgm-navbar></dgm-navbar>
-
-<!--<div class="panel panel-default bgimg">
-    <div class="panel-body">-->
 <div class="bgimg">
     <br>
     <br>
@@ -49,79 +46,92 @@
             <img src='/images/logo_gacm.svg' style="max-width:500px"/>
         </p>
         <br>
-        <div class="row" style="text-align: center">
-            <div class="col-sm-4" style="color:white;">
+        <div class="row" style="text-align: center; color: white">
+            <div class="col-sm-4">
                 CONTRATOS VIGENTES
                 <br>
                 100
                 <!--<%= metadata.contract_count %>-->
             </div>
-            <div class="col-sm-4" style="color: white">
+            <div class="col-sm-4">
                 CONTRATOS ABIERTOS
                 <br>
                 100%
                 <!--<%= metadata.contract_count %>-->
                 <!--<%= metadata.supplier_count %>-->
             </div>
-            <div class="col-sm-4" style="color: white">
+            <div class="col-sm-4">
                 MONTO TOTAL
                 <br>
-                $<%= ( parseInt(metadata.contract_value_amount_total / 1000000) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); %>
+                $ <%= ( parseInt(metadata.contract_value_amount_total / 1000000) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
                 <small>millones</small>
             </div>
         </div>
         <br><br>
     </div>
-    <!--</div>-->
 </div>
 
 <div class="container">
-    <br>
+    <h3><b>Explora</b></h3>
+    <hr>
     <div class="row">
-        <div class="col-sm-3"></div>
+
         <div class="col-sm-6">
             <ul class="nav nav-pills nav-justified">
-                <li role="presentation" class="active"><a data-toggle="pill" href="#home">Explorar contratos
-                        <!--<i class="fa fa-file-code-o"></i>--> </a></li>
-                <li role="presentation"><a data-toggle="pill" href="#menu1">Explorar proveedores
-                        <!--<i class="fa fa-users"></i>--></a></li>
+                <li role="presentation" class="active"><a data-toggle="pill" href="#home">Por contratos</a></li>
+                <li role="presentation"><a data-toggle="pill" href="#menu1">Por proveedor</a></li>
             </ul>
         </div>
-        <div class="col-sm-3"></div>
+        <div class="col-sm-6"></div>
     </div>
     <br>
 
     <div class="tab-content">
         <!-- Contratos -->
         <div id="home" class="tab-pane fade in active">
-            <div class="panel panel-default">
+
+            <!--<div class="panel panel-default">
                 <div class="panel-body">
                             <h3 style="text-align: left;"><b>Avance físico y financiero por contrato</b>
                             </h3>
                             <div id="d3bar" class="svg-container"></div>
                 </div>
-            </div>
+            </div>-->
 
-            <!--<br>-->
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
-                        <!--<div class="col-sm-12" style="background: white">-->
 
-                        <div class="col-sm-4">
-                            <h3 style="text-align: left;"><b>Tipos de contratación</b></h3>
-                            <div style="color: white; height: 270px; width: 260px;" id="chart4"></div>
-                        </div>
-                        <div class="col-sm-8" ><!--style="overflow: auto;">-->
-                            <h3 style="text-align: left;"><b>Contrataciones en el tiempo</b></h3>
-                                <br>
-                            <div style="/*height: 400px; width: 700px; */align-content: left;" id="series_chart_div"></div>
-                            <!--<br>-->
-                        </div>
+
+            <!-- <div class="panel panel-default">
+                <div class="panel-body">-->
+            <div class="row">
+                <div class="col-sm-5" >
+                    <h3 style="text-align: left;"><b>Porcentaje de tipo de contratación</b></h3>
+                </div>
+                <div class="col-sm-7">
+                    <div class="well">
+                    <div style="color: white; height: 270px; width: 260px;" id="chart4"></div>
                     </div>
                 </div>
-                <!--</div>-->
+
             </div>
+            <!--</div>
+            </div>-->
+
+            <!--<div class="panel panel-default">
+                <div class="panel-body">-->
+            <div class="row">
+                <div class="col-sm-5">
+                    <h3 style="text-align: left;"><b>Contrataciones en el tiempo</b></h3>
+                </div>
+                <div class="col-sm-7" ><!--style="overflow: auto;">-->
+                    <div class="well">
+                    <br>
+                    <div style="/*height: 400px; width: 700px; */align-content: left;" id="series_chart_div"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div>
+            </div> -->
+
         </div>
 
         <!-- Proveedores -->

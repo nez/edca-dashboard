@@ -33,7 +33,7 @@ $(document).ready(function () {
                 drawBorder: false,
                 drawGridLines: true,        // wether to draw lines across the grid or not.
                 shadow: false,
-                backgroundColor: 'white'//'rgb(255, 255, 255)'
+                backgroundColor: 'transparent'//'white'//'rgb(255, 255, 255)'
             },
             highlighter: {
                 show: true,

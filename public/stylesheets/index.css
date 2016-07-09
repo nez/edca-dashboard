@@ -6,9 +6,10 @@
     background-repeat: no-repeat;
 }
 
-body{
-    background-color: #eee;
-}
+
 .panel{
     border:none;
+}
+.well{
+    border: none;
 }

@@ -16,7 +16,7 @@ if ( typeof process.env.EDCA_DB != "undefined" ){
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-/*
+
     edca_db.task(function (t) {
         var q1 = this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;');
         var q2 = this.one('select count (*) as total from contractingprocess');
@@ -33,9 +33,9 @@ router.get('/', function(req, res, next) {
         });
     }).catch(function (error) {
         console.log("ERROR: ", error);
-    });*/
+    });
 
-    res.render('index',{ title: 'Estandar de Datos de Contrataciones Abiertas'});
+    //res.render('index',{ title: 'Estandar de Datos de Contrataciones Abiertas'});
 });
 
 /* dashboard contract list (1st page) */
@@ -67,6 +67,7 @@ router.get('/contratos/',function (req, res) {
         console.log("ERROR: ", error);
     });
 });
+
 
 /* GET contract details */
 router.get('/contrato/:cpid',function (req, res) {
@@ -484,7 +485,7 @@ router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
             });
             break;
         default:
-            edca_db.tx( function (t){
+            edca_db.task( function (t){
                 var q1 = "";
                 return this.batch( [ q1 ]);
             }).then(function () {
@@ -495,12 +496,5 @@ router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
             break;
     }
 });
-
-/*
-// dashboard contract list by page
- router.get('/contratos/:page',function (req, res) {
- res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas', contracts : contracts });
- });
- */
 
 module.exports = router;
