@@ -17,7 +17,7 @@ if ( typeof process.env.EDCA_DB != "undefined" ){
 /* GET home page. */
 router.get('/', function(req, res, next) {
 /*
-    edca_db.tx(function (t) {
+    edca_db.task(function (t) {
         var q1 = this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;');
         var q2 = this.one('select count (*) as total from contractingprocess');
         var q3 = this.one('select sum(value_amount) as total from contract');
@@ -41,7 +41,7 @@ router.get('/', function(req, res, next) {
 /* dashboard contract list (1st page) */
 router.get('/contratos/',function (req, res) {
 
-    edca_db.tx(function (t) {
+    edca_db.task(function (t) {
 
         var q1 = this.many('select contract.contractingprocess_id, contract.id, contract.title, contract.contractid, ' +
             'contract.datesigned, contract.value_amount, tender.procurementmethod,' +
@@ -290,7 +290,7 @@ router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
             break;
         case 'tender':
 
-            edca_db.tx(function (t) {
+            edca_db.task(function (t) {
                 var tender = this.one("select * from tender where contractingprocess_id = $1", [req.params.cpid ]);
                 var documents = this.manyOrNone('select * from tenderdocuments where contractingprocess_id = $1', [ req.params.cpid ]);
                 var milestones = this.manyOrNone('select * from tendermilestone where contractingprocess_id = $1', [ req.params.cpid ]);
@@ -367,7 +367,7 @@ router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
             break;
         case 'award':
 
-            edca_db.tx(function (t) {
+            edca_db.task(function (t) {
                 var award = this.one('select * from award where contractingprocess_id=$1',[req.params.cpid]);
                 var suppliers = this.manyOrNone('select * from supplier where contractingprocess_id = $1',[ req.params.cpid ]);
                 var documents = this.manyOrNone('select * from awarddocuments where contractingprocess_id = $1', [ req.params.cpid ]);
@@ -411,7 +411,7 @@ router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
             break;
         case 'contract':
 
-            edca_db.tx(function (t) {
+            edca_db.task(function (t) {
                 var contract = this.one("select * from contract where contractingprocess_id = $1 ", [req.params.cpid]);
                 var items = this.manyOrNone('select * from contractitem where contractingprocess_id  =$1',[ req.params.cpid ]);
                 var documents = this.manyOrNone('select * from contractdocuments where contractingprocess_id = $1', [ req.params.cpid ]);
@@ -463,7 +463,7 @@ router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
             break;
         case 'implementation':
 
-            edca_db.tx(function (t) {
+            edca_db.task(function (t) {
 
                 var transactions = this.manyOrNone('select * from implementationtransactions where contractingprocess_id = $1', [ req.params.cpid ]);
                 var milestones = this.manyOrNone('select * from implementationmilestone where contractingprocess_id = $1', [ req.params.cpid ]);
