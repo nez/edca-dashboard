@@ -1,7 +1,7 @@
 // DONUT CHART
 $(document).ready(function () {
 
-    $.get('/contrataciones-abiertas/donut-chart-data', function (data) {
+    $.get('/contratacionesabiertas/donut-chart-data', function (data) {
 
         var newData = [];
 
@@ -56,7 +56,7 @@ $(document).ready(function () {
 
     // FIND CONTRACTS
     function searchbykeyword(keyword, table, param, filter) {
-        $.post('/contrataciones-abiertas/find-contracts', {
+        $.post('/contratacionesabiertas/find-contracts', {
             keyword: keyword,
             orderby: param,
             filter: filter
@@ -94,7 +94,7 @@ google.charts.setOnLoadCallback(drawSeriesChart);
 
 function drawSeriesChart() {
 
-    $.get('/contrataciones-abiertas/bubble-chart-data', function (data) {
+    $.get('/contratacionesabiertas/bubble-chart-data', function (data) {
 
         var newData = [['ID', 'Fecha de firma', 'Vigencia (días naturales)', 'Tipo', 'Monto MXN']];
 

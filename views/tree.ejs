@@ -54,8 +54,8 @@
             <p>Vigencia: <b><%= contract.period_startdate.toLocaleDateString()%> a <%= contract.period_enddate.toLocaleDateString() %></b></p>
             <p>Tipo: <b><%= contract.procurementmethod %></b></p>
             <p>
-                <a class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/entidad-compradora/" %>"><b>Detalles del comprador</b></a>
-                <a class="btn btn-default" href="<%= "/contrataciones-abiertas/contrato/"+contract.cpid+"/proveedores/" %>"><b>Proveedor (es)</b></a>
+                <a class="btn btn-default" href="<%= "/contratacionesabiertas/contrato/"+contract.cpid+"/entidad-compradora/" %>"><b>Detalles del comprador</b></a>
+                <a class="btn btn-default" href="<%= "/contratacionesabiertas/contrato/"+contract.cpid+"/proveedores/" %>"><b>Proveedor (es)</b></a>
                 <button class="btn btn-default" > <i class="fa fa-download"></i> </button>
                 <button class="btn btn-default" id="refresh"><b>Árbol completo</b></button>
             </p>

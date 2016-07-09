@@ -10,7 +10,7 @@ if ( typeof process.env.EDCA_DB != "undefined" ){
     edca_db = pgp( process.env.EDCA_DB );
 } else {
     console.log("Warning: EDCA_DB env variable is not set\n " +
-        " defaulting to -> postgres://tester:test@localhost/edca")
+        " defaulting to -> postgres://tester:test@localhost/edca");
     edca_db = pgp("postgres://tester:test@localhost/edca");
 }
 
@@ -251,7 +251,7 @@ router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
     switch ( req.params.stage ){
         case 'planning':
 
-            edca_db.tx(function (t) {
+            edca_db.task(function (t) {
                 var budget = this.one('select * from budget where contractingprocess_id = $1',[ req.params.cpid ]);
                 var documents = this.manyOrNone('select * from planningdocuments where contractingprocess_id = $1',[ req.params.cpid ]);
 
