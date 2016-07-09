@@ -193,6 +193,7 @@ function drawSeriesChart() {
 }
 
 // BAR CHART
+/*
 var margin = {top: 40, right: 20, bottom: 40, left: 70},
     width = 1100 - margin.left - margin.right,
     height = 350 - margin.top - margin.bottom;
@@ -282,7 +283,7 @@ d3.csv("/data.csv", function (error, data) {
         .style("text-anchor", "middle")
         .text("Avance");
 
-    /* grid */
+    // grid
     function make_x_axis() {
         return d3.svg.axis()
             .scale(x0)
@@ -297,21 +298,14 @@ d3.csv("/data.csv", function (error, data) {
             .ticks(5)
     }
 
-    /*  svg.append("g")
-     .attr("class", "grid")
-     .attr("transform", "translate(0," + height + ")")
-     .call(make_x_axis()
-     .tickSize(-height, 0, 0)
-     .tickFormat("")
-     );
-     */
     svg.append("g")
         .attr("class", "grid")
         .call(make_y_axis()
             .tickSize(-width, 0, 0)
             .tickFormat("")
         );
-    /* end grid code */
+
+    //end grid code
     var producto = svg.selectAll(".producto")
         .data(data)
         .enter().append("g")
@@ -385,4 +379,5 @@ d3.csv("/data.csv", function (error, data) {
         .text(function (d) {
             return d;
         });
-});
+
+});*/
