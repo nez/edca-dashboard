@@ -2,11 +2,12 @@
 
 <div class="well well-sm">
     <div class="row">
+        <div class="col-sm-11">
+            <div class="row">
+
+                <!--
         <div class="col-sm-1" style="text-align: center; padding-top: 10px">
-
             <img src="/images/icono_con1.png" class="iconito">
-            <!--<img src="/images/icono_con.png">-->
-
         </div>
         <div class="col-sm-11">
 
@@ -18,33 +19,54 @@
 
             <%= contracts [i].contractid %>
         </div>
-    </div>
+        -->
 
-    <div class="row">
+                <div class="col-sm-3">
+                    <h3><b>$<%= ( parseFloat(contracts [i].value_amount).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></b></h3>
+                </div>
+
+                <div class="col-sm-9">
+                    <h4><b><a href="<%= "/contratacionesabiertas/contrato/" + contracts[i].contractingprocess_id %>" ><%= contracts [i].title %></a></b></h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <!--
         <div class="col-sm-3">
             <h3><b>$<%= ( parseFloat(contracts [i].value_amount).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></b></h3>
-        </div>
-        <div class="col-sm-3">
-            <p>Tipo
-                <br>
-                <b><%= contracts[i].procurementmethod %></b>
-            </p>
+        </div> -->
 
-        </div>
-        <div class="col-sm-2">
-            <p>Proveedores:<br>
-                <b> <a href= "<%= "/contratacionesabiertas/contrato/"+ contracts[i].id +"/proveedores" %>" > <%= contracts[i].nsuppliers %> </a></b>
-            </p>
+                <div class="col-sm-3">
+                    <!-- bolitas -->
+                    <p>Etapa</p>
+                </div>
 
+                <div class="col-sm-3">
+                    <p>Tipo
+                        <br>
+                        <b><%= contracts[i].procurementmethod %></b>
+                    </p>
+
+                </div>
+                <div class="col-sm-3">
+                    <p>Proveedores:<br>
+                        <b> <a href= "<%= "/contratacionesabiertas/contrato/"+ contracts[i].id +"/proveedores" %>" > <%= contracts[i].nsuppliers %> </a></b>
+                    </p>
+
+                </div>
+                <div class="col-sm-3">
+                    <p>Fecha de firma:<br>
+                        <b><%= contracts [i].datesigned.toLocaleDateString() %></b>
+                    </p>
+                </div>
+
+            </div>
         </div>
-        <div class="col-sm-2">
-            <p>Fecha de firma:<br>
-                <b><%= contracts [i].datesigned.toLocaleDateString() %></b>
-            </p>
+
+        <div class="col-sm-1">
+            <a href="" class="btn btn-default"> <i class="fa fa-download"></i> </a>
         </div>
-        <div class="col-sm-2">
-                <a href="" class='btn btn-default'> <i class='fa fa-download'></i></a>
-        </div>
+
     </div>
 </div>
 

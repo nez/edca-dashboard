@@ -36,7 +36,7 @@ var initialise_form = function(selectionOptions) {
     var groupSelect = $('#group-everything-by');
     for (var opt in selectionOptions) {
         var lookup = selectionOptions[opt];
-        if (lookup.title != 'Proveedor' && lookup.title != 'ID de contrato') {
+        if (lookup.title != 'Proveedor' && lookup.title != 'ID de contrato' && lookup.title != 'Razón social' ) {
             groupSelect.append('<option value="' + lookup.key + '">' + lookup.title + '</option>');
         }
     }
@@ -108,8 +108,9 @@ function render_filters_colors_and_groups(csv) {
         var lookup = keyToLookup(key);
         // SELECCIONA LOS CAMPOS A FILTRAR
         switch (lookup.type) {
-            case "Proveedor":
-            case "ID de contrato":
+            //case "Proveedor":
+            case "Razón social":
+            //case "ID de contrato":
             case "Tipo de contratación":
             case "Vigencia":
                 lookups.push(lookup);
