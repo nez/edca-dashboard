@@ -71,15 +71,34 @@ router.get('/contratos/',function (req, res) {
 
 /* GET contract details */
 router.get('/contrato/:cpid',function (req, res) {
-    edca_db.one('select tender.contractingprocess_id as cpid, tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, contract.value_currency, ' +
-        'contract.period_startdate, contract.period_enddate from tender, contract ' +
-        'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ', [
-        req.params.cpid
-    ]).then(function (data) {
-        res.render('tree',{  contract : data });
+
+    edca_db.task( function (t) {
+
+        //planeación
+        var planning = this.one("select * from planning where contractingprocess_id= $1 " ,[ req.params.cpid]);
+        //licitación
+        var tender = this.one("select * from tender where contractingprocess_id = $1 " ,[ req.params.cpid ]);
+        //adjudicación
+        var award = this.one("select * from award where contractingprocess_id = $1" ,[ req.params.cpid ]);
+        //información general
+        var info =  this.one('select tender.contractingprocess_id as cpid, tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, contract.value_currency, ' +
+            'contract.period_startdate, contract.period_enddate from tender, contract ' +
+            'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ', [
+            req.params.cpid
+        ]);
+
+        //contrato
+        var contract = this.one (" select * from contract where contractingprocess_id =$1" , [ req.params.cpid]);
+
+        //implementación
+        //hitos = this.manyOrNone("", []) ;
+        return this.batch([info, planning, tender, award, contract ]);
+
+    }).then(function (data) {
+        res.render('contract',{ info: data[0], planning : data[1], tender: data[2], award: data[3] ,  contract : data[4] });
     }).catch(function (error) {
         console.log("ERROR: ", error);
-        res.render ('tree' );
+        res.render ('contract' );
     });
 });
 
@@ -149,6 +168,9 @@ router.get('/donut-chart-data', function (req, res) {
         console.log("ERROR: ", error)
     });
 });
+
+
+/**
 
 router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
 
@@ -383,9 +405,7 @@ router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
                     "name": "Adjudicación",
                     "text":"",
                     "children": [
-                        /*{
-                            "name": "ID licitación","text": data[0].tenderid
-                        },*/
+
                         { "name": "ID adjudicación","text": data[0].awardid },
                         { "name": "Título", "text": data[0].title },
                         { "name": "Descripción","text": data[0].description },
@@ -495,6 +515,6 @@ router.get('/tree-chart-data/:cpid/:stage', function (req, res) {
             });
             break;
     }
-});
+});**/
 
 module.exports = router;
