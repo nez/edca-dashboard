@@ -53,23 +53,23 @@
         <br>
         <div class="row" style="text-align: center; color: white">
             <div class="col-sm-4">
-                CONTRATOS VIGENTES
+                TOTAL DE CONTRATOS
                 <br>
-                100
-                <!--<%= metadata.contract_count %>-->
+                <!--100-->
+                <%= metadata.contract_count %>
             </div>
             <div class="col-sm-4">
-                CONTRATOS ABIERTOS
+                TOTAL DE PROVEEDORES
                 <br>
-                100%
+                <!--100% -->
                 <!--<%= metadata.contract_count %>-->
-                <!--<%= metadata.supplier_count %>-->
+                <%= metadata.supplier_count %>
             </div>
             <div class="col-sm-4">
                 MONTO TOTAL
                 <br>
-                $ <%= ( parseInt(metadata.contract_value_amount_total / 1000000) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
-                <small>millones</small>
+                $ <%= ( parseInt(metadata.contract_value_amount_total  ) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                <!--<small>millones</small>-->
             </div>
         </div>
         <br><br>
@@ -77,9 +77,14 @@
 </div>
 
 <div class="container">
-    <h3><b>Explora</b></h3>
-    <hr>
+
     <div class="row">
+        <div style="text-align: center">
+            <br>
+            EXPLORA POR
+            <br>
+            <br>
+        </div>
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <ul class="nav nav-pills nav-justified">
@@ -103,60 +108,75 @@
                 </div>
             </div>-->
 
-            <div class="row">
-                <div class="col-sm-5" >
-                    <h3 style="text-align: left;"><b>Porcentaje de tipo de contratación</b></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                </div>
-                <div class="col-sm-7">
-                    <div class="well">
-                        <div class="row">
-                        <div class="col-sm-7">
-                            <div style="color: white; height: 270px; width: 260px;" id="chart4"></div>
-                        </div>
+            <h3 style="text-align: left;"><b>Tipo de contratación</b></h3>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 
-                            <div class="col-sm-5" style="padding-top: 30px">
-                                <table>
-                                    <tbody>
-                                    <tr>
-                                        <td> <div class="circle" style="background-color: #00cc99"></div> </td>
-                                        <td>Licitación Pública</td>
-                                    </tr>
-                                    <tr>
-                                        <td> <div class="circle" style="background-color: #ff4d4d"></div> </td>
-                                        <td>Invitación a 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td> <div class="circle" style="background-color: #673AB7"></div> </td>
-                                        <td>Adjudicación Directa</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+            <div class="well">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div style="color: white; height: 270px; width: 260px;" id="chart4"></div>
                     </div>
 
-                </div>
-
-
-            </div>
-
-            <div class="row">
-                <div class="col-sm-5">
-                    <h3 style="text-align: left;"><b>Contrataciones en el tiempo</b></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                </div>
-                <div class="col-sm-7" ><!--style="overflow: auto;">-->
-                    <div class="well">
-                        <br>
-                        <div style="/*height: 400px; width: 700px; */align-content: left;" id="series_chart_div"></div>
+                    <div class="col-sm-5" style="padding-top: 30px">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td> <div class="circle" style="background-color: #00cc99"></div> </td>
+                                <td>Licitación Pública</td>
+                            </tr>
+                            <tr>
+                                <td> <div class="circle" style="background-color: #ff4d4d"></div> </td>
+                                <td>Invitación a 3</td>
+                            </tr>
+                            <tr>
+                                <td> <div class="circle" style="background-color: #673AB7"></div> </td>
+                                <td>Adjudicación Directa</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
+
+
+            <h3 style="text-align: left;"><b>Presupuesto programado en el tiempo</b></h3>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            <div class="well">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 35%">
+                        <span class="sr-only">35% Complete (success)</span>
+                    </div>
+                    <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+                        <span class="sr-only">20% Complete (warning)</span>
+                    </div>
+                    <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 10%">
+                        <span class="sr-only">20% Complete (danger)</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <h3 style="text-align: left;"><b>Contrataciones en el tiempo</b></h3>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+
+
+            <div class="well">
+                <br>
+                <div style="/*height: 400px; width: 700px; */align-content: left;" id="series_chart_div"></div>
+            </div>
+
+
+
         </div>
 
         <!-- Proveedores -->
@@ -211,48 +231,48 @@
         </div>
     </div>
 
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <h3><b>Lista de contratos</b></h3>
-            <hr>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="input-group">
-                        <input id="buscar" type="text" class="form-control" placeholder="Buscar..."
-                               aria-describedby="basic-addon1">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
-                    </div>
-                </div>
-
-
-                <div class="col-sm-4">
-                    <select class="form-control" id="filtrar">
-                        <option value="Todo">Mostrar todo</option>
-                        <option value="Adjudicación">Adjudicaciones directas</option>
-                        <option value="Invitación">Invitaciónes a tres</option>
-                        <option value="Licitación">Licitaciones Públicas</option>
-                    </select>
-                </div>
-                <div class="col-sm-4">
-                    <!-- ordenar -->
-                    <select class="form-control" id="orderby">
-                        <option value="title">Ordenar por nombre</option>
-                        <option value="value_amount">Ordenar por monto</option>
-                        <option value="datesigned">Ordenar por fecha de firma</option>
-                        <option value="contractid">Ordenar por ID de contrato</option>
-                    </select>
-
-                </div>
-            </div>
-            <br>
-
-            <div style="font-size: small">
-                <div id="ctable">
-                    <% include contracts %>
-                </div>
+    <h3><b>Lista de contratos</b></h3>
+    <hr>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="input-group">
+                <input id="buscar" type="text" class="form-control" placeholder="Buscar..."
+                       aria-describedby="basic-addon1">
+                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
             </div>
         </div>
+
+
+        <div class="col-sm-4">
+            <select class="form-control" id="filtrar">
+                <option value="Todo">Mostrar todo</option>
+                <option value="Adjudicación">Adjudicaciones directas</option>
+                <option value="Invitación">Invitaciónes a tres</option>
+                <option value="Licitación">Licitaciones Públicas</option>
+            </select>
+        </div>
+        <div class="col-sm-4">
+            <!-- ordenar -->
+            <select class="form-control" id="orderby">
+                <option value="title">Ordenar por nombre</option>
+                <option value="value_amount">Ordenar por monto</option>
+                <option value="datesigned">Ordenar por fecha de firma</option>
+                <option value="contractid">Ordenar por ID de contrato</option>
+            </select>
+
+        </div>
     </div>
+    <br>
+
+    <div style="font-size: small">
+        <div id="ctable">
+            <% include contracts %>
+        </div>
+    </div>
+
+    <h3><b>Datos</b></h3>
+    <hr>
+
 </div>
 
 <dgm-footer></dgm-footer>
