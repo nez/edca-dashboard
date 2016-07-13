@@ -1,10 +1,8 @@
 <% for ( var i = 0; i < suppliers.length; i++){ %>
-<div class="panel panel-default">
-    <div class="panel-body">
-        <p>Razón social: <b><%= suppliers[i].identifier_legalname %></b></p>
-        <p>RFC: <b><%= suppliers[i].identifier_id %></b></p>
-        <p>Sitio web: <b><a href="<%= suppliers[i].identifier_uri %>"><%= suppliers[i].identifier_uri %></a></b></p>
-        <a href="<%= "/contrataciones-abiertas/proveedor/"+ suppliers[i].id %>" class="btn btn-default">Ver más</a>
-    </div>
+<div class="well">
+    <p>Razón social: <b><%= suppliers[i].identifier_legalname %></b></p>
+    <p>RFC: <b><%= suppliers[i].identifier_id %></b></p>
+    <p>Sitio web: <b><a href="<%= suppliers[i].identifier_uri %>"><%= suppliers[i].identifier_uri %></a></b></p>
+    <a href="<%= "/contrataciones-abiertas/proveedor/"+ suppliers[i].id %>" class="btn btn-default">Ver más</a>
 </div>
 <%}%>
