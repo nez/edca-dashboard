@@ -27,7 +27,12 @@ $(document).ready(function () {
                     totalLabel: true,
                     shadow: false
                 },
-                seriesColors: ['#00cc99', '#ff4d4d', '#673AB7']
+                seriesColors: [
+                    '#673AB7',
+                    'yellow',
+                    '#ff4d4d',
+                    '#00cc99'
+                ]
             },
             grid: {
                 drawBorder: false,
