@@ -74,28 +74,42 @@ router.get('/contrato/:cpid',function (req, res) {
 
     edca_db.task( function (t) {
 
-        //planeación
-        var planning = this.one("select * from planning where contractingprocess_id= $1 " ,[ req.params.cpid]);
-        //licitación
-        var tender = this.one("select * from tender where contractingprocess_id = $1 " ,[ req.params.cpid ]);
-        //adjudicación
-        var award = this.one("select * from award where contractingprocess_id = $1" ,[ req.params.cpid ]);
-        //información general
-        var info =  this.one('select tender.contractingprocess_id as cpid, tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, contract.value_currency, ' +
-            'contract.period_startdate, contract.period_enddate from tender, contract ' +
-            'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ', [
-            req.params.cpid
+        return this.batch([
+            //información general
+            this.one('select tender.contractingprocess_id as cpid, tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, contract.value_currency, ' +
+                'contract.period_startdate, contract.period_enddate from tender, contract ' +
+                'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ', [
+                req.params.cpid
+            ]),
+
+            //planeación
+            this.one("select * from planning where contractingprocess_id= $1 " ,[ req.params.cpid]),
+            //licitación
+            this.one("select * from tender where contractingprocess_id = $1 " ,[ req.params.cpid ]),
+            //adjudicación
+            this.one("select * from award where contractingprocess_id = $1" ,[ req.params.cpid ]),
+            //contrato
+            this.one (" select * from contract where contractingprocess_id =$1" , [ req.params.cpid]),
+            //implementación -> transacciones
+            this.manyOrNone(" select * from implementationtransactions where id =$1", [ req.params.cpid ]),
+            //implementación -> documentos
+            this.manyOrNone(" select * from implementationdocuments transactions where id =$1", [ req.params.cpid ]),
+            //implementación -> hitos
+            this.manyOrNone(" select * from implementationmilestone transactions where id =$1", [ req.params.cpid ])
+
         ]);
 
-        //contrato
-        var contract = this.one (" select * from contract where contractingprocess_id =$1" , [ req.params.cpid]);
-
-        //implementación
-        //hitos = this.manyOrNone("", []) ;
-        return this.batch([info, planning, tender, award, contract ]);
-
     }).then(function (data) {
-        res.render('contract',{ info: data[0], planning : data[1], tender: data[2], award: data[3] ,  contract : data[4] });
+        res.render('contract',{
+            info: data[0],
+            planning : data[1],
+            tender: data[2],
+            award: data[3],
+            contract : data[4],
+            imp_transactions : data[5],
+            imp_documents : data[6],
+            imp_milestones : data[7]
+        });
     }).catch(function (error) {
         console.log("ERROR: ", error);
         res.render ('contract' );

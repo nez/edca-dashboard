@@ -55,21 +55,17 @@
             <div class="col-sm-4">
                 TOTAL DE CONTRATOS
                 <br>
-                <!--100-->
                 <%= metadata.contract_count %>
             </div>
             <div class="col-sm-4">
                 TOTAL DE PROVEEDORES
                 <br>
-                <!--100% -->
-                <!--<%= metadata.contract_count %>-->
                 <%= metadata.supplier_count %>
             </div>
             <div class="col-sm-4">
                 MONTO TOTAL
                 <br>
                 $ <%= ( parseInt(metadata.contract_value_amount_total  ) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
-                <!--<small>millones</small>-->
             </div>
         </div>
         <br><br>
