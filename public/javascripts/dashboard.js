@@ -104,7 +104,7 @@ function drawSeriesChart() {
         var newData = [['ID', 'Fecha de firma', 'Vigencia (días naturales)', 'Tipo', 'Monto MXN']];
 
         for (i = 0; i < data.length; i++) {
-            newData.push([data[i].title, new Date(data[i].datesigned), data[i].vigencia.days, data[i].procurementmethod, Number(data[i].value_amount)]);
+            newData.push([ data[i].title , new Date(data[i].datesigned), Math.abs(data[i].vigencia.days), data[i].procurementmethod, Number(data[i].value_amount)]);
         }
 
         var options = {
@@ -166,12 +166,10 @@ function drawSeriesChart() {
             },
             series: {
 
-                'Licitación Pública': {
-                    color: '#00cc99',
-                    //fontName: 'Open Sans'
-                },
+                'Licitación Pública': {color: '#00cc99'},
                 'Invitación a cuando menos tres personas': {color: '#ff4d4d'},
-                'Adjudicación Directa': {color: '#673AB7'}
+                'Adjudicación Directa': {color: '#673AB7'},
+                'Convenio de colaboración': {color: 'yellow'}
 
             },
             legend: {
