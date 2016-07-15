@@ -12,15 +12,6 @@
         <link rel="import" href="/dgm-navbar/dgm-navbar.html">
         <link rel="import" href="/dgm-footer/dgm-footer.html">
         <style type="text/css">
-            .bgimg {
-                background: #eee;
-                background-image: url('/images/Intro.png');
-                /*background-size: 1024px 370px;*/
-                background-size: cover;
-                background-position: bottom;
-                background-repeat: no-repeat;
-            }
-
             .iconito {
                 background-color: #0c9;
                 border-radius: 100px;
@@ -39,32 +30,27 @@
     <body>
         <dgm-navbar></dgm-navbar>
         <div class="bgimg">
-            <br>
-            <br>
             <div class="container">
-                <br>
-                <p style="text-align: center">
-                    <img src='/images/logo_gacm.svg' style="max-width:500px"/>
-                </p>
-                <br>
-                <div class="row" style="text-align: center; color: white">
-                    <div class="col-sm-4">
-                        TOTAL DE CONTRATOS
-                        <br>
-                        <%= metadata.contract_count %>
-                    </div>
-                    <div class="col-sm-4">
-                        TOTAL DE PROVEEDORES
-                        <br>
-                        <%= metadata.supplier_count %>
-                    </div>
-                    <div class="col-sm-4">
-                        MONTO TOTAL
-                        <br>
-                        $ <%= ( parseInt(metadata.contract_value_amount_total  ) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center">Estándar de contrataciones abiertas</p>
+                        <h2>Nuevo grupo aeropuertuario <span>de la ciudad de México</span></h2>
                     </div>
                 </div>
-                <br><br>
+                <div class="row">
+                    <div class="col-sm-4 widget">
+                        <h5>TOTAL DE CONTRATOS</h5>
+                        <p class="stat"><%= metadata.contract_count %></p>
+                    </div>
+                    <div class="col-sm-4 widget">
+                        <h5>TOTAL DE PROVEEDORES</h5>
+                        <p class="stat"><%= metadata.supplier_count %></p>
+                    </div>
+                    <div class="col-sm-4 widget">
+                        <h5>MONTO TOTAL</h5>
+                        <p class="stat">$<%= ( parseInt(metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">

@@ -113,3 +113,7 @@ div.google-visualization-tooltip {
 .nav-pills > li > a, .nav-pills > li > a:hover, .nav-pills > li > a:focus {
     color:#4d4d4d;
 }
+
+.bgimg                          { height: 350px; background-image: url('/images/bg-contracts.png'); background-size: cover; }
+.bgimg h2                       { margin-bottom: 30px; }
+.bgimg h2 > span                { display: block; font-weight: 400; }
