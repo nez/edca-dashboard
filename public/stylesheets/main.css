@@ -93,10 +93,14 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 /*********************************
     BREADCRUMB STYLES
 *********************************/
-.breadcrumb                                 { height: 40px; margin: 0; padding: 0; background-color: transparent; }
-.breadcrumb a                               { font-size: 12px; position: relative; top: -14px; }
-.breadcrumb a span                          { text-transform: capitalize; }
-.breadcrumb .home-item                      { display: inline-block; width: 15px; height: 100%; margin-right: 5px; background: url(../assets/img/ic-home.png) no-repeat 50% 50%; background-size: contain; top: 0; }
+.breadcrumb                                 { min-height: 30px; margin-bottom: 0; padding: 10px 0; background-color: transparent; border-radius: 0; }
+.breadcrumb > li                            { font-size: 12px; font-weight: 400; line-height: 30px; }
+.breadcrumb > li + li::before               { padding: 0 3px 0 8px; font-size: 13px; }
+.breadcrumb > li > a                        { display: inline; color: #545454; text-transform: capitalize; }
+.breadcrumb > li.active > a,
+.breadcrumb > li:last-child > a,
+.breadcrumb > li > a:hover                  { color: #0c9; }
+.breadcrumb > li:last-child > a             { pointer-events: none; }
 
 /*********************************
     FONTS STYLES
