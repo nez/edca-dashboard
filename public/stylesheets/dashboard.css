@@ -111,3 +111,6 @@ div.google-visualization-tooltip {
 .controls                       { margin-bottom: 30px; padding: 20px 0 25px; background-color: #545454; }
 .controls h3                    { margin-top: 0; margin-bottom: 20px; font-size: 14px; font-weight: 300; text-align: center; color: #fff; text-transform: uppercase; }
 .controls .nav                  { width: 420px; margin: 0 auto; padding: 0; }
+
+.statistics .well               { margin-bottom: 50px; }
+.statistics .small              { margin-bottom: 30px; }

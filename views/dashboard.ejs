@@ -11,19 +11,6 @@
         <link rel="import" href="/bower_components/polymer/polymer.html">
         <link rel="import" href="/dgm-navbar/dgm-navbar.html">
         <link rel="import" href="/dgm-footer/dgm-footer.html">
-        <style type="text/css">
-            .iconito {
-                background-color: #0c9;
-                border-radius: 100px;
-                padding: 5px 5px;
-            }
-
-            .circle {
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-            }
-        </style>
 
         <title><%= title %></title>
     </head>
@@ -79,69 +66,62 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="tab-content">
-                <div id="contracts" class="tab-pane fade in active">
-                    <h3 style="text-align: left;"><b>Tipo de contratación</b></h3>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-
+        <div class="container statistics">
+            <div class="row tab-content">
+                <div id="contracts" class="col-md-12 tap-pane fade in active">
+                    <h1>Tipo de contratación</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    <p class="small">Conjunto de datos: Emisiones 2016</p>
                     <div class="well">
                         <div class="row">
-                            <div class="col-sm-7">
-                                <div style="color: white; height: 270px; width: 260px;" id="chart4"></div>
+                            <div class="col-sm-6 col-sm-offset-1">
+                                <div id="chart4" style="color: #fff; height: 400px;"></div>
                             </div>
-
-                            <div class="col-sm-5" style="padding-top: 30px">
-                                <table>
-                                    <tbody>
-                                    <tr>
-                                        <td> <div class="circle" style="background-color: #00cc99"></div> </td>
-                                        <td>Licitación Pública</td>
-                                    </tr>
-                                    <tr>
-                                        <td> <div class="circle" style="background-color: #ff4d4d"></div> </td>
-                                        <td>Invitación a 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td> <div class="circle" style="background-color: #673AB7"></div> </td>
-                                        <td>Adjudicación Directa</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                            <div class="col-sm-5">
+                                <ul class="chart-legend">
+                                    <li><span class="circle" style="background-color: #00cc99"></span>Licitación Pública</li>
+                                    <li><span class="circle" style="background-color: #ff4d4d"></span>Invitación a 3</li>
+                                    <li><span class="circle" style="background-color: #673ab7"></span>Adjudicación Directa</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <h3 style="text-align: left;"><b>Presupuesto programado en el tiempo</b></h3>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    <h1>Presupuesto programado en el tiempo</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    <p class="small">Conjunto de datos: Emisiones 2016</p>
                     <div class="well">
+                        <ul class="progress-steps">
+                            <li>0%</li>
+                            <li>20%</li>
+                            <li>40%</li>
+                            <li>60%</li>
+                            <li>80%<span class="text-right">100%</span></li>
+                        </ul>
                         <div class="progress">
-                            <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 35%">
-                                <span class="sr-only">35% Complete (success)</span>
+                            <div class="progress-bar progress-bar-success" style="width: 60%">
+                                <span class="sr-only">65% Completado</span>
                             </div>
-                            <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
-                                <span class="sr-only">20% Complete (warning)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 10%">
-                                <span class="sr-only">20% Complete (danger)</span>
+                            <div class="progress-bar" style="width: 40%">
+                                $ 1,494,222 MXN
                             </div>
                         </div>
+                        <ul class="progress-steps">
+                            <li>ene 2015</li>
+                            <li>abr 2015</li>
+                            <li>jul 2015</li>
+                            <li>oct 2015</li>
+                            <li>ene 2016<span class="text-right">abr 2016</span></li>
+                        </ul>
                     </div>
-                    <h3 style="text-align: left;"><b>Contrataciones en el tiempo</b></h3>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    <div class="well">
-                        <br>
-                        <div style="/*height: 400px; width: 700px; */align-content: left;" id="series_chart_div"></div>
+                    <h1>Contrataciones en el tiempo</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    <p class="small">Conjunto de datos: Emisiones 2016</p>
+                    <div class="well series-chart">
+                        <div id="series_chart_div" style="height: 400px;"></div>
                     </div>
                 </div>
+            </div>
+            <div class="tab-content">
                 <div id="providers" class="tab-pane fade">
                     <h3 style="text-align: left;"><b>Información general de proveedores</b> </h3>
                     <hr>
@@ -198,6 +178,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
             <h1>Lista de contratos</h1>
             <div class="row">
                 <div class="col-sm-4">
