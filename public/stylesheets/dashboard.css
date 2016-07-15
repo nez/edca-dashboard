@@ -104,16 +104,10 @@ div.google-visualization-tooltip {
     max-width: 1070px;
 }
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-    color: #FFFFFF;
-    font-weight: bold;
-    background-color:#00cc99;
-}
-
-.nav-pills > li > a, .nav-pills > li > a:hover, .nav-pills > li > a:focus {
-    color:#4d4d4d;
-}
-
-.bgimg                          { height: 350px; background-image: url('/images/bg-contracts.png'); background-size: cover; }
+.bgimg                          { margin-bottom: 0; height: 350px; background-image: url('/images/bg-contracts.png'); background-size: cover; }
 .bgimg h2                       { margin-bottom: 30px; }
 .bgimg h2 > span                { display: block; font-weight: 400; }
+
+.controls                       { margin-bottom: 30px; padding: 20px 0 25px; background-color: #545454; }
+.controls h3                    { margin-top: 0; margin-bottom: 20px; font-size: 14px; font-weight: 300; text-align: center; color: #fff; text-transform: uppercase; }
+.controls .nav                  { width: 420px; margin: 0 auto; padding: 0; }
