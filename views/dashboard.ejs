@@ -1,312 +1,274 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" lang="es-MX" xml:lang="es-MX">
-<head>
-    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
-    <!-- Bootstrap core CSS -->
-    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel='stylesheet' href='/stylesheets/main.css'/>
-    <link rel='stylesheet' href='/stylesheets/style_d3bubble.css'/>
-    <link rel="stylesheet" type="text/css" href="/bower_components/jqplot/jquery.jqplot.css"/>
-    <link rel="stylesheet" href="/stylesheets/dashboard.css">
-    <link rel="import" href="/bower_components/polymer/polymer.html">
-    <link rel="import" href="/dgm-navbar/dgm-navbar.html">
-    <link rel="import" href="/dgm-footer/dgm-footer.html">
+    <head>
+        <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+        <!-- Bootstrap core CSS -->
+        <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel='stylesheet' href='/stylesheets/main.css'/>
+        <link rel='stylesheet' href='/stylesheets/style_d3bubble.css'/>
+        <link rel="stylesheet" type="text/css" href="/bower_components/jqplot/jquery.jqplot.css"/>
+        <link rel="stylesheet" href="/stylesheets/dashboard.css">
+        <link rel="import" href="/bower_components/polymer/polymer.html">
+        <link rel="import" href="/dgm-navbar/dgm-navbar.html">
+        <link rel="import" href="/dgm-footer/dgm-footer.html">
+        <style type="text/css">
+            .bgimg {
+                background: #eee;
+                background-image: url('/images/Intro.png');
+                /*background-size: 1024px 370px;*/
+                background-size: cover;
+                background-position: bottom;
+                background-repeat: no-repeat;
+            }
 
+            .iconito {
+                background-color: #0c9;
+                border-radius: 100px;
+                padding: 5px 5px;
+            }
 
-    <style type="text/css">
-        .bgimg {
-            background: #eee;
-            background-image: url('/images/Intro.png');
-            /*background-size: 1024px 370px;*/
-            background-size: cover;
-            background-position: bottom;
-            background-repeat: no-repeat;
-        }
+            .circle {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+        </style>
 
-        .iconito {
-            background-color: #0c9;
-            border-radius: 100px;
-            padding: 5px 5px;
-        }
-
-        .circle {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-        }
-    </style>
-
-    <title><%= title %></title>
-
-</head>
-<body>
-
-<dgm-navbar></dgm-navbar>
-<div class="bgimg">
-    <br>
-    <br>
-    <div class="container">
-        <br>
-        <p style="text-align: center">
-            <img src='/images/logo_gacm.svg' style="max-width:500px"/>
-        </p>
-        <br>
-        <div class="row" style="text-align: center; color: white">
-            <div class="col-sm-4">
-                TOTAL DE CONTRATOS
-                <br>
-                <%= metadata.contract_count %>
-            </div>
-            <div class="col-sm-4">
-                TOTAL DE PROVEEDORES
-                <br>
-                <%= metadata.supplier_count %>
-            </div>
-            <div class="col-sm-4">
-                MONTO TOTAL
-                <br>
-                $ <%= ( parseInt(metadata.contract_value_amount_total  ) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
-            </div>
-        </div>
-        <br><br>
-    </div>
-</div>
-
-<div class="container">
-
-    <div class="row">
-        <div style="text-align: center">
-            <br>
-            EXPLORA POR
+        <title><%= title %></title>
+    </head>
+    <body>
+        <dgm-navbar></dgm-navbar>
+        <div class="bgimg">
             <br>
             <br>
-        </div>
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6">
-            <ul class="nav nav-pills nav-justified">
-                <li role="presentation" class="active"><a data-toggle="pill" href="#home">Por contratos</a></li>
-                <li role="presentation"><a data-toggle="pill" href="#menu1">Por proveedor</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-3"></div>
-    </div>
-    <br>
-
-    <div class="tab-content">
-        <!-- Contratos -->
-        <div id="home" class="tab-pane fade in active">
-
-            <!--<div class="panel panel-default">
-                <div class="panel-body">
-                            <h3 style="text-align: left;"><b>Avance físico y financiero por contrato</b>
-                            </h3>
-                            <div id="d3bar" class="svg-container"></div>
-                </div>
-            </div>-->
-
-            <h3 style="text-align: left;"><b>Tipo de contratación</b></h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-
-            <div class="well">
-                <div class="row">
-                    <div class="col-sm-7">
-                        <div style="color: white; height: 270px; width: 260px;" id="chart4"></div>
-                    </div>
-
-                    <div class="col-sm-5" style="padding-top: 30px">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td> <div class="circle" style="background-color: #00cc99"></div> </td>
-                                <td>Licitación Pública</td>
-                            </tr>
-                            <tr>
-                                <td> <div class="circle" style="background-color: #ff4d4d"></div> </td>
-                                <td>Invitación a 3</td>
-                            </tr>
-                            <tr>
-                                <td> <div class="circle" style="background-color: #673AB7"></div> </td>
-                                <td>Adjudicación Directa</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-
-            <h3 style="text-align: left;"><b>Presupuesto programado en el tiempo</b></h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-            <div class="well">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 35%">
-                        <span class="sr-only">35% Complete (success)</span>
-                    </div>
-                    <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
-                        <span class="sr-only">20% Complete (warning)</span>
-                    </div>
-                    <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 10%">
-                        <span class="sr-only">20% Complete (danger)</span>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <h3 style="text-align: left;"><b>Contrataciones en el tiempo</b></h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-
-
-            <div class="well">
+            <div class="container">
                 <br>
-                <div style="/*height: 400px; width: 700px; */align-content: left;" id="series_chart_div"></div>
+                <p style="text-align: center">
+                    <img src='/images/logo_gacm.svg' style="max-width:500px"/>
+                </p>
+                <br>
+                <div class="row" style="text-align: center; color: white">
+                    <div class="col-sm-4">
+                        TOTAL DE CONTRATOS
+                        <br>
+                        <%= metadata.contract_count %>
+                    </div>
+                    <div class="col-sm-4">
+                        TOTAL DE PROVEEDORES
+                        <br>
+                        <%= metadata.supplier_count %>
+                    </div>
+                    <div class="col-sm-4">
+                        MONTO TOTAL
+                        <br>
+                        $ <%= ( parseInt(metadata.contract_value_amount_total  ) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                    </div>
+                </div>
+                <br><br>
             </div>
-
         </div>
+        <div class="container">
+            <div class="row">
+                <div style="text-align: center">
+                    <br>
+                    EXPLORA POR
+                    <br>
+                    <br>
+                </div>
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <ul class="nav nav-pills nav-justified">
+                        <li role="presentation" class="active"><a data-toggle="pill" href="#home">Por contratos</a></li>
+                        <li role="presentation"><a data-toggle="pill" href="#menu1">Por proveedor</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <br>
+            <div class="tab-content">
+                <!-- Contratos -->
+                <div id="home" class="tab-pane fade in active">
+                    <h3 style="text-align: left;"><b>Tipo de contratación</b></h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 
-        <!-- Proveedores -->
-        <div id="menu1" class="tab-pane fade">
-            <h3 style="text-align: left;"><b>Información general de proveedores</b> </h3>
-            <hr>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-            </p>
+                    <div class="well">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <div style="color: white; height: 270px; width: 260px;" id="chart4"></div>
+                            </div>
 
-            <div class="well">
-                <nav class="navbar navbar-default" role="navigation">
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul id="visualizador" class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-haspopup="true" aria-expanded="false"><strong>Filtrar <span
-                                                class="caret"></span></strong></a>
-                                <ul id="filtros" class="dropdown-menu scrollable-menu">
-                                    <li class="dropdown-header"><p id="clear_filters" class="clear"
-                                                                   style="color:#00cc99; cursor:pointer"><strong>Mostrar/Quitar
-                                                todos</strong></p>
+                            <div class="col-sm-5" style="padding-top: 30px">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td> <div class="circle" style="background-color: #00cc99"></div> </td>
+                                        <td>Licitación Pública</td>
+                                    </tr>
+                                    <tr>
+                                        <td> <div class="circle" style="background-color: #ff4d4d"></div> </td>
+                                        <td>Invitación a 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td> <div class="circle" style="background-color: #673AB7"></div> </td>
+                                        <td>Adjudicación Directa</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 style="text-align: left;"><b>Presupuesto programado en el tiempo</b></h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    <div class="well">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 35%">
+                                <span class="sr-only">35% Complete (success)</span>
+                            </div>
+                            <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+                                <span class="sr-only">20% Complete (warning)</span>
+                            </div>
+                            <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 10%">
+                                <span class="sr-only">20% Complete (danger)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 style="text-align: left;"><b>Contrataciones en el tiempo</b></h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    <div class="well">
+                        <br>
+                        <div style="/*height: 400px; width: 700px; */align-content: left;" id="series_chart_div"></div>
+                    </div>
+                </div>
+                <!-- Proveedores -->
+                <div id="menu1" class="tab-pane fade">
+                    <h3 style="text-align: left;"><b>Información general de proveedores</b> </h3>
+                    <hr>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                    </p>
+                    <div class="well">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul id="visualizador" class="nav navbar-nav">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                           aria-haspopup="true" aria-expanded="false"><strong>Filtrar <span
+                                                        class="caret"></span></strong></a>
+                                        <ul id="filtros" class="dropdown-menu scrollable-menu">
+                                            <li class="dropdown-header"><p id="clear_filters" class="clear"
+                                                                           style="color:#00cc99; cursor:pointer"><strong>Mostrar/Quitar
+                                                        todos</strong></p>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <div id="filter-list"></div>
+                                        </ul>
                                     </li>
-                                    <li class="divider"></li>
-                                    <div id="filter-list"></div>
+                                    <div class="form-group navbar-form navbar-left">
+                                        <select id='group-everything-by' class="form-control">
+                                            <option value=''>Agrupar</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group navbar-form navbar-left">
+                                        <select id='color-everything-by' class="form-control">
+                                            <option value=''>Colorear</option>
+                                        </select>
+                                    </div>
+                                    <div id="search_form" class="navbar-form navbar-left">
+                                        <input type="text" class="form-control" id="buscar_bubble" value=""
+                                               placeholder="Buscar proveedores"/>
+                                    </div>
                                 </ul>
-                            </li>
-                            <div class="form-group navbar-form navbar-left">
-                                <select id='group-everything-by' class="form-control">
-                                    <option value=''>Agrupar</option>
-                                </select>
                             </div>
-                            <div class="form-group navbar-form navbar-left">
-                                <select id='color-everything-by' class="form-control">
-                                    <option value=''>Colorear</option>
-                                </select>
+                        </nav>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <!-- d3 bubble chart-->
+                                <div id="vis" class="svg-container"></div>
                             </div>
-                            <div id="search_form" class="navbar-form navbar-left">
-                                <input type="text" class="form-control" id="buscar_bubble" value=""
-                                       placeholder="Buscar proveedores"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div id='color-hints'></div>
                             </div>
-                        </ul>
-                    </div>
-                </nav>
-
-                <div class="row">
-                    <div class="col-sm-12">
-                        <!-- d3 bubble chart-->
-                        <div id="vis" class="svg-container"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div id='color-hints'></div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-        </div>
-    </div>
-
-    <h3><b>Lista de contratos</b></h3>
-    <hr>
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="input-group">
-                <input id="buscar" type="text" class="form-control" placeholder="Buscar..."
-                       aria-describedby="basic-addon1">
-                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
+            <h3><b>Lista de contratos</b></h3>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="input-group">
+                        <input id="buscar" type="text" class="form-control" placeholder="Buscar..."
+                               aria-describedby="basic-addon1">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <select class="form-control" id="filtrar">
+                        <option value="Todo">Mostrar todo</option>
+                        <option value="Adjudicación">Adjudicaciones directas</option>
+                        <option value="Invitación">Invitaciónes a tres</option>
+                        <option value="Licitación">Licitaciones Públicas</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <!-- ordenar -->
+                    <select class="form-control" id="orderby">
+                        <option value="title">Ordenar por nombre</option>
+                        <option value="value_amount">Ordenar por monto</option>
+                        <option value="datesigned">Ordenar por fecha de firma</option>
+                        <option value="contractid">Ordenar por ID de contrato</option>
+                    </select>
+                </div>
             </div>
+            <br>
+            <div style="font-size: small">
+                <div id="ctable">
+                    <% include contracts %>
+                </div>
+            </div>
+            <h3><b>Datos</b></h3>
+            <hr>
         </div>
+        <dgm-footer></dgm-footer>
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/bower_components/jqplot/jquery.jqplot.js"></script>
+        <script src="/bower_components/jqplot/plugins/jqplot.donutRenderer.js"></script>
 
+        <!--<script src="/bower_components/jqplot/plugins/jqplot.barRenderer.js"></script>-->
+        <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+        <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js"></script>
+        <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
+        <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <!--<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>-->
+        <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.pointLabels.js"></script>
+        <script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.highlighter.js"></script>
 
-        <div class="col-sm-4">
-            <select class="form-control" id="filtrar">
-                <option value="Todo">Mostrar todo</option>
-                <option value="Adjudicación">Adjudicaciones directas</option>
-                <option value="Invitación">Invitaciónes a tres</option>
-                <option value="Licitación">Licitaciones Públicas</option>
-            </select>
-        </div>
-        <div class="col-sm-4">
-            <!-- ordenar -->
-            <select class="form-control" id="orderby">
-                <option value="title">Ordenar por nombre</option>
-                <option value="value_amount">Ordenar por monto</option>
-                <option value="datesigned">Ordenar por fecha de firma</option>
-                <option value="contractid">Ordenar por ID de contrato</option>
-            </select>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
-        </div>
-    </div>
-    <br>
+        <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="/javascripts/dashboard.js"></script>
 
-    <div style="font-size: small">
-        <div id="ctable">
-            <% include contracts %>
-        </div>
-    </div>
-
-    <h3><b>Datos</b></h3>
-    <hr>
-
-</div>
-
-<dgm-footer></dgm-footer>
-
-<script src="/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="/bower_components/jqplot/jquery.jqplot.js"></script>
-<script src="/bower_components/jqplot/plugins/jqplot.donutRenderer.js"></script>
-
-<!--<script src="/bower_components/jqplot/plugins/jqplot.barRenderer.js"></script>-->
-<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
-<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js"></script>
-<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
-<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.categoryAxisRenderer.js"></script>
-<!--<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>-->
-<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.pointLabels.js"></script>
-<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.highlighter.js"></script>
-
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-
-<script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script src="/javascripts/dashboard.js"></script>
-
-<!-- Sergio -->
-<script src="/javascripts/js/tooltip.js"></script>
-<!-- Archivo que contiene las funciones para la visualizacion de los elementos -->
-<script type="text/javascript" src="/javascripts/js/vis.js"></script>
-<!-- Archivo que contiene las funciones para los eventos -->
-<script type="text/javascript" src="/javascripts/js/custom.js"></script>
-
-</body>
+        <!-- Sergio -->
+        <script src="/javascripts/js/tooltip.js"></script>
+        <!-- Archivo que contiene las funciones para la visualizacion de los elementos -->
+        <script type="text/javascript" src="/javascripts/js/vis.js"></script>
+        <!-- Archivo que contiene las funciones para los eventos -->
+        <script type="text/javascript" src="/javascripts/js/custom.js"></script>
+    </body>
 </html>
