@@ -16,32 +16,23 @@
         <dgm-navbar></dgm-navbar>
         <div class="bgimg">
             <div class="container">
-                <br>
-                <br>
-                <br>
-                <br>
-                <center>
-                    <img src="/images/icono_con.png" style="width: 80px" >
-                </center>
-                <h2 style="text-align: center; color: white"><b>Contrataciones Abiertas</b></h2>
-                <h4 style="text-align: center; color: white">Descubre los datos abietos, accesibles y oportunos sobre las etapas de planeación, licitación, adjudicación, <br>contratación e implementación de las contrataciones del gobierno</h4>
-                <br>
-                <div class="row" style="text-align: center; color: white">
-                    <div class="col-sm-4">
-                        TOTAL DE CONTRATOS<br>
-                        <%= metadata.contract_count %>
+                <p class="text-center"><img src="/images/icono_con.png" ></p>
+                <h2>Contrataciones Abiertas</h2>
+                <h4>Descubre los datos abietos, accesibles y oportunos sobre las etapas de planeación, licitación, adjudicación, <br>contratación e implementación de las contrataciones del gobierno</h4>
+                <div class="row">
+                    <div class="col-sm-4 widget">
+                        <h5>TOTAL DE CONTRATOS</h5>
+                        <p class="stat"><%= metadata.contract_count %></p>
                     </div>
-                    <div class="col-sm-4">
-                        TOTAL DE PROVEEDORES<br>
-                        <%= metadata.supplier_count %>
+                    <div class="col-sm-4 widget">
+                        <h5>TOTAL DE PROVEEDORES</h5>
+                        <p class="stat"><%= metadata.supplier_count %></p>
                     </div>
-                    <div class="col-sm-4">
-                        MONTO TOTAL<br>
-                        $<%= ( parseInt(metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                    <div class="col-sm-4 widget">
+                        <h5>MONTO TOTAL</h5>
+                        <p class="stat">$<%= ( parseInt(metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
                     </div>
                 </div>
-                <br>
-                <br>
             </div>
         </div>
         <br>
