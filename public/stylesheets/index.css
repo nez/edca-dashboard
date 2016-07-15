@@ -1,10 +1,4 @@
-.bgimg                          { height: 400px; margin-bottom: 30px; padding: 50px 0; background: #424242; background-image: url('/images/bgc.png'); background-size: 1024px 270px; background-position: bottom; background-repeat: no-repeat; text-align: center; }
-.bgimg img                      { width: 80px; }
-.bgimg h2                       { font-size: 26px; font-weight: 700; line-height: 37px; color: #fff; }
-.bgimg h4                       { margin-bottom: 30px; font-size: 14px; font-weight: 300; line-height: 26px; color: #fff; }
-.bgimg .widget                  { text-align: center; }
-.bgimg h5                       { margin-bottom: 20px; font-size: 14px; font-weight: 600; color: #fff; }
-.bgimg .stat                    { font-size: 36px; font-weight: 300; color: #fff; }
+.bgimg                          { background-image: url('/images/bgc.png'); }
 
 .stages p                       { margin-bottom: 40px; }
 .stages-widget                  { margin-bottom: 30px; }
