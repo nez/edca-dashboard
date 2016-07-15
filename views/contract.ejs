@@ -29,9 +29,9 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div id="contract-sidebar" class="col-md-4">
+        <div class="container full-height">
+            <div class="row full-height">
+                <div id="contract-sidebar" class="col-md-4 full-height">
                     <div class="info">
                         <h3>Proceso de contratación</h3>
                         <p class="title"><%= info.title %></p>
@@ -47,7 +47,114 @@
                         </ul>
                     </div>
                 </div>
-                <div id="contract-content" class="col-md-8"></div>
+                <div id="contract-content" class="col-md-8">
+                    <div class="row contract-stats">
+                        <div class="col-md-4">
+                            <p class="small">Monto</p>
+                            <p><strong>$ 572,943,111</strong></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="small">Moneda</p>
+                            <p>MXN</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="small">Vigencia</p>
+                            <p>31/12/2015 - 08/26/2016</p>
+                        </div>
+                    </div>
+                    <div class="row contract-stats">
+                        <div class="col-md-8">
+                            <p class="small">Comprador</p>
+                            <p><a href="#">Secretaría de comunicaciones y transportes</a></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="small">Proveedor</p>
+                            <p><a href="#">Carga y Acarreo S.A. de C.V.</a></p>
+                        </div>
+                    </div>
+                    <div class="row contract-stats">
+                        <div class="col-md-3">
+                            <p class="small">Etapa</p>
+                            <p><strong>Planeación</strong></p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="small">Identificador</p>
+                            <p>LPN-OP-DCAGI-SC-115/15</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="small">Fecha de firma</p>
+                            <p>31/12/2015</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="small">Tipo</p>
+                            <p>Licitación Pública</p>
+                        </div>
+                    </div>
+                    <div class="row contract-stats no-border">
+                        <div class="col-md-3 col-md-offset-6">
+                            <p class="small">Descargar datos abiertos</p>
+                            <span class="label" data-format="csv">CSV</span>
+                            <span class="label" data-format="json">JSON</span>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="small">Descargar contrato</p>
+                            <span class="label" data-format="pdf">PDF</span>
+                        </div>
+                    </div>
+                    <p class="small">Procesos</p>
+                    <div class="well well-sm">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Presupuesto
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>Fuente</li>
+                                            <li>ID</li>
+                                            <li>Descripción</li>
+                                            <li>Total</li>
+                                            <li>Proyecto presupuestario</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Fundamento
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Documentos
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <dgm-footer></dgm-footer>
