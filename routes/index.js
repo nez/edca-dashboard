@@ -83,12 +83,20 @@ router.get('/page/:limit/:npage', function ( req, res ) {
                 ' where tender.contractingprocess_id = contract.contractingprocess_id order by contract.title limit $1 offset $2',
                 [
                     +(req.params.limit), +(req.params.npage) * +(req.params.limit)
-                ])
+                ]),
+            this.one('select count(*) as count from contractingprocess')
         ]);
 
 
     }).then(function (data) {
-        res.render('contracts', {contracts: data[0]});
+        res.render('pagination', {
+            contracts: data[0],
+            cmetadata:{
+                limit : +(req.params.limit),
+                npage : +(req.params.npage),
+                count: data[1].count
+            }
+        });
     }).catch(function (error) {
         res.send(error);
         console.log(error);
