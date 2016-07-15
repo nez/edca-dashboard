@@ -81,6 +81,14 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 .search-form .btn-primary,
 .search-form .btn-primary:hover             { width: 4%; background-color: transparent; color: #9b9b9b; font-size: 14px; padding: 12.5px 0; }
 
+/********************************
+    Pagination Styles
+********************************/
+.pagination > .active > a,
+.pagination > .active > a:hover             { background-color: #0c9; border-color: #0c9; }
+.pagination > li > a                        { color: #0c9; }
+.pagination > li > a:hover                  { color: #0a9; }
+
 /*********************************
     BANNER STYLES
 *********************************/
