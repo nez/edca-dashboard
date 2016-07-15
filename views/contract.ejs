@@ -30,9 +30,24 @@
             </div>
         </div>
         <div class="container">
-            <div class="well">
-                PROCESO DE CONTRATACION
-                <p><%= info.title %></p>
+            <div class="row">
+                <div id="contract-sidebar" class="col-md-4">
+                    <div class="info">
+                        <h3>Proceso de contratación</h3>
+                        <p class="title"><%= info.title %></p>
+                        <p><small>ETAPAS</small></p>
+                    </div>
+                    <div class="stages">
+                        <ul>
+                            <li class="active"><img src="/images/ic-planeacion.png">Planeación</li>
+                            <li><img src="/images/ic-menu-licitacion.png">Licitación</li>
+                            <li><img src="/images/ic-menu-adjudicacion.png">Adjudicación</li>
+                            <li><img src="/images/ic-menu-contratacion.png">Contratación</li>
+                            <li><img src="/images/ic-menu-implementacion.png">Implementación</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="contract-content" class="col-md-8"></div>
             </div>
         </div>
         <dgm-footer></dgm-footer>
