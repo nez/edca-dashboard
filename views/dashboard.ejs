@@ -67,112 +67,102 @@
             </div>
         </div>
         <div class="container statistics">
-            <div class="row tab-content">
-                <div id="contracts" class="col-md-12 tap-pane fade in active">
-                    <h1>Tipo de contratación</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    <p class="small">Conjunto de datos: Emisiones 2016</p>
-                    <div class="well">
-                        <div class="row">
-                            <div class="col-sm-6 col-sm-offset-1">
-                                <div id="chart4" style="color: #fff; height: 400px;"></div>
-                            </div>
-                            <div class="col-sm-5">
-                                <ul class="chart-legend">
-                                    <li><span class="circle" style="background-color: #00cc99"></span>Licitación Pública</li>
-                                    <li><span class="circle" style="background-color: #ff4d4d"></span>Invitación a 3</li>
-                                    <li><span class="circle" style="background-color: #673ab7"></span>Adjudicación Directa</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <h1>Presupuesto programado en el tiempo</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    <p class="small">Conjunto de datos: Emisiones 2016</p>
-                    <div class="well">
-                        <ul class="progress-steps">
-                            <li>0%</li>
-                            <li>20%</li>
-                            <li>40%</li>
-                            <li>60%</li>
-                            <li>80%<span class="text-right">100%</span></li>
-                        </ul>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" style="width: 60%">
-                                <span class="sr-only">65% Completado</span>
-                            </div>
-                            <div class="progress-bar" style="width: 40%">
-                                $ 1,494,222 MXN
+            <div class="row">
+                <div class="tab-content col-md-12">
+                    <div id="contracts" class="tab-pane fade in active">
+                        <h1>Tipo de contratación</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                        <p class="small">Conjunto de datos: Emisiones 2016</p>
+                        <div class="well">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-offset-1">
+                                    <div id="chart4" style="color: #fff; height: 400px;"></div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <ul class="chart-legend">
+                                        <li><span class="circle" style="background-color: #00cc99"></span>Licitación Pública</li>
+                                        <li><span class="circle" style="background-color: #ff4d4d"></span>Invitación a 3</li>
+                                        <li><span class="circle" style="background-color: #673ab7"></span>Adjudicación Directa</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <ul class="progress-steps">
-                            <li>ene 2015</li>
-                            <li>abr 2015</li>
-                            <li>jul 2015</li>
-                            <li>oct 2015</li>
-                            <li>ene 2016<span class="text-right">abr 2016</span></li>
-                        </ul>
-                    </div>
-                    <h1>Contrataciones en el tiempo</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    <p class="small">Conjunto de datos: Emisiones 2016</p>
-                    <div class="well series-chart">
-                        <div id="series_chart_div" style="height: 400px;"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-content">
-                <div id="providers" class="tab-pane fade">
-                    <h3 style="text-align: left;"><b>Información general de proveedores</b> </h3>
-                    <hr>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-                    </p>
-                    <div class="well">
-                        <nav class="navbar navbar-default" role="navigation">
-                            <div id="navbar" class="navbar-collapse collapse">
-                                <ul id="visualizador" class="nav navbar-nav">
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                           aria-haspopup="true" aria-expanded="false"><strong>Filtrar <span
-                                                        class="caret"></span></strong></a>
-                                        <ul id="filtros" class="dropdown-menu scrollable-menu">
-                                            <li class="dropdown-header"><p id="clear_filters" class="clear"
-                                                                           style="color:#00cc99; cursor:pointer"><strong>Mostrar/Quitar
-                                                        todos</strong></p>
-                                            </li>
-                                            <li class="divider"></li>
-                                            <div id="filter-list"></div>
-                                        </ul>
-                                    </li>
-                                    <div class="form-group navbar-form navbar-left">
-                                        <select id='group-everything-by' class="form-control">
-                                            <option value=''>Agrupar</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group navbar-form navbar-left">
-                                        <select id='color-everything-by' class="form-control">
-                                            <option value=''>Colorear</option>
-                                        </select>
-                                    </div>
-                                    <div id="search_form" class="navbar-form navbar-left">
-                                        <input type="text" class="form-control" id="buscar_bubble" value=""
-                                               placeholder="Buscar proveedores"/>
-                                    </div>
-                                </ul>
+                        <h1>Presupuesto programado en el tiempo</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                        <p class="small">Conjunto de datos: Emisiones 2016</p>
+                        <div class="well">
+                            <ul class="progress-steps">
+                                <li>0%</li>
+                                <li>20%</li>
+                                <li>40%</li>
+                                <li>60%</li>
+                                <li>80%<span class="text-right">100%</span></li>
+                            </ul>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" style="width: 60%">
+                                    <span class="sr-only">65% Completado</span>
+                                </div>
+                                <div class="progress-bar" style="width: 40%">
+                                    $ 1,494,222 MXN
+                                </div>
                             </div>
-                        </nav>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <!-- d3 bubble chart-->
-                                <div id="vis" class="svg-container"></div>
-                            </div>
+                            <ul class="progress-steps">
+                                <li>ene 2015</li>
+                                <li>abr 2015</li>
+                                <li>jul 2015</li>
+                                <li>oct 2015</li>
+                                <li>ene 2016<span class="text-right">abr 2016</span></li>
+                            </ul>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div id='color-hints'></div>
+                        <h1>Contrataciones en el tiempo</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                        <p class="small">Conjunto de datos: Emisiones 2016</p>
+                        <div class="well series-chart">
+                            <div id="series_chart_div" style="height: 400px;"></div>
+                        </div>
+                    </div>
+                    <div id="providers" class="tab-pane fade">
+                        <h1>Información general de proveedores</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                        <p class="small">Conjunto de datos: Emisiones 2016</p>
+                        <div class="well">
+                            <nav class="navbar navbar-default" role="navigation">
+                                <div id="navbar" class="navbar-collapse collapse">
+                                    <ul id="visualizador" class="nav navbar-nav">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Filtrar <span class="caret"></span></strong></a>
+                                            <ul id="filtros" class="dropdown-menu scrollable-menu">
+                                                <li class="dropdown-header"><p id="clear_filters" class="clear" style="color:#00cc99; cursor:pointer"><strong>Mostrar/Quitar todos</strong></p></li>
+                                                <li class="divider"></li>
+                                                <div id="filter-list"></div>
+                                            </ul>
+                                        </li>
+                                        <div class="form-group navbar-form navbar-left">
+                                            <select id='group-everything-by' class="form-control">
+                                                <option value=''>Agrupar</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group navbar-form navbar-left">
+                                            <select id='color-everything-by' class="form-control">
+                                                <option value=''>Colorear</option>
+                                            </select>
+                                        </div>
+                                        <div id="search_form" class="navbar-form navbar-left">
+                                            <input type="text" class="form-control" id="buscar_bubble" value="" placeholder="Buscar proveedores"/>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <!-- d3 bubble chart-->
+                                    <div id="vis" class="svg-container"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div id='color-hints'></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -182,39 +172,52 @@
         <div class="container">
             <h1>Lista de contratos</h1>
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="input-group">
-                        <input id="buscar" type="text" class="form-control" placeholder="Buscar..."
-                               aria-describedby="basic-addon1">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
+                <div class="col-md-12">
+                    <form class="form-inline search-form">
+                        <input type="text" name="keyword" class="form-control" placeholder="Buscar contrataciones abiertas">
+                        <select name="filtrar" class="form-control">
+                            <option value="">Mostrar todo</option>
+                            <option value="Adjudicación">Adjudicaciones directas</option>
+                            <option value="Invitación">Invitaciónes a tres</option>
+                            <option value="Licitación">Licitaciones Públicas</option>
+                        </select>
+                        <select name="orderby" class="form-control">
+                            <option value="title">Ordenar por nombre</option>
+                            <option value="value_amount">Ordenar por monto</option>
+                            <option value="datesigned">Ordenar por fecha de firma</option>
+                            <option value="contractid">Ordenar por ID de contrato</option>
+                        </select>
+                        <button type="subimt" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div style="font-size: small">
+                        <div id="ctable">
+                            <% include contracts %>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <select class="form-control" id="filtrar">
-                        <option value="Todo">Mostrar todo</option>
-                        <option value="Adjudicación">Adjudicaciones directas</option>
-                        <option value="Invitación">Invitaciónes a tres</option>
-                        <option value="Licitación">Licitaciones Públicas</option>
-                    </select>
-                </div>
-                <div class="col-sm-4">
-                    <!-- ordenar -->
-                    <select class="form-control" id="orderby">
-                        <option value="title">Ordenar por nombre</option>
-                        <option value="value_amount">Ordenar por monto</option>
-                        <option value="datesigned">Ordenar por fecha de firma</option>
-                        <option value="contractid">Ordenar por ID de contrato</option>
-                    </select>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Datos</h1>
+                    <div class="data-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th width="30%">Institución</th>
+                                    <th width="30%">Formato</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <br>
-            <div style="font-size: small">
-                <div id="ctable">
-                    <% include contracts %>
-                </div>
-            </div>
-            <h3><b>Datos</b></h3>
-            <hr>
         </div>
         <dgm-footer></dgm-footer>
         <script src="/bower_components/jquery/dist/jquery.min.js"></script>
