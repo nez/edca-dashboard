@@ -1,4 +1,5 @@
-<% for (var i = 0; i < contracts.length;i++){ %>
+<% if ( contracts.length > 0){
+for (var i = 0; i < contracts.length;i++){ %>
 
 <div class="well well-sm">
     <div class="row">
@@ -49,4 +50,7 @@
     </div>
 </div>
 
+<% }
+}else { %>
+<p>No hay más contratos</p>
 <% } %>

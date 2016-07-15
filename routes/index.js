@@ -69,6 +69,35 @@ router.get('/contratos/',function (req, res) {
 });
 
 
+
+// PAGINATION
+router.get('/page/:limit/:npage', function ( req, res ) {
+
+    edca_db.task(function (t) {
+
+        return this.batch([
+            this.manyOrNone('select contract.contractingprocess_id, contract.id, contract.title, contract.contractid, ' +
+                'contract.datesigned, contract.value_amount, tender.procurementmethod,' +
+                '(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )' +
+                ' from tender, contract ' +
+                ' where tender.contractingprocess_id = contract.contractingprocess_id order by contract.title limit $1 offset $2',
+                [
+                    +(req.params.limit), +(req.params.npage) * +(req.params.limit)
+                ])
+        ]);
+
+
+    }).then(function (data) {
+        res.render('contracts', {contracts: data[0]});
+    }).catch(function (error) {
+        res.send(error);
+        console.log(error);
+
+    });
+
+});
+
+
 /* GET contract details */
 router.get('/contrato/:cpid',function (req, res) {
 
