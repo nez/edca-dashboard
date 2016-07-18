@@ -104,7 +104,7 @@ div.google-visualization-tooltip {
     max-width: 1070px;
 }
 
-.bgimg                          { margin-bottom: 0; height: 350px; background-image: url('/images/bg-contracts.png'); background-size: cover; }
+.bgimg                          { margin-bottom: 0; height: 350px; background-image: url('/contratacionesabiertas/static/images/bg-contracts.png'); background-size: cover; }
 .bgimg h2                       { margin-bottom: 30px; }
 .bgimg h2 > span                { display: block; font-weight: 400; }
 
