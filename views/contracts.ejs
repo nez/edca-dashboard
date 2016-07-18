@@ -1,56 +1,38 @@
-<% if ( contracts.length > 0){
-for (var i = 0; i < contracts.length;i++){ %>
-
-<div class="well well-sm">
+<% for (var i = 0; i < contracts.length;i++){ %>
+<div class="contract-item">
     <div class="row">
-        <div class="col-sm-11">
-            <div class="row">
-
-                <div class="col-sm-3">
-                    <h3><b>$<%= ( parseFloat(contracts [i].value_amount).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></b></h3>
-                </div>
-
-                <div class="col-sm-9">
-                    <h4><b><a href="<%= "/contratacionesabiertas/contrato/" + contracts[i].contractingprocess_id %>" ><%= contracts [i].title %></a></b></h4>
+        <div class="col-sm-12">
+            <div class="inner">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h3>$<%= ( parseFloat(contracts [i].value_amount).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></h3>
+                    </div>
+                    <div class="col-sm-9">
+                        <h4><a href="<%= "/contratacionesabiertas/contrato/" + contracts[i].contractingprocess_id %>" ><%= contracts [i].title %></a></h4>
+                        <p class="small">ID Procedimiento: LPN-OP-DCAGI-115/15</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-sm-3">
-                    <!-- bolitas -->
-                    <p>Etapa</p>
+            <div class="inner item-footer">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="small">Etapa</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="small">Tipo</p>
+                        <p class="legend"><%= contracts[i].procurementmethod %></p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="small">Proveedores:</p>
+                        <p class="legend"><a href= "<%= "/contratacionesabiertas/contrato/"+ contracts[i].id +"/proveedores" %>" > <%= contracts[i].nsuppliers %> </a></p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="small">Fecha de firma:</p>
+                        <p class="legend"><%= ( contracts[i].datesigned instanceof Date )? contracts [i].datesigned.toLocaleDateString():'' %></p>
+                    </div>
                 </div>
-
-                <div class="col-sm-3">
-                    <p>Tipo
-                        <br>
-                        <b><%= contracts[i].procurementmethod %></b>
-                    </p>
-
-                </div>
-                <div class="col-sm-3">
-                    <p>Proveedores:<br>
-                        <b> <a href= "<%= "/contratacionesabiertas/contrato/"+ contracts[i].id +"/proveedores" %>" > <%= contracts[i].nsuppliers %> </a></b>
-                    </p>
-
-                </div>
-                <div class="col-sm-3">
-                    <p>Fecha de firma:<br>
-                        <b><%= ( contracts[i].datesigned instanceof Date )? contracts [i].datesigned.toLocaleDateString():'' %></b>
-                    </p>
-                </div>
-
             </div>
         </div>
-
-        <div class="col-sm-1">
-            <a href="" class="btn btn-default"> <i class="fa fa-download"></i> </a>
-        </div>
-
     </div>
 </div>
-
-<% }
-}else { %>
-<p>No hay más contratos</p>
 <% } %>

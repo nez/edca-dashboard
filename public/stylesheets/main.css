@@ -3,12 +3,12 @@
 /*********************************
     GENERAL STYLES
 *********************************/
-html, body                                  { height: 100%; margin: 0; padding: 0; font-size: 16px; line-height: 1.6em; font-family: "Open Sans"; }
+html, body                                  { height: 100%; margin: 0; padding: 0; font-size: 14px; line-height: 1.6em; font-family: "Open Sans"; font-weight: 300; }
 a                                           { color: #0c9; cursor: pointer; }
-p                                           { color: #595959; font-weight: 300; }
+p                                           { margin-bottom: 10px; color: #4a4a4a; font-weight: 300; line-height: 24px; }
 img                                         { max-width: 100%; }
 ul, ol                                      { margin-left: 20px; padding-left: 10px; }
-a:hover                                     { text-decoration: none; }
+a:hover                                     { text-decoration: none; color: #05aa81; }
 a:focus, a:active, a:visited                { text-decoration: none; border: none; outline: 0; }
 .container-fluid                            { max-width: 1100px; }
 .btn                                        { padding: 10px; border: none; border-radius: 0; }
@@ -32,9 +32,82 @@ p.small                                     { font-size: 11px; }
 .app-links.web                              { background-image: url(../assets/img/ic-web.png); }
 #home-video                                 { display: none; margin-top: 20px; }
 .tool-iframe                                { width: 100%; height: 650px; overflow: hidden; border: none; }
+.full-height                                { height: 100%; }
 .scrolloff                                  { pointer-events: none; }
 .bg-container                               { position: relative; }
 .bg-container .bg                           { background-color: #474747; position: absolute; left: 0; top: 0; bottom: 0; right: 75.9%; }
+h1                                          { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #d8d8d8; position: relative; font-size: 24px; font-weight: 600; color: #545454; }
+h1:after                                    { content: ''; width: 40px; position: absolute; bottom: -6px; left: 0; border-bottom: solid 5px #0c9; }
+p.big                                       { margin-bottom: 30px; font-size: 24px; line-height: 42px; }
+.read-more                                  { font-size: 11px; }
+.read-more > i                              { margin-left: 0px; }
+.data-table                                 { margin-bottom: 30px; padding: 30px 20px; background-color: #efefef; border-radius: 4px; }
+.data-table table                           { margin-bottom: 0; }
+.data-table table > tbody > tr              { cursor: pointer; }
+.data-table table > tbody > tr > td         { padding-bottom: 20px; border-top-color: #d8d8d8; }
+.data-table table > thead > tr > th         { font-size: 14px; font-weight: 700; }
+.data-table table > tbody > tr > td         { font-size: 14px; }
+.data-table table > tbody > tr > td > a     { font-weight: 500; color: #0c9; }
+.btn                                        { border-radius: 3px; }
+.btn-primary                                { background-color: #0c9; border: none; }
+.btn-primary:hover,
+.btn-primary:active                         { background-color: #05aa81; }
+.nav-pills                                  { overflow: hidden; }
+.nav-pills > li                             { display: block; margin: 0; margin-right: 20px; width: 200px; float: left; }
+.nav-pills > li:last-child                  { margin-right: 0; }
+.nav-pills > li + li                        { margin-left: 0; }
+.nav-pills > li > a                         { display: block; padding: 10px 0; background-color: #9b9b9b; font-weight: 600; color: #fff; text-transform: uppercase; text-align: center; }
+.nav-pills > li > a:hover,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus            { background-color: #0c9; font-weight: 600; color: #fff; }
+.statistics ul.chart-legend                 { padding: 30px 0 0; list-style: none; }
+.statistics ul.chart-legend > li            { margin-bottom: 10px; font-size: 11px; font-weight: 300; color: #000; }
+.statistics ul > li > .circle               { display: inline-block; width: 12px; height: 12px; margin-right: 10px; border-radius: 50%; position: relative; top: 2.5px; }
+.progress-steps                             { margin-bottom: 10px; margin-left: 0; padding: 0; overflow: hidden; }
+.progress-steps > li                        { display: block; width: 20%; margin-bottom: 0; float: left; text-align: left; font-size: 11px; font-weight: 300; }
+.progress-steps > li > span                 { float: right; }
+.progress                                   { height: 25px; margin-bottom: 20px; background-color: #d8d8d8; box-shadow: none; border-radius: 0; }
+.progress-bar                               { background-color: transparent; text-align: left; text-indent: 10px; font-size: 11px; font-weight: 600; line-height: 25px; color: #545454; box-shadow: none; }
+.progress-bar-success                       { background-color: #0c9; }
+
+.panel-group .panel                         { background-color: transparent; border: none; border-radius: 0; box-shadow: none; }
+.panel-group .panel + .panel                { margin-top: 0; }
+.panel-default > .panel-heading             { border: none; border-top: 1px solid #979797; border-radius: 0; }
+.panel-default > .panel-body                { background-color: transparent; border-radius: 0; }
+.panel-title                                { font-size: 12px; font-weight: 700; }
+.panel-default > .panel-heading + .panel-collapse > .panel-body     { border-top-color: #979797; }
+
+.search-form                                { margin-top: 20px; margin-bottom: 30px; border: 1px solid #ccc; border-radius: 4px; }
+.search-form .form-control                  { margin: 0; height: 45px; background-color: transparent; border: none; border-radius: 0; box-shadow: none; }
+.search-form input[type="text"]             { width: 61%; border-right: 1px solid #ccc; }
+.search-form select.form-control            { width: 17%; }
+.search-form .btn                           { display: inline-block; width: auto; border-radius: 0 4px 4px 0; }
+.search-form .btn-primary                   { background-color: #4a4a4a; }
+.search-form .btn-primary:hover,
+.search-form .btn-primary:active            { background-color: #333; }
+.search-form .btn-primary,
+.search-form .btn-primary:hover             { width: 4%; background-color: transparent; color: #9b9b9b; font-size: 14px; padding: 12.5px 0; }
+
+/********************************
+    Pagination Styles
+********************************/
+.pagination > .active > a,
+.pagination > .active > a:hover             { background-color: #0c9; border-color: #0c9; }
+.pagination > li > a                        { color: #0c9; }
+.pagination > li > a:hover                  { color: #0a9; }
+
+/*********************************
+    BANNER STYLES
+*********************************/
+.bgimg                                      { height: 400px; margin-bottom: 30px; padding: 50px 0; background: #424242; background-size: 1024px 270px; background-position: bottom; background-repeat: no-repeat; text-align: center; }
+.bgimg img                                  { width: 80px; }
+.bgimg h2                                   { font-size: 26px; font-weight: 700; line-height: 42px; color: #fff; }
+.bgimg h4                                   { margin-bottom: 30px; font-size: 14px; font-weight: 300; line-height: 26px; color: #fff; }
+.bgimg p                                    { color: #fff; }
+.bgimg .widget                              { text-align: center; }
+.bgimg h5                                   { margin-bottom: 20px; font-size: 14px; font-weight: 600; color: #fff; }
+.bgimg .stat                                { font-size: 36px; }
 
 /*********************************
     SHARE STYLES
@@ -77,10 +150,15 @@ p.small                                     { font-size: 11px; }
 /*********************************
     BREADCRUMB STYLES
 *********************************/
-.breadcrumb                                 { height: 40px; margin: 0; padding: 0; background-color: transparent; }
-.breadcrumb a                               { font-size: 12px; position: relative; top: -14px; }
-.breadcrumb a span                          { text-transform: capitalize; }
-.breadcrumb .home-item                      { display: inline-block; width: 15px; height: 100%; margin-right: 5px; background: url(../assets/img/ic-home.png) no-repeat 50% 50%; background-size: contain; top: 0; }
+.breadcrumb-container                       { background-color: #f5f5f5; }
+.breadcrumb                                 { min-height: 30px; margin-bottom: 0; padding: 10px 0; background-color: transparent; border-radius: 0; }
+.breadcrumb > li                            { font-size: 12px; font-weight: 400; line-height: 30px; }
+.breadcrumb > li + li::before               { padding: 0 3px 0 8px; font-size: 13px; }
+.breadcrumb > li > a                        { display: inline; color: #545454; text-transform: capitalize; }
+.breadcrumb > li.active > a,
+.breadcrumb > li:last-child > a,
+.breadcrumb > li > a:hover                  { color: #0c9; }
+.breadcrumb > li:last-child > a             { pointer-events: none; }
 
 /*********************************
     FONTS STYLES
