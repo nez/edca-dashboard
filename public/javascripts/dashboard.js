@@ -29,9 +29,9 @@ $(document).ready(function () {
                 },
                 seriesColors: [
                     '#673AB7',
-                    'yellow',
                     '#ff4d4d',
-                    '#00cc99'
+                    '#00cc99',
+                    'yellow'
                 ]
             },
             grid: {
@@ -166,9 +166,9 @@ function drawSeriesChart() {
             },
             series: {
 
-                'Licitación Pública': {color: '#00cc99'},
+                'Licitación pública': {color: '#00cc99'},
                 'Invitación a cuando menos tres personas': {color: '#ff4d4d'},
-                'Adjudicación Directa': {color: '#673AB7'},
+                'Adjudicación directa': {color: '#673AB7'},
                 'Convenio de colaboración': {color: 'yellow'}
 
             },
