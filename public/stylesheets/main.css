@@ -80,7 +80,7 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 
 .search-form                                { margin-top: 20px; margin-bottom: 30px; border: 1px solid #ccc; border-radius: 4px; }
 .search-form .form-control                  { margin: 0; height: 45px; background-color: transparent; border: none; border-radius: 0; box-shadow: none; }
-.search-form input[type="text"]             { width: 61%; border-right: 1px solid #ccc; }
+.search-form input[type="text"]             { width: 60%; border-right: 1px solid #ccc; }
 .search-form select.form-control            { width: 17%; }
 .search-form .btn                           { display: inline-block; width: auto; border-radius: 0 4px 4px 0; }
 .search-form .btn-primary                   { background-color: #4a4a4a; }
