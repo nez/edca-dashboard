@@ -199,27 +199,26 @@
                     <div class="text-center">
                         <ul class="pagination">
 
-                           <!-- <li>
-                                <a href="#" aria-label="Previous">
+                            <% if (metadata.current_page > 1 ){%>
+                            <li>
+                                <a href="<%= '/contratacionesabiertas/contratos/'+ (metadata.current_page-1) %>" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
                             </li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                                <a href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                                 </li>
-                                -->
+                            <%}%>
+
                             <%
                             for (var i=1; i <= metadata.page_count; i++){ %>
                             <li  class="<%= i == metadata.current_page ?'active':'' %>" ><a href="<%= '/contratacionesabiertas/contratos/'+i %>"> <%= i %> </a></li>
                             <% } %>
 
+                            <% if ( metadata.current_page < metadata.page_count){%>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                            <%}%>
 
                         </ul>
                     </div>
