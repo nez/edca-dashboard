@@ -38,31 +38,49 @@ router.get('/', function(req, res, next) {
     //res.render('index',{ title: 'Estandar de Datos de Contrataciones Abiertas'});
 });
 
+
+
+
+
+
+
+
 /* dashboard contract list (1st page) */
-router.get('/contratos/',function (req, res) {
+router.get('/contratos/:npage',function (req, res) {
+
+    var limit = 10;
 
     edca_db.task(function (t) {
 
-        var q1 = this.many('select contract.contractingprocess_id, contract.id, contract.title, contract.contractid, ' +
-            'contract.datesigned, contract.value_amount, tender.procurementmethod,' +
-            '(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )' +
-            ' from tender, contract ' +
-            ' where tender.contractingprocess_id = contract.contractingprocess_id order by contract.title');
+        return this.batch([
+            this.manyOrNone('select contract.contractingprocess_id, contract.id, contract.title, contract.contractid, ' +
+                'contract.datesigned, contract.value_amount, tender.procurementmethod,' +
+                '(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )' +
+                ' from tender, contract ' +
+                ' where tender.contractingprocess_id = contract.contractingprocess_id order by contract.title limit $1 offset $2',
+                [
+                    limit, +(req.params.npage -1) * limit
+                ]),
 
-        var q2 = this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;');
-        var q3 = this.one('select count (*) as total from contractingprocess');
-        var q4 = this.one('select sum(value_amount) as total from contract');
+            this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;'),
+            this.one('select count (*) as total from contractingprocess'),
+            this.one('select sum(value_amount) as total from contract')
+        ]);
 
-        return this.batch([q1,q2, q3, q4]);
+        // return this.batch([q1,q2, q3, q4]);
     }).then(function (data) {
         res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas',
             contracts : data[0],
             metadata : {
-                supplier_count: data[1].total,
-                contract_count: data[2].total,
-                contract_value_amount_total: data[3].total
+                supplier_count: +data[1].total,
+                contract_count: +data[2].total,
+                contract_value_amount_total: data[3].total,
+                current_page: +req.params.npage,
+                page_count: parseInt(( +data[2].total + +limit -1 ) / limit )
             }
         });
+
+
     }).catch(function (error) {
         console.log("ERROR: ", error);
     });
@@ -104,6 +122,16 @@ router.get('/page/:limit/:npage', function ( req, res ) {
     });
 
 });
+
+
+
+
+
+
+
+
+
+
 
 
 /* GET contract details */

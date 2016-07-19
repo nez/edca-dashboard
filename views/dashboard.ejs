@@ -187,7 +187,7 @@
                             <option value="datesigned">Ordenar por fecha de firma</option>
                             <option value="contractid">Ordenar por ID de contrato</option>
                         </select>
-                        <button type="subimt" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+                        <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
                     </form>
                 </div>
             </div>
@@ -196,7 +196,8 @@
                     <% include contracts %>
                     <div class="text-center">
                         <ul class="pagination">
-                            <li>
+
+                           <!-- <li>
                                 <a href="#" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
@@ -210,7 +211,14 @@
                                 <a href="#" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
                                 </a>
-                            </li>
+                                 </li>
+                                -->
+                            <%
+                            for (var i=1; i <= metadata.page_count; i++){ %>
+                            <li  class="<%= i == metadata.current_page ?'active':'' %>" ><a href="<%= '/contratacionesabiertas/contratos/'+i %>"> <%= i %> </a></li>
+                            <% } %>
+
+
                         </ul>
                     </div>
                 </div>
