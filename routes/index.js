@@ -38,13 +38,6 @@ router.get('/', function(req, res, next) {
     //res.render('index',{ title: 'Estandar de Datos de Contrataciones Abiertas'});
 });
 
-
-
-
-
-
-
-
 /* dashboard contract list (1st page) */
 router.get('/contratos/:npage',function (req, res) {
 
@@ -99,7 +92,6 @@ router.get('/contrato/:cpid',function (req, res) {
                 'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ', [
                 req.params.cpid
             ]),
-
             //planeación
             this.one("select * from planning where contractingprocess_id= $1 " ,[ req.params.cpid]),
             //licitación
@@ -186,7 +178,7 @@ router.post ('/find-contracts/', function (req, res ) {
 router.get('/bubble-chart-data', function (req, res) {
     edca_db.manyOrNone("select concat (substring(contract.title from 0 for 79), '...') as title , contract.datesigned, (contract.period_enddate - contract.period_startdate) as vigencia," +
         " tender.procurementmethod, contract.value_amount from tender,contract where tender.contractingprocess_id = contract.contractingprocess_id  " +
-        " and contract.period_startdate is not null and contract.period_enddate is not null and contract.datesigned is not null").then(function (data) {
+        " and contract.period_startdate is not null and contract.period_enddate is not null and contract.datesigned is not null and tender.procurementmethod not like ''").then(function (data) {
         res.send(data);
     }).catch(function (error) {
         res.send(error);

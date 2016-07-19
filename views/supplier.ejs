@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" lang="es-MX" xml:lang="es-MX">
 <head>
-    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/contratacionesabiertas/static/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel='stylesheet' href='/stylesheets/main.css'/>
+    <link href="/contratacionesabiertas/static/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/contratacionesabiertas/static/stylesheets/main.css'/>
 
-    <link rel="import" href="/bower_components/polymer/polymer.html">
-    <link rel="import" href="/dgm-navbar/dgm-navbar.html">
-    <link rel="import" href="/dgm-footer/dgm-footer.html">
+    <link rel="import" href="/contratacionesabiertas/static/bower_components/polymer/polymer.html">
+    <link rel="import" href="/contratacionesabiertas/static/dgm-navbar/dgm-navbar.html">
+    <link rel="import" href="/contratacionesabiertas/static/dgm-footer/dgm-footer.html">
 
     <style>
-        .panel{
+        .well{
             border: none;
-        }
-        body{
-            background-color: #eee;
         }
     </style>
 
@@ -28,19 +25,19 @@
 <div class="container">
     <% if ( typeof supplier != 'undefined') { %>
 
-    <div class="panel panel-default">
-        <div class="panel-body">
+    <div class="well">
+
         <p>Razón social: <b><%= supplier.name %></b></p>
         <p>RFC: <b><%= supplier.identifier_id %></b></p>
         <p>Página web: <b> <a href="<%= supplier.identifier_uri %>"><%= supplier.identifier_uri %></a></b></p>
-        </div>
+
     </div>
 
-    <div class="panel panel-default">
-        <div class="panel-body">
+    <div class="well">
+
             <h3 style="color: #00cc99"><b>Otros contratos del proveedor</b></h3>
 ...
-        </div>
+
     </div>
 
     <% } else{%>
@@ -50,8 +47,8 @@
     <%}%>
 </div>
 <dgm-footer></dgm-footer>
-<script src="/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+<script src="/contratacionesabiertas/static/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/contratacionesabiertas/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/contratacionesabiertas/static/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 </body>
 </html>
