@@ -187,7 +187,7 @@ router.get('/bubble-chart-data', function (req, res) {
 });
 
 router.get('/donut-chart-data', function (req, res) {
-    edca_db.many('select procurementmethod, count(*) from tender group by procurementmethod order by procurementmethod;').then(function (data) {
+    edca_db.many("select procurementmethod, count(*) from tender  where procurementmethod not like '' group by procurementmethod order by procurementmethod;").then(function (data) {
         res.json (data);
     }).catch(function (error) {
         console.log("ERROR: ", error)
