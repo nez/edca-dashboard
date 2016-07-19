@@ -41,11 +41,12 @@ router.get('/', function(req, res, next) {
 /* dashboard contract list (1st page) */
 router.get('/contratos/:npage',function (req, res) {
 
+    //contracts per page
     var limit = 10;
 
     var npage = 1;
     if ( !isNaN( +(req.params.npage) )){
-        npage = req.params.npage;
+        npage = Math.abs(req.params.npage);
     }
 
     edca_db.task(function (t) {
