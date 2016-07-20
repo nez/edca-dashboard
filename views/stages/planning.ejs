@@ -1,21 +1,25 @@
 <div class="row contract-stats">
     <div class="col-md-4">
         <p class="small">Monto</p>
-        <p><strong>$ 572,943,111</strong></p>
+        <p><strong>$ <%= budget.budget_amount %></strong></p>
     </div>
     <div class="col-md-4">
-        <p class="small">Moneda</p>
+        <p class="small"><%= budget.budget_currency %> </p>
         <p>MXN</p>
     </div>
     <div class="col-md-4">
         <p class="small">Vigencia</p>
-        <p>31/12/2015 - 08/26/2016</p>
+        <p>
+            <%if ( info.period_enddate instanceof Date && info.period_enddate instanceof Date){%>
+            <%= info.period_startdate.toLocaleDateString()%> - <%= info.period_enddate.toLocaleDateString() %>
+            <%}%>
+        </p>
     </div>
 </div>
 <div class="row contract-stats">
     <div class="col-md-8">
         <p class="small">Comprador</p>
-        <p><a href="#">Secretaría de comunicaciones y transportes</a></p>
+        <p><a href="#"><%= buyer.identifier_legalname %></a></p>
     </div>
     <div class="col-md-4">
         <p class="small">Proveedor</p>

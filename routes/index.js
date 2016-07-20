@@ -89,58 +89,106 @@ router.get('/contratos/:npage',function (req, res) {
 /* GET contract details */
 router.get('/contrato/:cpid/:stage',function (req, res) {
     var stage = req.params.stage ;
+    var qinfo = 'select tender.contractingprocess_id as cpid, tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, ' +
+        'contract.value_currency, contract.period_startdate, contract.period_enddate from tender, contract ' +
+        'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ';
+    var qbuyer = "select * from buyer where contractingprocess_id = $1 ";
 
     switch ( stage ){
-        /*case 'planeacion':
-            break;
         case 'licitacion':
-            break;
-        case 'adjudicacion':
-            break;
-        case 'contrato':
-            break;
-        case 'implementacion':
-            break;*/
-        default:
             edca_db.task( function (t) {
-
                 return this.batch([
                     //información general
-                    this.one('select tender.contractingprocess_id as cpid, tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, contract.value_currency, ' +
-                        'contract.period_startdate, contract.period_enddate from tender, contract ' +
-                        'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ', [
-                        req.params.cpid
-                    ]),
-                    //planeación
-                    this.one("select * from planning where contractingprocess_id= $1 " ,[ req.params.cpid]),
-                    /*
-                    //licitación
-                    this.one("select * from tender where contractingprocess_id = $1 " ,[ req.params.cpid ]),
-                    //adjudicación
-                    this.one("select * from award where contractingprocess_id = $1" ,[ req.params.cpid ]),
-                    //contrato
-                    this.one (" select * from contract where contractingprocess_id =$1" , [ req.params.cpid]),
-                    //implementación -> transacciones
-                    this.manyOrNone(" select * from implementationtransactions where id =$1", [ req.params.cpid ]),
-                    //implementación -> documentos
-                    this.manyOrNone(" select * from implementationdocuments transactions where id =$1", [ req.params.cpid ]),
-                    //implementación -> hitos
-                    this.manyOrNone(" select * from implementationmilestone transactions where id =$1", [ req.params.cpid ])
-                    */
-
+                    this.one(qinfo, [ req.params.cpid ]),
+                    this.one( qbuyer,[ req.params.cpid ]),
+                    this.one("select * from tender where contractingprocess_id = $1 " ,[ req.params.cpid ])
                 ]);
-
             }).then(function (data) {
                 res.render('contract',{
                     current_stage: stage,
                     info: data[0],
-                    planning : data[1],
-                    /*tender: data[2],
-                    award: data[3],
-                    contract : data[4],
-                    imp_transactions : data[5],
-                    imp_documents : data[6],
-                    imp_milestones : data[7]*/
+                    buyer: data[1],
+                    tender : data[2]
+                });
+            }).catch(function (error) {
+                console.log("ERROR: ", error);
+                res.render ('contract' );
+            });
+            break;
+        case 'adjudicacion':
+            edca_db.task( function (t) {
+                return this.batch([
+                    //información general
+                    this.one(qinfo, [ req.params.cpid ]),
+                    this.one(qbuyer,[ req.params.cpid ]),
+                    this.one("select * from award where contractingprocess_id = $1" ,[ req.params.cpid ])
+                ]);
+            }).then(function (data) {
+                res.render('contract',{
+                    current_stage: stage,
+                    info: data[0],
+                    buyer: data[1],
+                    award : data[2]
+                });
+            }).catch(function (error) {
+                console.log("ERROR: ", error);
+                res.render ('contract' );
+            });
+            break;
+        case 'contrato':
+            edca_db.task( function (t) {
+                return this.batch([
+                    //información general
+                    this.one(qinfo, [ req.params.cpid ]),
+                    this.one(qbuyer,[ req.params.cpid ]),
+                    this.one("select * from contract where contractingprocess_id = $1" ,[ req.params.cpid ])
+                ]);
+            }).then(function (data) {
+                res.render('contract',{
+                    current_stage: stage,
+                    info: data[0],
+                    buyer: data[1],
+                    contract : data[2]
+                });
+            }).catch(function (error) {
+                console.log("ERROR: ", error);
+                res.render ('contract' );
+            });
+            break;
+        case 'implementacion':
+            edca_db.task( function (t) {
+                return this.batch([
+                    //información general
+                    this.one(qinfo, [ req.params.cpid ]),
+                    this.one(qbuyer,[ req.params.cpid ])
+                    //
+                ]);
+            }).then(function (data) {
+                res.render('contract',{
+                    current_stage: stage,
+                    info: data[0],
+                    buyer: data[1]
+                    //
+                });
+            }).catch(function (error) {
+                console.log("ERROR: ", error);
+                res.render ('contract' );
+            });
+            break;
+        default:
+            edca_db.task( function (t) {
+                return this.batch([
+                    //información general
+                    this.one(qinfo, [req.params.cpid]),
+                    this.one(qbuyer, [ req.params.cpid]),
+                    this.one("select * from budget where contractingprocess_id= $1 " ,[ req.params.cpid])
+                ]);
+            }).then(function (data) {
+                res.render('contract',{
+                    current_stage: stage,
+                    info: data[0],
+                    buyer: data[1],
+                    budget : data[2]
                 });
             }).catch(function (error) {
                 console.log("ERROR: ", error);
@@ -148,8 +196,6 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
             });
             break;
     }
-
-
 });
 
 /* buyer details (per contract)*/
@@ -183,7 +229,6 @@ router.get('/proveedor/:supplierid', function (req, res ) {
 });
 
 /* DATA */
-
 /* find contract */
 router.post ('/find-contracts/', function (req, res ) {
 
