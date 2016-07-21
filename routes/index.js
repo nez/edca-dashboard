@@ -273,4 +273,5 @@ router.get('/donut-chart-data', function (req, res) {
     });
 });
 
+
 module.exports = router;
