@@ -1,7 +1,7 @@
 // DONUT CHART
 $(document).ready(function () {
 
-    $.get('/contratacionesabiertas/donut-chart-data', function (data) {
+    $.post('/contratacionesabiertas/donut-chart-data', function (data) {
 
         var newData = [];
         var colors = [];
@@ -72,6 +72,7 @@ $(document).ready(function () {
         });
     }
 
+    /*
     //FIND CONTRACTS EVENT
     var ob = $('#orderby');
     var ctable = $('#ctable');
@@ -90,7 +91,24 @@ $(document).ready(function () {
     ob.change(function () {
         searchbykeyword(buscar.val(), ctable, ob.val(), filter.val());
     });
+*/
 
+
+//Eventos de los botones del paginador
+    function p () {
+        $('ul.pagination li a').click(function(e){
+            $('#ctable').load('/contratacionesabiertas/pagination',{ npage: $(this).data('page') }, p);
+        });
+    }
+
+    $('#ctable').load('/contratacionesabiertas/pagination',{ npage : 1 } ,p );
+
+
+    $('#ilsform').submit(function (e) {
+        $('#ctable').load('/contratacionesabiertas/pagination',{ npage : 1 } ,p );
+        //alert(this.serialize());
+        e.preventDefault();
+    });
 
 });
 
@@ -101,7 +119,7 @@ google.charts.setOnLoadCallback(drawSeriesChart);
 
 function drawSeriesChart() {
 
-    $.get('/contratacionesabiertas/bubble-chart-data', function (data) {
+    $.post('/contratacionesabiertas/bubble-chart-data', function (data) {
 
         var newData = [['ID', 'Fecha de firma', 'Vigencia (días naturales)', 'Tipo', 'Monto MXN']];
 

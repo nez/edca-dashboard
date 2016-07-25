@@ -65,8 +65,6 @@ router.post('/pagination', function (req, res) {
     //contracts per page
     var limit = 10;
 
-    console.log(req.body.npage);
-
     var npage = 1;
     if ( !isNaN( +(req.body.npage) )){
         npage = Math.abs(req.body.npage);
@@ -101,6 +99,26 @@ router.post('/pagination', function (req, res) {
         console.log("ERROR: ", error);
     });
 });
+
+
+/* find contracts */
+router.post ('/find-contracts/', function (req, res ) {
+
+    edca_db.manyOrNone("select contract.contractingprocess_id, contract.id, contract.title, contract.contractid," +
+        "contract.datesigned, contract.value_amount, tender.procurementmethod, " +
+        "(select count(*) as nsuppliers from supplier where supplier. contractingprocess_id = tender.contractingprocess_id )" +
+        " from contract, tender where contract.contractingprocess_id = tender.contractingprocess_id " +
+        "and (contract.title ilike '%$1#%' or contract.contractid ilike '%$1#%') " +
+        ( req.body.filter != 'Todo'?" and tender.procurementmethod ilike '$3#%' ":"")+
+        "order by $2~", [req.body.keyword, req.body.orderby, req.body.filter]).then(function (data) {
+        res.render (  'contracts', {contracts: data });
+    }).catch(function (error) {
+        console.log("ERROR: ", error);
+    });
+
+});
+
+
 
 /* GET contract details */
 router.get('/contrato/:cpid/:stage',function (req, res) {
@@ -256,24 +274,7 @@ router.get('/proveedor/:supplierid', function (req, res ) {
 });
 
 /* DATA */
-/* find contract */
-router.post ('/find-contracts/', function (req, res ) {
-
-    edca_db.manyOrNone("select contract.contractingprocess_id, contract.id, contract.title, contract.contractid," +
-        "contract.datesigned, contract.value_amount, tender.procurementmethod, " +
-        "(select count(*) as nsuppliers from supplier where supplier. contractingprocess_id = tender.contractingprocess_id )" +
-        " from contract, tender where contract.contractingprocess_id = tender.contractingprocess_id " +
-        "and (contract.title ilike '%$1#%' or contract.contractid ilike '%$1#%') " +
-        ( req.body.filter != 'Todo'?" and tender.procurementmethod ilike '$3#%' ":"")+
-        "order by $2~", [req.body.keyword, req.body.orderby, req.body.filter]).then(function (data) {
-        res.render (  'contracts', {contracts: data });
-    }).catch(function (error) {
-        console.log("ERROR: ", error); 
-    });
-
-});
-
-router.get('/bubble-chart-data', function (req, res) {
+router.post('/bubble-chart-data', function (req, res) {
     edca_db.manyOrNone("select concat (substring(contract.title from 0 for 79), '...') as title , contract.datesigned, (contract.period_enddate - contract.period_startdate) as vigencia," +
         " tender.procurementmethod, contract.value_amount from tender,contract where tender.contractingprocess_id = contract.contractingprocess_id  " +
         " and contract.period_startdate is not null and contract.period_enddate is not null and contract.datesigned is not null and tender.procurementmethod not like ''").then(function (data) {
@@ -284,7 +285,7 @@ router.get('/bubble-chart-data', function (req, res) {
     });
 });
 
-router.get('/donut-chart-data', function (req, res) {
+router.post('/donut-chart-data', function (req, res) {
     edca_db.many("select procurementmethod, count(*) from tender  where procurementmethod not like '' group by procurementmethod order by procurementmethod;").then(function (data) {
         res.json (data);
     }).catch(function (error) {

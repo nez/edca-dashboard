@@ -173,7 +173,7 @@
             <h1>Lista de contratos</h1>
             <div class="row">
                 <div class="col-md-12">
-                    <form class="form-inline search-form">
+                    <form class="form-inline search-form" id="ilsform">
                         <input type="text" name="keyword" class="form-control" placeholder="Buscar contrataciones abiertas">
                         <select name="filtrar" class="form-control">
                             <option value="">Mostrar todo</option>
@@ -248,20 +248,5 @@
         <!-- Archivo que contiene las funciones para los eventos -->
         <script type="text/javascript" src="/contratacionesabiertas/static/javascripts/js/custom.js"></script>
 
-        <script>
-
-            function p () {
-                $('ul.pagination li a').click(function(e){
-                    //alert();
-                    $('#ctable').load('/contratacionesabiertas/pagination',{ npage: $(this).data('page') }, p);
-                });
-            }
-
-            $(function () {
-                $('#ctable').load('/contratacionesabiertas/pagination',{ npage : 1 } ,p
-                );
-            });
-
-        </script>
     </body>
 </html>
