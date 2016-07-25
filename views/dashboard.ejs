@@ -195,33 +195,9 @@
 
             <div class="row">
                 <div id="ctable" class="col-md-12">
+                    <!-- Lista de contratos -->
                     <% include contracts %>
-                    <div class="text-center">
-                        <ul class="pagination">
 
-                            <% if (metadata.current_page > 1 ){%>
-                            <li>
-                                <a href="<%= '/contratacionesabiertas/contratos/'+ (metadata.current_page-1) %>" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                            <%}%>
-
-                            <%
-                            for (var i=1; i <= metadata.page_count; i++){ %>
-                            <li  class="<%= i == metadata.current_page ?'active':'' %>" ><a href="<%= '/contratacionesabiertas/contratos/'+i %>"> <%= i %> </a></li>
-                            <% } %>
-
-                            <% if ( metadata.current_page < metadata.page_count){%>
-                            <li>
-                                <a href="<%= '/contratacionesabiertas/contratos/'+ (metadata.current_page +1) %>" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                            <%}%>
-
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
