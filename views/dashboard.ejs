@@ -194,9 +194,9 @@
             </div>
 
             <div class="row">
-                <div id="ctable" class="col-md-12">
+                <div class="col-md-12">
                     <!-- Lista de contratos -->
-                    <% include contracts %>
+                    <div id="ctable"></div>
 
                 </div>
             </div>
@@ -247,5 +247,21 @@
         <script type="text/javascript" src="/contratacionesabiertas/static/javascripts/js/vis.js"></script>
         <!-- Archivo que contiene las funciones para los eventos -->
         <script type="text/javascript" src="/contratacionesabiertas/static/javascripts/js/custom.js"></script>
+
+        <script>
+
+            function p () {
+                $('ul.pagination li a').click(function(e){
+                    //alert();
+                    $('#ctable').load('/contratacionesabiertas/pagination',{ npage: $(this).data('page') }, p);
+                });
+            }
+
+            $(function () {
+                $('#ctable').load('/contratacionesabiertas/pagination',{ npage : 1 } ,p
+                );
+            });
+
+        </script>
     </body>
 </html>

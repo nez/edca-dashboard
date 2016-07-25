@@ -35,18 +35,41 @@ router.get('/', function(req, res, next) {
         console.log("ERROR: ", error);
     });
 
-    //res.render('index',{ title: 'Estandar de Datos de Contrataciones Abiertas'});
 });
 
 /* dashboard contract list (1st page) */
-router.get('/contratos/:npage',function (req, res) {
+router.get('/contratos/',function (req, res) {
+    edca_db.task(function (t) {
+        return this.batch([
+            this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;'),
+            this.one('select count (*) as total from contractingprocess'),
+            this.one('select sum(value_amount) as total from contract')
+        ]);
+    }).then(function (data) {
+        res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas',
+            metadata : {
+                supplier_count: +data[0].total,
+                contract_count: +data[1].total,
+                contract_value_amount_total: data[2].total
+            }
+        });
+
+    }).catch(function (error) {
+        console.log("ERROR: ", error);
+    });
+});
+
+//PAGINATION
+router.post('/pagination', function (req, res) {
 
     //contracts per page
     var limit = 10;
 
+    console.log(req.body.npage);
+
     var npage = 1;
-    if ( !isNaN( +(req.params.npage) )){
-        npage = Math.abs(req.params.npage);
+    if ( !isNaN( +(req.body.npage) )){
+        npage = Math.abs(req.body.npage);
     }
 
     edca_db.task(function (t) {
@@ -61,30 +84,23 @@ router.get('/contratos/:npage',function (req, res) {
                     limit, ( +( npage ) -1 )* limit
                 ]),
 
-            this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;'),
             this.one('select count (*) as total from contractingprocess'),
-            this.one('select sum(value_amount) as total from contract')
         ]);
 
-        // return this.batch([q1,q2, q3, q4]);
     }).then(function (data) {
-        res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas',
+        res.render('contracts',{
             contracts : data[0],
-            metadata : {
-                supplier_count: +data[1].total,
-                contract_count: +data[2].total,
-                contract_value_amount_total: data[3].total,
+            cmetadata : {
                 current_page: + npage,
-                page_count: parseInt(( +data[2].total + +limit -1 ) / limit )
+                page_count: parseInt(( +data[1].total + +limit -1 ) / limit )
             }
         });
 
-
     }).catch(function (error) {
+        res.send('ERROR');
         console.log("ERROR: ", error);
     });
 });
-
 
 /* GET contract details */
 router.get('/contrato/:cpid/:stage',function (req, res) {
