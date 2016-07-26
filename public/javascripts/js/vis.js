@@ -390,7 +390,7 @@ $(function() {
         chart.display_labels();
     };
     // Funcion que carga el CSV
-    d3.csv("/contratacionesabiertas/static/data_bub.csv", render_vis);
+    d3.csv("/contratacionesabiertas/static/supplier_data.csv", render_vis);
     // Evento KEYUP para buscar, ACTIVA LA FUNCIÓN BUSCAR AL ESCRIBIR ALGO EN EL INPUT DE BUSCAR
     $("#buscar_bubble").keyup(function() {
         var searchTerm;
