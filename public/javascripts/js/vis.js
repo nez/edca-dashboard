@@ -50,7 +50,7 @@ BubbleChart = (function() {
         });
         //console.log(num_max_indicadores);
         // TAMAÑO DE LOS NODOS
-        this.radius_scale = d3.scale.pow().exponent(0.3).domain([1, num_max_indicadores]).range([1, 80]); //.domain([1, 4.5]).range([10, 30]);
+        this.radius_scale = d3.scale.pow().exponent(0.3).domain([1, num_max_indicadores]).range([1, 60]); //.domain([1, 4.5]).range([10, 30]);
         this.create_nodes();
         this.create_vis();
         this.circles.style("fill", '#00cc99');
