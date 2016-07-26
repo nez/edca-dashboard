@@ -73,16 +73,16 @@ router.post('/pagination', function (req, res) {
     edca_db.task(function (t) {
 
         return this.batch([
-            this.manyOrNone('select contract.contractingprocess_id, contract.id, contract.title, contract.contractid, ' +
+            this.manyOrNone('select contract.contractingprocess_id, contract.id, contract.title, contractingprocess.ocid, ' +
                 'contract.datesigned, contract.value_amount, tender.procurementmethod,' +
                 '(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )' +
-                ' from tender, contract ' +
-                ' where tender.contractingprocess_id = contract.contractingprocess_id order by contract.title limit $1 offset $2',
+                ' from tender, contract, contractingprocess ' +
+                ' where tender.contractingprocess_id = contractingprocess.id and tender.contractingprocess_id = contract.contractingprocess_id order by contract.title limit $1 offset $2',
                 [
                     limit, ( +( npage ) -1 )* limit
                 ]),
 
-            this.one('select count (*) as total from contractingprocess'),
+            this.one('select count (*) as total from contractingprocess')
         ]);
 
     }).then(function (data) {
