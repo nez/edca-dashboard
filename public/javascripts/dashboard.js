@@ -31,9 +31,11 @@ $(document).ready(function () {
                 },
                 seriesColors: [
                     '#673AB7',
+                    'yellow',
+                    'purple',
                     '#ff4d4d',
-                    '#00cc99',
-                    'yellow'
+                    '#00cc99'
+
                 ]
             },
             grid: {
@@ -187,6 +189,7 @@ function drawSeriesChart() {
             series: {
                 'Adjudicación directa': {color: '#673AB7'},
                 'Convenio de colaboración': {color: 'yellow'},
+                'Fideicomiso': {color: 'purple'},
                 'Invitación a cuando menos tres personas': {color: '#ff4d4d'},
                 'Licitación pública': {color: '#00cc99'}
             },
