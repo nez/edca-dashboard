@@ -2,16 +2,11 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.5.2
--- Dumped by pg_dump version 9.5.2
-
 SET statement_timeout = 0;
-SET lock_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-SET row_security = off;
 
 --
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
@@ -34,7 +29,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: award; Type: TABLE; Schema: public; Owner: tester
+-- Name: award; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE award (
@@ -54,7 +49,7 @@ CREATE TABLE award (
 );
 
 
-ALTER TABLE award OWNER TO tester;
+ALTER TABLE public.award OWNER TO tester;
 
 --
 -- Name: award_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -68,7 +63,7 @@ CREATE SEQUENCE award_id_seq
     CACHE 1;
 
 
-ALTER TABLE award_id_seq OWNER TO tester;
+ALTER TABLE public.award_id_seq OWNER TO tester;
 
 --
 -- Name: award_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -78,7 +73,7 @@ ALTER SEQUENCE award_id_seq OWNED BY award.id;
 
 
 --
--- Name: awardamendmentchanges; Type: TABLE; Schema: public; Owner: tester
+-- Name: awardamendmentchanges; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE awardamendmentchanges (
@@ -90,7 +85,7 @@ CREATE TABLE awardamendmentchanges (
 );
 
 
-ALTER TABLE awardamendmentchanges OWNER TO tester;
+ALTER TABLE public.awardamendmentchanges OWNER TO tester;
 
 --
 -- Name: awardamendmentchanges_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -104,7 +99,7 @@ CREATE SEQUENCE awardamendmentchanges_id_seq
     CACHE 1;
 
 
-ALTER TABLE awardamendmentchanges_id_seq OWNER TO tester;
+ALTER TABLE public.awardamendmentchanges_id_seq OWNER TO tester;
 
 --
 -- Name: awardamendmentchanges_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -114,7 +109,7 @@ ALTER SEQUENCE awardamendmentchanges_id_seq OWNED BY awardamendmentchanges.id;
 
 
 --
--- Name: awarddocuments; Type: TABLE; Schema: public; Owner: tester
+-- Name: awarddocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE awarddocuments (
@@ -133,7 +128,7 @@ CREATE TABLE awarddocuments (
 );
 
 
-ALTER TABLE awarddocuments OWNER TO tester;
+ALTER TABLE public.awarddocuments OWNER TO tester;
 
 --
 -- Name: awarddocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -147,7 +142,7 @@ CREATE SEQUENCE awarddocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE awarddocuments_id_seq OWNER TO tester;
+ALTER TABLE public.awarddocuments_id_seq OWNER TO tester;
 
 --
 -- Name: awarddocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -157,7 +152,7 @@ ALTER SEQUENCE awarddocuments_id_seq OWNED BY awarddocuments.id;
 
 
 --
--- Name: awarditem; Type: TABLE; Schema: public; Owner: tester
+-- Name: awarditem; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE awarditem (
@@ -177,7 +172,7 @@ CREATE TABLE awarditem (
 );
 
 
-ALTER TABLE awarditem OWNER TO tester;
+ALTER TABLE public.awarditem OWNER TO tester;
 
 --
 -- Name: awarditem_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -191,7 +186,7 @@ CREATE SEQUENCE awarditem_id_seq
     CACHE 1;
 
 
-ALTER TABLE awarditem_id_seq OWNER TO tester;
+ALTER TABLE public.awarditem_id_seq OWNER TO tester;
 
 --
 -- Name: awarditem_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -201,7 +196,7 @@ ALTER SEQUENCE awarditem_id_seq OWNED BY awarditem.id;
 
 
 --
--- Name: awarditemadditionalclassifications; Type: TABLE; Schema: public; Owner: tester
+-- Name: awarditemadditionalclassifications; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE awarditemadditionalclassifications (
@@ -214,7 +209,7 @@ CREATE TABLE awarditemadditionalclassifications (
 );
 
 
-ALTER TABLE awarditemadditionalclassifications OWNER TO tester;
+ALTER TABLE public.awarditemadditionalclassifications OWNER TO tester;
 
 --
 -- Name: awarditemadditionalclassifications_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -228,7 +223,7 @@ CREATE SEQUENCE awarditemadditionalclassifications_id_seq
     CACHE 1;
 
 
-ALTER TABLE awarditemadditionalclassifications_id_seq OWNER TO tester;
+ALTER TABLE public.awarditemadditionalclassifications_id_seq OWNER TO tester;
 
 --
 -- Name: awarditemadditionalclassifications_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -238,7 +233,7 @@ ALTER SEQUENCE awarditemadditionalclassifications_id_seq OWNED BY awarditemaddit
 
 
 --
--- Name: budget; Type: TABLE; Schema: public; Owner: tester
+-- Name: budget; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE budget (
@@ -256,7 +251,7 @@ CREATE TABLE budget (
 );
 
 
-ALTER TABLE budget OWNER TO tester;
+ALTER TABLE public.budget OWNER TO tester;
 
 --
 -- Name: budget_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -270,7 +265,7 @@ CREATE SEQUENCE budget_id_seq
     CACHE 1;
 
 
-ALTER TABLE budget_id_seq OWNER TO tester;
+ALTER TABLE public.budget_id_seq OWNER TO tester;
 
 --
 -- Name: budget_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -280,7 +275,7 @@ ALTER SEQUENCE budget_id_seq OWNED BY budget.id;
 
 
 --
--- Name: buyer; Type: TABLE; Schema: public; Owner: tester
+-- Name: buyer; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE buyer (
@@ -304,7 +299,7 @@ CREATE TABLE buyer (
 );
 
 
-ALTER TABLE buyer OWNER TO tester;
+ALTER TABLE public.buyer OWNER TO tester;
 
 --
 -- Name: buyer_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -318,7 +313,7 @@ CREATE SEQUENCE buyer_id_seq
     CACHE 1;
 
 
-ALTER TABLE buyer_id_seq OWNER TO tester;
+ALTER TABLE public.buyer_id_seq OWNER TO tester;
 
 --
 -- Name: buyer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -328,7 +323,7 @@ ALTER SEQUENCE buyer_id_seq OWNED BY buyer.id;
 
 
 --
--- Name: buyeradditionalidentifiers; Type: TABLE; Schema: public; Owner: tester
+-- Name: buyeradditionalidentifiers; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE buyeradditionalidentifiers (
@@ -341,7 +336,7 @@ CREATE TABLE buyeradditionalidentifiers (
 );
 
 
-ALTER TABLE buyeradditionalidentifiers OWNER TO tester;
+ALTER TABLE public.buyeradditionalidentifiers OWNER TO tester;
 
 --
 -- Name: buyeradditionalidentifiers_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -355,7 +350,7 @@ CREATE SEQUENCE buyeradditionalidentifiers_id_seq
     CACHE 1;
 
 
-ALTER TABLE buyeradditionalidentifiers_id_seq OWNER TO tester;
+ALTER TABLE public.buyeradditionalidentifiers_id_seq OWNER TO tester;
 
 --
 -- Name: buyeradditionalidentifiers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -365,7 +360,7 @@ ALTER SEQUENCE buyeradditionalidentifiers_id_seq OWNED BY buyeradditionalidentif
 
 
 --
--- Name: contract; Type: TABLE; Schema: public; Owner: tester
+-- Name: contract; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE contract (
@@ -386,7 +381,7 @@ CREATE TABLE contract (
 );
 
 
-ALTER TABLE contract OWNER TO tester;
+ALTER TABLE public.contract OWNER TO tester;
 
 --
 -- Name: contract_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -400,7 +395,7 @@ CREATE SEQUENCE contract_id_seq
     CACHE 1;
 
 
-ALTER TABLE contract_id_seq OWNER TO tester;
+ALTER TABLE public.contract_id_seq OWNER TO tester;
 
 --
 -- Name: contract_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -410,7 +405,7 @@ ALTER SEQUENCE contract_id_seq OWNED BY contract.id;
 
 
 --
--- Name: contractamendmentchanges; Type: TABLE; Schema: public; Owner: tester
+-- Name: contractamendmentchanges; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE contractamendmentchanges (
@@ -422,7 +417,7 @@ CREATE TABLE contractamendmentchanges (
 );
 
 
-ALTER TABLE contractamendmentchanges OWNER TO tester;
+ALTER TABLE public.contractamendmentchanges OWNER TO tester;
 
 --
 -- Name: contractamendmentchanges_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -436,7 +431,7 @@ CREATE SEQUENCE contractamendmentchanges_id_seq
     CACHE 1;
 
 
-ALTER TABLE contractamendmentchanges_id_seq OWNER TO tester;
+ALTER TABLE public.contractamendmentchanges_id_seq OWNER TO tester;
 
 --
 -- Name: contractamendmentchanges_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -446,7 +441,7 @@ ALTER SEQUENCE contractamendmentchanges_id_seq OWNED BY contractamendmentchanges
 
 
 --
--- Name: contractdocuments; Type: TABLE; Schema: public; Owner: tester
+-- Name: contractdocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE contractdocuments (
@@ -465,7 +460,7 @@ CREATE TABLE contractdocuments (
 );
 
 
-ALTER TABLE contractdocuments OWNER TO tester;
+ALTER TABLE public.contractdocuments OWNER TO tester;
 
 --
 -- Name: contractdocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -479,7 +474,7 @@ CREATE SEQUENCE contractdocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE contractdocuments_id_seq OWNER TO tester;
+ALTER TABLE public.contractdocuments_id_seq OWNER TO tester;
 
 --
 -- Name: contractdocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -489,7 +484,7 @@ ALTER SEQUENCE contractdocuments_id_seq OWNED BY contractdocuments.id;
 
 
 --
--- Name: contractingprocess; Type: TABLE; Schema: public; Owner: tester
+-- Name: contractingprocess; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE contractingprocess (
@@ -500,7 +495,7 @@ CREATE TABLE contractingprocess (
 );
 
 
-ALTER TABLE contractingprocess OWNER TO tester;
+ALTER TABLE public.contractingprocess OWNER TO tester;
 
 --
 -- Name: contractingprocess_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -514,7 +509,7 @@ CREATE SEQUENCE contractingprocess_id_seq
     CACHE 1;
 
 
-ALTER TABLE contractingprocess_id_seq OWNER TO tester;
+ALTER TABLE public.contractingprocess_id_seq OWNER TO tester;
 
 --
 -- Name: contractingprocess_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -524,7 +519,7 @@ ALTER SEQUENCE contractingprocess_id_seq OWNED BY contractingprocess.id;
 
 
 --
--- Name: contractitem; Type: TABLE; Schema: public; Owner: tester
+-- Name: contractitem; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE contractitem (
@@ -544,7 +539,7 @@ CREATE TABLE contractitem (
 );
 
 
-ALTER TABLE contractitem OWNER TO tester;
+ALTER TABLE public.contractitem OWNER TO tester;
 
 --
 -- Name: contractitem_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -558,7 +553,7 @@ CREATE SEQUENCE contractitem_id_seq
     CACHE 1;
 
 
-ALTER TABLE contractitem_id_seq OWNER TO tester;
+ALTER TABLE public.contractitem_id_seq OWNER TO tester;
 
 --
 -- Name: contractitem_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -568,7 +563,7 @@ ALTER SEQUENCE contractitem_id_seq OWNED BY contractitem.id;
 
 
 --
--- Name: contractitemadditionalclasifications; Type: TABLE; Schema: public; Owner: tester
+-- Name: contractitemadditionalclasifications; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE contractitemadditionalclasifications (
@@ -582,7 +577,7 @@ CREATE TABLE contractitemadditionalclasifications (
 );
 
 
-ALTER TABLE contractitemadditionalclasifications OWNER TO tester;
+ALTER TABLE public.contractitemadditionalclasifications OWNER TO tester;
 
 --
 -- Name: contractitemadditionalclasifications_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -596,7 +591,7 @@ CREATE SEQUENCE contractitemadditionalclasifications_id_seq
     CACHE 1;
 
 
-ALTER TABLE contractitemadditionalclasifications_id_seq OWNER TO tester;
+ALTER TABLE public.contractitemadditionalclasifications_id_seq OWNER TO tester;
 
 --
 -- Name: contractitemadditionalclasifications_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -606,7 +601,7 @@ ALTER SEQUENCE contractitemadditionalclasifications_id_seq OWNED BY contractitem
 
 
 --
--- Name: implementation; Type: TABLE; Schema: public; Owner: tester
+-- Name: implementation; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE implementation (
@@ -616,7 +611,7 @@ CREATE TABLE implementation (
 );
 
 
-ALTER TABLE implementation OWNER TO tester;
+ALTER TABLE public.implementation OWNER TO tester;
 
 --
 -- Name: implementation_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -630,7 +625,7 @@ CREATE SEQUENCE implementation_id_seq
     CACHE 1;
 
 
-ALTER TABLE implementation_id_seq OWNER TO tester;
+ALTER TABLE public.implementation_id_seq OWNER TO tester;
 
 --
 -- Name: implementation_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -640,7 +635,7 @@ ALTER SEQUENCE implementation_id_seq OWNED BY implementation.id;
 
 
 --
--- Name: implementationdocuments; Type: TABLE; Schema: public; Owner: tester
+-- Name: implementationdocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE implementationdocuments (
@@ -660,7 +655,7 @@ CREATE TABLE implementationdocuments (
 );
 
 
-ALTER TABLE implementationdocuments OWNER TO tester;
+ALTER TABLE public.implementationdocuments OWNER TO tester;
 
 --
 -- Name: implementationdocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -674,7 +669,7 @@ CREATE SEQUENCE implementationdocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE implementationdocuments_id_seq OWNER TO tester;
+ALTER TABLE public.implementationdocuments_id_seq OWNER TO tester;
 
 --
 -- Name: implementationdocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -684,7 +679,7 @@ ALTER SEQUENCE implementationdocuments_id_seq OWNED BY implementationdocuments.i
 
 
 --
--- Name: implementationmilestone; Type: TABLE; Schema: public; Owner: tester
+-- Name: implementationmilestone; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE implementationmilestone (
@@ -701,7 +696,7 @@ CREATE TABLE implementationmilestone (
 );
 
 
-ALTER TABLE implementationmilestone OWNER TO tester;
+ALTER TABLE public.implementationmilestone OWNER TO tester;
 
 --
 -- Name: implementationmilestone_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -715,7 +710,7 @@ CREATE SEQUENCE implementationmilestone_id_seq
     CACHE 1;
 
 
-ALTER TABLE implementationmilestone_id_seq OWNER TO tester;
+ALTER TABLE public.implementationmilestone_id_seq OWNER TO tester;
 
 --
 -- Name: implementationmilestone_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -725,7 +720,7 @@ ALTER SEQUENCE implementationmilestone_id_seq OWNED BY implementationmilestone.i
 
 
 --
--- Name: implementationmilestonedocuments; Type: TABLE; Schema: public; Owner: tester
+-- Name: implementationmilestonedocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE implementationmilestonedocuments (
@@ -745,7 +740,7 @@ CREATE TABLE implementationmilestonedocuments (
 );
 
 
-ALTER TABLE implementationmilestonedocuments OWNER TO tester;
+ALTER TABLE public.implementationmilestonedocuments OWNER TO tester;
 
 --
 -- Name: implementationmilestonedocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -759,7 +754,7 @@ CREATE SEQUENCE implementationmilestonedocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE implementationmilestonedocuments_id_seq OWNER TO tester;
+ALTER TABLE public.implementationmilestonedocuments_id_seq OWNER TO tester;
 
 --
 -- Name: implementationmilestonedocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -769,7 +764,7 @@ ALTER SEQUENCE implementationmilestonedocuments_id_seq OWNED BY implementationmi
 
 
 --
--- Name: implementationtransactions; Type: TABLE; Schema: public; Owner: tester
+-- Name: implementationtransactions; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE implementationtransactions (
@@ -794,7 +789,7 @@ CREATE TABLE implementationtransactions (
 );
 
 
-ALTER TABLE implementationtransactions OWNER TO tester;
+ALTER TABLE public.implementationtransactions OWNER TO tester;
 
 --
 -- Name: implementationtransactions_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -808,7 +803,7 @@ CREATE SEQUENCE implementationtransactions_id_seq
     CACHE 1;
 
 
-ALTER TABLE implementationtransactions_id_seq OWNER TO tester;
+ALTER TABLE public.implementationtransactions_id_seq OWNER TO tester;
 
 --
 -- Name: implementationtransactions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -818,7 +813,7 @@ ALTER SEQUENCE implementationtransactions_id_seq OWNED BY implementationtransact
 
 
 --
--- Name: planning; Type: TABLE; Schema: public; Owner: tester
+-- Name: planning; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE planning (
@@ -828,7 +823,7 @@ CREATE TABLE planning (
 );
 
 
-ALTER TABLE planning OWNER TO tester;
+ALTER TABLE public.planning OWNER TO tester;
 
 --
 -- Name: planning_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -842,7 +837,7 @@ CREATE SEQUENCE planning_id_seq
     CACHE 1;
 
 
-ALTER TABLE planning_id_seq OWNER TO tester;
+ALTER TABLE public.planning_id_seq OWNER TO tester;
 
 --
 -- Name: planning_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -852,7 +847,7 @@ ALTER SEQUENCE planning_id_seq OWNED BY planning.id;
 
 
 --
--- Name: planningdocuments; Type: TABLE; Schema: public; Owner: tester
+-- Name: planningdocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE planningdocuments (
@@ -871,7 +866,7 @@ CREATE TABLE planningdocuments (
 );
 
 
-ALTER TABLE planningdocuments OWNER TO tester;
+ALTER TABLE public.planningdocuments OWNER TO tester;
 
 --
 -- Name: planningdocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -885,7 +880,7 @@ CREATE SEQUENCE planningdocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE planningdocuments_id_seq OWNER TO tester;
+ALTER TABLE public.planningdocuments_id_seq OWNER TO tester;
 
 --
 -- Name: planningdocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -895,7 +890,7 @@ ALTER SEQUENCE planningdocuments_id_seq OWNED BY planningdocuments.id;
 
 
 --
--- Name: procuringentity; Type: TABLE; Schema: public; Owner: tester
+-- Name: procuringentity; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE procuringentity (
@@ -920,7 +915,7 @@ CREATE TABLE procuringentity (
 );
 
 
-ALTER TABLE procuringentity OWNER TO tester;
+ALTER TABLE public.procuringentity OWNER TO tester;
 
 --
 -- Name: procuringentity_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -934,7 +929,7 @@ CREATE SEQUENCE procuringentity_id_seq
     CACHE 1;
 
 
-ALTER TABLE procuringentity_id_seq OWNER TO tester;
+ALTER TABLE public.procuringentity_id_seq OWNER TO tester;
 
 --
 -- Name: procuringentity_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -944,7 +939,7 @@ ALTER SEQUENCE procuringentity_id_seq OWNED BY procuringentity.id;
 
 
 --
--- Name: procuringentityadditionalidentifiers; Type: TABLE; Schema: public; Owner: tester
+-- Name: procuringentityadditionalidentifiers; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE procuringentityadditionalidentifiers (
@@ -958,7 +953,7 @@ CREATE TABLE procuringentityadditionalidentifiers (
 );
 
 
-ALTER TABLE procuringentityadditionalidentifiers OWNER TO tester;
+ALTER TABLE public.procuringentityadditionalidentifiers OWNER TO tester;
 
 --
 -- Name: procuringentityadditionalidentifiers_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -972,7 +967,7 @@ CREATE SEQUENCE procuringentityadditionalidentifiers_id_seq
     CACHE 1;
 
 
-ALTER TABLE procuringentityadditionalidentifiers_id_seq OWNER TO tester;
+ALTER TABLE public.procuringentityadditionalidentifiers_id_seq OWNER TO tester;
 
 --
 -- Name: procuringentityadditionalidentifiers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -982,7 +977,7 @@ ALTER SEQUENCE procuringentityadditionalidentifiers_id_seq OWNED BY procuringent
 
 
 --
--- Name: publisher; Type: TABLE; Schema: public; Owner: tester
+-- Name: publisher; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE publisher (
@@ -995,7 +990,7 @@ CREATE TABLE publisher (
 );
 
 
-ALTER TABLE publisher OWNER TO tester;
+ALTER TABLE public.publisher OWNER TO tester;
 
 --
 -- Name: publisher_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1009,7 +1004,7 @@ CREATE SEQUENCE publisher_id_seq
     CACHE 1;
 
 
-ALTER TABLE publisher_id_seq OWNER TO tester;
+ALTER TABLE public.publisher_id_seq OWNER TO tester;
 
 --
 -- Name: publisher_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1019,7 +1014,7 @@ ALTER SEQUENCE publisher_id_seq OWNED BY publisher.id;
 
 
 --
--- Name: supplier; Type: TABLE; Schema: public; Owner: tester
+-- Name: supplier; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE supplier (
@@ -1044,7 +1039,7 @@ CREATE TABLE supplier (
 );
 
 
-ALTER TABLE supplier OWNER TO tester;
+ALTER TABLE public.supplier OWNER TO tester;
 
 --
 -- Name: supplier_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1058,7 +1053,7 @@ CREATE SEQUENCE supplier_id_seq
     CACHE 1;
 
 
-ALTER TABLE supplier_id_seq OWNER TO tester;
+ALTER TABLE public.supplier_id_seq OWNER TO tester;
 
 --
 -- Name: supplier_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1068,7 +1063,7 @@ ALTER SEQUENCE supplier_id_seq OWNED BY supplier.id;
 
 
 --
--- Name: supplieradditionalidentifiers; Type: TABLE; Schema: public; Owner: tester
+-- Name: supplieradditionalidentifiers; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE supplieradditionalidentifiers (
@@ -1082,7 +1077,7 @@ CREATE TABLE supplieradditionalidentifiers (
 );
 
 
-ALTER TABLE supplieradditionalidentifiers OWNER TO tester;
+ALTER TABLE public.supplieradditionalidentifiers OWNER TO tester;
 
 --
 -- Name: supplieradditionalidentifiers_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1096,7 +1091,7 @@ CREATE SEQUENCE supplieradditionalidentifiers_id_seq
     CACHE 1;
 
 
-ALTER TABLE supplieradditionalidentifiers_id_seq OWNER TO tester;
+ALTER TABLE public.supplieradditionalidentifiers_id_seq OWNER TO tester;
 
 --
 -- Name: supplieradditionalidentifiers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1106,7 +1101,7 @@ ALTER SEQUENCE supplieradditionalidentifiers_id_seq OWNED BY supplieradditionali
 
 
 --
--- Name: tender; Type: TABLE; Schema: public; Owner: tester
+-- Name: tender; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE tender (
@@ -1140,7 +1135,7 @@ CREATE TABLE tender (
 );
 
 
-ALTER TABLE tender OWNER TO tester;
+ALTER TABLE public.tender OWNER TO tester;
 
 --
 -- Name: tender_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1154,7 +1149,7 @@ CREATE SEQUENCE tender_id_seq
     CACHE 1;
 
 
-ALTER TABLE tender_id_seq OWNER TO tester;
+ALTER TABLE public.tender_id_seq OWNER TO tester;
 
 --
 -- Name: tender_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1164,7 +1159,7 @@ ALTER SEQUENCE tender_id_seq OWNED BY tender.id;
 
 
 --
--- Name: tenderamendmentchanges; Type: TABLE; Schema: public; Owner: tester
+-- Name: tenderamendmentchanges; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE tenderamendmentchanges (
@@ -1176,7 +1171,7 @@ CREATE TABLE tenderamendmentchanges (
 );
 
 
-ALTER TABLE tenderamendmentchanges OWNER TO tester;
+ALTER TABLE public.tenderamendmentchanges OWNER TO tester;
 
 --
 -- Name: tenderamendmentchanges_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1190,7 +1185,7 @@ CREATE SEQUENCE tenderamendmentchanges_id_seq
     CACHE 1;
 
 
-ALTER TABLE tenderamendmentchanges_id_seq OWNER TO tester;
+ALTER TABLE public.tenderamendmentchanges_id_seq OWNER TO tester;
 
 --
 -- Name: tenderamendmentchanges_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1200,7 +1195,7 @@ ALTER SEQUENCE tenderamendmentchanges_id_seq OWNED BY tenderamendmentchanges.id;
 
 
 --
--- Name: tenderdocuments; Type: TABLE; Schema: public; Owner: tester
+-- Name: tenderdocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE tenderdocuments (
@@ -1219,7 +1214,7 @@ CREATE TABLE tenderdocuments (
 );
 
 
-ALTER TABLE tenderdocuments OWNER TO tester;
+ALTER TABLE public.tenderdocuments OWNER TO tester;
 
 --
 -- Name: tenderdocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1233,7 +1228,7 @@ CREATE SEQUENCE tenderdocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE tenderdocuments_id_seq OWNER TO tester;
+ALTER TABLE public.tenderdocuments_id_seq OWNER TO tester;
 
 --
 -- Name: tenderdocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1243,7 +1238,7 @@ ALTER SEQUENCE tenderdocuments_id_seq OWNED BY tenderdocuments.id;
 
 
 --
--- Name: tenderer; Type: TABLE; Schema: public; Owner: tester
+-- Name: tenderer; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE tenderer (
@@ -1268,7 +1263,7 @@ CREATE TABLE tenderer (
 );
 
 
-ALTER TABLE tenderer OWNER TO tester;
+ALTER TABLE public.tenderer OWNER TO tester;
 
 --
 -- Name: tenderer_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1282,7 +1277,7 @@ CREATE SEQUENCE tenderer_id_seq
     CACHE 1;
 
 
-ALTER TABLE tenderer_id_seq OWNER TO tester;
+ALTER TABLE public.tenderer_id_seq OWNER TO tester;
 
 --
 -- Name: tenderer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1292,7 +1287,7 @@ ALTER SEQUENCE tenderer_id_seq OWNED BY tenderer.id;
 
 
 --
--- Name: tendereradditionalidentifiers; Type: TABLE; Schema: public; Owner: tester
+-- Name: tendereradditionalidentifiers; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE tendereradditionalidentifiers (
@@ -1305,7 +1300,7 @@ CREATE TABLE tendereradditionalidentifiers (
 );
 
 
-ALTER TABLE tendereradditionalidentifiers OWNER TO tester;
+ALTER TABLE public.tendereradditionalidentifiers OWNER TO tester;
 
 --
 -- Name: tendereradditionalidentifiers_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1319,7 +1314,7 @@ CREATE SEQUENCE tendereradditionalidentifiers_id_seq
     CACHE 1;
 
 
-ALTER TABLE tendereradditionalidentifiers_id_seq OWNER TO tester;
+ALTER TABLE public.tendereradditionalidentifiers_id_seq OWNER TO tester;
 
 --
 -- Name: tendereradditionalidentifiers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1329,7 +1324,7 @@ ALTER SEQUENCE tendereradditionalidentifiers_id_seq OWNED BY tendereradditionali
 
 
 --
--- Name: tenderitem; Type: TABLE; Schema: public; Owner: tester
+-- Name: tenderitem; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE tenderitem (
@@ -1349,7 +1344,7 @@ CREATE TABLE tenderitem (
 );
 
 
-ALTER TABLE tenderitem OWNER TO tester;
+ALTER TABLE public.tenderitem OWNER TO tester;
 
 --
 -- Name: tenderitem_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1363,7 +1358,7 @@ CREATE SEQUENCE tenderitem_id_seq
     CACHE 1;
 
 
-ALTER TABLE tenderitem_id_seq OWNER TO tester;
+ALTER TABLE public.tenderitem_id_seq OWNER TO tester;
 
 --
 -- Name: tenderitem_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1373,7 +1368,7 @@ ALTER SEQUENCE tenderitem_id_seq OWNED BY tenderitem.id;
 
 
 --
--- Name: tenderitemadditionalclassifications; Type: TABLE; Schema: public; Owner: tester
+-- Name: tenderitemadditionalclassifications; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE tenderitemadditionalclassifications (
@@ -1386,7 +1381,7 @@ CREATE TABLE tenderitemadditionalclassifications (
 );
 
 
-ALTER TABLE tenderitemadditionalclassifications OWNER TO tester;
+ALTER TABLE public.tenderitemadditionalclassifications OWNER TO tester;
 
 --
 -- Name: tenderitemadditionalclassifications_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1400,7 +1395,7 @@ CREATE SEQUENCE tenderitemadditionalclassifications_id_seq
     CACHE 1;
 
 
-ALTER TABLE tenderitemadditionalclassifications_id_seq OWNER TO tester;
+ALTER TABLE public.tenderitemadditionalclassifications_id_seq OWNER TO tester;
 
 --
 -- Name: tenderitemadditionalclassifications_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1410,7 +1405,7 @@ ALTER SEQUENCE tenderitemadditionalclassifications_id_seq OWNED BY tenderitemadd
 
 
 --
--- Name: tendermilestone; Type: TABLE; Schema: public; Owner: tester
+-- Name: tendermilestone; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE tendermilestone (
@@ -1426,7 +1421,7 @@ CREATE TABLE tendermilestone (
 );
 
 
-ALTER TABLE tendermilestone OWNER TO tester;
+ALTER TABLE public.tendermilestone OWNER TO tester;
 
 --
 -- Name: tendermilestone_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1440,7 +1435,7 @@ CREATE SEQUENCE tendermilestone_id_seq
     CACHE 1;
 
 
-ALTER TABLE tendermilestone_id_seq OWNER TO tester;
+ALTER TABLE public.tendermilestone_id_seq OWNER TO tester;
 
 --
 -- Name: tendermilestone_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1450,7 +1445,7 @@ ALTER SEQUENCE tendermilestone_id_seq OWNED BY tendermilestone.id;
 
 
 --
--- Name: tendermilestonedocuments; Type: TABLE; Schema: public; Owner: tester
+-- Name: tendermilestonedocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
 --
 
 CREATE TABLE tendermilestonedocuments (
@@ -1470,7 +1465,7 @@ CREATE TABLE tendermilestonedocuments (
 );
 
 
-ALTER TABLE tendermilestonedocuments OWNER TO tester;
+ALTER TABLE public.tendermilestonedocuments OWNER TO tester;
 
 --
 -- Name: tendermilestonedocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1484,7 +1479,7 @@ CREATE SEQUENCE tendermilestonedocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE tendermilestonedocuments_id_seq OWNER TO tester;
+ALTER TABLE public.tendermilestonedocuments_id_seq OWNER TO tester;
 
 --
 -- Name: tendermilestonedocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -2902,7 +2897,6 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 121	121	1	AD-AS-DCAGI-SC-106-15 	Servicio de Limpieza Integralpara los Inmuebles de Santa Catarina-Altavista y Torre Murano del Grupo Aeroportuario de la Ciudad de México S.A. de C.V.		terminated	2015-09-15 00:00:00	2015-12-31 00:00:00	258612.50	MXN	2015-09-15 00:00:00	\N	
 58	58	No aplica	AD-AS-DCAGI-SC-072-15	" Contrato de adquisicion de bienes a precio fijo consistentes en adquisición de prendas de vestir para el programa de empleo temporal (PET)"	Adquisicion de bienes a precio fijo consistentes en adquisición de prendas de vestir para el programa de empleo temporal (PET)"	terminated	2015-05-27 00:00:00	2015-10-23 00:00:00	1040682.96	MXN	2015-06-11 00:00:00	\N	
 148	148	1	AD-AS-DCAGI-SC-029-16	Servicio de recolección de residuos urbanos	Servicio de recolección de residuos urbanos	terminated	2016-04-05 00:00:00	2016-06-17 00:00:00	122100.00	MXN	2016-04-19 00:00:00	\N	
-18	18	AO-009KDH999-E46-2016	AD-SRO-DCAGI-SC-100/15	Servicios de experto revisor para la asistencia técnica especializada en materia de diseño estructural, aplicada  a la infraestructura aeroportuaria.	Servicios de experto revisor para la asistencia técnica especializada en materia de diseño estructural, aplicada  a la infraestructura aeroportuaria.	terminated	2015-12-01 00:00:00	2015-05-23 00:00:00	176400.00	USD	2015-12-01 00:00:00	\N	
 21	21	SA-009KDH999-N12-2015	AD-S-DCAGI-SC-017/2014	Servicio de un Testigo Social para que atestigüe en las etapas de la invitación a cuando menos tres personas, presencial, internacional bajo la cobertura de trarados de libre comercio, relativa a la contratación de los servicios relacionados con obra pública, consistentes en el desarrollo del proyecto ejecutivo de pistas, rodajes y plataformas y ayudas a la navegación y otras instalaciones del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).	Servicio de un Testigo Social para que atestigüe en las etapas de la invitación a cuando menos tres personas, presencial, internacional bajo la cobertura de trarados de libre comercio, relativa a la contratación de los servicios relacionados con obra pública, consistentes en el desarrollo del proyecto ejecutivo de pistas, rodajes y plataformas y ayudas a la navegación y otras instalaciones del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).	terminated	2014-10-29 00:00:00	\N	539531.22	MXN	2014-10-29 00:00:00	\N	
 1	1	AA-009KDH999-E2-2016	AD-AS-DCAGI-SC-031/15	Prestación de los Servicios consistentes en la elaboración del: “Plan de Acciones de Monitoreo y Conservación de Aves para el Nuevo Aeropuerto Internacional de la Ciudad de México”.	Servicio relacionado con el programa de empleo temporal (PET) correspondiente a las acciones preparatorias para la construcción del Nuevo Aeropuerto Internacional de la Ciudad de México (servicio de traslado de personas).	terminated	2015-05-18 00:00:00	2015-06-26 00:00:00	800000.00	MXN	2015-06-02 00:00:00	\N	
 71	71	-	GACM/DCI/SJ/CI/001-2015                                                                    	Llevar a cabo el servicio de elaboración de programas y propuestas de acciones, ambientales para el proyecto Nuevo Aeropuerto de la Ciudad de México (NAICM)	Llevar a cabo el servicio de elaboración de programas y propuestas de acciones, ambientales para el proyecto Nuevo Aeropuerto de la Ciudad de México (NAICM)	terminated	2015-01-01 00:00:00	2015-03-31 00:00:00	6610000	MXN	2015-01-01 00:00:00	\N	
@@ -2950,7 +2944,6 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 76	76	-	GACM/DCI/SJ/CI/013-2015                                                                    	Llevar a cabo el Servicio de Investigaciones y Estudios Especiales Relacionados con Aspectos Geotécnicos del Nuevo Aeropuerto de la Ciudad de México (NAICM) en el Vaso del Ex-Lago de Texcoco, Zona Federal	Llevar a cabo el Servicio de Investigaciones y Estudios Especiales Relacionados con Aspectos Geotécnicos del Nuevo Aeropuerto de la Ciudad de México (NAICM) en el Vaso del Ex-Lago de Texcoco, Zona Federal	none	2015-06-01 00:00:00	2016-12-31 00:00:00	152849934	MXN	2015-06-01 00:00:00	\N	
 16	16	AO-009KDH999-E31-2016	AD-SRO-DCAGI-SC-098/15	Servicio de asistencia técnica especializada en materia de Geotecnia y Cimentación aplicada a la infraestructura aeroportuaria.	Servicio de asistencia técnica especializada en materia de Geotecnia y Cimentación aplicada a la infraestructura aeroportuaria.	terminated	2015-12-01 00:00:00	2016-05-01 00:00:00	1683620.69	MXN	2015-12-01 00:00:00	\N	
 15	15	AO-009KDH999-E41-2016	AD-SRO-DCAGI-SC-097/15	Servicio de asistencia técnica especializada en materia de hidráulica aplicada a la infraestructura aeroportuaria.	Servicio de asistencia técnica especializada en materia de hidráulica aplicada a la infraestructura aeroportuaria.	terminated	2015-12-02 00:00:00	2016-04-02 00:00:00	1403017.24	MXN	2015-12-01 00:00:00	\N	
-17	17	AO-009KDH999-E40-2016	AD-SRO-DCAGI-SC-099/15	Servicios de Asistencia Técnica Especializada en Materia de Diseño Sismico Estructural Aplicada a la Infraestructura Aeroportuaria.	Servicios de Asistencia Técnica Especializada en Materia de Diseño Sismico Estructural Aplicada a la Infraestructura Aeroportuaria.	terminated	2015-12-01 00:00:00	2015-05-23 00:00:00	2104525.86	MXN	2015-12-01 00:00:00	\N	
 154	154	AA-009KDH999-E53-2016	AD-AS-DCAGI-SC-84/15	Materiales para la Construcción	Adquisición de Materiales para la Construcción	terminated	2015-12-07 00:00:00	2015-12-17 00:00:00	320361.43	MXN	2015-12-07 00:00:00	\N	
 198	198	-	104-014-CUNA01-3S	Gerencia del proyecto para atender la demanda de servicios aeroportuarios en el centro del país	Gerencia del proyecto para atender la demanda de servicios aeroportuarios en el centro del país	active	2016-07-17 00:00:00	2020-10-08 00:00:00	2361994326.38	MXN	2014-10-09 00:00:00	\N	
 64	64	LO-009KDH999-T15-2015	LPI-SRO-DCAGI-SC-030-15	Estudio mediante el cual se definan las características técnicas de infraestructura y diseño esquemático de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México.	Estudio mediante el cual se definan las características técnicas de infraestructura y diseño esquemático de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México.	terminated	2015-05-29 00:00:00	2015-09-03 00:00:00	11650000.00	MXN	2015-05-29 00:00:00	\N	
@@ -2968,7 +2961,6 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 113	113	SA-009KDH-N62/2015	AD-AS-DCAGI-SC-047/15	Servicio Integral de Reservación, Expedición y Entrega de Pasajes Aéreos para el personal GACM	Servicios integrales de reservación, expedición de boletos de avión con cobertura en el territorio Nacional e Internacional y otros servicios del ramo para el GACM	active	2015-07-06 00:00:00	2016-12-31 00:00:00	5840518.00	MXN	2015-07-20 00:00:00	\N	
 115	115	SA-009KDH999-N67-2015	AD-AS-DCAGI-SC-052/15	Equipo de Seguridad (Botiquines para la DCI)	Adquisición de equipo de seguridad (botiquines) 	terminated	2015-07-28 00:00:00	2015-08-03 00:00:00	78500.00	MXN	2015-07-28 00:00:00	\N	
 118	118	AA-009KDH999-E60-2016	AD-AS-DCAGI-SC-78/15	Arrendamiento de Mobiliario consistente en Mesas de Trabajo y Sillas Secretariales	Arrendamiento de Mobiliario consistente en Mesas de Trabajo y Sillas Secretariales	terminated	2015-05-07 00:00:00	2015-12-31 00:00:00	249237.56	MXN	2015-05-21 00:00:00	\N	
-130	130	AD-SRO-DCAGI-SC-021/16	AD-SRO-DCAGI-SC-021/16	Servicio de traslado de personal en camiones turísticos con capacidad para 45 pasajeros como mínimo en dos turnos	Servicio de traslado de personal en camiones turísticos con capacidad para 45 pasajeros como mínimo en dos turnos	terminated	2016-05-25 00:00:00	2016-02-15 00:00:00	640000.00	MXN	2016-02-03 00:00:00	\N	
 114	114	1	AD-AS-DSAGI-SC-51/2015	Contratación del servicio integral de impresión y digitalización en blanco y negro y a color para el grupo Areoportuario de la Ciudad de México, S.A. de C.V., para los ejercicios fiscales 2015 a 2018	Contratar el servicio integral de impresión y digitalización en blanco y negro y a color para el grupo Areoportuario de la Ciudad de México, S.A. de C.V., para los ejercicios fiscales 2015 a 2018, con el objetivo de dotar a su personal de los medios y her	active	2015-04-27 00:00:00	2018-12-31 00:00:00	15800287.50	MXN	2015-07-20 00:00:00	\N	
 78	78	-	GACM/DCI/SJ/CM/01-2014	Establecer Las bases generales a que se sujetarán GACM y la COMISION así como, pactos comunes y el objeto - generico de futuros servicios de cracter cientifico y tecnologico u otro tipo que acuerden las mismas, mediante la celebración de los respectivos contratos especificos de prestación de servicios	Establecer Las bases generales a que se sujetarán GACM y la COMISION así como, pactos comunes y el objeto - generico de futuros servicios de cracter cientifico y tecnologico u otro tipo que acuerden las mismas, mediante la celebración de los respectivos contratos especificos de prestación de servicios	active	\N	\N	0		\N	\N	
 65	65	LO-009KDH999-E94-2015	 LPN-SRO-DCAGI-SC-009/2016	Estudio de Ingeniería Geomática para el Proyecto Pistas, Plataformas, Calles de Rodaje y Edificios del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM), para Generar un modelo Digital de Terreno (MDT) a Través de la Tecnología HIGH Definition Surveying (HDS), Empleando Equipos GNSS, Escáner Láser y Ecosonda .	Estudio de Ingeniería Geomática para el Proyecto Pistas, Plataformas, Calles de Rodaje y Edificios del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM), para Generar un modelo Digital de Terreno (MDT) a Través de la Tecnología HIGH Definition Surveying (HDS), Empleando Equipos GNSS, Escáner Láser y Ecosonda . 	terminated	2016-02-22 00:00:00	2016-05-22 00:00:00	41324450.46	MXN	2016-02-22 00:00:00	\N	
@@ -3112,6 +3104,9 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 219	219	-	-	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	none	\N	\N	0		\N	\N	
 220	220	-	-	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 3 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 3 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	none	\N	\N	0		\N	\N	
 37	37	-	"Sin número"	Contrato de Fideicomiso de Administarción y Pago para la Adquisición de Bienes y Contratación de Servicios, y Obre Pública.	La Constitución de Fideicomiso de Administración y Pago para la Adquisicion de bienes y contratación de servicios, y obra pública.	active	2014-10-29 00:00:00	2024-10-29 00:00:00	10000000	MXN	2014-10-29 00:00:00	\N	
+17	17	AO-009KDH999-E40-2016	AD-SRO-DCAGI-SC-099/15	Servicios de Asistencia Técnica Especializada en Materia de Diseño Sismico Estructural Aplicada a la Infraestructura Aeroportuaria.	Servicios de Asistencia Técnica Especializada en Materia de Diseño Sismico Estructural Aplicada a la Infraestructura Aeroportuaria.	terminated	2015-05-23 00:00:00	2015-12-01 00:00:00	2104525.86	MXN	2015-12-01 00:00:00	\N	
+18	18	AO-009KDH999-E46-2016	AD-SRO-DCAGI-SC-100/15	Servicios de experto revisor para la asistencia técnica especializada en materia de diseño estructural, aplicada  a la infraestructura aeroportuaria.	Servicios de experto revisor para la asistencia técnica especializada en materia de diseño estructural, aplicada  a la infraestructura aeroportuaria.	terminated	2015-05-23 00:00:00	2015-12-01 00:00:00	176400.00	USD	2015-12-01 00:00:00	\N	
+130	130	AD-SRO-DCAGI-SC-021/16	AD-SRO-DCAGI-SC-021/16	Servicio de traslado de personal en camiones turísticos con capacidad para 45 pasajeros como mínimo en dos turnos	Servicio de traslado de personal en camiones turísticos con capacidad para 45 pasajeros como mínimo en dos turnos	terminated	2016-02-15 00:00:00	2016-05-25 00:00:00	640000.00	MXN	2016-02-03 00:00:00	\N	
 \.
 
 
@@ -4787,6 +4782,7 @@ COPY supplier (id, contractingprocess_id, award_id, name, identifier_scheme, ide
 83	81	\N	Calzada Construcciones, S. A. de C. V.		CCO980814BU4	Calzada Construcciones, S. A. de C. V.											
 215	192	\N	SOPORTE Y CAPACITACIÓN S.A. DE C.V.		SCA000222H7A	SOPORTE Y CAPACITACIÓN S.A. DE C.V.											
 9	2	\N	Oscar Alvares de la  Cuadra Sánchez	AASO390420HDFLNS07	Oscar_Alvares_de_la_Cuadra_Sanchez	Oscar Alvares de la  Cuadra Sánchez		Insurgentes Sur 559	Benito Júarez	Ciudad de México	3810	México					
+29	12	\N	Jonathan Donald Bray		494534466	Jonathan Donald Bray		285 Pickering PLCA	Walnut Creek	CA	94598-3203	EU					
 15	25	\N	Grupo de Ingenieía en Consultoría en obras, S. A. de C. V.		GIC900813219	Grupo de Ingenieía en Consultoría en obras, S. A. de C. V.		Calzada de Tlalpan 4911 BIS, Tlalpan	Tlalpan	Ciudad de México	14000	México					
 191	110	\N	Consultoría, Supervisión Técnica y Operación en Sistemas, S. A. de C. V.		CST890605C72	Consultoría, Supervisión Técnica y Operación en Sistemas, S. A. de C. V.		Emperadores número 46	Benito Juárez	Ciudad de México	3570	México					
 192	104	\N	Lanz Import S. A. de C. V.		LIM000928AC8	Lanz Import S. A. de C. V.		Av. Paseo de la Reforma No. 725	Miguel Hidalgo	Ciudad de México	11000	México					
@@ -4823,7 +4819,6 @@ COPY supplier (id, contractingprocess_id, award_id, name, identifier_scheme, ide
 58	115	\N	Actividades Sustentables Administrativos, S.A. de C.V.		ASA131016MT6	Actividades Sustentables Administrativos, S.A. de C.V.		Tlacotalpan número 13 despacho 02	Cuauhtémoc	Ciudad de México	6760	México					
 17	4	\N	DR. Rafael Bernardo Carmona Paredes	CAPR560416LQ6	Rafael_Bernardo_Carmona_Paredes	DR. Rafael Bernardo Carmona Paredes		San Lorenzo 4 casa 2	Xochimilco	Ciudad de México	16020	México					
 61	116	\N	DESINGS AND INTELIGENT MATERIALS, S.A. DE R.L. DE C.V.		DIM051128A83	DESINGS AND INTELIGENT MATERIALS, S.A. DE R.L. DE C.V.		Adolfo Prieto 1653, int.2-6	Del Valle	Ciudad de México	03100	México					
-29	12	\N	Jonathan Donald Bray		494534466	Jonathan Donald Bray		285 Pickering PLCA	Walnut Creek	CA	94598-3203	EU					
 19	27	\N	Consorcio IUYET S.A. de C.V.		CIU99050721G7	Consorcio IUYET S.A. de C.V.		San Borja 1358, Vertiz Narvarte	Benito Juárez	Ciudad de México	03600	México					
 54	78	\N	Comisión Federal de Electricidad		CFE370814Q10	Comisión Federal de Electricidad		Reforma número 164, Piso 14	Juarez	Cuauthemoc	6000	México					
 56	65	\N	Consorcio IUYET, S.A. de C.V.		CIU99050721G7	Consorcio IUYET, S.A. de C.V.		Valentín Gómez Farías No.307, colonia 5 de mayo	Toluca	Estado de México	50090	México					
@@ -4999,6 +4994,7 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 142	142	900950	Control, Prevención e identificación de plagas en el Polígono del NAICM	Control, Prevención e identificación de plagas en el Polígono del NAICM	active	0		1750000	MXN	Invitación a cuando menos tres personas	Artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 	Mecanismo Binario	Apartado 2.13 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-N75-2015 del 15 de septiembre de 2015 (ver anexo)	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 18:00 horas del 21 de septiembre de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Gerente de concursos de la Subdirección de Contrataciones de GACM	\N	\N	2015-09-21 00:00:00	2015-09-21 00:00:00	0		\N	\N	2	\N	
 39	39	-			complete	0		0		Convenio de colaboración	Artículo 1 de la LOPSRM					\N	\N	\N	\N	0		\N	\N	1	\N	
 49	49	-			none	0		0		Invitación a cuando menos tres personas						\N	\N	\N	\N	0		\N	\N	1	\N	
+139	139	799531	Servicios profesionales de consultoría, legales y/o normativos y acompañamiento en los procedimientos de contratación pública y elaboración del expediente concentrador integral del (NAICM)	Servicios profesionales de consultoría, legales y/o normativos y acompañamiento en los procedimientos de contratación pública y elaboración de la memoria documental integral del desarrollo del  Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	20360000.00	MXN	Invitación a cuando menos tres personas	Artículo 41, fracción X de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público.					\N	\N	\N	\N	0		\N	\N	3	\N	
 90	90	790388	Construcción de accesos y plataformas para exploración geotécnica para la pista número 2 del Nuevo Aeropuerto Internacional de la Ciudad de México.	Construcción de accesos y plataformas para exploración geotécnica para la pista número 2 del Nuevo Aeropuerto Internacional de la Ciudad de México.	active	0		10400000	MXN	Licitación pública	Artículos 27, fracción I, 30 fracción I, 38 y 45 fracción I de la LOPSRM y 63 fracción I del RLOPSRM.	Mecanismo binario	Capítulos 2.13 y 2.14 de la Convocatoria para la Licitación Pública Nacional Presencial No. No.  LO-009KDH999-N20-2015, aplicando el mecanismo binario para la Construcción de accesos y plataformas para exploración geotécnica para la pista No. 2 del Nuevo Aeropuerto Internacional de la Ciudad de México	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 18:00 horas del 20 de abril de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Subdirector de Contrataciones de GACM. 	2015-04-20 00:00:00	\N	2015-04-08 00:00:00	2015-04-10 00:00:00	1	Capítulos 2.10 y 2.11 de la Convocatoria para la Licitación Pública Nacional Presencial No. No.  LO-009KDH999-N20-2015, aplicando el mecanismo binario para la Construcción de accesos y plataformas para exploración geotécnica para la pista No. 2 del Nuevo Aeropuerto Internacional de la Ciudad de México	2015-04-23 00:00:00	\N	12	\N	
 91	91	1029560	Servicio de Transporte de personas en autobuses y de traslado de maquinaria y equipo en camionetas de redilas para el programa de empleo temporal.	Servicio de Transporte de personas en autobuses y de traslado de maquinaria y equipo en camionetas de redilas para el programa de empleo temporal.	active	0		12500000	MXN	Licitación pública	Articulos 25, 26, fracciión I, 26 Bis, fraección I, 28, fracción I,29, 36, 36 bis, 37, 46 y 47 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público, y 35 y 39 de su Reglamento.	Mecanismo binario	Capitulo 9.- De la Licitación Pública Nacional No. LA-009KDH999-E29-2016, 	Presencial	El día 22 de abril de 2016 y de conformidad con el numeral 1.4.3.1 del Manual de Organización de la empresa de participación estatal mayoritaria,, yel numeral 5.1 de sus Pobalines, el Gerente de Concursos de GACM, presidió el acto de presentación y apertura de proposiciones, de las cuales, sólo 1 es consorcio.	2016-04-22 00:00:00	\N	2016-04-15 00:00:00	2016-04-15 00:00:00	1	Capitulo 4.-De la Licitación Pública Nacional No. LA-009KDH999-E29-2016,  	2016-04-25 00:00:00	\N	3	\N	
 92	92	781926	Estudio mediante el cual se definan las características técnicas de infraestructura y diseño esquemático de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México.	Estudio mediante el cual se definan las características técnicas de infraestructura y diseño esquemático de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México.	active	0		16000000	MXN	Licitación pública	Artículos 27 fracción I, 30 fracción II, y 45 fracción II de la LOPSRM.	Ponderación de puntos (Puntos y porcentajes)	Capítulos 2.13 y 2.14 de la Convocatoria de licitación pública internacional presencial, bajo la cobertura de tratados identificada con el número LO-009KDH999-T15-2015, para llevar a cabo el “Estudio mediante el cual se definan las características técnicas de infraestructura y diseño esquemático de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México”, publicada en compraNet el día 25 de marzo del 2015.	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 10:00 horas del 30 de abril de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Subdirector de Contrataciones de GACM. 	2015-04-30 00:00:00	\N	2015-04-08 00:00:00	2015-04-08 00:00:00	1	Capítulos 2.10 y 2.11 de la Convocatoria de licitación pública internacional presencial, bajo la cobertura de tratados identificada con el número LO-009KDH999-T15-2015, para llevar a cabo el “Estudio mediante el cual se definan las características técnicas de infraestructura y diseño esquemático de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México”, publicada en compraNet el día 25 de marzo del 2015.	2015-04-22 00:00:00	\N	3	\N	
@@ -5014,6 +5010,7 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 64	64	781926	Estudio mediante el cual se definan las características técnicas de infraestructura y diseño esquemático de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México.	Estudio mediante el cual se definan las características técnicas de infraestructura y diseño esquemático de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México.	complete	0		16000000	MXN	Licitación pública	Artículos 27 fracción I, 30 fracción II, y 45 fracción II de la LOPSRM.	Ponderación de puntos (Puntos y porcentajes)	Capítulos 2.13 y 2.14 de la Convocatoria de licitación pública internacional presencial, bajo la cobertura de tratados identificada con el número LO-009KDH999-T15-2015, para llevar a cabo el “Estudio mediante el cual se definan las características técnicas de infraestructura y diseño esquemático de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México”, publicada en compraNet el día 25 de marzo del 2015.	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 10:00 horas del 30 de abril de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Subdirector de Contrataciones de GACM. 	2015-04-30 00:00:00	\N	2015-04-08 00:00:00	2015-04-08 00:00:00	1	Convocatoria de licitación pública internacional presencial, bajo la cobertura de tratados identificada con el número LO-009KDH999-T15-2015, para llevar a cabo el “Estudio mediante el cual se definan las características técnicas de infraestructura y diseño esquemático de la terminal de carga del Nuevo Aeropuerto Internacional de la Ciudad de México”, publicada en compraNet el día 25 de marzo del 2015.	\N	\N	3	\N	
 123	123	1038888	Servicios de Auditoria Externa para Dictaminar los Estados Financieros y Presupuestales del Ejercicio Fiscal 2015.	Servicios de Auditoria Externa para Dictaminar los Estados Financieros y Presupuestales del Ejercicio Fiscal 2015.	active	0		169027.08	MXN	Invitación a cuando menos tres personas	Artículo 42 y 47 de la LAASSP.	Artículo 42 y 47 de la LAASSP.		Nacional		\N	\N	\N	\N	0		\N	\N	0	\N	
 210	210	No aplica			none	0		500498	MXN	Adjudicación directa	Numeral 152 del acuerdo por el que se establecen las disposiciones en Materia de recursos Materiales y servicios Generales					\N	\N	\N	\N	0		\N	\N	1	\N	
+89	89	830658	Desarrollo del proyecto ejecutivo, construcción, equipamiento de mobiliario en instalaciones complementarias para el campamento del Grupo Aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México.	Desarrollo del Proyecto Ejecutivo, construcción, equipamiento de mobiliario en instalaciones complementarias para el campamento del Grupo Aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México.	active	0		150000000	MXN	Licitación pública	Artículo 27, segundo párrafo de la Ley de Obras Públicas y Servicios Relaciondos con las Mismas	Ponderación de puntos (Puntos y porcentajes)	Capítulo VII de la Convocatoria (ver anexo) 	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 11:00 horas del 27 de julio de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Subdirector de Contrataciones de GACM. 	2015-07-27 00:00:00	\N	2015-07-02 00:00:00	2015-07-10 00:00:00	1	Capítulo VI de la Convocatoria (ver anexo)	2015-07-20 00:00:00	\N	17	\N	
 86	86	911935	Construcción de los caminos provisionales de acceso al Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) ejecutando trabajos de terracería, estructuras y obrad de drenaje, pavimentación y señalamiento.	Construcción de los caminos provisionales de acceso al Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) ejecutando trabajos de terracería, estructuras y obrad de drenaje, pavimentación y señalamiento.	active	0		1203803000	MXN	Licitación pública	Articulos 27, fracción I, 30, fracción I, y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.  	Puntos y porcentajes	Capitulo 2-De la Licitación (numeral 2.14) de la Convocatoria de la Licitación Pública Nacional Presencial No. LO-009KDH999-N80-2015 de fecha 29 de septiembre de 2015.	Presencial	El día 13 de noviembre del 2015 y de conformidad con los artículos 33, 36 y 37 de la LOPSRM y 59, 60 y 61 del RLOPSRM, el Subdirector de Contrataciones del GACM, preside el acto de presentación y apertura de propuestas económicas, de las cuales, 47 son consorcios.	2015-11-13 00:00:00	\N	2015-10-09 00:00:00	2016-11-05 00:00:00	1	Capitulo 2-De la Licitación de la Convocatoria de la Licitación Pública Nacional Presencial No. LO-009KDH999-N80-2015 de fecha 29 de septiembre de 2015.	2015-10-30 00:00:00	\N	48	\N	
 128	128	1008580	Supervisión de la Construcción del Drenaje Pluvial Temporal del Nuevo Aeropuerto Internacional de la Ciudad de México	Supervisión de la Construcción del Drenaje Pluvial Temporal del Nuevo Aeropuerto Internacional de la Ciudad de México	active	0		9300000.00	MXN	Invitación a cuando menos tres personas	Articulos 27, fracción II, 30, fracción I, 36, 37, 38, 39 y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.  	Articulos 27, fracción II, 30, fracción I, 36, 37, 38, 39 y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.  		Nacional		\N	\N	2015-09-29 00:00:00	2015-09-29 00:00:00	0		\N	\N	2	\N	
 60	60	867412	el  Plan de Integración Ejidal para el Nuevo Aeropuerto Internacional de la Ciudad de México 	el  Plan de Integración Ejidal para el Nuevo Aeropuerto Internacional de la Ciudad de México 	complete	0		15200000	MXN	Invitación a cuando menos tres personas		Binario		Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 14:00 horas del 06 de agosto de 2015, en la sala de juntas de la Subdirección de Contrataciones  ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Gerente de concursos de la Subdirección de Contrataciones de GACM	\N	\N	2015-08-06 00:00:00	2015-08-06 00:00:00	1	4  de la Convocatoria N° IA-009KDH999-N57-2015 el  Plan de Integración Ejidal para el Nuevo Aeropuerto Internacional de la Ciudad de México 	\N	\N	2	\N	
@@ -5027,6 +5024,7 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 53	53	DCAGI/SC/68/2015	Servicios en el seguimiento, representación y defensa en juicio, presentes en materia laboral. 	Servicios en el seguimiento, representación y defensa en juicio, presentes en materia laboral. 	complete	420000	MXN	420000	MXN	Adjudicación directa	Artículo 42 de la LAASSP			Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
 194	194	971462	Servicios de asesoría, relacionados con la implemntación de la estructura de gobierno coporativo para la administración del GACM.	Servicios de asesoría, relacionados con la implemntación de la estructura de gobierno coporativo para la administración del GACM.	complete	0		0		Adjudicación directa	Artículo 42 de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.	Puntos y porcentajes	Numeral 2.13 y 2.14 de la convocatoria para la invitación a cuando menos tres personas.	Presencial	Acta de presentación y apertura de proposiciones del 20 de enero de 2016 realizada en la sala de juntas del GACM en Avenida Insurgentes sur 2453, segundo piso, torre Murano, Colonia Tizapán San Ángel, Del. Álvaro Obregón, México, C.P. 01090	2016-01-22 00:00:00	\N	2016-01-14 00:00:00	2016-01-14 00:00:00	1	Numeral 2.10 y 2.11 de la convocatoria para la invitación a cuando menos tres personas.	\N	\N	3	\N	
 95	95	865741	Invitación a cuando menos tres personas No. IO-009KDH999-N54-2015, para el servicio: "Supervisión para: Construcción del proyecto integral consistente en barda y camino perimetral, alumbrado, servicios inducidos y casetas de acceso para el NAICM (PRIMERA ETAPA)."	Supervisión para: Construcción del proyecto integral consistente en barda y camino perimetral, alumbrado, servicios inducidos y casetas de acceso para el NAICM (PRIMERA ETAPA)	active	0		4000000	MXN	Invitación a cuando menos tres personas	Artículos 27, fracción II, 30, fracción I, 36, 37, 38, 39 y 45, fracción I, de la Ley de Obras Públicas y Servicios Relacionados con las Misma.	Mecaninsmo binario	Capitulo 2-De la invitación a cuando menos tres personas (numerales 2.13 y 2.14) de la invitación a cuando menos tres personas No. IO-009KDH999-N54-2015, aplicando el mecanismo de evaluación binario, carácter nacional, publicada en compranet el 3 de agosto de 2015.	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 18:00 horas del 11 de agosto de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Subdirector de Contrataciones de GACM. 	2015-08-11 00:00:00	\N	2015-08-07 00:00:00	2015-08-07 00:00:00	1	Convocatoria de la Invitación a cuando menos tres personas No. IO-009KDH999-N54-2015, aplicando el mecanismo de evaluación binario, carácter nacional, publicada en compranet el 3 de agosto de 2015.	2015-08-14 00:00:00	\N	5	\N	
+8	8	1036664	Servicios de asistencia técnica especializada en materia de diseño sismico estructural aplicada a la infraestructura aeroportuaria	Servicios de asistencia técnica especializada en materia de diseño sismico estructural aplicada a la infraestructura aeroportuaria	active	0		17000000.00	MXN	Adjudicación directa	Artículo 42, fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.	Artículo 42, fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 67	67	790372	Exploración geotécnica complementaria para el proyecto ejecutivo del sistema de drenaje temporal del Nuevo aeropuerto Internacional de la Ciudad de México, en el Ex Lago de Texcoco, Estado de México	Exploración geotécnica complementaria para el proyecto ejecutivo del sistema de drenaje temporal del Nuevo aeropuerto Internacional de la Ciudad de México, en el Ex Lago de Texcoco, Estado de México	none	0		2550000	MXN	Licitación pública	Articulos 27, fracción I, 30, fracción I,  36, 37, 38 39 y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.  	Mecanismo Binario	Apartado 2.10 y 2.11 de la Convocatoria de la Licitación Pública Nacional Presencial No. LO-009KDH999-N19-2015, de fecha 27 de marzo de 2015, aplicando el mecanismo binario. Publicada en CompraNet el día 30 de septiembre del 2015.	Presencial	El día 15 de abril  del 2015 y de conformidad con los artículos 33, 36 y 37 de la LOPSRM y 59, 60 y 61 del RLOPSRM, el Subdirector de Contrataciones del GACM, preside el acto de presentación y apertura de propuestas económicas. De acuerdo con el artículo 37 de la LOPSRM, se reciben las proposiciones para su evaluación cualitativa y de acuerdo a ello se convoca para el día 22 de abril de 2015, para conocer el fallo correspondiente.	2015-04-22 00:00:00	\N	2015-04-04 00:00:00	2015-04-04 00:00:00	1	Apartado 2.13 y 2.14 de la Convocatoria de la Licitación Pública Nacional Presencial No. LO-009KDH999-N19-2015, de fecha 27 de marzo de 2015, aplicando el mecanismo binario. Las bases se publicaron en CompraNet el día 30 de septiembre del 2015.	\N	\N	6	\N	
 164	164	-			complete	0	MXN	0	MXN	Adjudicación directa	Artículo 1 de la LOPSRM					\N	\N	\N	\N	0		\N	\N	1	\N	
 68	68	830617	Implementación del plan de restauración ecológica para el Nuevo Aeropuerto Internacional de la Ciudad de México.	Implementación del plan de restauración ecológica para el Nuevo Aeropuerto Internacional de la Ciudad de México.	active	0		26000000	MXN	Licitación pública	Artículos 27, fracción I, 30, fracción I, 36, 37, 38, 39 y 45, fracción I, de la Ley de Obras Públicas y Servicios Relaciondos con las Mismas	Ponderación de puntos (Puntos y porcentajes)	Capitulo 2-Licitación Pública Nacional (numerales 2.13 y 2.14) de la Convocatoria a la Licitación Pública Nacional No. LO-009KDH999-N45-2015, para llevar a cabo los trabajos de “Implementación del plan de restauración ecológica para el Nuevo Aeropuerto Internacional de la Ciudad de México”, aplicando el mecanismo de evaluación de puntos y porcentajes, publicada en compraNet el día 12 de junio del 2015.	Presencial	 El acto de presentación y apertura de proposiciones se llevó a cabo a las 18:00 horas del 29 de junio de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Gerente de Concursos de la Subdirección de  Contrataciones de GACM. 	2015-06-19 00:00:00	\N	2015-06-19 00:00:00	2015-06-19 00:00:00	0		2015-07-03 00:00:00	\N	4	\N	
@@ -5053,6 +5051,7 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 10	10	1038638	Servicio para la Asistencia Técnica Especializada en Materia de Diseño Sísmico Estructural Aplicada a la Infraestructura Aeroportuaria	Servicio para la Asistencia Técnica Especializada en Materia de Diseño Sísmico Estructural Aplicada a la Infraestructura Aeroportuaria	active	0		0	MXN	Adjudicación directa	Artículo 42 fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.	Artículo 42 fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 11	11	1042111	Servicio para la Asistencia Técnica Especializada en Materia de Geotecnia y Cimentación Aplicada a la Infraestructura Aeroportuaria	Servicio para la Asistencia Técnica Especializada en Materia de Geotecnia y Cimentación Aplicada a la Infraestructura Aeroportuaria	active	0		15650000.00	MXN	Adjudicación directa	Artículo 42 fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.	Artículo 42 fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 56	56	SA-009KDH999-N65-2015	Adquisición de bienes consistentes en vestuario	El objeto del presente contrato es la adquisición de bienes muebles, en adelante "LOS BIENES" por parte de GACM, consistentes en: "VESTUARIO"	none	0		2355000	MXN	Adjudicación directa	El artículo 134, tercer párrafo de la Constitución Política de los Estados Unidos Méxicanos y del artículo 42 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público					\N	\N	\N	\N	0		\N	\N	1	\N	
+25	25	905681	Proyecto ejecutivo del drenaje pluvial temporal para la protección de la zona contra inundaciones provenientes de precipitaciones dentro del perímetro del Aeropuerto en el lago de Texcoco, durante la construcción de la primera fase del Nuevo Aeropuerto Internacional de la Ciudad de México	Proyecto ejecutivo del drenaje pluvial temporal para la protección de la zona contra inundaciones provenientes de precipitaciones dentro del perímetro del Aeropuerto en el lago de Texcoco, durante la construcción de la primera fase del Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	19500000.00	MXN	Adjudicación directa	Artículo 42 fracción XIV de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.					\N	\N	\N	\N	0		\N	\N	1	\N	
 104	104	722742	Arrendamiento de Mobiliario Para Las Instalaciones De Torre Murano	Contar con las instalaciones adecuadas para el desarrollo de las actividades del personal de GACM, asi como para las reuniones de trabajo internas y externas	active	0		2735071.2	MXN	Invitación a cuando menos tres personas	Art. 42 y 43 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público.	Invitación Nacional a cuando Menos Tres Personas identificado con el número IA-009KDH999-N8-2014 del 26 de noviembre de 2014, relacionado con la contratación del "Servicio de arrendamiento de bienes muebles para las instalaciones de Torre Murano", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 26 de noviembre de 2014.	Invitación Nacional a cuando Menos Tres Personas identificado con el número IA-009KDH999-N8-2014 del 26 de noviembre de 2014, relacionado con la contratación del "Servicio de arrendamiento de bienes muebles para las instalaciones de Torre Murano", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 26 de noviembre de 2014.	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 14:00 horas del 04 de diciembre de 2014, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Gerente de concursos de la Subdirección de Contrataciones de GACM	2015-04-12 00:00:00	\N	2014-12-05 00:00:00	\N	1	Invitación Nacional a cuando Menos Tres Personas identificado con el número IA-009KDH999-N8-2014 del 26 de noviembre de 2014, relacionado con la contratación del "Servicio de arrendamiento de bienes muebles para las instalaciones de Torre Murano", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 26 de noviembre de 2014.	2014-12-05 00:00:00	\N	3	\N	
 105	105	IA-009KDH999-N7-2014	Servicios de Adaptación y Adecuaciones en Instalaciones de Torre Murano 	Prestar a GACM los servicios para la Adaptación y adecuaciones en las Instalaciones de Torre Murano. 	active	0		1852058.2	MXN	Invitación a cuando menos tres personas	Artículo 42 y 43 de la Ley de Adquisiciones, Arrendamientos  y Servicios del Sector Público	Mecanismo binario	No aplica	No aplica	No aplica	\N	\N	2014-12-02 00:00:00	2014-12-02 00:00:00	1	No aplica	\N	\N	3	\N	
 206	206	996706	Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno par el Nuevo Aeropuerto Internacional de la Ciudad de México	Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno par el Nuevo Aeropuerto Internacional de la Ciudad de México	none	0		1276500	MXN	Invitación a cuando menos tres personas	Artículo 27 fracción II y artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas	Mecanismo Binario	Capítulo 2.13 y 2.14 de la    Invitación Nacional a Cuando Menos Tres Personas No. IO-009KDH999-E15-2016 relativa a la Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno para el Nuevo Aeropuerto Internacional de la Ciudad de México  (ver anexo)	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 18:00 horas del 25 de febrero de 2016, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Ángel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Subdirector de Contrataciones de GACM.  Se rubricaron los documentos técnicos T.2 y T.3, así como la documentación económica E-10 correspondiente a las 4 proposiciones presentadas.	\N	\N	2016-02-16 00:00:00	2016-02-16 00:00:00	1	Capítulo 2.10 y 2.11 de la  Invitación Nacional a Cuando Menos Tres Personas No. IO-009KDH999-E15-2016 relativa a la Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno para el Nuevo Aeropuerto Internacional de la Ciudad de México   (ver anexo)	2016-02-24 00:00:00	\N	4	\N	
@@ -5060,7 +5059,6 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 109	109	943228	Supervisión Técnica, Administrativa y de Control de calidad para los trabajos de nivelación y limpieza del terreno del Nuevo aeropuerto internacional de la Ciudad de México.	Supervisión Técnica, Administrativa y de Control de calidad para los trabajos de nivelación y limpieza del terreno del Nuevo aeropuerto internacional de la Ciudad de México.	active	0		17000000.00	MXN	Licitación pública	Articulos 27, fracción I, 30, fracción I, y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.  	Articulos 27, fracción I, 30, fracción I, y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.  		Nacional		\N	\N	2015-11-26 00:00:00	2015-11-27 00:00:00	0		\N	\N	25	\N	
 220	220	1042465	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 3 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 3 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	active	0		258775000.00	MXN	Licitación pública	Articulos 27, fracción I, 30, fracción I, y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.  	Articulos 27, fracción I, 30, fracción I, y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.  		Internacional		\N	\N	\N	\N	0		\N	\N	0	\N	
 141	141	938432	Adecuación de espacios para las oficinas del Grupo Aeroportuario de la Ciudad de México (GACM) en el CEMCAS	Adecuación de espacios para las oficinas del Grupo Aeroportuario de la Ciudad de México (GACM) en el CEMCAS	complete	0		9750000	MXN	Invitación a cuando menos tres personas	Artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas		Apartado 2.13 y 2.14 de la Invitación Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-N82-2015 del 3 de noviembre de 2015, relacionado con la “Adecuación de espacios para oficinas, del Grupo Aeroportuario de la Ciudad de México (GACM), en el CEMCAS, es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 6 de noviembre de 2015.	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 14:00 horas del 17 de noviembre de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Gerente de concursos de la Subdirección de Contrataciones de GACM	2015-11-19 00:00:00	\N	2015-11-10 00:00:00	2015-11-10 00:00:00	1		\N	\N	3	\N	
-139	139	799531	Servicios profesionales de consultoría, legales y/o normativos y acompañamiento en los procedimientos de contratación pública y elaboración del expediente concentrador integral del (NAICM)	Servicios profesionales de consultoría, legales y/o normativos y acompañamiento en los procedimientos de contratación pública y elaboración de la memoria documental integral del desarrollo del  Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	20360000.00	MXN	Invitación a cuando menos tres personas	Artículo 41, fracción X de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público.					\N	\N	\N	\N	0		\N	\N	3	\N	
 140	140	1039131	Servicios de apoyo técnico a la residencia del proyecto ejecutivo de diseño arquitectónico e ingeniería de detalle del edificio terminal de pasajeros, torre de control y centro de operaciones, edificio de estacionamiento, estacionamientos en superficie, estación multimodal y vialidades de acceso del NAICM	Servicios de apoyo técnico a la residencia del proyecto ejecutivo de diseño arquitectónico e ingeniería de detalle del edificio terminal de pasajeros, torre de control y centro de operaciones, edificio de estacionamiento, estacionamientos en superficie, estación multimodal y vialidades de acceso del NAICM	complete	0	MXN	8362000.00	MXN	Invitación a cuando menos tres personas	Art. 45 de la LOPSRM	Apartado 2.10 y 2.11 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E45-2016 del 11 de abril de 2016, relacionado con el “Servicios de apoyo técnico a la residencia del proyecto ejecutivo de diseño arquitectónico e ingeniería de detalle del edificio terminal de pasajeros, torre de control y centro de operaciones, edificio de estacionamiento, estacionamientos en superficie, estación multimodal y vialidades de acceso del NAICM", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 11 de abril de 2016.	Apartado 2.11 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E45-2016 del 11 de abril de 2016, relacionado con el “Servicios de apoyo técnico a la residencia del proyecto ejecutivo de diseño arquitectónico e ingeniería de detalle del edificio terminal de pasajeros, torre de control y centro de operaciones, edificio de estacionamiento, estacionamientos en superficie, estación multimodal y vialidades de acceso del NAICM", es preciso señalar que la convocatoria fue publicada en la página de H62CompraNet el 11 de abril de 2016.	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 11:00 horas del 25 de abril de 2016, en la sala de juntas de la Subdirección de Contrataciones ubicada en: Calle de Santa Catarina Altavista 267, Colonia San Angel Inn, Delegación Álvaro Obregón, México, D.F., C.P. 01060. El acto fue presidido por el Gerente de concursos de la Subdirección de Contrataciones de GACM	2016-04-25 00:00:00	\N	2016-04-19 00:00:00	2016-04-19 00:00:00	1	Apartado 2.11 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E45-2016 del 11 de abril de 2016 (ver anexo)	2016-04-29 00:00:00	\N	3	\N	
 222	222	722715	Mantenimiento, suministro, instalación y puesta en operación de la instalaciones de voz y datos y electricidad en las oficinas de Grupo Aeroportuario de la Ciudad de México, S. A. de C. V. 	Mantenimiento, suministro, instalación y puesta en operación de la instalaciones de voz y datos y electricidad en las oficinas de Grupo Aeroportuario de la Ciudad de México, S. A. de C. V. 	active	0		1200000.00	MXN	Invitación a cuando menos tres personas	Art. 42 segundo párrafo del la Ley de Adquisiciones, Arrendamientos y Serivicios del Sector Público.	Art. 42 segundo párrafo del la Ley de Adquisiciones, Arrendamientos y Serivicios del Sector Público.	Apartado IV. Requisitos que los "licitantes" deben cumplir y causas de desechamiento" Invitación Nacional a cuando Menos Tres Personas identificado con el número IA-009KDH999-N6-2014, relacionado con el “Mantenimiento, suministro, instalación y puesta en operación de la instalaciones de voz y datos y electricidad en las oficinas de Grupo Aeroportuario de la Ciudad de México, S. A. de C. V.", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 26 de noviembre de 2014.	Nacional		\N	\N	2014-12-02 00:00:00	2014-12-02 00:00:00	0		2014-12-05 00:00:00	\N	3	\N	
 143	143	938439	Desarrollo del Proyecto ejecutivo para el entronque de acceso de carga en la zona Norte del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	Desarrollo del Proyecto ejecutivo para el entronque de acceso de carga en la zona Norte del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	complete	0		9500000	MXN	Invitación a cuando menos tres personas	Artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 	Mecanismo Binario		Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 18:00 horas del 17 de noviembre de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Gerente de concursos de la Subdirección de Contrataciones de GACM	\N	\N	2015-11-10 00:00:00	2015-11-11 00:00:00	1	Apartado 2.1, 2.2 y 2.10 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-N34-2015 del 6 de noviembre de 2015 (ver anexo) 	2015-11-19 00:00:00	\N	4	\N	
@@ -5068,13 +5066,15 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 54	54	832038	Servicio para apoyar la ejecución del Comité Vigilancia Ambiental	Servicio para apoyar la ejecución del Comité Vigilancia Ambiental	complete	0		7667600	MXN	Adjudicación directa	Artículo 41 fracción XIV de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.			Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
 55	55	SA-009KDH999-N66-2015	Adquisición de Bienes Consistentes en Herramientas	La adquisición de bienes muebles como Herramientas 	complete	0		0	MXN	Adjudicación directa	Artículo 134 de la Constitución Polítoca de los Estados Unidos Mexicanos, y el 42 de la Ley de Adquisiciones, Arrendameintos y Servicios					\N	\N	\N	\N	0		\N	\N	1	\N	
 87	87	838749	Para los trabajos relativos a la construcción del drenaje pluvial temporal	Licitación Pública Nacional que tuvo por objeto la adjudicación del contrato para los trabajos relativos a la construcción del drenaje pluvial temporal del Nuevo Aeropuerto de la Ciudad de México.	active	0		490000000	MXN	Licitación pública	Artículo 27, segundo párrafo de la Ley de Obras Públicas y Servicios Relacionados con las Mismas	Puntos y porcentajes	1. EVALUACIÓN DE LA PROPUESTA TÉCNICA: I. CALIDAD DE LA OBRA.- (a) Que los materiales propuestos para la ejecución de los trabajos cumplan con los estándares de calidad y medidas ambientales. (3.0); (b) Mano de Obra. Que la mano de obra propuesta para la ejecución de los trabajos, cumpla con los requisitos administrativos y con las aptitudes establecidos (3.0); (c) Maquinaria y equipo. Que la maquinaria y vehículos propuestos para la ejecución de los trabajos cumplan con los estándares de calidad y medidas ambientales exigidas (5.0); (d) Esquema estructural de la organización de los profesionales técnicos que se encargarán de la dirección y coordinación de los trabajos. Que el esquema estructural de profesionales técnicos (organigrama) propuesto, es el adecuado, suficiente y necesario (0.5); (e) Procedimiento constructivo. Que las técnicas propuestas a utilizar para la ejecución de los trabajos, sean congruentes con las características, complejidad y magnitud de trabajos a ejecutar en el proyecto (5.0); (f) Programas. Que exista una congruencia entre los programas generales y específicos de la obra (1.5), y (g) Descripción de la planeación integral para la ejecución de los trabajos. Explicación detallada de los procesos que se utilizaran en la ejecución, desarrollo y organización de los trabajos (2.0). II. CAPACIDAD LICITANTE.- (a) Capacidad de los recursos humanos. Que el personal profesional técnico ha participado en por lo menos 5 proyectos similares al que se licita (5.0); (b) Capacidad de los recursos económicos. Serán los recursos económicos que se consideren necesarios para que el licitante cumpla con el contrato (4.0); (c) Participación de discapacitados o empresas que cuenten con trabajadores con discapacidad (0.5), y (d) Subcontratación de MIPYMES. Se otorgará al licitante el puntaje indicado; se verificará que la proposición que contenga la documentación con la cual demuestre que subcontratará MIPYMES (0.5). III. EXPERIENCIA Y ESPECIALIDAD.- (a) Experiencia. Se verificará que el licitante durante los últimos 10 años ha ejecutado obras similares a los que se licitan (7.0), y (b) Especialidad. Se verificará que dentro de los últimos 10 años, el licitante ha ejecutado por lo menos 5 obras con las características, complejidad y magnitud específicas y a los volúmenes y condiciones similares a las requeridas por la convocante (8.0). IV. CUMPLIMIENTO DE CONTRATOS.- (a) Cumplimiento de contratos. Se verificará que por lo menos 5 obras ejecutadas por el licitante en los últimos 10 años, se hayan terminado en tiempo y forma (5.0). 2. EVALUACIÓN DE LA PROPUESTA ECONÓMICA: El total de puntuación de la proposición económica, tendrá un valor numérico máximo de 50. Para llevar a cabo la evaluación de la propuesta económica, la convocante verificará que el análisis, cálculo e integración de los precios cumplan con la condición de pago establecida en la convocatoria o Licitación en términos del artículo 45 de la Ley y los artículos 45 y del 185 al 220 del Reglamento. En caso de incumplimiento en la integración de los precios, que no pueda subsanarse mediante requerimiento de aclaraciones, documentación o información al licitante en términos del artículo 38 cuarto párrafo de la Ley y que no impliquen una causal de desechamiento prevista en esta convocatoria el GACM se abstendrá de otorgar puntuación en este rubro, por no contar con los elementos suficientes para verificar el precio ofertado. Para efectos de proceder a la evaluación de la propuesta económica, se excluirá del precio ofertado por el licitante el impuesto al valor agregado y sólo se considerará el precio neto propuesto. A la propuesta económica que resulte ser la más baja de las técnicamente aceptadas y que haya cumplido satisfactoriamente en la integración de su presupuesto, dando cumplimiento cabal a lo dispuesto por los artículos 185 al 220 del Reglamento, se le asignará la máxima puntuación. Para determinar la puntuación o unidades porcentuales que correspondan al precio ofertado por cada licitante, se aplicará la siguiente fórmula: PPE = MPemb x 50 / MPi. Donde: PPE = Puntuación o unidades porcentuales que corresponden a la Propuesta Económica; MPemb = Monto de la Propuesta económica más baja, y MPi = Monto de la i-ésima Propuesta económica.	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 12:00 horas del 6 de agosto de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapan San Angel, Delegación Alvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Subdirector de Contrataciones de GACM.  Los documentos técnicos T.2 y T.3, así como la documentación económica E-10, correspondiente a las 32 proposiciones presentadas, fueron rubricados por los representantes de tres licitantes y un consorcio.	2015-08-06 00:00:00	2015-07-03 00:00:00	2015-07-03 00:00:00	2015-07-22 00:00:00	0	Numeral 2.10 de la Convocatoria	2015-07-21 00:00:00	\N	32	\N	
-89	89	830658	Desarrollo del proyecto ejecutivo, construcción, equipamiento de mobiliario en instalaciones complementarias para el campamento del Grupo Aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México.	Desarrollo del Proyecto Ejecutivo, construcción, equipamiento de mobiliario en instalaciones complementarias para el campamento del Grupo Aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México.	active	0		150000000	MXN	Licitación pública	Artículo 27, segundo párrafo de la Ley de Obras Públicas y Servicios Relaciondos con las Mismas	Ponderación de puntos (Puntos y porcentajes)	Capítulo VII de la Convocatoria (ver anexo) 	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 11:00 horas del 27 de julio de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Subdirector de Contrataciones de GACM. 	2015-07-27 00:00:00	\N	2015-07-02 00:00:00	2015-07-10 00:00:00	1	Capítulo VI de la Convocatoria (ver anexo)	2015-07-20 00:00:00	\N	17	\N	
+5	5	985141	Servicios de un Profesionista Especializado en Temas de Desarrollo Urbano, Territorial y Regional para el Proyecto del Nuevo Aeropuerto de la Ciudad de México.	Servicios de un Profesionista Especializado en Temas de Desarrollo Urbano, Territorial y Regional para el Proyecto del Nuevo Aeropuerto de la Ciudad de México.	active	0		522000.00	MXN	Adjudicación directa	Artículo 41 fracción XIV de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.	Artículo 41 fracción XIV de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 94	94	914874	Servicio de transporte con camionetas de redilas para los trabajos que conforman el programa de empleo temporal (PET), en el predio del Nuevo Aeropuerto Internacional de la Ciudad de México	Servicio de transporte con camionetas de redilas para los trabajos que conforman el programa de empleo temporal (PET), en el predio del Nuevo Aeropuerto Internacional de la Ciudad de México	active	0		9170000	MXN	Invitación a cuando menos tres personas	Artículo 43 de la LOPSRM	Mecaninsmo binario	Apartado 4.3 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-N81-2015 del 5 de octubre de 2015 (ver anexo)	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 18:00 horas del 13 de octure de 2015, en la sala de juntas de la Subdirección de Contrataciones ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Gerente de concursos de la Subdirección de Contrataciones de GACM	2015-10-13 00:00:00	\N	2015-10-08 00:00:00	2015-10-08 00:00:00	1	Apartado 7.2 y 7.3 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-N81-2015 del 5 de octubre de 2015 (ver anexo) 	2015-10-15 00:00:00	\N	3	\N	
 102	102	761895	Servicios de supervisión para la obra: extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).	Servicios de supervisión para la obra: extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).	active	0		2680000	MXN	Invitación a cuando menos tres personas	Artículo 27 fracción II y artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas	Mecaninsmo binario	Capítulo 2.13 de la  Invitación Nacional a Cuando Menos Tres Personas No. IO-009KDH99-N10-2015 relativa a la supervisión para la obra: Extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México  (ver anexo)	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 10:00 horas del 04 de marzo de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Ángel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Subdirector de Contrataciones de GACM.  Se rubricaron los documentos técnicos T.2 y T.3, así como la documentación económica E-10 correspondiente a las 3 proposiciones presentadas.	2015-06-29 00:00:00	\N	2015-02-18 00:00:00	2015-02-25 00:00:00	1	Capítulo 2.10 y 2.11 de la  Invitación Nacional a Cuando Menos Tres Personas No. IO-009KDH99-N10-2015 relativa a la supervisión para la obra: Extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México (ver anexo)	2015-03-04 00:00:00	\N	4	\N	
 108	108	996706	Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno par el Nuevo Aeropuerto Internacional de la Ciudad de México	Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno par el Nuevo Aeropuerto Internacional de la Ciudad de México	active	0		1276500.00	MXN	Invitación a cuando menos tres personas	Artículo 27 fracción II y artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas	Artículo 27 fracción II y artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas		Nacional		\N	\N	2016-02-16 00:00:00	2016-02-16 00:00:00	0		\N	\N	4	\N	
 219	219	1042465	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	Trabajos relativos al sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	active	0	MXN	300000000.00	MXN	Licitación pública	Articulos 27, fracción I, 30, fracción I, y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.	Apartado 2.10 y 2.11 de la Convocatoria de la Licitación Pública Internanacional bajo la cobertura de tratados  para Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM) públicada en compranet publicadas el 21 de abril de 2016	Anexco 6.3 de la Convocatoria de la Licitación Pública Internanacional bajo la cobertura de tratados  para Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM) públicada en compranet publicadas el 21 de abril de 2016	Presencial		\N	\N	2016-06-15 00:00:00	\N	1	Apartado 2.10 y 2.11 de la Convocatoria de la Licitación Pública Internanacional bajo la cobertura de tratados  para Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM) públicada en compranet publicadas el 21 de abril de 2016	2016-06-28 00:00:00	\N	1	\N	
 3	3	1	Testigo Social para que atestigue las etapas del Procedimiento de Licitación Publica Nacional para el Proyecto denominado "Excavación de Prueba, Losa Experimental y Prueba de Pilotes para el Edificio Terminal y Torre de Control	Testigo Social para que atestigue las etapas del Procedimiento de Licitación Publica Nacional para el Proyecto denominado "Excavación de Prueba, Losa Experimental y Prueba de Pilotes para el Edificio Terminal y Torre de Control	active	0		0	MXN	Adjudicación directa	Artículo 42, párrafo segundo y tercero de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.	Artículo 42, párrafo segundo y tercero de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 28	28	1008580	Plan de Maestro  para  el  Proyecto	Plan de Maestro  para  el  Proyecto	complete	0	USD	1495000.00	USD	Adjudicación directa	Artículo 41, 42, FRACCIÓN III Y IV de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.					\N	\N	\N	\N	0		\N	\N	1	\N	
+6	6	1036573	Asistencia Técnica Especializada en Materia de Diseño Sísmico Estructural aplicada a la Infraestructura Aeroportuaria	Asistencia Técnica Especializada en Materia de Diseño Sísmico Estructural aplicada a la Infraestructura Aeroportuaria	active	0		26000000	MXN	Adjudicación directa	Artículo 42 Fracción X de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 	Artículo 42 Fracción X de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
+106	106	1	Servicios especializados en el suministro de personal tercerizados.	Contratacion de Personal tercerizado	active	0		129391633.00	MXN	Adjudicación directa	Artículos 41 Fracción III, 43 último párrafo y 47 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público	Artículos 41 Fracción III, 43 último párrafo y 47 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 218	218	1110560	Construcción del Edificio Terminal del Nuevo Aeropuerto Internacional de la Ciudad de México	Licitación Pública Internacional que tiene por objeto la adjudicación del contrato para los trabajos relativos a la construcción del Edificio Terminal del Nuevo Aeropuerto Internacional de la Ciudad de México	active	0		11000000000	MXN	Licitación pública	Artículo 27, fracción I y 30 fracción II de la Ley de Obras Públicas y Servicios Relacionados con las Mismas	Puntos y porcentajes	Sección 2.13 de la Convocatoria a la Licitación Pública Internacional Bajo la Cobertura de Tratados Utilizando el Mecanismo de Puntos y Porcentajes para la Evaluación de las Proposiciones LO-009KDH999-E101-2016 para la construcción del edificio terminal del Nuevo Aeropuerto Internacional de la Ciudad de México publicada en CompraNet el 15 de julio de 2016	Presencial		\N	\N	\N	\N	0	Sección 2.10 de la Convocatoria a la Licitación Pública Internacional Bajo la Cobertura de Tratados Utilizando el Mecanismo de Puntos y Porcentajes para la Evaluación de las Proposiciones LO-009KDH999-E101-2016 para la construcción del edificio terminal del Nuevo Aeropuerto Internacional de la Ciudad de México publicada en CompraNet el 15 de julio de 2016	2016-12-15 00:00:00	\N	1	\N	
 21	21	762798	Servicio de un Testigo Social para que atestigüe en las etapas de la invitación a cuando menos tres personas, presencial, internacional bajo la cobertura de trarados de libre comercio, relativa a la contratación de los servicios relacionados con obra pública, consistentes en el desarrollo del proyecto ejecutivo de pistas, rodajes y plataformas y ayudas a la navegación y otras instalaciones del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).	Servicio de un Testigo Social para que atestigüe en las etapas de la invitación a cuando menos tres personas, presencial, internacional bajo la cobertura de trarados de libre comercio, relativa a la contratación de los servicios relacionados con obra pública, consistentes en el desarrollo del proyecto ejecutivo de pistas, rodajes y plataformas y ayudas a la navegación y otras instalaciones del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).	complete	0	MXN	625856.22	MXN	Adjudicación directa	Artículos 54 del Reglamento de la Ley de Obras, Públicas y Servicios Relacionados con las Mismas; así como 26 Fracción III, y 42 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público.					\N	\N	\N	\N	0		\N	\N	1	\N	
 22	22	-	Etapa 2; seguimiento para el cumplimiento ambiental del proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) a través de la entidad de supervisión ambiental (Condicionante 10, resolutivo MIA-R	Etapa 2; seguimiento para el cumplimiento ambiental del proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) a través de la entidad de supervisión ambiental (Condicionante 10, resolutivo MIA-R	complete	0	MXN	227520000.00	MXN	Adjudicación directa	Artículo 1 de la LAASSP		Anexo técnico - económico para los servicios consistentes en  "Etapa 2; seguimiento para el cumplimiento ambiental del proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) a través de la entidad de supervisión ambiental (Condicionante 10, resolutivo MIA-R".	Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
@@ -5086,11 +5086,6 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 2	2	903614	Servicio de testigo social para que atestigue las etapas del procedimiento de licitación pública nacional presencial, relativa a la contratación de la obra pública, consistente en el proyecto ejecutivo, construcción equipamiento mobiliario e instalaciones complementarias, para el campamento del grupo aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México 	Servicio de testigo social para que atestigue las etapas del procedimiento de licitación pública nacional presencial, relativa a la contratación de la obra pública, consistente en el proyecto ejecutivo, construcción equipamiento mobiliario e instalaciones complementarias, para el campamento del grupo aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México 	active	133190.00	MXN	213104.00	MXN	Adjudicación directa	Artículo 42, párrafo segundo y tercero de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.	Artículo 42, párrafo segundo y tercero de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.		Nacional 		\N	\N	\N	\N	0		\N	\N	1	\N	
 24	24	-	Servicio de instrumentación y operación de planes y programas ambientales para el Nuevo Aeropuerto Internacional de la ciudad de México (NAICM), Etapa 2016-2018.	Servicio de instrumentación y operación de planes y programas ambientales para el Nuevo Aeropuerto Internacional de la ciudad de México (NAICM), Etapa 2016-2018.	complete	0	MXN	236900000.00	MXN	Adjudicación directa	Artículo 1 de la LAASSP 		Anexo técnico para la "instrumentación y operación de planes y programas ambientales para el proyecto Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM), Etapa 2016-2018". 	Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
 34	34	798870	Elaboración de programa de monitoreo de ruido perimetral para las etapas de preparación del sitio, construcción, operación y mantenimiento del Nuevo Aeropuerto Internacional de la Ciudad de México	Elaboración de programa de monitoreo de ruido perimetral para las etapas de preparación del sitio, construcción, operación y mantenimiento del Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	638000.00	MXN	Adjudicación directa	Artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas					\N	\N	\N	\N	0		\N	\N	1	\N	
-25	25	905681	Proyecto ejecutivo del drenaje pluvial temporal para la protección de la zona contra inundaciones provenientes de precipitaciones dentro del perímetro del Aeropuerto en el lago de Texcoco, durante la construcción de la primera fase del Nuevo Aeropuerto Internacional de la Ciudad de México	Proyecto ejecutivo del drenaje pluvial temporal para la protección de la zona contra inundaciones provenientes de precipitaciones dentro del perímetro del Aeropuerto en el lago de Texcoco, durante la construcción de la primera fase del Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	19500000.00	MXN	Adjudicación directa	Artículo 42 fracción XIV de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.					\N	\N	\N	\N	0		\N	\N	1	\N	
-5	5	985141	Servicios de un Profesionista Especializado en Temas de Desarrollo Urbano, Territorial y Regional para el Proyecto del Nuevo Aeropuerto de la Ciudad de México.	Servicios de un Profesionista Especializado en Temas de Desarrollo Urbano, Territorial y Regional para el Proyecto del Nuevo Aeropuerto de la Ciudad de México.	active	0		522000.00	MXN	Adjudicación directa	Artículo 41 fracción XIV de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.	Artículo 41 fracción XIV de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
-6	6	1036573	Asistencia Técnica Especializada en Materia de Diseño Sísmico Estructural aplicada a la Infraestructura Aeroportuaria	Asistencia Técnica Especializada en Materia de Diseño Sísmico Estructural aplicada a la Infraestructura Aeroportuaria	active	0		26000000	MXN	Adjudicación directa	Artículo 42 Fracción X de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 	Artículo 42 Fracción X de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
-106	106	1	Servicios especializados en el suministro de personal tercerizados.	Contratacion de Personal tercerizado	active	0		129391633.00	MXN	Adjudicación directa	Artículos 41 Fracción III, 43 último párrafo y 47 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público	Artículos 41 Fracción III, 43 último párrafo y 47 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
-8	8	1036664	Servicios de asistencia técnica especializada en materia de diseño sismico estructural aplicada a la infraestructura aeroportuaria	Servicios de asistencia técnica especializada en materia de diseño sismico estructural aplicada a la infraestructura aeroportuaria	active	0		17000000.00	MXN	Adjudicación directa	Artículo 42, fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.	Artículo 42, fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 9	9	1032198	Servicio para la Asistencia Técnica Especializada en Materia de Geotecnia y Cimentación Aplicada a la Infraestructura Aeroportuaria	Servicio para la Asistencia Técnica Especializada en Materia de Geotecnia y Cimentación Aplicada a la Infraestructura Aeroportuaria	active	0		15650000.00	MXN	Adjudicación directa	Artículo 42 fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.	Artículo 42 fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 12	12	1	Servicios de experto revisor para la asistencia técnica especializada en materia de diseño sismico estructural, aplicada a la infraestructura aeroportuaria	Servicios de experto revisor para la asistencia técnica especializada en materia de diseño sismico estructural, aplicada a la infraestructura aeroportuaria	active	0		260000000.00	MXN	Adjudicación directa	Artículo 42, fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.	Artículo 42, fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 13	13	1	Servicios de asistencia técnica especializada en materia de diseño sismico estructural aplicada a la infraestructura aeroportuaria	Servicios de asistencia técnica especializada en materia de diseño sismico estructural aplicada a la infraestructura aeroportuaria	active	0		15650000.00	MXN	Adjudicación directa	Artículo 42, fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.	Artículo 42, fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
@@ -5125,6 +5120,7 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 116	116	AA-009KDH99-E13-2016	Servicios de infraestructura de comunicación de voz, datos y video para el Grupo Aeroportuario de la Ciudad de México S.A. de C.V.	Contratar los servicios de infraestructura de comunicación de voz, datos y video para el Grupo Aeroportuario de la Ciudad de México S.A. de C.V. durante los ejercicios fiscales 2015 al 2018, con el objetivo de contar con la implementación de la infraestructura necesaria asi como el soporte tecnico y atención de incidentes correspondientes para dotar a su personal de los medios y herramientas para el debido cumplimiento de las actividades sustantivas que tienen encomendadas para la consecución de los dines de la entidad.	active	0		35399080.95	MXN	Adjudicación directa	Articulo 72 fracción III del RLAASSP, en realción al 41 de la LAASSP se adhiere al contrato número P/S/104/14/2014 , en terminos de lo dispuesto en los artiulos 26, fracción III, 40,41, fracción III, 45, 47 y demás relativos y aplicables de la LAASSP.	Articulo 72 fracción III del RLAASSP, en realción al 41 de la LAASSP se adhiere al contrato número P/S/104/14/2014 , en terminos de lo dispuesto en los artiulos 26, fracción III, 40,41, fracción III, 45, 47 y demás relativos y aplicables de la LAASSP.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 117	117	985627	Servicio de Dictámen y Certificado de UVIE	Realizar la verificación de las instalaciones eléctricas de Altavista 	active	0		70000.00	MXN	Adjudicación directa	42 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público, 30 de su Reglamento, 28, 29, 30, 31 y 33 de la Ley Federal de las Entidades Paraestatales	42 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público, 30 de su Reglamento, 28, 29, 30, 31 y 33 de la Ley Federal de las Entidades Paraestatales		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 118	118	1045668	Arrendamiento de Mobiliario consistente en Mesas de Trabajo y Sillas Secretariales	Arrendamiento de Mobiliario consistente en Mesas de Trabajo y Sillas Secretariales	active	0		250000.00	MXN	Adjudicación directa	Artículos 3, fracción I, 26, fracción III, 28, fracción I, 40 último párrafo, 42, 45 y 47 de la LAASSP	Artículos 3, fracción I, 26, fracción III, 28, fracción I, 40 último párrafo, 42, 45 y 47 de la LAASSP		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
+38	38	-	Elaboración y puesta en marcha del Sistema Integeal e Gestión de Cumplimiento Ambiental (SIGCA) para el Proyecto Nuevo Aeropuerto Internacional de la Ciudad de México	Elaboración y puesta en marcha del Sistema Integeal e Gestión de Cumplimiento Ambiental (SIGCA) para el Proyecto Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	134800000.00	MXN	Adjudicación directa	Artículo 1 de la LOPSRM			Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
 122	122	AD-AS-DCAGI-SC-109/15	Prestación de Servicios Profesionales  para fungir como enlace  y vocería en el ámbito  nacional e internacional y con actores claves que aseguren la ejecución del  proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México	Prestación de Servicios Profesionales  para fungir como enlace  y vocería en el ámbito  nacional e internacional y con actores claves que aseguren la ejecución del  proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México	active	0		1752166.08	MXN	Adjudicación directa	Adjudicación directa. Oficio GACM/DCAGI/DCF/0212/2015  de fecha 28 de octubre de 2015 y firmado por el Lic. Ricardo Dueñas Espriu.	"…con fundamento en el artículo 50   de la Ley Federal de Presupuesto y Responsabilidad Hacendaria y 148 de su reglamento, así como del oficio GACM//DG/129/2015 se autoriza celebrar   el contrato plurianual...."		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 152	152	983798	Servicio de un testigo social para que atestigüe las etapas del procedimiento de la licitación pública internacional bajo la cobertura de tratados de libre comercio, consistente en diseñar e instrumentar el modelo virtual de información para la construcción del BIM del NAICM	Servicio de un testigo social para que atestigüe las etapas del procedimiento de la licitación pública internacional bajo la cobertura de tratados de libre comercio, consistente en diseñar e instrumentar el modelo virtual de información para la construcción del BIM del NAICM	active	293550.76	MXN	432601.10	MXN	Adjudicación directa	Artículo 41 fracción XIV de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.	Artículo 41 fracción XIV de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 182	182	1			active	0		0	MXN	Adjudicación directa				Nacional		\N	\N	\N	\N	0		\N	\N	0	\N	
@@ -5135,6 +5131,7 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 44	44	-	Realización de los Servicios Consistentes en la Mecánica de Suelos, Levantamiento Topográfico y Elaboración de Ingenieria Básica de: S.E. Maniobras Aeropuerto SF6 NAICM (5 ALIMENT-230 KV); S.E. Aeropuerto SF6 (NAICM) (3T-3F-60/80 MVA 230/23/0 KV-2/16/0 A) y L.T. Maniobras Aeropuerto NAICM (230 KV-13-CU-XLP A)	Realización de los Servicios Consistentes en la Mecánica de Suelos, Levantamiento Topográfico y Elaboración de Ingenieria Básica de: S.E. Maniobras Aeropuerto SF6 NAICM (5 ALIMENT-230 KV); S.E. Aeropuerto SF6 (NAICM) (3T-3F-60/80 MVA 230/23/0 KV-2/16/0 A) y L.T. Maniobras Aeropuerto NAICM (230 KV-13-CU-XLP A)	none	0		3800000	MXN	Adjudicación directa	Artículo 1 de la LOPSRM					\N	\N	\N	\N	0		\N	\N	1	\N	
 153	153	1	Contratación del Servicio de Comunicaciones para el Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	Prestación del servicio de comunicaciones para el Grupo Aeroportuario de la Ciudad de México, S.A. de C.V. para los ejercicios fiscales 2015 al 2018, en adelante los servicios serán prestados totalmente a satisfacción de GACM de conformidad con las especificaciones y características establecidas en el anexo técnico y la propuesta técnica y económica.	active	0		39479421.55	MXN	Adjudicación directa	La celebración del presente contrato la lleva a cabo bajo el procedimiento de adjudicación directa, en términos de lo dispuesto en los artículos 26 fracción III, 40, 41, fracción III, 45, 47 y demás relativos y aplicables de la LAASSP.	La celebración del presente contrato la lleva a cabo bajo el procedimiento de adjudicación directa, en términos de lo dispuesto en los artículos 26 fracción III, 40, 41, fracción III, 45, 47 y demás relativos y aplicables de la LAASSP.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 35	35	799042	Elaboración de programa de capacitación en aspectos ambientales y de seguridad para las etapas de preparación del sitio y construcción del Nuevo Aeropuerto Internacional de la Ciudad de México	Elaboración de programa de capacitación en aspectos ambientales y de seguridad para las etapas de preparación del sitio y construcción del Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	602040.00	MXN	Adjudicación directa	Artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas					\N	\N	\N	\N	0		\N	\N	1	\N	
+121	121	1	Servicio de Limpieza Integral para los Inmuebles de Santa Catarina-Altavista y Torre Murano del Grupo Aeroportuario de la Ciudad de México S.A. de C.V.  	Llevar a cabo la contratación del "Servicio de Limpieza Integral para Inmuebles de Santa Catarina - Altavista y Torre Murano, Grupo Aeroportuario de la Ciudad de México S.A. de C.V" 	active	0		35801	MXN	Adjudicación directa	Articulos  26 fracción III, 42 y 47 de la Ley de Adquisisiones, Arrendamientos y Servicios del Sector Público.	Articulos  26 fracción III, 42 y 47 de la Ley de Adquisisiones, Arrendamientos y Servicios del Sector Público.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 45	45	-	"Establecer los mecanismos de colaboración entre Grupo Aeroportuario de la Ciudad de México y el Instituto Mexicano de Administarción Pública A.C. para llevar a cabo, mediante la suscripción del instrumento correspondiente el desarrollo y ejecución de las actividades de los programas y proyectos que el GACM requeira a traves de la prestación de servicios relativos a als especialidades y disciplinas especificas, el INAP este en posibilidades de aportar."	"Establecer los mecanismos de colaboración entre Grupo Aeroportuario de la Ciudad de México y el Instituto Mexicano de Administarción Pública A.C. para llevar a cabo, mediante la suscripción del instrumento correspondiente el desarrollo y ejecución de las actividades de los programas y proyectos que el GACM requeira a traves de la prestación de servicios relativos a als especialidades y disciplinas especificas, el INAP este en posibilidades de aportar."	active	0		0	MXN	Adjudicación directa	Artículo 1 de la LAASSP					\N	\N	\N	\N	0		\N	\N	1	\N	
 145	145	1	Servicios de diseño y arquitectura consistentes en forma enunciativa mas no limitativa, en la elaboración de los proyectos ejecutivos (diseño arquitectónico e ingeniería de detalle), que permitan la construcción del "edificio terminal de pasajeros, vialidades de acceso y estacionamientos" y "torre de control y centros de control de operaciones" del "NAICM" así como el acompañamiento arquitectónico. Servicios de diseño y arquitectura consistentes en forma enunciativa mas no limitativa, en la elaboración de los proyectos ejecutivos (diseño arquitectónico e ingeniería de detalle), que permitan la construcción del "edificio terminal de pasajeros, vialidades de acceso y estacionamientos" y "torre de control y centros de control de operaciones" del "NAICM" así como el acompañamiento arquitectónico.	Servicios de diseño y arquitectura consistentes en forma enunciativa mas no limitativa, en la elaboración de los proyectos ejecutivos (diseño arquitectónico e ingeniería de detalle), que permitan la construcción del "edificio terminal de pasajeros, vialidades de acceso y estacionamientos" y "torre de control y centros de control de operaciones" del "NAICM" así como el acompañamiento arquitectónico.	active	0		2136433615	MXN	Adjudicación directa	Artículo 42 fracción IV de la LOPSRM	Artículo 42 fracción IV de la LOPSRM		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 146	146	AA-009KDH999-E81-2016	Servicios de suministro de combustible, lubricantes y aditivos para vehículos automotores terrestres.	Servicios de suministro de combustible vehicular	active	0		17267047.50	MXN	Adjudicación directa	Numeral 152 del acuerdo por el que se establecen las disposiciones en Materia de recursos Materiales y servicios Generales	Numeral 152 del acuerdo por el que se establecen las disposiciones en Materia de recursos Materiales y servicios Generales		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
@@ -5146,8 +5143,6 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 57	57	1051687	Servicios Profesionales consistentes en la Consultoría y Asesoría preventiva en Materia Laboral	Servicios Profesionales consistentes en la Consultoría y Asesoría preventiva en Materia Laboral	complete	0		424560	MXN	Adjudicación directa	Artículo 42 de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.			Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
 193	193	-	Servicio Especializado Para la Instrumentación del Manual de Integración y Funcionamiento del Subcomité de Revisión de Convocatorias Del Grupo Aeroportuario de La Ciudad de México, S.A. de C.V.	Facilitar la gestión institucional, como un elemento que se añadirá a los manuales de procedimientos, criterios y demás mecanismos que resulten indispensables para la adecuada administración de los recursos humanos y materiales que requiera un proyecto de la magnitud del nuevo aeropuerto del Valle de México.	complete	0		103448.28	MXN	Adjudicación directa	La contratación de este servicio la realiza mediante adjudicación directa con fundamento en lo dispuesto en los artículos 26, fracción III y 42 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Publico.					\N	\N	\N	\N	0		\N	\N	1	\N	
 195	195	-	nfiguración Inicial de Equipos Instalados en el Inmueble de Altavista Para Servicio de Red Local, Seguridad de Datos y Telefonía.	Contar con el servicio de configuración inicial personalizada para los equipos instalados en el inmueble de Altavista, con el propósito de iniciar operaciones de manera inmediata y proveer a los usuarios del Grupo Aeroportuario de la Ciudad de México (GACM) de conexión a la red de datos, seguridad física y lógica en el acceso a internet, configuración de los teléfonos y del conmutador.	complete	0	MXN	224176	MXN	Adjudicación directa	La contratación de este servicio la realiza bajo el procedimiento de adjudicación directa, en términos de lo establecido en los artículos 26 fracción III y 42 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público.					\N	\N	\N	\N	0		\N	\N	1	\N	
-38	38	-	Elaboración y puesta en marcha del Sistema Integeal e Gestión de Cumplimiento Ambiental (SIGCA) para el Proyecto Nuevo Aeropuerto Internacional de la Ciudad de México	Elaboración y puesta en marcha del Sistema Integeal e Gestión de Cumplimiento Ambiental (SIGCA) para el Proyecto Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	134800000.00	MXN	Adjudicación directa	Artículo 1 de la LOPSRM			Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
-121	121	1	Servicio de Limpieza Integral para los Inmuebles de Santa Catarina-Altavista y Torre Murano del Grupo Aeroportuario de la Ciudad de México S.A. de C.V.  	Llevar a cabo la contratación del "Servicio de Limpieza Integral para Inmuebles de Santa Catarina - Altavista y Torre Murano, Grupo Aeroportuario de la Ciudad de México S.A. de C.V" 	active	0		35801	MXN	Adjudicación directa	Articulos  26 fracción III, 42 y 47 de la Ley de Adquisisiones, Arrendamientos y Servicios del Sector Público.	Articulos  26 fracción III, 42 y 47 de la Ley de Adquisisiones, Arrendamientos y Servicios del Sector Público.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 129	129	902535	Prestación de los Servicios consistentes en la "Asesoría técnica especializada para la debia consecución de los onjeticos encomendados a esta empresa de participación estatal mayoritaria y de esta forma asegurar la adecuada operación de la Infraestructura Aeroportuaria del Valle de México (IAVM)	Prestación de los Servicios consistentes en la "Asesoría técnica especializada para la debia consecución de los onjeticos encomendados a esta empresa de participación estatal mayoritaria y de esta forma asegurar la adecuada operación de la Infraestructura Aeroportuaria del Valle de México (IAVM)	active	0		1705000.00	MXN	Adjudicación directa	Artículo 42, párrafo segundo y tercero de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.	Artículo 42, párrafo segundo y tercero de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 149	149	1044199	Servicio integral de correo electrónico y directorio activo	Servicio integral de correo electrónico y directorio activo	active	0		490000.00	MXN	Adjudicación directa	Artículo 42 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público	Artículo 42 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 175	175	1	Servicios de infraestructura de comunicación de voz, datos y video para el Grupo Aeroportuario de la Ciudad de México S.A. de C.V.	Contratar los servicios de infraestructura de comunicación de voz, datos y video para el Grupo Aeroportuario de la Ciudad de México S.A. de C.V. durante los ejercicios fiscales 2015 al 2018, con el objetivo de contar con la implementación de la infraestructura necesaria asi como el soporte tecnico y atención de incidentes correspondientes para dotar a su personal de los medios y herramientas para el debido cumplimiento de las actividades sustantivas que tienen encomendadas para la consecución de los dines de la entidad.	active	0		35399080.95	MXN	Adjudicación directa	Se lleva a cabo bajo el procedimiento de Adjudicación Directa, en terminos de lo dispuesto en los artiulos 26, fracción III, 40,41, fracción III, 45, 47 y demás relativos y aplicables de la LAASSP.	Se lleva a cabo bajo el procedimiento de Adjudicación Directa, en terminos de lo dispuesto en los artiulos 26, fracción III, 40,41, fracción III, 45, 47 y demás relativos y aplicables de la LAASSP.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
@@ -5171,6 +5166,7 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 201	201	-	Contrato de Servicios Profesionales en materia de vinculación con organismos internacionales y adopción de las mejores prácticas internacionales para la consecución de sus objetivos y asegurar una adecuada infraestructira aeroportuaria  para la operación del AIVM "	Permitira obtener los  Servicios Profesionales en materia de vinculación con organismos internacionales y adopción de las mejores prácticas internacionales para la consecución de sus objetivos y asegurar una adecuada infraestructira aeroportuaria  para la operación del AIVM 	none	0		1704113.00	MXN	Adjudicación directa	arítculo 134  de la la Constitución Politíca de los Estados Unidos Mexicanos, 41 fraccion III de la Ley de Adquisiciones , Arrendamientos y Servicios del Sector Público, y 71 de su Reglamento, 28, 29, 30, 31 y 33 de Ley Federal de Entidades Paraestatales, numeral 1.4.3 del Manual de Organización de la Empresa de Participación Estatal Mayoritaria denominada Grupo Aeroportuario de la Ciudad de México.....fue dictaminada procedente la excepción de Licitación Pública  para la contratación vía Adjudicación  Directa con su representada.	Nacional				\N	\N	\N	\N	0		\N	\N	1	\N	
 214	214	1	Servicios Profesionales de Levantamiento de Imagen y Video de Nuevo Aeropuerto Internacional de la Ciudad de México.	Servicios Profesionales de Levantamiento de Imagen y Video de Nuevo Aeropuerto Internacional de la Ciudad de México.	active	0		30554700.00	MXN	Adjudicación directa	Artículo 42 de la Ley Adquisiciones Arrendamiento y Servicios del Sector Público	Artículo 42 de la Ley Adquisiciones Arrendamiento y Servicios del Sector Público		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 215	215	1	Servicio de Soporte Tecnico y Mantenimiento Para Los Equipos Del Servicio De Red Local, Seguridad de Datos y Telefonia	Servicio de Soporte Tecnico y Mantenimiento Para Los Equipos Del Servicio De Red Local, Seguridad de Datos y Telefonia	active	0		298780.56	MXN	Adjudicación directa	Articulo 26 fraccion III y articulo 42 de la LAASSP.	Articulo 26 fraccion III y articulo 42 de la LAASSP.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
+159	159	-	Obras de Excavación de prueba, Losa experimental y prueba de Pilotes para el El Edificio Terminal y Torre de Control del NAICM	Obras de Excavación de prueba, Losa experimental y prueba de Pilotes para el El Edificio Terminal y Torre de Control del NAICM	complete	0	MXN	0	MXN	Adjudicación directa	En terminos de lo dispuesto en el articulo 134 de la constitucion Politica de los Estados Unidos Mexicanos, en relación a lo establecido por los articulos 27 fraccion III, 30 Fraccion I, 42 fracción VII, 45 fraccion I de la LOPSRM.		Especificaciones Tecnicas de las Obras de Excavación de prueba, Losa experimental y prueba de Pilotes para el El Edificio Terminal y Torre de Control del NAICM	Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
 211	211	1	Servicio de asesoría financiera y legal para la obtención del financiamiento, desarrollo de estructura jurídica, concesionamiento y demás actividades relacionadas con la financiación para la construcción del NAICM	Servicio de asesoría financiera y legal para la obtención del financiamiento, desarrollo de estructura jurídica, concesionamiento y demás actividades relacionadas con la financiación para la construcción del NAICM	active	0		64100000.00	MXN	Adjudicación directa	Artículo 3 fracción VII, 19, 26 fracción III, 40 y 41 fracción X, segundo párrafo de la LAASSP, 71 y 72 fracción VII, inciso B, numerales 1 a 3 y 14 fracción VI de la LFTAIP.	Artículo 3 fracción VII, 19, 26 fracción III, 40 y 41 fracción X, segundo párrafo de la LAASSP, 71 y 72 fracción VII, inciso B, numerales 1 a 3 y 14 fracción VI de la LFTAIP.		Nacional		\N	\N	\N	\N	0		\N	\N	3	\N	
 205	205	-	Servicio de Telefonía Celular	Dotar al personal del GACM de la infraestructura en comunicaciones que permita realizar diversas actividades asociadas a la operación y supervisión de las acciones encomendadas.	complete	0		862560	MXN	Adjudicación directa	41 Fracción III de la Ley de Adquisiciones , Arrendamientos y Servicios del Sector Público y 28, 29, 30, 31 y 33 de la Ley Federal de las Entidades Paraestatales					\N	\N	\N	\N	0		\N	\N	1	\N	
 198	198	-	Gerencia del proyecto para atender la demanda de servicios aeroportuarios en el centro del país	Gerencia del proyecto para atender la demanda de servicios aeroportuarios en el centro del país	complete	0		3415030000.00	MXN	Adjudicación directa	Artículo 4, 27 fracción III, 30 fracción II, 41  y 42 fracción IV de la LOPSRM y 3 fracción I y V, fracciones I, III, V, VII y XII de la Ley de Seguridad Nacional					\N	\N	\N	\N	0		\N	\N	1	\N	
@@ -5185,7 +5181,6 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 157	157	1044735	Servicio de un Testigo Social para que atestigue la Etapas del procedimiento de Licitación Pública de Obra Pública de "Construcción de los Caminos provisionsles de Acceso al (NAICM), ejecutando Trabajos de Terraceria, Estructura, Obras de Drenaje, Pavimentación y Señalamiento".	Servicio de un Testigo Social para que atestigue la Etapas del procedimiento de Licitación Pública de Obra Pública de "Construcción de los Caminos provisionsles de Acceso al (NAICM), ejecutando Trabajos de Terraceria, Estructura, Obras de Drenaje, Pavimentación y Señalamiento".	active	191793.60	MXN	479484.00	MXN	Adjudicación directa	Artículo 41 y 47 de la LAASSP.					\N	\N	\N	\N	0		\N	\N	1	\N	
 156	156	1044509	Servicio de Testigo Social para que Atestigüe la Etapas del Procedimiento de la Licitación Pública Nacional de Obra Pública de Carga, Acarreo y Descarga Dentro y Fuera del Polígono del Material Existente, Producto de Depósitos de Demoliciones y Desazolve, Incluye Conformación del Terreno donde se Construirá el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) para el NAICM	Servicio de Testigo Social para que Atestigüe la Etapas del Procedimiento de la Licitación Pública Nacional de Obra Pública de Carga, Acarreo y Descarga Dentro y Fuera del Polígono del Material Existente, Producto de Depósitos de Demoliciones y Desazolve, Incluye Conformación del Terreno donde se Construirá el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) para el NAICM	complete	0	MXN	390000.00	MXN	Adjudicación directa	Artículo 47 fracción I, de la LAASSP.					\N	\N	\N	\N	0		\N	\N	1	\N	
 172	172	1043951	Proyecto Ejecutivo para el Alumbrado Público de la Barda Perimetral del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	Proyecto Ejecutivo para el Alumbrado Público de la Barda Perimetral del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	complete	0		720001.00	MXN	Adjudicación directa	Artículos 27 fracción III, 30 fracción I, 43 y 45 fracción I de la LOPSRM.	Nacional 		transferencia		\N	\N	\N	\N	0		\N	\N	1	\N	
-159	159	-	Obras de Excavación de prueba, Losa experimental y prueba de Pilotes para el El Edificio Terminal y Torre de Control del NAICM	Obras de Excavación de prueba, Losa experimental y prueba de Pilotes para el El Edificio Terminal y Torre de Control del NAICM	complete	0	MXN	0	MXN	Adjudicación directa	En terminos de lo dispuesto en el articulo 134 de la constitucion Politica de los Estados Unidos Mexicanos, en relación a lo establecido por los articulos 27 fraccion III, 30 Fraccion I, 42 fracción VII, 45 fraccion I de la LOPSRM.		Especificaciones Tecnicas de las Obras de Excavación de prueba, Losa experimental y prueba de Pilotes para el El Edificio Terminal y Torre de Control del NAICM	Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
 161	161	1008381	Proyecto ejecutivo para la construcción de carriles de desaceleración, plataformas de almacenamiento y carriles de aceleración en las puertas 7, y 9 de acceso al polígono del NAICM.	Proyecto ejecutivo para la construcción de carriles de desaceleración, plataformas de almacenamiento y carriles de aceleración en las puertas 7, y 9 de acceso al polígono del NAICM.	complete	0	MXN	690000.00	MXN	Adjudicación directa	Artículo 41 y 42, fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.					\N	\N	\N	\N	0		\N	\N	1	\N	
 162	162	SA-009KDH999-N10-2014	Implementación y Soporte Técnico Relacionados con Licencias de Software	Licenciamiento Oracle y servicios profesionales de implementación para crear un sistema de planificación de recursos gubernamentales "GRP", (por sus siglas en inglés, Goverment Resource Planning)	complete	0	MXN	63798178.00	MXN	Adjudicación directa	Artículo 3, fracción I, 26, fracción III, 41, fracción XX, 45 y demás relativos y aplicables a la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público y del procedimiento de Adjudicación Simplificada derivado del Contrato Marco.					\N	\N	\N	\N	0		\N	\N	1	\N	
 187	187	AA-009KDH999-E67-2016	Servicio Integral de Limpieza en las Oficinas de Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	Servicio Integral de Limpieza en las Oficinas de Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	complete	0	MXN	361637.93	MXN	Adjudicación directa						\N	\N	\N	\N	0		\N	\N	1	\N	
@@ -5612,7 +5607,7 @@ SELECT pg_catalog.setval('tendermilestonedocuments_id_seq', 1, false);
 
 
 --
--- Name: award_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: award_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY award
@@ -5620,7 +5615,7 @@ ALTER TABLE ONLY award
 
 
 --
--- Name: awardamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: awardamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY awardamendmentchanges
@@ -5628,7 +5623,7 @@ ALTER TABLE ONLY awardamendmentchanges
 
 
 --
--- Name: awarddocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarddocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY awarddocuments
@@ -5636,7 +5631,7 @@ ALTER TABLE ONLY awarddocuments
 
 
 --
--- Name: awarditem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY awarditem
@@ -5644,7 +5639,7 @@ ALTER TABLE ONLY awarditem
 
 
 --
--- Name: awarditemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY awarditemadditionalclassifications
@@ -5652,7 +5647,7 @@ ALTER TABLE ONLY awarditemadditionalclassifications
 
 
 --
--- Name: budget_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: budget_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY budget
@@ -5660,7 +5655,7 @@ ALTER TABLE ONLY budget
 
 
 --
--- Name: buyer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: buyer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY buyer
@@ -5668,7 +5663,7 @@ ALTER TABLE ONLY buyer
 
 
 --
--- Name: buyeradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: buyeradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY buyeradditionalidentifiers
@@ -5676,7 +5671,7 @@ ALTER TABLE ONLY buyeradditionalidentifiers
 
 
 --
--- Name: contract_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contract_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY contract
@@ -5684,7 +5679,7 @@ ALTER TABLE ONLY contract
 
 
 --
--- Name: contractamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY contractamendmentchanges
@@ -5692,7 +5687,7 @@ ALTER TABLE ONLY contractamendmentchanges
 
 
 --
--- Name: contractdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY contractdocuments
@@ -5700,7 +5695,7 @@ ALTER TABLE ONLY contractdocuments
 
 
 --
--- Name: contractingprocess_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractingprocess_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY contractingprocess
@@ -5708,7 +5703,7 @@ ALTER TABLE ONLY contractingprocess
 
 
 --
--- Name: contractitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY contractitem
@@ -5716,7 +5711,7 @@ ALTER TABLE ONLY contractitem
 
 
 --
--- Name: contractitemadditionalclasifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitemadditionalclasifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY contractitemadditionalclasifications
@@ -5724,7 +5719,7 @@ ALTER TABLE ONLY contractitemadditionalclasifications
 
 
 --
--- Name: implementation_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementation_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY implementation
@@ -5732,7 +5727,7 @@ ALTER TABLE ONLY implementation
 
 
 --
--- Name: implementationdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY implementationdocuments
@@ -5740,7 +5735,7 @@ ALTER TABLE ONLY implementationdocuments
 
 
 --
--- Name: implementationmilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY implementationmilestone
@@ -5748,7 +5743,7 @@ ALTER TABLE ONLY implementationmilestone
 
 
 --
--- Name: implementationmilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY implementationmilestonedocuments
@@ -5756,7 +5751,7 @@ ALTER TABLE ONLY implementationmilestonedocuments
 
 
 --
--- Name: implementationtransactions_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationtransactions_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY implementationtransactions
@@ -5764,7 +5759,7 @@ ALTER TABLE ONLY implementationtransactions
 
 
 --
--- Name: planning_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: planning_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY planning
@@ -5772,7 +5767,7 @@ ALTER TABLE ONLY planning
 
 
 --
--- Name: planningdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: planningdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY planningdocuments
@@ -5780,7 +5775,7 @@ ALTER TABLE ONLY planningdocuments
 
 
 --
--- Name: procuringentity_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentity_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY procuringentity
@@ -5788,7 +5783,7 @@ ALTER TABLE ONLY procuringentity
 
 
 --
--- Name: procuringentityadditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentityadditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY procuringentityadditionalidentifiers
@@ -5796,7 +5791,7 @@ ALTER TABLE ONLY procuringentityadditionalidentifiers
 
 
 --
--- Name: publisher_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: publisher_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY publisher
@@ -5804,7 +5799,7 @@ ALTER TABLE ONLY publisher
 
 
 --
--- Name: supplier_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplier_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY supplier
@@ -5812,7 +5807,7 @@ ALTER TABLE ONLY supplier
 
 
 --
--- Name: supplieradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplieradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY supplieradditionalidentifiers
@@ -5820,7 +5815,7 @@ ALTER TABLE ONLY supplieradditionalidentifiers
 
 
 --
--- Name: tender_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tender_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY tender
@@ -5828,7 +5823,7 @@ ALTER TABLE ONLY tender
 
 
 --
--- Name: tenderamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY tenderamendmentchanges
@@ -5836,7 +5831,7 @@ ALTER TABLE ONLY tenderamendmentchanges
 
 
 --
--- Name: tenderdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY tenderdocuments
@@ -5844,7 +5839,7 @@ ALTER TABLE ONLY tenderdocuments
 
 
 --
--- Name: tenderer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY tenderer
@@ -5852,7 +5847,7 @@ ALTER TABLE ONLY tenderer
 
 
 --
--- Name: tendereradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendereradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY tendereradditionalidentifiers
@@ -5860,7 +5855,7 @@ ALTER TABLE ONLY tendereradditionalidentifiers
 
 
 --
--- Name: tenderitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY tenderitem
@@ -5868,7 +5863,7 @@ ALTER TABLE ONLY tenderitem
 
 
 --
--- Name: tenderitemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY tenderitemadditionalclassifications
@@ -5876,7 +5871,7 @@ ALTER TABLE ONLY tenderitemadditionalclassifications
 
 
 --
--- Name: tendermilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY tendermilestone
@@ -5884,7 +5879,7 @@ ALTER TABLE ONLY tendermilestone
 
 
 --
--- Name: tendermilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
 --
 
 ALTER TABLE ONLY tendermilestonedocuments
