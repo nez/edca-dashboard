@@ -177,7 +177,7 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                 res.render ('contract' );
             });
             break;
-        case 'contrato':
+        case 'contratacion':
             edca_db.task( function (t) {
                 return this.batch([
                     //información general

@@ -1,49 +1,56 @@
 <div class="row contract-stats">
-    <div class="col-md-4">
-        <p class="small">Monto</p>
-        <p><strong>$ <%= budget.budget_amount %></strong></p>
-    </div>
-    <div class="col-md-4">
-        <p class="small"><%= budget.budget_currency %> </p>
-        <p>MXN</p>
-    </div>
-    <div class="col-md-4">
-        <p class="small">Vigencia</p>
-        <p>
-            <%if ( info.period_enddate instanceof Date && info.period_enddate instanceof Date){%>
-            <%= info.period_startdate.toLocaleDateString()%> - <%= info.period_enddate.toLocaleDateString() %>
-            <%}%>
-        </p>
-    </div>
-</div>
-<div class="row contract-stats">
-    <div class="col-md-8">
-        <p class="small">Comprador</p>
-        <p><a href="#"><%= buyer.identifier_legalname %></a></p>
-    </div>
-    <div class="col-md-4">
-        <p class="small">Proveedor</p>
-        <p><a href="#">Carga y Acarreo S.A. de C.V.</a></p>
-    </div>
-</div>
-<div class="row contract-stats">
     <div class="col-md-3">
         <p class="small">Etapa</p>
         <p><strong>Planeación</strong></p>
     </div>
     <div class="col-md-3">
-        <p class="small">Identificador</p>
-        <p>LPN-OP-DCAGI-SC-115/15</p>
+        <p class="small">Identificador de presupuesto</p>
+        <p><%= budget.budget_budgetid %></p>
     </div>
     <div class="col-md-3">
-        <p class="small">Fecha de firma</p>
-        <p>31/12/2015</p>
+        <p class="small">Origen del presupuesto</p>
+        <p><%= budget.budget_source%></p>
     </div>
+
     <div class="col-md-3">
-        <p class="small">Tipo</p>
-        <p>Licitación Pública</p>
+        <p class="small">Descripción</p>
+        <p><%= budget.budget_description%></p>
     </div>
 </div>
+
+<div class="row contract-stats">
+    <div class="col-md-3">
+        <p class="small">Tipo</p>
+        <p><%= info.procurementmethod%></p>
+    </div>
+
+    <div class="col-md-3">
+        <p class="small">Monto</p>
+        <p><strong>$ <%= budget.budget_amount %></strong></p>
+        <p class="small">Moneda </p>
+        <p><%= budget.budget_currency %></p>
+    </div>
+
+    <div class="col-md-3">
+        <p class="small">Proyecto</p>
+        <p><%= budget.budget_project%> </p>
+    </div>
+    <div class="col-md-3">
+        <p class="small">ID de proyecto</p>
+        <p><a href="#"><%= budget.budget_projectid%></a></p>
+    </div>
+
+
+</div>
+<div class="row contract-stats">
+
+
+    <div class="col-md-12">
+        <p class="small">Comprador</p>
+        <p><a href="#"><%= buyer.identifier_legalname %></a></p>
+    </div>
+</div>
+
 <div class="row contract-stats no-border">
     <div class="col-md-3 col-md-offset-6">
         <p class="small">Descargar datos abiertos</p>
