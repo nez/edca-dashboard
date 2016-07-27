@@ -74,11 +74,10 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                     <ul>
-                        <li>Fuente</li>
-                        <li>ID</li>
-                        <li>Descripción</li>
-                        <li>Total</li>
-                        <li>Proyecto presupuestario</li>
+                        <% for ( var i=0; i < suppliers.length;i++){%>
+                        <li><%= suppliers[i].identifier_legalname%></li>
+                        <%}%>
+
                     </ul>
                 </div>
             </div>

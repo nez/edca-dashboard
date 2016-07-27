@@ -143,14 +143,22 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     //información general
                     this.one(qinfo, [ cpid ]),
                     this.one( q1,[ 'buyer', cpid ]),
-                    this.one(q1,[ 'tender', cpid ])
+                    this.one(q1,[ 'tender', cpid ]),
+                    this.manyOrNone(q1,[ 'tenderitem', cpid ]),
+                    this.manyOrNone(q1,[ 'tendermilestone', cpid ]),
+                    this.manyOrNone(q1,[ 'tenderdocuments', cpid ]),
+                    this.manyOrNone(q1,[ 'tenderamendmentchanges', cpid ])
                 ]);
             }).then(function (data) {
                 res.render('contract',{
                     current_stage: stage,
                     info: data[0],
                     buyer: data[1],
-                    tender : data[2]
+                    tender : data[2],
+                    items: data[3],
+                    milestones: data[4],
+                    documents: data[5],
+                    changes: data[6]
                 });
             }).catch(function (error) {
                 console.log("ERROR: ", error);
@@ -163,14 +171,22 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     //información general
                     this.one(qinfo, [ cpid ]),
                     this.one(q1,[ 'buyer',cpid ]),
-                    this.one(q1 ,[ 'award', cpid ])
+                    this.one(q1 ,[ 'award', cpid ]),
+                    this.manyOrNone(q1 ,[ 'supplier', cpid ]),
+                    this.manyOrNone(q1 ,[ 'awarditem', cpid ]),
+                    this.manyOrNone(q1 ,[ 'awarddocuments', cpid ]),
+                    this.manyOrNone(q1 ,[ 'awardamendmentchanges', cpid ])
                 ]);
             }).then(function (data) {
                 res.render('contract',{
                     current_stage: stage,
                     info: data[0],
                     buyer: data[1],
-                    award : data[2]
+                    award : data[2],
+                    suppliers: data[3],
+                    items: data[4],
+                    documents: data[5],
+                    changes: data[6]
                 });
             }).catch(function (error) {
                 console.log("ERROR: ", error);
@@ -183,7 +199,10 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     //información general
                     this.one(qinfo, [ cpid ]),
                     this.one(q1,[ 'buyer', cpid ]),
-                    this.one(q1 ,[ 'contract', cpid ])
+                    this.one(q1 ,[ 'contract', cpid ]),
+                    this.manyOrNone(q1 ,[ 'contractitem', cpid ]),
+                    this.manyOrNone(q1 ,[ 'contractdocuments', cpid ]),
+                    this.manyOrNone(q1 ,[ 'contractamendmentchanges', cpid ])
                 ]);
             }).then(function (data) {
                 res.render('contract',{
@@ -203,14 +222,18 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     //información general
                     this.one(qinfo, [ cpid ]),
                     this.one(q1,['buyer', cpid ]),
-                    this.manyOrNone(q1, ['implementationtransactions', cpid ])
+                    this.manyOrNone(q1, ['implementationtransactions', cpid ]),
+                    this.manyOrNone(q1, ['implementationmilestone', cpid ]),
+                    this.manyOrNone(q1, ['implementationdocuments', cpid ])
                 ]);
             }).then(function (data) {
                 res.render('contract',{
                     current_stage: stage,
                     info: data[0],
                     buyer: data[1],
-                    transactions: data[2]
+                    transactions: data[2],
+                    milestones: data[3],
+                    documents: data[5]
                 });
             }).catch(function (error) {
                 console.log("ERROR: ", error);
@@ -223,14 +246,16 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     //información general
                     this.one(qinfo, [cpid]),
                     this.one(q1, ['buyer', cpid]),
-                    this.one(q1 ,['budget', cpid])
+                    this.one(q1 ,['budget', cpid]),
+                    this.manyOrNone(q1,['planningdocuments', cpid])
                 ]);
             }).then(function (data) {
                 res.render('contract',{
                     current_stage: stage,
                     info: data[0],
                     buyer: data[1],
-                    budget : data[2]
+                    budget : data[2],
+                    documents: data[3]
                 });
             }).catch(function (error) {
                 console.log("ERROR: ", error);
