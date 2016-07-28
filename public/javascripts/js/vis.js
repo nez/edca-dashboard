@@ -164,12 +164,11 @@ BubbleChart = (function() {
             '#663399',
             '#ffcc00',
             '#ff6600',
-            /*
             "#0000D9",
             "#FF00FF",
             "#FF0033",
             "#FFCC66",
-            "#66CC33",*/
+            "#66CC33",
             "#33FFCC", "#00A0AA", "#FFCCFF", "#FF9933", "#99FF99", "#00BB00", "#CCFFCC", "#333333", "#CCCCCC", "#99CCCC", "#FF0000"];
         index = 0;
         color_map = {};

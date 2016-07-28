@@ -43,7 +43,7 @@
 </div>
 
 <div class="row contract-stats">
-       <div class="col-md-12">
+    <div class="col-md-12">
         <p class="small">Comprador</p>
         <p><a href="#"><%= buyer.identifier_legalname %></a></p>
     </div>
@@ -63,6 +63,7 @@
 <p class="small">Procesos</p>
 <div class="well well-sm">
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <% if (suppliers.length > 0 ){%>
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingOne">
                 <h4 class="panel-title">
@@ -73,15 +74,26 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
-                    <ul>
-                        <% for ( var i=0; i < suppliers.length;i++){%>
-                        <li><%= suppliers[i].identifier_legalname%></li>
-                        <%}%>
 
+                    <% for ( var i=0; i < suppliers.length;i++){%>
+                    <strong><%=suppliers[i].name %></strong>
+                    <ul>
+                        <li>Razón social: <%= suppliers[i].identifier_legalname%></li>
+                        <li>RFC: <%= suppliers[i].identifier_id%></li>
+                        <li>Dirección: <%= suppliers[i].address_streetaddress%></li>
+                        <li>Localidad: <%= suppliers[i].address_locality%></li>
+                        <li>Estado: <%= suppliers[i].address_region%></li>
+                        <li>Código postal: <%= suppliers[i].address_postalcode%></li>
+                        <li>País: <%= suppliers[i].address_countryname%></li>
                     </ul>
+                    <%}%>
+
                 </div>
             </div>
         </div>
+        <%}%>
+
+        <%if ( items.length > 0){%>
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingTwo">
                 <h4 class="panel-title">
@@ -92,10 +104,22 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <% for (var i=0;i< items.length;i++){%>
+
+                    <strong><%= items[i].description%> </strong>
+                    <ul>
+                        <li>ID: <%= items[i].itemid%></li>
+                        <li>Descripción: <%= items[i].clasification_description%> </li>
+                        <li>Unidad: <%= items[i].unit_name%> </li>
+                        <li>Cantidad: <%= items[i].quantity%> </li>
+                    </ul>
+                    <%}%>
                 </div>
             </div>
         </div>
+        <%}%>
+
+        <%if ( documents.length > 0){ %>
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingThree">
                 <h4 class="panel-title">
@@ -106,11 +130,21 @@
             </div>
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <% for (var i =0; i< documents.length;i++){%>
+                    <strong><%= documents[i].title %></strong>
+                    <ul>
+                        <li>ID: <%= documents[i].documentid%></li>
+                        <li>Título: <%= documents[i].title %></li>
+                        <li>Descripción: <%= documents[i].description %></li>
+                    </ul>
+
+                    <%}%>
                 </div>
             </div>
         </div>
+        <%}%>
 
+        <% if ( changes.length > 0){%>
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingFour">
                 <h4 class="panel-title">
@@ -121,10 +155,17 @@
             </div>
             <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <% for ( var i =0; i< changes.length;i++){%>
+                    Cambio <%=i%>
+                    <ul>
+                        <li>Propiedad: <%= changes[i].property%></li>
+                        <li>Valor anterior: <%= changes[i].former_value%></li>
+                    </ul>
+                    <%}%>
                 </div>
             </div>
         </div>
+        <%}%>
 
     </div>
 </div>
