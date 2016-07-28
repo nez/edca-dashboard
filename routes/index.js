@@ -209,7 +209,10 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     current_stage: stage,
                     info: data[0],
                     buyer: data[1],
-                    contract : data[2]
+                    contract : data[2],
+                    items : data[3],
+                    documents : data[4],
+                    changes : data[5]
                 });
             }).catch(function (error) {
                 console.log("ERROR: ", error);
@@ -233,7 +236,7 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     buyer: data[1],
                     transactions: data[2],
                     milestones: data[3],
-                    documents: data[5]
+                    documents: data[4]
                 });
             }).catch(function (error) {
                 console.log("ERROR: ", error);

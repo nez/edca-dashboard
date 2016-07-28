@@ -26,6 +26,8 @@
 <p class="small">Procesos</p>
 <div class="well well-sm">
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingOne">
                 <h4 class="panel-title">
@@ -36,16 +38,30 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
+                    <% for ( var i =0; i < milestones.length;i++){%>
+                    <strong><%= milestones[i].title%></strong>
+
                     <ul>
-                        <li>Fuente</li>
-                        <li>ID</li>
-                        <li>Descripción</li>
-                        <li>Total</li>
-                        <li>Proyecto presupuestario</li>
+                        <li>ID: <%= milestones[i].title %></li>
+                        <li>Descripción: <%= milestones[i].description %></li>
+                        <% if ( milestones[i].duedate instanceof Date ){%>
+                        <li>: <%= milestones[i].duedate.toLocaleDateString() %></li>
+                        <%}%>
+                        <% if ( milestones[i].date_modified instanceof Date){%>
+                        <li>: <%= milestones[i].date_modified.toLocaleDateString() %></li>
+                        <li>Estátus: <%= milestones[i].status %></li>
+                        <%}%>
                     </ul>
+
+                    <%}%>
+
+
                 </div>
             </div>
         </div>
+
+
+
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingTwo">
                 <h4 class="panel-title">
@@ -56,10 +72,27 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                    <%for ( var i=0; i< transactions.length;i++){%>
+                    <strong> Transacción <%= i %> </strong>
+
+                    <ul>
+                        <li>ID: <%= transactions[i].transactionid%></li>
+                        <li>Origen: <%= transactions[i].source %></li>
+                        <% if (transactions[i].implementation_date instanceof Date){%>
+                        <li>Fecha de implementación: <%= transactions[i].implementation_date.toLocaleDateString() %></li>
+                        <%}%>
+                        <li>Monto: <%= transactions[i].value_amount%></li>
+                        <li>Moneda: <%= transactions[i].value_currency%></li>
+                    </ul>
+
+                    <%}%>
+
                 </div>
             </div>
         </div>
+
+
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingThree">
                 <h4 class="panel-title">
@@ -70,9 +103,25 @@
             </div>
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                    <% for (var i =0; i< documents.length;i++){%>
+                    <strong><%= documents[i].title %></strong>
+                    <ul>
+                        <li>ID: <%= documents[i].documentid%></li>
+                        <li>Título: <%= documents[i].title %></li>
+                        <li>Descripción: <%= documents[i].description %></li>
+                    </ul>
+                    <%}%>
+
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>
+<br>  <!--  !!!! -->
+<br>
+<br>
+<br>
+<br>
