@@ -29,9 +29,9 @@
                 </div>
             </div>
         </div>
-        <div class="container full-height">
-            <div class="row full-height">
-                <div id="contract-sidebar" class="col-md-4 full-height">
+        <div class="container">
+            <div class="row">
+                <div id="contract-sidebar" class="col-md-4">
                     <div class="info">
                         <h3>Proceso de contratación</h3>
                         <p class="title"><%= info.title %></p>
@@ -68,5 +68,10 @@
         <script src="/contratacionesabiertas/static/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="/contratacionesabiertas/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="/contratacionesabiertas/static/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+        <script>
+            (function () {
+                $( '#contract-sidebar' ).height( $( '#contract-content' ).height() + 40 );
+            })();
+        </script>
     </body>
 </html>
