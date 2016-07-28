@@ -122,3 +122,7 @@ div.google-visualization-tooltip {
 .contract-item h4 > a           { font-size: 14px; font-weight: 600; color: #545454; }
 .contract-item p                { margin-bottom: 0; }
 .contract-item .legend          { font-size: 12px; font-weight: 600; color: #333; }
+.contract-item .stages-icons    { margin: 0; padding: 0; list-style: none; }
+.contract-item .stages-icons > li               { display: inline-block; margin-right: 5px; }
+.contract-item .stages-icons > li:last-child    { margin-right: 0; }
+.contract-item .stages-icons > li > img         { width: 20px; }
