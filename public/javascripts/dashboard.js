@@ -74,28 +74,6 @@ $(document).ready(function () {
         });
     }
 
-    /*
-    //FIND CONTRACTS EVENT
-    var ob = $('#orderby');
-    var ctable = $('#ctable');
-    var buscar = $('#buscar');
-    var filter = $('#filtrar');
-
-    buscar.keyup(function () {
-        searchbykeyword($(this).val(), ctable, ob.val(), filter.val());
-    });
-
-
-    filter.change(function () {
-        searchbykeyword(buscar.val(), ctable, ob.val(), filter.val());
-    });
-
-    ob.change(function () {
-        searchbykeyword(buscar.val(), ctable, ob.val(), filter.val());
-    });
-*/
-
-
 //Eventos de los botones del paginador
     function p () {
         $('ul.pagination li a').click(function(e){
@@ -113,7 +91,7 @@ $(document).ready(function () {
     $('#orderby').change(function () {
         $('#ctable').load('/contratacionesabiertas/pagination',{ npage : 1, keyword: $('#keyword').val(),  filter: $('#filter').val() , orderby: $('#orderby').val() } , p );
     });
-    
+
     $('#filter').change(function () {
         $('#ctable').load('/contratacionesabiertas/pagination',{ npage : 1, keyword: $('#keyword').val(),  filter: $('#filter').val() , orderby: $('#orderby').val() } , p );
     });
