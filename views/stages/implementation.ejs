@@ -38,6 +38,11 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
+
+                    <% if (milestones.length == 0 ){%>
+                    <strong>No se han registrado hitos en esta etapa</strong>
+                    <%}%>
+
                     <% for ( var i =0; i < milestones.length;i++){%>
                     <strong><%= milestones[i].title%></strong>
 
@@ -73,6 +78,10 @@
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
 
+                    <% if (transactions.length == 0 ){%>
+                    <strong>No se han registrado transacciones en esta etapa</strong>
+                    <%}%>
+
                     <%for ( var i=0; i< transactions.length;i++){%>
                     <strong> Transacción <%= i %> </strong>
 
@@ -104,6 +113,10 @@
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
 
+                    <% if (documents.length == 0 ){%>
+                    <strong>No se han registrado documentos en esta etapa</strong>
+                    <%}%>
+
                     <% for (var i =0; i< documents.length;i++){%>
                     <strong><%= documents[i].title %></strong>
                     <ul>
@@ -121,7 +134,6 @@
     </div>
 </div>
 <br>  <!--  !!!! -->
-<br>
 <br>
 <br>
 <br>

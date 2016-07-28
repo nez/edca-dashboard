@@ -76,6 +76,10 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
+                    <% if (documents.length == 0 ){%>
+                    <strong>No se han registrado documentos en esta etapa</strong>
+                    <%}%>
+
                     <% for (var i =0; i< documents.length;i++){%>
                     <strong><%= documents[i].title %></strong>
                     <ul>

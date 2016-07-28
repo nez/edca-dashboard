@@ -76,6 +76,10 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
+                    <% if (items.length == 0 ){%>
+                    <strong>No se han registrado artículos en esta etapa</strong>
+                    <%}%>
+
                     <% for (var i=0;i< items.length;i++){%>
 
                     <strong><%= items[i].description%> </strong>
@@ -100,6 +104,10 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
+                    <% if (documents.length == 0 ){%>
+                    <strong>No se han registrado documentos en esta etapa</strong>
+                    <%}%>
+
                     <% for (var i =0; i< documents.length;i++){%>
                     <strong><%= documents[i].title %></strong>
                     <ul>
@@ -125,6 +133,10 @@
             </div>
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
+
+                    <% if (changes.length == 0 ){%>
+                    <strong>No se han registrado cambios en esta etapa</strong>
+                    <%}%>
 
                     <% for ( var i =0; i< changes.length;i++){%>
                     Cambio <%=i%>
