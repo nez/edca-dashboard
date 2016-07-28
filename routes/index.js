@@ -61,6 +61,10 @@ router.get('/contratos/',function (req, res) {
 
 //PAGINATION
 router.post('/pagination', function (req, res) {
+/*
+    console.log(req.body.keyword);
+    console.log(req.body.orderby);
+    console.log(req.body.filter);*/
 
     //contracts per page
     var limit = 10;
@@ -72,17 +76,45 @@ router.post('/pagination', function (req, res) {
 
     edca_db.task(function (t) {
 
-        return this.batch([
-            this.manyOrNone('select contract.contractingprocess_id, contract.id, contract.title, contractingprocess.ocid, ' +
+        var q1, q2 ;
+
+        if ( typeof req.body.keyword != 'undefined' && typeof req.body.orderby != 'undefined' && typeof req.body.orderby != 'undefined') {
+            q1 = this.manyOrNone("select contract.contractingprocess_id, contract.id, contract.title, contract.contractid," +
+                "contract.datesigned, contract.value_amount, tender.procurementmethod, " +
+                "(select count(*) as nsuppliers from supplier where supplier. contractingprocess_id = tender.contractingprocess_id )" +
+                " from contract, tender where contract.contractingprocess_id = tender.contractingprocess_id " +
+                "and (contract.title ilike '%$1#%' or contract.contractid ilike '%$1#%') " +
+                ( req.body.filter != 'Todo' ? " and tender.procurementmethod ilike '$2#%' " : "") +
+                "order by $3~ limit $4 offset $5",
+                [
+                    req.body.keyword,
+                    req.body.filter,
+                    req.body.orderby,
+                    limit,
+                    ( +( npage ) -1 )* limit
+                ]);
+            q2 = this.one("select count(*) as total from contract, tender where contract.contractingprocess_id = tender.contractingprocess_id " +
+            "and (contract.title ilike '%$1#%' or contract.contractid ilike '%$1#%') " +
+            ( req.body.filter != 'Todo' ? " and tender.procurementmethod ilike '$2#%' " : ""),[
+                req.body.keyword,
+                req.body.filter
+            ]);
+        } else {
+            q1 = this.manyOrNone('select contract.contractingprocess_id, contract.id, contract.title, contractingprocess.ocid, ' +
                 'contract.datesigned, contract.value_amount, tender.procurementmethod,' +
                 '(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )' +
                 ' from tender, contract, contractingprocess ' +
                 ' where tender.contractingprocess_id = contractingprocess.id and tender.contractingprocess_id = contract.contractingprocess_id order by contract.title limit $1 offset $2',
                 [
                     limit, ( +( npage ) -1 )* limit
-                ]),
+                ]);
+            q2 = this.one('select count (*) as total from contractingprocess');
+        }
 
-            this.one('select count (*) as total from contractingprocess')
+
+        return this.batch([
+            q1,
+            q2
         ]);
 
     }).then(function (data) {
@@ -99,26 +131,6 @@ router.post('/pagination', function (req, res) {
         console.log("ERROR: ", error);
     });
 });
-
-
-/* find contracts */
-router.post ('/find-contracts/', function (req, res ) {
-
-    edca_db.manyOrNone("select contract.contractingprocess_id, contract.id, contract.title, contract.contractid," +
-        "contract.datesigned, contract.value_amount, tender.procurementmethod, " +
-        "(select count(*) as nsuppliers from supplier where supplier. contractingprocess_id = tender.contractingprocess_id )" +
-        " from contract, tender where contract.contractingprocess_id = tender.contractingprocess_id " +
-        "and (contract.title ilike '%$1#%' or contract.contractid ilike '%$1#%') " +
-        ( req.body.filter != 'Todo'?" and tender.procurementmethod ilike '$3#%' ":"")+
-        "order by $2~", [req.body.keyword, req.body.orderby, req.body.filter]).then(function (data) {
-        res.render (  'contracts', {contracts: data });
-    }).catch(function (error) {
-        console.log("ERROR: ", error);
-    });
-
-});
-
-
 
 /* GET contract details */
 router.get('/contrato/:cpid/:stage',function (req, res) {

@@ -99,18 +99,25 @@ $(document).ready(function () {
 //Eventos de los botones del paginador
     function p () {
         $('ul.pagination li a').click(function(e){
-            $('#ctable').load('/contratacionesabiertas/pagination',{ npage: $(this).data('page') }, p);
+            $('#ctable').load('/contratacionesabiertas/pagination',{ npage: $(this).data('page'), keyword: $('#keyword').val(),  filter: $('#filter').val() , orderby: $('#orderby').val() }, p);
         });
     }
 
     $('#ctable').load('/contratacionesabiertas/pagination',{ npage : 1 } ,p );
 
 
-    $('#ilsform').submit(function (e) {
-        $('#ctable').load('/contratacionesabiertas/pagination',{ npage : 1 } ,p );
-        //alert(this.serialize());
-        e.preventDefault();
+    $('#keyword').keyup(function () {
+        $('#ctable').load('/contratacionesabiertas/pagination',{ npage : 1, keyword: $('#keyword').val(),  filter: $('#filter').val() , orderby: $('#orderby').val() } , p );
     });
+
+    $('#orderby').change(function () {
+        $('#ctable').load('/contratacionesabiertas/pagination',{ npage : 1, keyword: $('#keyword').val(),  filter: $('#filter').val() , orderby: $('#orderby').val() } , p );
+    });
+    
+    $('#filter').change(function () {
+        $('#ctable').load('/contratacionesabiertas/pagination',{ npage : 1, keyword: $('#keyword').val(),  filter: $('#filter').val() , orderby: $('#orderby').val() } , p );
+    });
+
 
 });
 

@@ -175,22 +175,25 @@
             <h1>Lista de contratos</h1>
             <div class="row">
                 <div class="col-md-12">
-                    <form class="form-inline search-form" id="ilsform">
-                        <input type="text" name="keyword" class="form-control" placeholder="Buscar contrataciones abiertas">
-                        <select name="filtrar" class="form-control">
-                            <option value="">Mostrar todo</option>
+                    <form class="form-inline search-form" >
+                        <input type="text" id="keyword" class="form-control" placeholder="Buscar contrataciones abiertas">
+
+                        <select id="filter" class="form-control">
+                            <option value="Todo">Mostrar todo</option>
                             <option value="Adjudicación">Adjudicaciones directas</option>
+                            <option value="Convenio">Convenios de colaboración</option>
+                            <option value="Fideicomiso">Fideicomisos</option>
                             <option value="Invitación">Invitaciónes a tres</option>
                             <option value="Licitación">Licitaciones Públicas</option>
                         </select>
 
-                        <select name="orderby" class="form-control">
+                        <select id="orderby" class="form-control">
                             <option value="title">Ordenar por nombre</option>
                             <option value="value_amount">Ordenar por monto</option>
                             <option value="datesigned">Ordenar por fecha de firma</option>
                             <option value="contractid">Ordenar por ID de contrato</option>
                         </select>
-                        <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+                        <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
                     </form>
                 </div>
             </div>
