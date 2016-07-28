@@ -30,11 +30,11 @@ $(document).ready(function () {
                     shadow: false
                 },
                 seriesColors: [
-                    '#673AB7',
-                    'yellow',
-                    'purple',
-                    '#ff4d4d',
-                    '#00cc99'
+                    '#00cc99',
+                    '#ff6666',
+                    '#663399',
+                    '#ffcc00',
+                    '#ff6600'
 
                 ]
             },
@@ -187,11 +187,11 @@ function drawSeriesChart() {
                 }
             },
             series: {
-                'Adjudicación directa': {color: '#673AB7'},
-                'Convenio de colaboración': {color: 'yellow'},
-                'Fideicomiso': {color: 'purple'},
-                'Invitación a cuando menos tres personas': {color: '#ff4d4d'},
-                'Licitación pública': {color: '#00cc99'}
+                'Adjudicación directa': {color: '#00cc99'},
+                'Convenio de colaboración': {color: '#ff6666'},
+                'Fideicomiso': {color: '#663399'},
+                'Invitación a cuando menos tres personas': {color: '#ffcc00'},
+                'Licitación pública': {color: '#ff6600'}
             },
             legend: {
                 position: 'bottom',
