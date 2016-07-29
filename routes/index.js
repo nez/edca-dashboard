@@ -79,10 +79,11 @@ router.post('/pagination', function (req, res) {
         var q1, q2 ;
 
         if ( typeof req.body.keyword != 'undefined' && typeof req.body.orderby != 'undefined' && typeof req.body.orderby != 'undefined') {
-            q1 = this.manyOrNone("select contract.contractingprocess_id, contract.id, contract.title, contract.contractid," +
+            q1 = this.manyOrNone("select contractingprocess.ocid, contract.contractingprocess_id, contract.id, contract.title, contract.contractid," +
                 "contract.datesigned, contract.value_amount, tender.procurementmethod, " +
-                "(select count(*) as nsuppliers from supplier where supplier. contractingprocess_id = tender.contractingprocess_id )" +
-                " from contract, tender where contract.contractingprocess_id = tender.contractingprocess_id " +
+                "(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )" +
+                " from contract, tender, contractingprocess where contract.contractingprocess_id = tender.contractingprocess_id " +
+                " and contract.contractingprocess_id = contractingprocess.id " +
                 "and (contract.title ilike '%$1#%' or contract.contractid ilike '%$1#%') " +
                 ( req.body.filter != 'Todo' ? " and tender.procurementmethod ilike '$2#%' " : "") +
                 "order by $3~ limit $4 offset $5",
