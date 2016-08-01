@@ -35,7 +35,6 @@ $(document).ready(function () {
                     '#663399',
                     '#ffcc00',
                     '#ff6600'
-
                 ]
             },
             grid: {
@@ -56,7 +55,7 @@ $(document).ready(function () {
                 //tooltipFormatString: '%s'
                 tooltipContentEditor: function (current, serie, index, plot) {
                     //return "<div class='col-sm-2'><p style='color: black'><b>" + data[index][1] + " " + data[index][0] + "</b></p></div>";
-                    return "<div class='col-sm-2'><p style='color: black'><b>" + newData[index][0] + ": " + newData[index][1] + "</b></p></div>";
+                    return "<div class='col-sm-2'><p style='color: black'><b>" + newData[index][0] + ":<br> $" + newData[index][1] + "</b></p></div>";
                 }
             }
         });
