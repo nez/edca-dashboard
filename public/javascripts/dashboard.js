@@ -7,7 +7,7 @@ $(document).ready(function () {
         var colors = [];
 
         for (var i = 0; i < data.length; i++) {
-            newData.push([data[i].procurementmethod, Number(data [i].count)]);
+            newData.push([data[i].procurementmethod, Number(data [i].sum)]);
         }
 
 

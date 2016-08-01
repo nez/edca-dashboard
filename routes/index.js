@@ -327,7 +327,9 @@ router.post('/bubble-chart-data', function (req, res) {
 });
 
 router.post('/donut-chart-data', function (req, res) {
-    edca_db.many("select procurementmethod, count(*) from tender  where procurementmethod not like '' group by procurementmethod order by procurementmethod;").then(function (data) {
+//    edca_db.many("select procurementmethod, count(*) from tender  where procurementmethod not like '' group by procurementmethod order by procurementmethod;").then(function (data) {
+    edca_db.manyOrNone("select tender.procurementmethod, sum(contract.value_amount) from tender, contract  where  tender.contractingprocess_id= contract.contractingprocess_id " +
+        "and tender.procurementmethod not like '' group by tender.procurementmethod order by tender.procurementmethod;").then(function (data) {
         res.json (data);
     }).catch(function (error) {
         console.log("ERROR: ", error)
