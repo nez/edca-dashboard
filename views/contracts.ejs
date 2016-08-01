@@ -5,7 +5,11 @@
             <div class="inner">
                 <div class="row">
                     <div class="col-sm-3">
+                        <%  if (!isNaN( contracts[i].value_amount ) && contracts[i].value_amount > 0 ){%>
                         <h3>$<%= ( parseFloat(contracts [i].value_amount).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></h3>
+                        <%} else{%>
+                        <h3>En proceso</h3>
+                        <%}%>
                     </div>
                     <div class="col-sm-9">
                         <h4><a href="<%= "/contratacionesabiertas/contrato/" + contracts[i].contractingprocess_id +"/planeacion"%>" ><%= contracts [i].title %></a></h4>

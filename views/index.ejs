@@ -36,15 +36,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4 widget">
+                    <div class="col-sm-3 widget">
                         <h5>TOTAL DE PROCESOS DE CONTRATACIÓN</h5>
                         <p class="stat"><%= metadata.contract_count %></p>
                     </div>
-                    <div class="col-sm-4 widget">
+
+                    <div class="col-sm-3 widget">
+                        <h5>TOTAL DE CONTRATOS</h5>
+                        <p class="stat"> ¿?</p>
+                    </div>
+
+                    <div class="col-sm-3 widget">
                         <h5>TOTAL DE PROVEEDORES</h5>
                         <p class="stat"><%= metadata.supplier_count %></p>
                     </div>
-                    <div class="col-sm-4 widget">
+                    <div class="col-sm-3 widget">
                         <h5>MONTO TOTAL</h5>
                         <p class="stat">$<%= ( parseInt( metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
                     </div>
