@@ -86,7 +86,7 @@ router.post('/pagination', function (req, res) {
                 " and contract.contractingprocess_id = contractingprocess.id " +
                 "and (contract.title ilike '%$1#%' or contract.contractid ilike '%$1#%') " +
                 ( req.body.filter != 'Todo' ? " and tender.procurementmethod ilike '$2#%' " : "") +
-                "order by $3~ limit $4 offset $5",
+                "order by $3~ "+(req.body.orderby == 'value_amount'?" desc ":"")+" limit $4 offset $5",
                 [
                     req.body.keyword,
                     req.body.filter,
@@ -105,7 +105,7 @@ router.post('/pagination', function (req, res) {
                 'contract.datesigned, contract.value_amount, tender.procurementmethod,' +
                 '(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )' +
                 ' from tender, contract, contractingprocess ' +
-                ' where tender.contractingprocess_id = contractingprocess.id and tender.contractingprocess_id = contract.contractingprocess_id order by contract.title limit $1 offset $2',
+                ' where tender.contractingprocess_id = contractingprocess.id and tender.contractingprocess_id = contract.contractingprocess_id order by contract.value_amount desc limit $1 offset $2',
                 [
                     limit, ( +( npage ) -1 )* limit
                 ]);

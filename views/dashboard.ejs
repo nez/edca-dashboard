@@ -1,182 +1,186 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" lang="es-MX" xml:lang="es-MX">
-    <head>
-        <link rel="stylesheet" href="/contratacionesabiertas/static/bower_components/font-awesome/css/font-awesome.min.css">
-        <!-- Bootstrap core CSS -->
-        <link href="/contratacionesabiertas/static/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel='stylesheet' href='/contratacionesabiertas/static/stylesheets/main.css'/>
-        <link rel='stylesheet' href='/contratacionesabiertas/static/stylesheets/style_d3bubble.css'/>
-        <link rel="stylesheet" type="text/css" href="/contratacionesabiertas/static/bower_components/jqplot/jquery.jqplot.css"/>
-        <link rel="stylesheet" href="/contratacionesabiertas/static/stylesheets/dashboard.css">
-        <link rel="import" href="/contratacionesabiertas/static/bower_components/polymer/polymer.html">
-        <link rel="import" href="/contratacionesabiertas/static/dgm-navbar/dgm-navbar.html">
-        <link rel="import" href="/contratacionesabiertas/static/dgm-footer/dgm-footer.html">
+<head>
+    <link rel="stylesheet" href="/contratacionesabiertas/static/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/contratacionesabiertas/static/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/contratacionesabiertas/static/stylesheets/main.css'/>
+    <link rel='stylesheet' href='/contratacionesabiertas/static/stylesheets/style_d3bubble.css'/>
+    <link rel="stylesheet" type="text/css" href="/contratacionesabiertas/static/bower_components/jqplot/jquery.jqplot.css"/>
+    <link rel="stylesheet" href="/contratacionesabiertas/static/stylesheets/dashboard.css">
+    <link rel="import" href="/contratacionesabiertas/static/bower_components/polymer/polymer.html">
+    <link rel="import" href="/contratacionesabiertas/static/dgm-navbar/dgm-navbar.html">
+    <link rel="import" href="/contratacionesabiertas/static/dgm-footer/dgm-footer.html">
 
-        <title><%= title %></title>
-    </head>
-    <body>
-        <dgm-navbar></dgm-navbar>
-        <div class="breadcrumb-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="breadcrumb">
-                            <li><a href="/contratacionesabiertas"><i class="glyphicon glyphicon-home"></i></a></li>
-                            <li><a href="/contratacionesabiertas">Estándar de contrataciones abiertas</a></li>
-                            <li><a href="/contratacionesabiertas/contratos">Explora</a></li>
-                        </ul>
-                    </div>
-                </div>
+    <title><%= title %></title>
+</head>
+<body>
+<dgm-navbar></dgm-navbar>
+<div class="breadcrumb-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li><a href="/contratacionesabiertas"><i class="glyphicon glyphicon-home"></i></a></li>
+                    <li><a href="/contratacionesabiertas">Estándar de contrataciones abiertas</a></li>
+                    <li><a href="/contratacionesabiertas/contratos">Explora</a></li>
+                </ul>
             </div>
         </div>
-        <div class="bgimg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="text-center">Estándar de contrataciones abiertas</p>
-                        <h2>Nuevo Aeropuerto Internacional <span>de la Ciudad de México</span></h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4 widget">
-                        <h5>TOTAL DE CONTRATOS</h5>
-                        <p class="stat"><%= metadata.contract_count %></p>
-                    </div>
-                    <div class="col-sm-4 widget">
-                        <h5>TOTAL DE PROVEEDORES</h5>
-                        <p class="stat"><%= metadata.supplier_count %></p>
-                    </div>
-                    <div class="col-sm-4 widget">
-                        <h5>MONTO TOTAL</h5>
-                        <p class="stat">$<%= ( parseInt(metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
-                    </div>
-                </div>
+    </div>
+</div>
+<div class="bgimg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center">Estándar de contrataciones abiertas</p>
+                <h2>Nuevo Aeropuerto Internacional <span>de la Ciudad de México</span></h2>
             </div>
         </div>
-        <div class="controls">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>Explora por</h3>
-                        <ul class="nav nav-pills">
-                            <li role="presentation" class="active"><a data-toggle="pill" href="#contracts">Contratos</a></li>
-                            <li role="presentation"><a data-toggle="pill" href="#providers">Proveedor</a></li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-sm-4 widget">
+                <h5>TOTAL DE CONTRATOS</h5>
+                <p class="stat"><%= metadata.contract_count %></p>
+            </div>
+            <div class="col-sm-4 widget">
+                <h5>TOTAL DE PROVEEDORES</h5>
+                <p class="stat"><%= metadata.supplier_count %></p>
+            </div>
+            <div class="col-sm-4 widget">
+                <h5>MONTO TOTAL</h5>
+                <p class="stat">$<%= ( parseInt(metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
             </div>
         </div>
-        <div class="container statistics">
-            <div class="row">
-                <div class="tab-content col-md-12">
-                    <div id="contracts" class="tab-pane fade in active">
-                        <h1>Tipo de procedimiento</h1>
-                        <p>Visualiza la distribución de los tipos de procedimiento realizados por el NAICM</p>
-                        <p class="small">Conjunto de datos: Emisiones 2016</p>
-                        <div class="well">
-                            <div class="row">
-                                <div class="col-sm-6 col-sm-offset-1">
-                                    <div id="chart4" style="color: #fff; height: 400px;"></div>
-                                </div>
-                                <div class="col-sm-5">
-                                    <ul class="chart-legend">
-                                        <li><span class="circle" style="background-color: #00cc99"></span>Adjudicación directa</li>
-                                        <li><span class="circle" style="background-color: #ff6666"></span>Convenio de colaboración</li>
-                                        <li><span class="circle" style="background-color: #663399"></span>Fideicomiso</li>
-                                        <li><span class="circle" style="background-color: #ffcc00"></span>Invitación a cuando menos tres personas</li>
-                                        <li><span class="circle" style="background-color: #ff6600"></span>Licitación pública</li>
-                                    </ul>
-                                </div>
-                            </div>
+    </div>
+</div>
+<div class="controls">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Explora por</h3>
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="active"><a data-toggle="pill" href="#contracts">Contratos</a></li>
+                    <li role="presentation"><a data-toggle="pill" href="#providers">Proveedor</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container statistics">
+    <div class="row">
+        <div class="tab-content col-md-12">
+            <div id="contracts" class="tab-pane fade in active">
+                <h1>Tipo de procedimiento</h1>
+                <p>Visualiza la distribución de los tipos de procedimiento realizados por el NAICM</p>
+                <p class="small">Conjunto de datos: Emisiones 2016</p>
+                <div class="well">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-1">
+                            <div id="chart4" style="color: #fff; height: 400px;"></div>
                         </div>
-                        <h1>Presupuesto planeado en el tiempo</h1>
-                        <p>Visualiza el avance en la ejecución de los recursos totales planeados para la construcción del NAICM</p>
-                        <p class="small">Conjunto de datos: Emisiones 2016</p>
-                        <div class="well">
-                            <ul class="progress-steps">
-                                <li>0%</li>
-                                <li>20%</li>
-                                <li>40%</li>
-                                <li>60%</li>
-                                <li>80%<span class="text-right">100%</span></li>
-                            </ul>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-success" style="width: 60%">
-                                    <span class="sr-only">65% Completado</span>
-                                </div>
-                                <div class="progress-bar" style="width: 40%">
-                                    $ 1,494,222 MXN
-                                </div>
-                            </div>
-                            <ul class="progress-steps">
-                                <li>ene 2015</li>
-                                <li>abr 2015</li>
-                                <li>jul 2015</li>
-                                <li>oct 2015</li>
-                                <li>ene 2016<span class="text-right">abr 2016</span></li>
+                        <div class="col-sm-5">
+                            <ul class="chart-legend">
+                                <li><span class="circle" style="background-color: #00cc99"></span>Adjudicación directa</li>
+                                <li><span class="circle" style="background-color: #ff6666"></span>Convenio de colaboración</li>
+                                <li><span class="circle" style="background-color: #663399"></span>Fideicomiso</li>
+                                <li><span class="circle" style="background-color: #ffcc00"></span>Invitación a cuando menos tres personas</li>
+                                <li><span class="circle" style="background-color: #ff6600"></span>Licitación pública</li>
                             </ul>
                         </div>
-
-                        <h1>Contrataciones en el tiempo</h1>
-                        <p>Compara los procedimientos de adquisición por su vigencia, fecha de firma y monto asignado</p>
-                        <p class="small">Conjunto de datos: Emisiones 2016</p>
-                        <div class="well series-chart">
-                            <div id="series_chart_div" style="height: 400px;"></div>
-                        </div>
-
-
-                        <h1>Información general de proveedores</h1>
-                        <p>Explora los datos sobre los proveedores de acuerdo a su razón social, tipo de procedimiento o vigencia de su contrato</p>
-                        <p class="small">Conjunto de datos: Emisiones 2016</p>
-                        <div class="well">
-                            <nav class="navbar navbar-default" role="navigation">
-                                <div id="navbar" class="navbar-collapse collapse">
-                                    <ul id="visualizador" class="nav navbar-nav">
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Filtrar <span class="caret"></span></strong></a>
-                                            <ul id="filtros" class="dropdown-menu scrollable-menu">
-                                                <li class="dropdown-header"><p id="clear_filters" class="clear" style="color:#00cc99; cursor:pointer"><strong>Mostrar/Quitar todos</strong></p></li>
-                                                <li class="divider"></li>
-                                                <div id="filter-list"></div>
-                                            </ul>
-                                        </li>
-                                        <div class="form-group navbar-form navbar-left">
-                                            <select id='group-everything-by' class="form-control">
-                                                <option value=''>Agrupar</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group navbar-form navbar-left">
-                                            <select id='color-everything-by' class="form-control">
-                                                <option value=''>Colorear</option>
-                                            </select>
-                                        </div>
-                                        <div id="search_form" class="navbar-form navbar-left">
-                                            <input type="text" class="form-control" id="buscar_bubble" value="" placeholder="Buscar proveedores"/>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </nav>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <!-- d3 bubble chart-->
-                                    <div id="vis" class="svg-container"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div id='color-hints'></div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
                     </div>
-                    <div id="providers" class="tab-pane fade">
+                </div>
 
-                        <!--
+
+                <h1>Información general de proveedores</h1>
+                <p>Explora los datos sobre los proveedores de acuerdo a su razón social, tipo de procedimiento o vigencia de su contrato</p>
+                <p class="small">Conjunto de datos: Emisiones 2016</p>
+                <div class="well">
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul id="visualizador" class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Filtrar <span class="caret"></span></strong></a>
+                                    <ul id="filtros" class="dropdown-menu scrollable-menu">
+                                        <li class="dropdown-header"><p id="clear_filters" class="clear" style="color:#00cc99; cursor:pointer"><strong>Mostrar/Quitar todos</strong></p></li>
+                                        <li class="divider"></li>
+                                        <div id="filter-list"></div>
+                                    </ul>
+                                </li>
+                                <div class="form-group navbar-form navbar-left">
+                                    <select id='group-everything-by' class="form-control">
+                                        <option value=''>Agrupar</option>
+                                    </select>
+                                </div>
+                                <div class="form-group navbar-form navbar-left">
+                                    <select id='color-everything-by' class="form-control">
+                                        <option value=''>Colorear</option>
+                                    </select>
+                                </div>
+                                <div id="search_form" class="navbar-form navbar-left">
+                                    <input type="text" class="form-control" id="buscar_bubble" value="" placeholder="Buscar proveedores"/>
+                                </div>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- d3 bubble chart-->
+                            <div id="vis" class="svg-container"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id='color-hints'></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h1>Presupuesto planeado en el tiempo</h1>
+                <p>Visualiza el avance en la ejecución de los recursos totales planeados para la construcción del NAICM</p>
+                <p class="small">Conjunto de datos: Emisiones 2016</p>
+                <div class="well">
+                    <ul class="progress-steps">
+                        <li>0%</li>
+                        <li>20%</li>
+                        <li>40%</li>
+                        <li>60%</li>
+                        <li>80%<span class="text-right">100%</span></li>
+                    </ul>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" style="width: 60%">
+                            <span class="sr-only">65% Completado</span>
+                        </div>
+                        <div class="progress-bar" style="width: 40%">
+                            $ 1,494,222 MXN
+                        </div>
+                    </div>
+                    <ul class="progress-steps">
+                        <li>ene 2015</li>
+                        <li>abr 2015</li>
+                        <li>jul 2015</li>
+                        <li>oct 2015</li>
+                        <li>ene 2016<span class="text-right">abr 2016</span></li>
+                    </ul>
+                </div>
+
+                <h1>Contrataciones en el tiempo</h1>
+                <p>Compara los procedimientos de adquisición por su vigencia, fecha de firma y monto asignado</p>
+                <p class="small">Conjunto de datos: Emisiones 2016</p>
+                <div class="well series-chart">
+                    <div id="series_chart_div" style="height: 400px;"></div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+            <div id="providers" class="tab-pane fade">
+
+                <!--
                         <h1>Información general de proveedores</h1>
                         <p>Explora los datos sobre los proveedores de acuerdo a su razón social, tipo de procedimiento o vigencia de su contrato</p>
                         <p class="small">Conjunto de datos: Emisiones 2016</p>
@@ -210,8 +214,8 @@
                             </nav>
                             <div class="row">
                                 <div class="col-sm-12">-->
-                                    <!-- d3 bubble chart-->
-                        <!--
+                <!-- d3 bubble chart-->
+                <!--
                                     <div id="vis" class="svg-container"></div>
                                 </div>
                             </div>
@@ -223,91 +227,91 @@
                         </div>-->
 
 
-                    </div>
-                </div>
             </div>
         </div>
-        <div class="container">
-            <h1>Lista de contratos</h1>
-            <div class="row">
-                <div class="col-md-12">
-                    <form class="form-inline search-form" >
-                        <input type="text" id="keyword" class="form-control" placeholder="Buscar contrataciones abiertas">
+    </div>
+</div>
+<div class="container">
+    <h1>Lista de contratos</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline search-form" >
+                <input type="text" id="keyword" class="form-control" placeholder="Buscar contrataciones abiertas">
 
-                        <select id="filter" class="form-control">
-                            <option value="Todo">Mostrar todo</option>
-                            <option value="Adjudicación">Adjudicaciones directas</option>
-                            <option value="Convenio">Convenios de colaboración</option>
-                            <option value="Fideicomiso">Fideicomisos</option>
-                            <option value="Invitación">Invitaciónes a tres</option>
-                            <option value="Licitación">Licitaciones Públicas</option>
-                        </select>
+                <select id="filter" class="form-control">
+                    <option value="Todo">Mostrar todo</option>
+                    <option value="Adjudicación">Adjudicaciones directas</option>
+                    <option value="Convenio">Convenios de colaboración</option>
+                    <option value="Fideicomiso">Fideicomisos</option>
+                    <option value="Invitación">Invitaciónes a tres</option>
+                    <option value="Licitación">Licitaciones Públicas</option>
+                </select>
 
-                        <select id="orderby" class="form-control">
-                            <option value="title">Ordenar por nombre</option>
-                            <option value="value_amount">Ordenar por monto</option>
-                            <option value="datesigned">Ordenar por fecha de firma</option>
-                            <option value="contractid">Ordenar por ID de contrato</option>
-                        </select>
-                        <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
-                    </form>
-                </div>
-            </div>
+                <select id="orderby" class="form-control">
+                    <option value="value_amount">Ordenar por monto</option>
+                    <option value="title">Ordenar por nombre</option>
+                    <option value="datesigned">Ordenar por fecha de firma</option>
+                    <option value="contractid">Ordenar por ID de contrato</option>
+                </select>
+                <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+            </form>
+        </div>
+    </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- Lista de contratos -->
-                    <div id="ctable"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Lista de contratos -->
+            <div id="ctable"></div>
 
-                </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Datos</h1>
+            <div class="data-table">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th width="30%">Institución</th>
+                        <th width="30%">Formato</th>
+                    </tr>
+                    </thead>
+                </table>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>Datos</h1>
-                    <div class="data-table">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th width="30%">Institución</th>
-                                    <th width="30%">Formato</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <dgm-footer></dgm-footer>
-        <script src="/contratacionesabiertas/static/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="/contratacionesabiertas/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="/contratacionesabiertas/static/bower_components/jqplot/jquery.jqplot.js"></script>
-        <script src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.donutRenderer.js"></script>
+    </div>
+</div>
+<dgm-footer></dgm-footer>
+<script src="/contratacionesabiertas/static/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/contratacionesabiertas/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/contratacionesabiertas/static/bower_components/jqplot/jquery.jqplot.js"></script>
+<script src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.donutRenderer.js"></script>
 
-        <!--<script src="/bower_components/jqplot/plugins/jqplot.barRenderer.js"></script>-->
-        <script type="text/javascript" src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
-        <script type="text/javascript" src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js"></script>
-        <script type="text/javascript" src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
-        <script type="text/javascript" src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.categoryAxisRenderer.js"></script>
-        <!--<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>-->
-        <script type="text/javascript" src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.pointLabels.js"></script>
-        <script type="text/javascript" src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.highlighter.js"></script>
+<!--<script src="/bower_components/jqplot/plugins/jqplot.barRenderer.js"></script>-->
+<script type="text/javascript" src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+<script type="text/javascript" src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js"></script>
+<script type="text/javascript" src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
+<script type="text/javascript" src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.categoryAxisRenderer.js"></script>
+<!--<script type="text/javascript" src="/bower_components/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>-->
+<script type="text/javascript" src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.pointLabels.js"></script>
+<script type="text/javascript" src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.highlighter.js"></script>
 
-        <script src="http://d3js.org/d3.v3.min.js"></script>
-        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
-        <script src="/contratacionesabiertas/static/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script src="/contratacionesabiertas/static/javascripts/dashboard.js"></script>
+<script src="/contratacionesabiertas/static/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="/contratacionesabiertas/static/javascripts/dashboard.js"></script>
 
-        <!-- Sergio -->
-        <script src="/contratacionesabiertas/static/javascripts/js/tooltip.js"></script>
-        <!-- Archivo que contiene las funciones para la visualizacion de los elementos -->
-        <script type="text/javascript" src="/contratacionesabiertas/static/javascripts/js/vis.js"></script>
-        <!-- Archivo que contiene las funciones para los eventos -->
-        <script type="text/javascript" src="/contratacionesabiertas/static/javascripts/js/custom.js"></script>
+<!-- Sergio -->
+<script src="/contratacionesabiertas/static/javascripts/js/tooltip.js"></script>
+<!-- Archivo que contiene las funciones para la visualizacion de los elementos -->
+<script type="text/javascript" src="/contratacionesabiertas/static/javascripts/js/vis.js"></script>
+<!-- Archivo que contiene las funciones para los eventos -->
+<script type="text/javascript" src="/contratacionesabiertas/static/javascripts/js/custom.js"></script>
 
-    </body>
+</body>
 </html>

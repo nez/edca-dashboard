@@ -74,10 +74,10 @@
                     </a>
                 </h4>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                     <% if (items.length == 0 ){%>
-                    <strong>No se han registrado artículos en esta etapa</strong>
+                    No se han registrado artículos en esta etapa
                     <%}%>
 
                     <% for (var i=0;i< items.length;i++){%>
@@ -105,7 +105,7 @@
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
                     <% if (documents.length == 0 ){%>
-                    <strong>No se han registrado documentos en esta etapa</strong>
+                    No se han registrado documentos en esta etapa
                     <%}%>
 
                     <% for (var i =0; i< documents.length;i++){%>
@@ -135,7 +135,7 @@
                 <div class="panel-body">
 
                     <% if (changes.length == 0 ){%>
-                    <strong>No se han registrado cambios en esta etapa</strong>
+                    No se han registrado cambios en esta etapa
                     <%}%>
 
                     <% for ( var i =0; i< changes.length;i++){%>
