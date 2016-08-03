@@ -86,7 +86,7 @@ router.post('/pagination', function (req, res) {
                 " and contract.contractingprocess_id = contractingprocess.id " +
                 "and (contract.title ilike '%$1#%' or contract.contractid ilike '%$1#%') " +
                 ( req.body.filter != 'Todo' ? " and tender.procurementmethod ilike '$2#%' " : "") +
-                "order by $3~ "+(req.body.orderby == 'value_amount'?" desc ":"")+" limit $4 offset $5",
+                "order by $3~ "+(req.body.orderby == 'value_amount' || req.body.orderby == 'datesigned'?" desc ":"")+" limit $4 offset $5",
                 [
                     req.body.keyword,
                     req.body.filter,
