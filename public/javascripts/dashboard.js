@@ -111,6 +111,7 @@ function drawSeriesChart() {
         //var newData = [['ID', 'Fecha de firma', 'Monto MXN' ,  'Tipo',  'Vigencia (días naturales)']];
 
         for (i = 0; i < data.length; i++) {
+
             newData.push([ data[i].title , new Date(data[i].datesigned), Math.abs(data[i].vigencia.days), data[i].procurementmethod, Number(data[i].value_amount)]);
             //newData.push([ data[i].title , new Date(data[i].datesigned), Number(data[i].value_amount)/1000000, data[i].procurementmethod,  isNaN(Math.abs(data[i].vigencia.days))?0: Math.abs(data[i].vigencia.days )  ]);
         }
@@ -188,16 +189,30 @@ function drawSeriesChart() {
         };
 
         var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+
+
+        //evento para dirigir al detalle del contrato
+         function selectHandler() {
+             var selectedItem = chart.getSelection()[0];
+             window.location.href = "/contratacionesabiertas/contrato/"+(data[selectedItem.row].contractingprocess_id)+"/planeacion";
+
+         }
+        
+        google.visualization.events.addListener(chart, 'select', selectHandler);
+        
         //chart.draw( data  , options);
         chart.draw(google.visualization.arrayToDataTable(newData), options);
+
         function resizeHandler () {
             chart.draw(google.visualization.arrayToDataTable(newData), options);
         }
+
         if (window.addEventListener) {
             window.addEventListener('resize', resizeHandler, false);
         }
         else if (window.attachEvent) {
             window.attachEvent('onresize', resizeHandler);
         }
+
     });
 }
