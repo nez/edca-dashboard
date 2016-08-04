@@ -119,9 +119,11 @@ BubbleChart = (function() {
             return that.show_details(d, i, this);
         }).on("mouseout", function(d, i) {
             return that.hide_details(d, i, this);
-        })/*.on("click", function(d, i) {
-            return that.muestra_info(d, i, this);
-        })*/;
+        }).on('click', function (d, i) {
+            //redirige al detalle del contrato
+            window.location.href = '/contratacionesabiertas/contrato/'+d.original['ocid']+'/adjudicacion';
+        });
+
         this.circles.transition().duration(2000).style("fill-opacity", 0.55).attr("opacity", 2).attr("r", function(d) {
             return d.radius;
         });
@@ -311,27 +313,7 @@ BubbleChart = (function() {
         d3.select(element)./*attr("stroke", "#404040").*/style("fill-opacity", 0.55);
         this.tooltip.hideTooltip();
     };
-    // FUNCIÓN QUE OBTIENE LA INFORMACIÓN DE CADA ELEMENTO Y LO MUESTRA EN EL MODAL "modalInfo"
-    BubbleChart.prototype.muestra_info = function(data) {
-        var content, title, value, _ref, encabezado, cuerpo;
-        content = "";
-        cuerpo = "";
-        _ref = data.original;
-        for (key in _ref) {
-            value = _ref[key];
-            title = key.substring(key.indexOf(":") + 1);
-            if (title === 'numIndicadores') {
-                title = 'Número de Indicadores';
-            }
-            cuerpo += "<div class=\"row\"><div class=\"col-md-6\"><p align=\"right\"><strong>" + title + ": </strong></p></div>";
-            cuerpo += "<div class=\"col-md-6\"><p>" + value + "</p></div></div>";
-        }
-        content += "<div class=\"container\">" + cuerpo + "</div>";
-        //$("#info").empty();
-        //$("#info").append(content);
-        //$("#modalInfo").modal('show');
-        alert(content);
-    };
+
     BubbleChart.prototype.use_filters = function(filters, targets) {
         var filteredCircles = this.nodes.filter(function(d) {
             var original = d.original;

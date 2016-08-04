@@ -61,11 +61,6 @@ router.get('/contratos/',function (req, res) {
 
 //PAGINATION
 router.post('/pagination', function (req, res) {
-/*
-    console.log(req.body.keyword);
-    console.log(req.body.orderby);
-    console.log(req.body.filter);*/
-
     //contracts per page
     var limit = 10;
 
@@ -280,28 +275,6 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
             break;
     }
 });
-
-/*
-// buyer details (per contract)
-router.get('/contrato/:cpid/entidad-compradora/', function (req, res ) {
-    edca_db.one('select * from buyer where id = $1 ',[ Number(req.params.cpid) ]).then(function(data){
-        res.render('contractingprocess_buyer', { buyer : data});
-    }).catch(function (error) {
-        res.render('contractingprocess_buyer');
-        console.log("ERROR: ", error);
-    });
-});
-
-// suppliers (per contract)
-router.get('/contrato/:cpid/proveedores', function (req, res ) {
-    edca_db.manyOrNone('Select * from supplier where contractingprocess_id = $1 ',[ Number(req.params.cpid) ]).then(function (data) {
-        res.render('contractingprocess_suppliers', { suppliers : data});
-    }).catch(function (error) {
-        res.render('contractingprocess_suppliers');
-        console.log("ERROR: ", error);
-    });
-});
-*/
 
 
 /* supplier details & statistics */
