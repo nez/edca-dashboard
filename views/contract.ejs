@@ -35,9 +35,9 @@
                     <div class="info">
                         <h3>Proceso de contratación</h3>
                         <p class="title"><%= info.title %></p>
-                        <p><small>ETAPAS</small></p>
                     </div>
                     <div class="stages">
+                        <p><small>ETAPAS</small></p>
                         <ul>
                             <li <%- (current_stage == 'planeacion')?"class='active'":''%> ><img class="normal-image" src="/contratacionesabiertas/static/images/ic-menu-planeacion.png"><img class="hover-image" src="/contratacionesabiertas/static/images/ic-planeacion.png"><a href="<%= "/contratacionesabiertas/contrato/"+info.cpid+"/planeacion" %>">Planeación </a></li>
                             <li <%- (current_stage == 'licitacion')?"class='active'":''%>><img class="normal-image" src="/contratacionesabiertas/static/images/ic-menu-licitacion.png"><img class="hover-image" src="/contratacionesabiertas/static/images/ic-licitacion.png"><a href="<%= "/contratacionesabiertas/contrato/"+info.cpid+"/licitacion" %>">Licitación</a></li>
