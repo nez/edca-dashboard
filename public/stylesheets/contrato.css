@@ -1,4 +1,4 @@
-#contract-sidebar .info                                 { height: 280px; padding: 20px 15px 10px 40px; background-color: #9b9b9b; }
+#contract-sidebar .info                                 { min-height: 280px; padding: 20px 15px 10px 40px; background-color: #9b9b9b; }
 #contract-sidebar .info h3                              { margin: 0; margin-bottom: 20px; font-size: 12px; font-weight: 300; text-transform: uppercase; color: #fff; }
 #contract-sidebar .info p                               { color: #fff; }
 #contract-sidebar .info p.title                         { margin-bottom: 20px; font-weight: 700; }

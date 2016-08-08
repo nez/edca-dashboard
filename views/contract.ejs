@@ -70,7 +70,16 @@
         <script src="/contratacionesabiertas/static/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
         <script>
             (function () {
-                $( '#contract-sidebar' ).height( $( '#contract-content' ).height() + 40 );
+                var sidebar     = $( '#contract-sidebar' ),
+                    stages      = $( '#contract-sidebar .stages' ),
+                    content     = $( '#contract-content' );
+
+                if ( sidebar.height() < content.height() ) {
+                    sidebar.height( content.height() + 40 );
+                    stages.height( sidebar.height() - $( '.info', sidebar ).height() - 60 );
+                } else {
+                    content.height( sidebar.height() - 40 );
+                }
             })();
         </script>
     </body>
