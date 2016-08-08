@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/contratacionesabiertas/static/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
     <link href="/contratacionesabiertas/static/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/contratacionesabiertas/static/bower_components/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet">
     <link rel='stylesheet' href='/contratacionesabiertas/static/stylesheets/main.css'/>
     <link rel='stylesheet' href='/contratacionesabiertas/static/stylesheets/style_d3bubble.css'/>
     <link rel="stylesheet" type="text/css" href="/contratacionesabiertas/static/bower_components/jqplot/jquery.jqplot.css"/>
@@ -193,7 +194,7 @@
             <form class="form-inline search-form" >
                 <input type="text" id="keyword" class="form-control" placeholder="Buscar contrataciones abiertas">
 
-                <select id="filter" class="form-control">
+                <select id="filter" class="form-control bootstrap-select">
                     <option value="Todo">Mostrar todo</option>
                     <option value="Adjudicación">Adjudicaciones directas</option>
                     <option value="Convenio">Convenios de colaboración</option>
@@ -202,7 +203,7 @@
                     <option value="Licitación">Licitaciones Públicas</option>
                 </select>
 
-                <select id="orderby" class="form-control">
+                <select id="orderby" class="form-control bootstrap-select">
                     <option value="value_amount">Ordenar por monto</option>
                     <option value="title">Ordenar por nombre</option>
                     <option value="datesigned">Ordenar por fecha</option>
@@ -242,6 +243,7 @@
 <dgm-footer></dgm-footer>
 <script src="/contratacionesabiertas/static/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/contratacionesabiertas/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/contratacionesabiertas/static/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
 <script src="/contratacionesabiertas/static/bower_components/jqplot/jquery.jqplot.js"></script>
 <script src="/contratacionesabiertas/static/bower_components/jqplot/plugins/jqplot.donutRenderer.js"></script>
 
@@ -267,6 +269,10 @@
 <script type="text/javascript" src="/contratacionesabiertas/static/javascripts/js/vis.js"></script>
 <!-- Archivo que contiene las funciones para los eventos -->
 <script type="text/javascript" src="/contratacionesabiertas/static/javascripts/js/custom.js"></script>
-
+<script>
+    (function () {
+        $( '.bootstrap-select' ).selectpicker();
+    })();
+</script>
 </body>
 </html>
