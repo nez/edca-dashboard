@@ -293,9 +293,9 @@ BubbleChart = (function() {
         label_data = d3.keys(group_labels);
         //console.log(group_labels);
         labels = this.vis.selectAll(".top_labels").data(label_data);
-        labels.enter().append("text").attr("class", "top_labels").attr("x", function(d) {
+        labels.enter().append("foreignObject").attr("class", "top_labels").attr("width", 80).attr("x", function(d) {
             return group_labels[d];
-        }).attr("y", 10).attr("text-anchor", "start").text(function(d) {
+        }).attr("y", 10).text(function(d) {
             return d;
         });
     };
