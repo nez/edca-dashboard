@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "bootstrap-select": "latest",
     "d3": "^3.5.17",
     "font-awesome": "fontawesome#^4.6.3",
     "jqplot": "*",
