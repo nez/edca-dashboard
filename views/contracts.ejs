@@ -62,7 +62,7 @@
 
         <% if (cmetadata.current_page > 1 ){%>
         <li>
-            <a href="#" data-page="<%= (cmetadata.current_page-1) %>" aria-label="Previous">
+            <a href="#lista" data-page="<%= (cmetadata.current_page-1) %>" aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
             </a>
         </li>
@@ -70,12 +70,12 @@
 
         <%
         for (var i=1; i <= cmetadata.page_count; i++){ %>
-        <li  class="<%= i == cmetadata.current_page ?'active':'' %>" ><a href="#" data-page="<%=i%>"> <%= i %> </a></li>
+        <li  class="<%= i == cmetadata.current_page ?'active':'' %>" ><a href="#lista" data-page="<%=i%>"> <%= i %> </a></li>
         <% } %>
 
         <% if ( cmetadata.current_page < cmetadata.page_count){%>
         <li>
-            <a href="#" data-page="<%= (cmetadata.current_page +1) %>" aria-label="Next">
+            <a href="#lista" data-page="<%= (cmetadata.current_page +1) %>" aria-label="Next">
                 <span aria-hidden="true">&raquo;</span>
             </a>
         </li>
