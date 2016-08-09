@@ -293,9 +293,9 @@ BubbleChart = (function() {
         label_data = d3.keys(group_labels);
         //console.log(group_labels);
         labels = this.vis.selectAll(".top_labels").data(label_data);
-        labels.enter().append("text").attr("class", "top_labels").attr("x", function(d) {
+        labels.enter().append("foreignObject").attr("class", "top_labels").attr("width", 80).attr("x", function(d) {
             return group_labels[d];
-        }).attr("y", 10).attr("text-anchor", "start").text(function(d) {
+        }).attr("y", 10).text(function(d) {
             return d;
         });
     };
@@ -305,7 +305,7 @@ BubbleChart = (function() {
     };
     BubbleChart.prototype.show_details = function(data, i, element) {
         var content, key, title, value, _ref;
-        d3.select(element)./*attr("stroke", "black").*/style("fill-opacity", 0.85);
+        d3.select(element)./*attr("stroke", "black").*/style("fill-opacity", 0.85).style("cursor", "pointer");
         content = data.original['Razón social']; //.Elemento;
         this.tooltip.showTooltip(content, d3.event);
     };
