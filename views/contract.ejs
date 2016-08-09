@@ -34,7 +34,7 @@
                 <div id="contract-sidebar" class="col-md-4">
                     <div class="info">
                         <h3>Proceso de contratación</h3>
-                        <p class="title"><%= info.title %></p>
+                        <p class="title"><%= (info.title.length < 251)? info.title: info.title.substring(0,249) + '...' %></p>
                     </div>
                     <div class="stages">
                         <p><small>ETAPAS</small></p>
