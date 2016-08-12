@@ -1960,10 +1960,6 @@ COPY award (id, contractingprocess_id, awardid, title, description, status, awar
 213	213	Oficio de notificación de la adjudicación DCAGI/SC/2060/2015	Oficio de notificación de la adjudicación DCAGI/SC/2060/2015	Con fecha 06 de julio de 2015 mediante el oficio DCAGI/SC/2060/2015 se notifica a la empresa Integradores de Tecnologia, S.A. de C.V. que en la tercera sesión extraordinaria del comité de adquisiciones, de GACM de fecha 29 de junio del 2015 fue dictaminada procedente la excepción de licitación publica para la contratación vía adjudicación directa.	active	2015-07-06 00:00:00	31779878.00	MXN	\N	\N	\N	
 194	194	IA-009KDH999-E97-2015	Acta de emisión de fallo 	Con fundamento en el artículo 36 BIS de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público y a solicitud expresa de la Dirección Corporativa de Infraestructura, se le adjudica de manera directa la prestación del servicio relacionado con la obra pública a Galaz, Yamazaki, Ruiz Urquiza S.C.	active	2016-02-04 00:00:00	4930328.89	MXN	\N	\N	\N	
 222	222	IA-009KDH999-N6-2014	Acta de emisión de fallo 	Con fundamento en lo dispuesto en el artículo 36 Bis de la LAASSP, se adjudicó el contrato a la empresa Ribus Tech S. A. de C. V. , por un importe de $2,481,886.09, monto sin considerar el IVA, por resultar se la propuesta que al ser evaluada técnica y ecómicamente, obtuvo el puntaje más alto acorde al mecanismo de evaluación previsto en la convocatoria. 	active	2014-12-05 00:00:00	2481886.09	MXN	\N	\N	\N	
-223	223	\N	\N	\N	none	\N	\N	\N	\N	\N	\N	\N
-224	224	\N	\N	\N	none	\N	\N	\N	\N	\N	\N	\N
-225	225	\N	\N	\N	none	\N	\N	\N	\N	\N	\N	\N
-226	226	\N	\N	\N	none	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
@@ -2611,14 +2607,10 @@ COPY budget (id, contractingprocess_id, planning_id, budget_source, budget_budge
 70	70	70	Presupuesto de Egresos de la Federación 2015 y 2016	46101	Transferencias a fideicomisos públicos	18500000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 122	122	122	Presupuesto de Egresos de la Federación 2015 y 2016	33104	Otras asesorías para la operación de programas	1752166	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 140	140	140	Presupuesto de Egresos de la Federación 2016	46101	Transferencias a fideicomisos públicos	8362000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
-223	223	223	\N	\N	\N	\N	\N	\N	\N	\N
-224	224	224	\N	\N	\N	\N	\N	\N	\N	\N
 145	145	145	Presupuesto de Egresos de la Federación 2015	46101	Transferencias a fideicomisos públicos	2136433615	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 53	53	53	Presupuesto de Egresos de la Federación 2015	46101	Transferencias a fideicomisos públicos	420000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 127	127	127	Presupuesto de Egresos de la Federación 2015	46101	Transferencias a fideicomisos públicos	46371	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 171	171	171	Presupuesto de Egresos de la Fedración 2015 	46101	Transferencias a fideicomisos públicos	6999000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
-225	225	225	\N	\N	\N	\N	\N	\N	\N	\N
-226	226	226	\N	\N	\N	\N	\N	\N	\N	\N
 1	1	1	Presupuesto de Egresos de la Fedración 2015 	46101	Transferencias a fideicomisos públicos	2355000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 59	59	59	Presupuesto de Egresos de la Fedración 2015 	46101	Transferencias a fideicomisos públicos	7400000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 60	60	60	Presupuesto de Egresos de la Federación 2015	4000	Transferencias a fideicomisos públicos	15200000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
@@ -2863,10 +2855,6 @@ COPY buyer (id, contractingprocess_id, name, identifier_scheme, identifier_id, i
 95	95	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	\N	GACM	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	http://www.aeropuerto.gob.mx/	Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel	Alvaro Obregón	Ciudad de México	01090	México	\N	\N	\N	\N	\N
 98	98	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	\N	GACM	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	http://www.aeropuerto.gob.mx/	Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel	Alvaro Obregón	Ciudad de México	01090	México	\N	\N	\N	\N	\N
 99	99	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	\N	GACM	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	http://www.aeropuerto.gob.mx/	Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel	Alvaro Obregón	Ciudad de México	01090	México	\N	\N	\N	\N	\N
-223	223	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-224	224	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-225	225	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-226	226	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
@@ -3108,15 +3096,11 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 18	18	AO-009KDH999-E46-2016	AD-SRO-DCAGI-SC-100/15	Servicios de experto revisor para la asistencia técnica especializada en materia de diseño estructural, aplicada  a la infraestructura aeroportuaria.	Servicios de experto revisor para la asistencia técnica especializada en materia de diseño estructural, aplicada  a la infraestructura aeroportuaria.	terminated	2015-05-23 00:00:00	2015-12-01 00:00:00	176400.00	USD	2015-12-01 00:00:00	\N	
 130	130	AD-SRO-DCAGI-SC-021/16	AD-SRO-DCAGI-SC-021/16	Servicio de traslado de personal en camiones turísticos con capacidad para 45 pasajeros como mínimo en dos turnos	Servicio de traslado de personal en camiones turísticos con capacidad para 45 pasajeros como mínimo en dos turnos	terminated	2016-02-15 00:00:00	2016-05-25 00:00:00	640000.00	MXN	2016-02-03 00:00:00	\N	
 46	46	-	GACM/DCPEV/SJ/CG-E/06-2015	"Estudio sobre las estrategias públicas de diversas administraciones federales para el desarrollo del NAICM y otras herramientas de analisis histórico documental."	"Estudio sobre las estrategias públicas de diversas administraciones federales para el desarrollo del NAICM y otras herramientas de analisis histórico documental."	terminated	2015-03-02 00:00:00	2015-07-16 00:00:00	20000000.00	MXN	\N	\N	
-223	223	\N	\N	\N	\N	none	\N	\N	\N	\N	\N	\N	\N
-224	224	\N	\N	\N	\N	none	\N	\N	\N	\N	\N	\N	\N
 145	145	AD/01CTO.MTO./2015	AD/01CTO.MTO./2014	Servicios de diseño y arquitectura consistentes en forma enunciativa mas no limitativa, en la elaboración de los proyectos ejecutivos (diseño arquitectónico e ingeniería de detalle), que permitan la construcción del "edificio terminal de pasajeros, vialidades de acceso y estacionamientos" y "torre de control y centros de control de operaciones" del "NAICM" así como el acompañamiento arquitectónico.	Servicios de diseño y arquitectura consistentes en forma enunciativa mas no limitativa, en la elaboración de los proyectos ejecutivos (diseño arquitectónico e ingeniería de detalle), que permitan la construcción del "edificio terminal de pasajeros, vialidades de acceso y estacionamientos" y "torre de control y centros de control de operaciones" del "NAICM" así como el acompañamiento arquitectónico.	active	2014-12-01 00:00:00	2018-11-29 00:00:00	1841753116.00	MXN	2014-12-01 00:00:00	2016-03-08 00:00:00	Segundo Convenio Modificatorio: Declaración I.3 del Convenio Modificatorio.
 181	181	1	AD-OP-DCAGI-SC-064/15	Adecuación de espacios en el campamento existente en la puerta 8 del polígono del NAICM	Adecuación de espacios en el campamento existente en la puerta 8 del polígono del NAICM	active	2015-10-01 00:00:00	2015-12-23 00:00:00	1221008.37	MXN	2015-10-01 00:00:00	2016-04-29 00:00:00	Antecedente V del Convenio Modificatorio
 171	171	AO-009KDH999-E14-2016	AD-SRO-DCAGI-SC-103/15	Estudios del Sistema de Drenaje Pluvial del Nuevo Aeropuerto Internacional de la Ciudad de México.	Estudios del Sistema de Drenaje Pluvial del Nuevo Aeropuerto Internacional de la Ciudad de México.	active	2015-12-01 00:00:00	2016-01-29 00:00:00	18726530.31	MXN	2015-11-30 00:00:00	2016-03-08 00:00:00	Antecedente IV del convenio Modificatorio
-225	225	\N	\N	\N	\N	none	\N	\N	\N	\N	\N	\N	\N
 102	102	IO-009KDH999-N10-2015	 ITP-SRO-DCAGI-SC-016/15	Servicios de supervisión para la obra: extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	 Servicios de supervisión para la obra: extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	terminated	2015-03-21 00:00:00	2015-09-16 00:00:00	2456112.06	MXN	2015-07-20 00:00:00	2015-12-01 00:00:00	Antecedecnte V. del Convenio Modificatorio
 137	137	-	ITP-AS-DCAGI-SC-017-15	Servicio integral de administración de personal y proceso de nomina, mediante un sistema especializado para recursos humanos y de nómina de gobierno	Obtención de la prestacion del servicio integral de administración de personal y proceso de nomina, mediante un sistema especializado para recursos humanos y de nómina de gobierno.	terminated	2015-03-12 00:00:00	2015-12-31 00:00:00	1295000.00	MXN	2015-03-12 00:00:00	2029-12-15 00:00:00	En terminos del antecedente V. del Convenio Modificatorio
-226	226	\N	\N	\N	\N	none	\N	\N	\N	\N	\N	\N	\N
 95	95	No. IO-009KDH999-N54-2015	ITP-SRO-DCAGI-SC-63/15	Supervisión para: la construcción del proyecto integral consistente en barda y camino perimetral, alumbrado, servicios inducidos y casetas de acceso para el Nuevo Aeropuerto Internacional de la Ciudad de México (primera etapa)	Supervisión para: la construcción del proyecto integral consistente en barda y camino perimetral, alumbrado, servicios inducidos y casetas de acceso para el Nuevo Aeropuerto Internacional de la Ciudad de México (primera etapa)	active	2015-08-15 00:00:00	2015-12-31 00:00:00	3286659.95	MXN	2015-08-15 00:00:00	2016-04-06 00:00:00	Antecedente IV Y V. del Segundo Convenio.
 59	59	IA-009KDH999-N56-2015	ITP-AS-DCAGI-SC-058/15	Servicio de asesoría técnica y capacitación a 800 trabajadores del programa empleo temporal de mano de obra campesina o urbana marginada para los 7 ejidos colindantes al predio del NAICM.	Servicio de asesoría técnica y capacitación a 800 trabajadores del programa empleo temporal de mano de obra campesina o urbana marginada para los 7 ejidos colindantes al predio del NAICM.	active	2015-10-19 00:00:00	2015-12-31 00:00:00	6318719.99	MXN	2015-08-19 00:00:00	2015-12-29 00:00:00	Antecedente V. del Convenio Modificatorio
 139	139	IA-009KDH999-N31-2015	ITP-AS-DCAGI-SC-036/15	Servicios profesionales de consultoría, legales y/o normativos y acompañamiento en los procedimientos de contratación pública y elaboración de la memoria documental integral del desarrollo del  Nuevo Aeropuerto Internacional de la Ciudad de México	Servicios profesionales de consultoría, legales y/o normativos y acompañamiento en los procedimientos de contratación pública y elaboración de la memoria documental integral del desarrollo del  Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2015-06-02 00:00:00	2015-12-31 00:00:00	20640000.00	MXN	2015-06-02 00:00:00	2015-11-24 00:00:00	Antecedente VII. Del Convenio Modificatorio
@@ -3510,10 +3494,6 @@ COPY contractingprocess (id, ocid, fecha_creacion, hora_creacion) FROM stdin;
 192	GACM-SEC/01/2014	2016-07-16	09:42:26.851841
 222	ITP-AS-DCAGI-SC-007/14	2016-07-22	18:30:58.800274
 37	CTO.FIDEICOMISO-01-14	2016-07-15	12:46:17.54207
-223	\N	2016-07-28	11:28:37.494749
-224	\N	2016-07-29	10:37:00.913572
-225	\N	2016-07-29	14:40:12.488822
-226	\N	2016-07-29	14:52:09.986496
 95	ITP-SRO-DCAGI-SC-63/15	2016-07-15	15:57:45.643211
 155	AD-CONV-DCAGI-SC-001/16	2016-07-15	19:42:07.911436
 \.
@@ -3974,10 +3954,6 @@ COPY implementation (id, contractingprocess_id, contract_id) FROM stdin;
 220	220	220
 221	221	221
 222	222	222
-223	223	223
-224	224	224
-225	225	225
-226	226	226
 \.
 
 
@@ -4269,14 +4245,10 @@ COPY planning (id, contractingprocess_id, rationale) FROM stdin;
 192	192	El personal de GACM necesita contar con las herramientas necesarias para contribuir a mantener la comunicación constante con todas las áreas directivas y de operación de forma eficaz y eficiente y con ello mantener la factibilidad de dar cumplimiento a los objetivos, ya que podrá mantener la continuidad en la comunicación tanto en voz como datos en la operación diaria y verificar vía remota el avance de los proyectos, planes y programas de trabajo
 221	221	Para la prestación del servicio de alimentación a personal del GACM en las instalaciones indicadas. 
 222	222	Contar con una empresa profesional y especializada en el suministro, instalación, puesta en operación y mantenimiento de las instalaciones de vos y datos, así como electricidad en las oficinas de Grupo Aeroportuario de la Ciudad de México. 
-223	223	\N
-224	224	\N
 145	145	Con fundamento en el artículo 134 de la Constitución Política de los Estados Unidos Mexicanos, 27 fracción III y 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas, 28, 29 30, 31 y 33 de la Ley Federal de las Entidades Paraestatales, Numeral 1.4.3. del Manual de Organización de la Empresa de Participación Estatal Mayoritaria denominada Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., y a solicitud expresa de la Dirección Corporativa de Infraestructura, se le adjudica de manera directa la prestación del servicio relacionado con la obra pública a la empresa SERVICIOS SMART FREE A TU NIVEL, S.A. DE C.V. Y FOSTER + PARTNERS LIMITED
 53	53	Debido a la importancia, es necesario contar con los servicios profesionales consistentes en el seguimiento, representación y defensa en juicios presentes en materia laboral, los cuales deben presentarse con acertividad de coordinación en gestión y operación jurisdiccional.
 181	181	Como parte de los trabajos a realizarse para la construcción del NAICM, es necesaria la Adecuación de espacios en el campamento existente en la puerta 8 del polígono del NAICM.
 127	127	Servicios de Auditaría Externa que se realizarán sobre los estados financieros de la entidad con cifras al 31 de diciembre de 2014. 
-225	225	\N
-226	226	\N
 102	102	Artículo 43 de la LOPSRM
 139	139	Por la magnitud del proyecto es necesario, contar con mecanismos que arrojen una mayor eficiencia y transparencia en el desarrollo de las contrataciones públicas, además resulta indispensable y necesaria la existencia de un soporte documental, por lo que resulta necesaria una empresa especializada en consultoria legal y normativa y acompañamiento en los procedimientos de contratación pública, así como en la elaboración del libro de historia documental integral del desarrollo del NAICM.
 43	43	Realizar los servicios consistentes en la etapa inicial de la exploración geotécnica del sitio donde se construirá la terminal del NAICM. Presentar los estudios profesionales y especializados de la acataerización dinámica dek suelo del estudio. 
@@ -4555,10 +4527,6 @@ COPY procuringentity (id, contractingprocess_id, tender_id, identifier_scheme, i
 220	220	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 221	221	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 222	222	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-223	223	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-224	224	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-225	225	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-226	226	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
@@ -4811,10 +4779,6 @@ COPY publisher (id, contractingprocess_id, name, scheme, uid, uri) FROM stdin;
 209	209	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	APF	GACM	http://www.aeropuerto.gob.mx/
 210	210	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	APF	GACM	http://www.aeropuerto.gob.mx/
 92	92	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	APF	GACM	http://www.aeropuerto.gob.mx/
-223	223	\N	\N	\N	\N
-224	224	\N	\N	\N	\N
-225	225	\N	\N	\N	\N
-226	226	\N	\N	\N	\N
 \.
 
 
@@ -5286,10 +5250,6 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 76	76	-	Llevar a cabo el Servicio de Investigaciones y Estudios Especiales Relacionados con Aspectos Geotécnicos del Nuevo Aeropuerto de la Ciudad de México (NAICM) en el Vaso del Ex-Lago de Texcoco, Zona Federal	Llevar a cabo el Servicio de Investigaciones y Estudios Especiales Relacionados con Aspectos Geotécnicos del Nuevo Aeropuerto de la Ciudad de México (NAICM) en el Vaso del Ex-Lago de Texcoco, Zona Federal	complete	0		177305923.44	MXN	Adjudicación directa	Artículo 1 de la LOPSRM					\N	\N	\N	\N	0		\N	\N	1	\N	
 79	79	-	Proyecto de Salvamento Arqueológico en el interior del Lago de Taxcoco en su zona oriente, Estado de México. (Supervisión, Vigilancia y Excavaciones 2016), en Adelante los SERVICIOS, mismos que serán realizados totalmente a satisfacción del GACM	Proyecto de Salvamento Arqueológico en el interior del Lago de Taxcoco en su zona oriente, Estado de México. (Supervisión, Vigilancia y Excavaciones 2016), en Adelante los SERVICIOS, mismos que serán realizados totalmente a satisfacción del GACM	complete	0		10163709	MXN	Adjudicación directa	Artículo 1 de la LOPSRM					\N	\N	\N	\N	0		\N	\N	1	\N	
 167	167	-	Supervisión, monitoreo, verificación y evaluación sistemática de los productos derivados del diseño e instrumentación del modelo virtual de información para la construcción del BIM del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	Supervisión, monitoreo, verificación y evaluación sistemática de los productos derivados del diseño e instrumentación del modelo virtual de información para la construcción del BIM del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	complete	0		12925000.00	MXN	Adjudicación directa	Artículo 1° de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 					\N	\N	\N	\N	0		\N	\N	1	\N	
-223	223	\N	\N	\N	none	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-224	224	\N	\N	\N	none	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-225	225	\N	\N	\N	none	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-226	226	\N	\N	\N	none	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
