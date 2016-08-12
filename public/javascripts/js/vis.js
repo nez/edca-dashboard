@@ -121,7 +121,7 @@ BubbleChart = (function() {
             return that.hide_details(d, i, this);
         }).on('click', function (d, i) {
             //redirige al detalle del contrato
-            window.location.href = '/contratacionesabiertas/contrato/'+d.original['ocid']+'/adjudicacion';
+            window.location.href = '/contratacionesabiertas/contrato/'+d.original['cpid']+'/adjudicacion';
         });
 
         this.circles.transition().duration(2000).style("fill-opacity", 0.55).attr("opacity", 2).attr("r", function(d) {
