@@ -18,17 +18,19 @@ if ( typeof process.env.EDCA_DB != "undefined" ){
 router.get('/', function(req, res, next) {
 
     edca_db.task(function (t) {
-        var q1 = this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;');
-        var q2 = this.one('select count (*) as total from contractingprocess');
-        var q3 = this.one('select sum(value_amount) as total from contract');
-
-        return this.batch([q1,q2, q3]);
+        return this.batch([
+        this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;'),
+        this.one('select count (*) as total from contractingprocess'),
+        this.one('select count (*) as total from contract where value_amount > 0 '),
+        this.one('select sum(value_amount) as total from contract')
+        ]);
     }).then(function (data) {
         res.render('index',{ title: 'Estandar de Datos de Contrataciones Abiertas',
             metadata : {
                 supplier_count: data[0].total,
-                contract_count: data[1].total,
-                contract_value_amount_total: data[2].total
+                cp_count: data[1].total,
+                contract_count: data[2].total,
+                contract_value_amount_total: data[3].total
             }
         });
     }).catch(function (error) {
@@ -43,14 +45,16 @@ router.get('/contratos/',function (req, res) {
         return this.batch([
             this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;'),
             this.one('select count (*) as total from contractingprocess'),
+            this.one('select count (*) as total from contract where value_amount > 0'),
             this.one('select sum(value_amount) as total from contract')
         ]);
     }).then(function (data) {
         res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas',
             metadata : {
                 supplier_count: +data[0].total,
-                contract_count: +data[1].total,
-                contract_value_amount_total: data[2].total
+                cp_count: +data[1].total,
+                contract_count: +data[2].total,
+                contract_value_amount_total: data[3].total
             }
         });
 
