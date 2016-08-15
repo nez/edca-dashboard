@@ -91,7 +91,7 @@
                         <% if (transactions[i].implementation_date instanceof Date){%>
                         <li>Fecha de implementación: <%= transactions[i].implementation_date.toLocaleDateString() %></li>
                         <%}%>
-                        <li>Monto: <%= transactions[i].value_amount%></li>
+                        <li>Monto: <%= (transactions[i].value_amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%></li>
                         <li>Moneda: <%= transactions[i].value_currency%></li>
                     </ul>
 

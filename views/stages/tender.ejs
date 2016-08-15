@@ -22,7 +22,7 @@
 
     <div class="col-md-3">
         <p class="small">Monto</p>
-        <p><strong>$<%= tender.value_amount%></strong></p>
+        <p><strong>$<%= (tender.value_amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%></strong></p>
 
         <p class="small"> Moneda</p>
         <p><%= tender.value_currency%></p>

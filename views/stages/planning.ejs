@@ -26,7 +26,7 @@
 
     <div class="col-md-3">
         <p class="small">Monto</p>
-        <p><strong>$ <%= budget.budget_amount %></strong></p>
+        <p><strong>$ <%= (budget.budget_amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></strong></p>
         <p class="small">Moneda </p>
         <p><%= budget.budget_currency %></p>
     </div>
