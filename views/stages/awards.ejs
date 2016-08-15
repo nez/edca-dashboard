@@ -25,7 +25,13 @@
 
     <div class="col-md-3">
         <p class="small">Monto</p>
-        <p><strong>$ <%= (award.value_amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%></strong></p>
+        <p><strong>
+                <%  if (!isNaN( award.value_amount ) && award.value_amount > 0 ){%>
+                $ <%= (award.value_amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%>
+                <%}else{%>
+                En proceso
+                <%}%>
+            </strong></p>
         <p class="small">Moneda </p>
         <p><%= award.value_currency %></p>
     </div>
