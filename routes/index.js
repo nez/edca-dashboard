@@ -100,7 +100,7 @@ router.post('/pagination', function (req, res) {
                 req.body.filter
             ]);
         } else {
-            q1 = this.manyOrNone('select contractingprocess.id as localid, contract.id, contract.title, contractingprocess.ocid, contractingprocess.stage,' +
+            q1 = this.manyOrNone('select contractingprocess.id as localid, contractingprocess.ocid, contractingprocess.stage, contract.title,' +
                 'contract.datesigned, contract.value_amount, tender.procurementmethod,' +
                 '(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )' +
                 ' from tender, contract, contractingprocess ' +
