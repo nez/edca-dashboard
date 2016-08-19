@@ -12,7 +12,7 @@
                         <%}%>
                     </div>
                     <div class="col-sm-9">
-                        <h4><a href="<%= "/contratacionesabiertas/contrato/" + contracts[i].contractingprocess_id +"/planeacion"%>" >
+                        <h4><a href="<%= "/contratacionesabiertas/contrato/" + contracts[i].localid +"/planeacion"%>" >
                                 <%= (contracts[i].title.length < 110 )? contracts[i].title: contracts[i].title.substring(0,109)+'...' %>
                             </a></h4>
                         <p class="small">ID Procedimiento: <%= contracts[i].ocid %></p>
@@ -38,7 +38,7 @@
                     <div class="col-sm-3">
                         <p class="small">Proveedores:</p>
                         <% if ( contracts[i].nsuppliers > 0 ) {%>
-                        <p class="legend"><a href= "<%= "/contratacionesabiertas/contrato/"+ contracts[i].id +"/adjudicacion" %>" > <%= contracts[i].nsuppliers %> </a></p>
+                        <p class="legend"><a href= "<%= "/contratacionesabiertas/contrato/"+ contracts[i].localid +"/adjudicacion" %>" > <%= contracts[i].nsuppliers %> </a></p>
                         <%} else {%>
                         <p class="legend">En proceso</p>
                         <%}%>

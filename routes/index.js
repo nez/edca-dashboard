@@ -78,7 +78,7 @@ router.post('/pagination', function (req, res) {
         var q1, q2 ;
 
         if ( typeof req.body.keyword != 'undefined' && typeof req.body.orderby != 'undefined' && typeof req.body.orderby != 'undefined') {
-            q1 = this.manyOrNone("select contractingprocess.ocid, contract.contractingprocess_id, contract.id, contract.title, contract.contractid," +
+            q1 = this.manyOrNone("select contractingprocess.id as localid, contractingprocess.ocid, contractingprocess.stage, contract.title," +
                 "contract.datesigned, contract.value_amount, tender.procurementmethod, " +
                 "(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )" +
                 " from contract, tender, contractingprocess where contract.contractingprocess_id = tender.contractingprocess_id " +
@@ -100,7 +100,7 @@ router.post('/pagination', function (req, res) {
                 req.body.filter
             ]);
         } else {
-            q1 = this.manyOrNone('select contract.contractingprocess_id, contract.id, contract.title, contractingprocess.ocid, ' +
+            q1 = this.manyOrNone('select contractingprocess.id as localid, contract.id, contract.title, contractingprocess.ocid, contractingprocess.stage,' +
                 'contract.datesigned, contract.value_amount, tender.procurementmethod,' +
                 '(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )' +
                 ' from tender, contract, contractingprocess ' +
