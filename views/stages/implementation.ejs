@@ -50,10 +50,10 @@
                         <li>ID: <%= milestones[i].title %></li>
                         <li>Descripción: <%= milestones[i].description %></li>
                         <% if ( milestones[i].duedate instanceof Date ){%>
-                        <li>: <%= milestones[i].duedate.toLocaleDateString() %></li>
+                        <li>Fecha de vencimiento: <%= milestones[i].duedate.toLocaleDateString() %></li>
                         <%}%>
                         <% if ( milestones[i].date_modified instanceof Date){%>
-                        <li>: <%= milestones[i].date_modified.toLocaleDateString() %></li>
+                        <li>Fecha de modificación: <%= milestones[i].date_modified.toLocaleDateString() %></li>
                         <li>Estátus: <%= milestones[i].status %></li>
                         <%}%>
                     </ul>
@@ -91,7 +91,7 @@
                         <% if (transactions[i].implementation_date instanceof Date){%>
                         <li>Fecha de implementación: <%= transactions[i].implementation_date.toLocaleDateString() %></li>
                         <%}%>
-                        <li>Monto: <%= transactions[i].value_amount%></li>
+                        <li>Monto: <%= (transactions[i].value_amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%></li>
                         <li>Moneda: <%= transactions[i].value_currency%></li>
                     </ul>
 

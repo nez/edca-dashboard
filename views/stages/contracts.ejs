@@ -26,7 +26,13 @@
 
     <div class="col-md-3">
         <p class="small">Monto</p>
-        <p><strong>$ <%= contract.value_amount%></strong></p>
+        <p><strong>
+                <%  if (!isNaN( contract.value_amount ) && contract.value_amount > 0 ){%>
+                $ <%= (contract.value_amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%>
+                <%} else {%>
+                En proceso
+                <%}%>
+            </strong></p>
         <p class="small">Moneda </p>
         <p><%= contract.value_currency%></p>
     </div>

@@ -22,7 +22,13 @@
 
     <div class="col-md-3">
         <p class="small">Monto</p>
-        <p><strong>$<%= tender.value_amount%></strong></p>
+        <p><strong>
+                <%  if (!isNaN( tender.value_amount ) && tender.value_amount > 0 ){%>
+                $<%= (tender.value_amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%>
+                <%} else {%>
+                En proceso
+                <%}%>
+            </strong></p>
 
         <p class="small"> Moneda</p>
         <p><%= tender.value_currency%></p>
@@ -105,10 +111,10 @@
                         <li>ID: <%= milestones[i].title %></li>
                         <li>Descripción: <%= milestones[i].description %></li>
                         <% if ( milestones[i].duedate instanceof Date ){%>
-                        <li>: <%= milestones[i].duedate.toLocaleDateString() %></li>
+                        <li>Fecha de vencimiento: <%= milestones[i].duedate.toLocaleDateString() %></li>
                         <%}%>
                         <% if ( milestones[i].date_modified instanceof Date){%>
-                        <li>: <%= milestones[i].date_modified.toLocaleDateString() %></li>
+                        <li>Fecha de modificación: <%= milestones[i].date_modified.toLocaleDateString() %></li>
                         <li>Estátus: <%= milestones[i].status %></li>
                         <%}%>
                     </ul>
