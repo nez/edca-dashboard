@@ -41,12 +41,12 @@
         <div class="row">
 
             <div class="col-sm-3 widget">
-                <h5>TOTAL DE PROCESOS DE CONTRATACIÓN</h5>
+                <h5>CONTRATOS EN PROCESO</h5>
                 <p class="stat"><%= metadata.cp_count %></p>
             </div>
 
             <div class="col-sm-3 widget">
-                <h5>TOTAL DE CONTRATOS</h5>
+                <h5>CONTRATOS ADJUDICADOS</h5>
                 <p class="stat"> <%= metadata.contract_count %></p>
             </div>
 
@@ -55,13 +55,15 @@
                 <p class="stat"><%= metadata.supplier_count %></p>
             </div>
             <div class="col-sm-3 widget">
-                <h5>MONTO TOTAL</h5>
+                <h5>MONTO TOTAL ADJUDICADO</h5>
                 <p class="stat">$<%= ( parseInt( metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
             </div>
 
         </div>
     </div>
 </div>
+
+<!--
 <div class="controls">
     <div class="container">
         <div class="row">
@@ -75,10 +77,15 @@
         </div>
     </div>
 </div>
+-->
+
 <div class="container statistics">
-    <div class="row">
+
+    <!-- <div class="row">
+
         <div class="tab-content col-md-12">
             <div id="contracts" class="tab-pane fade in active">
+            -->
                 <h1>Tipo de procedimiento</h1>
                 <p>Visualiza la distribución de los tipos de procedimiento realizados por el NAICM</p>
                 <p class="small">Conjunto de datos: Emisiones 2016</p>
@@ -186,14 +193,13 @@
 
 
 
-            </div>
+            <!--</div>
+
             <div id="providers" class="tab-pane fade">
-
-
-
             </div>
         </div>
-    </div>
+    </div>-->
+
 </div>
 <div class="container">
     <h1 id="lista">Lista de contratos</h1>

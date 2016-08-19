@@ -12,7 +12,9 @@
                         <%}%>
                     </div>
                     <div class="col-sm-9">
-                        <h4><a href="<%= "/contratacionesabiertas/contrato/" + contracts[i].contractingprocess_id +"/planeacion"%>" ><%= contracts [i].title %></a></h4>
+                        <h4><a href="<%= "/contratacionesabiertas/contrato/" + contracts[i].contractingprocess_id +"/planeacion"%>" >
+                                <%= (contracts[i].title.length < 110 )? contracts[i].title: contracts[i].title.substring(0,109)+'...' %>
+                            </a></h4>
                         <p class="small">ID Procedimiento: <%= contracts[i].ocid %></p>
                     </div>
                 </div>
