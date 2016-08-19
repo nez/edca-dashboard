@@ -25,10 +25,14 @@
                         <p class="small">Etapa</p>
                         <ul class="stages-icons">
                             <li><img src="/contratacionesabiertas/static/images/ic-planeacion.png"></li>
-                            <li><img src="/contratacionesabiertas/static/images/ic-licitacion.png"></li>
-                            <li><img src="/contratacionesabiertas/static/images/ic-adjudicacion.png"></li>
-                            <li><img src="/contratacionesabiertas/static/images/ic-contratacion.png"></li>
-                            <li><img src="/contratacionesabiertas/static/images/ic-implementacion.png"></li>
+                            <!--<li><img src="/contratacionesabiertas/static/images/ic-licitacion.png"></li>-->
+                            <li><img src=<%= (contracts[i].stage > 0 )?"/contratacionesabiertas/static/images/ic-licitacion.png" : "/contratacionesabiertas/static/images/ic-menu-licitacion.png" %> ></li>
+                            <!--<li><img src="/contratacionesabiertas/static/images/ic-adjudicacion.png"></li>-->
+                            <li><img src=<%= (contracts[i].stage > 1 )?"/contratacionesabiertas/static/images/ic-adjudicacion.png" : "/contratacionesabiertas/static/images/ic-menu-adjudicacion.png" %> ></li>
+                            <!--<li><img src="/contratacionesabiertas/static/images/ic-contratacion.png"></li>-->
+                            <li><img src=<%= (contracts[i].stage > 2 )?"/contratacionesabiertas/static/images/ic-contratacion.png" : "/contratacionesabiertas/static/images/ic-menu-contratacion.png" %>></li>
+                            <!--<li><img src="/contratacionesabiertas/static/images/ic-implementacion.png"></li>-->
+                            <li><img src=<%= (contracts[i].stage > 3 )?"/contratacionesabiertas/static/images/ic-implementacion.png" : "/contratacionesabiertas/static/images/ic-menu-implementacion.png" %> ></li>
                         </ul>
                     </div>
                     <div class="col-sm-3">
