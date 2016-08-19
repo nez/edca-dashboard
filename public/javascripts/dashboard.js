@@ -18,7 +18,7 @@ $(document).ready(function () {
                 renderer: $.jqplot.DonutRenderer,
                 rendererOptions: {
                     // Donut's can be cut into slices like pies.
-                    sliceMargin: 3,
+                    sliceMargin: 0,
                     // Pies and donuts can start at any arbitrary angle.
                     startAngle: -90,
                     showDataLabels: true,
