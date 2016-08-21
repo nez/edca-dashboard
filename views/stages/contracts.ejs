@@ -11,19 +11,16 @@
         <p class="small">Fecha de firma</p>
         <p>
             <% if (contract.datesigned instanceof Date){%>
-
             <%= contract.datesigned.toLocaleDateString()%>
             <%}%>
         </p>
     </div>
 </div>
-
 <div class="row contract-stats">
     <div class="col-md-3">
         <p class="small">Tipo</p>
         <p><%= info.procurementmethod%></p>
     </div>
-
     <div class="col-md-3">
         <p class="small">Monto</p>
         <p><strong>
@@ -40,7 +37,6 @@
         <p class="small">Título</p>
         <p><%= contract.title%> </p>
     </div>
-
 </div>
 <div class="row contract-stats">
     <div class="col-md-12">
@@ -48,14 +44,12 @@
         <p><%= contract.description %></p>
     </div>
 </div>
-
 <div class="row contract-stats">
     <div class="col-md-12">
         <p class="small">Comprador</p>
         <p><a href="#"><%= buyer.identifier_legalname%></a></p>
     </div>
 </div>
-
 <div class="row contract-stats no-border">
     <div class="col-md-3 col-md-offset-6">
         <p class="small">Descargar datos abiertos</p>
@@ -68,93 +62,77 @@
     </div>
 </div>
 <p class="small">Procesos</p>
-<div class="well well-sm">
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Artículos
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                    <% if (items.length == 0 ){%>
-                    No se han registrado artículos en esta etapa
-                    <%}%>
-
-                    <% for (var i=0;i< items.length;i++){%>
-
-                    <strong><%= items[i].description%> </strong>
-                    <ul>
-                        <li>ID: <%= items[i].itemid%></li>
-                        <li>Descripción: <%= items[i].clasification_description%> </li>
-                        <li>Unidad: <%= items[i].unit_name%> </li>
-                        <li>Cantidad: <%= items[i].quantity%> </li>
-                    </ul>
-                    <%}%>
-                </div>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Artículos
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <% if (items.length == 0 ){%>
+                No se han registrado artículos en esta etapa
+                <%}%>
+                <% for (var i=0;i< items.length;i++){%>
+                <strong><%= items[i].description%> </strong>
+                <ul>
+                    <li>ID: <%= items[i].itemid%></li>
+                    <li>Descripción: <%= items[i].clasification_description%> </li>
+                    <li>Unidad: <%= items[i].unit_name%> </li>
+                    <li>Cantidad: <%= items[i].quantity%> </li>
+                </ul>
+                <%}%>
             </div>
         </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingTwo">
-                <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Documentos
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <div class="panel-body">
-                    <% if (documents.length == 0 ){%>
-                    No se han registrado documentos en esta etapa
-                    <%}%>
-
-                    <% for (var i =0; i< documents.length;i++){%>
-                    <strong><%= documents[i].title %></strong>
-                    <ul>
-                        <li>ID: <%= documents[i].documentid%></li>
-                        <li>Título: <%= documents[i].title %></li>
-                        <li>Descripción: <%= documents[i].description %></li>
-                    </ul>
-
-                    <%}%>
-
-                </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Documentos
+                </a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+                <% if (documents.length == 0 ){%>
+                No se han registrado documentos en esta etapa
+                <%}%>
+                <% for (var i =0; i< documents.length;i++){%>
+                <strong><%= documents[i].title %></strong>
+                <ul>
+                    <li>ID: <%= documents[i].documentid%></li>
+                    <li>Título: <%= documents[i].title %></li>
+                    <li>Descripción: <%= documents[i].description %></li>
+                </ul>
+                <%}%>
             </div>
         </div>
-
-
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingThree">
-                <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Cambios
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <div class="panel-body">
-
-                    <% if (changes.length == 0 ){%>
-                    No se han registrado cambios en esta etapa
-                    <%}%>
-
-                    <% for ( var i =0; i< changes.length;i++){%>
-                    Cambio <%=i%>
-                    <ul>
-                        <li>Propiedad: <%= changes[i].property%></li>
-                        <li>Valor anterior: <%= changes[i].former_value%></li>
-                    </ul>
-                    <%}%>
-
-                </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Cambios
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+                <% if (changes.length == 0 ){%>
+                No se han registrado cambios en esta etapa
+                <%}%>
+                <% for ( var i =0; i< changes.length;i++){%>
+                Cambio <%=i%>
+                <ul>
+                    <li>Propiedad: <%= changes[i].property%></li>
+                    <li>Valor anterior: <%= changes[i].former_value%></li>
+                </ul>
+                <%}%>
             </div>
         </div>
-
     </div>
 </div>

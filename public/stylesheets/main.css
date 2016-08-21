@@ -73,10 +73,14 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 
 .panel-group .panel                         { background-color: transparent; border: none; border-radius: 0; box-shadow: none; }
 .panel-group .panel + .panel                { margin-top: 0; }
-.panel-default > .panel-heading             { border: none; border-top: 1px solid #979797; border-radius: 0; }
-.panel-default > .panel-body                { background-color: transparent; border-radius: 0; }
+.panel-default > .panel-heading             { margin-top: 15px; padding: 0; background-color: #c0c0c0; color: #fff; border: none; border-radius: 3px; }
+.panel-default > .panel-heading a           { display: block; padding: 15px; position: relative; }
+.panel-default > .panel-heading a:after     { content: ''; display: block; width: 15px; height: 15px; background: url("../assets/img/ic-caret-right.png") no-repeat; background-size: contain; position: absolute; top: 50%; right: 20px; transform: translateY(-37%) scale(-1,1) rotate(90deg); }
+.panel-default > .panel-heading a.collapsed:after   { transform: translateY(-50%) scale(-1,1); }
+.panel-default > .panel-heading a:hover     { color: #fff; font-weight: bold; }
+.panel-default > .panel-heading:first-child { margin-top: 0; }
 .panel-title                                { font-size: 12px; font-weight: 700; }
-.panel-default > .panel-heading + .panel-collapse > .panel-body     { border-top-color: #979797; }
+.panel-default > .panel-heading + .panel-collapse > .panel-body     { background-color: #f2f2f2; border: none; border-radius: 0 0 3px 3px; }
 
 .search-form                                { margin-top: 20px; margin-bottom: 30px; border: 1px solid #ccc; border-radius: 4px; }
 .search-form .form-control                  { margin: 0; height: 45px; background-color: transparent; border: none; border-radius: 0; box-shadow: none; }

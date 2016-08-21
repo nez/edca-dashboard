@@ -11,19 +11,16 @@
         <p class="small">Origen del presupuesto</p>
         <p><%= budget.budget_source%></p>
     </div>
-
     <div class="col-md-3">
         <p class="small">Descripción</p>
         <p><%= budget.budget_description%></p>
     </div>
 </div>
-
 <div class="row contract-stats">
     <div class="col-md-3">
         <p class="small">Tipo</p>
         <p><%= info.procurementmethod%></p>
     </div>
-
     <div class="col-md-3">
         <p class="small">Monto</p>
         <p><strong>
@@ -36,7 +33,6 @@
         <p class="small">Moneda </p>
         <p><%= budget.budget_currency %></p>
     </div>
-
     <div class="col-md-3">
         <p class="small">Proyecto</p>
         <p><%= budget.budget_project%> </p>
@@ -45,18 +41,13 @@
         <p class="small">ID de proyecto</p>
         <p><a href="#"><%= budget.budget_projectid%></a></p>
     </div>
-
-
 </div>
 <div class="row contract-stats">
-
-
     <div class="col-md-12">
         <p class="small">Comprador</p>
         <p><a href="#"><%= buyer.identifier_legalname %></a></p>
     </div>
 </div>
-
 <div class="row contract-stats no-border">
     <div class="col-md-3 col-md-offset-6">
         <p class="small">Descargar datos abiertos</p>
@@ -69,35 +60,27 @@
     </div>
 </div>
 <p class="small">Procesos</p>
-<div class="well well-sm">
-
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Documentos
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                    <% if (documents.length == 0 ){%>
-                    No se han registrado documentos en esta etapa
-                    <%}%>
-
-                    <% for (var i =0; i< documents.length;i++){%>
-                    <strong><%= documents[i].title %></strong>
-                    <ul>
-                        <li>ID: <%= documents[i].documentid%></li>
-                        <li>Título: <%= documents[i].title %></li>
-                        <li>Descripción: <%= documents[i].description %></li>
-                    </ul>
-
-                    <%}%>
-                </div>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Documentos</a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <% if (documents.length == 0 ){%>
+                No se han registrado documentos en esta etapa
+                <%}%>
+                <% for (var i =0; i< documents.length;i++){%>
+                <strong><%= documents[i].title %></strong>
+                <ul>
+                    <li>ID: <%= documents[i].documentid%></li>
+                    <li>Título: <%= documents[i].title %></li>
+                    <li>Descripción: <%= documents[i].description %></li>
+                </ul>
+                <%}%>
             </div>
         </div>
-
     </div>
 </div>
