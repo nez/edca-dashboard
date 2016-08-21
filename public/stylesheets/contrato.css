@@ -1,3 +1,5 @@
+.row                                                    { position: relative; }
+#contract-sidebar                                       { position: absolute; left: 0; top: 0; bottom: 0; }
 #contract-sidebar .info                                 { height: 280px; padding: 20px 15px 50px 40px; background-color: #9b9b9b; }
 #contract-sidebar .info h3                              { margin: 0; margin-bottom: 20px; font-size: 12px; font-weight: 300; text-transform: uppercase; color: #fff; }
 #contract-sidebar .info p                               { color: #fff; }
@@ -16,7 +18,7 @@
 #contract-sidebar .stages ul > li.active > .hover-image { display: block; }
 #contract-sidebar .stages ul > li:last-child > img      { top: 2.5px; }
 
-#contract-content                                       { margin-top: 40px; }
+#contract-content                                       { margin-top: 40px; margin-left: 33%; }
 #contract-content .small                                { text-transform: uppercase; }
 #contract-content .contract-stats                       { padding-bottom: 10px; margin-bottom: 20px; border-bottom: 1px solid #979797; }
 #contract-content .contract-stats.no-border             { border: none; }
