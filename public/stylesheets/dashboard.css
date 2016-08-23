@@ -118,8 +118,8 @@ div.google-visualization-tooltip {
 .contract-item                  { background-color: #f6f6f6; margin-bottom: 30px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
 .contract-item .inner           { padding: 10px 15px; }
 .contract-item .item-footer     { background-color: #e3e3e3; -webkit-border-radius: 0 0 5px 5px; -moz-border-radius: 0 0 5px 5px; border-radius: 0 0 5px 5px; }
-.contract-item h3               { font-weight: 700; color: #0c9; }
-.contract-item h4 > a           { font-size: 14px; font-weight: 600; color: #545454; }
+.contract-item h3               { font-weight: 700; color: #545454 /*#0c9*/; }
+.contract-item h4 > a           { font-size: 14px; font-weight: 600; color: #0c9/*#545454*/; }
 .contract-item p                { margin-bottom: 0; }
 .contract-item .legend          { font-size: 12px; font-weight: 600; color: #333; }
 .contract-item .stages-icons    { margin: 0; padding: 0; list-style: none; }
