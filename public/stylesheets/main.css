@@ -63,7 +63,7 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 .nav-pills > li.active > a:focus            { background-color: #0c9; font-weight: 600; color: #fff; }
 .statistics ul.chart-legend                 { padding: 30px 0 0; list-style: none; }
 .statistics ul.chart-legend > li            { margin-bottom: 10px; font-size: 11px; font-weight: 300; color: #000; }
-.statistics ul > li > .circle               { display: inline-block; width: 12px; height: 12px; margin-right: 10px; border-radius: 50%; position: relative; top: 2.5px; }
+.statistics ul > li > .circle               { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; position: relative; top: 2.5px; }
 .progress-steps                             { margin-bottom: 10px; margin-left: 0; padding: 0; overflow: hidden; }
 .progress-steps > li                        { display: block; width: 20%; margin-bottom: 0; float: left; text-align: left; font-size: 11px; font-weight: 300; }
 .progress-steps > li > span                 { float: right; }
