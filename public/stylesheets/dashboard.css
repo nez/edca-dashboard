@@ -5,10 +5,11 @@ div.google-visualization-tooltip > ul > li > span {
     line-height: 1.2em;
     font-family: "Open Sans" !important;
 }
+
 div.google-visualization-tooltip {
     background: white;
     /*background: #f6f6f6;*/
-    font-size: 8pt !important;
+    font-size: 10px !important;
     /*line-height: 1.2em;*/
     border: none;
     box-shadow: none;
@@ -20,6 +21,7 @@ div.google-visualization-tooltip {
     /*background: #f6f6f6 !IMPORTANT;*/
     background: white;
     font-color: black !IMPORTANT;
+    border-radius: 2px;
     font-family: "Open Sans" !important;
     border: white !IMPORTANT;
 }
