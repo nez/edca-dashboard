@@ -119,7 +119,7 @@ function drawSeriesChart() {
         var options = {
             //'legend': 'left',
             //title: 'Contrataciones en el tiempo',
-            sortBubblesBySize: false,
+            //sortBubblesBySize: false,
             chartArea: {
                 width: '100%',
                 heigth: '100%',
