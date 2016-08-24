@@ -2,7 +2,7 @@
 /* google charts */
 div.google-visualization-tooltip > ul > li > span {
     font-size: 8pt !important;
-    line-height: 1.2em;
+    /*line-height: 1.2em;*/
     font-family: "Open Sans" !important;
 }
 
@@ -11,6 +11,7 @@ div.google-visualization-tooltip {
     /*background: #f6f6f6;*/
     font-size: 10px !important;
     /*line-height: 1.2em;*/
+    line-height: normal;
     border: none;
     box-shadow: none;
     width: 250px;
@@ -58,39 +59,40 @@ div.google-visualization-tooltip {
     /*display: none;*/
 }
 
+/*
 .d3-tip {
     width: 250px;
     line-height: 1;
-    /*font-weight: bold;*/
     font-family: "Open Sans";
     font-size: 11px;
     font-color: black !important;
     padding: 12px;
-    /*background: #f6f6f6;*/
     background: white;
     color: black;
     border-radius: 2px;
 }
+*/
 
 /* Creates a small triangle extender for the tooltip */
+/*
 .d3-tip:after {
     box-sizing: border-box;
     width: 100%;
     line-height: 1;
     color: white;
-    /*color: #f6f6f6;*/
-    /*color: rgba(0, 0, 0, 0.8);*/
     content: "\25BC";
     position: absolute;
     text-align: center;
-}
+}*/
 
 /* Style northward tooltips differently */
+/*
 .d3-tip.n:after {
     margin: -1px 0 0 0;
     top: 100%;
     left: 0;
 }
+*/
 
 .grid .tick {
     stroke: lightgrey;
