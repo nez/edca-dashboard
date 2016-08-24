@@ -1,24 +1,24 @@
-/*body{
-    background-color: #eee;
-}*/
+
 /* google charts */
 div.google-visualization-tooltip > ul > li > span {
-    /*color: #f6f6f6 !important;*/
     font-size: 8pt !important;
     line-height: 1.2em;
     font-family: "Open Sans" !important;
 }
 div.google-visualization-tooltip {
-    background: #f6f6f6;
+    background: white;
+    /*background: #f6f6f6;*/
     font-size: 8pt !important;
-    line-height: 1.2em;
-    border: white !important;
+    /*line-height: 1.2em;*/
+    border: none;
+    box-shadow: none;
     width: 250px;
 }
 
 .jqplot-highlighter-tooltip, .jqplot-canvasOverlay-tooltip {
     z-index: 2;
-    background: #f6f6f6 !IMPORTANT;
+    /*background: #f6f6f6 !IMPORTANT;*/
+    background: white;
     font-color: black !IMPORTANT;
     font-family: "Open Sans" !important;
     border: white !IMPORTANT;
@@ -64,7 +64,8 @@ div.google-visualization-tooltip {
     font-size: 11px;
     font-color: black !important;
     padding: 12px;
-    background: #f6f6f6;
+    /*background: #f6f6f6;*/
+    background: white;
     color: black;
     border-radius: 2px;
 }
@@ -74,7 +75,8 @@ div.google-visualization-tooltip {
     box-sizing: border-box;
     width: 100%;
     line-height: 1;
-    color: #f6f6f6;
+    color: white;
+    /*color: #f6f6f6;*/
     /*color: rgba(0, 0, 0, 0.8);*/
     content: "\25BC";
     position: absolute;
