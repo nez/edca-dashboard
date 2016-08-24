@@ -295,7 +295,8 @@ router.get('/proveedor/:supplierid', function (req, res ) {
 router.post('/bubble-chart-data', function (req, res) {
     edca_db.manyOrNone("select tender.contractingprocess_id, concat (substring(contract.title from 0 for 79), '...') as title , contract.datesigned, (contract.period_enddate - contract.period_startdate) as vigencia," +
         " tender.procurementmethod, contract.value_amount from tender,contract where tender.contractingprocess_id = contract.contractingprocess_id  " +
-        " and contract.period_startdate is not null and contract.period_enddate is not null and contract.datesigned is not null and tender.procurementmethod not like ''").then(function (data) {
+        " and contract.period_startdate is not null and contract.period_enddate is not null and contract.datesigned is not null and tender.procurementmethod not like '' " +
+        " order by  tender.procurementmethod").then(function (data) {
         res.send(data);
     }).catch(function (error) {
         res.send(error);
