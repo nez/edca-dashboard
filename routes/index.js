@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
         this.one('select sum(value_amount) as total from contract')
         ]);
     }).then(function (data) {
-        res.render('index',{ title: 'Estandar de Datos de Contrataciones Abiertas',
+        res.render('index',{ title: 'Contrataciones Abiertas',
             metadata : {
                 supplier_count: data[0].total,
                 cp_count: data[1].total,
@@ -49,7 +49,7 @@ router.get('/contratos/',function (req, res) {
             this.one('select sum(value_amount) as total from contract')
         ]);
     }).then(function (data) {
-        res.render('dashboard',{ title: 'Estandar de Datos de Contrataciones Abiertas',
+        res.render('dashboard',{ title: 'Contrataciones Abiertas',
             metadata : {
                 supplier_count: +data[0].total,
                 cp_count: +data[1].total,
