@@ -5959,7 +5959,7 @@ ALTER TABLE ONLY awardamendmentchanges
 --
 
 ALTER TABLE ONLY awarddocuments
-    ADD CONSTRAINT awarddocuments_award_id_fkey FOREIGN KEY (award_id) REFERENCES award(id);
+    ADD CONSTRAINT awarddocuments_award_id_fkey FOREIGN KEY (award_id) REFERENCES award(id) on delete cascade;
 
 
 --
@@ -5983,7 +5983,7 @@ ALTER TABLE ONLY awarditem
 --
 
 ALTER TABLE ONLY awarditem
-    ADD CONSTRAINT awarditem_contractingprocess_id_fkey FOREIGN KEY (contractingprocess_id) REFERENCES contractingprocess(id);
+    ADD CONSTRAINT awarditem_contractingprocess_id_fkey FOREIGN KEY (contractingprocess_id) REFERENCES contractingprocess(id) on delete cascade;
 
 
 --
@@ -6311,7 +6311,7 @@ ALTER TABLE ONLY publisher
 --
 
 ALTER TABLE ONLY supplier
-    ADD CONSTRAINT supplier_award_id_fkey FOREIGN KEY (award_id) REFERENCES award(id);
+    ADD CONSTRAINT supplier_award_id_fkey FOREIGN KEY (award_id) REFERENCES award(id) on delete cascade;
 
 
 --
