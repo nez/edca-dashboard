@@ -137,7 +137,7 @@ div.google-visualization-tooltip {
 .search-form > .form-control.bootstrap-select                           { display: inline-block; width: 17%; box-shadow: none; }
 .search-form > .form-control.bootstrap-select > .btn                    { border: none; text-align: center; text-transform: none; color: #9b9b9b; position: relative; left: 50%; transform: translateX(-50%); background-color: #fff; line-height: 20px; }
 .search-form > .form-control.bootstrap-select > .btn > .bs-caret        { display: inline-block; width: 12px; height: 8px; background-image: url("../assets/img/ic_arrow_down.png"); }
-.search-form > .form-control.bootstrap-select > .btn > .bs-caret .caret { display: none; }
+.search-form > .form-control.bootstrap-select > .btn > .bs-caret .caret { display: compact; }
 .search-form > .form-control.bootstrap-select > .btn:hover,
 .search-form > .form-control.bootstrap-select.open > .btn,
 .search-form > .form-control.bootstrap-select.open > .btn:hover         { background-color: transparent; box-shadow: none; color: #9b9b9b; }
