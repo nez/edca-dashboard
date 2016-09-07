@@ -13,7 +13,11 @@
                     </div>
                     <div class="col-sm-9">
                         <h4><a href="<%= "/contratacionesabiertas/contrato/" + contracts[i].localid +"/planeacion"%>" >
+                                <% if ( typeof contracts[i].title == "string" ){%>
                                 <%= (contracts[i].title.length < 110 )? contracts[i].title: contracts[i].title.substring(0,109)+'...' %>
+                                <%} else{%>
+                                En proceso
+                                <%}%>
                             </a></h4>
                         <p class="small">ID Procedimiento: <%= contracts[i].ocid %></p>
                     </div>
