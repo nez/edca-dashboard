@@ -2,11 +2,16 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 9.5.4
+-- Dumped by pg_dump version 9.5.4
+
 SET statement_timeout = 0;
+SET lock_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
 SET client_min_messages = warning;
+SET row_security = off;
 
 --
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
@@ -29,7 +34,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: award; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: award; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE award (
@@ -49,7 +54,7 @@ CREATE TABLE award (
 );
 
 
-ALTER TABLE public.award OWNER TO tester;
+ALTER TABLE award OWNER TO tester;
 
 --
 -- Name: award_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -63,7 +68,7 @@ CREATE SEQUENCE award_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.award_id_seq OWNER TO tester;
+ALTER TABLE award_id_seq OWNER TO tester;
 
 --
 -- Name: award_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -73,7 +78,7 @@ ALTER SEQUENCE award_id_seq OWNED BY award.id;
 
 
 --
--- Name: awardamendmentchanges; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: awardamendmentchanges; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE awardamendmentchanges (
@@ -85,7 +90,7 @@ CREATE TABLE awardamendmentchanges (
 );
 
 
-ALTER TABLE public.awardamendmentchanges OWNER TO tester;
+ALTER TABLE awardamendmentchanges OWNER TO tester;
 
 --
 -- Name: awardamendmentchanges_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -99,7 +104,7 @@ CREATE SEQUENCE awardamendmentchanges_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.awardamendmentchanges_id_seq OWNER TO tester;
+ALTER TABLE awardamendmentchanges_id_seq OWNER TO tester;
 
 --
 -- Name: awardamendmentchanges_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -109,7 +114,7 @@ ALTER SEQUENCE awardamendmentchanges_id_seq OWNED BY awardamendmentchanges.id;
 
 
 --
--- Name: awarddocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: awarddocuments; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE awarddocuments (
@@ -128,7 +133,7 @@ CREATE TABLE awarddocuments (
 );
 
 
-ALTER TABLE public.awarddocuments OWNER TO tester;
+ALTER TABLE awarddocuments OWNER TO tester;
 
 --
 -- Name: awarddocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -142,7 +147,7 @@ CREATE SEQUENCE awarddocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.awarddocuments_id_seq OWNER TO tester;
+ALTER TABLE awarddocuments_id_seq OWNER TO tester;
 
 --
 -- Name: awarddocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -152,7 +157,7 @@ ALTER SEQUENCE awarddocuments_id_seq OWNED BY awarddocuments.id;
 
 
 --
--- Name: awarditem; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: awarditem; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE awarditem (
@@ -172,7 +177,7 @@ CREATE TABLE awarditem (
 );
 
 
-ALTER TABLE public.awarditem OWNER TO tester;
+ALTER TABLE awarditem OWNER TO tester;
 
 --
 -- Name: awarditem_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -186,7 +191,7 @@ CREATE SEQUENCE awarditem_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.awarditem_id_seq OWNER TO tester;
+ALTER TABLE awarditem_id_seq OWNER TO tester;
 
 --
 -- Name: awarditem_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -196,7 +201,7 @@ ALTER SEQUENCE awarditem_id_seq OWNED BY awarditem.id;
 
 
 --
--- Name: awarditemadditionalclassifications; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: awarditemadditionalclassifications; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE awarditemadditionalclassifications (
@@ -209,7 +214,7 @@ CREATE TABLE awarditemadditionalclassifications (
 );
 
 
-ALTER TABLE public.awarditemadditionalclassifications OWNER TO tester;
+ALTER TABLE awarditemadditionalclassifications OWNER TO tester;
 
 --
 -- Name: awarditemadditionalclassifications_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -223,7 +228,7 @@ CREATE SEQUENCE awarditemadditionalclassifications_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.awarditemadditionalclassifications_id_seq OWNER TO tester;
+ALTER TABLE awarditemadditionalclassifications_id_seq OWNER TO tester;
 
 --
 -- Name: awarditemadditionalclassifications_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -233,7 +238,7 @@ ALTER SEQUENCE awarditemadditionalclassifications_id_seq OWNED BY awarditemaddit
 
 
 --
--- Name: budget; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: budget; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE budget (
@@ -251,7 +256,7 @@ CREATE TABLE budget (
 );
 
 
-ALTER TABLE public.budget OWNER TO tester;
+ALTER TABLE budget OWNER TO tester;
 
 --
 -- Name: budget_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -265,7 +270,7 @@ CREATE SEQUENCE budget_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.budget_id_seq OWNER TO tester;
+ALTER TABLE budget_id_seq OWNER TO tester;
 
 --
 -- Name: budget_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -275,7 +280,7 @@ ALTER SEQUENCE budget_id_seq OWNED BY budget.id;
 
 
 --
--- Name: buyer; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: buyer; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE buyer (
@@ -299,7 +304,7 @@ CREATE TABLE buyer (
 );
 
 
-ALTER TABLE public.buyer OWNER TO tester;
+ALTER TABLE buyer OWNER TO tester;
 
 --
 -- Name: buyer_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -313,7 +318,7 @@ CREATE SEQUENCE buyer_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.buyer_id_seq OWNER TO tester;
+ALTER TABLE buyer_id_seq OWNER TO tester;
 
 --
 -- Name: buyer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -323,7 +328,7 @@ ALTER SEQUENCE buyer_id_seq OWNED BY buyer.id;
 
 
 --
--- Name: buyeradditionalidentifiers; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: buyeradditionalidentifiers; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE buyeradditionalidentifiers (
@@ -336,7 +341,7 @@ CREATE TABLE buyeradditionalidentifiers (
 );
 
 
-ALTER TABLE public.buyeradditionalidentifiers OWNER TO tester;
+ALTER TABLE buyeradditionalidentifiers OWNER TO tester;
 
 --
 -- Name: buyeradditionalidentifiers_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -350,7 +355,7 @@ CREATE SEQUENCE buyeradditionalidentifiers_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.buyeradditionalidentifiers_id_seq OWNER TO tester;
+ALTER TABLE buyeradditionalidentifiers_id_seq OWNER TO tester;
 
 --
 -- Name: buyeradditionalidentifiers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -360,7 +365,7 @@ ALTER SEQUENCE buyeradditionalidentifiers_id_seq OWNED BY buyeradditionalidentif
 
 
 --
--- Name: contract; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: contract; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE contract (
@@ -381,7 +386,7 @@ CREATE TABLE contract (
 );
 
 
-ALTER TABLE public.contract OWNER TO tester;
+ALTER TABLE contract OWNER TO tester;
 
 --
 -- Name: contract_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -395,7 +400,7 @@ CREATE SEQUENCE contract_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.contract_id_seq OWNER TO tester;
+ALTER TABLE contract_id_seq OWNER TO tester;
 
 --
 -- Name: contract_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -405,7 +410,7 @@ ALTER SEQUENCE contract_id_seq OWNED BY contract.id;
 
 
 --
--- Name: contractamendmentchanges; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: contractamendmentchanges; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE contractamendmentchanges (
@@ -417,7 +422,7 @@ CREATE TABLE contractamendmentchanges (
 );
 
 
-ALTER TABLE public.contractamendmentchanges OWNER TO tester;
+ALTER TABLE contractamendmentchanges OWNER TO tester;
 
 --
 -- Name: contractamendmentchanges_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -431,7 +436,7 @@ CREATE SEQUENCE contractamendmentchanges_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.contractamendmentchanges_id_seq OWNER TO tester;
+ALTER TABLE contractamendmentchanges_id_seq OWNER TO tester;
 
 --
 -- Name: contractamendmentchanges_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -441,7 +446,7 @@ ALTER SEQUENCE contractamendmentchanges_id_seq OWNED BY contractamendmentchanges
 
 
 --
--- Name: contractdocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: contractdocuments; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE contractdocuments (
@@ -460,7 +465,7 @@ CREATE TABLE contractdocuments (
 );
 
 
-ALTER TABLE public.contractdocuments OWNER TO tester;
+ALTER TABLE contractdocuments OWNER TO tester;
 
 --
 -- Name: contractdocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -474,7 +479,7 @@ CREATE SEQUENCE contractdocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.contractdocuments_id_seq OWNER TO tester;
+ALTER TABLE contractdocuments_id_seq OWNER TO tester;
 
 --
 -- Name: contractdocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -484,7 +489,7 @@ ALTER SEQUENCE contractdocuments_id_seq OWNED BY contractdocuments.id;
 
 
 --
--- Name: contractingprocess; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: contractingprocess; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE contractingprocess (
@@ -492,11 +497,14 @@ CREATE TABLE contractingprocess (
     ocid text,
     fecha_creacion date,
     hora_creacion time without time zone,
-    stage integer
+    stage integer,
+    uri text,
+    license text,
+    publicationpolicy text
 );
 
 
-ALTER TABLE public.contractingprocess OWNER TO tester;
+ALTER TABLE contractingprocess OWNER TO tester;
 
 --
 -- Name: contractingprocess_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -510,7 +518,7 @@ CREATE SEQUENCE contractingprocess_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.contractingprocess_id_seq OWNER TO tester;
+ALTER TABLE contractingprocess_id_seq OWNER TO tester;
 
 --
 -- Name: contractingprocess_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -520,7 +528,7 @@ ALTER SEQUENCE contractingprocess_id_seq OWNED BY contractingprocess.id;
 
 
 --
--- Name: contractitem; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: contractitem; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE contractitem (
@@ -540,7 +548,7 @@ CREATE TABLE contractitem (
 );
 
 
-ALTER TABLE public.contractitem OWNER TO tester;
+ALTER TABLE contractitem OWNER TO tester;
 
 --
 -- Name: contractitem_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -554,7 +562,7 @@ CREATE SEQUENCE contractitem_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.contractitem_id_seq OWNER TO tester;
+ALTER TABLE contractitem_id_seq OWNER TO tester;
 
 --
 -- Name: contractitem_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -564,7 +572,7 @@ ALTER SEQUENCE contractitem_id_seq OWNED BY contractitem.id;
 
 
 --
--- Name: contractitemadditionalclasifications; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: contractitemadditionalclasifications; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE contractitemadditionalclasifications (
@@ -578,7 +586,7 @@ CREATE TABLE contractitemadditionalclasifications (
 );
 
 
-ALTER TABLE public.contractitemadditionalclasifications OWNER TO tester;
+ALTER TABLE contractitemadditionalclasifications OWNER TO tester;
 
 --
 -- Name: contractitemadditionalclasifications_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -592,7 +600,7 @@ CREATE SEQUENCE contractitemadditionalclasifications_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.contractitemadditionalclasifications_id_seq OWNER TO tester;
+ALTER TABLE contractitemadditionalclasifications_id_seq OWNER TO tester;
 
 --
 -- Name: contractitemadditionalclasifications_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -602,7 +610,7 @@ ALTER SEQUENCE contractitemadditionalclasifications_id_seq OWNED BY contractitem
 
 
 --
--- Name: implementation; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: implementation; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE implementation (
@@ -612,7 +620,7 @@ CREATE TABLE implementation (
 );
 
 
-ALTER TABLE public.implementation OWNER TO tester;
+ALTER TABLE implementation OWNER TO tester;
 
 --
 -- Name: implementation_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -626,7 +634,7 @@ CREATE SEQUENCE implementation_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.implementation_id_seq OWNER TO tester;
+ALTER TABLE implementation_id_seq OWNER TO tester;
 
 --
 -- Name: implementation_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -636,7 +644,7 @@ ALTER SEQUENCE implementation_id_seq OWNED BY implementation.id;
 
 
 --
--- Name: implementationdocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: implementationdocuments; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE implementationdocuments (
@@ -656,7 +664,7 @@ CREATE TABLE implementationdocuments (
 );
 
 
-ALTER TABLE public.implementationdocuments OWNER TO tester;
+ALTER TABLE implementationdocuments OWNER TO tester;
 
 --
 -- Name: implementationdocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -670,7 +678,7 @@ CREATE SEQUENCE implementationdocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.implementationdocuments_id_seq OWNER TO tester;
+ALTER TABLE implementationdocuments_id_seq OWNER TO tester;
 
 --
 -- Name: implementationdocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -680,7 +688,7 @@ ALTER SEQUENCE implementationdocuments_id_seq OWNED BY implementationdocuments.i
 
 
 --
--- Name: implementationmilestone; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: implementationmilestone; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE implementationmilestone (
@@ -697,7 +705,7 @@ CREATE TABLE implementationmilestone (
 );
 
 
-ALTER TABLE public.implementationmilestone OWNER TO tester;
+ALTER TABLE implementationmilestone OWNER TO tester;
 
 --
 -- Name: implementationmilestone_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -711,7 +719,7 @@ CREATE SEQUENCE implementationmilestone_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.implementationmilestone_id_seq OWNER TO tester;
+ALTER TABLE implementationmilestone_id_seq OWNER TO tester;
 
 --
 -- Name: implementationmilestone_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -721,7 +729,7 @@ ALTER SEQUENCE implementationmilestone_id_seq OWNED BY implementationmilestone.i
 
 
 --
--- Name: implementationmilestonedocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: implementationmilestonedocuments; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE implementationmilestonedocuments (
@@ -741,7 +749,7 @@ CREATE TABLE implementationmilestonedocuments (
 );
 
 
-ALTER TABLE public.implementationmilestonedocuments OWNER TO tester;
+ALTER TABLE implementationmilestonedocuments OWNER TO tester;
 
 --
 -- Name: implementationmilestonedocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -755,7 +763,7 @@ CREATE SEQUENCE implementationmilestonedocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.implementationmilestonedocuments_id_seq OWNER TO tester;
+ALTER TABLE implementationmilestonedocuments_id_seq OWNER TO tester;
 
 --
 -- Name: implementationmilestonedocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -765,7 +773,7 @@ ALTER SEQUENCE implementationmilestonedocuments_id_seq OWNED BY implementationmi
 
 
 --
--- Name: implementationtransactions; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: implementationtransactions; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE implementationtransactions (
@@ -790,7 +798,7 @@ CREATE TABLE implementationtransactions (
 );
 
 
-ALTER TABLE public.implementationtransactions OWNER TO tester;
+ALTER TABLE implementationtransactions OWNER TO tester;
 
 --
 -- Name: implementationtransactions_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -804,7 +812,7 @@ CREATE SEQUENCE implementationtransactions_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.implementationtransactions_id_seq OWNER TO tester;
+ALTER TABLE implementationtransactions_id_seq OWNER TO tester;
 
 --
 -- Name: implementationtransactions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -814,7 +822,7 @@ ALTER SEQUENCE implementationtransactions_id_seq OWNED BY implementationtransact
 
 
 --
--- Name: planning; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: planning; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE planning (
@@ -824,7 +832,7 @@ CREATE TABLE planning (
 );
 
 
-ALTER TABLE public.planning OWNER TO tester;
+ALTER TABLE planning OWNER TO tester;
 
 --
 -- Name: planning_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -838,7 +846,7 @@ CREATE SEQUENCE planning_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.planning_id_seq OWNER TO tester;
+ALTER TABLE planning_id_seq OWNER TO tester;
 
 --
 -- Name: planning_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -848,7 +856,7 @@ ALTER SEQUENCE planning_id_seq OWNED BY planning.id;
 
 
 --
--- Name: planningdocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: planningdocuments; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE planningdocuments (
@@ -867,7 +875,7 @@ CREATE TABLE planningdocuments (
 );
 
 
-ALTER TABLE public.planningdocuments OWNER TO tester;
+ALTER TABLE planningdocuments OWNER TO tester;
 
 --
 -- Name: planningdocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -881,7 +889,7 @@ CREATE SEQUENCE planningdocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.planningdocuments_id_seq OWNER TO tester;
+ALTER TABLE planningdocuments_id_seq OWNER TO tester;
 
 --
 -- Name: planningdocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -891,7 +899,7 @@ ALTER SEQUENCE planningdocuments_id_seq OWNED BY planningdocuments.id;
 
 
 --
--- Name: procuringentity; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: procuringentity; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE procuringentity (
@@ -916,7 +924,7 @@ CREATE TABLE procuringentity (
 );
 
 
-ALTER TABLE public.procuringentity OWNER TO tester;
+ALTER TABLE procuringentity OWNER TO tester;
 
 --
 -- Name: procuringentity_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -930,7 +938,7 @@ CREATE SEQUENCE procuringentity_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.procuringentity_id_seq OWNER TO tester;
+ALTER TABLE procuringentity_id_seq OWNER TO tester;
 
 --
 -- Name: procuringentity_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -940,7 +948,7 @@ ALTER SEQUENCE procuringentity_id_seq OWNED BY procuringentity.id;
 
 
 --
--- Name: procuringentityadditionalidentifiers; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: procuringentityadditionalidentifiers; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE procuringentityadditionalidentifiers (
@@ -954,7 +962,7 @@ CREATE TABLE procuringentityadditionalidentifiers (
 );
 
 
-ALTER TABLE public.procuringentityadditionalidentifiers OWNER TO tester;
+ALTER TABLE procuringentityadditionalidentifiers OWNER TO tester;
 
 --
 -- Name: procuringentityadditionalidentifiers_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -968,7 +976,7 @@ CREATE SEQUENCE procuringentityadditionalidentifiers_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.procuringentityadditionalidentifiers_id_seq OWNER TO tester;
+ALTER TABLE procuringentityadditionalidentifiers_id_seq OWNER TO tester;
 
 --
 -- Name: procuringentityadditionalidentifiers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -978,7 +986,7 @@ ALTER SEQUENCE procuringentityadditionalidentifiers_id_seq OWNED BY procuringent
 
 
 --
--- Name: publisher; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: publisher; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE publisher (
@@ -991,7 +999,7 @@ CREATE TABLE publisher (
 );
 
 
-ALTER TABLE public.publisher OWNER TO tester;
+ALTER TABLE publisher OWNER TO tester;
 
 --
 -- Name: publisher_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1005,7 +1013,7 @@ CREATE SEQUENCE publisher_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.publisher_id_seq OWNER TO tester;
+ALTER TABLE publisher_id_seq OWNER TO tester;
 
 --
 -- Name: publisher_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1015,7 +1023,7 @@ ALTER SEQUENCE publisher_id_seq OWNED BY publisher.id;
 
 
 --
--- Name: supplier; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: supplier; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE supplier (
@@ -1040,7 +1048,7 @@ CREATE TABLE supplier (
 );
 
 
-ALTER TABLE public.supplier OWNER TO tester;
+ALTER TABLE supplier OWNER TO tester;
 
 --
 -- Name: supplier_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1054,7 +1062,7 @@ CREATE SEQUENCE supplier_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.supplier_id_seq OWNER TO tester;
+ALTER TABLE supplier_id_seq OWNER TO tester;
 
 --
 -- Name: supplier_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1064,7 +1072,7 @@ ALTER SEQUENCE supplier_id_seq OWNED BY supplier.id;
 
 
 --
--- Name: supplieradditionalidentifiers; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: supplieradditionalidentifiers; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE supplieradditionalidentifiers (
@@ -1078,7 +1086,7 @@ CREATE TABLE supplieradditionalidentifiers (
 );
 
 
-ALTER TABLE public.supplieradditionalidentifiers OWNER TO tester;
+ALTER TABLE supplieradditionalidentifiers OWNER TO tester;
 
 --
 -- Name: supplieradditionalidentifiers_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1092,7 +1100,7 @@ CREATE SEQUENCE supplieradditionalidentifiers_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.supplieradditionalidentifiers_id_seq OWNER TO tester;
+ALTER TABLE supplieradditionalidentifiers_id_seq OWNER TO tester;
 
 --
 -- Name: supplieradditionalidentifiers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1102,7 +1110,7 @@ ALTER SEQUENCE supplieradditionalidentifiers_id_seq OWNED BY supplieradditionali
 
 
 --
--- Name: tender; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: tender; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE tender (
@@ -1136,7 +1144,7 @@ CREATE TABLE tender (
 );
 
 
-ALTER TABLE public.tender OWNER TO tester;
+ALTER TABLE tender OWNER TO tester;
 
 --
 -- Name: tender_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1150,7 +1158,7 @@ CREATE SEQUENCE tender_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tender_id_seq OWNER TO tester;
+ALTER TABLE tender_id_seq OWNER TO tester;
 
 --
 -- Name: tender_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1160,7 +1168,7 @@ ALTER SEQUENCE tender_id_seq OWNED BY tender.id;
 
 
 --
--- Name: tenderamendmentchanges; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: tenderamendmentchanges; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE tenderamendmentchanges (
@@ -1172,7 +1180,7 @@ CREATE TABLE tenderamendmentchanges (
 );
 
 
-ALTER TABLE public.tenderamendmentchanges OWNER TO tester;
+ALTER TABLE tenderamendmentchanges OWNER TO tester;
 
 --
 -- Name: tenderamendmentchanges_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1186,7 +1194,7 @@ CREATE SEQUENCE tenderamendmentchanges_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tenderamendmentchanges_id_seq OWNER TO tester;
+ALTER TABLE tenderamendmentchanges_id_seq OWNER TO tester;
 
 --
 -- Name: tenderamendmentchanges_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1196,7 +1204,7 @@ ALTER SEQUENCE tenderamendmentchanges_id_seq OWNED BY tenderamendmentchanges.id;
 
 
 --
--- Name: tenderdocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: tenderdocuments; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE tenderdocuments (
@@ -1215,7 +1223,7 @@ CREATE TABLE tenderdocuments (
 );
 
 
-ALTER TABLE public.tenderdocuments OWNER TO tester;
+ALTER TABLE tenderdocuments OWNER TO tester;
 
 --
 -- Name: tenderdocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1229,7 +1237,7 @@ CREATE SEQUENCE tenderdocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tenderdocuments_id_seq OWNER TO tester;
+ALTER TABLE tenderdocuments_id_seq OWNER TO tester;
 
 --
 -- Name: tenderdocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1239,7 +1247,7 @@ ALTER SEQUENCE tenderdocuments_id_seq OWNED BY tenderdocuments.id;
 
 
 --
--- Name: tenderer; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: tenderer; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE tenderer (
@@ -1264,7 +1272,7 @@ CREATE TABLE tenderer (
 );
 
 
-ALTER TABLE public.tenderer OWNER TO tester;
+ALTER TABLE tenderer OWNER TO tester;
 
 --
 -- Name: tenderer_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1278,7 +1286,7 @@ CREATE SEQUENCE tenderer_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tenderer_id_seq OWNER TO tester;
+ALTER TABLE tenderer_id_seq OWNER TO tester;
 
 --
 -- Name: tenderer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1288,7 +1296,7 @@ ALTER SEQUENCE tenderer_id_seq OWNED BY tenderer.id;
 
 
 --
--- Name: tendereradditionalidentifiers; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: tendereradditionalidentifiers; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE tendereradditionalidentifiers (
@@ -1301,7 +1309,7 @@ CREATE TABLE tendereradditionalidentifiers (
 );
 
 
-ALTER TABLE public.tendereradditionalidentifiers OWNER TO tester;
+ALTER TABLE tendereradditionalidentifiers OWNER TO tester;
 
 --
 -- Name: tendereradditionalidentifiers_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1315,7 +1323,7 @@ CREATE SEQUENCE tendereradditionalidentifiers_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tendereradditionalidentifiers_id_seq OWNER TO tester;
+ALTER TABLE tendereradditionalidentifiers_id_seq OWNER TO tester;
 
 --
 -- Name: tendereradditionalidentifiers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1325,7 +1333,7 @@ ALTER SEQUENCE tendereradditionalidentifiers_id_seq OWNED BY tendereradditionali
 
 
 --
--- Name: tenderitem; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: tenderitem; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE tenderitem (
@@ -1345,7 +1353,7 @@ CREATE TABLE tenderitem (
 );
 
 
-ALTER TABLE public.tenderitem OWNER TO tester;
+ALTER TABLE tenderitem OWNER TO tester;
 
 --
 -- Name: tenderitem_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1359,7 +1367,7 @@ CREATE SEQUENCE tenderitem_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tenderitem_id_seq OWNER TO tester;
+ALTER TABLE tenderitem_id_seq OWNER TO tester;
 
 --
 -- Name: tenderitem_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1369,7 +1377,7 @@ ALTER SEQUENCE tenderitem_id_seq OWNED BY tenderitem.id;
 
 
 --
--- Name: tenderitemadditionalclassifications; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: tenderitemadditionalclassifications; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE tenderitemadditionalclassifications (
@@ -1382,7 +1390,7 @@ CREATE TABLE tenderitemadditionalclassifications (
 );
 
 
-ALTER TABLE public.tenderitemadditionalclassifications OWNER TO tester;
+ALTER TABLE tenderitemadditionalclassifications OWNER TO tester;
 
 --
 -- Name: tenderitemadditionalclassifications_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1396,7 +1404,7 @@ CREATE SEQUENCE tenderitemadditionalclassifications_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tenderitemadditionalclassifications_id_seq OWNER TO tester;
+ALTER TABLE tenderitemadditionalclassifications_id_seq OWNER TO tester;
 
 --
 -- Name: tenderitemadditionalclassifications_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1406,7 +1414,7 @@ ALTER SEQUENCE tenderitemadditionalclassifications_id_seq OWNED BY tenderitemadd
 
 
 --
--- Name: tendermilestone; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: tendermilestone; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE tendermilestone (
@@ -1422,7 +1430,7 @@ CREATE TABLE tendermilestone (
 );
 
 
-ALTER TABLE public.tendermilestone OWNER TO tester;
+ALTER TABLE tendermilestone OWNER TO tester;
 
 --
 -- Name: tendermilestone_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1436,7 +1444,7 @@ CREATE SEQUENCE tendermilestone_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tendermilestone_id_seq OWNER TO tester;
+ALTER TABLE tendermilestone_id_seq OWNER TO tester;
 
 --
 -- Name: tendermilestone_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -1446,7 +1454,7 @@ ALTER SEQUENCE tendermilestone_id_seq OWNED BY tendermilestone.id;
 
 
 --
--- Name: tendermilestonedocuments; Type: TABLE; Schema: public; Owner: tester; Tablespace: 
+-- Name: tendermilestonedocuments; Type: TABLE; Schema: public; Owner: tester
 --
 
 CREATE TABLE tendermilestonedocuments (
@@ -1466,7 +1474,7 @@ CREATE TABLE tendermilestonedocuments (
 );
 
 
-ALTER TABLE public.tendermilestonedocuments OWNER TO tester;
+ALTER TABLE tendermilestonedocuments OWNER TO tester;
 
 --
 -- Name: tendermilestonedocuments_id_seq; Type: SEQUENCE; Schema: public; Owner: tester
@@ -1480,7 +1488,7 @@ CREATE SEQUENCE tendermilestonedocuments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tendermilestonedocuments_id_seq OWNER TO tester;
+ALTER TABLE tendermilestonedocuments_id_seq OWNER TO tester;
 
 --
 -- Name: tendermilestonedocuments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tester
@@ -2449,6 +2457,7 @@ COPY budget (id, contractingprocess_id, planning_id, budget_source, budget_budge
 50	50	50	Presupuesto de Egresos de la Fedración 2015	46101	Transferencias a fideicomisos públicos	8200000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 8	8	8	Presupuesto de Egresos de la Federación 2015 y 2016	46101	Transferencias a fideicomisos públicos	17000000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 23	23	23	Presupuesto de Egresos de la Fedración 2015 y 2016	46101	Transferencias a fideicomisos públicos	182500000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
+164	164	164				182500000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 61	61	61	Presupuesto de Egresos de la Federación 2015 y 2016	46101	Transferencias a fideicomisos públicos	9500000	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 21	21	21	Presupuesto de Egresos de la Federación 2014	46101	Transferencias a fideicomisos públicos	625856	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 71	71	71	Presupuesto de Egresos de la Fedración 2015 y 2016	46101	Transferencias a fideicomisos públicos	7667600	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
@@ -2475,7 +2484,6 @@ COPY budget (id, contractingprocess_id, planning_id, budget_source, budget_budge
 55	55	55	Presupuesto de Egresos de la Federación, 2015	46101	Transferencias a fideicomisos públicos	0	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 134	134	134	Presupuesto de Egresos de la Federación 2014, 2015,2016 y 2017	32201	Servicios de Arrendamiento de Edificios y Locales	18090000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México		http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 156	156	156	Presupuesto de Egresos de la Fedración 2015	46101	Transferencias a fideicomisos públicos	390000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
-164	164	164				182500000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 105	105	105	Presupuesto de Egresos de la Fedración 2014	35101	Mantenimiento y Conservación de Inmuebles	1852058	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México		http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 135	135	135	Presupuesto de Egresos de la Fedración 2015, 2016 y 2017	32201 y 35101	Servicios de Arrendamiento de Edificios y Locales y Mantenimiento y conservación de inmuebles para la prestación de servicios administrativos.	7417574	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México		http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 157	157	157	Presupuesto de Egresos de la Fedración 2015	46101	Transferencias a fideicomisos públicos	479484.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
@@ -2919,6 +2927,7 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 24	24	AD-SRO-CONV-DCAGI-SC-006/16	AD-SRO-CONV-DCAGI-SC-006/16	Servicio de instrumentación y operación de planes y programas ambientales para el Nuevo Aeropuerto Internacional de la ciudad de México (NAICM), Etapa 2016-2018.	Servicio de instrumentación y operación de planes y programas ambientales para el Nuevo Aeropuerto Internacional de la ciudad de México (NAICM), Etapa 2016-2018.	active	2016-04-01 00:00:00	2018-10-26 00:00:00	236900000.00	MXN	2016-04-01 00:00:00	\N	
 189	189	-	AD-AS-DCAGI-SC-065/15	Arrendamiento de oficina Torre Murano	Uso y goce temporal del Bien arrendado y los cajones de estacionamiento	terminated	2015-09-01 00:00:00	2015-12-31 00:00:00	853332.00	MXN	2015-09-09 00:00:00	\N	
 26	26	Adjudicación Directa	AD-SRO-DCAGI-SC-002/16	Supervisión del Proyecto Ejecutivo, Construcción, Equipamiento, Mobiliario e Instalaciones Complementarias para el Campamento del Grupo Aeropuertario de la Ciudad de México (GACM) en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México	Supervisión del Proyecto Ejecutivo, Construcción, Equipamiento, Mobiliario e Instalaciones Complementarias para el Campamento del Grupo Aeropuertario de la Ciudad de México (GACM) en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México	active	2016-01-14 00:00:00	2016-07-11 00:00:00	3695222.82	MXN	2016-01-14 00:00:00	\N	
+31	31	SO-009KDH999-N25-2015	AD-SRO-DCAGI-SC-006/15	Programa de rescate de fauna para el Nuevo Aeropuerto Internacional de la Ciudad de México	Prestación de los Servicios consistentes en la elaboración del:Programa de rescate de fauna para el Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2015-02-20 00:00:00	2015-03-20 00:00:00	374999.10	MXN	2015-02-19 00:00:00	\N	
 74	74	GACM/DCI/SJ/CI/03-2014	-	Estudio para la Detección y Levantamiento de Anomalías, Obstáculos e Instlaciones (Extracción de Ademes), en el Terreno del Nuevo Aeropuerto Internacional de la Ciudad de México	Estudio para la Detección y Levantamiento de Anomalías, Obstáculos e Instlaciones (Extracción de Ademes), en el Terreno del Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2014-10-30 00:00:00	2014-12-30 00:00:00	10954142.71	MXN	2014-10-30 00:00:00	\N	
 3	3	1	AD-AS-DCAGI-SC-008/16	Testigo Social para que atestigue las etapas del Procedimiento de Licitación Publica Nacional para el Proyecto denominado "Excavación de Prueba, Losa Experimental y Prueba de Pilotes para el Edificio Terminal y Torre de Control"	Testigo Social para que atestigue las etapas del Procedimiento de Licitación Publica Nacional para el Proyecto denominado "Excavación de Prueba, Losa Experimental y Prueba de Pilotes para el Edificio Terminal y Torre de Control"	active	\N	\N	269225.44	MXN	2016-02-10 00:00:00	\N	
 25	25	SO-009KDH999-N74-2015	AD-SRO-DCAGI-SC-001/15	Proyecto ejecutivo del drenaje pluvial temporal para la protección de la zona contra inundaciones provenientes de precipitaciones dentro del perímetro del Aeropuerto en el lago de Texcoco, durante la construcción de la primera fase del Nuevo Aeropuerto Internacionale de la Ciudad de México	Proyecto ejecutivo del drenaje pluvial temporal para la protección de la zona contra inundaciones provenientes de precipitaciones dentro del perímetro del Aeropuerto en el lago de Texcoco, durante la construcción de la primera fase del Nuevo Aeropuerto Internacionale de la Ciudad de México	terminated	2015-01-30 00:00:00	2015-04-02 00:00:00	16708712.52	MXN	2015-02-19 00:00:00	\N	
@@ -2952,7 +2961,6 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 165	165	SO-009KDH999-N28-2015	AD-SRO-DCAGI-SC-012/15	Elaboración de programa de acciones para mitigar el impacto de la modificación de la hidrodinámica de los humedales presentes en la zona del Nuevo Aeropuerto Internacional de la Ciudad de México	Elaboración de programa de acciones para mitigar el impacto de la modificación de la hidrodinámica de los humedales presentes en la zona del Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2015-02-23 00:00:00	2015-02-23 00:00:00	550000	MXN	2015-02-20 00:00:00	\N	
 214	214	1	AD-AS-DCAGI-SC-013/16	Servicios Profesionales de Levantamiento de Imagen y Video de Nuevo Aeropuerto Internacional de la Ciudad de México.	Servicios Profesionales de Levantamiento de Imagen y Video de Nuevo Aeropuerto Internacional de la Ciudad de México.	terminated	2016-02-02 00:00:00	2016-02-29 00:00:00	2450000.00	MXN	2016-02-11 00:00:00	\N	
 133	133	-	AD-SRO-DCAGI-SC-081/15	Servicios de Transporte en Camionetas de Redilas	Servicios de Transporte en Camionetas de Redilas	terminated	2015-08-03 00:00:00	2015-08-28 00:00:00	300000.00	MXN	2015-08-03 00:00:00	\N	
-31	31	SO-009KDH999-N25-2015	AD-SRO-DCAGI-SC-006/15	Programa de rescate de fauna para el Nuevo Aeropuerto Internacional de la Ciudad de México	Prestación de los Servicios consistentes en la elaboración del:Programa de rescate de fauna para el Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2015-02-20 00:00:00	2015-03-20 00:00:00	374999.10	MXN	2015-02-19 00:00:00	\N	
 77	77	-	GACM/DCI/CJ/SJ/014-2015	Instrumentación de Planes y Programas Ambientales para el Proyecto del NAICM	Instrumentación de Planes y Programas Ambientales para el Proyecto del NAICM	terminated	2015-06-01 00:00:00	2015-12-03 00:00:00	30100000	MXN	2016-07-15 00:00:00	\N	
 32	32	SO-009KDH999-N21-2015	AD-SRO-DCAGI-SC-007/15	Programa de rescate y reubicación de flora para el Nuevo Aeropuerto Internacional de la Ciudad de México	Prestación de los Servicios consistentes en la elaboración del: Programa de rescate y reubicación de flora para el Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2015-02-20 00:00:00	2015-03-20 00:00:00	39999.95	MXN	2015-02-19 00:00:00	\N	
 33	33	SO-009KDH999-N17-2015	 AD-SRO-DCAGI-SC-008/15	Prestación de los Servicios consistentes en la elaboración del Estudio Técnico-Económico de la Ejecución de las medidas de mitigación restauración y compensación y otras acciones ambientales del proyecto Nuevo Aeropuerto Internacional de la Ciudad de México	Prestación de los Servicios consistentes en la elaboración del Estudio Técnico-Económico de la Ejecución de las medidas de mitigación restauración y compensación y otras acciones ambientales del proyecto Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2015-02-23 00:00:00	2015-03-30 00:00:00	550000.00	MXN	2015-02-20 00:00:00	\N	
@@ -2969,6 +2977,7 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 67	67	LO-009KDH999-N19-2015	LPN-SRO-DCAGI-SC-026/15	Exploración geotécnica complementaria para el proyecto ejecutivo del sistema de drenaje temporal del Nuevo aeropuerto Internacional de la Ciudad de México, en el Ex Lago de Texcoco, Estado de México.	Exploración geotécnica complementaria para el proyecto ejecutivo del sistema de drenaje temporal del Nuevo aeropuerto Internacional de la Ciudad de México, en el Ex Lago de Texcoco, Estado de México.	terminated	2015-05-09 00:00:00	2015-07-07 00:00:00	1402474	MXN	2015-05-09 00:00:00	\N	
 119	119	1	AD-AS-DCAGI-SC-83/15	Servicios para dar cumplimiento en lo dispuesto a las atribuciones de Grupo Aeroportuario de la Ciudad de México S.A. de C.V., relacionados con participaren el diseño e implementación de la política de información, difusión y comunicación social	"Servicios para dar cumplimiento en lo dispuesto a las atribuciones de Grupo Aeroportuario de la Ciudad de México S.A. de C.V., relacionados con participaren el diseño e implementación de la política de información, difusión y comunicación social"	active	2015-11-06 00:00:00	2016-11-01 00:00:00	1573425.00	MXN	2015-11-06 00:00:00	\N	
 120	120	1	AD-AS-DCAGI-SC--102/15	Contrato abierto plurianual de prestación de servicios especializados en el suministro de "terceros".	Obtención de la prestacion de servicios especializados en el suministro de "terceros".	active	2015-12-01 00:00:00	2018-12-31 00:00:00	625917655.58	MXN	2014-12-01 00:00:00	\N	
+82	82	LO-009KDH999- N45-2015	LPN-SRO-DCAGI-SC-043/15	Implementación del plan de restauración ecológica para el nuevo Aeropuerto Internacional de la Ciudad de México	Implementación del plan de restauración ecológica para el nuevo Aeropuerto Internacional de la Ciudad de México	active	2015-07-21 00:00:00	2015-12-31 00:00:00	18934197.76	MXN	2015-07-21 00:00:00	\N	
 44	44	-	GACM/DCI/SJ/CM-E/017-2015      	Realización de los Servicios Consistentes en la Mecánica de Suelos, Levantamiento Topográfico y Elaboración de Ingenieria Básica de: S.E. Maniobras Aeropuerto SF6 NAICM (5 ALIMENT-230 KV); S.E. Aeropuerto SF6 (NAICM) (3T-3F-60/80 MVA 230/23/0 KV-2/16/0 A) y L.T. Maniobras Aeropuerto NAICM (230 KV-13-CU-XLP A)	Realización de los Servicios Consistentes en la Mecánica de Suelos, Levantamiento Topográfico y Elaboración de Ingenieria Básica de: S.E. Maniobras Aeropuerto SF6 NAICM (5 ALIMENT-230 KV); S.E. Aeropuerto SF6 (NAICM) (3T-3F-60/80 MVA 230/23/0 KV-2/16/0 A) y L.T. Maniobras Aeropuerto NAICM (230 KV-13-CU-XLP A)	terminated	2015-11-19 00:00:00	2015-12-20 00:00:00	3246873.25	MXN	2015-03-02 00:00:00	\N	
 68	68	LO-009KDH999- N45-2015	LPN-SRO-DCAGI-SC-043/15	Implementación del plan de restauración ecológica para el nuevo Aeropuerto Internacional de la Ciudad de México	Implementación del plan de restauración ecológica para el nuevo Aeropuerto Internacional de la Ciudad de México	active	2015-07-21 00:00:00	2016-12-31 00:00:00	18934197.76	MXN	2015-07-21 00:00:00	\N	
 215	215	1	AD-DCAGI-SA-GAR-02/15	Servicio de Soporte Tecnico y Mantenimiento Para Los Equipos Del Servicio De Red Local, Seguridad de Datos y Telefonia	Servicio de Soporte Tecnico y Mantenimiento Para Los Equipos Del Servicio De Red Local, Seguridad de Datos y Telefonia	terminated	2015-01-02 00:00:00	2015-07-01 00:00:00	298780.56	MXN	2015-01-02 00:00:00	\N	
@@ -2981,7 +2990,6 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 49	49	IO009KDH999-T3-2014	ITP-SR-DCAGI-SC-015-2015	Elaboración del proyecto ejecutivo (ingenierías) para el diseño de la parte "Aeronáutica" (área de movimiento) de pistas, calles de rodaje, plataformas, áreas para el mantenimiento de aeronaves, servicio de combustibles de aviación, restricción y eliminación de obstáculos, servicio de salvamento y extinción de incendios (SSEI), ayudas visuales para la navegación, ayudas visuales indicadoras de obstáculos, ayudas visuales indicadoras de zonas de uso restringido, sistemas eléctricos de ayudas visuales para la navegación, mantenimiento de aeródromo, huella de ruido, agua potable y drenaje, programa de mantenimiento, sistemas de transporte de la información, acompañamiento en el proceso de obra, que contemple las características y elementos físicos para el "NAICM", con base en las flotas de aeronaves que operan y operarán en el Nuevo Aeropuerto en el futuro inmediato y con base en las normas nacionales e internacionales en materia de aeronáutica y de aviación civil.	Elaboración del proyecto ejecutivo (ingenierías) para el diseño de la parte "Aeronáutica" (área de movimiento) de pistas, calles de rodaje, plataformas, áreas para el mantenimiento de aeronaves, servicio de combustibles de aviación, restricción y eliminación de obstáculos, servicio de salvamento y extinción de incendios (SSEI), ayudas visuales para la navegación, ayudas visuales indicadoras de obstáculos, ayudas visuales indicadoras de zonas de uso restringido, sistemas eléctricos de ayudas visuales para la navegación, mantenimiento de aeródromo, huella de ruido, agua potable y drenaje, programa de mantenimiento, sistemas de transporte de la información, acompañamiento en el proceso de obra, que contemple las características y elementos físicos para el "NAICM", con base en las flotas de aeronaves que operan y operarán en el Nuevo Aeropuerto en el futuro inmediato y con base en las normas nacionales e internacionales en materia de aeronáutica y de aviación civil.	active	2015-02-09 00:00:00	2019-02-07 00:00:00	1079335930.23	MXN	2015-02-05 00:00:00	\N	
 81	81	LO-009KDH999-N78-2015	LPN-OP-DCAGI-SC-115/15	Carga, Acarreo y Descarga fuera del poligono del material existente producto de depositos de demoliciones, desperdicios y desazolve.	Carga, Acarreo y Descarga fuera del poligono del material existente producto de depositos de demoliciones, desperdicios y desazolve.	active	2015-12-31 00:00:00	2016-08-26 00:00:00	493916475	MXN	2015-12-31 00:00:00	\N	
 51	51	-	AD-AS-DCAGI-SC-001/16	Contrato abierto de prestación de servicios para "ESTACIONAMIENTO DE VEHICULOS"	El motivo determinante de la voluntad es la contratación del servicio de "ESTACIONAMIENTO PARA VEHÍCULOS".	active	2016-01-01 00:00:00	2016-06-30 00:00:00	262931.03	MXN	\N	\N	
-82	82	LO-009KDH999- N45-2015	LPN-SRO-DCAGI-SC-043/15	Implementación del plan de restauración ecológica para el nuevo Aeropuerto Internacional de la Ciudad de México	Implementación del plan de restauración ecológica para el nuevo Aeropuerto Internacional de la Ciudad de México	active	2015-07-21 00:00:00	2015-12-31 00:00:00	18934197.76	MXN	2015-07-21 00:00:00	\N	
 52	52	AA-009KDH999-E80-2016	AD-AS-DCAGI-SC-006/16	"Servicios de Asesoría, Relacionados con la Implementación de la Estructura de Gobierno Corporativo para la Administración del Grupo Aeroportuario de La Ciudad de México, S. A. de C. V"	 "Servicios de Asesoría, Relacionados con la Implementación de la Estructura de Gobierno Corporativo para la Administración del Grupo Aeroportuario de La Ciudad de México, S. A. de C. V"	terminated	2016-02-15 00:00:00	2016-02-22 00:00:00	207000	MXN	2016-02-15 00:00:00	\N	
 122	122	1	AD-AS-DCAGI-SC-109/15	" Prestación de Servicios Profesionales  para fungir como enlace  y vocería en el ámbito  nacional e internacional y con actores claves que aseguren la ejecución del  proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México"	Asesoría técnica especializada en materia de vinculación con organismos internacionales y adopción de las mejores prácticas internacionales"	terminated	2015-11-07 00:00:00	\N	1510488.00	MXN	2015-11-07 00:00:00	\N	
 83	83	 LO-009KDH999-N42-2015	LPN-SRO-DCAGI-SC-042/15	Implementación del Programa de Rescate de Flora y Fauna para el Nuevo Aeropuerto Internacional de la Ciudad de México	 Implementación del Programa de Rescate de Flora y Fauna para el Nuevo Aeropuerto Internacional de la Ciudad de México	active	2015-07-21 00:00:00	2015-12-31 00:00:00	11924906.62	MXN	2015-07-21 00:00:00	\N	
@@ -3274,229 +3282,229 @@ SELECT pg_catalog.setval('contractdocuments_id_seq', 100, true);
 -- Data for Name: contractingprocess; Type: TABLE DATA; Schema: public; Owner: tester
 --
 
-COPY contractingprocess (id, ocid, fecha_creacion, hora_creacion, stage) FROM stdin;
-220	GACM_PISTA3	2016-07-18	10:21:07.965627	3
-219	GACM_PISTA2	2016-07-18	10:21:02.852422	3
-218	GACM_Edificio_Terminal	2016-07-18	10:20:10.880473	3
-200	AD-AS-DCAGI-SC-057/15	2016-07-17	20:11:35.387287	3
-201	AD-SRO-DCAGI-SC-021-15	2016-07-17	20:11:37.300454	3
-202	AD-SRO-DCAGI-SC-089/15	2016-07-17	20:11:38.986317	3
-19	AD-AS-DCAGI-SC-121/15	2016-07-15	12:45:30.917792	3
-22	AD-SRO-CONV-DCAGI-SC-002/16	2016-07-15	12:45:49.845957	3
-23	AD-SRO-CONV-DCAGI-SC-04/16	2016-07-15	12:45:51.141064	3
-71	GACM/DCI/SJ/CI/001-2015	2016-07-15	13:23:19.353123	3
-61	ITP-SRO-DCAGI-SC-049/2015	2016-07-15	12:47:04.935183	3
-2	AD-AS-DCAGI-SC-050-2015	2016-07-15	12:45:02.461858	3
-73	GACM/DCI/SJ/CI/02-2014	2016-07-15	13:38:08.813878	3
-182	E0A1VWO	2016-07-16	09:42:02.508596	3
-24	AD-SRO-CONV-DCAGI-SC-006/16	2016-07-15	12:45:53.29262	3
-25	AD-SRO-DCAGI-SC-001/15	2016-07-15	12:45:55.4532	3
-193	SEC-/03/2014	2016-07-16	09:42:28.960228	3
-20	AD-S-DCAGI-SC-016/2014	2016-07-15	12:45:32.940518	3
-16	AD-SRO-DCAGI-SC-098/15	2016-07-15	12:45:25.661747	3
-74	GACM/DCI/SJ/CI/03-2014	2016-07-15	13:50:46.531092	3
-26	AD-SRO-DCAGI-SC-002/16	2016-07-15	12:45:56.860718	3
-27	AD-SRO-DCAGI-SC-002/2015	2016-07-15	12:45:59.124896	3
-55	AD-AS-DCAGI-SC-053/15	2016-07-15	12:46:50.710612	3
-75	GACM/DCI/SJ/CI/04-2014	2016-07-15	14:01:20.091646	3
-81	LPN-OP-DCAGI-SC-115/15	2016-07-15	15:46:35.560295	3
-82	LPN-SRO-DCAGI-SC-043/15	2016-07-15	15:56:45.356319	3
-83	LPN-SRO-DCAGI-SC-042/15	2016-07-15	15:56:47.16826	3
-84	LPN-SRO-DCAGI-SC-041/15	2016-07-15	15:56:50.163156	3
-85	LPN-SRO-DCAGI-SC-026/15	2016-07-15	15:56:52.075169	3
-86	LPN-OP-DCAGI-SC-114/15	2016-07-15	15:56:54.123315	3
-87	LPN-OP-DCAGI-SC-076/15	2016-07-15	15:56:55.787421	3
-89	LPN-OP-DCAGI-SC-066/15	2016-07-15	15:57:36.866808	3
-90	LPN-O-DCAGI-SC-024/15	2016-07-15	15:57:38.178831	3
-91	LPN-AS-DACGI-SC-033/16	2016-07-15	15:57:39.546721	3
-92	LPI-SRO-DCAGI-SC-030/15	2016-07-15	15:57:40.810214	3
-93	LPI-OP-DCAGI-CS-079-15	2016-07-15	15:57:42.05138	3
-94	ITP-SRO-DCAGI-SC-082/15	2016-07-15	15:57:43.962494	3
-96	ITP-SRO-DCAGI-SC-048/15	2016-07-15	15:57:47.146616	3
-97	ITP-SRO-DCAGI-SC-045/15	2016-07-15	15:57:48.763256	3
-98	ITP-SRO-DCAGI-SC-044/15	2016-07-15	15:57:50.468335	3
-99	ITP-SRO-DCAGI-SC-037/15	2016-07-15	15:57:53.524031	3
-100	ITP-SRO-DCAGI-SC-027/15	2016-07-15	15:57:55.083309	3
-48	ITP-OP-DCAGI-SC-014/15	2016-07-15	12:46:37.645967	3
-203	GACM/DCI/SJ/CM-E/001-2016	2016-07-17	20:18:02.66401	3
-204	GACM/DG/DCAGI/SJ/CI/010/15	2016-07-17	20:18:03.892373	3
-205	AD-AS-DCAGI-SC-035-16	2016-07-17	20:18:04.87475	3
-198	104-014-CUNA01-3S	2016-07-16	14:08:45.558056	3
-199	AS-AS-DCAGI-SC-55/15	2016-07-16	20:08:26.648476	3
-207	ITP-S-DCAGI-SC-004/2014	2016-07-17	20:18:06.610328	3
-206	ITP-OP-DCAGI-SC-012/16	2016-07-17	20:18:05.645915	3
-49	ITP-SR-DCAGI-SC-015-2015	2016-07-15	12:46:39.221696	3
-54	AD-AS-DCAGI-SC-029/2015	2016-07-15	12:46:48.974974	3
-50	ITP-SRO-DCAGI-SC-040/15	2016-07-15	12:46:41.516907	3
-41	GACM/DCI/SJ/CI/007-2015	2016-07-15	12:46:25.240137	3
-42	GACM/DCI/SJ/CM-E/03-2015	2016-07-15	12:46:26.900669	3
-43	GACM/DCI/SJ/CM-E/05-2015	2016-07-15	12:46:29.028766	3
-47	GACM/DG/DCAGI/SJ-1044/2015	2016-07-15	12:46:36.284647	3
-59	ITP-AS-DCAGI-SC-058/15	2016-07-15	12:47:00.309419	3
-115	AD-AS-DCAGI-SC-052/15	2016-07-15	16:59:31.503627	3
-116	AD-AS-DCAGI-SC-074/15	2016-07-15	16:59:33.288226	3
-121	AD-AS-DCAGI-SC-106-15	2016-07-15	16:59:48.672632	3
-4	AD-SRO-DCAGI-SC-010/16	2016-07-15	12:45:05.094307	3
-5	AD-AS-DCAGI-SC-073/15	2016-07-15	12:45:07.196849	3
-7	AD-SRO-DCAGI-SC-087/15	2016-07-15	12:45:10.341997	3
-9	AD-SRO-DCAGI-SC-090/15	2016-07-15	12:45:14.302237	3
-10	AD-SRO-DCAGI-SC-091/15	2016-07-15	12:45:16.253018	3
-12	AD-SRO-DCAGI-SC-094/15	2016-07-15	12:45:19.516921	3
-14	AD-SRO-DCAGI-SC-096/15	2016-07-15	12:45:22.694056	3
-1	AD-AS-DCAGI-SC-031/15	2016-07-15	12:45:00.121702	3
-64	LPI-SRO-DCAGI-SC-030-15	2016-07-15	12:47:10.525202	3
-62	ITP-SRO-DCAGI-SC-037/15	2016-07-15	12:47:06.383237	3
-46	GACM/DCPEV/SJ/CG-E/06-2015	2016-07-15	12:46:34.389018	3
-173	GACM/DCI/SJ/CI/008/2015	2016-07-15	19:42:42.479772	3
-44	GACM/DCI/SJ/CM-E/017-2015	2016-07-15	12:46:30.893993	3
-72	GACM/DCI/SJ/CI/012-2015	2016-07-15	13:34:37.50145	3
-45	GACM/DCPEV/SJ/CG/02-2015	2016-07-15	12:46:32.686266	3
-165	AD-SRO-DCAGI-SC-012/15	2016-07-15	19:42:26.31763	3
-166	AD-SRO-DCAGI-SC-013/15	2016-07-15	19:42:27.478479	3
-167	AD-SRO-DCAGI-SC-019/16	2016-07-15	19:42:29.295844	3
-168	AD-SRO-DCAGI-SC-026-16	2016-07-15	19:42:31.037829	3
-169	AD-SRO-DCAGI-SC-031-16	2016-07-15	19:42:33.669493	3
-171	AD-SRO-DCAGI-SC-103/15	2016-07-15	19:42:38.622103	3
-172	AD-SRO-DCAGI-SC-104/15	2016-07-15	19:42:40.215031	3
-144	LPN-SRO-DCAGI-SC-028-2016	2016-07-15	19:41:48.894074	3
-111	9-989-GAC9806011J4-05-03-2015	2016-07-15	16:59:24.574017	3
-128	AD-SRO-DCAGI-SC-003/16	2016-07-15	17:00:01.921494	3
-153	AD-AS-DCAGI-SC-068/15	2016-07-15	19:42:04.82317	3
-170	AD-SRO-DCAGI-SC-039/15	2016-07-15	19:42:36.574439	3
-175	AD-AS-DCAGI-SC-074/15	2016-07-15	22:17:11.133575	3
-3	AD-AS-DCAGI-SC-008/16	2016-07-15	12:45:03.869167	3
-6	AD-SRO-DCAGI-SC-85/15	2016-07-15	12:45:08.532721	3
-8	AD-SRO-DCAGI-SC-088/15	2016-07-15	12:45:11.80601	3
-11	AD-SRO-DCAGI-SC-093/15	2016-07-15	12:45:18.005016	3
-13	AD-SRO-DCAGI-SC-095/15	2016-07-15	12:45:21.32555	3
-15	AD-SRO-DCAGI-SC-097/15	2016-07-15	12:45:24.084765	3
-208	AD-AS-DCAGI-SC-022/15	2016-07-17	20:43:25.766891	3
-209	AD-SRO-DCAGI-SC-086/15	2016-07-17	20:43:31.818663	3
-210	CTO.ARRENDAMIENTO.T.MURANO.01/14	2016-07-17	20:43:33.069173	3
-211	DTC-026/2013	2016-07-17	20:43:34.438488	3
-212	GACM/DCI/SJ/CC-015-15	2016-07-17	20:43:37.188889	3
-221	GACM/DG/DCAGI/SJ/CI/01-2014	2016-07-22	17:45:31.275277	3
-122	AD-AS-DCAGI-SC-109/15	2016-07-15	16:59:49.55885	3
-124	AD-DCAGI-SA-GAR-007/15	2016-07-15	16:59:54.324795	3
-125	AD.DIR/01/SJ/2014	2016-07-15	16:59:56.912087	3
-127	AD-AS-DCAGI-SC-012/2014	2016-07-15	17:00:00.343948	3
-129	AD-SRO-DCAGI-SC-019/15	2016-07-15	17:00:03.825002	3
-56	AD-AS-DCAGI-SC-54/15	2016-07-15	12:46:52.053252	3
-58	AD-AS-DCAGI-SC-072-15	2016-07-15	12:46:58.693611	3
-35	AD-SRO-DCAGI-SC-010/15	2016-07-15	12:46:13.638554	3
-39	GACM/DCI/SJ/CI/05-2014	2016-07-15	12:46:21.886456	3
-131	AD-SRO-DCAGI-SC-022/16	2016-07-15	17:02:05.169137	3
-132	AD-SRO-DCAGI-SC-030-16	2016-07-15	17:02:06.49846	3
-135	CTO.ARRENDAMIENTO.T.MURANO.01/15	2016-07-15	17:02:10.767469	3
-136	ITP-AS-DCAGI-SC-004/16	2016-07-15	17:02:11.913044	3
-142	ITP-SRO-DCAGI-SC-080/15	2016-07-15	19:41:42.462057	3
-140	ITP-SRO-DCAGI-SC-034/16	2016-07-15	17:02:18.78431	3
-88	LPN-O-DCAGI-SC-014/2014	2016-07-15	15:56:57.603277	3
-143	ITP-SRO-DCAGI-SC-107/15	2016-07-15	19:41:43.918434	3
-70	LPN-SRO-DCAGI-SC-042/15	2016-07-15	12:47:26.205045	3
-141	ITP-OP-DCAGl-SC-105-15	2016-07-15	19:41:36.87771	3
-52	AD-AS-DCAGI-SC-006/16	2016-07-15	12:46:45.446712	3
-51	001-16	2016-07-15	12:46:42.716691	3
-123	AD-AS-DCAGI-SC-113/15	2016-07-15	16:59:52.096254	3
-126	AD-S-DCAGI-SC-010/2014	2016-07-15	16:59:58.791804	3
-53	AD-AS-DCAGI-SC-019-BIS/2015	2016-07-15	12:46:47.701866	3
-130	AD-SRO-DCAGI-SC-021/16	2016-07-15	17:00:05.578665	3
-146	AD-AS-DCAGI-SC-007/16	2016-07-15	19:41:56.072566	3
-147	AD-AS-DCAGI-SC-014-16	2016-07-15	19:41:57.040217	3
-148	AD-AS-DCAGI-SC-029-16	2016-07-15	19:41:58.03794	3
-149	AD-AS-DCAGI-SC-038/15	2016-07-15	19:41:59.943435	3
-150	AD-AS-DCAGI-SC-046/15	2016-07-15	19:42:01.056081	3
-151	AD-AS-DCAGI-SC-056/16	2016-07-15	19:42:02.391629	3
-152	AD-AS-DCAGI-SC-62/15	2016-07-15	19:42:03.684614	3
-154	AD-AS-DCAGI-SC-84/15	2016-07-15	19:42:06.021975	3
-176	AD-DCAGI-SA-GAR-01/14	2016-07-16	09:40:11.62071	3
-177	AD-DCAGI-SA-GAR-02/15	2016-07-16	09:40:17.572015	3
-57	AD-AS-DCAGI-SC-070/2015	2016-07-15	12:46:53.76587	3
-178	AD-DCAGI-SA-GAR-0005/15	2016-07-16	09:40:20.691252	3
-179	AD-DCAGI-SA-GAR-0006/15	2016-07-16	09:40:22.345535	3
-180	AD-DCAGI-SA-GAR-01/15	2016-07-16	09:40:24.825323	3
-181	AD-OP-DCAGI-SC-064/15	2016-07-16	09:40:26.57557	3
-60	ITP-AS-DCAGI-SC-060/15	2016-07-15	12:47:01.969182	3
-191	GACM-DCI-SJ-CM-E-02-14	2016-07-16	09:42:23.953995	3
-36	AD-SRO-DCAGI-SC-011/15	2016-07-15	12:46:15.013398	3
-101	ITP-SRO-DCAGI-SC-018/16	2016-07-15	15:57:57.019827	3
-21	AD-S-DCAGI-SC-017/2014	2016-07-15	12:45:47.213846	3
-77	GACM/DCI/CJ/SJ/014-2015	2016-07-15	15:34:23.265841	3
-76	GACM/DCI/SJ/CI/013-2015	2016-07-15	15:34:21.455478	3
-17	AD-SRO-DCAGI-SC-099/15	2016-07-15	12:45:27.301242	3
-18	AD-SRO-DCAGI-SC-100/15	2016-07-15	12:45:29.294093	3
-78	GACM/DCI/SJ/CM/01-2014	2016-07-15	15:34:24.681449	3
-102	ITP-SRO-DCAGI-SC-016/15	2016-07-15	15:57:58.291692	3
-103	ITP-SRO-DCAGI-SC-015-16	2016-07-15	15:57:59.41174	3
-104	ITP-S-DCAGI-SC-009/2014	2016-07-15	15:58:00.699547	3
-105	ITP-S-DCAGI-SC-008/2014	2016-07-15	15:58:01.902314	3
-145	AD/01CTO.MTO./2014	2016-07-15	19:41:55.04548	3
-106	ITP-S-DCAGI-SC-004-2014	2016-07-15	15:58:05.100304	3
-107	ITP-S-DCAGI-SC-002-2014	2016-07-15	15:58:06.772029	3
-108	ITP-OP-DCAGI-SC-012-16	2016-07-15	15:58:08.323147	3
-28	AD-SRO-DCAGI-SC-003/15	2016-07-15	12:46:00.719071	3
-69	LPN-SRO-DCAGI-SC-041/15	2016-07-15	12:47:23.725051	3
-29	AD-SRO-DCAGI-SC-004/15	2016-07-15	12:46:03.638289	3
-63	ITP-SRO-DCAGI-SC-048/15	2016-07-15	12:47:08.135482	3
-30	AD-SRO-DCAGI-SC-005/15	2016-07-15	12:46:05.271177	3
-31	AD-SRO-DCAGI-SC-006/15	2016-07-15	12:46:06.581081	3
-32	AD-SRO-DCAGI-SC-007/15	2016-07-15	12:46:07.996628	3
-33	AD-SRO-DCAGI-SC-008/15	2016-07-15	12:46:09.7811	3
-112	AD-A-DCAGI-SC-001/2014	2016-07-15	16:59:26.173783	3
-34	AD-SRO-DCAGI-SC-009/15	2016-07-15	12:46:11.671288	3
-113	AD-AS-DCAGI-SC-047/15	2016-07-15	16:59:27.983232	3
-114	AD-AS-DSAGI-SC-51/2015	2016-07-15	16:59:29.879503	3
-65	LPN-SRO-DCAGI-SC-009/2016	2016-07-15	12:47:12.652952	3
-66	LPN-SRO-DCAGI-SC-025/15	2016-07-15	12:47:14.566125	3
-117	AD-AS-DCAGI-SC-075/15	2016-07-15	16:59:34.615854	3
-118	AD-AS-DCAGI-SC-78/15	2016-07-15	16:59:36.088779	3
-67	LPN-SRO-DCAGI-SC-026/15	2016-07-15	12:47:19.172941	3
-119	AD-AS-DCAGI-SC-83/15	2016-07-15	16:59:37.328086	3
-120	AD-AS-DCAGI-SC--102/15	2016-07-15	16:59:47.447801	3
-68	LPN-SRO-DCAGI-SC-043/15	2016-07-15	12:47:21.237841	3
-161	AD-OP-DCAGI-SC-108/15	2016-07-15	19:42:20.069529	3
-162	AD-S-DCAGI-SC-013/14	2016-07-15	19:42:21.86241	3
-195	AD-DCAGI-SA-GAR-01/14	2016-07-16	09:53:42.894832	3
-190	AD-AS-DCAGI-SC-069/15	2016-07-16	09:42:21.069277	3
-196	LPN-AD-DCAGI-SC-027/16	2016-07-16	09:53:45.564108	3
-197	LPN-OP-DCAGI-SC-112/15	2016-07-16	09:53:47.856196	3
-163	AD-S-DCAGI-SC-017/16	2016-07-15	19:42:23.359418	3
-38	GACM/DCI/SJ/CI/011-2015	2016-07-15	12:46:19.413166	3
-40	GACM/DCA/SJ/CI/016-2015	2016-07-15	12:46:23.4376	3
-133	AD-SRO-DCAGI-SC-081/15	2016-07-15	17:02:07.768755	3
-134	CTO.ARRENDAMIENTO.ALTAVISTA02/14	2016-07-15	17:02:09.231447	3
-137	ITP-AS-DCAGI-SC-017-15	2016-07-15	17:02:13.361505	3
-138	ITP-AS-DCAGI-SC-020/16	2016-07-15	17:02:14.751818	3
-139	ITP-AS-DCAGI-SC-036/15	2016-07-15	17:02:16.416251	3
-174	SPF/01/2014-2017	2016-07-15	19:42:45.327419	3
-156	AD-AS-DCAGI-SC-110/15	2016-07-15	19:42:09.510492	3
-157	AD-AS-DCAGI-SC-116/15	2016-07-15	19:42:11.480205	3
-158	AD-AS-DCAGI-SC-119/15	2016-07-15	19:42:14.192358	3
-159	AD-OP-DCAGI-SC-024/16	2016-07-15	19:42:16.732664	3
-160	AD-OP-DCAGI-SC-025/16	2016-07-15	19:42:18.564953	3
-164	AD-SRO-CONV-DCAGI-SC-03/16	2016-07-15	19:42:24.96045	3
-183	AD-AS-DCAGI-SC-011/16	2016-07-16	09:42:04.559219	3
-184	AD-AS-DCAGI-SC-013/16	2016-07-16	09:42:06.711578	3
-185	AD-AS-DCAGI-SC-014-16	2016-07-16	09:42:09.724664	3
-186	AD-AS-DCAGI-SC-016-16	2016-07-16	09:42:12.333491	3
-187	AD-AS-DCAGI-SC-018/15	2016-07-16	09:42:14.378665	3
-188	SA-009KDH999-N39-2015	2016-07-16	09:42:16.757863	3
-189	AD-AS-DCAGI-SC-065/15	2016-07-16	09:42:18.814725	3
-109	LPN-SRO-DCAGI-SC-117/15	2016-07-15	15:58:10.411057	3
-110	LPN-SRO-DCAGI-SC-118/15	2016-07-15	15:58:12.674694	3
-213	AD-AS-DCAGI-SC-046/15	2016-07-17	21:22:07.689417	3
-215	AD-DCAGI-SA-GAR-02/15	2016-07-17	21:22:11.456149	3
-216	AD.DIR/01/SJ/2014	2016-07-17	21:22:14.058161	3
-217	GACM/DCI/SJ/CM/18-2015	2016-07-17	21:22:16.941821	3
-214	AD-AS-DCAGI-SC-013/16	2016-07-17	21:22:10.265649	3
-79	GACM/DCI/SJ/CM/18-2015	2016-07-15	15:34:26.305683	3
-80	GACM/DCI/SJ/CM-018-2015	2016-07-15	15:34:30.5687	3
-194	ITP-AS-DCAGI-SC-005-16	2016-07-16	09:42:31.283073	3
-192	GACM-SEC/01/2014	2016-07-16	09:42:26.851841	3
-222	ITP-AS-DCAGI-SC-007/14	2016-07-22	18:30:58.800274	3
-37	CTO.FIDEICOMISO-01-14	2016-07-15	12:46:17.54207	3
-95	ITP-SRO-DCAGI-SC-63/15	2016-07-15	15:57:45.643211	3
-155	AD-CONV-DCAGI-SC-001/16	2016-07-15	19:42:07.911436	3
+COPY contractingprocess (id, ocid, fecha_creacion, hora_creacion, stage, uri, license, publicationpolicy) FROM stdin;
+220	GACM_PISTA3	2016-07-18	10:21:07.965627	3	\N	\N	\N
+219	GACM_PISTA2	2016-07-18	10:21:02.852422	3	\N	\N	\N
+218	GACM_Edificio_Terminal	2016-07-18	10:20:10.880473	3	\N	\N	\N
+200	AD-AS-DCAGI-SC-057/15	2016-07-17	20:11:35.387287	3	\N	\N	\N
+201	AD-SRO-DCAGI-SC-021-15	2016-07-17	20:11:37.300454	3	\N	\N	\N
+202	AD-SRO-DCAGI-SC-089/15	2016-07-17	20:11:38.986317	3	\N	\N	\N
+19	AD-AS-DCAGI-SC-121/15	2016-07-15	12:45:30.917792	3	\N	\N	\N
+22	AD-SRO-CONV-DCAGI-SC-002/16	2016-07-15	12:45:49.845957	3	\N	\N	\N
+23	AD-SRO-CONV-DCAGI-SC-04/16	2016-07-15	12:45:51.141064	3	\N	\N	\N
+71	GACM/DCI/SJ/CI/001-2015	2016-07-15	13:23:19.353123	3	\N	\N	\N
+61	ITP-SRO-DCAGI-SC-049/2015	2016-07-15	12:47:04.935183	3	\N	\N	\N
+2	AD-AS-DCAGI-SC-050-2015	2016-07-15	12:45:02.461858	3	\N	\N	\N
+73	GACM/DCI/SJ/CI/02-2014	2016-07-15	13:38:08.813878	3	\N	\N	\N
+182	E0A1VWO	2016-07-16	09:42:02.508596	3	\N	\N	\N
+24	AD-SRO-CONV-DCAGI-SC-006/16	2016-07-15	12:45:53.29262	3	\N	\N	\N
+25	AD-SRO-DCAGI-SC-001/15	2016-07-15	12:45:55.4532	3	\N	\N	\N
+193	SEC-/03/2014	2016-07-16	09:42:28.960228	3	\N	\N	\N
+20	AD-S-DCAGI-SC-016/2014	2016-07-15	12:45:32.940518	3	\N	\N	\N
+16	AD-SRO-DCAGI-SC-098/15	2016-07-15	12:45:25.661747	3	\N	\N	\N
+74	GACM/DCI/SJ/CI/03-2014	2016-07-15	13:50:46.531092	3	\N	\N	\N
+26	AD-SRO-DCAGI-SC-002/16	2016-07-15	12:45:56.860718	3	\N	\N	\N
+27	AD-SRO-DCAGI-SC-002/2015	2016-07-15	12:45:59.124896	3	\N	\N	\N
+55	AD-AS-DCAGI-SC-053/15	2016-07-15	12:46:50.710612	3	\N	\N	\N
+75	GACM/DCI/SJ/CI/04-2014	2016-07-15	14:01:20.091646	3	\N	\N	\N
+81	LPN-OP-DCAGI-SC-115/15	2016-07-15	15:46:35.560295	3	\N	\N	\N
+82	LPN-SRO-DCAGI-SC-043/15	2016-07-15	15:56:45.356319	3	\N	\N	\N
+83	LPN-SRO-DCAGI-SC-042/15	2016-07-15	15:56:47.16826	3	\N	\N	\N
+84	LPN-SRO-DCAGI-SC-041/15	2016-07-15	15:56:50.163156	3	\N	\N	\N
+85	LPN-SRO-DCAGI-SC-026/15	2016-07-15	15:56:52.075169	3	\N	\N	\N
+86	LPN-OP-DCAGI-SC-114/15	2016-07-15	15:56:54.123315	3	\N	\N	\N
+87	LPN-OP-DCAGI-SC-076/15	2016-07-15	15:56:55.787421	3	\N	\N	\N
+89	LPN-OP-DCAGI-SC-066/15	2016-07-15	15:57:36.866808	3	\N	\N	\N
+90	LPN-O-DCAGI-SC-024/15	2016-07-15	15:57:38.178831	3	\N	\N	\N
+91	LPN-AS-DACGI-SC-033/16	2016-07-15	15:57:39.546721	3	\N	\N	\N
+92	LPI-SRO-DCAGI-SC-030/15	2016-07-15	15:57:40.810214	3	\N	\N	\N
+93	LPI-OP-DCAGI-CS-079-15	2016-07-15	15:57:42.05138	3	\N	\N	\N
+94	ITP-SRO-DCAGI-SC-082/15	2016-07-15	15:57:43.962494	3	\N	\N	\N
+96	ITP-SRO-DCAGI-SC-048/15	2016-07-15	15:57:47.146616	3	\N	\N	\N
+97	ITP-SRO-DCAGI-SC-045/15	2016-07-15	15:57:48.763256	3	\N	\N	\N
+98	ITP-SRO-DCAGI-SC-044/15	2016-07-15	15:57:50.468335	3	\N	\N	\N
+99	ITP-SRO-DCAGI-SC-037/15	2016-07-15	15:57:53.524031	3	\N	\N	\N
+100	ITP-SRO-DCAGI-SC-027/15	2016-07-15	15:57:55.083309	3	\N	\N	\N
+48	ITP-OP-DCAGI-SC-014/15	2016-07-15	12:46:37.645967	3	\N	\N	\N
+203	GACM/DCI/SJ/CM-E/001-2016	2016-07-17	20:18:02.66401	3	\N	\N	\N
+204	GACM/DG/DCAGI/SJ/CI/010/15	2016-07-17	20:18:03.892373	3	\N	\N	\N
+205	AD-AS-DCAGI-SC-035-16	2016-07-17	20:18:04.87475	3	\N	\N	\N
+198	104-014-CUNA01-3S	2016-07-16	14:08:45.558056	3	\N	\N	\N
+199	AS-AS-DCAGI-SC-55/15	2016-07-16	20:08:26.648476	3	\N	\N	\N
+207	ITP-S-DCAGI-SC-004/2014	2016-07-17	20:18:06.610328	3	\N	\N	\N
+206	ITP-OP-DCAGI-SC-012/16	2016-07-17	20:18:05.645915	3	\N	\N	\N
+49	ITP-SR-DCAGI-SC-015-2015	2016-07-15	12:46:39.221696	3	\N	\N	\N
+54	AD-AS-DCAGI-SC-029/2015	2016-07-15	12:46:48.974974	3	\N	\N	\N
+50	ITP-SRO-DCAGI-SC-040/15	2016-07-15	12:46:41.516907	3	\N	\N	\N
+41	GACM/DCI/SJ/CI/007-2015	2016-07-15	12:46:25.240137	3	\N	\N	\N
+42	GACM/DCI/SJ/CM-E/03-2015	2016-07-15	12:46:26.900669	3	\N	\N	\N
+43	GACM/DCI/SJ/CM-E/05-2015	2016-07-15	12:46:29.028766	3	\N	\N	\N
+47	GACM/DG/DCAGI/SJ-1044/2015	2016-07-15	12:46:36.284647	3	\N	\N	\N
+59	ITP-AS-DCAGI-SC-058/15	2016-07-15	12:47:00.309419	3	\N	\N	\N
+115	AD-AS-DCAGI-SC-052/15	2016-07-15	16:59:31.503627	3	\N	\N	\N
+116	AD-AS-DCAGI-SC-074/15	2016-07-15	16:59:33.288226	3	\N	\N	\N
+121	AD-AS-DCAGI-SC-106-15	2016-07-15	16:59:48.672632	3	\N	\N	\N
+4	AD-SRO-DCAGI-SC-010/16	2016-07-15	12:45:05.094307	3	\N	\N	\N
+5	AD-AS-DCAGI-SC-073/15	2016-07-15	12:45:07.196849	3	\N	\N	\N
+7	AD-SRO-DCAGI-SC-087/15	2016-07-15	12:45:10.341997	3	\N	\N	\N
+9	AD-SRO-DCAGI-SC-090/15	2016-07-15	12:45:14.302237	3	\N	\N	\N
+10	AD-SRO-DCAGI-SC-091/15	2016-07-15	12:45:16.253018	3	\N	\N	\N
+12	AD-SRO-DCAGI-SC-094/15	2016-07-15	12:45:19.516921	3	\N	\N	\N
+14	AD-SRO-DCAGI-SC-096/15	2016-07-15	12:45:22.694056	3	\N	\N	\N
+1	AD-AS-DCAGI-SC-031/15	2016-07-15	12:45:00.121702	3	\N	\N	\N
+64	LPI-SRO-DCAGI-SC-030-15	2016-07-15	12:47:10.525202	3	\N	\N	\N
+62	ITP-SRO-DCAGI-SC-037/15	2016-07-15	12:47:06.383237	3	\N	\N	\N
+46	GACM/DCPEV/SJ/CG-E/06-2015	2016-07-15	12:46:34.389018	3	\N	\N	\N
+173	GACM/DCI/SJ/CI/008/2015	2016-07-15	19:42:42.479772	3	\N	\N	\N
+44	GACM/DCI/SJ/CM-E/017-2015	2016-07-15	12:46:30.893993	3	\N	\N	\N
+72	GACM/DCI/SJ/CI/012-2015	2016-07-15	13:34:37.50145	3	\N	\N	\N
+45	GACM/DCPEV/SJ/CG/02-2015	2016-07-15	12:46:32.686266	3	\N	\N	\N
+165	AD-SRO-DCAGI-SC-012/15	2016-07-15	19:42:26.31763	3	\N	\N	\N
+166	AD-SRO-DCAGI-SC-013/15	2016-07-15	19:42:27.478479	3	\N	\N	\N
+167	AD-SRO-DCAGI-SC-019/16	2016-07-15	19:42:29.295844	3	\N	\N	\N
+168	AD-SRO-DCAGI-SC-026-16	2016-07-15	19:42:31.037829	3	\N	\N	\N
+169	AD-SRO-DCAGI-SC-031-16	2016-07-15	19:42:33.669493	3	\N	\N	\N
+171	AD-SRO-DCAGI-SC-103/15	2016-07-15	19:42:38.622103	3	\N	\N	\N
+172	AD-SRO-DCAGI-SC-104/15	2016-07-15	19:42:40.215031	3	\N	\N	\N
+144	LPN-SRO-DCAGI-SC-028-2016	2016-07-15	19:41:48.894074	3	\N	\N	\N
+111	9-989-GAC9806011J4-05-03-2015	2016-07-15	16:59:24.574017	3	\N	\N	\N
+128	AD-SRO-DCAGI-SC-003/16	2016-07-15	17:00:01.921494	3	\N	\N	\N
+153	AD-AS-DCAGI-SC-068/15	2016-07-15	19:42:04.82317	3	\N	\N	\N
+170	AD-SRO-DCAGI-SC-039/15	2016-07-15	19:42:36.574439	3	\N	\N	\N
+175	AD-AS-DCAGI-SC-074/15	2016-07-15	22:17:11.133575	3	\N	\N	\N
+3	AD-AS-DCAGI-SC-008/16	2016-07-15	12:45:03.869167	3	\N	\N	\N
+6	AD-SRO-DCAGI-SC-85/15	2016-07-15	12:45:08.532721	3	\N	\N	\N
+8	AD-SRO-DCAGI-SC-088/15	2016-07-15	12:45:11.80601	3	\N	\N	\N
+11	AD-SRO-DCAGI-SC-093/15	2016-07-15	12:45:18.005016	3	\N	\N	\N
+13	AD-SRO-DCAGI-SC-095/15	2016-07-15	12:45:21.32555	3	\N	\N	\N
+15	AD-SRO-DCAGI-SC-097/15	2016-07-15	12:45:24.084765	3	\N	\N	\N
+208	AD-AS-DCAGI-SC-022/15	2016-07-17	20:43:25.766891	3	\N	\N	\N
+209	AD-SRO-DCAGI-SC-086/15	2016-07-17	20:43:31.818663	3	\N	\N	\N
+210	CTO.ARRENDAMIENTO.T.MURANO.01/14	2016-07-17	20:43:33.069173	3	\N	\N	\N
+211	DTC-026/2013	2016-07-17	20:43:34.438488	3	\N	\N	\N
+212	GACM/DCI/SJ/CC-015-15	2016-07-17	20:43:37.188889	3	\N	\N	\N
+221	GACM/DG/DCAGI/SJ/CI/01-2014	2016-07-22	17:45:31.275277	3	\N	\N	\N
+122	AD-AS-DCAGI-SC-109/15	2016-07-15	16:59:49.55885	3	\N	\N	\N
+124	AD-DCAGI-SA-GAR-007/15	2016-07-15	16:59:54.324795	3	\N	\N	\N
+125	AD.DIR/01/SJ/2014	2016-07-15	16:59:56.912087	3	\N	\N	\N
+127	AD-AS-DCAGI-SC-012/2014	2016-07-15	17:00:00.343948	3	\N	\N	\N
+129	AD-SRO-DCAGI-SC-019/15	2016-07-15	17:00:03.825002	3	\N	\N	\N
+56	AD-AS-DCAGI-SC-54/15	2016-07-15	12:46:52.053252	3	\N	\N	\N
+58	AD-AS-DCAGI-SC-072-15	2016-07-15	12:46:58.693611	3	\N	\N	\N
+35	AD-SRO-DCAGI-SC-010/15	2016-07-15	12:46:13.638554	3	\N	\N	\N
+39	GACM/DCI/SJ/CI/05-2014	2016-07-15	12:46:21.886456	3	\N	\N	\N
+131	AD-SRO-DCAGI-SC-022/16	2016-07-15	17:02:05.169137	3	\N	\N	\N
+132	AD-SRO-DCAGI-SC-030-16	2016-07-15	17:02:06.49846	3	\N	\N	\N
+135	CTO.ARRENDAMIENTO.T.MURANO.01/15	2016-07-15	17:02:10.767469	3	\N	\N	\N
+136	ITP-AS-DCAGI-SC-004/16	2016-07-15	17:02:11.913044	3	\N	\N	\N
+142	ITP-SRO-DCAGI-SC-080/15	2016-07-15	19:41:42.462057	3	\N	\N	\N
+140	ITP-SRO-DCAGI-SC-034/16	2016-07-15	17:02:18.78431	3	\N	\N	\N
+88	LPN-O-DCAGI-SC-014/2014	2016-07-15	15:56:57.603277	3	\N	\N	\N
+143	ITP-SRO-DCAGI-SC-107/15	2016-07-15	19:41:43.918434	3	\N	\N	\N
+70	LPN-SRO-DCAGI-SC-042/15	2016-07-15	12:47:26.205045	3	\N	\N	\N
+141	ITP-OP-DCAGl-SC-105-15	2016-07-15	19:41:36.87771	3	\N	\N	\N
+52	AD-AS-DCAGI-SC-006/16	2016-07-15	12:46:45.446712	3	\N	\N	\N
+51	001-16	2016-07-15	12:46:42.716691	3	\N	\N	\N
+123	AD-AS-DCAGI-SC-113/15	2016-07-15	16:59:52.096254	3	\N	\N	\N
+126	AD-S-DCAGI-SC-010/2014	2016-07-15	16:59:58.791804	3	\N	\N	\N
+53	AD-AS-DCAGI-SC-019-BIS/2015	2016-07-15	12:46:47.701866	3	\N	\N	\N
+130	AD-SRO-DCAGI-SC-021/16	2016-07-15	17:00:05.578665	3	\N	\N	\N
+146	AD-AS-DCAGI-SC-007/16	2016-07-15	19:41:56.072566	3	\N	\N	\N
+147	AD-AS-DCAGI-SC-014-16	2016-07-15	19:41:57.040217	3	\N	\N	\N
+148	AD-AS-DCAGI-SC-029-16	2016-07-15	19:41:58.03794	3	\N	\N	\N
+149	AD-AS-DCAGI-SC-038/15	2016-07-15	19:41:59.943435	3	\N	\N	\N
+150	AD-AS-DCAGI-SC-046/15	2016-07-15	19:42:01.056081	3	\N	\N	\N
+151	AD-AS-DCAGI-SC-056/16	2016-07-15	19:42:02.391629	3	\N	\N	\N
+152	AD-AS-DCAGI-SC-62/15	2016-07-15	19:42:03.684614	3	\N	\N	\N
+154	AD-AS-DCAGI-SC-84/15	2016-07-15	19:42:06.021975	3	\N	\N	\N
+176	AD-DCAGI-SA-GAR-01/14	2016-07-16	09:40:11.62071	3	\N	\N	\N
+177	AD-DCAGI-SA-GAR-02/15	2016-07-16	09:40:17.572015	3	\N	\N	\N
+57	AD-AS-DCAGI-SC-070/2015	2016-07-15	12:46:53.76587	3	\N	\N	\N
+178	AD-DCAGI-SA-GAR-0005/15	2016-07-16	09:40:20.691252	3	\N	\N	\N
+179	AD-DCAGI-SA-GAR-0006/15	2016-07-16	09:40:22.345535	3	\N	\N	\N
+180	AD-DCAGI-SA-GAR-01/15	2016-07-16	09:40:24.825323	3	\N	\N	\N
+181	AD-OP-DCAGI-SC-064/15	2016-07-16	09:40:26.57557	3	\N	\N	\N
+60	ITP-AS-DCAGI-SC-060/15	2016-07-15	12:47:01.969182	3	\N	\N	\N
+191	GACM-DCI-SJ-CM-E-02-14	2016-07-16	09:42:23.953995	3	\N	\N	\N
+36	AD-SRO-DCAGI-SC-011/15	2016-07-15	12:46:15.013398	3	\N	\N	\N
+101	ITP-SRO-DCAGI-SC-018/16	2016-07-15	15:57:57.019827	3	\N	\N	\N
+21	AD-S-DCAGI-SC-017/2014	2016-07-15	12:45:47.213846	3	\N	\N	\N
+77	GACM/DCI/CJ/SJ/014-2015	2016-07-15	15:34:23.265841	3	\N	\N	\N
+76	GACM/DCI/SJ/CI/013-2015	2016-07-15	15:34:21.455478	3	\N	\N	\N
+17	AD-SRO-DCAGI-SC-099/15	2016-07-15	12:45:27.301242	3	\N	\N	\N
+18	AD-SRO-DCAGI-SC-100/15	2016-07-15	12:45:29.294093	3	\N	\N	\N
+78	GACM/DCI/SJ/CM/01-2014	2016-07-15	15:34:24.681449	3	\N	\N	\N
+102	ITP-SRO-DCAGI-SC-016/15	2016-07-15	15:57:58.291692	3	\N	\N	\N
+103	ITP-SRO-DCAGI-SC-015-16	2016-07-15	15:57:59.41174	3	\N	\N	\N
+104	ITP-S-DCAGI-SC-009/2014	2016-07-15	15:58:00.699547	3	\N	\N	\N
+105	ITP-S-DCAGI-SC-008/2014	2016-07-15	15:58:01.902314	3	\N	\N	\N
+145	AD/01CTO.MTO./2014	2016-07-15	19:41:55.04548	3	\N	\N	\N
+106	ITP-S-DCAGI-SC-004-2014	2016-07-15	15:58:05.100304	3	\N	\N	\N
+107	ITP-S-DCAGI-SC-002-2014	2016-07-15	15:58:06.772029	3	\N	\N	\N
+108	ITP-OP-DCAGI-SC-012-16	2016-07-15	15:58:08.323147	3	\N	\N	\N
+28	AD-SRO-DCAGI-SC-003/15	2016-07-15	12:46:00.719071	3	\N	\N	\N
+69	LPN-SRO-DCAGI-SC-041/15	2016-07-15	12:47:23.725051	3	\N	\N	\N
+29	AD-SRO-DCAGI-SC-004/15	2016-07-15	12:46:03.638289	3	\N	\N	\N
+63	ITP-SRO-DCAGI-SC-048/15	2016-07-15	12:47:08.135482	3	\N	\N	\N
+30	AD-SRO-DCAGI-SC-005/15	2016-07-15	12:46:05.271177	3	\N	\N	\N
+31	AD-SRO-DCAGI-SC-006/15	2016-07-15	12:46:06.581081	3	\N	\N	\N
+32	AD-SRO-DCAGI-SC-007/15	2016-07-15	12:46:07.996628	3	\N	\N	\N
+33	AD-SRO-DCAGI-SC-008/15	2016-07-15	12:46:09.7811	3	\N	\N	\N
+112	AD-A-DCAGI-SC-001/2014	2016-07-15	16:59:26.173783	3	\N	\N	\N
+34	AD-SRO-DCAGI-SC-009/15	2016-07-15	12:46:11.671288	3	\N	\N	\N
+113	AD-AS-DCAGI-SC-047/15	2016-07-15	16:59:27.983232	3	\N	\N	\N
+114	AD-AS-DSAGI-SC-51/2015	2016-07-15	16:59:29.879503	3	\N	\N	\N
+65	LPN-SRO-DCAGI-SC-009/2016	2016-07-15	12:47:12.652952	3	\N	\N	\N
+66	LPN-SRO-DCAGI-SC-025/15	2016-07-15	12:47:14.566125	3	\N	\N	\N
+117	AD-AS-DCAGI-SC-075/15	2016-07-15	16:59:34.615854	3	\N	\N	\N
+118	AD-AS-DCAGI-SC-78/15	2016-07-15	16:59:36.088779	3	\N	\N	\N
+67	LPN-SRO-DCAGI-SC-026/15	2016-07-15	12:47:19.172941	3	\N	\N	\N
+119	AD-AS-DCAGI-SC-83/15	2016-07-15	16:59:37.328086	3	\N	\N	\N
+120	AD-AS-DCAGI-SC--102/15	2016-07-15	16:59:47.447801	3	\N	\N	\N
+68	LPN-SRO-DCAGI-SC-043/15	2016-07-15	12:47:21.237841	3	\N	\N	\N
+161	AD-OP-DCAGI-SC-108/15	2016-07-15	19:42:20.069529	3	\N	\N	\N
+162	AD-S-DCAGI-SC-013/14	2016-07-15	19:42:21.86241	3	\N	\N	\N
+195	AD-DCAGI-SA-GAR-01/14	2016-07-16	09:53:42.894832	3	\N	\N	\N
+190	AD-AS-DCAGI-SC-069/15	2016-07-16	09:42:21.069277	3	\N	\N	\N
+196	LPN-AD-DCAGI-SC-027/16	2016-07-16	09:53:45.564108	3	\N	\N	\N
+197	LPN-OP-DCAGI-SC-112/15	2016-07-16	09:53:47.856196	3	\N	\N	\N
+163	AD-S-DCAGI-SC-017/16	2016-07-15	19:42:23.359418	3	\N	\N	\N
+38	GACM/DCI/SJ/CI/011-2015	2016-07-15	12:46:19.413166	3	\N	\N	\N
+40	GACM/DCA/SJ/CI/016-2015	2016-07-15	12:46:23.4376	3	\N	\N	\N
+133	AD-SRO-DCAGI-SC-081/15	2016-07-15	17:02:07.768755	3	\N	\N	\N
+134	CTO.ARRENDAMIENTO.ALTAVISTA02/14	2016-07-15	17:02:09.231447	3	\N	\N	\N
+137	ITP-AS-DCAGI-SC-017-15	2016-07-15	17:02:13.361505	3	\N	\N	\N
+138	ITP-AS-DCAGI-SC-020/16	2016-07-15	17:02:14.751818	3	\N	\N	\N
+139	ITP-AS-DCAGI-SC-036/15	2016-07-15	17:02:16.416251	3	\N	\N	\N
+174	SPF/01/2014-2017	2016-07-15	19:42:45.327419	3	\N	\N	\N
+156	AD-AS-DCAGI-SC-110/15	2016-07-15	19:42:09.510492	3	\N	\N	\N
+157	AD-AS-DCAGI-SC-116/15	2016-07-15	19:42:11.480205	3	\N	\N	\N
+158	AD-AS-DCAGI-SC-119/15	2016-07-15	19:42:14.192358	3	\N	\N	\N
+159	AD-OP-DCAGI-SC-024/16	2016-07-15	19:42:16.732664	3	\N	\N	\N
+160	AD-OP-DCAGI-SC-025/16	2016-07-15	19:42:18.564953	3	\N	\N	\N
+164	AD-SRO-CONV-DCAGI-SC-03/16	2016-07-15	19:42:24.96045	3	\N	\N	\N
+183	AD-AS-DCAGI-SC-011/16	2016-07-16	09:42:04.559219	3	\N	\N	\N
+184	AD-AS-DCAGI-SC-013/16	2016-07-16	09:42:06.711578	3	\N	\N	\N
+185	AD-AS-DCAGI-SC-014-16	2016-07-16	09:42:09.724664	3	\N	\N	\N
+186	AD-AS-DCAGI-SC-016-16	2016-07-16	09:42:12.333491	3	\N	\N	\N
+187	AD-AS-DCAGI-SC-018/15	2016-07-16	09:42:14.378665	3	\N	\N	\N
+188	SA-009KDH999-N39-2015	2016-07-16	09:42:16.757863	3	\N	\N	\N
+189	AD-AS-DCAGI-SC-065/15	2016-07-16	09:42:18.814725	3	\N	\N	\N
+109	LPN-SRO-DCAGI-SC-117/15	2016-07-15	15:58:10.411057	3	\N	\N	\N
+110	LPN-SRO-DCAGI-SC-118/15	2016-07-15	15:58:12.674694	3	\N	\N	\N
+213	AD-AS-DCAGI-SC-046/15	2016-07-17	21:22:07.689417	3	\N	\N	\N
+215	AD-DCAGI-SA-GAR-02/15	2016-07-17	21:22:11.456149	3	\N	\N	\N
+216	AD.DIR/01/SJ/2014	2016-07-17	21:22:14.058161	3	\N	\N	\N
+217	GACM/DCI/SJ/CM/18-2015	2016-07-17	21:22:16.941821	3	\N	\N	\N
+214	AD-AS-DCAGI-SC-013/16	2016-07-17	21:22:10.265649	3	\N	\N	\N
+79	GACM/DCI/SJ/CM/18-2015	2016-07-15	15:34:26.305683	3	\N	\N	\N
+80	GACM/DCI/SJ/CM-018-2015	2016-07-15	15:34:30.5687	3	\N	\N	\N
+194	ITP-AS-DCAGI-SC-005-16	2016-07-16	09:42:31.283073	3	\N	\N	\N
+192	GACM-SEC/01/2014	2016-07-16	09:42:26.851841	3	\N	\N	\N
+222	ITP-AS-DCAGI-SC-007/14	2016-07-22	18:30:58.800274	3	\N	\N	\N
+37	CTO.FIDEICOMISO-01-14	2016-07-15	12:46:17.54207	3	\N	\N	\N
+95	ITP-SRO-DCAGI-SC-63/15	2016-07-15	15:57:45.643211	3	\N	\N	\N
+155	AD-CONV-DCAGI-SC-001/16	2016-07-15	19:42:07.911436	3	\N	\N	\N
 \.
 
 
@@ -4194,6 +4202,7 @@ COPY planning (id, contractingprocess_id, rationale) FROM stdin;
 60	60	Artículo 42 segundo pàrrafo de la LAASSP
 50	50	Artículo 42 fracción XI de la LOPSRM.
 140	140	Brindar apoyo técnico a la residencia en materia de arquitectura encomendadas a la empresa responsable de la elaboración del Proyecto ejecutivo del edificio terminal de pasajeros, vialidades de acceso, estacionamiento y torre de control y centros de operaciones del NAICM, para apoyar a la residencia del proyecto de la DCI y orientar la toma de decisiones del GACM en términos contenidos de arquitectura, calidad y avance del desarrollo de los mismos.
+100	100	Se requieren los servisioc ara revisar técnicamente todos los docuemntos requeridos par eel desarrollo adecuado de los múltiples procesos licitatorios que se requerirán para el desarrollo del proyecto del NACIM asegurando en tiempo y fomra ue cumplan con los requisitos técnicos.
 156	156	Justificación para llevar a cabo la Contratación a través del Procedimiento de Adjudicación Directa, por caso de Excepción, del Servicio deTestigo Social para que Atestigüe la Etapas del Procedimiento de la Licitación Pública Nacional de Obra Pública de Carga, Acarreo y Descarga Dentro y Fuera del Polígono del Material Existente, Producto de Depósitos de Demoliciones y Desazolve, Incluye Conformación del Terreno donde se Construirá el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) para el NAICM
 157	157	Dada la importancia de la Licitación Pública Nacional para la "Construcción de los caminos provisionales de acceso al NAICM, ejecutando trabajos de terraceria, estructura, obras de drenaje, pavimentación y saneamiento" se solicitó a la Secretaría de la Función Pública la designación de un testigo socual que participe en dicho proceso de contratación.
 158	158	Dada la importancia de la Licitación Pública Nacional para la "Licitación Pública Nacional de Obra Pública de Nivelación y Limpieza del Terreno del Nuevo Aeropuerto Internacional de la Ciudad de México" se solicitó a la Secretaría de la Función Pública la designación de un testigo social que participe en dicho proceso de contratación.
@@ -4214,7 +4223,6 @@ COPY planning (id, contractingprocess_id, rationale) FROM stdin;
 162	162	Implantar un sistema de planificación de recursos gubernamentales que apoye a los funcionarios del GACM a ser capaces de gestionar en primera instancia las operaciones de construcción del aeropuerto y posteriormente, administrar su operación bajo los requerimientos del Consejo Nacional de Armonización Contable (CONAC)
 98	98	Con el fin de trasladar al personal beneficiarios del programa de empleo temporal al lugar donde realizarán su labor, se requiere dotar de transporte especializado para la movilidad al interior del polígono donde se desarrollara el proyecto del NAICM. No obstante que los lineamientos del PET-SCT, señala que la secretaría será la encargada de facilitar el transporte, por medio de la ayuda económica, es importante señalar que la ubicación del polígono así como su acceso se encuentran sobre la autopista federal peñón -Texcoco, por lo que no hay transporte público, así mismo, los puntos de donde saldrán los brigadistas son tan variados que la ayuda de transporte sería inequitativa para cada caso, por último, es importante considerar la situación financiera de la dirección general adjunta de empleo temporal, de la SCT. 
 99	99	Elaborar el Proyecto ejecutivo para la Construcción del camino perimetral y sus instalaciones complementaias en el lado norte del polígono del NAICM, que permita el aseguramiento de las instalaciones durante y después de la construcción del NAICM
-100	100	Se requieren los servisioc ara revisar técnicamente todos los docuemntos requeridos par eel desarrollo adecuado de los múltiples procesos licitatorios que se requerirán para el desarrollo del proyecto del NACIM asegurando en tiempo y fomra ue cumplan con los requisitos técnicos.
 103	103	El objetivo del proyecto es obtener la certificación bajo la versió LEED v4 BD + C para Nuevas construcciones que están ubicadas dentro del campus LEED que conformará el NAICM, dicho campus, ha sido registrados ante el USGBC. Cuatro edificios van a obtener la certificaicón y cada uno obtendrá un nivel de certificación diferente. 
 105	105	Permitir al Grupo Aeroportuario de la Ciudad de México S.A. de C.V. cumplir las metas y programas institucionales propios al ejercicio de sus funciones, resulta indispensable efectuar  la adaptación y adecuación de las instalaciones. 
 212	212	
@@ -5651,7 +5659,7 @@ SELECT pg_catalog.setval('tendermilestonedocuments_id_seq', 1, false);
 
 
 --
--- Name: award_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: award_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY award
@@ -5659,7 +5667,7 @@ ALTER TABLE ONLY award
 
 
 --
--- Name: awardamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: awardamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awardamendmentchanges
@@ -5667,7 +5675,7 @@ ALTER TABLE ONLY awardamendmentchanges
 
 
 --
--- Name: awarddocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: awarddocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarddocuments
@@ -5675,7 +5683,7 @@ ALTER TABLE ONLY awarddocuments
 
 
 --
--- Name: awarditem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: awarditem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditem
@@ -5683,7 +5691,7 @@ ALTER TABLE ONLY awarditem
 
 
 --
--- Name: awarditemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: awarditemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditemadditionalclassifications
@@ -5691,7 +5699,7 @@ ALTER TABLE ONLY awarditemadditionalclassifications
 
 
 --
--- Name: budget_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: budget_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY budget
@@ -5699,7 +5707,7 @@ ALTER TABLE ONLY budget
 
 
 --
--- Name: buyer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: buyer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyer
@@ -5707,7 +5715,7 @@ ALTER TABLE ONLY buyer
 
 
 --
--- Name: buyeradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: buyeradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyeradditionalidentifiers
@@ -5715,7 +5723,7 @@ ALTER TABLE ONLY buyeradditionalidentifiers
 
 
 --
--- Name: contract_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: contract_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contract
@@ -5723,7 +5731,7 @@ ALTER TABLE ONLY contract
 
 
 --
--- Name: contractamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: contractamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractamendmentchanges
@@ -5731,7 +5739,7 @@ ALTER TABLE ONLY contractamendmentchanges
 
 
 --
--- Name: contractdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: contractdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractdocuments
@@ -5739,7 +5747,7 @@ ALTER TABLE ONLY contractdocuments
 
 
 --
--- Name: contractingprocess_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: contractingprocess_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractingprocess
@@ -5747,7 +5755,7 @@ ALTER TABLE ONLY contractingprocess
 
 
 --
--- Name: contractitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: contractitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitem
@@ -5755,7 +5763,7 @@ ALTER TABLE ONLY contractitem
 
 
 --
--- Name: contractitemadditionalclasifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: contractitemadditionalclasifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitemadditionalclasifications
@@ -5763,7 +5771,7 @@ ALTER TABLE ONLY contractitemadditionalclasifications
 
 
 --
--- Name: implementation_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: implementation_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementation
@@ -5771,7 +5779,7 @@ ALTER TABLE ONLY implementation
 
 
 --
--- Name: implementationdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: implementationdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationdocuments
@@ -5779,7 +5787,7 @@ ALTER TABLE ONLY implementationdocuments
 
 
 --
--- Name: implementationmilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: implementationmilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestone
@@ -5787,7 +5795,7 @@ ALTER TABLE ONLY implementationmilestone
 
 
 --
--- Name: implementationmilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: implementationmilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestonedocuments
@@ -5795,7 +5803,7 @@ ALTER TABLE ONLY implementationmilestonedocuments
 
 
 --
--- Name: implementationtransactions_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: implementationtransactions_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationtransactions
@@ -5803,7 +5811,7 @@ ALTER TABLE ONLY implementationtransactions
 
 
 --
--- Name: planning_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: planning_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planning
@@ -5811,7 +5819,7 @@ ALTER TABLE ONLY planning
 
 
 --
--- Name: planningdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: planningdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planningdocuments
@@ -5819,7 +5827,7 @@ ALTER TABLE ONLY planningdocuments
 
 
 --
--- Name: procuringentity_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: procuringentity_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentity
@@ -5827,7 +5835,7 @@ ALTER TABLE ONLY procuringentity
 
 
 --
--- Name: procuringentityadditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: procuringentityadditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentityadditionalidentifiers
@@ -5835,7 +5843,7 @@ ALTER TABLE ONLY procuringentityadditionalidentifiers
 
 
 --
--- Name: publisher_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: publisher_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY publisher
@@ -5843,7 +5851,7 @@ ALTER TABLE ONLY publisher
 
 
 --
--- Name: supplier_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: supplier_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplier
@@ -5851,7 +5859,7 @@ ALTER TABLE ONLY supplier
 
 
 --
--- Name: supplieradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: supplieradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplieradditionalidentifiers
@@ -5859,7 +5867,7 @@ ALTER TABLE ONLY supplieradditionalidentifiers
 
 
 --
--- Name: tender_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: tender_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tender
@@ -5867,7 +5875,7 @@ ALTER TABLE ONLY tender
 
 
 --
--- Name: tenderamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: tenderamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderamendmentchanges
@@ -5875,7 +5883,7 @@ ALTER TABLE ONLY tenderamendmentchanges
 
 
 --
--- Name: tenderdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: tenderdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderdocuments
@@ -5883,7 +5891,7 @@ ALTER TABLE ONLY tenderdocuments
 
 
 --
--- Name: tenderer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: tenderer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderer
@@ -5891,7 +5899,7 @@ ALTER TABLE ONLY tenderer
 
 
 --
--- Name: tendereradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: tendereradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendereradditionalidentifiers
@@ -5899,7 +5907,7 @@ ALTER TABLE ONLY tendereradditionalidentifiers
 
 
 --
--- Name: tenderitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: tenderitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitem
@@ -5907,7 +5915,7 @@ ALTER TABLE ONLY tenderitem
 
 
 --
--- Name: tenderitemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: tenderitemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitemadditionalclassifications
@@ -5915,7 +5923,7 @@ ALTER TABLE ONLY tenderitemadditionalclassifications
 
 
 --
--- Name: tendermilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: tendermilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestone
@@ -5923,7 +5931,7 @@ ALTER TABLE ONLY tendermilestone
 
 
 --
--- Name: tendermilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester; Tablespace: 
+-- Name: tendermilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestonedocuments
@@ -5959,7 +5967,7 @@ ALTER TABLE ONLY awardamendmentchanges
 --
 
 ALTER TABLE ONLY awarddocuments
-    ADD CONSTRAINT awarddocuments_award_id_fkey FOREIGN KEY (award_id) REFERENCES award(id) on delete cascade;
+    ADD CONSTRAINT awarddocuments_award_id_fkey FOREIGN KEY (award_id) REFERENCES award(id) ON DELETE CASCADE;
 
 
 --
@@ -5983,7 +5991,7 @@ ALTER TABLE ONLY awarditem
 --
 
 ALTER TABLE ONLY awarditem
-    ADD CONSTRAINT awarditem_contractingprocess_id_fkey FOREIGN KEY (contractingprocess_id) REFERENCES contractingprocess(id) on delete cascade;
+    ADD CONSTRAINT awarditem_contractingprocess_id_fkey FOREIGN KEY (contractingprocess_id) REFERENCES contractingprocess(id) ON DELETE CASCADE;
 
 
 --
@@ -6311,7 +6319,7 @@ ALTER TABLE ONLY publisher
 --
 
 ALTER TABLE ONLY supplier
-    ADD CONSTRAINT supplier_award_id_fkey FOREIGN KEY (award_id) REFERENCES award(id) on delete cascade;
+    ADD CONSTRAINT supplier_award_id_fkey FOREIGN KEY (award_id) REFERENCES award(id) ON DELETE CASCADE;
 
 
 --
