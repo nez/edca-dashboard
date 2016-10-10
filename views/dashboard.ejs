@@ -18,7 +18,7 @@
 </head>
 <body>
 <dgm-navbar></dgm-navbar>
-<div class="breadcrumb-container">
+<div id="breadcrumb" class="breadcrumb-container">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -39,27 +39,29 @@
                 <h2>Nuevo Aeropuerto Internacional <span>de la Ciudad de México</span></h2>
             </div>
         </div>
-        <div class="row">
+        <div id="datos_duros">
+            <div class="row">
 
-            <div class="col-sm-3 widget">
-                <h5>CONTRATOS EN PROCESO</h5>
-                <p class="stat"><%= metadata.cp_count %></p>
-            </div>
+                <div class="col-sm-3 widget">
+                    <h5>CONTRATOS EN PROCESO</h5>
+                    <p class="stat"><%= metadata.cp_count %></p>
+                </div>
 
-            <div class="col-sm-3 widget">
-                <h5>CONTRATOS ADJUDICADOS</h5>
-                <p class="stat"> <%= metadata.contract_count %></p>
-            </div>
+                <div class="col-sm-3 widget">
+                    <h5>CONTRATOS ADJUDICADOS</h5>
+                    <p class="stat"> <%= metadata.contract_count %></p>
+                </div>
 
-            <div class="col-sm-3 widget">
-                <h5>TOTAL DE PROVEEDORES</h5>
-                <p class="stat"><%= metadata.supplier_count %></p>
-            </div>
-            <div class="col-sm-3 widget">
-                <h5>MONTO TOTAL ADJUDICADO</h5>
-                <p class="stat">$<%= ( parseInt( metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
-            </div>
+                <div class="col-sm-3 widget">
+                    <h5>TOTAL DE PROVEEDORES</h5>
+                    <p class="stat"><%= metadata.supplier_count %></p>
+                </div>
+                <div class="col-sm-3 widget">
+                    <h5>MONTO TOTAL ADJUDICADO</h5>
+                    <p class="stat">$<%= ( parseInt( metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
+                </div>
 
+            </div>
         </div>
     </div>
 </div>
@@ -78,57 +80,59 @@
             </div>
             <div class="col-sm-5">
                 <ul class="chart-legend">
-                    <li style="font-size: larger"><span class="circle" style="background-color: #00cc99"></span>Adjudicación directa</li>
-                    <li style="font-size: larger"><span class="circle" style="background-color: #ff6666"></span>Convenio de colaboración</li>
-                    <li style="font-size: larger"><span class="circle" style="background-color: #663399"></span>Fideicomiso</li>
-                    <li style="font-size: larger"><span class="circle" style="background-color: #ffcc00"></span>Invitación a cuando menos tres personas</li>
-                    <li style="font-size: larger"><span class="circle" style="background-color: #ff6600"></span>Licitación pública</li>
+                    <li><span class="circle" style="background-color: #00cc99"></span>Adjudicación directa</li>
+                    <li><span class="circle" style="background-color: #ff6666"></span>Convenio de colaboración</li>
+                    <li><span class="circle" style="background-color: #663399"></span>Fideicomiso</li>
+                    <li><span class="circle" style="background-color: #ffcc00"></span>Invitación a cuando menos tres personas</li>
+                    <li><span class="circle" style="background-color: #ff6600"></span>Licitación pública</li>
                 </ul>
             </div>
         </div>
     </div>
 
 
-    <h1>Información general de proveedores</h1>
-    <p style="font-size: large">Explora los datos sobre los proveedores de acuerdo a su razón social, tipo de procedimiento o vigencia de su contrato</p>
-    <!--<p class="small">Conjunto de datos: Emisiones 2016</p>-->
-    <div class="well">
-        <nav class="navbar navbar-default" role="navigation">
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul id="visualizador" class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Filtrar <span class="caret"></span></strong></a>
-                        <ul id="filtros" class="dropdown-menu scrollable-menu">
-                            <li class="dropdown-header"><p id="clear_filters" class="clear" style="color:#00cc99; cursor:pointer"><strong>Mostrar/Quitar todos</strong></p></li>
-                            <li class="divider"></li>
-                            <div id="filter-list"></div>
-                        </ul>
-                    </li>
-                    <div class="form-group navbar-form navbar-left">
-                        <select id='group-everything-by' class="form-control">
-                            <option value=''>Agrupar</option>
-                        </select>
-                    </div>
-                    <div class="form-group navbar-form navbar-left">
-                        <select id='color-everything-by' class="form-control">
-                            <option value=''>Colorear</option>
-                        </select>
-                    </div>
-                    <div id="search_form" class="navbar-form navbar-left">
-                        <input type="text" class="form-control" id="buscar_bubble" value="" placeholder="Buscar proveedores"/>
-                    </div>
-                </ul>
+    <div id="proveedores">
+        <h1>Información general de proveedores</h1>
+        <p style="font-size: large">Explora los datos sobre los proveedores de acuerdo a su razón social, tipo de procedimiento o vigencia de su contrato</p>
+        <!--<p class="small">Conjunto de datos: Emisiones 2016</p>-->
+        <div class="well">
+            <nav class="navbar navbar-default" role="navigation">
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul id="visualizador" class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Filtrar <span class="caret"></span></strong></a>
+                            <ul id="filtros" class="dropdown-menu scrollable-menu">
+                                <li class="dropdown-header"><p id="clear_filters" class="clear" style="color:#00cc99; cursor:pointer"><strong>Mostrar/Quitar todos</strong></p></li>
+                                <li class="divider"></li>
+                                <div id="filter-list"></div>
+                            </ul>
+                        </li>
+                        <div class="form-group navbar-form navbar-left">
+                            <select id='group-everything-by' class="form-control">
+                                <option value=''>Agrupar</option>
+                            </select>
+                        </div>
+                        <div class="form-group navbar-form navbar-left">
+                            <select id='color-everything-by' class="form-control">
+                                <option value=''>Colorear</option>
+                            </select>
+                        </div>
+                        <div id="search_form" class="navbar-form navbar-left">
+                            <input type="text" class="form-control" id="buscar_bubble" value="" placeholder="Buscar proveedores"/>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- d3 bubble chart-->
+                    <div id="vis" class="svg-container"></div>
+                </div>
             </div>
-        </nav>
-        <div class="row">
-            <div class="col-sm-12">
-                <!-- d3 bubble chart-->
-                <div id="vis" class="svg-container"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div id='color-hints'></div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id='color-hints'></div>
+                </div>
             </div>
         </div>
     </div>
@@ -162,18 +166,19 @@
         </ul>
     </div>
 
-    <h1>Contrataciones en el tiempo</h1>
-    <p style="font-size: large">Compara los procedimientos de adquisición por su vigencia, fecha de firma y monto asignado</p>
-    <!--<p class="small">Conjunto de datos: Emisiones 2016</p>-->
-    <div class="well series-chart">
-        <div id="series_chart_div" style="height: 400px;"></div>
+    <div id="contrataciones_tiempo">
+        <h1>Contrataciones en el tiempo</h1>
+        <p style="font-size: large">Compara los procedimientos de adquisición por su vigencia, fecha de firma y monto asignado</p>
+        <!--<p class="small">Conjunto de datos: Emisiones 2016</p>-->
+        <div class="well series-chart">
+            <div id="series_chart_div" style="height: 400px;"></div>
+        </div>
     </div>
-
 
 </div>
 <div class="container">
     <h1 id="lista">Lista de contratos</h1>
-    <div class="row">
+    <div class="row" id="busqueda_contratos">
         <div class="col-md-12">
             <form class="form-inline search-form" >
                 <input type="text" id="keyword" class="form-control" placeholder="Buscar contrataciones abiertas">

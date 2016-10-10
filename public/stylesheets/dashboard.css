@@ -151,3 +151,38 @@ div.google-visualization-tooltip {
 .search-form > .form-control.bootstrap-select .dropdown-menu.open .dropdown-menu li:hover > a              { background-color: #0c9; }
 .search-form > .form-control.bootstrap-select .dropdown-menu.open .dropdown-menu li.selected > a > span,
 .search-form > .form-control.bootstrap-select .dropdown-menu.open .dropdown-menu li:hover > a > span       { color: #fff; }
+
+.statistics ul.chart-legend > li{
+    font-size: larger;
+}
+
+@media only screen
+and (min-device-width: 300px)
+and (max-device-width: 736px){
+    .bgimg { height: 250px; }
+    .bgimg h2 { font-size: 20px; margin-bottom: 10px}
+    .bgimg h4 { font-size: 12px;}
+    .bgimg .stat { font-size: 16px }
+    .bgimg {background-size: 500px 250px}
+    #datos_duros{
+        display: none;
+    }
+    #contrataciones_tiempo{ display: none;}
+    #proveedores{display: none;}
+    #busqueda_contratos{ display: none;}
+    #breadcrumb{ display: none;}
+
+    .statistics ul.chart-legend > li{
+     font-size: 14px;
+    }
+
+    .statistics h1 {font-size: 16px;}
+    .statistics p { font-size: 14px;}
+
+    .stages .stages-widget p {font-size: 14px}
+    .stages .stages-widget .content { font-size: 14px; padding-bottom: 25px}
+
+    .stages .stages-widget img {width: 25px}
+    .stages h1 {font-size: 16px}
+
+}
