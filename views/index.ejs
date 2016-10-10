@@ -31,29 +31,31 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="text-center"><img src="/contratacionesabiertas/static/images/icono_con.png" ></p>
+                        <p class="text-center" id="icono_con"><img src="/contratacionesabiertas/static/images/icono_con.png" ></p>
                         <h2>Contrataciones Abiertas</h2>
                         <h4>Descubre los datos abiertos, accesibles y oportunos sobre las etapas de planeación, licitación, adjudicación, <br>contratación e implementación de las contrataciones del gobierno</h4>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-3 widget">
-                        <h5>CONTRATOS EN PROCESO</h5>
-                        <p class="stat"><%= metadata.cp_count %></p>
-                    </div>
+                <div id="datos_duros">
+                    <div class="row">
+                        <div class="col-sm-3 widget">
+                            <h5>CONTRATOS EN PROCESO</h5>
+                            <p class="stat"><%= metadata.cp_count %></p>
+                        </div>
 
-                    <div class="col-sm-3 widget">
-                        <h5>CONTRATOS ADJUDICADOS</h5>
-                        <p class="stat"> <%= metadata.contract_count %></p>
-                    </div>
+                        <div class="col-sm-3 widget">
+                            <h5>CONTRATOS ADJUDICADOS</h5>
+                            <p class="stat"> <%= metadata.contract_count %></p>
+                        </div>
 
-                    <div class="col-sm-3 widget">
-                        <h5>TOTAL DE PROVEEDORES</h5>
-                        <p class="stat"><%= metadata.supplier_count %></p>
-                    </div>
-                    <div class="col-sm-3 widget">
-                        <h5>MONTO TOTAL ADJUDICADO</h5>
-                        <p class="stat">$<%= ( parseInt( metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
+                        <div class="col-sm-3 widget">
+                            <h5>TOTAL DE PROVEEDORES</h5>
+                            <p class="stat"><%= metadata.supplier_count %></p>
+                        </div>
+                        <div class="col-sm-3 widget">
+                            <h5>MONTO TOTAL ADJUDICADO</h5>
+                            <p class="stat">$<%= ( parseInt( metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,7 +64,7 @@
             <div class="row" >
                 <div class="col-md-12">
                     <h1>Conoce cómo contrata tu gobierno</h1>
-                    <p class="big">Selecciona un proyecto, expora las etapas de cada proceso de contratación y conoce la <a href="">metodología de contrataciones abiertas.</a></p>
+                    <p id="conoce" class="big">Selecciona un proyecto, expora las etapas de cada proceso de contratación y conoce la <a href="">metodología de contrataciones abiertas.</a></p>
                     <div class="data-table">
                         <table class="table">
                             <thead>

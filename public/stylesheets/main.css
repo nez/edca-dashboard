@@ -113,6 +113,39 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 .bgimg h5                                   { margin-bottom: 20px; font-size: 14px; font-weight: 600; color: #fff; }
 .bgimg .stat                                { font-size: 36px; }
 
+
+@media only screen
+and (min-device-width: 300px)
+and (max-device-width: 736px){
+    .bgimg { height: 250px; }
+    .bgimg h2 { font-size: 20px; margin-bottom: 10px}
+    .bgimg h4 { font-size: 12px;}
+    .bgimg .stat { font-size: 16px }
+    .bgimg {background-size: 500px 200px}
+    #datos_duros{
+        display: none;
+    }
+    #icono_con{
+        display: none;
+    }
+    #conoce{
+        font-size: 16px;
+    }
+
+
+    .statistics h1 {font-size: 16px;}
+    .statistics p { font-size: 14px;}
+
+    .stages .stages-widget p {font-size: 14px}
+    .stages .stages-widget .content { font-size: 14px; padding-bottom: 25px}
+    
+    .stages .stages-widget img {width: 25px}
+    .stages h1 {font-size: 16px}
+
+}
+
+
+
 /*********************************
     SHARE STYLES
 *********************************/
