@@ -216,6 +216,8 @@ BubbleChart = (function() {
             return color_mapper[d.original[what_to_color_by]];
         });
     };
+
+
     BubbleChart.prototype.get_distinct_values = function(what) {
         var allValues, allValuesArray, key, value,
             _this = this;
@@ -244,6 +246,8 @@ BubbleChart = (function() {
         this.sort(allValuesArray);
         return allValuesArray;
     };
+
+
     BubbleChart.prototype.group_by = function(what_to_group_by) {
         var allValuesArray, numCenters, position, total_slots,
             _this = this;
@@ -276,6 +280,8 @@ BubbleChart = (function() {
         this.force.start();
         this.display_labels();
     };
+
+
     BubbleChart.prototype.move_towards_group_center = function(alpha) {
         var _this = this;
         return function(d) {
@@ -287,6 +293,8 @@ BubbleChart = (function() {
             d.y = d.y + (target.y - d.y) * (_this.damper + 0.09) * alpha * 1.1;
         };
     };
+
+
     BubbleChart.prototype.move_towards_group = function(alpha) {
         var _this = this;
         return function(d) {
@@ -296,6 +304,8 @@ BubbleChart = (function() {
             d.y = d.y + (target.y - d.y) * (_this.damper + 0.7) * alpha * 1.1;
         };
     };
+
+
     BubbleChart.prototype.display_labels = function() {
         var label_data, labels,
             _this = this;
@@ -310,10 +320,14 @@ BubbleChart = (function() {
             return d;
         });
     };
+
+
     BubbleChart.prototype.hide_labels = function() {
         var labels;
         labels = this.vis.selectAll(".top_labels").remove();
     };
+
+
     BubbleChart.prototype.show_details = function(data, i, element) {
         var content, key, title, value, _ref;
         d3.select(element)./*attr("stroke", "black").*/style("fill-opacity", 0.85).style("cursor", "pointer");
@@ -321,10 +335,13 @@ BubbleChart = (function() {
         //content = data.original.identifier_legalname; //.Elemento;
         this.tooltip.showTooltip(content, d3.event);
     };
+
+
     BubbleChart.prototype.hide_details = function(data, i, element) {
         d3.select(element)./*attr("stroke", "#404040").*/style("fill-opacity", 0.55);
         this.tooltip.hideTooltip();
     };
+
 
     BubbleChart.prototype.use_filters = function(filters, targets) {
         var filteredCircles = this.nodes.filter(function(d) {

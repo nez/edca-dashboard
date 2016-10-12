@@ -117,10 +117,11 @@ function render_filters_colors_and_groups(data) {
         var lookup = keyToLookup(key);
         // SELECCIONA LOS CAMPOS A FILTRAR
 
-        if (lookup.type =="Vigencia"){
+
+        if (lookup.type == "Razón social" ||lookup.type =="Vigencia" || lookup.type == "Tipo de contratación"){
             lookups.push(lookup);
         }
-        /*
+/*
         switch (lookup.type) {
             //case "Proveedor":
             case "Razón social":
