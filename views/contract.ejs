@@ -35,7 +35,11 @@
                 <div id="contract-sidebar" class="col-md-4">
                     <div class="info">
                         <h3>Proceso de contratación</h3>
+                        <% if ( typeof info.title == 'string'){%>
                         <p class="title"><%= (info.title.length < 251)? info.title: info.title.substring(0,249) + '...' %></p>
+                       <% }else {%>
+                        <p class="title"> En proceso...</p>
+                        <%}%>
                     </div>
                     <div class="stages">
                         <p><small>ETAPAS</small></p>
