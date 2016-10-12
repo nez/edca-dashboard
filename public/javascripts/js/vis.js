@@ -4,6 +4,7 @@ var BubbleChart, root,
             return fn.apply(me, arguments);
         };
     };
+
 BubbleChart = (function() {
     function BubbleChart(data) {
         this.do_filter = __bind(this.do_filter, this);
@@ -47,6 +48,7 @@ BubbleChart = (function() {
         var num_max_indicadores;
         num_max_indicadores = d3.max(this.data, function(d) {
             return parseInt(d.Monto); //.Monto.substr(1));
+            //return parseInt(d.value_amount); //.Monto.substr(1));
         });
         //console.log(num_max_indicadores);
         // TAMAÑO DE LOS NODOS
@@ -57,21 +59,27 @@ BubbleChart = (function() {
     }
     var nodeColors;
     nodeColors = d3.scale.category20();
+
+
+
     // FUNCION PARA HACER LAS BUSQUEDAS
     BubbleChart.prototype.buscar = function(filterText) {
         filterText = filterText.toLowerCase();
         if (filterText !== "") {
             var filtrados = this.data.filter(function(d) {
                 return d['Razón social'].toLowerCase().indexOf(filterText) != -1
+                //return d.identifier_legalname.toLowerCase().indexOf(filterText) != -1
             }); //=== 0 });  //!!!
             if (Object.keys(filtrados).length !== 0) {
                 var names = {};
                 filtrados.forEach(function(x) {
                     names[x["Razón social"]] = "#00cc99";
+                    //names[x.identifier_legalname] = "#00cc99";
                 }); //!!!
                 //console.log(names);
                 this.circles.transition().duration(600).style("fill", function(d) {
                     return names[d.original['Razón social']]; //!!!
+                    //return names[d.original.idenfier_legalname];
                 });
                 hide_color_chart();
             } else {
@@ -82,6 +90,8 @@ BubbleChart = (function() {
             color_by($('#color-everything-by').val());
         }
     };
+
+
     BubbleChart.prototype.create_nodes = function() {
         var _this = this;
         this.data.forEach(function(d, i) {
@@ -220,7 +230,8 @@ BubbleChart = (function() {
                 if (value == this.value) {
                     flag = true; // Es igual por lo tanto no se guarda
                 }
-            })
+            });
+
             if (!flag) {
                 allValues[value] = true;
             }
@@ -307,6 +318,7 @@ BubbleChart = (function() {
         var content, key, title, value, _ref;
         d3.select(element)./*attr("stroke", "black").*/style("fill-opacity", 0.85).style("cursor", "pointer");
         content = data.original['Razón social']; //.Elemento;
+        //content = data.original.identifier_legalname; //.Elemento;
         this.tooltip.showTooltip(content, d3.event);
     };
     BubbleChart.prototype.hide_details = function(data, i, element) {
@@ -331,37 +343,45 @@ BubbleChart = (function() {
         this.do_filter();
         $('#group-everything-by').change();
     };
+
     BubbleChart.prototype.do_filter = function() {
         this.force.start();
         this.circles.transition().duration(2000).attr("r", function(d) {
             return d.radius
         });
     };
+
     BubbleChart.prototype.getRadius = function(node) {
-        var r = 0;
-        var aoi = node.Monto; //.numIndicadores;
-        r = aoi.substr();
-        return r;
+        return node.Monto.substr();
+        //return node.value_amount.substr();
     };
+
     return BubbleChart;
 })();
 root = typeof exports !== "undefined" && exports !== null ? exports : this;
+
+
 $(function() {
     var chart, render_chart, render_vis,
         _this = this;
     chart = null;
+
     render_vis = function(csv) {
+        //console.log(csv[0]);
         render_filters_colors_and_groups(csv);
         render_chart(csv);
     };
+
     render_chart = function(csv) {
         chart = new BubbleChart(csv);
         chart.start();
         root.display_all();
     };
+
     root.display_all = function() {
         chart.display_group_all();
     };
+
     root.group_by = function(groupBy) {
         if (groupBy === '') {
             chart.display_group_all();
@@ -369,6 +389,7 @@ $(function() {
             chart.group_by(groupBy);
         }
     };
+
     root.color_by = function(colorBy) {
         if (colorBy === '') {
             chart.remove_colors();
@@ -376,14 +397,18 @@ $(function() {
             chart.color_by(colorBy);
         }
     };
+
     root.use_filters = function(filters, targets) {
         chart.use_filters(filters, targets);
     };
+
     root.display_labels = function() {
         chart.display_labels();
     };
+
     // Funcion que carga el CSV
     d3.csv("/contratacionesabiertas/static/supplier_data.csv", render_vis);
+    //d3.json("/contratacionesabiertas/static/supplier_data.csv", render_vis);
     // Evento KEYUP para buscar, ACTIVA LA FUNCIÓN BUSCAR AL ESCRIBIR ALGO EN EL INPUT DE BUSCAR
     $("#buscar_bubble").keyup(function() {
         var searchTerm;

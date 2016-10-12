@@ -1,3 +1,5 @@
+
+/*
 window.log = function() {
     log.history = log.history || [];
     log.history.push(arguments);
@@ -7,6 +9,7 @@ window.log = function() {
         (typeof console.log === "object" ? log.apply.call(console.log, console, a) : console.log.apply(console, a))
     }
 };
+
 (function(b) {
     function c() {}
     for (var d = "assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,timeStamp,profile,profileEnd,time,timeEnd,trace,warn".split(","), a; a = d.pop();) {
@@ -20,6 +23,8 @@ window.log = function() {
         return window.console = {};
     }
 })());
+*/
+
 var initialise_form = function(selectionOptions) {
     var filterers = $('.filter_block input');
     filterers.change(function() {
@@ -33,6 +38,7 @@ var initialise_form = function(selectionOptions) {
         });
         use_filters(filters, targets);
     });
+
     var groupSelect = $('#group-everything-by');
     for (var opt in selectionOptions) {
         var lookup = selectionOptions[opt];
@@ -68,15 +74,15 @@ var initialise_form = function(selectionOptions) {
 };
 
 $('#filtros').on({
-"click":function(e){
-    e.stopPropagation();
-  }
+    "click":function(e){
+        e.stopPropagation();
+    }
 });
 
-function get_distinct_values(csv, keyType, key) {
+function get_distinct_values(data, keyType, key) {
     var allValues = {};
-    for (var i in csv) {
-        var value = csv[i][key];
+    for (var i in data) {
+        var value = data[i][key];
         allValues[value] = true;
     }
     var allValuesArray = [];
@@ -101,12 +107,20 @@ function keyToLookup(key) {
     };
 }
 
-function render_filters_colors_and_groups(csv) {
-    var first = csv[0];
+function render_filters_colors_and_groups(data) {
+    var first = data[0];
+
+    //console.log(data);
+
     var lookups = [];
     for (var key in first) {
         var lookup = keyToLookup(key);
         // SELECCIONA LOS CAMPOS A FILTRAR
+
+        if (lookup.type =="Vigencia"){
+            lookups.push(lookup);
+        }
+        /*
         switch (lookup.type) {
             //case "Proveedor":
             case "Razón social":
@@ -117,12 +131,13 @@ function render_filters_colors_and_groups(csv) {
                 break;
             default:
                 break;
-        }
+        }*/
     }
+
     var filterList = $('#filter-list');
     for (var i in lookups) {
         var lookup = lookups[i];
-        var values = get_distinct_values(csv, lookup.type, lookup.key);
+        var values = get_distinct_values(data, lookup.type, lookup.key);
         var item = $('<div class="filter_block dropdown-header"><li class="filter_title"><p style="color:#00cc99;"><strong>' + lookup.title + '</strong></p></li></div>');
         for (var j in values) {
             var checkbox = $('<li class="sub-filter-block"><label style="cursor:pointer"><input style="cursor:pointer" data-target="' + lookup.key + '" type="checkbox" checked="checked" value="' + values[j] + '"/> ' + values[j] + '</label></li>');
