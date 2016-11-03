@@ -1,0 +1,22 @@
+{
+  "name": "edca-redcompartida",
+  "authors": [
+    "Mario Torres <mario291187@gmail.com>"
+  ],
+  "description": "Dashboard de contrataciones abiertas de la red compartida",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "bootstrap": "^3.3.7",
+      "dgm-navbar"  : "mxabierto/dgm-navbar#latest",
+      "dgm-footer"  : "mxabierto/dgm-footer#latest"
+  }
+}

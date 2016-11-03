@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <title>Contrataciones Abiertas</title>
+    <meta name="description" content="En datos.gob.mx puedes descargar y utilizar libremente datos abiertos que el Gobierno de la República genera y recolecta.">
+
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="/redcompartida/static/assets/style.css">
+
+    <style>
+        body {transition: opacity ease-in 0.2s; }
+        body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; }
+    </style>
+
+    <link rel="shortcut icon" href="http://datos.gob.mx/assets/img/favicon.ico">
+    <link rel="import" href="/redcompartida/static/bower_components/polymer/polymer.html">
+    <link rel="import" href="/redcompartida/static/bower_components/dgm-navbar/dgm-navbar.html">
+    <link rel="import" href="/redcompartida/static/bower_components/dgm-footer/dgm-footer.html">
+
+    <!-- Used libraries -->
+    <link rel="stylesheet" href="/redcompartida/static/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/redcompartida/static/assets/main.css">
+
+    <link rel="canonical" href="http://datos.gob.mx//redcompartida/">
+    <link rel="alternate" type="application/rss+xml" title="Guía de Datos Abiertos para México" href="http://datos.gob.mx//feed.xml">
+
+</head>
+
+<body>
+
+<style>
+    /* Page */
+    .row {
+        margin-left: -10px;
+        margin-right: 8px;
+    }
+    h3.jumbo-title {
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    #highlights .btn {
+        margin-top: 40px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+    #banner {
+        text-align: left;
+    }
+    #banner .heading {
+        font-size: 12px;
+        color: #fff;
+        padding-left: 0;
+    }
+    #banner .links {
+        text-align: right;
+    }
+    #banner .links a {
+        color: rgb(32,121,95);
+        font-weight: bold;
+        font-size: 12px;
+        margin-left: 20px;
+    }
+    #highlights .container-fluid {
+        padding-left: 0;
+    }
+    #info {
+        padding: 40px 0;
+    }
+    .select-box {
+        text-align: center;
+        font-weight: 700;
+        font-size: 12px;
+        color: /*#f6f6f6;*/rgb(34,134,105);
+        display: inline-block;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    .select-box-active, .select-box:hover {
+        color: white; /*#0c9;*/
+    }
+    .select-box-inactive {
+        color: rgb(64,164,135);
+    }
+    .select-box-inactive:hover {
+        color: rgb(64,164,135);
+    }
+    h3#sec-label {
+        font-weight: 700;
+    }
+    /* viz */
+    #chart {
+        position: relative;
+    }
+    .node {
+        cursor: pointer;
+    }
+
+    .node circle {
+        fill: #fff;
+        stroke: rgb(71,71,71);
+        stroke-width: 1.5px;
+    }
+
+    .node text {
+        font: 10px 'Open Sans', sans-serif;
+        font-weight: 700;
+        fill: '#666';
+    }
+
+    .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 16px;
+        stroke-opacity: 0.65;
+        background-color: rgb(71,71,71);
+    }
+    .link:hover {
+        stroke: rgb(0,204,153);
+    }
+    .separator {
+        border-bottom: 2px solid rgb(0,204,153);
+        border-top: 2px solid rgb(0,204,153);
+        width: 20px;
+        display: inline-block;
+    }
+    div.ttip {
+        position: absolute;
+        text-align: left;
+        width: 200px;
+        padding: 5px;
+        font: 10px 'Open Sans', sans-serif;
+        background-color: rgb(71,71,71);
+        color: #fff;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
+    }
+    div.infobox {
+        position: absolute;
+        text-align: left;
+        width: 320px;
+        padding: 10px;
+        font: 12px 'Open Sans', sans-serif;
+        line-height: 18px;
+        background-color: #f6f6f6;
+        color: #444;
+        border: 0px;
+        border-radius: 8px;
+        max-height: 400px;
+        overflow-y: scroll;
+        z-index: 10;
+    }
+    table.datos a {
+        margin-top: 5px;
+        color: #00cc99;
+    }
+    table.datos {
+        border-collapse: collapse;
+        font-size: 12px;
+        margin-bottom: 40px;
+    }
+    table.datos td {
+        margin-bottom: 10px;
+    }
+    .fformat {
+        padding: 2px 4px;
+        background-color: #222;
+        color: #fff;
+        font-weight: 700;
+    }
+    table.datos thead th {
+        padding-bottom: 10px;
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    tr.datos-indicador td {
+        background-color: rgb(238,238,238);
+        padding: 20px;
+        vertical-align: top;
+    }
+    tr.datos-indicador td.nombre-ind {
+        font-weight: 600;
+    }
+    h2.page-title {
+        font-weight: 300;
+    }
+    h4 {
+        font-weight: 700;
+    }
+    header.page-header {
+        background-color: rgb(246,246,246);
+        margin: 0;
+        padding-bottom: 30px;
+    }
+    circle.current {
+        fill: rgb(250,105,105) !important;
+        stroke: rgb(250,105,105) !important;
+    }
+
+    .well{
+        border: none;
+    }
+</style>
+
+
+<div id="system-notification" class="container-fluid">
+    <div class="row">
+        <div class="notification-container">
+            <div class="notification">
+                <p></p>
+                <span class="glyphicon glyphicon-remove"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<dgm-navbar></dgm-navbar>
+<!--
+<div class="breadcrumb-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li><a href="/redcompartida"><i class="glyphicon glyphicon-home"></i></a></li>
+                    <li><a href="/redcompartida" style="text-transform: none">redcompartida</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<section id="banner">
+    <div class="container-fluid fixed" style="padding-left: 10px">
+        <div class="row">
+            <div class="col-xs-6 heading"><b>Red Compartida</b></div>
+            <div class="col-xs-6 links">
+                <div onmousedown='draw_chart("Planeación");  location.href = "#sec-label";' class="select-box select-box-first Planeación select-box-active">Planeación</div>
+                <div onmousedown='draw_chart("Concurso");  location.href = "#sec-label";' class="select-box Concurso">Concurso</div>
+                <div data-original-title="La información se publicará conforme se genere durante el proyecto." title="" data-toggle="tooltip" data-placement="bottom" class="select-box select-box-inactive Adjudicación">Adjudicación</div>
+                <div data-original-title="La información se publicará conforme se genere durante el proyecto." title="" data-toggle="tooltip" data-placement="bottom" class="select-box select-box-inactive Contratación">Contratación</div>
+                <div data-original-title="La información se publicará conforme se genere durante el proyecto." title="" data-toggle="tooltip" data-placement="bottom" class="select-box select-box-inactive Implementación">Implementación</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="bgimg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center">Contrataciones Abiertas</p>
+                <h2>RED COMPARTIDA <span>SECRETARÍA DE COMUNICACIONES Y TRANSPORTES</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 widget">
+                <h5>FINANCIAMIENTO PRIVADO</h5>
+                <p class="stat"> 100% </p>
+            </div>
+
+
+            <div class="col-sm-4 widget">
+                <h5>COBERTURA MÍNIMA POBLACIONAL</h5>
+                <p class="stat"> 85%</p>
+            </div>
+
+            <div class="col-sm-4 widget">
+                <!-- <h5>PERIODO DE LA PRIMERA ETAPA</h5> -->
+                <h5>VISIÓN</h5>
+                <p class="stat"> Servicio Mayorista</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class ="container statistics">
+    <h1>Proyecto</h1>
+    <p>Visualiza y descarga los Datos
+        Abiertos de las etapas de planeación y concurso de la Red Compartida.
+        Durante el desarrollo del proyecto, trabajaremos junto con la Alianza
+        para las Contrataciones Abiertas para continuar publicando datos
+        accesibles, comparables y oportunos sobre las siguientes etapas de
+        adjudicación, contratación e implementación, conforme estos se generen.
+        Este proyecto es parte de un piloto para adaptar el Estándar de Datos
+        para Contrataciones Abiertas a un modelo de alianza público privado.</p>
+</div>
+
+<!--<section id="info">-->
+<div class="container statistics">
+    <h1 id="sec-label">Planeación</h1>
+
+<p>
+    Haz clic en <b id="sec-label1">Planeación</b> para desplegar los componentes de esta etapa. Continúa dando clics para visualizar información más específica.</p>
+    <!--<div class="container-fluid fixed">-->
+    <div class="row">
+        <!--<div class="col-xs-6 heading">Red Compartida</div>-->
+        <!--
+        <div class="col-xs-12 links">
+            <div class="well">
+                <div onmousedown='draw_chart("Planeación")' class="select-box select-box-first Planeación select-box-active">Planeación</div>
+                <div onmousedown='draw_chart("Concurso")' class="select-box Concurso">Licitación</div>
+                <div data-original-title="La información se publicará conforme se genere durante el proyecto." title="" data-toggle="tooltip" data-placement="bottom" class="select-box select-box-inactive Adjudicación">Adjudicación</div>
+                <div data-original-title="La información se publicará conforme se genere durante el proyecto." title="" data-toggle="tooltip" data-placement="bottom" class="select-box select-box-inactive Contratación">Contratación</div>
+                <div data-original-title="La información se publicará conforme se genere durante el proyecto." title="" data-toggle="tooltip" data-placement="bottom" class="select-box select-box-inactive Implementación">Implementación</div>
+            </div>
+        </div>
+        -->
+    </div>
+    <!--</div>-->
+
+
+    <!--   <div class="row">
+    <h3 id="sec-label">Planeación</h3>
+    </div>
+        <div class="row">-->
+    <div id="chart"><div style="opacity: 0;" class="infobox"></div>
+        <svg height="500" width="1100">
+            <g transform="translate(80,20)">
+                <path d="M0,230C90,230 90,46 180,46" class="link"></path>
+                <path d="M0,230C90,230 90,138 180,138" class="link"></path>
+                <path d="M0,230C90,230 90,230 180,230" class="link"></path>
+                <path d="M0,230C90,230 90,322 180,322" class="link"></path>
+                <path d="M0,230C90,230 90,414 180,414" class="link"></path>
+                <g transform="translate(180,414)" class="node"><circle style="fill: rgb(68, 68, 68); stroke: rgb(68, 68, 68);" r="8"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-15">Documentos de la planeación</text></g>
+                <g transform="translate(180,322)" class="node"><circle style="fill: rgb(68, 68, 68); stroke: rgb(68, 68, 68);" r="8"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-15">Diseño de la APP</text></g>
+                <g transform="translate(180,230)" class="node"><circle style="fill: rgb(68, 68, 68); stroke: rgb(68, 68, 68);" r="8"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-15">Fundamento</text></g>
+                <g transform="translate(180,138)" class="node"><circle style="fill: rgb(68, 68, 68); stroke: rgb(68, 68, 68);" r="8"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-15">Aportación pública</text></g>
+                <g transform="translate(180,46)" class="node"><circle style="fill: rgb(68, 68, 68); stroke: rgb(68, 68, 68);" r="8"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-15">Presupuesto</text></g>
+                <g transform="translate(0,230)" class="node"><circle style="fill: rgb(0, 204, 153); stroke: rgb(0, 204, 153);" r="8"></circle><text style="fill-opacity: 1;" text-anchor="end" dy=".35em" x="-15">Planeación</text></g></g></svg></div>
+    <!--</div>-->
+</div>
+<!--</section>-->
+
+
+
+
+<div class="container stages">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Etapas del proceso de contrataciones abiertas</h1>
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis pretium quam et tristique. Nulla eget posuere metus, ut porta eros. Donec sed nisi dui. Quisque finibus commodo neque, vitae aliquam sapien blandit et. Sed massa est, auctor non dolor eu, posuere pretium erat.</p>-->
+            <div class="row">
+                <div class="col-sm-4 stages-widget">
+                    <img src="/redcompartida/static/images/ic-planeacion.png" alt="Planeaciñon">
+                    <div class="content">
+                        <p class="title">1. Planeación</p>
+                        <p>Encuentra datos sobre el presupuesto, fundamento y descripción general del proyecto; así como sus documentos, estudios y evaluaciones preparatorios relevantes.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 stages-widget">
+                    <img src="/redcompartida/static/images/ic-licitacion.png" alt="Planeaciñon">
+                    <div class="content">
+                        <p class="title">2. Licitación</p>
+                        <p>Encuentra datos sobre el proceso de adjudicación del proyecto, como tipo de procedimiento, valor, método y criterios de adjudicación y aclaraciones, fechas relevantes y datos del testigo social, participantes, hitos del procedimiento y modificaciones al mismo.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 stages-widget">
+                    <img src="/redcompartida/static/images/ic-adjudicacion.png" alt="Planeaciñon">
+                    <div class="content">
+                        <p class="title">3. Adjudicación</p>
+                        <p>Encuentra datos sobre el proveedor asignado para el proyecto, el proceso de adjudicación, sus documentos, inconformidades y modificaciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 stages-widget">
+                    <img src="/redcompartida/static/images/ic-contratacion.png" alt="Planeaciñon">
+                    <div class="content">
+                        <p class="title">4. Contratación</p>
+                        <p>Encuentra datos sobre la firma del contrato donde se establecen las particularidades del bien o servicio, periodos de pago, entrega y sus documentos principales.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 stages-widget">
+                    <img src="/redcompartida/static/images/ic-implementacion.png" alt="Planeaciñon">
+                    <div class="content">
+                        <p class="title">5. Implementación</p>
+                        <p>Encuentra datos sobre la ejecución del proyecto, como las fechas y pagos correspondientes por el bien o servicio, hitos del proyecto y evidencia de la ejecución</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="methodology">
+    <div class="container">
+        <div class="col-md-12" style="padding-top: 25px">
+            <button  id="ocds" class="btn btn-primary">Conoce la metodología</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container statistics">
+    <h1>Datos</h1>
+
+    <div class="data-table">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <!--<th width="50%">Institución</th>-->
+                <th width="30%">Institución</th>
+                <th width="30%">Formato</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr id="api">
+
+                <td>Red Compartida - Estandar de datos de contrataciones abiertas</td>
+                <td>Secretaría de Comunicaciones y Transportes</td>
+                <td>
+                    <!--<span class="label" data-format="csv">CSV</span>-->
+                    <span class="label" data-format="xlsx">XLS</span>
+                    <!--<span class="label" data-format="pdf">PDF</span>-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+<div style="opacity: 0;" class="ttip"></div>
+
+<dgm-footer></dgm-footer>
+
+<script type="text/javascript" src="/redcompartida/static/assets/d3.js"></script>
+<script type="text/javascript" src="/redcompartida/static/datos/datos.js"></script>
+
+<script src="/redcompartida/static/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+<script src="/redcompartida/static/bower_components/jquery/dist/jquery.min.js"></script>
+
+<!--<script src="/redcompartida/static/assets/js.js"></script>-->
+<script src="/redcompartida/static/assets/underscore-min.js" type="text/javascript"></script>
+<script src="/redcompartida/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/redcompartida/static/assets/moment.js"></script>
+
+
+<script>
+    $('#api').click(function () {
+        window.location.href= "http://datos.gob.mx/busca/group/red-compartida";
+    });
+
+    $('#ocds').click(function () {
+        window.open('http://standard.open-contracting.org/latest/es/getting_started/');
+    });
+
+</script>
+
+<script>
+    function create_links(text) {
+        var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i;
+        return text.replace(exp,"<a href='$1'>$1</a>");
+    }
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    function draw_chart(l) {
+        var datos = jQuery.extend(true, {}, dt);
+
+        if (datos[l].children.length > 10) multiplier = datos[l].children.length * 0.65;
+        else multiplier = datos[l].children.length;
+
+        $("#chart").empty();
+        //$("h3#sec-label").html(l);
+        $("#sec-label").html(l);
+        $("#sec-label1").html(l);
+
+        $('.select-box').removeClass('select-box-active');
+        $('.'+l).addClass('select-box-active');
+
+        var margin = {top: 20, right: 120, bottom: 20, left: 80},
+                width = 1100 - margin.right - margin.left,
+                height = multiplier*100 - margin.top - margin.bottom;
+
+        var tt = d3.select("body").append("div")
+                .attr("class", "ttip")
+                .style("opacity", 0);
+
+        var infobox = d3.select("#chart").append("div")
+                .attr("class", "infobox")
+                .style("opacity", 0);
+
+        var i = 0,
+                duration = 750,
+                root;
+
+        var tree = d3.layout.tree()
+                .size([height, width]);
+
+        var diagonal = d3.svg.diagonal()
+                .projection(function(d) { return [d.y, d.x]; });
+
+        var svg = d3.select("#chart").append("svg")
+                .attr("width", width + margin.right + margin.left)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+        root = datos[l];
+        root.x0 = height / 2;
+        root.y0 = 0;
+
+        function collapse(d) {
+            if (d.children) {
+                d._children = d.children;
+                d._children.forEach(collapse);
+                d.children = null;
+            }
+        }
+
+        root.children.forEach(collapse);
+        update(root);
+
+        d3.select(self.frameElement).style("height", "800px");
+
+        function update(source) {
+            // Compute the new tree layout.
+            var nodes = tree.nodes(root).reverse(),
+                    links = tree.links(nodes);
+
+            nodes.forEach(function(d) { d.children || d._children ? d.y = d.depth * 180 : d.y = d.depth * 140  });
+
+            var node = svg.selectAll("g.node")
+                    .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+            var nodeEnter = node.enter().append("g")
+                    .attr("class", "node")
+                    .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+                    .on("click", click);
+
+            nodeEnter.append("circle")
+                    .attr("r", 1e-6)
+                    .style("fill", function(d) { return d._children ? "#444" : "rgb(0,204,153)"; })
+                    .style("stroke", function(d) { return d._children ? "#444" : "rgb(0,204,153)"; });
+
+
+            nodeEnter.append("text")
+                    .attr("x", function(d) { return d.children || d._children ? -15 : 15; })
+                    .attr("dy", ".35em")
+                    .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
+                    .text(function(d) { return d.name; })
+                    .style("fill-opacity", 1e-6);
+
+            var nodeUpdate = node.transition()
+                    .duration(duration)
+                    .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+            nodeUpdate.select("circle")
+                    .attr("r", 8)
+                    .style("fill", function(d) { return d._children ? "#444" : "rgb(0,204,153)"; })
+                    .style("stroke", function(d) { return d._children ? "#444" : "rgb(0,204,153)"; });
+
+            nodeUpdate.select("text")
+                    .style("fill-opacity", 1);
+
+            nodeEnter.select("circle")
+                    .on("mouseover", function(d) {
+                        if (typeof d.mouseover != 'undefined') {
+                            tt.transition()
+                                    .duration(200)
+                                    .style("opacity", .9);
+                            tt.html(d.mouseover)
+                                    .style("left", (d3.event.pageX + 30) + "px")
+                                    .style("top", (d3.event.pageY - 20) + "px");
+                        }
+                    })
+                    .on("click", function(d) {
+
+                        tt.transition()
+                                .duration(500)
+                                .style("opacity", 0);
+                        infobox.transition()
+                                .duration(500)
+                                .style("opacity", 0);
+                        if (typeof d.info1 != 'undefined') {
+                            d3.selectAll("circle")
+                                    .classed("current", false);
+                            d3.select(this)
+                                    .classed("current", true);
+                            h = "";
+                            if (d.info1 != '') h = h + "<h5>Información adicional</h5><p>"+d.info1+"</p>";
+                            if (d.info2 != '') h = h + "<h5>Área responsable</h5><p>"+d.info2+"</p>";
+                            if (d.info3 != '') h = h + "<h5>Más información</h5><p>"+create_links(d.info3)+"</p>";
+                            infobox.transition()
+                                    .duration(200)
+                                    .style("opacity", 1);////
+                            infobox.html(h)
+                                    .style("right", "30px")
+                                    .style("top", function(d) {
+                                        wh = $(document).height();
+                                        iwh = $('.infobox').height();
+                                        info_diff = wh - d3.event.pageY - 700;
+                                        if (iwh > info_diff) return (d3.event.layerY - (iwh - info_diff)) + "px"
+                                        else return (d3.event.layerY - 150) + "px"; //-20
+                                    });
+
+                        }
+                    })
+                    .on("mouseout", function(d) {
+                        tt.transition()
+                                .duration(500)
+                                .style("opacity", 0);
+                    });
+
+            var nodeExit = node.exit().transition()
+                    .duration(duration)
+                    .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+                    .remove();
+
+            nodeExit.select("circle")
+                    .attr("r", 1e-6);
+
+            nodeExit.select("text")
+                    .style("fill-opacity", 1e-6);
+
+            var link = svg.selectAll("path.link")
+                    .data(links, function(d) { return d.target.id; });
+
+            link.enter().insert("path", "g")
+                    .attr("class", "link")
+                    .attr("d", function(d) {
+                        var o = {x: source.x0, y: source.y0};
+                        return diagonal({source: o, target: o});
+                    });
+
+            link.transition()
+                    .duration(duration)
+                    .attr("d", diagonal);
+
+            link.exit().transition()
+                    .duration(duration)
+                    .attr("d", function(d) {
+                        var o = {x: source.x, y: source.y};
+                        return diagonal({source: o, target: o});
+                    })
+                    .remove();
+
+            nodes.forEach(function(d) {
+                d.x0 = d.x;
+                d.y0 = d.y;
+            });
+
+        }
+
+        // Toggle children on click.
+        function click(d) {
+            if (d.children) {
+                d._children = d.children;
+                d.children = null;
+            } else {
+                d.children = d._children;
+                d._children = null;
+            }
+            update(d);
+        }
+
+    }
+
+    draw_chart("Planeación");
+
+</script>
+</body>
+</html>

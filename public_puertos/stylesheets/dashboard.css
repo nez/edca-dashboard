@@ -1,0 +1,100 @@
+
+.well{
+    border: none;
+}
+.panel{
+    border: none;
+}
+.navbar{
+    border: none;
+}
+/* d3 charts */
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    /*display: none;*/
+}
+
+.grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+.grid path {
+    stroke-width: 0;
+}
+
+.pill-container{
+    margin-top:20px;
+}
+
+.all-container{
+    max-width: 1070px;
+}
+
+
+
+.controls                       { margin-bottom: 30px; padding: 20px 0 25px; background-color: #545454; }
+.controls h3                    { margin-top: 0; margin-bottom: 20px; font-size: 14px; font-weight: 300; text-align: center; color: #fff; text-transform: uppercase; }
+.controls .nav                  { width: 420px; margin: 0 auto; padding: 0; }
+
+.statistics .well               { margin-bottom: 50px; }
+.statistics .small              { margin-bottom: 30px; }
+
+.contract-item                  { background-color: #f6f6f6; margin-bottom: 30px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.contract-item .inner           { padding: 10px 15px; }
+.contract-item .item-footer     { background-color: #e3e3e3; -webkit-border-radius: 0 0 5px 5px; -moz-border-radius: 0 0 5px 5px; border-radius: 0 0 5px 5px; }
+.contract-item h3               { font-weight: 700; color: #0c9; }
+.contract-item h4 > a           { font-size: 14px; font-weight: 600; color: #545454; }
+.contract-item p                { margin-bottom: 0; }
+.contract-item .legend          { font-size: 12px; font-weight: 600; color: #333; }
+.contract-item .stages-icons    { margin: 0; padding: 0; list-style: none; }
+.contract-item .stages-icons > li               { display: inline-block; margin-right: 5px; }
+.contract-item .stages-icons > li:last-child    { margin-right: 0; }
+.contract-item .stages-icons > li > img         { width: 20px; }
+
+.search-form > .form-control.bootstrap-select                           { display: inline-block; width: 17%; box-shadow: none; }
+.search-form > .form-control.bootstrap-select > .btn                    { border: none; text-align: center; text-transform: none; color: #9b9b9b; position: relative; left: 50%; transform: translateX(-50%); background-color: #fff; line-height: 20px; }
+.search-form > .form-control.bootstrap-select > .btn > .bs-caret        { display: inline-block; width: 12px; height: 8px; background-image: url("../assets/img/ic_arrow_down.png"); }
+.search-form > .form-control.bootstrap-select > .btn > .bs-caret .caret { display: none; }
+.search-form > .form-control.bootstrap-select > .btn:hover,
+.search-form > .form-control.bootstrap-select.open > .btn,
+.search-form > .form-control.bootstrap-select.open > .btn:hover         { background-color: transparent; box-shadow: none; color: #9b9b9b; }
+.search-form > .form-control.bootstrap-select > .btn:focus              { background-color: transparent; outline: none; }
+.search-form > .form-control.bootstrap-select.open .dropdown-menu       { margin: 0 auto; }
+.search-form > .form-control.bootstrap-select .dropdown-menu            { background-color: #f6f6f6; border-radius: 0 0 5px 5px; border: none; }
+.search-form > .form-control.bootstrap-select .dropdown-menu.open .dropdown-menu li > a > span             { color: #9b9b9b; }
+.search-form > .form-control.bootstrap-select .dropdown-menu.open .dropdown-menu li.selected,
+.search-form > .form-control.bootstrap-select .dropdown-menu.open .dropdown-menu li:hover,
+.search-form > .form-control.bootstrap-select .dropdown-menu.open .dropdown-menu li.selected > a,
+.search-form > .form-control.bootstrap-select .dropdown-menu.open .dropdown-menu li:hover > a              { background-color: #0c9; }
+.search-form > .form-control.bootstrap-select .dropdown-menu.open .dropdown-menu li.selected > a > span,
+.search-form > .form-control.bootstrap-select .dropdown-menu.open .dropdown-menu li:hover > a > span       { color: #fff; }
+
+.actividades {
+    border-left: 1px solid #d4d4d4;
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+    border-right: 1px solid #d4d4d4;
+    /*border-radius: 5px;*/
+    margin-bottom: 0;
+    margin-left: -15px;
+}
+
+.actividades2 {
+    border-bottom: 1px solid #d4d4d4 !important;
+   /* border-left: 0;*/
+}
+
+.actividades3{
+
+}
+
+
+.tabs-left>li, .tabs-right>li {
+    margin-top: -3px;
+}

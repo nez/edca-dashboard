@@ -1,0 +1,27 @@
+{
+  "name": "edca_puertos",
+  "authors": [
+    "Mario Torres <mario291187@gmail.com>"
+  ],
+  "description": "Puerto_Abiertos",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "polymer": "^1.6.1",
+    "bootstrap-select": "^1.11.0",
+    "assets": "https://github.com/mxabierto/assets.git",
+    "dgm-navbar": "https://github.com/mxabierto/dgm-navbar.git",
+    "dgm-footer": "https://github.com/mxabierto/dgm-footer.git",
+    "bootstrap-vertical-tabs": "^1.2.1",
+    "webcomponentsjs": "^0.7.22"
+  }
+}
