@@ -3,10 +3,11 @@
 --
 
 -- Dumped from database version 9.5.4
--- Dumped by pg_dump version 9.5.4
+-- Dumped by pg_dump version 9.6.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
@@ -1643,273 +1644,273 @@ ALTER SEQUENCE tendermilestonedocuments_id_seq OWNED BY tendermilestonedocuments
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: award id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY award ALTER COLUMN id SET DEFAULT nextval('award_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: awardamendmentchanges id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awardamendmentchanges ALTER COLUMN id SET DEFAULT nextval('awardamendmentchanges_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: awarddocuments id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarddocuments ALTER COLUMN id SET DEFAULT nextval('awarddocuments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: awarditem id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditem ALTER COLUMN id SET DEFAULT nextval('awarditem_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: awarditemadditionalclassifications id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditemadditionalclassifications ALTER COLUMN id SET DEFAULT nextval('awarditemadditionalclassifications_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: budget id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY budget ALTER COLUMN id SET DEFAULT nextval('budget_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: buyer id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyer ALTER COLUMN id SET DEFAULT nextval('buyer_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: buyeradditionalidentifiers id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyeradditionalidentifiers ALTER COLUMN id SET DEFAULT nextval('buyeradditionalidentifiers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: contract id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contract ALTER COLUMN id SET DEFAULT nextval('contract_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: contractamendmentchanges id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractamendmentchanges ALTER COLUMN id SET DEFAULT nextval('contractamendmentchanges_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: contractdocuments id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractdocuments ALTER COLUMN id SET DEFAULT nextval('contractdocuments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: contractingprocess id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractingprocess ALTER COLUMN id SET DEFAULT nextval('contractingprocess_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: contractitem id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitem ALTER COLUMN id SET DEFAULT nextval('contractitem_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: contractitemadditionalclasifications id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitemadditionalclasifications ALTER COLUMN id SET DEFAULT nextval('contractitemadditionalclasifications_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: currency id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY currency ALTER COLUMN id SET DEFAULT nextval('currency_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: documentformat id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY documentformat ALTER COLUMN id SET DEFAULT nextval('documentformat_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: documenttype id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY documenttype ALTER COLUMN id SET DEFAULT nextval('documenttype_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: implementation id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementation ALTER COLUMN id SET DEFAULT nextval('implementation_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: implementationdocuments id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationdocuments ALTER COLUMN id SET DEFAULT nextval('implementationdocuments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: implementationmilestone id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestone ALTER COLUMN id SET DEFAULT nextval('implementationmilestone_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: implementationmilestonedocuments id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestonedocuments ALTER COLUMN id SET DEFAULT nextval('implementationmilestonedocuments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: implementationtransactions id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationtransactions ALTER COLUMN id SET DEFAULT nextval('implementationtransactions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: language id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY language ALTER COLUMN id SET DEFAULT nextval('language_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: planning id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planning ALTER COLUMN id SET DEFAULT nextval('planning_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: planningdocuments id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planningdocuments ALTER COLUMN id SET DEFAULT nextval('planningdocuments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: procuringentity id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentity ALTER COLUMN id SET DEFAULT nextval('procuringentity_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: procuringentityadditionalidentifiers id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentityadditionalidentifiers ALTER COLUMN id SET DEFAULT nextval('procuringentityadditionalidentifiers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: publisher id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY publisher ALTER COLUMN id SET DEFAULT nextval('publisher_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: supplier id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplier ALTER COLUMN id SET DEFAULT nextval('supplier_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: supplieradditionalidentifiers id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplieradditionalidentifiers ALTER COLUMN id SET DEFAULT nextval('supplieradditionalidentifiers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: tender id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tender ALTER COLUMN id SET DEFAULT nextval('tender_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: tenderamendmentchanges id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderamendmentchanges ALTER COLUMN id SET DEFAULT nextval('tenderamendmentchanges_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: tenderdocuments id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderdocuments ALTER COLUMN id SET DEFAULT nextval('tenderdocuments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: tenderer id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderer ALTER COLUMN id SET DEFAULT nextval('tenderer_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: tendereradditionalidentifiers id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendereradditionalidentifiers ALTER COLUMN id SET DEFAULT nextval('tendereradditionalidentifiers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: tenderitem id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitem ALTER COLUMN id SET DEFAULT nextval('tenderitem_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: tenderitemadditionalclassifications id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitemadditionalclassifications ALTER COLUMN id SET DEFAULT nextval('tenderitemadditionalclassifications_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: tendermilestone id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestone ALTER COLUMN id SET DEFAULT nextval('tendermilestone_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: tendermilestonedocuments id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestonedocuments ALTER COLUMN id SET DEFAULT nextval('tendermilestonedocuments_id_seq'::regclass);
@@ -3071,7 +3072,6 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 208	208	1	AD-AS-DCAGI-SC-022/15 	Servicio de Estacionamiento para Vehículos		terminated	2015-04-01 00:00:00	2015-12-31 00:00:00	300258.62	MXN	2015-04-01 00:00:00	\N	
 56	56	No aplica	AD-AS-DCAGI-SC-54/15	Adquisición de Uniformes	El objeto del presente contrato es la adquisición de bienes muebles, en adelante "LOS BIENES" por parte de GACM, consistentes en: "VESTUARIO"	active	2015-07-11 00:00:00	2015-07-31 00:00:00	28320	MXN	2015-07-10 00:00:00	\N	
 194	194	IA-009KDH999-E97-2015	ITP-AS-DCAGI-SC-005-16	Servicios de asesoría, relacionados con la implemntación de la estructura de gobierno coporativo para la administración del GACM.	Servicios de asesoría, relacionados con la implemntación de la estructura de gobierno coporativo para la administración del GACM.	terminated	2016-02-04 00:00:00	2017-08-03 00:00:00	4930328.89	MXN	2016-02-04 00:00:00	\N	
-80	80	-	GACM/DCI/SJ/CM-018-2015	Estalecer las bases generales a que se sujetaran GACM y la UANL así como, pactos comunes y el objeto genérico de futuros servicios de carácter científico y tecnológico u otro tipo que acuerden las mismas​	Estalecer las bases generales a que se sujetaran GACM y la UANL así como, pactos comunes y el objeto genérico de futuros servicios de carácter científico y tecnológico u otro tipo que acuerden las mismas​	none	2015-09-09 00:00:00	\N	0	MXN	\N	\N	
 192	192	No aplica	GACM-SEC/01/2014	Servicio de Telefonía Celular	Prestación del  "SERVICIOS DE TELEFONÍA CELULAR, PARA GRUPO AEROPORTUARIO DE LA CIUDAD DE MÉXICO, S.A. DE C.V.", los cuales serán prestados totalmente a satisfacción de GACM, de conformidad con las especificaciones y características establecidas 	active	2014-11-01 00:00:00	2014-12-31 00:00:00	724550	MXN	2014-11-01 00:00:00	\N	
 221	221	1	GACM/DG/DCAGI/SJ/CI/01-2014	Convenio de Cooperación para el uso y goce temporal a Título gratuito de los inmuebles identificados como Edificio R1 Planta Baja 381. 73 m2 lado derecho, Edificio R1 Planta Baja 192.98 m2 lado izquierdo y edificio R1 Planta Alta 203.75 m2, situadas en el edificio Ex tienda. 	Convenio de Cooperación para el uso y goce temporal a Título gratuito de los inmuebles identificados como Edificio R1 Planta Baja 381. 73 m2 lado derecho, Edificio R1 Planta Baja 192.98 m2 lado izquierdo y edificio R1 Planta Alta 203.75 m2, situadas en el edificio Ex tienda. 	active	2014-06-07 00:00:00	\N	0		\N	\N	
 112	112	1	AD-A-DCAGI-SC-001/2014	Arrendamientos de vehículos terrestres		active	2014-11-24 00:00:00	2017-11-24 00:00:00	43011360.00	MXN	2014-11-24 00:00:00	\N	
@@ -3086,14 +3086,12 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 170	170	AO-009KDH999-E52-2016	AD-SRO-DCAGI-SC-039/15	Servicios consistentes en Baños portátiles	Servicios consistentes en Baños portátiles	terminated	2015-07-15 00:00:00	2015-12-31 00:00:00	558618.50	MXN	2015-07-15 00:00:00	\N	
 125	125	1	AD.DIR/01/SJ/2014	Sevicios de Regularización de la Información Relativa a la Auditoria Corporativa de Grupo Aeroportuario de la Ciudad de México, S.A. De C.V.	Prestación de los Servicios de Regularización de la Información Relativa a la Auditoria Corporativa de Grupo Aeroportuario de la Ciudad de México, S.A. De C.V.  	terminated	2014-11-25 00:00:00	2014-12-31 00:00:00	389000.00	MXN	2014-11-25 00:00:00	\N	
 73	73	-	GACM/DCI/SJ/CI/02-2014	"Estudio para definir los bancos de préstamo, bancos de depósito y laboratorio de materiales, para el Proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México"	"Estudio para definir los bancos de préstamo, bancos de depósito y laboratorio de materiales, para el Proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México"	terminated	2014-10-30 00:00:00	2014-12-15 00:00:00	13051740.00	MXN	2015-10-30 00:00:00	\N	
-61	61	ITP-SRO-DCAGI-SC-049/2015	ITP-SRO-DCAGI-SC-049/2015	Programa general de abastecimiento, uso y disposición de agua del nuevo Aeropuerto Internacional de la Ciudad de México (PROAGUA), Etapa I	Programa general de abastecimiento, uso y disposición de agua del nuevo Aeropuerto Internacional de la Ciudad de México (PROAGUA), Etapa I	none	2015-07-31 00:00:00	2015-12-31 00:00:00	8150489.03	MXN	2015-07-31 00:00:00	\N	
 22	22	AD-SRO-CONV-DCAGI-SC-002/16	AD-SRO-CONV-DCAGI-SC-002/16	Etapa 2; seguimiento para el cumplimiento ambiental del proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) a través de la entidad de supervisión ambiental (Condicionante 10, resolutivo MIA-R.	Etapa 2; seguimiento para el cumplimiento ambiental del proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) a través de la entidad de supervisión ambiental (Condicionante 10, resolutivo MIA-R.	active	2016-03-01 00:00:00	2018-10-26 00:00:00	227520000.00	MXN	2016-03-01 00:00:00	\N	
 62	62	IO-009KDH999-N34-2015	ITP-SRO-DCAGI-SC-037/15	Proyecto Ejecutivo para la Construcción del Camino perimetral y sus instalaciones complementarias en el lado Norte del Polígono del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	Proyecto Ejecutivo para la Construcción del Camino perimetral y sus instalaciones complementarias en el lado Norte del Polígono del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	terminated	2015-06-13 00:00:00	2015-07-27 00:00:00	5997988.52	MXN	2015-06-13 00:00:00	\N	
 7	7	1	AD-SRO-DCAGI-SC-087/15	Servicios de Asistencia Técnica Especializada en materia de Hidráulica aplicada a la Infraestructura Aeroportuaria	Prestar los servicios de obra consistentes en: Servicios de Experto revisor para el Panel de Hidráulica aplicada a la Infraestructura Aeroportuaria	terminated	2015-12-01 00:00:00	2016-03-29 00:00:00	1627500.00	MXN	2015-12-01 00:00:00	\N	
 13	13	AD-SRO-DCAGI-SC-095/16	AD-SRO-DCAGI-SC-095/15	Servicios de experto revisor para el panel de hidráiulica aplicada a la infraestructura aeroportuaria.	Servicios de experto revisor para el panel de hidráiulica aplicada a la infraestructura aeroportuaria.	terminated	2015-12-01 00:00:00	2016-03-29 00:00:00	1403017.24	MXN	2015-12-01 00:00:00	\N	
 66	66	LO-009KDH999-N16-2015	LPN-SRO-DCAGI-SC-025/15	Estudio de Suministro Electrico para el Nuevo Aeropuerto Internacional de la Ciudad de México	Servicios relativos al Estudio de Suministro Electrico para el Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2015-05-15 00:00:00	2015-08-27 00:00:00	7582404.32	MXN	2015-05-15 00:00:00	\N	
 55	55	-	AD-AS-DCAGI-SC-053/15 	Adquisición de Bienes Consistentes en Herramientas	La adquisición de bienes muebles consistentes como Herramientas 	active	2015-07-10 00:00:00	2015-07-25 00:00:00	87094.69	MXN	\N	\N	
-205	205	No aplica	AD-AS-DCAGI-SC-035-16	Servicio de Telefonía Celular	Prestación del  "SERVICIOS DE TELEFONÍA CELULAR, PARA GRUPO AEROPORTUARIO DE LA CIUDAD DE MÉXICO, S.A. DE C.V.", los cuales serán prestados totalmente a satisfacción de GACM, de conformidad con las especificaciones y características establecidas 	none	\N	\N	724550	MXN	2016-05-01 00:00:00	\N	
 23	23	-	AD-SRO-CONV-DCAGI-SC-04/16	Brindar la asistencia técnica, asesoramiento, colaboración, coadyuvancia, consultoría, orientación y dé propuestas de soluciones a las distintas situaciones que se presenten, en lo referente a la logística de operación para la realización de las obras al exterior del polígono, en donde se alojará la construcción del NAICM, e incluye el seguimiento y la aprobación de los estudios y proyectos que se necesiten en materia de infraestructura carretera y demás actividades afines.	Brindar la asistencia técnica, asesoramiento, colaboración, coadyuvancia, consultoría, orientación y dé propuestas de soluciones a las distintas situaciones que se presenten, en lo referente a la logística de operación para la realización de las obras al exterior del polígono, en donde se alojará la construcción del NAICM, e incluye el seguimiento y la aprobación de los estudios y proyectos que se necesiten en materia de infraestructura carretera y demás actividades afines.	active	2016-04-01 00:00:00	2020-12-31 00:00:00	0		2016-04-01 00:00:00	\N	
 2	2	SA009KDH99-N73-2015	AD-AS-DCAGI-SC-050-2015	Servicio de testigo social para que atestigue las etapas del procedimiento de licitación pública nacional presencial, relativa a la contratación de la obra pública, consistente en el proyecto ejecutivo, construcción equipamiento mobiliario e instalaciones complementarias, para el campamento del grupo aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México 	Servicio de testigo social para que atestigue las etapas del procedimiento de licitación pública nacional presencial, relativa a la contratación de la obra pública, consistente en el proyecto ejecutivo, construcción equipamiento mobiliario e instalaciones complementarias, para el campamento del grupo aeroportuario de la Ciudad de México en el sitio del Nuevo Aeropuerto Internacional de la Ciudad de México 	terminated	2015-06-30 00:00:00	2015-12-31 00:00:00	247200.64	 MXN	2015-06-30 00:00:00	\N	
 24	24	AD-SRO-CONV-DCAGI-SC-006/16	AD-SRO-CONV-DCAGI-SC-006/16	Servicio de instrumentación y operación de planes y programas ambientales para el Nuevo Aeropuerto Internacional de la ciudad de México (NAICM), Etapa 2016-2018.	Servicio de instrumentación y operación de planes y programas ambientales para el Nuevo Aeropuerto Internacional de la ciudad de México (NAICM), Etapa 2016-2018.	active	2016-04-01 00:00:00	2018-10-26 00:00:00	236900000.00	MXN	2016-04-01 00:00:00	\N	
@@ -3121,7 +3119,6 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 63	63	IO-009KDH999-N41-2015	ITP-SRO-DCAGI-SC-048/15	Elaboración del estudio de las características topográficas del terreno del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).	Elaboración del estudio de las características topográficas del terreno del Nuevo Aeropuerto Internacional de la Ciudad de México, que deberan realizarse de conformidad con los Términos de referencia	terminated	2015-07-29 00:00:00	2015-09-26 00:00:00	33577144.97	MXN	2015-07-29 00:00:00	\N	
 29	29	SO-009KDH999-N22-2015	AD-SRO-DCAGI-SC-004/15	Prestación de los Servicios consistentes en la elaboración del: Plan de restauración ecológica para el Nuevo Aeropuerto Internacional de la Ciudad de México	Prestación de los Servicios consistentes en la elaboración del: Plan de restauración ecológica para el Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2015-02-23 00:00:00	2015-03-23 00:00:00	449999.61	MXN	2015-02-20 00:00:00	\N	
 14	14	AO-009KDH999-E34-2016	AD-SRO-DCAGI-SC-096/15	Servicios de experto revisor para la asistencia técnica especializada en materia de protección contra incendios, aplicada a la infraestructura aeroportuaria.	Servicios de experto revisor para la asistencia técnica especializada en materia de protección contra incendios, aplicada a la infraestructura aeroportuaria.	terminated	2015-12-01 00:00:00	2016-03-25 00:00:00	1898750.00	MXN	2015-12-01 00:00:00	\N	
-76	76	-	GACM/DCI/SJ/CI/013-2015                                                                    	Llevar a cabo el Servicio de Investigaciones y Estudios Especiales Relacionados con Aspectos Geotécnicos del Nuevo Aeropuerto de la Ciudad de México (NAICM) en el Vaso del Ex-Lago de Texcoco, Zona Federal	Llevar a cabo el Servicio de Investigaciones y Estudios Especiales Relacionados con Aspectos Geotécnicos del Nuevo Aeropuerto de la Ciudad de México (NAICM) en el Vaso del Ex-Lago de Texcoco, Zona Federal	none	2015-06-01 00:00:00	2016-12-31 00:00:00	152849934	MXN	2015-06-01 00:00:00	\N	
 16	16	AO-009KDH999-E31-2016	AD-SRO-DCAGI-SC-098/15	Servicio de asistencia técnica especializada en materia de Geotecnia y Cimentación aplicada a la infraestructura aeroportuaria.	Servicio de asistencia técnica especializada en materia de Geotecnia y Cimentación aplicada a la infraestructura aeroportuaria.	terminated	2015-12-01 00:00:00	2016-05-01 00:00:00	1683620.69	MXN	2015-12-01 00:00:00	\N	
 15	15	AO-009KDH999-E41-2016	AD-SRO-DCAGI-SC-097/15	Servicio de asistencia técnica especializada en materia de hidráulica aplicada a la infraestructura aeroportuaria.	Servicio de asistencia técnica especializada en materia de hidráulica aplicada a la infraestructura aeroportuaria.	terminated	2015-12-02 00:00:00	2016-04-02 00:00:00	1403017.24	MXN	2015-12-01 00:00:00	\N	
 154	154	AA-009KDH999-E53-2016	AD-AS-DCAGI-SC-84/15	Materiales para la Construcción	Adquisición de Materiales para la Construcción	terminated	2015-12-07 00:00:00	2015-12-17 00:00:00	320361.43	MXN	2015-12-07 00:00:00	\N	
@@ -3145,15 +3142,13 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 65	65	LO-009KDH999-E94-2015	 LPN-SRO-DCAGI-SC-009/2016	Estudio de Ingeniería Geomática para el Proyecto Pistas, Plataformas, Calles de Rodaje y Edificios del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM), para Generar un modelo Digital de Terreno (MDT) a Través de la Tecnología HIGH Definition Surveying (HDS), Empleando Equipos GNSS, Escáner Láser y Ecosonda .	Estudio de Ingeniería Geomática para el Proyecto Pistas, Plataformas, Calles de Rodaje y Edificios del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM), para Generar un modelo Digital de Terreno (MDT) a Través de la Tecnología HIGH Definition Surveying (HDS), Empleando Equipos GNSS, Escáner Láser y Ecosonda . 	terminated	2016-02-22 00:00:00	2016-05-22 00:00:00	41324450.46	MXN	2016-02-22 00:00:00	\N	
 116	116	1	AD-AS-DCAGI-SC-074/15	Servicios de infraestructura de comunicación de voz, datos y video para el Grupo Aeroportuario de la Ciudad de México S.A. de C.V.	Contratar los servicios de infraestructura de comunicación de voz, datos y video para el Grupo Aeroportuario durante los ejercicios 2015 al 2018, para contar con la implementación de la infraestructura necesaria asi como el soporte tecnico y atención de incidentes correspondientes para dotar a su personal de los medios y herramientas para el debido cumplimiento de las actividades sustantivas de la entidad.	active	2015-09-08 00:00:00	2018-12-31 00:00:00	30516448.28	MXN	2015-09-23 00:00:00	\N	
 117	117	1	AD-AS-DCAGI-SC-075/15	Servicio de Dictámen y Certificado de UVIE	Servicio de Dictámen y Certificado de UVIE para el Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., los cuales serán prestados totalmente a satisfacción de GACM de conformidad con las especificaciones y características establecidas	terminated	2015-09-23 00:00:00	2015-10-22 00:00:00	60344.83	MXN	2015-09-23 00:00:00	\N	
-42	42	-	-	Construcción de Proyecto Integral de Barda y Camino Perimetral, Alumbrado, Servicios Inducidos y Casetas de Acceso para el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)"	Construcción de Proyecto Integral de Barda y Camino Perimetral, Alumbrado, Servicios Inducidos y Casetas de Acceso para el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM	none	\N	\N	0		\N	\N	
 119	119	1	AD-AS-DCAGI-SC-83/15	Servicios para dar cumplimiento en lo dispuesto a las atribuciones de Grupo Aeroportuario de la Ciudad de México S.A. de C.V., relacionados con participaren el diseño e implementación de la política de información, difusión y comunicación social	"Servicios para dar cumplimiento en lo dispuesto a las atribuciones de Grupo Aeroportuario de la Ciudad de México S.A. de C.V., relacionados con participaren el diseño e implementación de la política de información, difusión y comunicación social"	active	2015-11-06 00:00:00	2016-11-01 00:00:00	1573425.00	MXN	2015-11-06 00:00:00	\N	
 120	120	1	AD-AS-DCAGI-SC--102/15	Contrato abierto plurianual de prestación de servicios especializados en el suministro de "terceros".	Obtención de la prestacion de servicios especializados en el suministro de "terceros".	active	2015-12-01 00:00:00	2018-12-31 00:00:00	625917655.58	MXN	2014-12-01 00:00:00	\N	
 44	44	-	GACM/DCI/SJ/CM-E/017-2015      	Realización de los Servicios Consistentes en la Mecánica de Suelos, Levantamiento Topográfico y Elaboración de Ingenieria Básica de: S.E. Maniobras Aeropuerto SF6 NAICM (5 ALIMENT-230 KV); S.E. Aeropuerto SF6 (NAICM) (3T-3F-60/80 MVA 230/23/0 KV-2/16/0 A) y L.T. Maniobras Aeropuerto NAICM (230 KV-13-CU-XLP A)	Realización de los Servicios Consistentes en la Mecánica de Suelos, Levantamiento Topográfico y Elaboración de Ingenieria Básica de: S.E. Maniobras Aeropuerto SF6 NAICM (5 ALIMENT-230 KV); S.E. Aeropuerto SF6 (NAICM) (3T-3F-60/80 MVA 230/23/0 KV-2/16/0 A) y L.T. Maniobras Aeropuerto NAICM (230 KV-13-CU-XLP A)	terminated	2015-11-19 00:00:00	2015-12-20 00:00:00	3246873.25	MXN	2015-03-02 00:00:00	\N	
 68	68	LO-009KDH999- N45-2015	LPN-SRO-DCAGI-SC-043/15	Implementación del plan de restauración ecológica para el nuevo Aeropuerto Internacional de la Ciudad de México	Implementación del plan de restauración ecológica para el nuevo Aeropuerto Internacional de la Ciudad de México	active	2015-07-21 00:00:00	2016-12-31 00:00:00	18934197.76	MXN	2015-07-21 00:00:00	\N	
-247	247	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+247	247	LO-009KDH999-E93-2015	LPI-OP-DCAGI-SC-069-16			\N	\N	\N	0	MXN	\N	\N	
 126	126	SA-009KDH999-N5-2015	AD-S-DCAGI-SC-010/2014	Servicio Integral de Limpieza en las Oficinas de GACM	Prestación a GACM del "Servicio Integral de Limpieza en las Oficinas del Grupo de Aeroportuario de la Ciudad de México, S.A. de C.V." ubicadas en: Avenida Insurgentes Sur Núm. 2453, piso 2, Colonia Tizapán, Delegación Álvaro Obregón, C.P. 01109, México, D	terminated	2014-10-01 00:00:00	2014-12-31 00:00:00	129360.00	MXN	2014-10-01 00:00:00	\N	
 45	45	-	GACM/DCPEV/SJ/CG/02-2015	"Establecer los mecanismos de colaboración entre Grupo Aeroportuario de la Ciudad de México y el Instituto Mexicano de Administarción Pública A.C. para llevar a cabo, mediante la suscripción del instrumento correspondiente el desarrollo y ejecución de las actividades de los programas y proyectos que el GACM requeira a traves de la prestación de servicios relativos a als especialidades y disciplinas especificas, el INAP este en posibilidades de aportar."	"Establecer los mecanismos de colaboración entre Grupo Aeroportuario de la Ciudad de México y el Instituto Mexicano de Administarción Pública A.C. para llevar a cabo, mediante la suscripción del instrumento correspondiente el desarrollo y ejecución de las actividades de los programas y proyectos que el GACM requeira a traves de la prestación de servicios relativos a als especialidades y disciplinas especificas, el INAP este en posibilidades de aportar."	active	2015-01-08 00:00:00	2020-10-20 00:00:00	0	MXN	2015-01-08 00:00:00	\N	
-47	47	-	GACM/DG/DCAGI/SJ-1044/2015	Conveio de Cooperación para el uso y goce temporal a Título gratuito de los inmuebles identificados como Edificio R1 Planta Baja 381. 73 m2 lado derecho, Edificio R1 Planta Baja 192.98 m2 lado izquierdo y edificio R1 Planta Alta 203.75 m2, situadas en el edificio Ex tienda.	Conveio de Cooperación para el uso y goce temporal a Título gratuito de los inmuebles identificados como Edificio R1 Planta Baja 381. 73 m2 lado derecho, Edificio R1 Planta Baja 192.98 m2 lado izquierdo y edificio R1 Planta Alta 203.75 m2, situadas en el edificio Ex tienda. 	none	2014-06-07 00:00:00	2016-07-15 00:00:00	0	MXN	2016-06-07 00:00:00	\N	
 48	48	IO-009KDH999-N11-2015	ITP-OP-DCAGI-SC-014/15	Construcción de Caminos de Acceso a la Zona del Edificio Terminal de la Primera Etapa, necesarios para la caracterización Geotécnica Inicial	Construcción de Caminos de Acceso a la Zona del Edificio Terminal de la Primera Etapa, necesarios para la caracterización Geotécnica Inicial	terminated	2015-03-19 00:00:00	2015-05-17 00:00:00	8129259.88	MXN	2015-03-19 00:00:00	\N	
 54	54	SA-009KDH999-N48-2015	AD-AS-DCAGI-SC-029/2015	Servicio de Seguridad para Salvaguardar la vida e integridad física de los trabajadores, la protección de la infraestructura, inmuebles y zonas federales concesionados a la entidad	Servicio de Seguridad para Salvaguardar la vida e integridad física de los trabajadores, la protección de la infraestructura, inmuebles y zonas federales concesionados a la entidad	terminated	2015-05-01 00:00:00	2015-12-31 00:00:00	800000	MXN	2015-05-01 00:00:00	\N	
 49	49	IO009KDH999-T3-2014	ITP-SR-DCAGI-SC-015-2015	Elaboración del proyecto ejecutivo (ingenierías) para el diseño de la parte "Aeronáutica" (área de movimiento) de pistas, calles de rodaje, plataformas, áreas para el mantenimiento de aeronaves, servicio de combustibles de aviación, restricción y eliminación de obstáculos, servicio de salvamento y extinción de incendios (SSEI), ayudas visuales para la navegación, ayudas visuales indicadoras de obstáculos, ayudas visuales indicadoras de zonas de uso restringido, sistemas eléctricos de ayudas visuales para la navegación, mantenimiento de aeródromo, huella de ruido, agua potable y drenaje, programa de mantenimiento, sistemas de transporte de la información, acompañamiento en el proceso de obra, que contemple las características y elementos físicos para el "NAICM", con base en las flotas de aeronaves que operan y operarán en el Nuevo Aeropuerto en el futuro inmediato y con base en las normas nacionales e internacionales en materia de aeronáutica y de aviación civil.	Elaboración del proyecto ejecutivo (ingenierías) para el diseño de la parte "Aeronáutica" (área de movimiento) de pistas, calles de rodaje, plataformas, áreas para el mantenimiento de aeronaves, servicio de combustibles de aviación, restricción y eliminación de obstáculos, servicio de salvamento y extinción de incendios (SSEI), ayudas visuales para la navegación, ayudas visuales indicadoras de obstáculos, ayudas visuales indicadoras de zonas de uso restringido, sistemas eléctricos de ayudas visuales para la navegación, mantenimiento de aeródromo, huella de ruido, agua potable y drenaje, programa de mantenimiento, sistemas de transporte de la información, acompañamiento en el proceso de obra, que contemple las características y elementos físicos para el "NAICM", con base en las flotas de aeronaves que operan y operarán en el Nuevo Aeropuerto en el futuro inmediato y con base en las normas nacionales e internacionales en materia de aeronáutica y de aviación civil.	active	2015-02-09 00:00:00	2019-02-07 00:00:00	1079335930.23	MXN	2015-02-05 00:00:00	\N	
@@ -3170,7 +3165,6 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 85	85	LO-009KDH999-N19-2015	LPN-SRO-DCAGI-SC-026/15	Exploración geotécnica complementaria para el proyecto ejecutivo del sistema de drenaje temporal del Nuevo aeropuerto Internacional de la Ciudad de México, en el Ex Lago de Texcoco, Estado de México.	Exploración geotécnica complementaria para el proyecto ejecutivo del sistema de drenaje temporal del Nuevo aeropuerto Internacional de la Ciudad de México, en el Ex Lago de Texcoco, Estado de México.	terminated	2015-05-09 00:00:00	2015-07-07 00:00:00	1402474.19	MXN	2015-05-09 00:00:00	\N	
 146	146	1	AD-AS-DCAGI-SC-007/16 	Servicios de suministro de combustible, lubricantes y aditivos para vehículos automotores terrestres.		active	2016-02-02 00:00:00	2016-02-02 00:00:00	17267047.50	MXN	2016-02-02 00:00:00	\N	
 86	86	LO-009KDH999-N80-2015	LPN-OP-DCAGI-SC-114/15	Construcción de los caminos provisionales de acceso al NAICM, ejecutando trabajos de terracería, estructuras y obras de drenaje, pavimentación y señalamiento.	Construcción de los caminos provisionales de acceso al NAICM, ejecutando trabajos de terracería, estructuras y obras de drenaje, pavimentación y señalamiento.	active	2015-12-31 00:00:00	2017-02-13 00:00:00	608275577.5	MXN	2015-12-31 00:00:00	\N	
-196	196	99-989-GAC9806011J4-05-03-2015	LPN-AD-DCAGI-SC-027/16	Contrato sistemático 99-989-GAC9806011J4-05-03-2015 y adendum elaborado por GACM		none	2016-04-05 00:00:00	2016-12-31 00:00:00	4669201.38	MXN	2016-04-07 00:00:00	\N	
 197	197	LO-009KDH999-N79-2015	LPN-OP-DCAGI-SC-112/15	Trabajos relativos a la nivelación y limpieza del terreno  del NAICM	Trabajos relativos a la nivelación y limpieza del terreno  del NAICM	active	2015-12-14 00:00:00	2017-01-13 00:00:00	1762803241.34	MXN	2015-12-14 00:00:00	\N	
 177	177	1	AD-DCAGI-SA-GAR-02/15	Servicio de Soporte Tecnico y Mantenimiento Para Los Equipos Del Servicio De Red Local, Seguridad de Datos y Telefonia	Cubrir las necesidades primarias de soporte de red y a la telefonia e internet e implementar el servicio en comento, por un periodo de seis meses a partir del 2° de enero y hasta 01 de julio de 2015 a traves de una adjudicacion directa.	terminated	2015-01-02 00:00:00	2015-07-01 00:00:00	298780.56	MXN	2015-01-02 00:00:00	\N	
 149	149	AA-009KDH999-E56-2016	AD-AS-DCAGI-SC-038/15	Servicio integral de correo electrónico y directorio activo	Servicio integral de correo electrónico y directorio activo	terminated	2015-01-02 00:00:00	2015-01-02 00:00:00	299960.00	MXN	2015-01-02 00:00:00	\N	
@@ -3191,7 +3185,6 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 36	36	SO-009KDH999-N18-2015	 AD-SRO-DCAGI-SC-011/15	Prestación de los Servicios consistentes en la elaboración del Plan de manejo  ambiental para el Nuevo Aeropuerto  Internacional de la Ciudad de México.	Prestación de los Servicios consistentes en la elaboración del Plan de manejo  ambiental para el Nuevo Aeropuerto  Internacional de la Ciudad de México.	terminated	2015-02-23 00:00:00	2015-03-20 00:00:00	550000.00	MXN	2015-02-20 00:00:00	\N	
 166	166	SO-09KDH999-N26-2015	AD-SRO-DCAGI-SC-013/15	Plan de Monitoreo, registro y verificación de emisión de gases de efecto invernadero para el Nuevo Aeropuerto Internacional de la Ciudad de México.	Plan de Monitoreo, registro y verificación de emisión de gases de efecto invernadero para el Nuevo Aeropuerto Internacional de la Ciudad de México.	terminated	\N	\N	465000	MXN	2015-02-19 00:00:00	\N	
 38	38	GACM/DCI/SJ/CI/011-2015	GACM/DCI/SJ/CI/011-2015	Elaboración y puesta en marcha del Sistema Integeal e Gestión de Cumplimiento Ambiental (SIGCA) para el Proyecto Nuevo Aeropuerto Internacional de la Ciudad de México	Elaboración y puesta en marcha del Sistema Integeal e Gestión de Cumplimiento Ambiental (SIGCA) para el Proyecto Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2015-06-01 00:00:00	2015-12-03 00:00:00	34800000.00	MXN	2015-06-01 00:00:00	\N	
-167	167	-	AD-SRO-DCAGI-SC-019/16	Supervisión, monitoreo, verificación y evaluación sistemática de los productos derivados del diseño e instrumentación del modelo virtual de información para la construcción del BIM del Nuevo Aeropuerto Internacional de la Ciudad de México	Supervisión, monitoreo, verificación y evaluación sistemática de los productos derivados del diseño e instrumentación del modelo virtual de información para la construcción del BIM del Nuevo Aeropuerto Internacional de la Ciudad de México	none	2016-04-01 00:00:00	2019-12-06 00:00:00	32925000.00	MXN	2016-03-31 00:00:00	\N	
 60	60	IA-009KDH-N57-2015	ITP-AS-DCAGI-SC-060/15	Plan de Integración Ejidal para el Nuevo Aeropuerto Internacional de la Ciudad de México	Lograr una compatibilidad sustentable de: bordes, usos de suelo, infraestructuras; entorno a la poligonal definitiva del Proyecto "Nuevo Aeropuerto Internacional de la Ciudad de México S.A. de C.V. y manejar los impactos locales de las obras asociadas al mismo, con acciones locales de mitigación. 	terminated	2015-08-19 00:00:00	2015-12-31 00:00:00	13080028	MXN	2015-08-19 00:00:00	2015-12-29 00:00:00	Antecedente V. del Convenio Modificatorio
 50	50	IO-009KDH999-N43-2015	ITP-SRO-DCAGI-SC-040/15	Elaboración del proyecto de terracerías de los caminos provisionales para la construcción del Nuevo Aeropuerto Internacional de la Ciudad de México	Elaboración del proyecto de terracerías de los caminos provisionales para la construcción del Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2015-07-01 00:00:00	2015-08-29 00:00:00	7062852.40	MXN	2015-07-01 00:00:00	2015-12-01 00:00:00	Antecedente V. del Convenio Modificatorio
 156	156	AA-009KDH999-E58-2016	AD-AS-DCAGI-SC-110/15	Servicio de Testigo Social para que Atestigüe la Etapas del Procedimiento de la Licitación Pública Nacional de Obra Pública de Carga, Acarreo y Descarga Dentro y Fuera del Polígono del Material Existente, Producto de Depósitos de Demoliciones y Desazolve, Incluye Conformación del Terreno donde se Construirá el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) para el NAICM	Servicio de Testigo Social para que Atestigüe la Etapas del Procedimiento de la Licitación Pública Nacional de Obra Pública de Carga, Acarreo y Descarga Dentro y Fuera del Polígono del Material Existente, Producto de Depósitos de Demoliciones y Desazolve, Incluye Conformación del Terreno donde se Construirá el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) para el NAICM	terminated	2015-12-01 00:00:00	\N	332975.00	MXN	2015-12-01 00:00:00	\N	
@@ -3201,7 +3194,6 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 131	131	AD-SRO-DCAGI-SC-022/16	AD-SRO-DCAGI-SC-022/16	Servicios de transporte en camionetas de redilas, con capacidad de carga de 3.5 toneladas, doble rodada, para movilidad de materiales y equipo	Servicios de transporte en camionetas de redilas, con capacidad de carga de 3.5 toneladas, doble rodada, para movilidad de materiales y equipo	terminated	2016-01-25 00:00:00	2016-02-15 00:00:00	384000	MXN	2016-02-03 00:00:00	\N	
 168	168	-	AD-SRO-DCAGI-SC-026-16	Supervisión Técnica Administrativa y de Control de Calidad para los Trabajos de Carga, Acarreo y Descarga fuera del Polígono del material existente, producto de depósitos de Demolición, Desperdicio y Desazolve	Supervisión Técnica Administrativa y de Control de Calidad para los Trabajos de Carga, Acarreo y Descarga fuera del Polígono del material existente, producto de depósitos de Demolición, Desperdicio y Desazolve	active	2016-04-01 00:00:00	2016-04-01 00:00:00	7512904.17	MXN	2016-04-08 00:00:00	\N	
 132	132	SO-09KDH999-N26-2015	AD-SRO-DCAGI-SC-030-16	Pruebas de Laboratorio Geotécnicas complementarias para el Proyecto Ejecutivo de Sistema de Drenaje Temporal del Nuevo Aeropuerto Internacional de la Ciudad de México	Pruebas de Laboratorio Geotécnicas complementarias para el Proyecto Ejecutivo de Sistema de Drenaje Temporal del Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2016-04-15 00:00:00	2016-04-29 00:00:00	163184.04	MXN	2016-04-22 00:00:00	\N	
-199	199	 SA-009KDH999-N68-2015	AS-AS-DCAGI-SC-55/15	Adquisión de bienes muebles por parte de GACM, consistentes en "materiales de construcción"	Adquisión de bienes muebles por parte de GACM, consistentes en "materiales de construcción"	none	2015-07-14 00:00:00	2015-08-04 00:00:00	243070.24	MXN	2015-06-14 00:00:00	\N	
 135	135	-	CTO.ARRENDAMIENTO.T.MURANO.01/15	Arrendamiento de Torre Murano Piso 1	Uso y goce temporal del Bien arrendado y los cajones de estacionamiento	active	2015-10-19 00:00:00	2017-09-14 00:00:00	251360	MXN	2015-10-19 00:00:00	\N	
 136	136	IA-009KDH999-E95-2015	ITP-AS-DCAGI-SC-004/16	Servicios de Asesoria en Materia Fiscal para la Recuperacion de Saldos a favor de IVA e ISR, así mismo Asesoria Respecto al Cumplimiento de Tratados Internacionales para evitar la Doble Tributación.	Servicios de Asesoria en Materia Fiscal para la Recuperacion de Saldos a favor de IVA e ISR, así mismo Asesoria Respecto al Cumplimiento de Tratados Internacionales para evitar la Doble Tributación.	terminated	2016-02-11 00:00:00	2019-02-18 00:00:00	18000000.00	MXN	2016-02-11 00:00:00	\N	
 142	142	IO-009KDH999-N75-2015	ITP-SRO-DCAGI-SC-080/15	Control, Prevención e Identificación de plagas en el Polígono del NAICM	Control, Prevención e identificación de plagas en el Polígono del Nuevo Aeropuerto Internacional de la Ciudad de México (Primera Etapa)	terminated	2015-10-13 00:00:00	2016-04-12 00:00:00	1495559.05	MXN	2015-10-13 00:00:00	\N	
@@ -3215,12 +3207,10 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 172	172	AO-009KDH999-E55-2016	AD-SRO-DCAGI-SC-104/15	Proyecto Ejecutivo para el Alumbrado Público de la Barda Perimetral del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)		terminated	2015-12-02 00:00:00	2016-07-16 00:00:00	620689.66	MXN	2015-11-30 00:00:00	\N	
 163	163	AA-009KDH999-E74-2016	AD-S-DCAGI-SC-017/16	Servicio Integral de Limpieza en los inmuebles de GACM	Prestación del "Servicio integral de limpieza en los inmuebles del Grupo Aeroportuario de la Ciudad de México", los cuales serán prestados totalmente a satisfacción de GACM, de conformidad con las especificaciones y características establecidas.	active	2016-01-01 00:00:00	2016-11-30 00:00:00	646211.80	MXN	2015-12-29 00:00:00	\N	
 159	159	-	AD-OP-DCAGI-SC-024/16	Obras de Excavación de prueba, Losa experimental y prueba de Pilotes para el El Edificio Terminal y Torre de Control del NAICM	Obras de Excavación de prueba, Losa experimental y prueba de Pilotes para el El Edificio Terminal y Torre de Control del NAICM	active	2016-05-12 00:00:00	2016-10-08 00:00:00	57742619.43	MXN	2016-05-12 00:00:00	\N	
-218	218	-	-	Construcción del Edificio Terminal del Nuevo Aeropuerto Internacional de la Ciudad de México		none	\N	\N	0		\N	\N	
 155	155	AD-CONV-DCAGI-SC-001/16	AD-CONV-DCAGI-SC-001/16	Los servicios de protección, custodia, vigilancia y seguridad de sus bienes e intalaciones, así como el diseño e implementación de sistemas de seguridad y su supervisión permanente.	Los servicios de protección, custodia, vigilancia y seguridad de sus bienes e intalaciones, así como el diseño e implementación de sistemas de seguridad y su supervisión permanente.	active	2016-03-01 00:00:00	2018-11-30 00:00:00	858330000.00	MXN	2016-03-01 00:00:00	\N	
 173	173	-	GACM/DCI/SJ/CI/008/2015	Estudio de rehabilitacion y adaptacion de los canales existentes para que funcionen como infraestructura de drenaje temporal, y remocion de material de desecho, en el terreno del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	Estudio de rehabilitacion y adaptacion de los canales existentes para que funcionen como infraestructura de drenaje temporal, y remocion de material de desecho, en el terreno del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	terminated	2015-05-01 00:00:00	2015-06-01 00:00:00	1206165.79	MXN	2015-05-01 00:00:00	\N	
 160	160	-	AD-OP-DCAGI-SC-025/16	Instalación de equipo de Medición de Energía  Eléctrica en las Puertas 7 y 8 del Nuevo aeropuerto Internacional de la Ciudad de México (NAICM)	Instalación de equipo de Medición de Energía  Eléctrica en las Puertas 7 y 8 del Nuevo aeropuerto Internacional de la Ciudad de México (NAICM)	terminated	2016-04-11 00:00:00	2016-04-29 00:00:00	67996.00	MXN	2016-04-11 00:00:00	\N	
 161	161	AO-009KDH999-E18-2016	AD-OP-DCAGI-SC-108/15	Proyecto ejecutivo para la construcción de carriles de desaceleración, plataformas de almacenamiento y carriles de aceleración en las puertas 7, y 9 de acceso al polígono del NAICM.	Proyecto ejecutivo para la construcción de carriles de desaceleración, plataformas de almacenamiento y carriles de aceleración en las puertas 7, y 9 de acceso al polígono del NAICM.	terminated	2015-11-30 00:00:00	2015-12-29 00:00:00	690000.00	MXN	2015-11-30 00:00:00	\N	
-174	174	-	GACM-SPF/01/2014-2017	Los servicios de protección, custodia, vigilancia y seguridad en los bienes e intalaciones de GACM.	Los servicios de protección, custodia, vigilancia y seguridad en los bienes e intalaciones de GACM	none	2014-10-16 00:00:00	2017-10-15 00:00:00	0		2014-10-15 00:00:00	\N	
 144	144	LO-009KDH999-E22-2016	LPN-SRO-DCAGI-SC-028-2016	Supervisión  de la Construcción de la Barda y Camino Perimetral, Alumbrado, Servicios Inducidos y Casetas de Acceso  para el Nuevo Aeropuerto Internacional de la Ciudad de México	Supervisión  de la Construcción de la Barda y Camino Perimetral, Alumbrado, Servicios Inducidos y Casetas de Acceso  para el Nuevo Aeropuerto Internacional de la Ciudad de México	active	2016-04-13 00:00:00	2017-01-12 00:00:00	12999262.50	MXN	2016-04-13 00:00:00	\N	
 90	90	 LO-009KDH999-N20-2015	LPN-O-DCAGI-SC-024/15	Construcción de accesos y plataformas para exploración geotécnica para la pista número 2 del Nuevo Aeropuerto Internacional de la Ciudad de México.	Construcción de accesos y plataformas para exploración geotécnica para la pista número 2 del Nuevo Aeropuerto Internacional de la Ciudad de México.	terminated	2015-05-14 00:00:00	2015-06-27 00:00:00	5038656	MXN	2015-05-14 00:00:00	\N	
 164	164	-	AD-SRO-CONV-DCAGI-SC-03/16	Establecer las bases a las que se sujetarán Grupo Aeroportuario de la Ciudad de México S.A. de C.V: y el Instituto Mexicano del Transporte para que en forma reciproca se proporcionen los apoyos necesarios en materia de recursos humanos, materiales, tecnológicos, de inormación y capacitación en haras de lograr la efectiva colaboración para la realización del Proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México.	Establecer las bases a las que se sujetarán Grupo Aeroportuario de la Ciudad de México S.A. de C.V: y el Instituto Mexicano del Transporte para que en forma reciproca se proporcionen los apoyos necesarios en materia de recursos humanos, materiales, tecnológicos, de inormación y capacitación en haras de lograr la efectiva colaboración para la realización del Proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México.	active	2016-06-10 00:00:00	2020-12-31 00:00:00	0	MXN	2016-06-10 00:00:00	\N	
@@ -3252,9 +3242,6 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 203	203	No aplica	GACM/DCI/SJ/CM-E/001-2016	Convenio de colaboración para llevar a cabo los Servicios consistentes en el apoyo técnico y tecnológico para la implementación y ejecución de planes y programas de logística de construcción del NAICM	Llevar a cabo los Servicios consistentes en el apoyo técnico y tecnológico para la implementación y ejecución de planes y programas de logística de construcción del NAICM	active	2016-03-01 00:00:00	\N	309200069.2	MXN	2016-03-01 00:00:00	\N	
 211	211	1	DTC-026/2013	Servicio de asesoría financiera y legal para la obtención del financiamiento, desarrollo de estructura jurídica, concesionamiento y demás actividades relacionadas con la financiación para la construcción del NAICM	Servicio de asesoría financiera y legal para la obtención del financiamiento, desarrollo de estructura jurídica, concesionamiento y demás actividades relacionadas con la financiación para la construcción del NAICM	active	2013-11-27 00:00:00	2016-11-27 00:00:00	64100000.00	MXN	2013-11-27 00:00:00	\N	
 212	212	1	GACM/DCI/SJ/CC-015-15	Instrumentar un esquema de colaboración que permita establecer las bases generales para desarrollar la especialidad de Ingeniería Aeroportuaria	Instrumentar un esquema de colaboración que permita establecer las bases generales para desarrollar la especialidad de Ingeniería Aeroportuaria 	active	2015-05-12 00:00:00	\N	0	MXN	2015-05-12 00:00:00	\N	
-204	204	No aplica	GACM/DG/DCAGI/SJ/CI/010/15	Establecer un mecanismo correspondiente entre GACM y CONAGUA para el mantenimiento y operación de las obras de infraestructira para llevar a cabo la regulación hidráulica en las zonas aledañas al NAICM, que permitan favorecer y mejorar el hábitat para las aves acuáticas migratorias que arriban a la zona, asi como las aves residentes y realizar en forma coordinada la operación y mantenimiento de las obras hidráulicas de regulación y conducción de los escurrimientos pluviales provenientes del interior del perímetro del NAICM, durante su etapa de construcción, a través de un sistema de drenaje que operará temporalmente, los cuales serán regulados en dos lagunas a cargo de GACM y cuyas descargas al Dren General del Valle quedarán bajo el control de CONAGUA.	Establecer un mecanismo correspondiente entre GACM y CONAGUA para el mantenimiento y operación de las obras de infraestructira para llevar a cabo la regulación hidráulica en las zonas aledañas al NAICM, que permitan favorecer y mejorar el hábitat para las aves acuáticas migratorias que arriban a la zona, asi como las aves residentes y realizar en forma coordinada la operación y mantenimiento de las obras hidráulicas de regulación y conducción de los escurrimientos pluviales provenientes del interior del perímetro del NAICM, durante su etapa de construcción, a través de un sistema de drenaje que operará temporalmente, los cuales serán regulados en dos lagunas a cargo de GACM y cuyas descargas al Dren General del Valle quedarán bajo el control de CONAGUA.	none	2015-05-12 00:00:00	\N	0	No aplica	2015-05-12 00:00:00	\N	
-219	219	-	-	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	none	\N	\N	0		\N	\N	
-220	220	-	-	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 3 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 3 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	none	\N	\N	0		\N	\N	
 37	37	-	"Sin número"	Contrato de Fideicomiso de Administarción y Pago para la Adquisición de Bienes y Contratación de Servicios, y Obre Pública.	La Constitución de Fideicomiso de Administración y Pago para la Adquisicion de bienes y contratación de servicios, y obra pública.	active	2014-10-29 00:00:00	2024-10-29 00:00:00	10000000	MXN	2014-10-29 00:00:00	\N	
 17	17	AO-009KDH999-E40-2016	AD-SRO-DCAGI-SC-099/15	Servicios de Asistencia Técnica Especializada en Materia de Diseño Sismico Estructural Aplicada a la Infraestructura Aeroportuaria.	Servicios de Asistencia Técnica Especializada en Materia de Diseño Sismico Estructural Aplicada a la Infraestructura Aeroportuaria.	terminated	2015-05-23 00:00:00	2015-12-01 00:00:00	2104525.86	MXN	2015-12-01 00:00:00	\N	
 18	18	AO-009KDH999-E46-2016	AD-SRO-DCAGI-SC-100/15	Servicios de experto revisor para la asistencia técnica especializada en materia de diseño estructural, aplicada  a la infraestructura aeroportuaria.	Servicios de experto revisor para la asistencia técnica especializada en materia de diseño estructural, aplicada  a la infraestructura aeroportuaria.	terminated	2015-05-23 00:00:00	2015-12-01 00:00:00	176400.00	USD	2015-12-01 00:00:00	\N	
@@ -3271,7 +3258,6 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 104	104	IA-009KDH999-N8-2014	ITP-S-DCAGI-SC-009/2014	Arrendamiento de Mobiliario Para Las Instalaciones De Torre Murano	Arrendamiento de Mobiliario Para Las Instalaciones De Torre Murano	active	2014-12-05 00:00:00	2017-12-05 00:00:00	1595304	MXN	2014-12-05 00:00:00	2015-04-01 00:00:00	Antecedente VI. del Convenio Modificatorio
 43	43	GACM/DCI/SJ/CM-E/05-2015	-	Campaña de exploración Geotécnica de campo 2015. Muestreo y sistemas de Medición en el Subsuelo en las Zonas de Aeropistas, Calles de Rodaje y Caminos Internos del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	Campaña de exploración Geotécnica de campo 2015. Muestreo y sistemas de Medición en el Subsuelo en las Zonas de Aeropistas, Calles de Rodaje y Caminos Internos del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	active	2015-03-02 00:00:00	2015-12-31 00:00:00	230538969.12	MXN	2015-03-02 00:00:00	2015-11-26 00:00:00	Antecedente quinto del Convenio modificatorio.
 162	162	SA-009KDH999-N10-2014	AD-S-DCAGI-SC-013/14	Implementación y Soporte Técnico Relacionados con Licencias de Software	Licenciamiento Oracle y servicios profesionales de implementación para crear un sistema de planificación de recursos gubernamentales "GRP", (por sus siglas en inglés, Goverment Resource Planning)	active	2014-12-19 00:00:00	2017-12-31 00:00:00	54998429.36	MXN	2015-12-19 00:00:00	2015-12-19 00:00:00	Atnecdedente  III y declaración I.4 del convenio modificatorio
-249	249	LO-009KDH999-E48-2016	LPI-OP-DCAGI-SC-071-16	Sistema de precarga e instrumentación geotécnica, infraestructura, estructura de pavimientos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del NAICM		none	\N	\N	0	MXN	\N	\N	
 235	235	AD-009KDH999-E115-2016	AD-SRO-DCAGI-SC-058-16	Ejecución de levantamientos topograficos para los trazos de los ejes principales y levantamientos de la topografia de detalle para diseño de camino y barda perimetral en el lindero norte oriente y liga al sistema de cordenadas vigentes de la adecuación del proyecto de carriles de aceleración y desaceleración para los accesos al polígono del (NAICM). 	Ejecución de levanyamientos topograficos para los trazos de los ejes principales y levantamientosde la topografia de detalle para diseño de camino y barda perimetral en el lindero norte oriente y liga al sistema de cordenadas vigentes de la adecuación del proyecto de carriles de aceleración y desaceleración para los accesos al polígono del (NAICM). 	terminated	2016-07-01 14:18:12	2016-07-30 14:18:28	606172.44	MXN	2016-07-01 13:53:27	\N	
 240	240	No. IO-009KDH999-E73-2016	ITP-SRO-DCAGI-SC-046-2016	Estudio de factibilidad de energía solar fotovoltáica para el NAICM	Estudio de factibilidad de energía solar fotovoltáica para el NAICM	active	2016-06-25 00:00:00	2016-09-22 00:00:00	8413461.44	MXN	2016-06-25 00:00:00	\N	
 241	241	IO -009KDH999-E75-2016	ITP-SRO-DCAGI-SC-047-16	Coordinación topográfia integral para llevar a cabo el control de obra y administracción de la información topográfica y geodésica generada para el proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México.	Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional	active	2016-06-20 00:00:00	2016-12-31 00:00:00	7147393.11	MXN	2016-06-20 00:00:00	\N	
@@ -3280,9 +3266,7 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 238	238	009-KDH999-E71-2016	ITP-SRO-DCAGI-SC-038-16	Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México	Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México	active	2016-06-22 15:44:09	2017-05-22 15:44:09	44150068.04	MXN	\N	2016-06-22 15:44:09	
 237	237	IO-009KDH999-E82-2016	ITP-SRO-DCAGI-SC-059-16	Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México 	Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional	active	2016-07-25 15:32:13	2017-03-11 15:32:13	5215043.09	MXN	2016-07-25 15:32:13	\N	
 232	232	AA-009KDH-E120-2016	AD-AS-DCAGI-SC-051-16	Servicio de estacionamiento vehicular para Grupo Aeroportuario de la Ciudad de México,S.A. de C.V	Contrato plurianual abierto en la prestación del "Servicio de estacionamiento vehicular para GRUPO AEROPORTUARIO DE LA CIUDAD DE MÉXICO S.A DE C.V.	active	2016-07-01 02:00:00	2017-09-30 00:00:00	1563000.00	MXN	2016-07-06 00:00:00	\N	
-246	246	LA-009KDH999-104-2016	LPN-AS-DCAGI-SC-067-16	SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET).		none	\N	\N	0	MXN	\N	\N	
 231	231	AA-009KDH999-E111-2016	AD-AS-DCAGI-SC-045-2016	SERVICIO DE TALLER DE PREPARACIÓN A LOS FUNCIONARIOS DE GACM PARA MANEJO DE INFORMACIÓN	SERVICIO DE TALLER DE PREPARACIÓN A LOS FUNCIONARIOS DE GACM PARA MANEJO DE INFORMACIÓN	terminated	2016-07-07 00:00:00	2016-08-05 00:00:00	150000.00	MXN	2016-07-07 00:00:00	\N	
-228	228	AA-009KDH999-E86-2016	AD-AS-DCAGI-SC-032/16	Servicio de asesoría especializada en materia de gestión social, segunda etapa	Servicios de asesoría especializada en materia de gestión social, segunda etapa	none	2016-04-22 00:00:00	2017-12-31 00:00:00	4026000.00	MXN	2016-05-06 00:00:00	\N	
 234	234	SA-009KDH999-N6-2015	AD-S-DCAGI-SC-011/2014	Servicios para llevar a cabo la asesoría técnica y capacitación para el programa de mano de obra campesina o urbana marginada en el predio del Nuevo Aeropuerto Internacional de la Ciudad de México	Servicios para llevar a cabo la asesoría técnica y capacitación para el programa de mano de obra campesina o urbana marginada en el predio del Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2014-12-05 00:00:00	2015-02-02 00:00:00	1743240.52	MXN	2014-12-05 00:00:00	\N	
 233	233	AD-AS-DCAGI-SC-063-16	DCAGI/SC/GC/0151/2016	Asesoría Técnica y capacitación a trabajadores del Programa de Empleo Temporal de mano de obra campesina o urbana marginada para los 7 ejidos colindantes al predio del NAICM  (Mínimo 960, máximo 2400 trabajadores) Segunda Fase.		active	\N	\N	41296304.14	MXN	\N	\N	
 242	242	IO-009KDH999-E76-2016	ITP-SRO-DCAGI-SC-049-16	Nivelación diferencial de presición para la determinación de hundimientos de los bancos de nivel instrumentados dentro del polígono del NAICM	Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional	active	2016-06-26 00:00:00	2016-12-31 00:00:00	8440929.63	MXN	2016-06-20 00:00:00	\N	
@@ -3295,7 +3279,24 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 250	250	LO-009KDH999-E49-2016	LPI-OP-DCAGI-SC-072-16	Sistema de precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 3 y área de túneles del NAICM		active	\N	\N	7359204570.23	MXN	\N	\N	
 229	229	AA-009KDH999-E124-2015	AD-AS-DCAGI-SC-039-16	Sillas apilables acojinadas y mesas paea eventos licitatorios 	Arrendamiento de "Sillas apilables acojinadas y mesas para los eventos licitatorios" sin apción a compra, en adelante "los bienes", los cuales seran a satisfacción de "GACM". 	terminated	2016-06-16 00:00:00	2016-10-15 00:00:00	62900.00	MXN	2016-06-16 00:00:00	\N	
 230	230	AA-009KDH999-E116-2016	AD-AS-DCAGI-SC-044-2016	Servicios de elaboración del Manual para situaciones de riesgo, desastre, casos fortuitos y de fuerza mayor en la construcción del NAICM	Servicios de elaboración del Manual para situaciones de riesgo, desastre, casos fortuitos y de fuerza mayor en la construcción del NAICM	terminated	2016-07-08 00:00:00	2016-09-05 00:00:00	180000.00	MXN	2016-08-07 00:00:00	\N	
-251	251	LO-009KDH999-E51-2016	LPI-OP-DCAGI-SC-073/16	Servicios de supervisión técnica y administrativa de construcción para el paquete Terminal del NAICM.	-	none	\N	\N	0	MXN	\N	\N	
+80	80	-	GACM/DCI/SJ/CM-018-2015	Estalecer las bases generales a que se sujetaran GACM y la UANL así como, pactos comunes y el objeto genérico de futuros servicios de carácter científico y tecnológico u otro tipo que acuerden las mismas​	Estalecer las bases generales a que se sujetaran GACM y la UANL así como, pactos comunes y el objeto genérico de futuros servicios de carácter científico y tecnológico u otro tipo que acuerden las mismas​	\N	2015-09-09 00:00:00	\N	0	MXN	\N	\N	
+61	61	ITP-SRO-DCAGI-SC-049/2015	ITP-SRO-DCAGI-SC-049/2015	Programa general de abastecimiento, uso y disposición de agua del nuevo Aeropuerto Internacional de la Ciudad de México (PROAGUA), Etapa I	Programa general de abastecimiento, uso y disposición de agua del nuevo Aeropuerto Internacional de la Ciudad de México (PROAGUA), Etapa I	\N	2015-07-31 00:00:00	2015-12-31 00:00:00	8150489.03	MXN	2015-07-31 00:00:00	\N	
+205	205	No aplica	AD-AS-DCAGI-SC-035-16	Servicio de Telefonía Celular	Prestación del  "SERVICIOS DE TELEFONÍA CELULAR, PARA GRUPO AEROPORTUARIO DE LA CIUDAD DE MÉXICO, S.A. DE C.V.", los cuales serán prestados totalmente a satisfacción de GACM, de conformidad con las especificaciones y características establecidas 	\N	\N	\N	724550	MXN	2016-05-01 00:00:00	\N	
+76	76	-	GACM/DCI/SJ/CI/013-2015                                                                    	Llevar a cabo el Servicio de Investigaciones y Estudios Especiales Relacionados con Aspectos Geotécnicos del Nuevo Aeropuerto de la Ciudad de México (NAICM) en el Vaso del Ex-Lago de Texcoco, Zona Federal	Llevar a cabo el Servicio de Investigaciones y Estudios Especiales Relacionados con Aspectos Geotécnicos del Nuevo Aeropuerto de la Ciudad de México (NAICM) en el Vaso del Ex-Lago de Texcoco, Zona Federal	\N	2015-06-01 00:00:00	2016-12-31 00:00:00	152849934	MXN	2015-06-01 00:00:00	\N	
+42	42	-	-	Construcción de Proyecto Integral de Barda y Camino Perimetral, Alumbrado, Servicios Inducidos y Casetas de Acceso para el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)"	Construcción de Proyecto Integral de Barda y Camino Perimetral, Alumbrado, Servicios Inducidos y Casetas de Acceso para el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM	\N	\N	\N	0		\N	\N	
+47	47	-	GACM/DG/DCAGI/SJ-1044/2015	Conveio de Cooperación para el uso y goce temporal a Título gratuito de los inmuebles identificados como Edificio R1 Planta Baja 381. 73 m2 lado derecho, Edificio R1 Planta Baja 192.98 m2 lado izquierdo y edificio R1 Planta Alta 203.75 m2, situadas en el edificio Ex tienda.	Conveio de Cooperación para el uso y goce temporal a Título gratuito de los inmuebles identificados como Edificio R1 Planta Baja 381. 73 m2 lado derecho, Edificio R1 Planta Baja 192.98 m2 lado izquierdo y edificio R1 Planta Alta 203.75 m2, situadas en el edificio Ex tienda. 	\N	2014-06-07 00:00:00	2016-07-15 00:00:00	0	MXN	2016-06-07 00:00:00	\N	
+196	196	99-989-GAC9806011J4-05-03-2015	LPN-AD-DCAGI-SC-027/16	Contrato sistemático 99-989-GAC9806011J4-05-03-2015 y adendum elaborado por GACM		\N	2016-04-05 00:00:00	2016-12-31 00:00:00	4669201.38	MXN	2016-04-07 00:00:00	\N	
+251	251	LO-009KDH999-E51-2016	LPI-OP-DCAGI-SC-073/16	Servicios de supervisión técnica y administrativa de construcción para el paquete Terminal del NAICM.	-	\N	\N	\N	0	MXN	\N	\N	
+167	167	-	AD-SRO-DCAGI-SC-019/16	Supervisión, monitoreo, verificación y evaluación sistemática de los productos derivados del diseño e instrumentación del modelo virtual de información para la construcción del BIM del Nuevo Aeropuerto Internacional de la Ciudad de México	Supervisión, monitoreo, verificación y evaluación sistemática de los productos derivados del diseño e instrumentación del modelo virtual de información para la construcción del BIM del Nuevo Aeropuerto Internacional de la Ciudad de México	\N	2016-04-01 00:00:00	2019-12-06 00:00:00	32925000.00	MXN	2016-03-31 00:00:00	\N	
+199	199	 SA-009KDH999-N68-2015	AS-AS-DCAGI-SC-55/15	Adquisión de bienes muebles por parte de GACM, consistentes en "materiales de construcción"	Adquisión de bienes muebles por parte de GACM, consistentes en "materiales de construcción"	\N	2015-07-14 00:00:00	2015-08-04 00:00:00	243070.24	MXN	2015-06-14 00:00:00	\N	
+218	218	-	-	Construcción del Edificio Terminal del Nuevo Aeropuerto Internacional de la Ciudad de México		\N	\N	\N	0		\N	\N	
+174	174	-	GACM-SPF/01/2014-2017	Los servicios de protección, custodia, vigilancia y seguridad en los bienes e intalaciones de GACM.	Los servicios de protección, custodia, vigilancia y seguridad en los bienes e intalaciones de GACM	\N	2014-10-16 00:00:00	2017-10-15 00:00:00	0		2014-10-15 00:00:00	\N	
+204	204	No aplica	GACM/DG/DCAGI/SJ/CI/010/15	Establecer un mecanismo correspondiente entre GACM y CONAGUA para el mantenimiento y operación de las obras de infraestructira para llevar a cabo la regulación hidráulica en las zonas aledañas al NAICM, que permitan favorecer y mejorar el hábitat para las aves acuáticas migratorias que arriban a la zona, asi como las aves residentes y realizar en forma coordinada la operación y mantenimiento de las obras hidráulicas de regulación y conducción de los escurrimientos pluviales provenientes del interior del perímetro del NAICM, durante su etapa de construcción, a través de un sistema de drenaje que operará temporalmente, los cuales serán regulados en dos lagunas a cargo de GACM y cuyas descargas al Dren General del Valle quedarán bajo el control de CONAGUA.	Establecer un mecanismo correspondiente entre GACM y CONAGUA para el mantenimiento y operación de las obras de infraestructira para llevar a cabo la regulación hidráulica en las zonas aledañas al NAICM, que permitan favorecer y mejorar el hábitat para las aves acuáticas migratorias que arriban a la zona, asi como las aves residentes y realizar en forma coordinada la operación y mantenimiento de las obras hidráulicas de regulación y conducción de los escurrimientos pluviales provenientes del interior del perímetro del NAICM, durante su etapa de construcción, a través de un sistema de drenaje que operará temporalmente, los cuales serán regulados en dos lagunas a cargo de GACM y cuyas descargas al Dren General del Valle quedarán bajo el control de CONAGUA.	\N	2015-05-12 00:00:00	\N	0	No aplica	2015-05-12 00:00:00	\N	
+219	219	-	-	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	\N	\N	\N	0		\N	\N	
+220	220	-	-	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 3 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 3 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	\N	\N	\N	0		\N	\N	
+249	249	LO-009KDH999-E48-2016	LPI-OP-DCAGI-SC-071-16	Sistema de precarga e instrumentación geotécnica, infraestructura, estructura de pavimientos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del NAICM		\N	\N	\N	0	MXN	\N	\N	
+246	246	LA-009KDH999-104-2016	LPN-AS-DCAGI-SC-067-16	SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET).		\N	\N	\N	0	MXN	\N	\N	
+228	228	AA-009KDH999-E86-2016	AD-AS-DCAGI-SC-032/16	Servicio de asesoría especializada en materia de gestión social, segunda etapa	Servicios de asesoría especializada en materia de gestión social, segunda etapa	\N	2016-04-22 00:00:00	2017-12-31 00:00:00	4026000.00	MXN	2016-05-06 00:00:00	\N	
 \.
 
 
@@ -3472,235 +3473,235 @@ SELECT pg_catalog.setval('contractdocuments_id_seq', 112, true);
 --
 
 COPY contractingprocess (id, ocid, fecha_creacion, hora_creacion, stage, uri, license, publicationpolicy, description) FROM stdin;
-220	GACM_PISTA3	2016-07-18	10:21:07.965627	3	\N	\N	\N	\N
-219	GACM_PISTA2	2016-07-18	10:21:02.852422	3	\N	\N	\N	\N
-218	GACM_Edificio_Terminal	2016-07-18	10:20:10.880473	3	\N	\N	\N	\N
-200	AD-AS-DCAGI-SC-057/15	2016-07-17	20:11:35.387287	3	\N	\N	\N	\N
-201	AD-SRO-DCAGI-SC-021-15	2016-07-17	20:11:37.300454	3	\N	\N	\N	\N
-202	AD-SRO-DCAGI-SC-089/15	2016-07-17	20:11:38.986317	3	\N	\N	\N	\N
-19	AD-AS-DCAGI-SC-121/15	2016-07-15	12:45:30.917792	3	\N	\N	\N	\N
-22	AD-SRO-CONV-DCAGI-SC-002/16	2016-07-15	12:45:49.845957	3	\N	\N	\N	\N
-23	AD-SRO-CONV-DCAGI-SC-04/16	2016-07-15	12:45:51.141064	3	\N	\N	\N	\N
-71	GACM/DCI/SJ/CI/001-2015	2016-07-15	13:23:19.353123	3	\N	\N	\N	\N
-61	ITP-SRO-DCAGI-SC-049/2015	2016-07-15	12:47:04.935183	3	\N	\N	\N	\N
-2	AD-AS-DCAGI-SC-050-2015	2016-07-15	12:45:02.461858	3	\N	\N	\N	\N
-73	GACM/DCI/SJ/CI/02-2014	2016-07-15	13:38:08.813878	3	\N	\N	\N	\N
-182	E0A1VWO	2016-07-16	09:42:02.508596	3	\N	\N	\N	\N
-24	AD-SRO-CONV-DCAGI-SC-006/16	2016-07-15	12:45:53.29262	3	\N	\N	\N	\N
-25	AD-SRO-DCAGI-SC-001/15	2016-07-15	12:45:55.4532	3	\N	\N	\N	\N
-193	SEC-/03/2014	2016-07-16	09:42:28.960228	3	\N	\N	\N	\N
-20	AD-S-DCAGI-SC-016/2014	2016-07-15	12:45:32.940518	3	\N	\N	\N	\N
-16	AD-SRO-DCAGI-SC-098/15	2016-07-15	12:45:25.661747	3	\N	\N	\N	\N
-74	GACM/DCI/SJ/CI/03-2014	2016-07-15	13:50:46.531092	3	\N	\N	\N	\N
-26	AD-SRO-DCAGI-SC-002/16	2016-07-15	12:45:56.860718	3	\N	\N	\N	\N
-27	AD-SRO-DCAGI-SC-002/2015	2016-07-15	12:45:59.124896	3	\N	\N	\N	\N
-55	AD-AS-DCAGI-SC-053/15	2016-07-15	12:46:50.710612	3	\N	\N	\N	\N
-75	GACM/DCI/SJ/CI/04-2014	2016-07-15	14:01:20.091646	3	\N	\N	\N	\N
-81	LPN-OP-DCAGI-SC-115/15	2016-07-15	15:46:35.560295	3	\N	\N	\N	\N
-83	LPN-SRO-DCAGI-SC-042/15	2016-07-15	15:56:47.16826	3	\N	\N	\N	\N
-84	LPN-SRO-DCAGI-SC-041/15	2016-07-15	15:56:50.163156	3	\N	\N	\N	\N
-85	LPN-SRO-DCAGI-SC-026/15	2016-07-15	15:56:52.075169	3	\N	\N	\N	\N
-86	LPN-OP-DCAGI-SC-114/15	2016-07-15	15:56:54.123315	3	\N	\N	\N	\N
-87	LPN-OP-DCAGI-SC-076/15	2016-07-15	15:56:55.787421	3	\N	\N	\N	\N
-89	LPN-OP-DCAGI-SC-066/15	2016-07-15	15:57:36.866808	3	\N	\N	\N	\N
-90	LPN-O-DCAGI-SC-024/15	2016-07-15	15:57:38.178831	3	\N	\N	\N	\N
-91	LPN-AS-DACGI-SC-033/16	2016-07-15	15:57:39.546721	3	\N	\N	\N	\N
-93	LPI-OP-DCAGI-CS-079-15	2016-07-15	15:57:42.05138	3	\N	\N	\N	\N
-94	ITP-SRO-DCAGI-SC-082/15	2016-07-15	15:57:43.962494	3	\N	\N	\N	\N
-97	ITP-SRO-DCAGI-SC-045/15	2016-07-15	15:57:48.763256	3	\N	\N	\N	\N
-98	ITP-SRO-DCAGI-SC-044/15	2016-07-15	15:57:50.468335	3	\N	\N	\N	\N
-100	ITP-SRO-DCAGI-SC-027/15	2016-07-15	15:57:55.083309	3	\N	\N	\N	\N
-48	ITP-OP-DCAGI-SC-014/15	2016-07-15	12:46:37.645967	3	\N	\N	\N	\N
-203	GACM/DCI/SJ/CM-E/001-2016	2016-07-17	20:18:02.66401	3	\N	\N	\N	\N
-204	GACM/DG/DCAGI/SJ/CI/010/15	2016-07-17	20:18:03.892373	3	\N	\N	\N	\N
-205	AD-AS-DCAGI-SC-035-16	2016-07-17	20:18:04.87475	3	\N	\N	\N	\N
-198	104-014-CUNA01-3S	2016-07-16	14:08:45.558056	3	\N	\N	\N	\N
-199	AS-AS-DCAGI-SC-55/15	2016-07-16	20:08:26.648476	3	\N	\N	\N	\N
-49	ITP-SR-DCAGI-SC-015-2015	2016-07-15	12:46:39.221696	3	\N	\N	\N	\N
-54	AD-AS-DCAGI-SC-029/2015	2016-07-15	12:46:48.974974	3	\N	\N	\N	\N
-50	ITP-SRO-DCAGI-SC-040/15	2016-07-15	12:46:41.516907	3	\N	\N	\N	\N
-41	GACM/DCI/SJ/CI/007-2015	2016-07-15	12:46:25.240137	3	\N	\N	\N	\N
-42	GACM/DCI/SJ/CM-E/03-2015	2016-07-15	12:46:26.900669	3	\N	\N	\N	\N
-43	GACM/DCI/SJ/CM-E/05-2015	2016-07-15	12:46:29.028766	3	\N	\N	\N	\N
-47	GACM/DG/DCAGI/SJ-1044/2015	2016-07-15	12:46:36.284647	3	\N	\N	\N	\N
-59	ITP-AS-DCAGI-SC-058/15	2016-07-15	12:47:00.309419	3	\N	\N	\N	\N
-115	AD-AS-DCAGI-SC-052/15	2016-07-15	16:59:31.503627	3	\N	\N	\N	\N
-116	AD-AS-DCAGI-SC-074/15	2016-07-15	16:59:33.288226	3	\N	\N	\N	\N
-121	AD-AS-DCAGI-SC-106-15	2016-07-15	16:59:48.672632	3	\N	\N	\N	\N
-4	AD-SRO-DCAGI-SC-010/16	2016-07-15	12:45:05.094307	3	\N	\N	\N	\N
-5	AD-AS-DCAGI-SC-073/15	2016-07-15	12:45:07.196849	3	\N	\N	\N	\N
-7	AD-SRO-DCAGI-SC-087/15	2016-07-15	12:45:10.341997	3	\N	\N	\N	\N
-9	AD-SRO-DCAGI-SC-090/15	2016-07-15	12:45:14.302237	3	\N	\N	\N	\N
-10	AD-SRO-DCAGI-SC-091/15	2016-07-15	12:45:16.253018	3	\N	\N	\N	\N
-12	AD-SRO-DCAGI-SC-094/15	2016-07-15	12:45:19.516921	3	\N	\N	\N	\N
-14	AD-SRO-DCAGI-SC-096/15	2016-07-15	12:45:22.694056	3	\N	\N	\N	\N
-1	AD-AS-DCAGI-SC-031/15	2016-07-15	12:45:00.121702	3	\N	\N	\N	\N
-64	LPI-SRO-DCAGI-SC-030-15	2016-07-15	12:47:10.525202	3	\N	\N	\N	\N
-62	ITP-SRO-DCAGI-SC-037/15	2016-07-15	12:47:06.383237	3	\N	\N	\N	\N
-46	GACM/DCPEV/SJ/CG-E/06-2015	2016-07-15	12:46:34.389018	3	\N	\N	\N	\N
-173	GACM/DCI/SJ/CI/008/2015	2016-07-15	19:42:42.479772	3	\N	\N	\N	\N
-44	GACM/DCI/SJ/CM-E/017-2015	2016-07-15	12:46:30.893993	3	\N	\N	\N	\N
-72	GACM/DCI/SJ/CI/012-2015	2016-07-15	13:34:37.50145	3	\N	\N	\N	\N
-45	GACM/DCPEV/SJ/CG/02-2015	2016-07-15	12:46:32.686266	3	\N	\N	\N	\N
-165	AD-SRO-DCAGI-SC-012/15	2016-07-15	19:42:26.31763	3	\N	\N	\N	\N
-166	AD-SRO-DCAGI-SC-013/15	2016-07-15	19:42:27.478479	3	\N	\N	\N	\N
-167	AD-SRO-DCAGI-SC-019/16	2016-07-15	19:42:29.295844	3	\N	\N	\N	\N
-168	AD-SRO-DCAGI-SC-026-16	2016-07-15	19:42:31.037829	3	\N	\N	\N	\N
-169	AD-SRO-DCAGI-SC-031-16	2016-07-15	19:42:33.669493	3	\N	\N	\N	\N
-171	AD-SRO-DCAGI-SC-103/15	2016-07-15	19:42:38.622103	3	\N	\N	\N	\N
-172	AD-SRO-DCAGI-SC-104/15	2016-07-15	19:42:40.215031	3	\N	\N	\N	\N
-144	LPN-SRO-DCAGI-SC-028-2016	2016-07-15	19:41:48.894074	3	\N	\N	\N	\N
-111	9-989-GAC9806011J4-05-03-2015	2016-07-15	16:59:24.574017	3	\N	\N	\N	\N
-128	AD-SRO-DCAGI-SC-003/16	2016-07-15	17:00:01.921494	3	\N	\N	\N	\N
-153	AD-AS-DCAGI-SC-068/15	2016-07-15	19:42:04.82317	3	\N	\N	\N	\N
-170	AD-SRO-DCAGI-SC-039/15	2016-07-15	19:42:36.574439	3	\N	\N	\N	\N
-3	AD-AS-DCAGI-SC-008/16	2016-07-15	12:45:03.869167	3	\N	\N	\N	\N
-6	AD-SRO-DCAGI-SC-85/15	2016-07-15	12:45:08.532721	3	\N	\N	\N	\N
-8	AD-SRO-DCAGI-SC-088/15	2016-07-15	12:45:11.80601	3	\N	\N	\N	\N
-11	AD-SRO-DCAGI-SC-093/15	2016-07-15	12:45:18.005016	3	\N	\N	\N	\N
-13	AD-SRO-DCAGI-SC-095/15	2016-07-15	12:45:21.32555	3	\N	\N	\N	\N
-15	AD-SRO-DCAGI-SC-097/15	2016-07-15	12:45:24.084765	3	\N	\N	\N	\N
-208	AD-AS-DCAGI-SC-022/15	2016-07-17	20:43:25.766891	3	\N	\N	\N	\N
-209	AD-SRO-DCAGI-SC-086/15	2016-07-17	20:43:31.818663	3	\N	\N	\N	\N
-210	CTO.ARRENDAMIENTO.T.MURANO.01/14	2016-07-17	20:43:33.069173	3	\N	\N	\N	\N
-211	DTC-026/2013	2016-07-17	20:43:34.438488	3	\N	\N	\N	\N
-212	GACM/DCI/SJ/CC-015-15	2016-07-17	20:43:37.188889	3	\N	\N	\N	\N
-221	GACM/DG/DCAGI/SJ/CI/01-2014	2016-07-22	17:45:31.275277	3	\N	\N	\N	\N
-122	AD-AS-DCAGI-SC-109/15	2016-07-15	16:59:49.55885	3	\N	\N	\N	\N
-124	AD-DCAGI-SA-GAR-007/15	2016-07-15	16:59:54.324795	3	\N	\N	\N	\N
-125	AD.DIR/01/SJ/2014	2016-07-15	16:59:56.912087	3	\N	\N	\N	\N
-127	AD-AS-DCAGI-SC-012/2014	2016-07-15	17:00:00.343948	3	\N	\N	\N	\N
-129	AD-SRO-DCAGI-SC-019/15	2016-07-15	17:00:03.825002	3	\N	\N	\N	\N
-56	AD-AS-DCAGI-SC-54/15	2016-07-15	12:46:52.053252	3	\N	\N	\N	\N
-58	AD-AS-DCAGI-SC-072-15	2016-07-15	12:46:58.693611	3	\N	\N	\N	\N
-35	AD-SRO-DCAGI-SC-010/15	2016-07-15	12:46:13.638554	3	\N	\N	\N	\N
-39	GACM/DCI/SJ/CI/05-2014	2016-07-15	12:46:21.886456	3	\N	\N	\N	\N
-131	AD-SRO-DCAGI-SC-022/16	2016-07-15	17:02:05.169137	3	\N	\N	\N	\N
-132	AD-SRO-DCAGI-SC-030-16	2016-07-15	17:02:06.49846	3	\N	\N	\N	\N
-135	CTO.ARRENDAMIENTO.T.MURANO.01/15	2016-07-15	17:02:10.767469	3	\N	\N	\N	\N
-136	ITP-AS-DCAGI-SC-004/16	2016-07-15	17:02:11.913044	3	\N	\N	\N	\N
-142	ITP-SRO-DCAGI-SC-080/15	2016-07-15	19:41:42.462057	3	\N	\N	\N	\N
-140	ITP-SRO-DCAGI-SC-034/16	2016-07-15	17:02:18.78431	3	\N	\N	\N	\N
-88	LPN-O-DCAGI-SC-014/2014	2016-07-15	15:56:57.603277	3	\N	\N	\N	\N
-143	ITP-SRO-DCAGI-SC-107/15	2016-07-15	19:41:43.918434	3	\N	\N	\N	\N
-141	ITP-OP-DCAGl-SC-105-15	2016-07-15	19:41:36.87771	3	\N	\N	\N	\N
-52	AD-AS-DCAGI-SC-006/16	2016-07-15	12:46:45.446712	3	\N	\N	\N	\N
-51	001-16	2016-07-15	12:46:42.716691	3	\N	\N	\N	\N
-123	AD-AS-DCAGI-SC-113/15	2016-07-15	16:59:52.096254	3	\N	\N	\N	\N
-126	AD-S-DCAGI-SC-010/2014	2016-07-15	16:59:58.791804	3	\N	\N	\N	\N
-53	AD-AS-DCAGI-SC-019-BIS/2015	2016-07-15	12:46:47.701866	3	\N	\N	\N	\N
-130	AD-SRO-DCAGI-SC-021/16	2016-07-15	17:00:05.578665	3	\N	\N	\N	\N
-146	AD-AS-DCAGI-SC-007/16	2016-07-15	19:41:56.072566	3	\N	\N	\N	\N
-148	AD-AS-DCAGI-SC-029-16	2016-07-15	19:41:58.03794	3	\N	\N	\N	\N
-149	AD-AS-DCAGI-SC-038/15	2016-07-15	19:41:59.943435	3	\N	\N	\N	\N
-150	AD-AS-DCAGI-SC-046/15	2016-07-15	19:42:01.056081	3	\N	\N	\N	\N
-151	AD-AS-DCAGI-SC-056/16	2016-07-15	19:42:02.391629	3	\N	\N	\N	\N
-152	AD-AS-DCAGI-SC-62/15	2016-07-15	19:42:03.684614	3	\N	\N	\N	\N
-154	AD-AS-DCAGI-SC-84/15	2016-07-15	19:42:06.021975	3	\N	\N	\N	\N
-176	AD-DCAGI-SA-GAR-01/14	2016-07-16	09:40:11.62071	3	\N	\N	\N	\N
-177	AD-DCAGI-SA-GAR-02/15	2016-07-16	09:40:17.572015	3	\N	\N	\N	\N
-57	AD-AS-DCAGI-SC-070/2015	2016-07-15	12:46:53.76587	3	\N	\N	\N	\N
-178	AD-DCAGI-SA-GAR-0005/15	2016-07-16	09:40:20.691252	3	\N	\N	\N	\N
-179	AD-DCAGI-SA-GAR-0006/15	2016-07-16	09:40:22.345535	3	\N	\N	\N	\N
-180	AD-DCAGI-SA-GAR-01/15	2016-07-16	09:40:24.825323	3	\N	\N	\N	\N
-181	AD-OP-DCAGI-SC-064/15	2016-07-16	09:40:26.57557	3	\N	\N	\N	\N
-60	ITP-AS-DCAGI-SC-060/15	2016-07-15	12:47:01.969182	3	\N	\N	\N	\N
-191	GACM-DCI-SJ-CM-E-02-14	2016-07-16	09:42:23.953995	3	\N	\N	\N	\N
-36	AD-SRO-DCAGI-SC-011/15	2016-07-15	12:46:15.013398	3	\N	\N	\N	\N
-101	ITP-SRO-DCAGI-SC-018/16	2016-07-15	15:57:57.019827	3	\N	\N	\N	\N
-21	AD-S-DCAGI-SC-017/2014	2016-07-15	12:45:47.213846	3	\N	\N	\N	\N
-77	GACM/DCI/CJ/SJ/014-2015	2016-07-15	15:34:23.265841	3	\N	\N	\N	\N
-76	GACM/DCI/SJ/CI/013-2015	2016-07-15	15:34:21.455478	3	\N	\N	\N	\N
-17	AD-SRO-DCAGI-SC-099/15	2016-07-15	12:45:27.301242	3	\N	\N	\N	\N
-18	AD-SRO-DCAGI-SC-100/15	2016-07-15	12:45:29.294093	3	\N	\N	\N	\N
-78	GACM/DCI/SJ/CM/01-2014	2016-07-15	15:34:24.681449	3	\N	\N	\N	\N
-102	ITP-SRO-DCAGI-SC-016/15	2016-07-15	15:57:58.291692	3	\N	\N	\N	\N
-103	ITP-SRO-DCAGI-SC-015-16	2016-07-15	15:57:59.41174	3	\N	\N	\N	\N
-104	ITP-S-DCAGI-SC-009/2014	2016-07-15	15:58:00.699547	3	\N	\N	\N	\N
-105	ITP-S-DCAGI-SC-008/2014	2016-07-15	15:58:01.902314	3	\N	\N	\N	\N
-145	AD/01CTO.MTO./2014	2016-07-15	19:41:55.04548	3	\N	\N	\N	\N
-106	ITP-S-DCAGI-SC-004-2014	2016-07-15	15:58:05.100304	3	\N	\N	\N	\N
-107	ITP-S-DCAGI-SC-002-2014	2016-07-15	15:58:06.772029	3	\N	\N	\N	\N
-108	ITP-OP-DCAGI-SC-012-16	2016-07-15	15:58:08.323147	3	\N	\N	\N	\N
-28	AD-SRO-DCAGI-SC-003/15	2016-07-15	12:46:00.719071	3	\N	\N	\N	\N
-29	AD-SRO-DCAGI-SC-004/15	2016-07-15	12:46:03.638289	3	\N	\N	\N	\N
-63	ITP-SRO-DCAGI-SC-048/15	2016-07-15	12:47:08.135482	3	\N	\N	\N	\N
-30	AD-SRO-DCAGI-SC-005/15	2016-07-15	12:46:05.271177	3	\N	\N	\N	\N
-31	AD-SRO-DCAGI-SC-006/15	2016-07-15	12:46:06.581081	3	\N	\N	\N	\N
-32	AD-SRO-DCAGI-SC-007/15	2016-07-15	12:46:07.996628	3	\N	\N	\N	\N
-33	AD-SRO-DCAGI-SC-008/15	2016-07-15	12:46:09.7811	3	\N	\N	\N	\N
-112	AD-A-DCAGI-SC-001/2014	2016-07-15	16:59:26.173783	3	\N	\N	\N	\N
-34	AD-SRO-DCAGI-SC-009/15	2016-07-15	12:46:11.671288	3	\N	\N	\N	\N
-113	AD-AS-DCAGI-SC-047/15	2016-07-15	16:59:27.983232	3	\N	\N	\N	\N
-114	AD-AS-DSAGI-SC-51/2015	2016-07-15	16:59:29.879503	3	\N	\N	\N	\N
-65	LPN-SRO-DCAGI-SC-009/2016	2016-07-15	12:47:12.652952	3	\N	\N	\N	\N
-66	LPN-SRO-DCAGI-SC-025/15	2016-07-15	12:47:14.566125	3	\N	\N	\N	\N
-117	AD-AS-DCAGI-SC-075/15	2016-07-15	16:59:34.615854	3	\N	\N	\N	\N
-118	AD-AS-DCAGI-SC-78/15	2016-07-15	16:59:36.088779	3	\N	\N	\N	\N
-119	AD-AS-DCAGI-SC-83/15	2016-07-15	16:59:37.328086	3	\N	\N	\N	\N
-120	AD-AS-DCAGI-SC--102/15	2016-07-15	16:59:47.447801	3	\N	\N	\N	\N
-68	LPN-SRO-DCAGI-SC-043/15	2016-07-15	12:47:21.237841	3	\N	\N	\N	\N
-161	AD-OP-DCAGI-SC-108/15	2016-07-15	19:42:20.069529	3	\N	\N	\N	\N
-162	AD-S-DCAGI-SC-013/14	2016-07-15	19:42:21.86241	3	\N	\N	\N	\N
-190	AD-AS-DCAGI-SC-069/15	2016-07-16	09:42:21.069277	3	\N	\N	\N	\N
-196	LPN-AD-DCAGI-SC-027/16	2016-07-16	09:53:45.564108	3	\N	\N	\N	\N
-197	LPN-OP-DCAGI-SC-112/15	2016-07-16	09:53:47.856196	3	\N	\N	\N	\N
-163	AD-S-DCAGI-SC-017/16	2016-07-15	19:42:23.359418	3	\N	\N	\N	\N
-38	GACM/DCI/SJ/CI/011-2015	2016-07-15	12:46:19.413166	3	\N	\N	\N	\N
-40	GACM/DCA/SJ/CI/016-2015	2016-07-15	12:46:23.4376	3	\N	\N	\N	\N
-133	AD-SRO-DCAGI-SC-081/15	2016-07-15	17:02:07.768755	3	\N	\N	\N	\N
-134	CTO.ARRENDAMIENTO.ALTAVISTA02/14	2016-07-15	17:02:09.231447	3	\N	\N	\N	\N
-137	ITP-AS-DCAGI-SC-017-15	2016-07-15	17:02:13.361505	3	\N	\N	\N	\N
-138	ITP-AS-DCAGI-SC-020/16	2016-07-15	17:02:14.751818	3	\N	\N	\N	\N
-139	ITP-AS-DCAGI-SC-036/15	2016-07-15	17:02:16.416251	3	\N	\N	\N	\N
-174	SPF/01/2014-2017	2016-07-15	19:42:45.327419	3	\N	\N	\N	\N
-156	AD-AS-DCAGI-SC-110/15	2016-07-15	19:42:09.510492	3	\N	\N	\N	\N
-157	AD-AS-DCAGI-SC-116/15	2016-07-15	19:42:11.480205	3	\N	\N	\N	\N
-158	AD-AS-DCAGI-SC-119/15	2016-07-15	19:42:14.192358	3	\N	\N	\N	\N
-159	AD-OP-DCAGI-SC-024/16	2016-07-15	19:42:16.732664	3	\N	\N	\N	\N
-160	AD-OP-DCAGI-SC-025/16	2016-07-15	19:42:18.564953	3	\N	\N	\N	\N
-164	AD-SRO-CONV-DCAGI-SC-03/16	2016-07-15	19:42:24.96045	3	\N	\N	\N	\N
-183	AD-AS-DCAGI-SC-011/16	2016-07-16	09:42:04.559219	3	\N	\N	\N	\N
-184	AD-AS-DCAGI-SC-013/16	2016-07-16	09:42:06.711578	3	\N	\N	\N	\N
-186	AD-AS-DCAGI-SC-016-16	2016-07-16	09:42:12.333491	3	\N	\N	\N	\N
-187	AD-AS-DCAGI-SC-018/15	2016-07-16	09:42:14.378665	3	\N	\N	\N	\N
-189	AD-AS-DCAGI-SC-065/15	2016-07-16	09:42:18.814725	3	\N	\N	\N	\N
-109	LPN-SRO-DCAGI-SC-117/15	2016-07-15	15:58:10.411057	3	\N	\N	\N	\N
-110	LPN-SRO-DCAGI-SC-118/15	2016-07-15	15:58:12.674694	3	\N	\N	\N	\N
-79	GACM/DCI/SJ/CM/18-2015	2016-07-15	15:34:26.305683	3	\N	\N	\N	\N
-80	GACM/DCI/SJ/CM-018-2015	2016-07-15	15:34:30.5687	3	\N	\N	\N	\N
-194	ITP-AS-DCAGI-SC-005-16	2016-07-16	09:42:31.283073	3	\N	\N	\N	\N
-192	GACM-SEC/01/2014	2016-07-16	09:42:26.851841	3	\N	\N	\N	\N
-222	ITP-AS-DCAGI-SC-007/14	2016-07-22	18:30:58.800274	3	\N	\N	\N	\N
-37	CTO.FIDEICOMISO-01-14	2016-07-15	12:46:17.54207	3	\N	\N	\N	\N
-95	ITP-SRO-DCAGI-SC-63/15	2016-07-15	15:57:45.643211	3	\N	\N	\N	\N
-155	AD-CONV-DCAGI-SC-001/16	2016-07-15	19:42:07.911436	3	\N	\N	\N	\N
-227	AD-AS-DCAGI-SC-020-2015	2016-11-01	19:20:36.720457	0	\N	\N	\N	\N
-240	ITP-SRO-DCAGI-SC-046-16	2016-11-01	19:23:15.899553	0	\N	\N	\N	\N
-228	AD-AS-DCAGI-SC-032-2016	2016-11-01	19:22:13.06161	0	\N	\N	\N	\N
-246	LPN-AS-DCAGI-SC-067-16	2016-11-01	19:23:41.195874	0	\N	\N	\N	\N
-245	ITP-SRO-DCAGI-SC-066-16	2016-11-01	19:23:36.719927	0	\N	\N	\N	\N
-247	LPI-OP-DCAGI-SC-069-16	2016-11-01	19:23:45.869241	0	\N	\N	\N	\N
-241	ITP-SRO-DCAGI-SC-047-16	2016-11-01	19:23:20.57385	0	\N	\N	\N	\N
-248	LPI-OP-DCAGI-SC-070-16	2016-11-01	19:23:49.73989	0	\N	\N	\N	\N
-229	AD-AS-DCAGI-SC-039-16	2016-11-01	19:22:19.01154	0	\N	\N	\N	\N
-242	ITP-SRO-DCAGI-SC-048-16	2016-11-01	19:23:24.52563	0	\N	\N	\N	\N
-249	LPI-OP-DCAGI-SC-071-16	2016-11-01	19:23:53.912326	0	\N	\N	\N	\N
-250	LPI-OP-DCAGI-SC-072-16	2016-11-01	19:24:00.685593	0	\N	\N	\N	\N
-243	ITP-SRO-DCAGI-SC-059-16	2016-11-01	19:23:28.484107	0	\N	\N	\N	\N
-230	AD-AS-DCAGI-SC-044-16	2016-11-01	19:22:23.236035	0	\N	\N	\N	\N
-244	ITP-SRO-DCAGI-SC-062-16	2016-11-01	19:23:32.444778	0	\N	\N	\N	\N
-231	AD-AS-DCAGI-SC-045-2016	2016-11-01	19:22:33.935231	0	\N	\N	\N	\N
-235	AD-009KDH999-E115-2016	2016-11-01	19:22:52.850989	0	\N	\N	\N	\N
-236	IA-009KDH999-E77-2016	2016-11-01	19:22:57.723948	0	\N	\N	\N	\N
-237	IO-009KDH999-E82-2016	2016-11-01	19:23:02.139057	0	\N	\N	\N	\N
-238	009-KDH999-E71-2016	2016-11-01	19:23:07.268828	0	\N	\N	\N	\N
-239	IO-009KDH999-E72-2016	2016-11-01	19:23:11.677965	0	\N	\N	\N	\N
-251	LPI-OP-DCAGI-SC-073/16	2016-11-01	19:24:04.493751	0	\N	\N	\N	\N
-252	LPN-AS-DCAGI-SC-049-16	2016-11-01	19:24:08.204883	0	\N	\N	\N	\N
-232	AD-AS-DCAGI-SC-051-16	2016-11-01	19:22:39.173579	0	\N	\N	\N	\N
-233	AD-AS-DCAGI-SC-063-16	2016-11-01	19:22:43.830058	0	\N	\N	\N	\N
-234	AD-S-DCAGI-SC-011/2014	2016-11-01	19:22:48.33044	0	\N	\N	\N	\N
+220	GACM_PISTA3	2016-07-18	10:21:07.965627	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+219	GACM_PISTA2	2016-07-18	10:21:02.852422	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+218	GACM_Edificio_Terminal	2016-07-18	10:20:10.880473	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+200	AD-AS-DCAGI-SC-057/15	2016-07-17	20:11:35.387287	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+201	AD-SRO-DCAGI-SC-021-15	2016-07-17	20:11:37.300454	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+202	AD-SRO-DCAGI-SC-089/15	2016-07-17	20:11:38.986317	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+19	AD-AS-DCAGI-SC-121/15	2016-07-15	12:45:30.917792	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+22	AD-SRO-CONV-DCAGI-SC-002/16	2016-07-15	12:45:49.845957	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+23	AD-SRO-CONV-DCAGI-SC-04/16	2016-07-15	12:45:51.141064	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+71	GACM/DCI/SJ/CI/001-2015	2016-07-15	13:23:19.353123	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+61	ITP-SRO-DCAGI-SC-049/2015	2016-07-15	12:47:04.935183	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+2	AD-AS-DCAGI-SC-050-2015	2016-07-15	12:45:02.461858	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+73	GACM/DCI/SJ/CI/02-2014	2016-07-15	13:38:08.813878	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+182	E0A1VWO	2016-07-16	09:42:02.508596	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+24	AD-SRO-CONV-DCAGI-SC-006/16	2016-07-15	12:45:53.29262	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+25	AD-SRO-DCAGI-SC-001/15	2016-07-15	12:45:55.4532	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+193	SEC-/03/2014	2016-07-16	09:42:28.960228	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+20	AD-S-DCAGI-SC-016/2014	2016-07-15	12:45:32.940518	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+16	AD-SRO-DCAGI-SC-098/15	2016-07-15	12:45:25.661747	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+74	GACM/DCI/SJ/CI/03-2014	2016-07-15	13:50:46.531092	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+26	AD-SRO-DCAGI-SC-002/16	2016-07-15	12:45:56.860718	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+27	AD-SRO-DCAGI-SC-002/2015	2016-07-15	12:45:59.124896	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+55	AD-AS-DCAGI-SC-053/15	2016-07-15	12:46:50.710612	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+75	GACM/DCI/SJ/CI/04-2014	2016-07-15	14:01:20.091646	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+81	LPN-OP-DCAGI-SC-115/15	2016-07-15	15:46:35.560295	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+83	LPN-SRO-DCAGI-SC-042/15	2016-07-15	15:56:47.16826	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+84	LPN-SRO-DCAGI-SC-041/15	2016-07-15	15:56:50.163156	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+85	LPN-SRO-DCAGI-SC-026/15	2016-07-15	15:56:52.075169	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+86	LPN-OP-DCAGI-SC-114/15	2016-07-15	15:56:54.123315	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+87	LPN-OP-DCAGI-SC-076/15	2016-07-15	15:56:55.787421	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+89	LPN-OP-DCAGI-SC-066/15	2016-07-15	15:57:36.866808	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+90	LPN-O-DCAGI-SC-024/15	2016-07-15	15:57:38.178831	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+91	LPN-AS-DACGI-SC-033/16	2016-07-15	15:57:39.546721	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+93	LPI-OP-DCAGI-CS-079-15	2016-07-15	15:57:42.05138	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+94	ITP-SRO-DCAGI-SC-082/15	2016-07-15	15:57:43.962494	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+97	ITP-SRO-DCAGI-SC-045/15	2016-07-15	15:57:48.763256	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+98	ITP-SRO-DCAGI-SC-044/15	2016-07-15	15:57:50.468335	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+100	ITP-SRO-DCAGI-SC-027/15	2016-07-15	15:57:55.083309	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+48	ITP-OP-DCAGI-SC-014/15	2016-07-15	12:46:37.645967	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+203	GACM/DCI/SJ/CM-E/001-2016	2016-07-17	20:18:02.66401	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+204	GACM/DG/DCAGI/SJ/CI/010/15	2016-07-17	20:18:03.892373	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+205	AD-AS-DCAGI-SC-035-16	2016-07-17	20:18:04.87475	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+198	104-014-CUNA01-3S	2016-07-16	14:08:45.558056	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+199	AS-AS-DCAGI-SC-55/15	2016-07-16	20:08:26.648476	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+49	ITP-SR-DCAGI-SC-015-2015	2016-07-15	12:46:39.221696	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+54	AD-AS-DCAGI-SC-029/2015	2016-07-15	12:46:48.974974	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+50	ITP-SRO-DCAGI-SC-040/15	2016-07-15	12:46:41.516907	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+41	GACM/DCI/SJ/CI/007-2015	2016-07-15	12:46:25.240137	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+42	GACM/DCI/SJ/CM-E/03-2015	2016-07-15	12:46:26.900669	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+43	GACM/DCI/SJ/CM-E/05-2015	2016-07-15	12:46:29.028766	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+47	GACM/DG/DCAGI/SJ-1044/2015	2016-07-15	12:46:36.284647	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+59	ITP-AS-DCAGI-SC-058/15	2016-07-15	12:47:00.309419	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+115	AD-AS-DCAGI-SC-052/15	2016-07-15	16:59:31.503627	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+116	AD-AS-DCAGI-SC-074/15	2016-07-15	16:59:33.288226	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+121	AD-AS-DCAGI-SC-106-15	2016-07-15	16:59:48.672632	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+4	AD-SRO-DCAGI-SC-010/16	2016-07-15	12:45:05.094307	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+5	AD-AS-DCAGI-SC-073/15	2016-07-15	12:45:07.196849	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+7	AD-SRO-DCAGI-SC-087/15	2016-07-15	12:45:10.341997	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+9	AD-SRO-DCAGI-SC-090/15	2016-07-15	12:45:14.302237	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+10	AD-SRO-DCAGI-SC-091/15	2016-07-15	12:45:16.253018	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+12	AD-SRO-DCAGI-SC-094/15	2016-07-15	12:45:19.516921	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+14	AD-SRO-DCAGI-SC-096/15	2016-07-15	12:45:22.694056	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+1	AD-AS-DCAGI-SC-031/15	2016-07-15	12:45:00.121702	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+64	LPI-SRO-DCAGI-SC-030-15	2016-07-15	12:47:10.525202	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+62	ITP-SRO-DCAGI-SC-037/15	2016-07-15	12:47:06.383237	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+46	GACM/DCPEV/SJ/CG-E/06-2015	2016-07-15	12:46:34.389018	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+173	GACM/DCI/SJ/CI/008/2015	2016-07-15	19:42:42.479772	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+44	GACM/DCI/SJ/CM-E/017-2015	2016-07-15	12:46:30.893993	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+72	GACM/DCI/SJ/CI/012-2015	2016-07-15	13:34:37.50145	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+45	GACM/DCPEV/SJ/CG/02-2015	2016-07-15	12:46:32.686266	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+165	AD-SRO-DCAGI-SC-012/15	2016-07-15	19:42:26.31763	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+166	AD-SRO-DCAGI-SC-013/15	2016-07-15	19:42:27.478479	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+167	AD-SRO-DCAGI-SC-019/16	2016-07-15	19:42:29.295844	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+168	AD-SRO-DCAGI-SC-026-16	2016-07-15	19:42:31.037829	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+169	AD-SRO-DCAGI-SC-031-16	2016-07-15	19:42:33.669493	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+171	AD-SRO-DCAGI-SC-103/15	2016-07-15	19:42:38.622103	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+172	AD-SRO-DCAGI-SC-104/15	2016-07-15	19:42:40.215031	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+144	LPN-SRO-DCAGI-SC-028-2016	2016-07-15	19:41:48.894074	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+111	9-989-GAC9806011J4-05-03-2015	2016-07-15	16:59:24.574017	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+128	AD-SRO-DCAGI-SC-003/16	2016-07-15	17:00:01.921494	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+153	AD-AS-DCAGI-SC-068/15	2016-07-15	19:42:04.82317	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+170	AD-SRO-DCAGI-SC-039/15	2016-07-15	19:42:36.574439	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+3	AD-AS-DCAGI-SC-008/16	2016-07-15	12:45:03.869167	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+6	AD-SRO-DCAGI-SC-85/15	2016-07-15	12:45:08.532721	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+8	AD-SRO-DCAGI-SC-088/15	2016-07-15	12:45:11.80601	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+11	AD-SRO-DCAGI-SC-093/15	2016-07-15	12:45:18.005016	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+13	AD-SRO-DCAGI-SC-095/15	2016-07-15	12:45:21.32555	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+15	AD-SRO-DCAGI-SC-097/15	2016-07-15	12:45:24.084765	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+208	AD-AS-DCAGI-SC-022/15	2016-07-17	20:43:25.766891	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+209	AD-SRO-DCAGI-SC-086/15	2016-07-17	20:43:31.818663	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+210	CTO.ARRENDAMIENTO.T.MURANO.01/14	2016-07-17	20:43:33.069173	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+211	DTC-026/2013	2016-07-17	20:43:34.438488	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+212	GACM/DCI/SJ/CC-015-15	2016-07-17	20:43:37.188889	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+221	GACM/DG/DCAGI/SJ/CI/01-2014	2016-07-22	17:45:31.275277	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+122	AD-AS-DCAGI-SC-109/15	2016-07-15	16:59:49.55885	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+124	AD-DCAGI-SA-GAR-007/15	2016-07-15	16:59:54.324795	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+125	AD.DIR/01/SJ/2014	2016-07-15	16:59:56.912087	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+127	AD-AS-DCAGI-SC-012/2014	2016-07-15	17:00:00.343948	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+129	AD-SRO-DCAGI-SC-019/15	2016-07-15	17:00:03.825002	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+56	AD-AS-DCAGI-SC-54/15	2016-07-15	12:46:52.053252	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+58	AD-AS-DCAGI-SC-072-15	2016-07-15	12:46:58.693611	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+35	AD-SRO-DCAGI-SC-010/15	2016-07-15	12:46:13.638554	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+39	GACM/DCI/SJ/CI/05-2014	2016-07-15	12:46:21.886456	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+131	AD-SRO-DCAGI-SC-022/16	2016-07-15	17:02:05.169137	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+132	AD-SRO-DCAGI-SC-030-16	2016-07-15	17:02:06.49846	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+135	CTO.ARRENDAMIENTO.T.MURANO.01/15	2016-07-15	17:02:10.767469	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+136	ITP-AS-DCAGI-SC-004/16	2016-07-15	17:02:11.913044	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+142	ITP-SRO-DCAGI-SC-080/15	2016-07-15	19:41:42.462057	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+140	ITP-SRO-DCAGI-SC-034/16	2016-07-15	17:02:18.78431	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+88	LPN-O-DCAGI-SC-014/2014	2016-07-15	15:56:57.603277	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+143	ITP-SRO-DCAGI-SC-107/15	2016-07-15	19:41:43.918434	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+141	ITP-OP-DCAGl-SC-105-15	2016-07-15	19:41:36.87771	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+52	AD-AS-DCAGI-SC-006/16	2016-07-15	12:46:45.446712	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+51	001-16	2016-07-15	12:46:42.716691	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+123	AD-AS-DCAGI-SC-113/15	2016-07-15	16:59:52.096254	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+126	AD-S-DCAGI-SC-010/2014	2016-07-15	16:59:58.791804	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+53	AD-AS-DCAGI-SC-019-BIS/2015	2016-07-15	12:46:47.701866	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+130	AD-SRO-DCAGI-SC-021/16	2016-07-15	17:00:05.578665	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+146	AD-AS-DCAGI-SC-007/16	2016-07-15	19:41:56.072566	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+148	AD-AS-DCAGI-SC-029-16	2016-07-15	19:41:58.03794	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+149	AD-AS-DCAGI-SC-038/15	2016-07-15	19:41:59.943435	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+150	AD-AS-DCAGI-SC-046/15	2016-07-15	19:42:01.056081	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+151	AD-AS-DCAGI-SC-056/16	2016-07-15	19:42:02.391629	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+152	AD-AS-DCAGI-SC-62/15	2016-07-15	19:42:03.684614	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+154	AD-AS-DCAGI-SC-84/15	2016-07-15	19:42:06.021975	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+176	AD-DCAGI-SA-GAR-01/14	2016-07-16	09:40:11.62071	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+177	AD-DCAGI-SA-GAR-02/15	2016-07-16	09:40:17.572015	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+57	AD-AS-DCAGI-SC-070/2015	2016-07-15	12:46:53.76587	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+178	AD-DCAGI-SA-GAR-0005/15	2016-07-16	09:40:20.691252	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+179	AD-DCAGI-SA-GAR-0006/15	2016-07-16	09:40:22.345535	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+180	AD-DCAGI-SA-GAR-01/15	2016-07-16	09:40:24.825323	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+181	AD-OP-DCAGI-SC-064/15	2016-07-16	09:40:26.57557	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+60	ITP-AS-DCAGI-SC-060/15	2016-07-15	12:47:01.969182	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+191	GACM-DCI-SJ-CM-E-02-14	2016-07-16	09:42:23.953995	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+36	AD-SRO-DCAGI-SC-011/15	2016-07-15	12:46:15.013398	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+101	ITP-SRO-DCAGI-SC-018/16	2016-07-15	15:57:57.019827	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+21	AD-S-DCAGI-SC-017/2014	2016-07-15	12:45:47.213846	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+77	GACM/DCI/CJ/SJ/014-2015	2016-07-15	15:34:23.265841	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+76	GACM/DCI/SJ/CI/013-2015	2016-07-15	15:34:21.455478	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+17	AD-SRO-DCAGI-SC-099/15	2016-07-15	12:45:27.301242	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+18	AD-SRO-DCAGI-SC-100/15	2016-07-15	12:45:29.294093	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+78	GACM/DCI/SJ/CM/01-2014	2016-07-15	15:34:24.681449	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+102	ITP-SRO-DCAGI-SC-016/15	2016-07-15	15:57:58.291692	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+103	ITP-SRO-DCAGI-SC-015-16	2016-07-15	15:57:59.41174	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+104	ITP-S-DCAGI-SC-009/2014	2016-07-15	15:58:00.699547	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+105	ITP-S-DCAGI-SC-008/2014	2016-07-15	15:58:01.902314	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+145	AD/01CTO.MTO./2014	2016-07-15	19:41:55.04548	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+106	ITP-S-DCAGI-SC-004-2014	2016-07-15	15:58:05.100304	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+107	ITP-S-DCAGI-SC-002-2014	2016-07-15	15:58:06.772029	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+108	ITP-OP-DCAGI-SC-012-16	2016-07-15	15:58:08.323147	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+28	AD-SRO-DCAGI-SC-003/15	2016-07-15	12:46:00.719071	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+29	AD-SRO-DCAGI-SC-004/15	2016-07-15	12:46:03.638289	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+63	ITP-SRO-DCAGI-SC-048/15	2016-07-15	12:47:08.135482	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+30	AD-SRO-DCAGI-SC-005/15	2016-07-15	12:46:05.271177	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+31	AD-SRO-DCAGI-SC-006/15	2016-07-15	12:46:06.581081	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+32	AD-SRO-DCAGI-SC-007/15	2016-07-15	12:46:07.996628	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+33	AD-SRO-DCAGI-SC-008/15	2016-07-15	12:46:09.7811	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+112	AD-A-DCAGI-SC-001/2014	2016-07-15	16:59:26.173783	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+34	AD-SRO-DCAGI-SC-009/15	2016-07-15	12:46:11.671288	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+113	AD-AS-DCAGI-SC-047/15	2016-07-15	16:59:27.983232	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+114	AD-AS-DSAGI-SC-51/2015	2016-07-15	16:59:29.879503	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+65	LPN-SRO-DCAGI-SC-009/2016	2016-07-15	12:47:12.652952	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+66	LPN-SRO-DCAGI-SC-025/15	2016-07-15	12:47:14.566125	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+117	AD-AS-DCAGI-SC-075/15	2016-07-15	16:59:34.615854	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+118	AD-AS-DCAGI-SC-78/15	2016-07-15	16:59:36.088779	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+119	AD-AS-DCAGI-SC-83/15	2016-07-15	16:59:37.328086	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+120	AD-AS-DCAGI-SC--102/15	2016-07-15	16:59:47.447801	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+68	LPN-SRO-DCAGI-SC-043/15	2016-07-15	12:47:21.237841	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+161	AD-OP-DCAGI-SC-108/15	2016-07-15	19:42:20.069529	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+162	AD-S-DCAGI-SC-013/14	2016-07-15	19:42:21.86241	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+190	AD-AS-DCAGI-SC-069/15	2016-07-16	09:42:21.069277	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+196	LPN-AD-DCAGI-SC-027/16	2016-07-16	09:53:45.564108	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+197	LPN-OP-DCAGI-SC-112/15	2016-07-16	09:53:47.856196	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+163	AD-S-DCAGI-SC-017/16	2016-07-15	19:42:23.359418	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+38	GACM/DCI/SJ/CI/011-2015	2016-07-15	12:46:19.413166	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+40	GACM/DCA/SJ/CI/016-2015	2016-07-15	12:46:23.4376	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+133	AD-SRO-DCAGI-SC-081/15	2016-07-15	17:02:07.768755	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+134	CTO.ARRENDAMIENTO.ALTAVISTA02/14	2016-07-15	17:02:09.231447	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+137	ITP-AS-DCAGI-SC-017-15	2016-07-15	17:02:13.361505	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+138	ITP-AS-DCAGI-SC-020/16	2016-07-15	17:02:14.751818	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+139	ITP-AS-DCAGI-SC-036/15	2016-07-15	17:02:16.416251	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+174	SPF/01/2014-2017	2016-07-15	19:42:45.327419	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+156	AD-AS-DCAGI-SC-110/15	2016-07-15	19:42:09.510492	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+157	AD-AS-DCAGI-SC-116/15	2016-07-15	19:42:11.480205	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+158	AD-AS-DCAGI-SC-119/15	2016-07-15	19:42:14.192358	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+159	AD-OP-DCAGI-SC-024/16	2016-07-15	19:42:16.732664	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+160	AD-OP-DCAGI-SC-025/16	2016-07-15	19:42:18.564953	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+164	AD-SRO-CONV-DCAGI-SC-03/16	2016-07-15	19:42:24.96045	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+183	AD-AS-DCAGI-SC-011/16	2016-07-16	09:42:04.559219	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+184	AD-AS-DCAGI-SC-013/16	2016-07-16	09:42:06.711578	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+186	AD-AS-DCAGI-SC-016-16	2016-07-16	09:42:12.333491	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+187	AD-AS-DCAGI-SC-018/15	2016-07-16	09:42:14.378665	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+189	AD-AS-DCAGI-SC-065/15	2016-07-16	09:42:18.814725	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+109	LPN-SRO-DCAGI-SC-117/15	2016-07-15	15:58:10.411057	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+110	LPN-SRO-DCAGI-SC-118/15	2016-07-15	15:58:12.674694	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+79	GACM/DCI/SJ/CM/18-2015	2016-07-15	15:34:26.305683	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+80	GACM/DCI/SJ/CM-018-2015	2016-07-15	15:34:30.5687	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+194	ITP-AS-DCAGI-SC-005-16	2016-07-16	09:42:31.283073	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+192	GACM-SEC/01/2014	2016-07-16	09:42:26.851841	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+222	ITP-AS-DCAGI-SC-007/14	2016-07-22	18:30:58.800274	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+37	CTO.FIDEICOMISO-01-14	2016-07-15	12:46:17.54207	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+95	ITP-SRO-DCAGI-SC-63/15	2016-07-15	15:57:45.643211	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+155	AD-CONV-DCAGI-SC-001/16	2016-07-15	19:42:07.911436	3	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+227	AD-AS-DCAGI-SC-020-2015	2016-11-01	19:20:36.720457	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+240	ITP-SRO-DCAGI-SC-046-16	2016-11-01	19:23:15.899553	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+228	AD-AS-DCAGI-SC-032-2016	2016-11-01	19:22:13.06161	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+246	LPN-AS-DCAGI-SC-067-16	2016-11-01	19:23:41.195874	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+245	ITP-SRO-DCAGI-SC-066-16	2016-11-01	19:23:36.719927	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+247	LPI-OP-DCAGI-SC-069-16	2016-11-01	19:23:45.869241	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+241	ITP-SRO-DCAGI-SC-047-16	2016-11-01	19:23:20.57385	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+248	LPI-OP-DCAGI-SC-070-16	2016-11-01	19:23:49.73989	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+229	AD-AS-DCAGI-SC-039-16	2016-11-01	19:22:19.01154	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+242	ITP-SRO-DCAGI-SC-048-16	2016-11-01	19:23:24.52563	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+249	LPI-OP-DCAGI-SC-071-16	2016-11-01	19:23:53.912326	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+250	LPI-OP-DCAGI-SC-072-16	2016-11-01	19:24:00.685593	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+243	ITP-SRO-DCAGI-SC-059-16	2016-11-01	19:23:28.484107	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+230	AD-AS-DCAGI-SC-044-16	2016-11-01	19:22:23.236035	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+244	ITP-SRO-DCAGI-SC-062-16	2016-11-01	19:23:32.444778	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+231	AD-AS-DCAGI-SC-045-2016	2016-11-01	19:22:33.935231	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+235	AD-009KDH999-E115-2016	2016-11-01	19:22:52.850989	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+236	IA-009KDH999-E77-2016	2016-11-01	19:22:57.723948	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+237	IO-009KDH999-E82-2016	2016-11-01	19:23:02.139057	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+238	009-KDH999-E71-2016	2016-11-01	19:23:07.268828	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+239	IO-009KDH999-E72-2016	2016-11-01	19:23:11.677965	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+251	LPI-OP-DCAGI-SC-073/16	2016-11-01	19:24:04.493751	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+252	LPN-AS-DCAGI-SC-049-16	2016-11-01	19:24:08.204883	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+232	AD-AS-DCAGI-SC-051-16	2016-11-01	19:22:39.173579	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+233	AD-AS-DCAGI-SC-063-16	2016-11-01	19:22:43.830058	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+234	AD-S-DCAGI-SC-011/2014	2016-11-01	19:22:48.33044	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
 \.
 
 
@@ -7200,12 +7201,14 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 228	228	1099156	Servicio de asesoría especializada en materia de gestión social, segunda etapa	Servicio de asesoría especializada en materia de gestión social, segunda etapa	complete	0	MXN	4026000.00	MXN	Adjudicación directa	Artículos 26 fracción III, 41 fracción XIV y 45 de la Ley de Adquisiciones Arrendamientos y Servicios del Sector Público					\N	\N	\N	\N	0		\N	\N	1	\N	
 229	229	1159843	Arrendamiento de sillas apilables acojinadas y mesas paea eventos licitatorios 	Arrendamiento de sillas apilables acojinadas y mesas paea eventos licitatorios 	complete	0	MXN	0	MXN	Adjudicación directa	Articulo 26, fracción III, 42 y 45 de la LAASSP.					\N	\N	\N	\N	0		\N	\N	1	\N	
 241	241	1071355	Coordinación topográfia integral para llevar a cabo el control de obra y administracción de la información topográfica y geodésica generada para el proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México.	Coordinación topográfia integral para llevar a cabo el control de obra y administracción de la información topográfica y geodésica generada para el proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México.	complete	0	MXN	7344827.59	MXN	Invitación a cuando menos tres personas	Articulo 27,fracción II, fracción I y 45, fracción I, de la LOPSRM					\N	\N	2016-06-02 00:00:00	2016-06-02 00:00:00	0	"Apartado 5, 5.1, 5.2, 5.3, y 5.4 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E75-2016 del 26 de 05 de 2016, relacionado con la Coordinación topografica integral para llevar a cabo el control de obra y administración de la información topográfica y geodésica generada para el proyecto del Nuevo Aeropuerto de la Ciudad de México., es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 26 de 05 de 2016. "	2016-06-15 00:00:00	2016-06-15 00:00:00	4	\N	
+243	243	1081871	Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México 	Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México 	active	0	MXN	5767251.38	MXN	Invitación a cuando menos tres personas	Artículo 27, fracción II, 30, fracción I y 43, 44, 45, fracción I de la LOPSRM	"Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E82-2016 del 17 de junio de 2016, relacionado con el “Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México"", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el el 20 de 06 de 2016, "				\N	\N	2016-06-28 00:00:00	2016-06-28 00:00:00	0		2016-07-15 00:00:00	2016-07-15 00:00:00	5	\N	
 236	236	1071959 	Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional	Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional	complete	0	MXN	19720000.00	MXN	Invitación a cuando menos tres personas	Artículos 26 fracción II, 26 BIS fracción II, 28 fracción I, y demás relativos y aplicables de la LAASSP	Puntos y Porcentajes	Apartado 2.13 de la Convocatoria a la Invitación Nacional a cuando Menos Tres Personas identificado con el número IA-009KDH999-E77-2016 del 27 de mayo de 2016, relacionado con el “Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 27 de mayo de 2016.		Apartado 2.13 de la Convocatoria a la Invitación Nacional a cuando Menos Tres Personas identificado con el número IA-009KDH999-E77-2016 del 27 de mayo de 2016, relacionado con el “Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 27 de mayo de 2016.	2016-05-31 14:23:09	2016-06-01 14:23:09	\N	\N	0		\N	\N	2	\N	
 247	247	969267	Desarrollo de ingeniería de detalle y construcción de subestaciones y acometida eléctrica del NAICM	Desarrollo de ingeniería de detalle y construcción de subestaciones y acometida eléctrica del NAICM	complete	0	MXN	928000000.00	MXN	Licitación pública	Artículos 27 fracción I, 30 fracción II, 31 y 45 fracción I de la LOPSRM y 34 del RLOPSRM	Numerales 1.2, 1.4, 1.7, 1.10, 2.1, 2.2, 2.10.	Numeral 2.11.	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 10:00 horas del 15 de agosto de 2016, en la sala de juntas de la de la Subdirección de Contrataciones, ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Ángel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Ing. Jaime madinaveitia Villanueva Subdirector de Contrataciones de GACM	\N	\N	2016-05-06 00:00:00	2016-07-18 00:00:00	1	Numerales 1.2, 1.4, 1.7, 1.10, 2.1, 2.2, 2.10.	2016-06-28 00:00:00	2016-06-28 00:00:00	3	\N	
 234	234	749230	Servicios para llevar a cabo la asesoría técnica y capacitación para el programa de mano de obra campesina o urbana marginada en el predio del Nuevo Aeropuerto Internacional de la Ciudad de México	Servicios para llevar a cabo la asesoría técnica y capacitación para el programa de mano de obra campesina o urbana marginada en el predio del Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	2022159.00	MXN		Adjudicación directa	Artículo 26 fracción III, 40 y 41 fracción XI, de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público				\N	\N	\N	\N	0		\N	\N	1	\N	
 248	248	969267	Trabajos relativos a los pilotes para la torre de control, edificio terminal y el centro de transporte terrestre intermodal del NAICM	Trabajos relativos a los pilotes para la torre de control, edificio terminal y el centro de transporte terrestre intermodal del NAICM	active	0	MXN	928000000.00	MXN	Licitación pública	Artículos 27 fracción I, 30 fracción II, 31 y 45 fracción I de la LOPSRM y 34 del RLOPSRM	Numerales 1.2, 1.4, 1.7, 1.10, 2.1, 2.2, 2.10.	Numeral 2.11.	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 11:00 horas del 1 de agosto de 2016, en la sala de juntas de la de la Subdirección de Contrataciones, ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Ángel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Ing. Jaime madinaveitia Villanueva Subdirector de Contrataciones de GACM	\N	\N	2016-05-18 00:00:00	2016-07-12 00:00:00	1	Numerales 1.2, 1.4, 1.7, 1.10, 2.1, 2.2, 2.10.	2016-08-01 00:00:00	2016-08-01 00:00:00	6	\N	
 242	242	1071364 	Nivelación diferencial de presición para la determinación de hundimientos de los bancos de nivel instrumentados dentro del polígono del NAICM	Nivelación diferencial de presición para la determinación de hundimientos de los bancos de nivel instrumentados dentro del polígono del NAICM	complete	0	MXN	8500000.00	MXN	Invitación a cuando menos tres personas			Art. 27 fracción II, 30 fracción I y 45 fracción I de la LOPSRM			\N	\N	2016-06-02 00:00:00	2016-06-02 00:00:00	0	"Apartado 2.14 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E76-2016, relacionado con la nivelación diferencial de presición para determinar hundimientos, es preciso señalar que la convocatoria fue publicada en la página de CompraNet el el 26 de mayo de 2016, "	2016-06-15 00:00:00	2016-06-15 00:00:00	5	\N	
 249	249	1042453	Sistema de precarga e instrumentación geotécnica, infraestructura, estructura de pavimientos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del NAICM	Sistema de precarga e instrumentación geotécnica, infraestructura, estructura de pavimientos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del NAICM	complete	0	MXN	12875862068.98	MXN	Licitación pública	Articulos 27 fracción I, 30 fracción II, 31 y 45 fracción I de la LOPSRM y 34 del RLOPSRM	Numerales 1.2, 1.4, 1.7, 1.10, 2.1, 2.2, 2.10.	Numeral 2.11.	Presencial	El acto de presentación y apertura de proposiciones se llevo a cabo en la sala de juntas de la Subdirección de Contrataciones, ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Ángel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Ing. Jaime Madinaveitia Villanueva Subdirector de Contrataciones de GACM	\N	\N	2016-05-09 00:00:00	2016-07-11 00:00:00	1	Numerales 1.2, 1.4, 1.7, 1.10, 2.1, 2.2, 2.10.	2016-06-28 00:00:00	2016-06-28 00:00:00	18	\N	
+252	252	1078677 	Servicios profesionales de levantamiento de imagen y video del nuevo aeropuerto internacional de la ciudad de México	Servicios profesionales de levantamiento de imagen y video del nuevo aeropuerto internacional de la ciudad de México	complete	0	MXN	18000000.00	MXN	Licitación pública	Arts. 26 fracción I,26 BIS fracción I, 28 y 45 de la LAASSP	presencial				\N	\N	\N	\N	0		\N	\N	1	\N	
 239	239	1063883	Supervisión de las obras de excavación de prueba, losa experimental y prueba de pilotes para el edificio terminal y torre de control del Nuevo Aeropuerto Internacional de la Ciudad de México 	Supervisión de las obras de excavación de prueba, losa experimental y prueba de pilotes para el edificio terminal y torre de control del Nuevo Aeropuerto Internacional de la Ciudad de México 	active	0	MXN	5172413.79	MXN	Invitación a cuando menos tres personas	Articulo 27, fracción II, 30, fracción I y 45, fracción I de la LOPSRM.	Binario	Apartado 5, 5.1, 5.2, 5.3, y 5.4 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E72-2016 del 16 de mayo de 2016, relacionado con el “Supervisión de las obras de excavación de prueba, losa experimental y prueba de pilotes para el edificio terminal y torre de control del Nuevo Aeropuerto Internacional de la Ciudad de México ".es preciso señalar que la convocatoria fue publicada en la pagina de CompraNet el 16 de mayo de 2016. 			\N	\N	2016-05-24 15:54:11	2016-05-24 15:54:11	0	Apartado 4, 4.1, 6, 6.1 y 6.2 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E72-2016 del 16 de mayo de 2016, relacionado con el “Supervisión de las obras de excavación de prueba, losa experimental y prueba de pilotes para el edificio terminal y torre de control del Nuevo Aeropuerto Internacional de la Ciudad de México ".es preciso señalar que la convocatoria fue publicada en la pagina de CompraNet el 16 de mayo de 2016. 	2016-05-31 15:54:11	2016-06-03 15:54:11	3	\N	
 251	251	1042492	Servicios de supervisión técnica y administrativa de construcción para el paquete Terminal del NAICM.	Servicios de supervisión técnica y administrativa de construcción para el paquete Terminal del NAICM.	complete	0	MXN	4140344828.00	MXN		Licitación Pública	internacional	presencial			\N	\N	\N	\N	0	Licitación Pública	\N	\N	1	\N	
 244	244	1081885	Trabajos para mantener actualizados los permisos en materia de impacto ambiental por los ajustes y adecuaciones del proyecto Nuevo Aeropuerto Internacional de la Ciudad de México	Trabajos para mantener actualizados los permisos en materia de impacto ambiental por los ajustes y adecuaciones del proyecto Nuevo Aeropuerto Internacional de la Ciudad de México	active	0	MXN	7370689.66	MXN	Invitación a cuando menos tres personas	Artículos 27, fracción II, 30, fracción I y 45, fracción I de la Ley de Obras Públicas y Servicios Relacionados con las Mismas					\N	\N	2016-07-08 00:00:00	2016-07-08 00:00:00	0	Apartado 2.13 de la Convocatoria a la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E83-2016 del 20 de junio de 2016, relacionado con los “Trabajos para mantener actualizados los permisos en materia de impacto ambiental por los ajustes y adecuaciones del proyecto del Nuevo Aeropuerto Internacional de la CIudad de México", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el el 30 de junio de 2016.	2016-07-13 00:00:00	2016-07-13 00:00:00	4	\N	
@@ -7213,8 +7216,6 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 237	237	1081871	Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México 	Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México 	active	0	MXN	6100000	MXN	Invitación a cuando menos tres personas	Artículo 27, fracción II, 30, fracción I y 43, 44, 45, fracción I de la LOPSRM	Apartado 2.13 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E82-2016 del 17 de junio de 2016, relacionado con el “Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el el 20 de 06 de 2016, 	Apartado 2.1, 2.10 y 2.11 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E82-2016 del 17 de junio de 2016, relacionado con el “Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el el 20 de 06 de 2016, , 			2016-07-08 15:35:13	2016-07-15 15:32:13	2016-06-28 15:32:13	2016-06-28 15:32:13	0	Apartado 2.13 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E82-2016 del 17 de junio de 2016, relacionado con el “Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el el 20 de 06 de 2016, 	\N	\N	5	\N	
 231	231	AA-009KDH999-E111-2016	Servicio de taller de preparación a los funcionarios de GACM para manejo de información	Servicio de taller de preparación a los funcionarios de GACM para manejo de información	complete	0	MXN	150000.00	MXN	Adjudicación directa	Articulo 42, primer párrafo de la LAASSP.					\N	\N	\N	\N	0		\N	\N	1	\N	
 230	230	1138271 	Servicios de elaboración del Manual para situaciones de riesgo, desastre, casos fortuitos y de fuerza mayor en la construcción del NAICM	Servicios de elaboración del Manual para situaciones de riesgo, desastre, casos fortuitos y de fuerza mayor en la construcción del NAICM	complete	0	MXN	180000.00	MXN	Adjudicación directa	Artículo 42 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público					\N	\N	\N	\N	0		\N	\N	1	\N	
-243	243	1081871	Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México 	Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México 	active	0	MXN	5767251.38	MXN	Invitación a cuando menos tres personas	Artículo 27, fracción II, 30, fracción I y 43, 44, 45, fracción I de la LOPSRM	"Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E82-2016 del 17 de junio de 2016, relacionado con el “Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México"", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el el 20 de 06 de 2016, "				\N	\N	2016-06-28 00:00:00	2016-06-28 00:00:00	0		2016-07-15 00:00:00	2016-07-15 00:00:00	5	\N	
-252	252	1078677 	Servicios profesionales de levantamiento de imagen y video del nuevo aeropuerto internacional de la ciudad de México	Servicios profesionales de levantamiento de imagen y video del nuevo aeropuerto internacional de la ciudad de México	complete	0	MXN	18000000.00	MXN	Licitación pública	Arts. 26 fracción I,26 BIS fracción I, 28 y 45 de la LAASSP	presencial				\N	\N	\N	\N	0		\N	\N	1	\N	
 238	238	1063459	Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México	Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	51500000	MXN	Invitación a cuando menos tres personas	Artículos 27 fracción II, 30 fracción I, 42 fracción XI y 45 fracción I de la Ley de Obras Públicas y Servicios Relacionados con las Mismas	Binario	Apartado 2.13 de la Convocatoria a la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH-999-E71-2016 del 13 de mayo de 2016, relacionado con el "Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 16 de mayo de 2016. 	Apartados 2.1, 2.2 y 2.10 de la Convocatoria a la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH-999-E71-2016 del 13 de mayo de 2016, relacionado con el "Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 16 de mayo de 2016. 		2016-05-31 15:44:09	2016-06-07 15:44:09	\N	\N	0	Apartado 2.13 de la Convocatoria a la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH-999-E71-2016 del 13 de mayo de 2016, relacionado con el "Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 16 de mayo de 2016. 	\N	\N	3	\N	
 246	246	1113273	SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET).	SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET).	active	0	MXN	2626000.00	MXN	Licitación pública		Apartado 4, 4.1 y 4.2 de la Licitación Pública Nacional identificado con el número  LA-009KDH999-E104-2016 del 06 de Junio de 2016, relacionado con la “SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET)", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el el 21 de Julio de 2016	Apartado de la Licitación Pública Nacional identificado con el número LA-009KDH999-E104-2016 del 06 de JUNIO de 2016, relacionado con lA “SEGUNDA CONVOCATORIA DE SERVICIOS DE SANITARIOS PORTATILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET)"", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el el 21 de julio de 2016	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 10:00 horas del 05 de Agosto de 2016, en la sala de juntas de la de la Subdirección de Contrataciones, ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Ángel, Delegación Álvaro Obregón, Ciudad de México, C.P. 01090. El acto fue presidido por el Lic. Gerardo Fco. Hernández Romerode la Gerencia de concursos de la Subdirección de Contrataciones de GACM	\N	\N	2016-07-27 00:00:00	2016-07-27 00:00:00	1	Apartado 4, 4.1 y 4.2 de la Licitación Pública Nacional identificado con el número  LA-009KDH999-E104-2016 del 06 de Junio de 2016, relacionado con la “SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET)", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el el 21 de Julio de 2016	2016-08-08 00:00:00	2016-08-08 00:00:00	3	\N	
 250	250	1042465	Sistema de precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 3 y área de túneles del NAICM	Sistema de precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 3 y área de túneles del NAICM	active	0	MXN	11762500000.00	MXN	Licitación pública	Artículos 27 fracción I, 30 fracción II, 31 y 45 fracción I de la LOPSRM y 34 del RLOPSRM	Numerales 1.2, 1.4, 1.7, 1.10, 2.1, 2.2, 2.10.	Numeral 2.11.	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 10:00 horas del 4 de agosto de 2016, en la sala de juntas de la de la Subdirección de Contrataciones, ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Ángel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Ing. Jaime Madinaveitia Villanueva Subdirector de Contrataciones de GACM	\N	\N	2016-05-06 00:00:00	2016-07-18 00:00:00	1	Numerales 1.2, 1.4, 1.7, 1.10, 2.1, 2.2, 2.10.	2016-06-28 00:00:00	2016-06-28 00:00:00	16	\N	
@@ -7550,19 +7551,19 @@ COPY tendermilestone (id, contractingprocess_id, tender_id, milestoneid, title, 
 20	140	\N	1	Visita al sitio de realización de los trabajos, relacionado con la invitación Restringida a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E45-2016 respecto del H99	La Visita al sitio de realización de los trabajos, relacionado con la invitación Restringida a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E45-2016 respecto del “Servicios de apoyo técnico a la residencia del proyecto ejecutivo de diseño arquitectónico e ingeniería de detalle del edificio terminal de pasajeros, torre de control y centro de operaciones, edificio de estacionamiento, estacionamientos en superficie, estación multimodal y vialidades de acceso del NAICM", dio inicio a las 11:00  en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-04-01 00:00:00	2016-04-15 00:00:00	met
 22	109	\N	1	Visita al sitio de realización de los trabajos de Supervisión Técnica, Administrativa y de Control de calidad para los trabajos de nivelación y limpieza del terreno del Nuevo aeropuerto internacional de la Ciudad de México.	La visita al sitio de realización de los trabajos deSupervisión Técnica, Administrativa y de Control de calidad para los trabajos de nivelación y limpieza del terreno del Nuevo aeropuerto internacional de la Ciudad de México dio inicio a las 11:00 horas del 23 de noviembre de 2015 en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2015-11-23 00:00:00	2015-11-23 00:00:00	met
 23	110	\N	1	"Visita al sitio de realización de los trabajos para la Supervisión Técnica, Administrativa y de Control de calidad para los Trabajos de Construcción de los Caminos Provisionales de Acceso al Nuevo Aeropuerto Internacional de la Ciudad de México. "	"La visita al sitio de realización de los trabajos para la Supervisión Técnica, Administrativa y de Control de calidad para los Trabajos de Construcción de los Caminos Provisionales de Acceso al Nuevo Aeropuerto Internacional de la Ciudad de México dio inicio a las 11:00 horas del 25 de noviembre de 2015 en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes. "	2015-11-25 00:00:00	2015-11-25 00:00:00	met
-35	250	\N	milestone-1478037928067	Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Internacional identificada con el número LO-009KDH999-049-2016 respecto del "NAICM"	Dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:30 horas del 16 de junio de 2016 sin que existiera observación alguna por parte de los asistentes.	2016-04-28 00:00:00	2016-06-16 00:00:00	Met
 24	108	\N	1	Visita al sitio de realización de los trabajos para la Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno par el Nuevo Aeropuerto Internacional de la Ciudad de México.	La visita al sitio de realización de los trabajos para la Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno par el Nuevo Aeropuerto Internacional de la Ciudad de México. en el sitio del NACM  dio inicio a las 11:00 horas del 10 de febrero de 2016 en el Km. 75 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-02-10 00:00:00	2016-02-10 00:00:00	met
 26	219	\N	1	Visita al sitio de realización de los trabajos  para el Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México	La Visita al sitio de realización de los trabajos para para el Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de Méxicodio inicio a las 11:00 horas del 06 de octubre de 2015 en el Km. 75 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 14:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes. 	2016-04-28 00:00:00	\N	met
 27	220	\N	1	Visita al sitio de realización de los trabajos  para el Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México	"La Visita al sitio de realización de los trabajos para para el Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 3 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM) dio inicio a las 11:00 horas del 06 de octubre de 2015 en el Km. 75 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 14:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes. "	2016-04-28 00:00:00	2016-04-28 00:00:00	met
-29	241	\N	milestone-1478035262746	Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E75-2016 respecto a la Coordinación topográfia integral para llevar a cabo el control de obra y administracción de la información topográfica y geodésica generada para el proyectodel Nuevo Aeropuerto Internacional de la Ciudad de México.	La Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E75-2016 respecto a la Coordinación topográfia integral para llevar a cabo el control de obra y administracción de la información topográfica y geodésica generada para el proyectodel Nuevo Aeropuerto Internacional de la Ciudad de México., dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 12:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-05-31 00:00:00	2016-05-31 00:00:00	Met
-30	247	\N	milestone-1478035713005	Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Internacional identificada con el número LO-009KDH999-093-2016 respecto del "NAICM"	Dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:30 horas del 16 de junio de 2016 sin que existiera observación alguna por parte de los 33 asistentes.	2016-04-28 00:00:00	2016-01-11 00:00:00	Met
-31	248	\N	milestone-1478036459379	Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Internacional identificada con el número LO-009KDH999-050-2016 respecto del "NAICM"	Dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:20 horas del 27 de abril de 2016 sin que existiera observación alguna por parte de los 51 asistentes.	2016-04-27 00:00:00	\N	Met
-32	251	\N	milestone-1478036963416	-	La Visita al sitio de realización de los trabajos, dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 14:00 horas del mismo día sin que existiera observación alguna por parte de los 59 asistentes.	2016-05-27 00:00:00	2016-05-27 00:00:00	Met
-33	242	\N	milestone-1478037053780	Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E76-2016 respecto de la nivelación diferencial de presición para la determinación del hundimiento..	La Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E76-2016 respecto de la nivelación diferencial, dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 14:00  horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-05-31 00:00:00	2016-05-31 00:00:00	Met
-34	249	\N	milestone-1478037190115	Visita al sitio de realización de los trabajos	La Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Internacional, identificada con el número LO-009KDH999-E48-2016, dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 14:00 horas del mismo día sin que existiera observación alguna por parte de los 71 asistentes.	2016-04-28 00:00:00	\N	Met
-36	243	\N	milestone-1478038417577	Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E82-2016 respecto del "Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México"	La Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E82-2016 respecto del "Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México", dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-06-24 00:00:00	2016-06-24 00:00:00	Met
-37	252	\N	milestone-1478038856027	Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Nacional identificada con el No.LA-009KDH999-E78-2016 respecto de los servicios profesionales de levantamiento de imagen y video.	La Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Nacional, identificada con el número LA-009KDH999-E78-2016 respecto de los servicios profesionales de lavantamiento de imagen y video, dio inicio a las 11.00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 14.00 horas del día 13 de junio de 2016 sin que existiera observación alguna por parte de los asistentes.	2010-06-10 00:00:00	2010-06-10 00:00:00	Met
-38	246	\N	milestone-1479166728187	Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Nacional identificada con el número LA-009KDH999-E104-2016 del 06 de Junio de 2016, relacionado con la “SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET)".	La Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Nacional, identificada con el número " LA-009KDH999-E104-2016" respecto del "SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET)", dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-07-25 00:00:00	\N	Met
+35	250	\N	milestone-1478037928067	Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Internacional identificada con el número LO-009KDH999-049-2016 respecto del "NAICM"	Dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:30 horas del 16 de junio de 2016 sin que existiera observación alguna por parte de los asistentes.	2016-04-28 00:00:00	2016-06-16 00:00:00	met
+29	241	\N	milestone-1478035262746	Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E75-2016 respecto a la Coordinación topográfia integral para llevar a cabo el control de obra y administracción de la información topográfica y geodésica generada para el proyectodel Nuevo Aeropuerto Internacional de la Ciudad de México.	La Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E75-2016 respecto a la Coordinación topográfia integral para llevar a cabo el control de obra y administracción de la información topográfica y geodésica generada para el proyectodel Nuevo Aeropuerto Internacional de la Ciudad de México., dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 12:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-05-31 00:00:00	2016-05-31 00:00:00	met
+30	247	\N	milestone-1478035713005	Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Internacional identificada con el número LO-009KDH999-093-2016 respecto del "NAICM"	Dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:30 horas del 16 de junio de 2016 sin que existiera observación alguna por parte de los 33 asistentes.	2016-04-28 00:00:00	2016-01-11 00:00:00	met
+31	248	\N	milestone-1478036459379	Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Internacional identificada con el número LO-009KDH999-050-2016 respecto del "NAICM"	Dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:20 horas del 27 de abril de 2016 sin que existiera observación alguna por parte de los 51 asistentes.	2016-04-27 00:00:00	\N	met
+32	251	\N	milestone-1478036963416	-	La Visita al sitio de realización de los trabajos, dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 14:00 horas del mismo día sin que existiera observación alguna por parte de los 59 asistentes.	2016-05-27 00:00:00	2016-05-27 00:00:00	met
+33	242	\N	milestone-1478037053780	Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E76-2016 respecto de la nivelación diferencial de presición para la determinación del hundimiento..	La Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E76-2016 respecto de la nivelación diferencial, dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 14:00  horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-05-31 00:00:00	2016-05-31 00:00:00	met
+34	249	\N	milestone-1478037190115	Visita al sitio de realización de los trabajos	La Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Internacional, identificada con el número LO-009KDH999-E48-2016, dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 14:00 horas del mismo día sin que existiera observación alguna por parte de los 71 asistentes.	2016-04-28 00:00:00	\N	met
+36	243	\N	milestone-1478038417577	Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E82-2016 respecto del "Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México"	La Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E82-2016 respecto del "Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México", dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-06-24 00:00:00	2016-06-24 00:00:00	met
+37	252	\N	milestone-1478038856027	Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Nacional identificada con el No.LA-009KDH999-E78-2016 respecto de los servicios profesionales de levantamiento de imagen y video.	La Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Nacional, identificada con el número LA-009KDH999-E78-2016 respecto de los servicios profesionales de lavantamiento de imagen y video, dio inicio a las 11.00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 14.00 horas del día 13 de junio de 2016 sin que existiera observación alguna por parte de los asistentes.	2010-06-10 00:00:00	2010-06-10 00:00:00	met
+38	246	\N	milestone-1479166728187	Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Nacional identificada con el número LA-009KDH999-E104-2016 del 06 de Junio de 2016, relacionado con la “SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET)".	La Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Nacional, identificada con el número " LA-009KDH999-E104-2016" respecto del "SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET)", dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-07-25 00:00:00	\N	met
 \.
 
 
@@ -7589,7 +7590,7 @@ SELECT pg_catalog.setval('tendermilestonedocuments_id_seq', 1, false);
 
 
 --
--- Name: award_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: award award_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY award
@@ -7597,7 +7598,7 @@ ALTER TABLE ONLY award
 
 
 --
--- Name: awardamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: awardamendmentchanges awardamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awardamendmentchanges
@@ -7605,7 +7606,7 @@ ALTER TABLE ONLY awardamendmentchanges
 
 
 --
--- Name: awarddocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarddocuments awarddocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarddocuments
@@ -7613,7 +7614,7 @@ ALTER TABLE ONLY awarddocuments
 
 
 --
--- Name: awarditem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditem awarditem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditem
@@ -7621,7 +7622,7 @@ ALTER TABLE ONLY awarditem
 
 
 --
--- Name: awarditemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditemadditionalclassifications awarditemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditemadditionalclassifications
@@ -7629,7 +7630,7 @@ ALTER TABLE ONLY awarditemadditionalclassifications
 
 
 --
--- Name: budget_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: budget budget_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY budget
@@ -7637,7 +7638,7 @@ ALTER TABLE ONLY budget
 
 
 --
--- Name: buyer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: buyer buyer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyer
@@ -7645,7 +7646,7 @@ ALTER TABLE ONLY buyer
 
 
 --
--- Name: buyeradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: buyeradditionalidentifiers buyeradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyeradditionalidentifiers
@@ -7653,7 +7654,7 @@ ALTER TABLE ONLY buyeradditionalidentifiers
 
 
 --
--- Name: contract_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contract contract_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contract
@@ -7661,7 +7662,7 @@ ALTER TABLE ONLY contract
 
 
 --
--- Name: contractamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractamendmentchanges contractamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractamendmentchanges
@@ -7669,7 +7670,7 @@ ALTER TABLE ONLY contractamendmentchanges
 
 
 --
--- Name: contractdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractdocuments contractdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractdocuments
@@ -7677,7 +7678,7 @@ ALTER TABLE ONLY contractdocuments
 
 
 --
--- Name: contractingprocess_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractingprocess contractingprocess_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractingprocess
@@ -7685,7 +7686,7 @@ ALTER TABLE ONLY contractingprocess
 
 
 --
--- Name: contractitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitem contractitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitem
@@ -7693,7 +7694,7 @@ ALTER TABLE ONLY contractitem
 
 
 --
--- Name: contractitemadditionalclasifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitemadditionalclasifications contractitemadditionalclasifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitemadditionalclasifications
@@ -7701,7 +7702,7 @@ ALTER TABLE ONLY contractitemadditionalclasifications
 
 
 --
--- Name: currency_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: currency currency_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY currency
@@ -7709,7 +7710,7 @@ ALTER TABLE ONLY currency
 
 
 --
--- Name: documentformat_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: documentformat documentformat_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY documentformat
@@ -7717,7 +7718,7 @@ ALTER TABLE ONLY documentformat
 
 
 --
--- Name: documenttype_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: documenttype documenttype_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY documenttype
@@ -7725,7 +7726,7 @@ ALTER TABLE ONLY documenttype
 
 
 --
--- Name: implementation_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementation implementation_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementation
@@ -7733,7 +7734,7 @@ ALTER TABLE ONLY implementation
 
 
 --
--- Name: implementationdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationdocuments implementationdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationdocuments
@@ -7741,7 +7742,7 @@ ALTER TABLE ONLY implementationdocuments
 
 
 --
--- Name: implementationmilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestone implementationmilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestone
@@ -7749,7 +7750,7 @@ ALTER TABLE ONLY implementationmilestone
 
 
 --
--- Name: implementationmilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestonedocuments implementationmilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestonedocuments
@@ -7757,7 +7758,7 @@ ALTER TABLE ONLY implementationmilestonedocuments
 
 
 --
--- Name: implementationtransactions_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationtransactions implementationtransactions_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationtransactions
@@ -7765,7 +7766,7 @@ ALTER TABLE ONLY implementationtransactions
 
 
 --
--- Name: language_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: language language_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY language
@@ -7773,7 +7774,7 @@ ALTER TABLE ONLY language
 
 
 --
--- Name: planning_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: planning planning_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planning
@@ -7781,7 +7782,7 @@ ALTER TABLE ONLY planning
 
 
 --
--- Name: planningdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: planningdocuments planningdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planningdocuments
@@ -7789,7 +7790,7 @@ ALTER TABLE ONLY planningdocuments
 
 
 --
--- Name: procuringentity_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentity procuringentity_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentity
@@ -7797,7 +7798,7 @@ ALTER TABLE ONLY procuringentity
 
 
 --
--- Name: procuringentityadditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentityadditionalidentifiers procuringentityadditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentityadditionalidentifiers
@@ -7805,7 +7806,7 @@ ALTER TABLE ONLY procuringentityadditionalidentifiers
 
 
 --
--- Name: publisher_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: publisher publisher_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY publisher
@@ -7813,7 +7814,7 @@ ALTER TABLE ONLY publisher
 
 
 --
--- Name: supplier_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplier supplier_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplier
@@ -7821,7 +7822,7 @@ ALTER TABLE ONLY supplier
 
 
 --
--- Name: supplieradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplieradditionalidentifiers supplieradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplieradditionalidentifiers
@@ -7829,7 +7830,7 @@ ALTER TABLE ONLY supplieradditionalidentifiers
 
 
 --
--- Name: tender_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tender tender_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tender
@@ -7837,7 +7838,7 @@ ALTER TABLE ONLY tender
 
 
 --
--- Name: tenderamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderamendmentchanges tenderamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderamendmentchanges
@@ -7845,7 +7846,7 @@ ALTER TABLE ONLY tenderamendmentchanges
 
 
 --
--- Name: tenderdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderdocuments tenderdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderdocuments
@@ -7853,7 +7854,7 @@ ALTER TABLE ONLY tenderdocuments
 
 
 --
--- Name: tenderer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderer tenderer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderer
@@ -7861,7 +7862,7 @@ ALTER TABLE ONLY tenderer
 
 
 --
--- Name: tendereradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendereradditionalidentifiers tendereradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendereradditionalidentifiers
@@ -7869,7 +7870,7 @@ ALTER TABLE ONLY tendereradditionalidentifiers
 
 
 --
--- Name: tenderitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitem tenderitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitem
@@ -7877,7 +7878,7 @@ ALTER TABLE ONLY tenderitem
 
 
 --
--- Name: tenderitemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitemadditionalclassifications tenderitemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitemadditionalclassifications
@@ -7885,7 +7886,7 @@ ALTER TABLE ONLY tenderitemadditionalclassifications
 
 
 --
--- Name: tendermilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestone tendermilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestone
@@ -7893,7 +7894,7 @@ ALTER TABLE ONLY tendermilestone
 
 
 --
--- Name: tendermilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestonedocuments tendermilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestonedocuments
@@ -7901,7 +7902,7 @@ ALTER TABLE ONLY tendermilestonedocuments
 
 
 --
--- Name: award_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: award award_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY award
@@ -7909,7 +7910,7 @@ ALTER TABLE ONLY award
 
 
 --
--- Name: awardamendmentchanges_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awardamendmentchanges awardamendmentchanges_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awardamendmentchanges
@@ -7917,7 +7918,7 @@ ALTER TABLE ONLY awardamendmentchanges
 
 
 --
--- Name: awardamendmentchanges_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awardamendmentchanges awardamendmentchanges_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awardamendmentchanges
@@ -7925,7 +7926,7 @@ ALTER TABLE ONLY awardamendmentchanges
 
 
 --
--- Name: awarddocuments_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarddocuments awarddocuments_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarddocuments
@@ -7933,7 +7934,7 @@ ALTER TABLE ONLY awarddocuments
 
 
 --
--- Name: awarddocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarddocuments awarddocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarddocuments
@@ -7941,7 +7942,7 @@ ALTER TABLE ONLY awarddocuments
 
 
 --
--- Name: awarditem_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditem awarditem_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditem
@@ -7949,7 +7950,7 @@ ALTER TABLE ONLY awarditem
 
 
 --
--- Name: awarditem_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditem awarditem_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditem
@@ -7957,7 +7958,7 @@ ALTER TABLE ONLY awarditem
 
 
 --
--- Name: awarditemadditionalclassifications_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditemadditionalclassifications awarditemadditionalclassifications_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditemadditionalclassifications
@@ -7965,7 +7966,7 @@ ALTER TABLE ONLY awarditemadditionalclassifications
 
 
 --
--- Name: awarditemadditionalclassifications_awarditem_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditemadditionalclassifications awarditemadditionalclassifications_awarditem_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditemadditionalclassifications
@@ -7973,7 +7974,7 @@ ALTER TABLE ONLY awarditemadditionalclassifications
 
 
 --
--- Name: budget_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: budget budget_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY budget
@@ -7981,7 +7982,7 @@ ALTER TABLE ONLY budget
 
 
 --
--- Name: budget_planning_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: budget budget_planning_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY budget
@@ -7989,7 +7990,7 @@ ALTER TABLE ONLY budget
 
 
 --
--- Name: buyer_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: buyer buyer_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyer
@@ -7997,7 +7998,7 @@ ALTER TABLE ONLY buyer
 
 
 --
--- Name: buyeradditionalidentifiers_buyer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: buyeradditionalidentifiers buyeradditionalidentifiers_buyer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyeradditionalidentifiers
@@ -8005,7 +8006,7 @@ ALTER TABLE ONLY buyeradditionalidentifiers
 
 
 --
--- Name: buyeradditionalidentifiers_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: buyeradditionalidentifiers buyeradditionalidentifiers_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyeradditionalidentifiers
@@ -8013,7 +8014,7 @@ ALTER TABLE ONLY buyeradditionalidentifiers
 
 
 --
--- Name: contract_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contract contract_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contract
@@ -8021,7 +8022,7 @@ ALTER TABLE ONLY contract
 
 
 --
--- Name: contractamendmentchanges_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractamendmentchanges contractamendmentchanges_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractamendmentchanges
@@ -8029,7 +8030,7 @@ ALTER TABLE ONLY contractamendmentchanges
 
 
 --
--- Name: contractamendmentchanges_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractamendmentchanges contractamendmentchanges_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractamendmentchanges
@@ -8037,7 +8038,7 @@ ALTER TABLE ONLY contractamendmentchanges
 
 
 --
--- Name: contractdocuments_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractdocuments contractdocuments_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractdocuments
@@ -8045,7 +8046,7 @@ ALTER TABLE ONLY contractdocuments
 
 
 --
--- Name: contractdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractdocuments contractdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractdocuments
@@ -8053,7 +8054,7 @@ ALTER TABLE ONLY contractdocuments
 
 
 --
--- Name: contractitem_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitem contractitem_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitem
@@ -8061,7 +8062,7 @@ ALTER TABLE ONLY contractitem
 
 
 --
--- Name: contractitem_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitem contractitem_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitem
@@ -8069,7 +8070,7 @@ ALTER TABLE ONLY contractitem
 
 
 --
--- Name: contractitemadditionalclasifications_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitemadditionalclasifications contractitemadditionalclasifications_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitemadditionalclasifications
@@ -8077,7 +8078,7 @@ ALTER TABLE ONLY contractitemadditionalclasifications
 
 
 --
--- Name: contractitemadditionalclasifications_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitemadditionalclasifications contractitemadditionalclasifications_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitemadditionalclasifications
@@ -8085,7 +8086,7 @@ ALTER TABLE ONLY contractitemadditionalclasifications
 
 
 --
--- Name: contractitemadditionalclasifications_contractitem_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitemadditionalclasifications contractitemadditionalclasifications_contractitem_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitemadditionalclasifications
@@ -8093,7 +8094,7 @@ ALTER TABLE ONLY contractitemadditionalclasifications
 
 
 --
--- Name: implementation_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementation implementation_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementation
@@ -8101,7 +8102,7 @@ ALTER TABLE ONLY implementation
 
 
 --
--- Name: implementation_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementation implementation_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementation
@@ -8109,7 +8110,7 @@ ALTER TABLE ONLY implementation
 
 
 --
--- Name: implementationdocuments_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationdocuments implementationdocuments_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationdocuments
@@ -8117,7 +8118,7 @@ ALTER TABLE ONLY implementationdocuments
 
 
 --
--- Name: implementationdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationdocuments implementationdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationdocuments
@@ -8125,7 +8126,7 @@ ALTER TABLE ONLY implementationdocuments
 
 
 --
--- Name: implementationdocuments_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationdocuments implementationdocuments_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationdocuments
@@ -8133,7 +8134,7 @@ ALTER TABLE ONLY implementationdocuments
 
 
 --
--- Name: implementationmilestone_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestone implementationmilestone_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestone
@@ -8141,7 +8142,7 @@ ALTER TABLE ONLY implementationmilestone
 
 
 --
--- Name: implementationmilestone_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestone implementationmilestone_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestone
@@ -8149,7 +8150,7 @@ ALTER TABLE ONLY implementationmilestone
 
 
 --
--- Name: implementationmilestone_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestone implementationmilestone_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestone
@@ -8157,7 +8158,7 @@ ALTER TABLE ONLY implementationmilestone
 
 
 --
--- Name: implementationmilestonedocuments_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestonedocuments implementationmilestonedocuments_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestonedocuments
@@ -8165,7 +8166,7 @@ ALTER TABLE ONLY implementationmilestonedocuments
 
 
 --
--- Name: implementationmilestonedocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestonedocuments implementationmilestonedocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestonedocuments
@@ -8173,7 +8174,7 @@ ALTER TABLE ONLY implementationmilestonedocuments
 
 
 --
--- Name: implementationmilestonedocuments_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestonedocuments implementationmilestonedocuments_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestonedocuments
@@ -8181,7 +8182,7 @@ ALTER TABLE ONLY implementationmilestonedocuments
 
 
 --
--- Name: implementationtransactions_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationtransactions implementationtransactions_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationtransactions
@@ -8189,7 +8190,7 @@ ALTER TABLE ONLY implementationtransactions
 
 
 --
--- Name: implementationtransactions_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationtransactions implementationtransactions_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationtransactions
@@ -8197,7 +8198,7 @@ ALTER TABLE ONLY implementationtransactions
 
 
 --
--- Name: implementationtransactions_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationtransactions implementationtransactions_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationtransactions
@@ -8205,7 +8206,7 @@ ALTER TABLE ONLY implementationtransactions
 
 
 --
--- Name: planning_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: planning planning_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planning
@@ -8213,7 +8214,7 @@ ALTER TABLE ONLY planning
 
 
 --
--- Name: planningdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: planningdocuments planningdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planningdocuments
@@ -8221,7 +8222,7 @@ ALTER TABLE ONLY planningdocuments
 
 
 --
--- Name: planningdocuments_planning_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: planningdocuments planningdocuments_planning_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planningdocuments
@@ -8229,7 +8230,7 @@ ALTER TABLE ONLY planningdocuments
 
 
 --
--- Name: procuringentity_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentity procuringentity_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentity
@@ -8237,7 +8238,7 @@ ALTER TABLE ONLY procuringentity
 
 
 --
--- Name: procuringentity_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentity procuringentity_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentity
@@ -8245,7 +8246,7 @@ ALTER TABLE ONLY procuringentity
 
 
 --
--- Name: procuringentityadditionalidentifiers_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentityadditionalidentifiers procuringentityadditionalidentifiers_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentityadditionalidentifiers
@@ -8253,7 +8254,7 @@ ALTER TABLE ONLY procuringentityadditionalidentifiers
 
 
 --
--- Name: procuringentityadditionalidentifiers_procuringentity_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentityadditionalidentifiers procuringentityadditionalidentifiers_procuringentity_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentityadditionalidentifiers
@@ -8261,7 +8262,7 @@ ALTER TABLE ONLY procuringentityadditionalidentifiers
 
 
 --
--- Name: procuringentityadditionalidentifiers_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentityadditionalidentifiers procuringentityadditionalidentifiers_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentityadditionalidentifiers
@@ -8269,7 +8270,7 @@ ALTER TABLE ONLY procuringentityadditionalidentifiers
 
 
 --
--- Name: publisher_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: publisher publisher_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY publisher
@@ -8277,7 +8278,7 @@ ALTER TABLE ONLY publisher
 
 
 --
--- Name: supplier_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplier supplier_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplier
@@ -8285,7 +8286,7 @@ ALTER TABLE ONLY supplier
 
 
 --
--- Name: supplier_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplier supplier_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplier
@@ -8293,7 +8294,7 @@ ALTER TABLE ONLY supplier
 
 
 --
--- Name: supplieradditionalidentifiers_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplieradditionalidentifiers supplieradditionalidentifiers_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplieradditionalidentifiers
@@ -8301,7 +8302,7 @@ ALTER TABLE ONLY supplieradditionalidentifiers
 
 
 --
--- Name: supplieradditionalidentifiers_contractingprocess_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplieradditionalidentifiers supplieradditionalidentifiers_contractingprocess_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplieradditionalidentifiers
@@ -8309,7 +8310,7 @@ ALTER TABLE ONLY supplieradditionalidentifiers
 
 
 --
--- Name: supplieradditionalidentifiers_supplier_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplieradditionalidentifiers supplieradditionalidentifiers_supplier_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplieradditionalidentifiers
@@ -8317,7 +8318,7 @@ ALTER TABLE ONLY supplieradditionalidentifiers
 
 
 --
--- Name: tender_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tender tender_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tender
@@ -8325,7 +8326,7 @@ ALTER TABLE ONLY tender
 
 
 --
--- Name: tenderamendmentchanges_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderamendmentchanges tenderamendmentchanges_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderamendmentchanges
@@ -8333,7 +8334,7 @@ ALTER TABLE ONLY tenderamendmentchanges
 
 
 --
--- Name: tenderamendmentchanges_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderamendmentchanges tenderamendmentchanges_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderamendmentchanges
@@ -8341,7 +8342,7 @@ ALTER TABLE ONLY tenderamendmentchanges
 
 
 --
--- Name: tenderdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderdocuments tenderdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderdocuments
@@ -8349,7 +8350,7 @@ ALTER TABLE ONLY tenderdocuments
 
 
 --
--- Name: tenderdocuments_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderdocuments tenderdocuments_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderdocuments
@@ -8357,7 +8358,7 @@ ALTER TABLE ONLY tenderdocuments
 
 
 --
--- Name: tenderer_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderer tenderer_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderer
@@ -8365,7 +8366,7 @@ ALTER TABLE ONLY tenderer
 
 
 --
--- Name: tenderer_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderer tenderer_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderer
@@ -8373,7 +8374,7 @@ ALTER TABLE ONLY tenderer
 
 
 --
--- Name: tendereradditionalidentifiers_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendereradditionalidentifiers tendereradditionalidentifiers_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendereradditionalidentifiers
@@ -8381,7 +8382,7 @@ ALTER TABLE ONLY tendereradditionalidentifiers
 
 
 --
--- Name: tendereradditionalidentifiers_tenderer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendereradditionalidentifiers tendereradditionalidentifiers_tenderer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendereradditionalidentifiers
@@ -8389,7 +8390,7 @@ ALTER TABLE ONLY tendereradditionalidentifiers
 
 
 --
--- Name: tenderitem_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitem tenderitem_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitem
@@ -8397,7 +8398,7 @@ ALTER TABLE ONLY tenderitem
 
 
 --
--- Name: tenderitem_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitem tenderitem_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitem
@@ -8405,7 +8406,7 @@ ALTER TABLE ONLY tenderitem
 
 
 --
--- Name: tenderitemadditionalclassifications_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitemadditionalclassifications tenderitemadditionalclassifications_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitemadditionalclassifications
@@ -8413,7 +8414,7 @@ ALTER TABLE ONLY tenderitemadditionalclassifications
 
 
 --
--- Name: tenderitemadditionalclassifications_tenderitem_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitemadditionalclassifications tenderitemadditionalclassifications_tenderitem_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitemadditionalclassifications
@@ -8421,7 +8422,7 @@ ALTER TABLE ONLY tenderitemadditionalclassifications
 
 
 --
--- Name: tendermilestone_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestone tendermilestone_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestone
@@ -8429,7 +8430,7 @@ ALTER TABLE ONLY tendermilestone
 
 
 --
--- Name: tendermilestone_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestone tendermilestone_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestone
@@ -8437,7 +8438,7 @@ ALTER TABLE ONLY tendermilestone
 
 
 --
--- Name: tendermilestonedocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestonedocuments tendermilestonedocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestonedocuments
@@ -8445,7 +8446,7 @@ ALTER TABLE ONLY tendermilestonedocuments
 
 
 --
--- Name: tendermilestonedocuments_milestone_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestonedocuments tendermilestonedocuments_milestone_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestonedocuments
@@ -8453,7 +8454,7 @@ ALTER TABLE ONLY tendermilestonedocuments
 
 
 --
--- Name: tendermilestonedocuments_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestonedocuments tendermilestonedocuments_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestonedocuments
