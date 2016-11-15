@@ -3282,9 +3282,9 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 232	232	AA-009KDH-E120-2016	AD-AS-DCAGI-SC-051-16	Servicio de estacionamiento vehicular para Grupo Aeroportuario de la Ciudad de México,S.A. de C.V	Contrato plurianual abierto en la prestación del "Servicio de estacionamiento vehicular para GRUPO AEROPORTUARIO DE LA CIUDAD DE MÉXICO S.A DE C.V.	active	2016-07-01 02:00:00	2017-09-30 00:00:00	1563000.00	MXN	2016-07-06 00:00:00	\N	
 246	246	LA-009KDH999-104-2016	LPN-AS-DCAGI-SC-067-16	SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET).		none	\N	\N	0	MXN	\N	\N	
 231	231	AA-009KDH999-E111-2016	AD-AS-DCAGI-SC-045-2016	SERVICIO DE TALLER DE PREPARACIÓN A LOS FUNCIONARIOS DE GACM PARA MANEJO DE INFORMACIÓN	SERVICIO DE TALLER DE PREPARACIÓN A LOS FUNCIONARIOS DE GACM PARA MANEJO DE INFORMACIÓN	terminated	2016-07-07 00:00:00	2016-08-05 00:00:00	150000.00	MXN	2016-07-07 00:00:00	\N	
-233	233	Oficio de Adjudicación No. DCAGI/SC/GC/0151/2016 de fecha 2016-09-09	AD-AS-DCAGI-SC-063-16	Asesoría Técnica y capacitación a trabajadores del Programa de Empleo Temporal de mano de obra campesina o urbana marginada para los 7 ejidos colindantes al predio del NAICM  (Mínimo 960, máximo 2400 trabajadores) Segunda Fase.		active	\N	\N	41296304.14	MXN	\N	\N	
 228	228	AA-009KDH999-E86-2016	AD-AS-DCAGI-SC-032/16	Servicio de asesoría especializada en materia de gestión social, segunda etapa	Servicios de asesoría especializada en materia de gestión social, segunda etapa	none	2016-04-22 00:00:00	2017-12-31 00:00:00	4026000.00	MXN	2016-05-06 00:00:00	\N	
 234	234	SA-009KDH999-N6-2015	AD-S-DCAGI-SC-011/2014	Servicios para llevar a cabo la asesoría técnica y capacitación para el programa de mano de obra campesina o urbana marginada en el predio del Nuevo Aeropuerto Internacional de la Ciudad de México	Servicios para llevar a cabo la asesoría técnica y capacitación para el programa de mano de obra campesina o urbana marginada en el predio del Nuevo Aeropuerto Internacional de la Ciudad de México	terminated	2014-12-05 00:00:00	2015-02-02 00:00:00	1743240.52	MXN	2014-12-05 00:00:00	\N	
+233	233	AD-AS-DCAGI-SC-063-16	DCAGI/SC/GC/0151/2016	Asesoría Técnica y capacitación a trabajadores del Programa de Empleo Temporal de mano de obra campesina o urbana marginada para los 7 ejidos colindantes al predio del NAICM  (Mínimo 960, máximo 2400 trabajadores) Segunda Fase.		active	\N	\N	41296304.14	MXN	\N	\N	
 242	242	IO-009KDH999-E76-2016	ITP-SRO-DCAGI-SC-049-16	Nivelación diferencial de presición para la determinación de hundimientos de los bancos de nivel instrumentados dentro del polígono del NAICM	Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional	active	2016-06-26 00:00:00	2016-12-31 00:00:00	8440929.63	MXN	2016-06-20 00:00:00	\N	
 243	243	IO-009KDH999-E82-2016	ITP-SRO-DCAGI-SC-059-16	Supervisión técnica, administrativa y de control de calidad de la fabricación, acarreo e hincado de pilotes en la torre de control de Nuevo Aeropuerto Internacional de la Ciudad de México 	Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional	active	2016-07-25 00:00:00	2017-03-11 00:00:00	4274301.61	MXN	2016-07-25 00:00:00	\N	
 244	244	IO-009KDH999-E83-2016	ITP-SRO-DCAGI-SC-062-16	Trabajos para mantener actualizados los permisos en materia de impacto ambiental por los ajustes y adecuaciones del proyecto Nuevo Aeropuerto Internacional de la Ciudad de México	Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional	active	2016-07-20 00:00:00	2016-12-31 00:00:00	7109736.03	MXN	2016-07-20 00:00:00	\N	
@@ -3675,9 +3675,6 @@ COPY contractingprocess (id, ocid, fecha_creacion, hora_creacion, stage, uri, li
 37	CTO.FIDEICOMISO-01-14	2016-07-15	12:46:17.54207	3	\N	\N	\N	\N
 95	ITP-SRO-DCAGI-SC-63/15	2016-07-15	15:57:45.643211	3	\N	\N	\N	\N
 155	AD-CONV-DCAGI-SC-001/16	2016-07-15	19:42:07.911436	3	\N	\N	\N	\N
-232	NUEVA_CONTRATACION_2016-11-01_19:22:39.173579+00	2016-11-01	19:22:39.173579	0	\N	\N	\N	\N
-233	NUEVA_CONTRATACION_2016-11-01_19:22:43.830058+00	2016-11-01	19:22:43.830058	0	\N	\N	\N	\N
-234	NUEVA_CONTRATACION_2016-11-01_19:22:48.33044+00	2016-11-01	19:22:48.33044	0	\N	\N	\N	\N
 227	AD-AS-DCAGI-SC-020-2015	2016-11-01	19:20:36.720457	0	\N	\N	\N	\N
 240	ITP-SRO-DCAGI-SC-046-16	2016-11-01	19:23:15.899553	0	\N	\N	\N	\N
 228	AD-AS-DCAGI-SC-032-2016	2016-11-01	19:22:13.06161	0	\N	\N	\N	\N
@@ -3701,6 +3698,9 @@ COPY contractingprocess (id, ocid, fecha_creacion, hora_creacion, stage, uri, li
 239	IO-009KDH999-E72-2016	2016-11-01	19:23:11.677965	0	\N	\N	\N	\N
 251	LPI-OP-DCAGI-SC-073/16	2016-11-01	19:24:04.493751	0	\N	\N	\N	\N
 252	LPN-AS-DCAGI-SC-049-16	2016-11-01	19:24:08.204883	0	\N	\N	\N	\N
+232	AD-AS-DCAGI-SC-051-16	2016-11-01	19:22:39.173579	0	\N	\N	\N	\N
+233	AD-AS-DCAGI-SC-063-16	2016-11-01	19:22:43.830058	0	\N	\N	\N	\N
+234	AD-S-DCAGI-SC-011/2014	2016-11-01	19:22:48.33044	0	\N	\N	\N	\N
 \.
 
 
