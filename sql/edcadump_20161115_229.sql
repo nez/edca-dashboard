@@ -3691,16 +3691,16 @@ COPY contractingprocess (id, ocid, fecha_creacion, hora_creacion, stage, uri, li
 230	AD-AS-DCAGI-SC-044-16	2016-11-01	19:22:23.236035	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
 244	ITP-SRO-DCAGI-SC-062-16	2016-11-01	19:23:32.444778	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
 231	AD-AS-DCAGI-SC-045-2016	2016-11-01	19:22:33.935231	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
-235	AD-009KDH999-E115-2016	2016-11-01	19:22:52.850989	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
-236	IA-009KDH999-E77-2016	2016-11-01	19:22:57.723948	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
-237	IO-009KDH999-E82-2016	2016-11-01	19:23:02.139057	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
-238	009-KDH999-E71-2016	2016-11-01	19:23:07.268828	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
-239	IO-009KDH999-E72-2016	2016-11-01	19:23:11.677965	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
 251	LPI-OP-DCAGI-SC-073/16	2016-11-01	19:24:04.493751	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
 252	LPN-AS-DCAGI-SC-049-16	2016-11-01	19:24:08.204883	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
 232	AD-AS-DCAGI-SC-051-16	2016-11-01	19:22:39.173579	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
 233	AD-AS-DCAGI-SC-063-16	2016-11-01	19:22:43.830058	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
 234	AD-S-DCAGI-SC-011/2014	2016-11-01	19:22:48.33044	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+239	ITP-SRO-DCAGI-SC-043-16	2016-11-01	19:23:11.677965	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+238	ITP-SRO-DCAGI-SC-038-16	2016-11-01	19:23:07.268828	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+235	AD-SRO-DCAGI-SC-058-16	2016-11-01	19:22:52.850989	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+236	ITP-AS-DCAGI-SC-036-16	2016-11-01	19:22:57.723948	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+237	ITP-SRO-DCAGI-SC-059-16	2016-11-01	19:23:02.139057	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
 \.
 
 
