@@ -171,9 +171,10 @@ BubbleChart = (function() {
     BubbleChart.prototype.get_color_map_lookup_set = function(allValuesArray) {
         var baseArray, color_map, index, value, _i, _len;
         baseArray = [
-            '#00cc99',
-            '#ff6666',
-            '#663399',
+            'gray', //adhesión
+            '#00cc99', //adjudicación directa
+            '#663399', // Convenio de colaboración
+            '#ff6666', // Contrato de fideicomiso
             '#ffcc00',
             '#ff6600',
             "#0000D9",
