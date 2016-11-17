@@ -2,12 +2,11 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.6.1
--- Dumped by pg_dump version 9.6.1
+-- Dumped from database version 9.5.4
+-- Dumped by pg_dump version 9.5.4
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
@@ -1644,273 +1643,273 @@ ALTER SEQUENCE tendermilestonedocuments_id_seq OWNED BY tendermilestonedocuments
 
 
 --
--- Name: award id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY award ALTER COLUMN id SET DEFAULT nextval('award_id_seq'::regclass);
 
 
 --
--- Name: awardamendmentchanges id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awardamendmentchanges ALTER COLUMN id SET DEFAULT nextval('awardamendmentchanges_id_seq'::regclass);
 
 
 --
--- Name: awarddocuments id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarddocuments ALTER COLUMN id SET DEFAULT nextval('awarddocuments_id_seq'::regclass);
 
 
 --
--- Name: awarditem id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditem ALTER COLUMN id SET DEFAULT nextval('awarditem_id_seq'::regclass);
 
 
 --
--- Name: awarditemadditionalclassifications id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditemadditionalclassifications ALTER COLUMN id SET DEFAULT nextval('awarditemadditionalclassifications_id_seq'::regclass);
 
 
 --
--- Name: budget id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY budget ALTER COLUMN id SET DEFAULT nextval('budget_id_seq'::regclass);
 
 
 --
--- Name: buyer id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyer ALTER COLUMN id SET DEFAULT nextval('buyer_id_seq'::regclass);
 
 
 --
--- Name: buyeradditionalidentifiers id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyeradditionalidentifiers ALTER COLUMN id SET DEFAULT nextval('buyeradditionalidentifiers_id_seq'::regclass);
 
 
 --
--- Name: contract id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contract ALTER COLUMN id SET DEFAULT nextval('contract_id_seq'::regclass);
 
 
 --
--- Name: contractamendmentchanges id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractamendmentchanges ALTER COLUMN id SET DEFAULT nextval('contractamendmentchanges_id_seq'::regclass);
 
 
 --
--- Name: contractdocuments id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractdocuments ALTER COLUMN id SET DEFAULT nextval('contractdocuments_id_seq'::regclass);
 
 
 --
--- Name: contractingprocess id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractingprocess ALTER COLUMN id SET DEFAULT nextval('contractingprocess_id_seq'::regclass);
 
 
 --
--- Name: contractitem id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitem ALTER COLUMN id SET DEFAULT nextval('contractitem_id_seq'::regclass);
 
 
 --
--- Name: contractitemadditionalclasifications id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitemadditionalclasifications ALTER COLUMN id SET DEFAULT nextval('contractitemadditionalclasifications_id_seq'::regclass);
 
 
 --
--- Name: currency id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY currency ALTER COLUMN id SET DEFAULT nextval('currency_id_seq'::regclass);
 
 
 --
--- Name: documentformat id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY documentformat ALTER COLUMN id SET DEFAULT nextval('documentformat_id_seq'::regclass);
 
 
 --
--- Name: documenttype id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY documenttype ALTER COLUMN id SET DEFAULT nextval('documenttype_id_seq'::regclass);
 
 
 --
--- Name: implementation id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementation ALTER COLUMN id SET DEFAULT nextval('implementation_id_seq'::regclass);
 
 
 --
--- Name: implementationdocuments id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationdocuments ALTER COLUMN id SET DEFAULT nextval('implementationdocuments_id_seq'::regclass);
 
 
 --
--- Name: implementationmilestone id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestone ALTER COLUMN id SET DEFAULT nextval('implementationmilestone_id_seq'::regclass);
 
 
 --
--- Name: implementationmilestonedocuments id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestonedocuments ALTER COLUMN id SET DEFAULT nextval('implementationmilestonedocuments_id_seq'::regclass);
 
 
 --
--- Name: implementationtransactions id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationtransactions ALTER COLUMN id SET DEFAULT nextval('implementationtransactions_id_seq'::regclass);
 
 
 --
--- Name: language id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY language ALTER COLUMN id SET DEFAULT nextval('language_id_seq'::regclass);
 
 
 --
--- Name: planning id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planning ALTER COLUMN id SET DEFAULT nextval('planning_id_seq'::regclass);
 
 
 --
--- Name: planningdocuments id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planningdocuments ALTER COLUMN id SET DEFAULT nextval('planningdocuments_id_seq'::regclass);
 
 
 --
--- Name: procuringentity id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentity ALTER COLUMN id SET DEFAULT nextval('procuringentity_id_seq'::regclass);
 
 
 --
--- Name: procuringentityadditionalidentifiers id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentityadditionalidentifiers ALTER COLUMN id SET DEFAULT nextval('procuringentityadditionalidentifiers_id_seq'::regclass);
 
 
 --
--- Name: publisher id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY publisher ALTER COLUMN id SET DEFAULT nextval('publisher_id_seq'::regclass);
 
 
 --
--- Name: supplier id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplier ALTER COLUMN id SET DEFAULT nextval('supplier_id_seq'::regclass);
 
 
 --
--- Name: supplieradditionalidentifiers id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplieradditionalidentifiers ALTER COLUMN id SET DEFAULT nextval('supplieradditionalidentifiers_id_seq'::regclass);
 
 
 --
--- Name: tender id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tender ALTER COLUMN id SET DEFAULT nextval('tender_id_seq'::regclass);
 
 
 --
--- Name: tenderamendmentchanges id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderamendmentchanges ALTER COLUMN id SET DEFAULT nextval('tenderamendmentchanges_id_seq'::regclass);
 
 
 --
--- Name: tenderdocuments id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderdocuments ALTER COLUMN id SET DEFAULT nextval('tenderdocuments_id_seq'::regclass);
 
 
 --
--- Name: tenderer id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderer ALTER COLUMN id SET DEFAULT nextval('tenderer_id_seq'::regclass);
 
 
 --
--- Name: tendereradditionalidentifiers id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendereradditionalidentifiers ALTER COLUMN id SET DEFAULT nextval('tendereradditionalidentifiers_id_seq'::regclass);
 
 
 --
--- Name: tenderitem id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitem ALTER COLUMN id SET DEFAULT nextval('tenderitem_id_seq'::regclass);
 
 
 --
--- Name: tenderitemadditionalclassifications id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitemadditionalclassifications ALTER COLUMN id SET DEFAULT nextval('tenderitemadditionalclassifications_id_seq'::regclass);
 
 
 --
--- Name: tendermilestone id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestone ALTER COLUMN id SET DEFAULT nextval('tendermilestone_id_seq'::regclass);
 
 
 --
--- Name: tendermilestonedocuments id; Type: DEFAULT; Schema: public; Owner: tester
+-- Name: id; Type: DEFAULT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestonedocuments ALTER COLUMN id SET DEFAULT nextval('tendermilestonedocuments_id_seq'::regclass);
@@ -2150,6 +2149,7 @@ COPY award (id, contractingprocess_id, awardid, title, description, status, awar
 249	249	LO-009KDH999-E48-2016	Acta de emisión de fallo	Con fundamento en lo dispuesto en el artículo 39 fracción III de la LOPSRM,se adjudicó el contrato a la empresa COCONAL, S.A.P.I. DE C.V.y  CONSTRUCTORA Y PAVIMENTADORA VISE, S.A. DE C.V. por un importe de $7´926,299,964.99 monto sin considerar el IVA, por resultar se la propuesta que al ser evaluada técnica y ecómicamente, obtuvo el puntaje más alto acorde al mecanismo de evaluación previsto en la convocatoria. 	active	2016-09-02 00:00:00	7926299964.99	MXN	\N	\N	\N	
 235	235	AD-009KDH999-E115-2016			active	\N	606172.44	MXN	\N	\N	\N	
 239	239	IO-009KDH999-E72-2016	Acta de emisión de fallo	Con fundamento en lo dispuesto en el artículo 39, fracción III de la LOPSRM,se adjudicó el contrato a la empresa TGC GEOTECNIA, S.A. DE C.V. por un importe de $3´599,010.20 (tres millones quinientos noventa y nueve mil diez pesos 20/100 M.N) monto sin considerar el IVA, por resultar se la propuesta que al ser evaluada técnica y ecómicamente, obtuvo el puntaje más alto acorde al mecanismo de evaluación previsto en la convocatoria. 	active	2016-06-07 00:00:00	3599010.17	MXN	\N	\N	\N	
+254	254	LO-009KDH999-E87-2016	Acta de emisión de fallo 	Con fundamento en lo dispuesto en el artículo 39 fracción III, de la LOPSRM, se adjudicó el contrato al consorcio ICA CONSTRUCTORA DE INFRAESTRUCTURA, S.A. DE C.V., IMPULSORA DE DESARROLLO INTEGRAL, S.A. DE C.V.,CONSTRUCCIONES Y TRITURACIÓN, S.A. DE C.V., CONTROLADORA DE OPERACIONES DE INFRAESTRUCTURA, S.A. DE C.V. y CONSTRUCTORA EL CAJON, S.A. DE C.V. por un importe de $7´555,647,477.04 monto sin considerar el IVA, por resultar se la propuesta que al ser evaluada técnica y económicamente, obtuvo el puntaje más alto acorde al mecanismo de evaluación previsto en la convocatoria. 	active	2016-10-21 00:00:00	7555647477.04	MXN	\N	\N	\N	
 \.
 
 
@@ -2157,7 +2157,7 @@ COPY award (id, contractingprocess_id, awardid, title, description, status, awar
 -- Name: award_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tester
 --
 
-SELECT pg_catalog.setval('award_id_seq', 253, true);
+SELECT pg_catalog.setval('award_id_seq', 254, true);
 
 
 --
@@ -2801,6 +2801,7 @@ COPY budget (id, contractingprocess_id, planning_id, budget_source, budget_budge
 247	247	247	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf		Presupuesto de egresos de la federación	928000000.00	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 249	249	249	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf		Presupuesto de egresos de la federación	0	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
 235	235	235	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf	6220		606172.45	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2015/docs/09/r09_kdh_pie.pdf
+254	254	254		46101	Términos de referencia para la contratación de los servicios de supervisión técnica y administrativa de construcción para el paquete Terminal del NAICM.	0	MXN	Nuevo Aeropuerto Internacional de la Ciudad de México	1409JZL0005	http://www.apartados.hacienda.gob.mx/presupuesto/temas/pef/2016/docs/09/r09_kdh_pie.pdf
 \.
 
 
@@ -2808,7 +2809,7 @@ COPY budget (id, contractingprocess_id, planning_id, budget_source, budget_budge
 -- Name: budget_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tester
 --
 
-SELECT pg_catalog.setval('budget_id_seq', 253, true);
+SELECT pg_catalog.setval('budget_id_seq', 254, true);
 
 
 --
@@ -3045,6 +3046,7 @@ COPY buyer (id, contractingprocess_id, name, identifier_scheme, identifier_id, i
 250	250	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	\N	GACM	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	http://www.aeropuerto.gob.mx/	Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel	Alvaro Obregón	Ciudad de México	01090	México	\N	\N	\N	\N	\N
 251	251	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	\N	GACM	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	http://www.aeropuerto.gob.mx/	Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel	Alvaro Obregón	Ciudad de México	01090	México	\N	\N	\N	\N	\N
 252	252	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	\N	GACM	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	http://www.aeropuerto.gob.mx/	Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel	Alvaro Obregón	Ciudad de México	01090	México	\N	\N	\N	\N	\N
+254	254	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.		GACM	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	http://www.aeropuerto.gob.mx/	Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel	Alvaro Obregón	Ciudad de México	01090	México					
 \.
 
 
@@ -3052,7 +3054,7 @@ COPY buyer (id, contractingprocess_id, name, identifier_scheme, identifier_id, i
 -- Name: buyer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tester
 --
 
-SELECT pg_catalog.setval('buyer_id_seq', 253, true);
+SELECT pg_catalog.setval('buyer_id_seq', 254, true);
 
 
 --
@@ -3304,6 +3306,7 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 237	237	IA-009KDH999-N55-2015	ITP-AS-DCAGI-SC-059-15	Servicio de asesoría técnica y capacitación de núcleos agrarios (comisariado ejidales) para los 7 ejidos colindantes al predio del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).	Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional	terminated	2015-08-19 00:00:00	2015-12-31 00:00:00	5215043.09	MXN	2015-08-19 00:00:00	\N	
 235	235	AD-009KDH999-E115-2016	AD-SRO-DCAGI-SC-058-16	Ejecución de levantamientos topograficos para los trazos de los ejes principales y levantamientos de la topografia de detalle para diseño de camino y barda perimetral en el lindero norte oriente y liga al sistema de cordenadas vigentes de la adecuación del proyecto de carriles de aceleración y desaceleración para los accesos al polígono del (NAICM). 	Ejecución de levanyamientos topograficos para los trazos de los ejes principales y levantamientosde la topografia de detalle para diseño de camino y barda perimetral en el lindero norte oriente y liga al sistema de cordenadas vigentes de la adecuación del proyecto de carriles de aceleración y desaceleración para los accesos al polígono del (NAICM). 	terminated	2016-07-01 00:00:00	2016-07-30 00:00:00	606172.44	MXN	2016-07-01 00:00:00	\N	
 239	239	IO-009KDH999-E72-2016	ITP-SRO-DCAGI-SC-043-16	Supervisión de las obras de excavación de prueba, losa experimental y prueba de pilotes para el edificio terminal y torre de control del Nuevo Aeropuerto Internacional de la Ciudad de México 	Supervisión de las obras de excavación de prueba, losa experimental y prueba de pilotes para el edificio terminal y torre de control del Nuevo Aeropuerto Internacional de la Ciudad de México 	active	2016-06-17 00:00:00	2016-11-28 00:00:00	3599010.20	MXN	2016-06-17 00:00:00	\N	
+254	254	LO-009KDH999-E87-2016	LPI-OP-DCAGI-SC-080/16	Construcción de la losa de cimentación del edificio terminal del NAICM	Construcción de la losa de cimentación del edificio terminal del NAICM	\N	\N	\N	7555647477.04	MXN	\N	\N	
 \.
 
 
@@ -3311,7 +3314,7 @@ COPY contract (id, contractingprocess_id, awardid, contractid, title, descriptio
 -- Name: contract_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tester
 --
 
-SELECT pg_catalog.setval('contract_id_seq', 253, true);
+SELECT pg_catalog.setval('contract_id_seq', 254, true);
 
 
 --
@@ -3710,6 +3713,7 @@ COPY contractingprocess (id, ocid, fecha_creacion, hora_creacion, stage, uri, li
 235	AD-SRO-DCAGI-SC-058-16	2016-11-01	19:22:52.850989	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
 236	ITP-AS-DCAGI-SC-036-16	2016-11-01	19:22:57.723948	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
 237	ITP-AS-DCAGI-SC-059-15	2016-11-01	19:23:02.139057	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
+254	LPI-OP-DCAGI-SC-080/16	2016-11-16	20:53:15.256659	0	http://datos.gob.mx/busca/organization/gacm	http://datos.gob.mx/libreusomx	http://datos.gob.mx/libreusomx	\N
 \.
 
 
@@ -3717,7 +3721,7 @@ COPY contractingprocess (id, ocid, fecha_creacion, hora_creacion, stage, uri, li
 -- Name: contractingprocess_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tester
 --
 
-SELECT pg_catalog.setval('contractingprocess_id_seq', 253, true);
+SELECT pg_catalog.setval('contractingprocess_id_seq', 254, true);
 
 
 --
@@ -5706,6 +5710,7 @@ COPY implementation (id, contractingprocess_id, contract_id) FROM stdin;
 250	250	250
 251	251	251
 252	252	252
+254	254	254
 \.
 
 
@@ -5713,7 +5718,7 @@ COPY implementation (id, contractingprocess_id, contract_id) FROM stdin;
 -- Name: implementation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tester
 --
 
-SELECT pg_catalog.setval('implementation_id_seq', 253, true);
+SELECT pg_catalog.setval('implementation_id_seq', 254, true);
 
 
 --
@@ -6210,6 +6215,7 @@ COPY planning (id, contractingprocess_id, rationale) FROM stdin;
 249	249	
 237	237	Resulta necesario realizar la adjudicación de los servicios a través del procedimiento de invitación a cuando menos tres personas, en virtud de la necesidad apremiante del Grupo Aeroportuario de la Ciudad de México, S.A. de C.V. (GACM) de contar con estos servicios en un tiempo perentorio, que de adjuntarlos a través de una licitación pública, no sería factible para cumplir en tiempo óptimo.  En ese sentido, el procedimiento de contratación propuesto impactará favorablemente en el programa de empleo temporal,con los objetivos planeados en el plan maestro del NAICM, dado que el programa de empleo temporal esta dirigido a comunidades con población urbana marginada y campesinos, cuyu tratamiento requiere de sensibilidad humanitaria, social y política.
 236	236	La Subdirección jurídica no cuenta con el personal suficiente para desarrollar la totalidad de sus atribuciones, ni los requerimientos que las áreas técnicas y administrativas le realizan y que son inherentes al objeto de la contratación que se propone
+254	254	
 \.
 
 
@@ -6217,7 +6223,7 @@ COPY planning (id, contractingprocess_id, rationale) FROM stdin;
 -- Name: planning_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tester
 --
 
-SELECT pg_catalog.setval('planning_id_seq', 253, true);
+SELECT pg_catalog.setval('planning_id_seq', 254, true);
 
 
 --
@@ -6490,6 +6496,7 @@ COPY procuringentity (id, contractingprocess_id, tender_id, identifier_scheme, i
 250	250	250	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 251	251	251	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 252	252	252	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+254	254	254	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
@@ -6497,7 +6504,7 @@ COPY procuringentity (id, contractingprocess_id, tender_id, identifier_scheme, i
 -- Name: procuringentity_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tester
 --
 
-SELECT pg_catalog.setval('procuringentity_id_seq', 253, true);
+SELECT pg_catalog.setval('procuringentity_id_seq', 254, true);
 
 
 --
@@ -6749,6 +6756,7 @@ COPY publisher (id, contractingprocess_id, name, scheme, uid, uri) FROM stdin;
 250	250	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	APF	GACM	http://www.aeropuerto.gob.mx/
 251	251	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	APF	GACM	http://www.aeropuerto.gob.mx/
 252	252	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	APF	GACM	http://www.aeropuerto.gob.mx/
+254	254	Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	APF	GACM	http://www.aeropuerto.gob.mx/
 \.
 
 
@@ -6756,7 +6764,7 @@ COPY publisher (id, contractingprocess_id, name, scheme, uid, uri) FROM stdin;
 -- Name: publisher_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tester
 --
 
-SELECT pg_catalog.setval('publisher_id_seq', 253, true);
+SELECT pg_catalog.setval('publisher_id_seq', 254, true);
 
 
 --
@@ -7007,6 +7015,7 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 139	139	799531	Servicios profesionales de consultoría, legales y/o normativos y acompañamiento en los procedimientos de contratación pública y elaboración del expediente concentrador integral del (NAICM)	Servicios profesionales de consultoría, legales y/o normativos y acompañamiento en los procedimientos de contratación pública y elaboración de la memoria documental integral del desarrollo del  Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	20360000.00	MXN	Invitación a cuando menos tres personas	Artículo 41, fracción X de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público.					\N	\N	\N	\N	0		\N	\N	3	\N	
 15	15	1037341	Servicio de asistencia técnica especializada en materia de hidráulica aplicada a la infraestructura aeroportuaria.	Servicio de asistencia técnica especializada en materia de hidráulica aplicada a la infraestructura aeroportuaria.	active	0		15650000.00	MXN	Adjudicación directa	Artículo 42 Fracción X de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 	Artículo 42 Fracción X de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 39	39	-			complete	0	MXN	0	MXN	Convenio de colaboración	Artículo 1 de la LOPSRM					\N	\N	\N	\N	0		\N	\N	1	\N	
+3	3	1	Testigo Social para que atestigue las etapas del Procedimiento de Licitación Publica Nacional para el Proyecto denominado "Excavación de Prueba, Losa Experimental y Prueba de Pilotes para el Edificio Terminal y Torre de Control	Testigo Social para que atestigue las etapas del Procedimiento de Licitación Publica Nacional para el Proyecto denominado "Excavación de Prueba, Losa Experimental y Prueba de Pilotes para el Edificio Terminal y Torre de Control	active	0		0	MXN	Adjudicación directa	Artículo 42, párrafo segundo y tercero de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.	Artículo 42, párrafo segundo y tercero de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 90	90	790388	Construcción de accesos y plataformas para exploración geotécnica para la pista número 2 del Nuevo Aeropuerto Internacional de la Ciudad de México.	Construcción de accesos y plataformas para exploración geotécnica para la pista número 2 del Nuevo Aeropuerto Internacional de la Ciudad de México.	active	0		10400000	MXN	Licitación pública	Artículos 27, fracción I, 30 fracción I, 38 y 45 fracción I de la LOPSRM y 63 fracción I del RLOPSRM.	Mecanismo binario	Capítulos 2.13 y 2.14 de la Convocatoria para la Licitación Pública Nacional Presencial No. No.  LO-009KDH999-N20-2015, aplicando el mecanismo binario para la Construcción de accesos y plataformas para exploración geotécnica para la pista No. 2 del Nuevo Aeropuerto Internacional de la Ciudad de México	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 18:00 horas del 20 de abril de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Subdirector de Contrataciones de GACM. 	2015-04-20 00:00:00	\N	2015-04-08 00:00:00	2015-04-10 00:00:00	1	Capítulos 2.10 y 2.11 de la Convocatoria para la Licitación Pública Nacional Presencial No. No.  LO-009KDH999-N20-2015, aplicando el mecanismo binario para la Construcción de accesos y plataformas para exploración geotécnica para la pista No. 2 del Nuevo Aeropuerto Internacional de la Ciudad de México	2015-04-23 00:00:00	\N	12	\N	
 91	91	1029560	Servicio de Transporte de personas en autobuses y de traslado de maquinaria y equipo en camionetas de redilas para el programa de empleo temporal.	Servicio de Transporte de personas en autobuses y de traslado de maquinaria y equipo en camionetas de redilas para el programa de empleo temporal.	active	0		12500000	MXN	Licitación pública	Articulos 25, 26, fracciión I, 26 Bis, fraección I, 28, fracción I,29, 36, 36 bis, 37, 46 y 47 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público, y 35 y 39 de su Reglamento.	Mecanismo binario	Capitulo 9.- De la Licitación Pública Nacional No. LA-009KDH999-E29-2016, 	Presencial	El día 22 de abril de 2016 y de conformidad con el numeral 1.4.3.1 del Manual de Organización de la empresa de participación estatal mayoritaria,, yel numeral 5.1 de sus Pobalines, el Gerente de Concursos de GACM, presidió el acto de presentación y apertura de proposiciones, de las cuales, sólo 1 es consorcio.	2016-04-22 00:00:00	\N	2016-04-15 00:00:00	2016-04-15 00:00:00	1	Capitulo 4.-De la Licitación Pública Nacional No. LA-009KDH999-E29-2016,  	2016-04-25 00:00:00	\N	3	\N	
 93	93	842194	Diseñar e instrumentar el modelo virtual de información para la construcción (BIM) del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	Diseñar e instrumentar el modelo virtual de información para la construcción (BIM) del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM)	active	0		121700000	MXN	Licitación pública	Articulos 27 fracción I, 30 fracción II y 45 fracción I de la LOPSRM.	Ponderación de puntos (Puntos y porcentajes)	Capítulo 2.9 y 2.10 de la Convocatoria a la Licitación Pública Internacional, Bajo los tratados de Libre Comercio, Presencial, N° IO-009KDH999-T52-2015, para: Diseñar e Instrumentar el modelo virtual de Información para la Construcción (BIM) del Nuevo Aeropuerto Internacional, con fecha de 28 de mayo de 2015. Publicada en compraNet el 29 de junio de 2016.	Presencial	El acta de presentación y apertura de las propuestas se llevó a cabo el 14 de agosto de 2015 a las 12:00, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Subdirector de Contrataciones de GACM. 	2016-07-17 00:00:00	2015-08-14 00:00:00	2015-07-23 00:00:00	2015-07-28 00:00:00	1	Capítulo 2.12 y 2.13 de la Convocatoria a la Licitación Pública Internacional, Bajo los tratados de Libre Comercio, Presencial, N° IO-009KDH999-T52-2015, para: Diseñar e Instrumentar el modelo virtual de Información para la Construcción (BIM) del Nuevo Aeropuerto Internacional, con fecha de 28 de mayo de 2015. Publicada en compraNet el 29 de junio de 2016.	2015-07-01 00:00:00	\N	5	\N	
@@ -7022,12 +7031,14 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 128	128	1008580	Supervisión de la Construcción del Drenaje Pluvial Temporal del Nuevo Aeropuerto Internacional de la Ciudad de México	Supervisión de la Construcción del Drenaje Pluvial Temporal del Nuevo Aeropuerto Internacional de la Ciudad de México	active	0		9300000.00	MXN	Invitación a cuando menos tres personas	Articulos 27, fracción II, 30, fracción I, 36, 37, 38, 39 y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.  	Articulos 27, fracción II, 30, fracción I, 36, 37, 38, 39 y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.  		Nacional		\N	\N	2015-09-29 00:00:00	2015-09-29 00:00:00	0		\N	\N	2	\N	
 47	47	-	-	-	complete	0		0		Adjudicación directa						\N	\N	\N	\N	0		\N	\N	1	\N	
 23	23	-			complete	0	MXN	0	MXN	Convenio de colaboración	Artículo 1 de la LOPSRM			Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
+28	28	1008580	Plan de Maestro  para  el  Proyecto	Plan de Maestro  para  el  Proyecto	complete	0	USD	1495000.00	USD	Adjudicación directa	Artículo 41, 42, FRACCIÓN III Y IV de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.					\N	\N	\N	\N	0		\N	\N	1	\N	
 60	60	867412	el  Plan de Integración Ejidal para el Nuevo Aeropuerto Internacional de la Ciudad de México 	el  Plan de Integración Ejidal para el Nuevo Aeropuerto Internacional de la Ciudad de México 	complete	0		15200000	MXN	Invitación a cuando menos tres personas		Binario		Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 14:00 horas del 06 de agosto de 2015, en la sala de juntas de la Subdirección de Contrataciones  ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Gerente de concursos de la Subdirección de Contrataciones de GACM	\N	\N	2015-08-06 00:00:00	2015-08-06 00:00:00	1	4  de la Convocatoria N° IA-009KDH999-N57-2015 el  Plan de Integración Ejidal para el Nuevo Aeropuerto Internacional de la Ciudad de México 	\N	\N	2	\N	
 65	65	970678	Estudio de Ingeniería Geomática para el Proyecto Pistas, Plataformas, Calles de Rodaje y Edificios del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM), para Generar un modelo Digital de Terreno (MDT) a Través de la Tecnología HIGH Definition Surveying (HDS), Empleando Equipos GNSS, Escáner Láser y Ecosonda 	Estudio de Ingeniería Geomática para el Proyecto Pistas, Plataformas, Calles de Rodaje y Edificios del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM), para Generar un modelo Digital de Terreno (MDT) a Través de la Tecnología HIGH Definition Surveying (HDS), Empleando Equipos GNSS, Escáner Láser y Ecosonda 	complete	0		50000000	MXN	Licitación pública	Artículos 27, fracción I, 30 fracción I, y 45 fracción I de la LOPSRM	Ponderación de puntos (Puntos y porcentajes)	Capítulo 2.13 y 2.14 de la convocatoria para la Licitación Pública Nacional Presencial No. LO-009KDH999-E94-2015, para los trabajos relativos al Estudio de Ingeniería Geomática para el Proyecto Pistas, Plataformas, Calles de Rodaje y Edificios del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM), para Generar un modelo Digital de Terreno (MDT) a Través de la Tecnología HIGH Definition Surveying (HDS), Empleando Equipos GNSS, Escáner Láser y Ecosonda ., publicada en compranet el 17 de Diciembre de 2015.	Presencial	Convocatoria para la Licitación Pública Nacional Presencial No. LO-009KDH999-E94-2015,para los trabajos relativos al Estudio de Ingeniería Geomática para el Proyecto Pistas, Plataformas, Calles de Rodaje y Edificios del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM), para Generar un modelo Digital de Terreno (MDT) a Través de la Tecnología HIGH Definition Surveying (HDS), Empleando Equipos GNSS, Escáner Láser y Ecosonda ., publicada en compranet el 17 de Diciembre de 2015.	\N	\N	2016-01-12 00:00:00	2016-01-22 00:00:00	1		\N	\N	7	\N	
 137	137	IO-009KDH999-N14-2015	Servicio integral de administración de personal y proceso de nomina, mediante un sistema especializado para recursos humanos y de nómina de gobierno	Obtener un Servicio integral de administración de personal y proceso de nomina, mediante un sistema especializado para recursos humanos y de nómina de gobierno	complete	0	MXN	1802640.00	MXN	Invitación a cuando menos tres personas	En cumplimiento a lo dispuesto en por los artículos 126 y 134  de la Constitución Política de los Estados Unidos Mexicanos, asi como por los artículos 25 primer párrafo, 26 fracción II, , 26 bis fracción II, 27, 28 fracción I, 29 y 43 y demas disposiciones aplicables a las que establece la ley (LAASSP), asi como lo establecido en el Reglamento de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público.					\N	\N	\N	\N	0		\N	\N	3	\N	
 97	97	799522	Asesoria Legal en materia de Derecho de la Aviación, Derecho Aeropuertario, Derecho Internacional y Especializado en Asesoría en Negociación con Empresas Nacionales e Internacionales, en general acompañamiento respecto de todo aquel Procedimiento Jurídico de las distintas materias que reconoce nuestro Sistema Jurídico Mexicano.	Asesoria Legal en materia de Derecho de la Aviación, Derecho Aeropuertario, Derecho Internacional y Especializado en Asesoría en Negociación con Empresas Nacionales e Internacionales, en general acompañamiento respecto de todo aquel Procedimiento Jurídico de las distintas materias que reconoce nuestro Sistema Jurídico Mexicano.	active	0		15000000	MXN	Invitación a cuando menos tres personas	Artículo 40, 41, fracción X, 43 y 46, segundo párrafo de la LAASSP. 	Mecaninsmo binario	Apartados 5, 5.1, 5.2, 5.3, 5.3.1 y 5.4 de la Invitación Nacional a cuando Menos Tres Personas Presencial identificado con el número IO-009KDH999-N30-2015 del 10 de abril de 2015, relacionado con el “Servicio de: Asesoria Legal en materia de Derecho de la Aviación, Derecho Aeropuertario, Derecho Internacional y Especializado en Asesoría en Negociación con Empresas Nacionales e Internacionales, en general acompañamiento respecto de todo aquel Procedimiento Jurídico de las distintas materias que reconoce nuestro Sistema Jurídico Mexicano".	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 10:00 horas del 05 de mayo de 2015, en la sala de juntas ubicada en la Subdirección de Contrataciones ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Gerente de Concursos de la Subdirección de Contrataciones de GACM	2016-07-17 00:00:00	\N	\N	\N	1	Apartados 4, 4.1, 6, 6.1 y 6.2 de la Invitación Nacional a cuando Menos Tres Personas Presencial identificado con el número IO-009KDH999-N30-2015 del 10 de abril de 2015, relacionado con el “Servicio de: Asesoria Legal en materia de Derecho de la Aviación, Derecho Aeropuertario, Derecho Internacional y Especializado en Asesoría en Negociación con Empresas Nacionales e Internacionales, en general acompañamiento respecto de todo aquel Procedimiento Jurídico de las distintas materias que reconoce nuestro Sistema Jurídico Mexicano".	\N	\N	3	\N	
 66	66	787229	Estudio de Suministro Electrico para el Nuevo Aeropuerto Internacional de la Ciudad de México	Estudio de Suministro Electrico para el Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0		11000000	MXN	Licitación pública	Articulos 27, fracción II, 30, fracción II, 36, 37, 38, 39, 41, 43, 44  y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.  	Puntos y porcentajes	Capitulo 2 -De la Licitación de la Convocatoria de la Licitación Pública Nacional No. LO-009KDH999-N16-2015.	Presencial	El día 16 de abril del 2015 y de conformidad con los artículos 36 y 37 de la LOPSRM y 59 y 60 del RLOPSRM, el Subdirector de Contrataciones del GACM, preside el acto de presentación y apertura de propuestas económicas, de las cuales, 1 es consorcio. De acuerdo con el artículo 37 de la LOPSRM, se reciben las proposiciones para su evaluación cualitativa y de acuerdo a ello se convoca para el día 24 de abril de 2015, para conocer el fallo correspondiente.	\N	\N	2015-04-08 00:00:00	2015-04-08 00:00:00	1	Capitulo 2 -De la Licitación de la Convocatoria de la Licitación Pública Nacional No. LO-009KDH999-N16-2015, de fecha 24 de marzo de 2015 y que se público en CompraNet el día 26 de marzo del 2015.	\N	\N	2	\N	
 202	202	1033446	Servicios de experto revisor para la asistencia técnica especializada en materia de protección contra incendios, aplicada a la infraestructura aeroportuaria	Servicios de experto revisor para la asistencia técnica especializada en materia de protección contra incendios, aplicada a la infraestructura aeroportuaria	complete	0		26000000.00	MXN	Adjudicación directa	Artículo 42, fracción X de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.	Nacional		transferencia		\N	\N	\N	\N	0		\N	\N	1	\N	
+181	181	1	Adecuación de espacios en el campamento existente en la puerta 8 del polígono del NAICM	Adecuación de espacios en el campamento existente en la puerta 8 del polígono del NAICM	active	0		1420000.00	MXN	Adjudicación directa	Artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 	Artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 100	100	799505	Servicios de Consultoría Técnica Especializada en Revisión e Integración de Términos de Referencia y Especificaciones Técnicas, de Proyectos de Licitación de Obras Públicas	Servicios de Consultoría Técnica Especializada en Revisión e Integración de Términos de Referencia y Especificaciones Técnicas, de Proyectos de Licitación de Obras Públicas	active	0		14655172.41	MXN	Invitación a cuando menos tres personas	Artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 	Mecanismo binario	Apartado 2.13 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-N29-2015 del 20 de abril de 2015 (ver anexo)	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 18:00 horas del 04 de mayo de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Angel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Gerente de concursos de la Subdirección de Contrataciones de GACM	2015-05-04 00:00:00	\N	2015-04-23 00:00:00	2015-04-23 00:00:00	1	Apartado 2.1, 2.2 y 2.10 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-N29-2015 del 20 de abril de 2015 (ver anexo) 	2015-05-12 00:00:00	\N	2	\N	
 53	53	DCAGI/SC/68/2015	Servicios en el seguimiento, representación y defensa en juicio, presentes en materia laboral. 	Servicios en el seguimiento, representación y defensa en juicio, presentes en materia laboral. 	complete	420000	MXN	420000	MXN	Adjudicación directa	Artículo 42 de la LAASSP			Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
 194	194	971462	Servicios de asesoría, relacionados con la implemntación de la estructura de gobierno coporativo para la administración del GACM.	Servicios de asesoría, relacionados con la implemntación de la estructura de gobierno coporativo para la administración del GACM.	complete	0		0		Adjudicación directa	Artículo 42 de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.	Puntos y porcentajes	Numeral 2.13 y 2.14 de la convocatoria para la invitación a cuando menos tres personas.	Presencial	Acta de presentación y apertura de proposiciones del 20 de enero de 2016 realizada en la sala de juntas del GACM en Avenida Insurgentes sur 2453, segundo piso, torre Murano, Colonia Tizapán San Ángel, Del. Álvaro Obregón, México, C.P. 01090	2016-01-22 00:00:00	\N	2016-01-14 00:00:00	2016-01-14 00:00:00	1	Numeral 2.10 y 2.11 de la convocatoria para la invitación a cuando menos tres personas.	\N	\N	3	\N	
@@ -7073,8 +7084,7 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 102	102	761895	Servicios de supervisión para la obra: extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).	Servicios de supervisión para la obra: extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM).	active	0		2680000	MXN	Invitación a cuando menos tres personas	Artículo 27 fracción II y artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas	Mecaninsmo binario	Capítulo 2.13 de la  Invitación Nacional a Cuando Menos Tres Personas No. IO-009KDH99-N10-2015 relativa a la supervisión para la obra: Extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México  (ver anexo)	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 10:00 horas del 04 de marzo de 2015, en la sala de juntas ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Ángel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Subdirector de Contrataciones de GACM.  Se rubricaron los documentos técnicos T.2 y T.3, así como la documentación económica E-10 correspondiente a las 3 proposiciones presentadas.	2015-06-29 00:00:00	\N	2015-02-18 00:00:00	2015-02-25 00:00:00	1	Capítulo 2.10 y 2.11 de la  Invitación Nacional a Cuando Menos Tres Personas No. IO-009KDH99-N10-2015 relativa a la supervisión para la obra: Extracción de ademes y restitución del terreno que ocupan dichos elementos ubicados en la poligonal para el Nuevo Aeropuerto Internacional de la Ciudad de México (ver anexo)	2015-03-04 00:00:00	\N	4	\N	
 108	108	996706	Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno par el Nuevo Aeropuerto Internacional de la Ciudad de México	Construcción de accesos y plataformas para exploración geotécnica, rehabilitación de tramos de prueba y bacheo somero de caminos existentes dentro del terreno par el Nuevo Aeropuerto Internacional de la Ciudad de México	active	0		1276500.00	MXN	Invitación a cuando menos tres personas	Artículo 27 fracción II y artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas	Artículo 27 fracción II y artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas		Nacional		\N	\N	2016-02-16 00:00:00	2016-02-16 00:00:00	0		\N	\N	4	\N	
 219	219	1042465	Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	Trabajos relativos al sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM)	active	0	MXN	300000000.00	MXN	Licitación pública	Articulos 27, fracción I, 30, fracción I, y 45, fracción I, de la Ley de Obras Públicas y Servcios Relacionados con las Mismas.	Apartado 2.10 y 2.11 de la Convocatoria de la Licitación Pública Internanacional bajo la cobertura de tratados  para Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM) públicada en compranet publicadas el 21 de abril de 2016	Anexco 6.3 de la Convocatoria de la Licitación Pública Internanacional bajo la cobertura de tratados  para Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM) públicada en compranet publicadas el 21 de abril de 2016	Presencial		\N	\N	2016-06-15 00:00:00	\N	1	Apartado 2.10 y 2.11 de la Convocatoria de la Licitación Pública Internanacional bajo la cobertura de tratados  para Sistema de Precarga e instrumentación geotécnica, infraestructura, estructura de pavimentos y obra civil de ayudas visuales y para la navegación de la pista 2 y área de túneles del Nuevo Aeropuerto Internacional de la Ciudad de México. (NAICM) públicada en compranet publicadas el 21 de abril de 2016	2016-06-28 00:00:00	\N	1	\N	
-3	3	1	Testigo Social para que atestigue las etapas del Procedimiento de Licitación Publica Nacional para el Proyecto denominado "Excavación de Prueba, Losa Experimental y Prueba de Pilotes para el Edificio Terminal y Torre de Control	Testigo Social para que atestigue las etapas del Procedimiento de Licitación Publica Nacional para el Proyecto denominado "Excavación de Prueba, Losa Experimental y Prueba de Pilotes para el Edificio Terminal y Torre de Control	active	0		0	MXN	Adjudicación directa	Artículo 42, párrafo segundo y tercero de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.	Artículo 42, párrafo segundo y tercero de la Ley  de Adquisiciones, Arrendamientos y Servicios del Sector Público.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
-28	28	1008580	Plan de Maestro  para  el  Proyecto	Plan de Maestro  para  el  Proyecto	complete	0	USD	1495000.00	USD	Adjudicación directa	Artículo 41, 42, FRACCIÓN III Y IV de la Ley  de Obras Públicas y Servicios Relacionados con las Mismas.					\N	\N	\N	\N	0		\N	\N	1	\N	
+124	124	1	Servicio y Proceso de Nómina mediante un Sistema Especializado para Recursos Humanos y Nómina de Gobierno	Implantar un servicio especializado para cumplir con la obligación del pago de nómina dentro de la normatividad de las leyes laborales para lograr la mejora contínua de los procedimientos administrativos.	complete	0		305000.00	MXN	Adjudicación directa				Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 6	6	1036573	Asistencia Técnica Especializada en Materia de Diseño Sísmico Estructural aplicada a la Infraestructura Aeroportuaria	Asistencia Técnica Especializada en Materia de Diseño Sísmico Estructural aplicada a la Infraestructura Aeroportuaria	active	0		26000000	MXN	Adjudicación directa	Artículo 42 Fracción X de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 	Artículo 42 Fracción X de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 106	106	1	Servicios especializados en el suministro de personal tercerizados.	Contratacion de Personal tercerizado	active	0		129391633.00	MXN	Adjudicación directa	Artículos 41 Fracción III, 43 último párrafo y 47 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público	Artículos 41 Fracción III, 43 último párrafo y 47 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 218	218	1110560	Construcción del Edificio Terminal del Nuevo Aeropuerto Internacional de la Ciudad de México	Licitación Pública Internacional que tiene por objeto la adjudicación del contrato para los trabajos relativos a la construcción del Edificio Terminal del Nuevo Aeropuerto Internacional de la Ciudad de México	active	0		11000000000	MXN	Licitación pública	Artículo 27, fracción I y 30 fracción II de la Ley de Obras Públicas y Servicios Relacionados con las Mismas	Puntos y porcentajes	Sección 2.13 de la Convocatoria a la Licitación Pública Internacional Bajo la Cobertura de Tratados Utilizando el Mecanismo de Puntos y Porcentajes para la Evaluación de las Proposiciones LO-009KDH999-E101-2016 para la construcción del edificio terminal del Nuevo Aeropuerto Internacional de la Ciudad de México publicada en CompraNet el 15 de julio de 2016	Presencial		\N	\N	\N	\N	0	Sección 2.10 de la Convocatoria a la Licitación Pública Internacional Bajo la Cobertura de Tratados Utilizando el Mecanismo de Puntos y Porcentajes para la Evaluación de las Proposiciones LO-009KDH999-E101-2016 para la construcción del edificio terminal del Nuevo Aeropuerto Internacional de la Ciudad de México publicada en CompraNet el 15 de julio de 2016	2016-12-15 00:00:00	\N	1	\N	
@@ -7109,7 +7119,6 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 177	177	1	Servicio de Soporte Tecnico y Mantenimiento Para Los Equipos Del Servicio De Red Local, Seguridad de Datos y Telefonia	Cubrir las necesidades primarias de soporte de red y a la telefonia e internet e implementar el servicio en comento, por un periodo de seis meses a partir del 2° de enero y hasta 01 de julio de 2015 a traves de una adjudicacion directa.	active	0		298780.56	MXN	Adjudicación directa	Articulo 26 fraccion III y articulo 42 de la LAASSP.	Articulo 26 fraccion III y articulo 42 de la LAASSP.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 178	178	1	Servicio de renta de Bienes Informáticos 	Uso y goce temporal del equipos de cómuto personal	active	0		600000.00	MXN	Adjudicación directa	Articulo 42 de la LAASSP por un monto que no exede los montos máximos que al efecto se esteblecieron en el PEF.	Articulo 42 de la LAASSP por un monto que no exede los montos máximos que al efecto se esteblecieron en el PEF.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 179	179	1	Servicio de renta de Bienes Informáticos Equipo de impresión y Telecomunicaciones	Uso y goce temporal del equipos de impresión y Telecomunicaciones para las oficinas principales del GACM	active	0		600000.00	MXN	Adjudicación directa	Articulo 42 de la LAASSP por un monto que no exede los montos máximos que al efecto se esteblecieron en el PEF.	Articulo 42 de la LAASSP por un monto que no exede los montos máximos que al efecto se esteblecieron en el PEF.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
-181	181	1	Adecuación de espacios en el campamento existente en la puerta 8 del polígono del NAICM	Adecuación de espacios en el campamento existente en la puerta 8 del polígono del NAICM	active	0		1420000.00	MXN	Adjudicación directa	Artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 	Artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas 		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 117	117	985627	Servicio de Dictámen y Certificado de UVIE	Realizar la verificación de las instalaciones eléctricas de Altavista 	active	0		70000.00	MXN	Adjudicación directa	42 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público, 30 de su Reglamento, 28, 29, 30, 31 y 33 de la Ley Federal de las Entidades Paraestatales	42 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público, 30 de su Reglamento, 28, 29, 30, 31 y 33 de la Ley Federal de las Entidades Paraestatales		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 118	118	1045668	Arrendamiento de Mobiliario consistente en Mesas de Trabajo y Sillas Secretariales	Arrendamiento de Mobiliario consistente en Mesas de Trabajo y Sillas Secretariales	active	0		250000.00	MXN	Adjudicación directa	Artículos 3, fracción I, 26, fracción III, 28, fracción I, 40 último párrafo, 42, 45 y 47 de la LAASSP	Artículos 3, fracción I, 26, fracción III, 28, fracción I, 40 último párrafo, 42, 45 y 47 de la LAASSP		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 122	122	AD-AS-DCAGI-SC-109/15	Prestación de Servicios Profesionales  para fungir como enlace  y vocería en el ámbito  nacional e internacional y con actores claves que aseguren la ejecución del  proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México	Prestación de Servicios Profesionales  para fungir como enlace  y vocería en el ámbito  nacional e internacional y con actores claves que aseguren la ejecución del  proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México	active	0		1752166.08	MXN	Adjudicación directa	Adjudicación directa. Oficio GACM/DCAGI/DCF/0212/2015  de fecha 28 de octubre de 2015 y firmado por el Lic. Ricardo Dueñas Espriu.	"…con fundamento en el artículo 50   de la Ley Federal de Presupuesto y Responsabilidad Hacendaria y 148 de su reglamento, así como del oficio GACM//DG/129/2015 se autoriza celebrar   el contrato plurianual...."		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
@@ -7120,6 +7129,7 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 119	119	AA-009KDH999-E11-2016	Servicios para dar cumplimiento en lo dispuesto a las atribuciones de Grupo Aeroportuario de la Ciudad de México S.A. de C.V., relacionados con participaren el diseño e implementación de la política de información, difusión y comunicación social	Servicios para dar cumplimiento en lo dispuesto a las atribuciones de Grupo Aeroportuario de la Ciudad de México S.A. de C.V., relacionados con participaren el diseño e implementación de la política de información, difusión y comunicación social	active	0		1573425	MXN	Adjudicación directa	Artículo 134 de la Constitución Política de los Estados Únicos Mexicanos, 41 fracción XIV de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público y 28,29,30,31 y 33 de la Ley Federal de Entidades Paraestatales, Numeral 1.4.3.1, del Manual de Organización de la Empresa de Participación Estatal Mayoritaria denominada Grupo Aeroportuario de la Ciudad de México, S.A. de C.V. 	Artículo 134 de la Constitución Política de los Estados Únicos Mexicanos, 41 fracción XIV de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público y 28,29,30,31 y 33 de la Ley Federal de Entidades Paraestatales, Numeral 1.4.3.1, del Manual de Organización de la Empresa de Participación Estatal Mayoritaria denominada Grupo Aeroportuario de la Ciudad de México, S.A. de C.V. 		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 35	35	799042	Elaboración de programa de capacitación en aspectos ambientales y de seguridad para las etapas de preparación del sitio y construcción del Nuevo Aeropuerto Internacional de la Ciudad de México	Elaboración de programa de capacitación en aspectos ambientales y de seguridad para las etapas de preparación del sitio y construcción del Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	602040.00	MXN	Adjudicación directa	Artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas					\N	\N	\N	\N	0		\N	\N	1	\N	
 153	153	1	Contratación del Servicio de Comunicaciones para el Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	Prestación del servicio de comunicaciones para el Grupo Aeroportuario de la Ciudad de México, S.A. de C.V. para los ejercicios fiscales 2015 al 2018, en adelante los servicios serán prestados totalmente a satisfacción de GACM de conformidad con las especificaciones y características establecidas en el anexo técnico y la propuesta técnica y económica.	active	0	MXN	39479421.55	MXN	Adhesión a licitación pública	La celebración del presente contrato la lleva a cabo bajo el procedimiento de adjudicación directa, en términos de lo dispuesto en los artículos 26 fracción III, 40, 41, fracción III, 45, 47 y demás relativos y aplicables de la LAASSP.	La celebración del presente contrato la lleva a cabo bajo el procedimiento de adjudicación directa, en términos de lo dispuesto en los artículos 26 fracción III, 40, 41, fracción III, 45, 47 y demás relativos y aplicables de la LAASSP.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
+126	126	SA-009KDH999-N5-2015	Servicio Integral de Limpieza en las Oficinas de GACM	Servicio Integral de Limpieza en las Oficinas de Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	active	0		65000.00	MXN	Adjudicación directa	Artículo 42 de la Ley de Adquisiciones Arrendamientos y Servicios del Sector Público	Artículo 42 de la Ley de Adquisiciones Arrendamientos y Servicios del Sector Público		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 145	145	1	Servicios de diseño y arquitectura consistentes en forma enunciativa mas no limitativa, en la elaboración de los proyectos ejecutivos (diseño arquitectónico e ingeniería de detalle), que permitan la construcción del "edificio terminal de pasajeros, vialidades de acceso y estacionamientos" y "torre de control y centros de control de operaciones" del "NAICM" así como el acompañamiento arquitectónico. Servicios de diseño y arquitectura consistentes en forma enunciativa mas no limitativa, en la elaboración de los proyectos ejecutivos (diseño arquitectónico e ingeniería de detalle), que permitan la construcción del "edificio terminal de pasajeros, vialidades de acceso y estacionamientos" y "torre de control y centros de control de operaciones" del "NAICM" así como el acompañamiento arquitectónico.	Servicios de diseño y arquitectura consistentes en forma enunciativa mas no limitativa, en la elaboración de los proyectos ejecutivos (diseño arquitectónico e ingeniería de detalle), que permitan la construcción del "edificio terminal de pasajeros, vialidades de acceso y estacionamientos" y "torre de control y centros de control de operaciones" del "NAICM" así como el acompañamiento arquitectónico.	active	0		2136433615	MXN	Adjudicación directa	Artículo 42 fracción IV de la LOPSRM	Artículo 42 fracción IV de la LOPSRM		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 148	148	1	Servicio de recolección de residuos urbanos	Servicio de recolección de residuos urbanos	active	0		130000.00	MXN	Adjudicación directa	Artículo 42 y 45 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público 	Artículo 42 y 45 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público 		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 154	154	1043484	Materiales para la Construcción	Materiales para la Construcción	active	0		400000.00	MXN	Adjudicación directa	Artículos 26, fracción III y 42 de la LAASSP	Artículos 26, fracción III y 42 de la LAASSP		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
@@ -7133,8 +7143,6 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 51	51	1060623	Estacionamiento de Vehículos 	Estacionamiento de Vehículos 	complete	0		400000	MXN	Adjudicación directa	La contratación de este servicio la realiza mediante el procedimiento de Adjudicación Directa, de acuerdo a lo establecido en los artículos 134 de la Constitución Política de lo Estados Unidos Mexicanos, 26, fracción III, 42 y 47 de la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público.					\N	\N	\N	\N	0		\N	\N	1	\N	
 146	146	AA-009KDH999-E81-2016	Servicios de suministro de combustible, lubricantes y aditivos para vehículos automotores terrestres.	Servicios de suministro de combustible vehicular	active	0	MXN	17267047.50	MXN	Adhesión a licitación pública	Numeral 152 del acuerdo por el que se establecen las disposiciones en Materia de recursos Materiales y servicios Generales	Numeral 152 del acuerdo por el que se establecen las disposiciones en Materia de recursos Materiales y servicios Generales		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 52	52	1081482	Servicio para diseñar la pagina WEB del Grupo Aeroportuario de la Ciudad de México (GACM) para el Proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México	Servicio para diseñar la pagina WEB del Grupo Aeroportuario de la Ciudad de México (GACM) para el Proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0		240120	MXN	Adjudicación directa	Artículo 42 de la Ley  de Adquisisciones, Arrendamientos y Servicios del Sector Público.			Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
-124	124	1	Servicio y Proceso de Nómina mediante un Sistema Especializado para Recursos Humanos y Nómina de Gobierno	Implantar un servicio especializado para cumplir con la obligación del pago de nómina dentro de la normatividad de las leyes laborales para lograr la mejora contínua de los procedimientos administrativos.	complete	0		305000.00	MXN	Adjudicación directa				Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
-126	126	SA-009KDH999-N5-2015	Servicio Integral de Limpieza en las Oficinas de GACM	Servicio Integral de Limpieza en las Oficinas de Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.	active	0		65000.00	MXN	Adjudicación directa	Artículo 42 de la Ley de Adquisiciones Arrendamientos y Servicios del Sector Público	Artículo 42 de la Ley de Adquisiciones Arrendamientos y Servicios del Sector Público		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 127	127	749472	Prestación de los Servicios de Auditoría Externa que se realizarán sobre los estados financieros de la entidad con cifras al 31 de diciembre de 2014. 	Prestación de los Servicios de Auditoría Externa que se realizarán sobre los estados financieros de la entidad con cifras al 31 de diciembre de 2014. 	active	0		46371.00	MXN	Adjudicación directa	Artículo 41 fracción I de la Ley  de Adquisicioens, Arrendamientos y Servicios del sector Público.	Artículo 41 fracción I de la Ley  de Adquisicioens, Arrendamientos y Servicios del sector Público.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 208	208	AA-009KDH999-E1-2016	Servicio de Estacionamiento para Vehículos 	Llevar a cabo la contratación de la pensión para los vehículos del personal de Grupo Aeroportuario de la Ciudad de México S.A. de C.V.  Que no cuentan con un lugar de estacionamiento en Torre Murano.	active	0		0	MXN	Adjudicación directa	Articulos 134 de la Constitución Política de los Estados Unidos Mexicanos, 26 fracción III, 42 y 47 de la Ley de Adquisisiones, Arrendamientos y Servicios del Sector Públic	Articulos 134 de la Constitución Política de los Estados Unidos Mexicanos, 26 fracción III, 42 y 47 de la Ley de Adquisisiones, Arrendamientos y Servicios del Sector Públic		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 131	131	-	Servicios de transporte en camionetas de redilas, con capacidad de carga de 3.5 toneladas, doble rodada, para movilidad de materiales y equipo	Servicios de transporte en camionetas de redilas, con capacidad de carga de 3.5 toneladas, doble rodada, para movilidad de materiales y equipo	complete	0	MXN	688000.00	MXN	Adjudicación directa	Artículo 43 de la Ley de Obras Públicas y Servicios Relacionados con las Mismas					\N	\N	\N	\N	0		\N	\N	1	\N	
@@ -7203,6 +7211,7 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 73	73	-			\N	0	MXN	0	MXN	Convenio de colaboración						\N	\N	\N	\N	0		\N	\N	1	\N	
 71	71	-	Llevar a cabo el servicio de elaboración de programas y propuestas de acciones, ambientales para el proyecto Nuevo Aeropuerto de la Ciudad de México (NAICM)	Llevar a cabo el servicio de elaboración de programas y propuestas de acciones, ambientales para el proyecto Nuevo Aeropuerto de la Ciudad de México (NAICM)	\N	0	MXN	7667600	MXN	Convenio de colaboración	Artículo 1 de la LOPSRM	No aplica	No aplica	transferencia		\N	\N	\N	\N	0		\N	\N	1	\N	
 236	236	1071959 	Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional	Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional	complete	0	MXN	19720000.00	MXN	Invitación a cuando menos tres personas	Artículos 26 fracción II, 26 BIS fracción II, 28 fracción I, y demás relativos y aplicables de la LAASSP	Apartado 2.1, 2.2 y 2.10 de la Convocatoria a la Invitación Nacional a cuando Menos Tres Personas identificado con el número IA-009KDH999-E77-2016 del 27 de mayo de 2016, relacionado con el “Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 27 de mayo de 2016.	Apartado 2.11 de la Convocatoria a la Invitación Nacional a cuando Menos Tres Personas identificado con el número IA-009KDH999-E77-2016 del 27 de mayo de 2016, relacionado con el “Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 27 de mayo de 2016.	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 9.00 horas del 31 de mayo de 2016, en la sala de juntas de la Subdirección de Contrataciones, ubicada en Santa Catarina, Altavista 267, Colonia San Ángel Inn, Delegación Álvaro Obregón, México, D.F., C.P. 01060. El acto fue presidido por el Gerente de la Subdirección de Contrataciones de GACM	\N	\N	\N	\N	0	Apartado 2.1, 2.2 y 2.10 de la Convocatoria a la Invitación Nacional a cuando Menos Tres Personas identificado con el número IA-009KDH999-E77-2016 del 27 de mayo de 2016, relacionado con el “Servicios profesionales especializados de consultoría, asesoría y acompañamiento a Grupo Aeroportuario de la Ciudad de México, S.A. de C.V., en materias de infraestructura, derecho ambiental, derecho laboral, derecho mercantil, derecho civil, derecho energético, derecho inmobiliario, seguridad social, comercio exterior, propiedad intelectual e industrial, competencia económica y negociación internacional", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el 27 de mayo de 2016.	2016-06-01 00:00:00	2016-06-01 00:00:00	2	\N	
+162	162	SA-009KDH999-N10-2014	Implementación y Soporte Técnico Relacionados con Licencias de Software	Licenciamiento Oracle y servicios profesionales de implementación para crear un sistema de planificación de recursos gubernamentales "GRP", (por sus siglas en inglés, Goverment Resource Planning)	complete	0	MXN	63798178.00	MXN	Adhesión a licitación pública	Artículo 3, fracción I, 26, fracción III, 41, fracción XX, 45 y demás relativos y aplicables a la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público y del procedimiento de Adjudicación Simplificada derivado del Contrato Marco.					\N	\N	\N	\N	0		\N	\N	1	\N	
 238	238	1063459	Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México	Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México	complete	0	MXN	51500000	MXN	Invitación a cuando menos tres personas	Artículos 27 fracción II, 30 fracción I, 42 fracción XI y 45 fracción I de la Ley de Obras Públicas y Servicios Relacionados con las Mismas	Apartados 2.1, 2.2 y 2.10 de la Convocatoria a la  Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH-999-E71-2016 del 13 de mayo de 2016, relacionado con el ""Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México"", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el  16 de mayo de 2016.	Apartados 2.11 y 6.7 de la Convocatoria a la  Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH-999-E71-2016 del 13 de mayo de 2016, relacionado con el ""Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México"", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el  16 de mayo de 2016.	Presencial	El acto de presentación y apertura de proposiciones se llevó a cabo a las 18.00 horas del 31 de mayo de 2016, en la sala de juntas de la Subdirección de Contrataciones, ubicada en Santa Catarina Altavista 267, piso 2, Colonia San Ángel Inn, Delegación Álvaro Obregón, México, D.F., C.P. 01060. El acto fue presidido por el Subdirector de Contrataciones de GACM	\N	\N	2016-05-24 00:00:00	2016-05-24 00:00:00	1	Apartados 2.1, 2.2 y 2.10 de la Convocatoria a la  Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH-999-E71-2016 del 13 de mayo de 2016, relacionado con el ""Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México"", es preciso señalar que la convocatoria fue publicada en la página de CompraNet el  16 de mayo de 2016.	2016-06-07 00:00:00	2016-06-07 00:00:00	3	\N	
 121	121	1	Servicio de Limpieza Integral para los Inmuebles de Santa Catarina-Altavista y Torre Murano del Grupo Aeroportuario de la Ciudad de México S.A. de C.V.  	Llevar a cabo la contratación del "Servicio de Limpieza Integral para Inmuebles de Santa Catarina - Altavista y Torre Murano, Grupo Aeroportuario de la Ciudad de México S.A. de C.V" 	active	0	MXN	35801	MXN	Convenio de colaboración	Articulos  26 fracción III, 42 y 47 de la Ley de Adquisisiones, Arrendamientos y Servicios del Sector Público.	Articulos  26 fracción III, 42 y 47 de la Ley de Adquisisiones, Arrendamientos y Servicios del Sector Público.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 74	74	-			complete	0	MXN	0	MXN	Convenio de colaboración	Artículo 1 de la LOPSRM					\N	\N	\N	\N	0		\N	\N	1	\N	
@@ -7222,12 +7231,12 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 22	22	-	Etapa 2; seguimiento para el cumplimiento ambiental del proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) a través de la entidad de supervisión ambiental (Condicionante 10, resolutivo MIA-R	Etapa 2; seguimiento para el cumplimiento ambiental del proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) a través de la entidad de supervisión ambiental (Condicionante 10, resolutivo MIA-R	complete	0	MXN	227520000.00	MXN	Convenio de colaboración	Artículo 1 de la LAASSP		Anexo técnico - económico para los servicios consistentes en  "Etapa 2; seguimiento para el cumplimiento ambiental del proyecto del Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM) a través de la entidad de supervisión ambiental (Condicionante 10, resolutivo MIA-R".	Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
 164	164	-			complete	0	MXN	0	MXN	Convenio de colaboración	Artículo 1 de la LOPSRM					\N	\N	\N	\N	0		\N	\N	1	\N	
 24	24	-	Servicio de instrumentación y operación de planes y programas ambientales para el Nuevo Aeropuerto Internacional de la ciudad de México (NAICM), Etapa 2016-2018.	Servicio de instrumentación y operación de planes y programas ambientales para el Nuevo Aeropuerto Internacional de la ciudad de México (NAICM), Etapa 2016-2018.	complete	0	MXN	236900000.00	MXN	Convenio de colaboración	Artículo 1 de la LAASSP 		Anexo técnico para la "instrumentación y operación de planes y programas ambientales para el proyecto Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM), Etapa 2016-2018". 	Presencial		\N	\N	\N	\N	0		\N	\N	1	\N	
-162	162	SA-009KDH999-N10-2014	Implementación y Soporte Técnico Relacionados con Licencias de Software	Licenciamiento Oracle y servicios profesionales de implementación para crear un sistema de planificación de recursos gubernamentales "GRP", (por sus siglas en inglés, Goverment Resource Planning)	complete	0	MXN	63798178.00	MXN	Adhesión a licitación pública	Artículo 3, fracción I, 26, fracción III, 41, fracción XX, 45 y demás relativos y aplicables a la Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público y del procedimiento de Adjudicación Simplificada derivado del Contrato Marco.					\N	\N	\N	\N	0		\N	\N	1	\N	
 150	150	N6/2012	Servicios Administrados de Arrendamiento de Equipo y Bienes Informáticos para el Grupo Aeroportuario de la Ciudad de México.	Prestación a GACM por parte del prestador de servicios de los servicios administrados de equipo y bienes informáticos sin opción a compra, en adelante los servicios los cuales serán prestados totalmente a satisfacción de GACM, de conformidad con las especificaciones y características establecidas en el anexo técnico el cual al ser firmado por las partes forma parte integrante del contrato como anexo 11.	active	0	MXN	47660000.00	MXN	Adhesión a licitación pública	La celebración del presente contrato la lleva a cabo por adjudicación directa, en términos de lo establecidos en los artículos 3° fracción I, 26, fracción III, 28 fracción I, en relación con lo dispuesto en el articulo 40, ultimo párrafo, 41, fracción III, 45, 47 y demás relativos y aplicables de la LAASSP, así como los artículos 71 y 72 fracción III del RLAASSP.	La celebración del presente contrato la lleva a cabo por adjudicación directa, en términos de lo establecidos en los artículos 3° fracción I, 26, fracción III, 28 fracción I, en relación con lo dispuesto en el articulo 40, ultimo párrafo, 41, fracción III, 45, 47 y demás relativos y aplicables de la LAASSP, así como los artículos 71 y 72 fracción III del RLAASSP.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 114	114	900416			active	0	MXN	15800287.50	MXN	Adhesión a licitación pública	Articulo 72 fracción III del RLAASSP, en realción al 41 de la LAASSP se adhiere al contrato Plurianual abierto número ATN-LPN-003-003-13	Articulo 72 fracción III del RLAASSP, en realción al 41 de la LAASSP se adhiere al contrato Plurianual abierto número ATN-LPN-003-003-13		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 116	116	AA-009KDH99-E13-2016	Servicios de infraestructura de comunicación de voz, datos y video para el Grupo Aeroportuario de la Ciudad de México S.A. de C.V.	Contratar los servicios de infraestructura de comunicación de voz, datos y video para el Grupo Aeroportuario de la Ciudad de México S.A. de C.V. durante los ejercicios fiscales 2015 al 2018, con el objetivo de contar con la implementación de la infraestructura necesaria asi como el soporte tecnico y atención de incidentes correspondientes para dotar a su personal de los medios y herramientas para el debido cumplimiento de las actividades sustantivas que tienen encomendadas para la consecución de los dines de la entidad.	active	0	MXN	35399080.95	MXN	Adhesión a licitación pública	Articulo 72 fracción III del RLAASSP, en realción al 41 de la LAASSP se adhiere al contrato número P/S/104/14/2014 , en terminos de lo dispuesto en los artiulos 26, fracción III, 40,41, fracción III, 45, 47 y demás relativos y aplicables de la LAASSP.	Articulo 72 fracción III del RLAASSP, en realción al 41 de la LAASSP se adhiere al contrato número P/S/104/14/2014 , en terminos de lo dispuesto en los artiulos 26, fracción III, 40,41, fracción III, 45, 47 y demás relativos y aplicables de la LAASSP.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 120	120	AA-009KDH999-E19-2016	Servicios Especializados en el suministro de personal técnico y administrativo para proyectos de infraestructura aeroportuaria	Contratacion de Personal tercerizado	active	0	MXN	726064480.49	MXN	Adhesión a licitación pública	Artículos 41 Fracción III, de la LAASSP y 72 fracción III de su reglamento.	Artículos 41 Fracción III, de la LAASSP y 72 fracción III de su reglamento.		Nacional		\N	\N	\N	\N	0		\N	\N	1	\N	
 240	240	1066252	Estudio de factibilidad de energía solar fotovoltáica para el NAICM	Estudio de factibilidad de energía solar fotovoltáica para el NAICM	complete	0	MXN	8448275.87	MXN	Invitación a cuando menos tres personas	Arts. 27 fracción II, 30 fracción I y 45 fracción II de la LOPSRM	Invitación a cuando menos tres personas	Apartado 2.14 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E73-2016, relacionado con el estudio de factibilidad de energía solar fotovoltáica, es preciso señalar que la convocatoria fue publicada en la página de CompraNet el el 19 de mayo de 2016. 			\N	\N	\N	\N	0	"Apartado 2.14 de la Invitación Nacional a cuando Menos Tres Personas identificado con el número IO-009KDH999-E73-2016, relacionado con el estudio de factibilidad de energía solar fotovoltáica, es preciso señalar que la convocatoria fue publicada en la página de CompraNet el el 19 de mayo de 2016, "	2016-05-25 00:00:00	2016-05-25 00:00:00	4	\N	
+254	254	losa_1	Construcción de la losa de cimentación del edificio terminal del NAICM	Construcción de la losa de cimentación del edificio terminal del NAICM	\N	0	MXN	0	MXN	Licitación pública		Mecanismo de puntos y porcentajes	Numeral 2.14 de la convocatoria.	Presencial	El acto de presentación y apertura de proposiciones se llevo a cabo en la sala de juntas de la Subdirección de Contrataciones, ubicada en Av. Insurgentes Sur 2453, piso 2, Torre Murano, Colonia Tizapán San Ángel, Delegación Álvaro Obregón, México, D.F., C.P. 01090. El acto fue presidido por el Ing. Jaime Madinaveitia Villanueva Subdirector de Contrataciones de GACM	2016-10-06 00:00:00	\N	2016-07-22 00:00:00	2016-09-26 00:00:00	0	Numerales 1.2, 1.4, 1.7, 1.10, 2.1, 2.2, 2.10 de la convocatoria	\N	\N	18	\N	
 \.
 
 
@@ -7235,7 +7244,7 @@ COPY tender (id, contractingprocess_id, tenderid, title, description, status, mi
 -- Name: tender_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tester
 --
 
-SELECT pg_catalog.setval('tender_id_seq', 253, true);
+SELECT pg_catalog.setval('tender_id_seq', 254, true);
 
 
 --
@@ -7579,6 +7588,7 @@ COPY tendermilestone (id, contractingprocess_id, tender_id, milestoneid, title, 
 38	246	\N	milestone-1479166728187	Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Nacional identificada con el número LA-009KDH999-E104-2016 del 06 de Junio de 2016, relacionado con la “SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET)".	La Visita al sitio de realización de los trabajos, relacionado con la Licitación Pública Nacional, identificada con el número " LA-009KDH999-E104-2016" respecto del "SEGUNDA CONVOCATORIA DE SERVICIO DE SANITARIOS PORTÁTILES PROGRAMA DE EMPLEO TEMPORAL 2016 (PET)", dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-07-25 00:00:00	\N	met
 39	238	\N	milestone-1479321589122	Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E71-2016 respecto del Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México.	La Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E71-2016 respecto del Estudio de prueba para estabilización de suelos con tecnología al vacío en el Nuevo Aeropuerto Internacional de la Ciudad de México, dio inicio a las 11.00 horas en el Km. 7.5 de la Autopista de Cuota Peñón - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13.00 horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-05-20 00:00:00	\N	met
 40	239	\N	milestone-1479322202913	Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E72-2016 relacionado con el “Supervisión de las obras de excavación de prueba, losa experimental y prueba de pilotes para el edificio terminal y torre de control del Nuevo Aeropuerto Internacional de la Ciudad de México".	La Visita al sitio de realización de los trabajos, relacionado con la invitación a Cuando Menos Tres Personas, identificada con el número IO-009KDH999-E72-2016 relacionado con el “Supervisión de las obras de excavación de prueba, losa experimental y prueba de pilotes para el edificio terminal y torre de control del Nuevo Aeropuerto Internacional de la Ciudad de México ". dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 13:00 horas del mismo día sin que existiera observación alguna por parte de los asistentes.	2016-05-20 00:00:00	\N	met
+41	254	\N	milestone-1479353136233	Visita al sitio de realización de los trabajos	La Visita al sitio de realización de los trabajos, dio inicio a las 11:00 horas en el Km. 7.5 de la Autopista de Cuota Peñon - Texcoco en el Centro Mexicano de Capacitación en Agua y Saneamiento y se dio por concluida a las 14:00 horas del mismo día sin que existiera observación alguna por parte de los 59 asistentes.	2016-08-22 00:00:00	2016-08-22 00:00:00	met
 \.
 
 
@@ -7586,7 +7596,7 @@ COPY tendermilestone (id, contractingprocess_id, tender_id, milestoneid, title, 
 -- Name: tendermilestone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tester
 --
 
-SELECT pg_catalog.setval('tendermilestone_id_seq', 40, true);
+SELECT pg_catalog.setval('tendermilestone_id_seq', 41, true);
 
 
 --
@@ -7605,7 +7615,7 @@ SELECT pg_catalog.setval('tendermilestonedocuments_id_seq', 1, false);
 
 
 --
--- Name: award award_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: award_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY award
@@ -7613,7 +7623,7 @@ ALTER TABLE ONLY award
 
 
 --
--- Name: awardamendmentchanges awardamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: awardamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awardamendmentchanges
@@ -7621,7 +7631,7 @@ ALTER TABLE ONLY awardamendmentchanges
 
 
 --
--- Name: awarddocuments awarddocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarddocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarddocuments
@@ -7629,7 +7639,7 @@ ALTER TABLE ONLY awarddocuments
 
 
 --
--- Name: awarditem awarditem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditem
@@ -7637,7 +7647,7 @@ ALTER TABLE ONLY awarditem
 
 
 --
--- Name: awarditemadditionalclassifications awarditemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditemadditionalclassifications
@@ -7645,7 +7655,7 @@ ALTER TABLE ONLY awarditemadditionalclassifications
 
 
 --
--- Name: budget budget_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: budget_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY budget
@@ -7653,7 +7663,7 @@ ALTER TABLE ONLY budget
 
 
 --
--- Name: buyer buyer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: buyer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyer
@@ -7661,7 +7671,7 @@ ALTER TABLE ONLY buyer
 
 
 --
--- Name: buyeradditionalidentifiers buyeradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: buyeradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyeradditionalidentifiers
@@ -7669,7 +7679,7 @@ ALTER TABLE ONLY buyeradditionalidentifiers
 
 
 --
--- Name: contract contract_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contract_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contract
@@ -7677,7 +7687,7 @@ ALTER TABLE ONLY contract
 
 
 --
--- Name: contractamendmentchanges contractamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractamendmentchanges
@@ -7685,7 +7695,7 @@ ALTER TABLE ONLY contractamendmentchanges
 
 
 --
--- Name: contractdocuments contractdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractdocuments
@@ -7693,7 +7703,7 @@ ALTER TABLE ONLY contractdocuments
 
 
 --
--- Name: contractingprocess contractingprocess_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractingprocess_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractingprocess
@@ -7701,7 +7711,7 @@ ALTER TABLE ONLY contractingprocess
 
 
 --
--- Name: contractitem contractitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitem
@@ -7709,7 +7719,7 @@ ALTER TABLE ONLY contractitem
 
 
 --
--- Name: contractitemadditionalclasifications contractitemadditionalclasifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitemadditionalclasifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitemadditionalclasifications
@@ -7717,7 +7727,7 @@ ALTER TABLE ONLY contractitemadditionalclasifications
 
 
 --
--- Name: currency currency_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: currency_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY currency
@@ -7725,7 +7735,7 @@ ALTER TABLE ONLY currency
 
 
 --
--- Name: documentformat documentformat_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: documentformat_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY documentformat
@@ -7733,7 +7743,7 @@ ALTER TABLE ONLY documentformat
 
 
 --
--- Name: documenttype documenttype_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: documenttype_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY documenttype
@@ -7741,7 +7751,7 @@ ALTER TABLE ONLY documenttype
 
 
 --
--- Name: implementation implementation_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementation_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementation
@@ -7749,7 +7759,7 @@ ALTER TABLE ONLY implementation
 
 
 --
--- Name: implementationdocuments implementationdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationdocuments
@@ -7757,7 +7767,7 @@ ALTER TABLE ONLY implementationdocuments
 
 
 --
--- Name: implementationmilestone implementationmilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestone
@@ -7765,7 +7775,7 @@ ALTER TABLE ONLY implementationmilestone
 
 
 --
--- Name: implementationmilestonedocuments implementationmilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestonedocuments
@@ -7773,7 +7783,7 @@ ALTER TABLE ONLY implementationmilestonedocuments
 
 
 --
--- Name: implementationtransactions implementationtransactions_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationtransactions_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationtransactions
@@ -7781,7 +7791,7 @@ ALTER TABLE ONLY implementationtransactions
 
 
 --
--- Name: language language_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: language_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY language
@@ -7789,7 +7799,7 @@ ALTER TABLE ONLY language
 
 
 --
--- Name: planning planning_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: planning_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planning
@@ -7797,7 +7807,7 @@ ALTER TABLE ONLY planning
 
 
 --
--- Name: planningdocuments planningdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: planningdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planningdocuments
@@ -7805,7 +7815,7 @@ ALTER TABLE ONLY planningdocuments
 
 
 --
--- Name: procuringentity procuringentity_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentity_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentity
@@ -7813,7 +7823,7 @@ ALTER TABLE ONLY procuringentity
 
 
 --
--- Name: procuringentityadditionalidentifiers procuringentityadditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentityadditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentityadditionalidentifiers
@@ -7821,7 +7831,7 @@ ALTER TABLE ONLY procuringentityadditionalidentifiers
 
 
 --
--- Name: publisher publisher_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: publisher_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY publisher
@@ -7829,7 +7839,7 @@ ALTER TABLE ONLY publisher
 
 
 --
--- Name: supplier supplier_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplier_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplier
@@ -7837,7 +7847,7 @@ ALTER TABLE ONLY supplier
 
 
 --
--- Name: supplieradditionalidentifiers supplieradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplieradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplieradditionalidentifiers
@@ -7845,7 +7855,7 @@ ALTER TABLE ONLY supplieradditionalidentifiers
 
 
 --
--- Name: tender tender_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tender_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tender
@@ -7853,7 +7863,7 @@ ALTER TABLE ONLY tender
 
 
 --
--- Name: tenderamendmentchanges tenderamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderamendmentchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderamendmentchanges
@@ -7861,7 +7871,7 @@ ALTER TABLE ONLY tenderamendmentchanges
 
 
 --
--- Name: tenderdocuments tenderdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderdocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderdocuments
@@ -7869,7 +7879,7 @@ ALTER TABLE ONLY tenderdocuments
 
 
 --
--- Name: tenderer tenderer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderer_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderer
@@ -7877,7 +7887,7 @@ ALTER TABLE ONLY tenderer
 
 
 --
--- Name: tendereradditionalidentifiers tendereradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendereradditionalidentifiers_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendereradditionalidentifiers
@@ -7885,7 +7895,7 @@ ALTER TABLE ONLY tendereradditionalidentifiers
 
 
 --
--- Name: tenderitem tenderitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitem_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitem
@@ -7893,7 +7903,7 @@ ALTER TABLE ONLY tenderitem
 
 
 --
--- Name: tenderitemadditionalclassifications tenderitemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitemadditionalclassifications_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitemadditionalclassifications
@@ -7901,7 +7911,7 @@ ALTER TABLE ONLY tenderitemadditionalclassifications
 
 
 --
--- Name: tendermilestone tendermilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestone_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestone
@@ -7909,7 +7919,7 @@ ALTER TABLE ONLY tendermilestone
 
 
 --
--- Name: tendermilestonedocuments tendermilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestonedocuments_pkey; Type: CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestonedocuments
@@ -7917,7 +7927,7 @@ ALTER TABLE ONLY tendermilestonedocuments
 
 
 --
--- Name: award award_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: award_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY award
@@ -7925,7 +7935,7 @@ ALTER TABLE ONLY award
 
 
 --
--- Name: awardamendmentchanges awardamendmentchanges_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awardamendmentchanges_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awardamendmentchanges
@@ -7933,7 +7943,7 @@ ALTER TABLE ONLY awardamendmentchanges
 
 
 --
--- Name: awardamendmentchanges awardamendmentchanges_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awardamendmentchanges_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awardamendmentchanges
@@ -7941,7 +7951,7 @@ ALTER TABLE ONLY awardamendmentchanges
 
 
 --
--- Name: awarddocuments awarddocuments_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarddocuments_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarddocuments
@@ -7949,7 +7959,7 @@ ALTER TABLE ONLY awarddocuments
 
 
 --
--- Name: awarddocuments awarddocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarddocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarddocuments
@@ -7957,7 +7967,7 @@ ALTER TABLE ONLY awarddocuments
 
 
 --
--- Name: awarditem awarditem_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditem_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditem
@@ -7965,7 +7975,7 @@ ALTER TABLE ONLY awarditem
 
 
 --
--- Name: awarditem awarditem_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditem_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditem
@@ -7973,7 +7983,7 @@ ALTER TABLE ONLY awarditem
 
 
 --
--- Name: awarditemadditionalclassifications awarditemadditionalclassifications_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditemadditionalclassifications_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditemadditionalclassifications
@@ -7981,7 +7991,7 @@ ALTER TABLE ONLY awarditemadditionalclassifications
 
 
 --
--- Name: awarditemadditionalclassifications awarditemadditionalclassifications_awarditem_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: awarditemadditionalclassifications_awarditem_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY awarditemadditionalclassifications
@@ -7989,7 +7999,7 @@ ALTER TABLE ONLY awarditemadditionalclassifications
 
 
 --
--- Name: budget budget_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: budget_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY budget
@@ -7997,7 +8007,7 @@ ALTER TABLE ONLY budget
 
 
 --
--- Name: budget budget_planning_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: budget_planning_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY budget
@@ -8005,7 +8015,7 @@ ALTER TABLE ONLY budget
 
 
 --
--- Name: buyer buyer_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: buyer_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyer
@@ -8013,7 +8023,7 @@ ALTER TABLE ONLY buyer
 
 
 --
--- Name: buyeradditionalidentifiers buyeradditionalidentifiers_buyer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: buyeradditionalidentifiers_buyer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyeradditionalidentifiers
@@ -8021,7 +8031,7 @@ ALTER TABLE ONLY buyeradditionalidentifiers
 
 
 --
--- Name: buyeradditionalidentifiers buyeradditionalidentifiers_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: buyeradditionalidentifiers_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY buyeradditionalidentifiers
@@ -8029,7 +8039,7 @@ ALTER TABLE ONLY buyeradditionalidentifiers
 
 
 --
--- Name: contract contract_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contract_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contract
@@ -8037,7 +8047,7 @@ ALTER TABLE ONLY contract
 
 
 --
--- Name: contractamendmentchanges contractamendmentchanges_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractamendmentchanges_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractamendmentchanges
@@ -8045,7 +8055,7 @@ ALTER TABLE ONLY contractamendmentchanges
 
 
 --
--- Name: contractamendmentchanges contractamendmentchanges_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractamendmentchanges_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractamendmentchanges
@@ -8053,7 +8063,7 @@ ALTER TABLE ONLY contractamendmentchanges
 
 
 --
--- Name: contractdocuments contractdocuments_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractdocuments_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractdocuments
@@ -8061,7 +8071,7 @@ ALTER TABLE ONLY contractdocuments
 
 
 --
--- Name: contractdocuments contractdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractdocuments
@@ -8069,7 +8079,7 @@ ALTER TABLE ONLY contractdocuments
 
 
 --
--- Name: contractitem contractitem_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitem_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitem
@@ -8077,7 +8087,7 @@ ALTER TABLE ONLY contractitem
 
 
 --
--- Name: contractitem contractitem_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitem_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitem
@@ -8085,7 +8095,7 @@ ALTER TABLE ONLY contractitem
 
 
 --
--- Name: contractitemadditionalclasifications contractitemadditionalclasifications_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitemadditionalclasifications_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitemadditionalclasifications
@@ -8093,7 +8103,7 @@ ALTER TABLE ONLY contractitemadditionalclasifications
 
 
 --
--- Name: contractitemadditionalclasifications contractitemadditionalclasifications_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitemadditionalclasifications_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitemadditionalclasifications
@@ -8101,7 +8111,7 @@ ALTER TABLE ONLY contractitemadditionalclasifications
 
 
 --
--- Name: contractitemadditionalclasifications contractitemadditionalclasifications_contractitem_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: contractitemadditionalclasifications_contractitem_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY contractitemadditionalclasifications
@@ -8109,7 +8119,7 @@ ALTER TABLE ONLY contractitemadditionalclasifications
 
 
 --
--- Name: implementation implementation_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementation_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementation
@@ -8117,7 +8127,7 @@ ALTER TABLE ONLY implementation
 
 
 --
--- Name: implementation implementation_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementation_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementation
@@ -8125,7 +8135,7 @@ ALTER TABLE ONLY implementation
 
 
 --
--- Name: implementationdocuments implementationdocuments_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationdocuments_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationdocuments
@@ -8133,7 +8143,7 @@ ALTER TABLE ONLY implementationdocuments
 
 
 --
--- Name: implementationdocuments implementationdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationdocuments
@@ -8141,7 +8151,7 @@ ALTER TABLE ONLY implementationdocuments
 
 
 --
--- Name: implementationdocuments implementationdocuments_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationdocuments_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationdocuments
@@ -8149,7 +8159,7 @@ ALTER TABLE ONLY implementationdocuments
 
 
 --
--- Name: implementationmilestone implementationmilestone_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestone_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestone
@@ -8157,7 +8167,7 @@ ALTER TABLE ONLY implementationmilestone
 
 
 --
--- Name: implementationmilestone implementationmilestone_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestone_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestone
@@ -8165,7 +8175,7 @@ ALTER TABLE ONLY implementationmilestone
 
 
 --
--- Name: implementationmilestone implementationmilestone_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestone_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestone
@@ -8173,7 +8183,7 @@ ALTER TABLE ONLY implementationmilestone
 
 
 --
--- Name: implementationmilestonedocuments implementationmilestonedocuments_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestonedocuments_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestonedocuments
@@ -8181,7 +8191,7 @@ ALTER TABLE ONLY implementationmilestonedocuments
 
 
 --
--- Name: implementationmilestonedocuments implementationmilestonedocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestonedocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestonedocuments
@@ -8189,7 +8199,7 @@ ALTER TABLE ONLY implementationmilestonedocuments
 
 
 --
--- Name: implementationmilestonedocuments implementationmilestonedocuments_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationmilestonedocuments_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationmilestonedocuments
@@ -8197,7 +8207,7 @@ ALTER TABLE ONLY implementationmilestonedocuments
 
 
 --
--- Name: implementationtransactions implementationtransactions_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationtransactions_contract_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationtransactions
@@ -8205,7 +8215,7 @@ ALTER TABLE ONLY implementationtransactions
 
 
 --
--- Name: implementationtransactions implementationtransactions_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationtransactions_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationtransactions
@@ -8213,7 +8223,7 @@ ALTER TABLE ONLY implementationtransactions
 
 
 --
--- Name: implementationtransactions implementationtransactions_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: implementationtransactions_implementation_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY implementationtransactions
@@ -8221,7 +8231,7 @@ ALTER TABLE ONLY implementationtransactions
 
 
 --
--- Name: planning planning_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: planning_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planning
@@ -8229,7 +8239,7 @@ ALTER TABLE ONLY planning
 
 
 --
--- Name: planningdocuments planningdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: planningdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planningdocuments
@@ -8237,7 +8247,7 @@ ALTER TABLE ONLY planningdocuments
 
 
 --
--- Name: planningdocuments planningdocuments_planning_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: planningdocuments_planning_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY planningdocuments
@@ -8245,7 +8255,7 @@ ALTER TABLE ONLY planningdocuments
 
 
 --
--- Name: procuringentity procuringentity_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentity_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentity
@@ -8253,7 +8263,7 @@ ALTER TABLE ONLY procuringentity
 
 
 --
--- Name: procuringentity procuringentity_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentity_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentity
@@ -8261,7 +8271,7 @@ ALTER TABLE ONLY procuringentity
 
 
 --
--- Name: procuringentityadditionalidentifiers procuringentityadditionalidentifiers_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentityadditionalidentifiers_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentityadditionalidentifiers
@@ -8269,7 +8279,7 @@ ALTER TABLE ONLY procuringentityadditionalidentifiers
 
 
 --
--- Name: procuringentityadditionalidentifiers procuringentityadditionalidentifiers_procuringentity_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentityadditionalidentifiers_procuringentity_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentityadditionalidentifiers
@@ -8277,7 +8287,7 @@ ALTER TABLE ONLY procuringentityadditionalidentifiers
 
 
 --
--- Name: procuringentityadditionalidentifiers procuringentityadditionalidentifiers_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: procuringentityadditionalidentifiers_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY procuringentityadditionalidentifiers
@@ -8285,7 +8295,7 @@ ALTER TABLE ONLY procuringentityadditionalidentifiers
 
 
 --
--- Name: publisher publisher_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: publisher_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY publisher
@@ -8293,7 +8303,7 @@ ALTER TABLE ONLY publisher
 
 
 --
--- Name: supplier supplier_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplier_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplier
@@ -8301,7 +8311,7 @@ ALTER TABLE ONLY supplier
 
 
 --
--- Name: supplier supplier_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplier_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplier
@@ -8309,7 +8319,7 @@ ALTER TABLE ONLY supplier
 
 
 --
--- Name: supplieradditionalidentifiers supplieradditionalidentifiers_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplieradditionalidentifiers_award_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplieradditionalidentifiers
@@ -8317,7 +8327,7 @@ ALTER TABLE ONLY supplieradditionalidentifiers
 
 
 --
--- Name: supplieradditionalidentifiers supplieradditionalidentifiers_contractingprocess_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplieradditionalidentifiers_contractingprocess_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplieradditionalidentifiers
@@ -8325,7 +8335,7 @@ ALTER TABLE ONLY supplieradditionalidentifiers
 
 
 --
--- Name: supplieradditionalidentifiers supplieradditionalidentifiers_supplier_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: supplieradditionalidentifiers_supplier_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY supplieradditionalidentifiers
@@ -8333,7 +8343,7 @@ ALTER TABLE ONLY supplieradditionalidentifiers
 
 
 --
--- Name: tender tender_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tender_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tender
@@ -8341,7 +8351,7 @@ ALTER TABLE ONLY tender
 
 
 --
--- Name: tenderamendmentchanges tenderamendmentchanges_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderamendmentchanges_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderamendmentchanges
@@ -8349,7 +8359,7 @@ ALTER TABLE ONLY tenderamendmentchanges
 
 
 --
--- Name: tenderamendmentchanges tenderamendmentchanges_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderamendmentchanges_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderamendmentchanges
@@ -8357,7 +8367,7 @@ ALTER TABLE ONLY tenderamendmentchanges
 
 
 --
--- Name: tenderdocuments tenderdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderdocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderdocuments
@@ -8365,7 +8375,7 @@ ALTER TABLE ONLY tenderdocuments
 
 
 --
--- Name: tenderdocuments tenderdocuments_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderdocuments_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderdocuments
@@ -8373,7 +8383,7 @@ ALTER TABLE ONLY tenderdocuments
 
 
 --
--- Name: tenderer tenderer_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderer_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderer
@@ -8381,7 +8391,7 @@ ALTER TABLE ONLY tenderer
 
 
 --
--- Name: tenderer tenderer_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderer_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderer
@@ -8389,7 +8399,7 @@ ALTER TABLE ONLY tenderer
 
 
 --
--- Name: tendereradditionalidentifiers tendereradditionalidentifiers_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendereradditionalidentifiers_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendereradditionalidentifiers
@@ -8397,7 +8407,7 @@ ALTER TABLE ONLY tendereradditionalidentifiers
 
 
 --
--- Name: tendereradditionalidentifiers tendereradditionalidentifiers_tenderer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendereradditionalidentifiers_tenderer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendereradditionalidentifiers
@@ -8405,7 +8415,7 @@ ALTER TABLE ONLY tendereradditionalidentifiers
 
 
 --
--- Name: tenderitem tenderitem_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitem_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitem
@@ -8413,7 +8423,7 @@ ALTER TABLE ONLY tenderitem
 
 
 --
--- Name: tenderitem tenderitem_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitem_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitem
@@ -8421,7 +8431,7 @@ ALTER TABLE ONLY tenderitem
 
 
 --
--- Name: tenderitemadditionalclassifications tenderitemadditionalclassifications_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitemadditionalclassifications_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitemadditionalclassifications
@@ -8429,7 +8439,7 @@ ALTER TABLE ONLY tenderitemadditionalclassifications
 
 
 --
--- Name: tenderitemadditionalclassifications tenderitemadditionalclassifications_tenderitem_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tenderitemadditionalclassifications_tenderitem_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tenderitemadditionalclassifications
@@ -8437,7 +8447,7 @@ ALTER TABLE ONLY tenderitemadditionalclassifications
 
 
 --
--- Name: tendermilestone tendermilestone_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestone_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestone
@@ -8445,7 +8455,7 @@ ALTER TABLE ONLY tendermilestone
 
 
 --
--- Name: tendermilestone tendermilestone_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestone_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestone
@@ -8453,7 +8463,7 @@ ALTER TABLE ONLY tendermilestone
 
 
 --
--- Name: tendermilestonedocuments tendermilestonedocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestonedocuments_contractingprocess_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestonedocuments
@@ -8461,7 +8471,7 @@ ALTER TABLE ONLY tendermilestonedocuments
 
 
 --
--- Name: tendermilestonedocuments tendermilestonedocuments_milestone_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestonedocuments_milestone_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestonedocuments
@@ -8469,11 +8479,21 @@ ALTER TABLE ONLY tendermilestonedocuments
 
 
 --
--- Name: tendermilestonedocuments tendermilestonedocuments_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
+-- Name: tendermilestonedocuments_tender_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tester
 --
 
 ALTER TABLE ONLY tendermilestonedocuments
     ADD CONSTRAINT tendermilestonedocuments_tender_id_fkey FOREIGN KEY (tender_id) REFERENCES tender(id) ON DELETE CASCADE;
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 --
