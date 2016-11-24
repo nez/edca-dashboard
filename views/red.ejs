@@ -80,7 +80,7 @@
         margin-left: 10px;
     }
     .select-box-active, .select-box:hover {
-        color: white; /*#0c9;*/
+        color: #0c9;
     }
     .select-box-inactive {
         color: rgb(64,164,135);
@@ -234,6 +234,8 @@
     </div>
 </div>
 -->
+
+<!--
 <section id="banner">
     <div class="container-fluid fixed" style="padding-left: 10px">
         <div class="row">
@@ -248,7 +250,7 @@
         </div>
     </div>
 </section>
-
+-->
 <div class="bgimg">
     <div class="container">
         <div class="row">
@@ -297,24 +299,25 @@
 
 <!--<section id="info">-->
 <div class="container statistics">
-    <h1 id="sec-label">Planeación</h1>
+    <!--<h1 id="sec-label">Planeación</h1>-->
+    <h1>Proceso de contratación</h1>
 
 <p>
-    Haz clic en <b id="sec-label1">Planeación</b> para desplegar los componentes de esta etapa. Continúa dando clics para visualizar información más específica.</p>
+    <!--Haz clic en <b id="sec-label1">Planeación</b> para desplegar los componentes de esta etapa. Continúa dando clics para visualizar información más específica.</p>-->
     <!--<div class="container-fluid fixed">-->
     <div class="row">
         <!--<div class="col-xs-6 heading">Red Compartida</div>-->
-        <!--
-        <div class="col-xs-12 links">
-            <div class="well">
-                <div onmousedown='draw_chart("Planeación")' class="select-box select-box-first Planeación select-box-active">Planeación</div>
-                <div onmousedown='draw_chart("Concurso")' class="select-box Concurso">Licitación</div>
-                <div data-original-title="La información se publicará conforme se genere durante el proyecto." title="" data-toggle="tooltip" data-placement="bottom" class="select-box select-box-inactive Adjudicación">Adjudicación</div>
-                <div data-original-title="La información se publicará conforme se genere durante el proyecto." title="" data-toggle="tooltip" data-placement="bottom" class="select-box select-box-inactive Contratación">Contratación</div>
-                <div data-original-title="La información se publicará conforme se genere durante el proyecto." title="" data-toggle="tooltip" data-placement="bottom" class="select-box select-box-inactive Implementación">Implementación</div>
-            </div>
+
+        <div class="col-xs-12 links" style="padding-left: 0px">
+
+            <div onmousedown='draw_chart("Planeación")' class="select-box select-box-first Planeación select-box-active">Planeación</div>
+            <div onmousedown='draw_chart("Concurso")' class="select-box Concurso">Licitación</div>
+            <div data-original-title="La información se publicará conforme se genere durante el proyecto." title="" data-toggle="tooltip" data-placement="bottom" class="select-box select-box-inactive Adjudicación">Adjudicación</div>
+            <div data-original-title="La información se publicará conforme se genere durante el proyecto." title="" data-toggle="tooltip" data-placement="bottom" class="select-box select-box-inactive Contratación">Contratación</div>
+            <div data-original-title="La información se publicará conforme se genere durante el proyecto." title="" data-toggle="tooltip" data-placement="bottom" class="select-box select-box-inactive Implementación">Implementación</div>
+
         </div>
-        -->
+
     </div>
     <!--</div>-->
 
@@ -478,8 +481,8 @@
 
         $("#chart").empty();
         //$("h3#sec-label").html(l);
-        $("#sec-label").html(l);
-        $("#sec-label1").html(l);
+        //$("#sec-label").html(l);
+        //$("#sec-label1").html(l);
 
         $('.select-box').removeClass('select-box-active');
         $('.'+l).addClass('select-box-active');
