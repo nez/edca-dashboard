@@ -11,6 +11,19 @@
         <link rel="import" href="/contratacionesabiertas/static/bower_components/dgm-navbar/dgm-navbar.html">
         <link rel="import" href="/contratacionesabiertas/static/bower_components/dgm-footer/dgm-footer.html">
 
+        <style>
+
+            .arc text {
+                font: 10px sans-serif;
+                text-anchor: middle;
+            }
+
+            .arc path {
+                stroke: #fff;
+            }
+
+        </style>
+
         <title>Contrataciones Abiertas</title>
     </head>
     <body>
@@ -64,7 +77,7 @@
             <div class="row" >
                 <div class="col-md-12">
                     <h1>Conoce cómo contrata tu gobierno</h1>
-                    <p id="conoce" class="big">Selecciona un proyecto, expora las etapas de cada proceso de contratación y conoce la <a href="">metodología de contrataciones abiertas.</a></p>
+                    <p id="conoce" class="big">Selecciona un proyecto, explora las etapas de cada proceso de contratación y conoce la <a href="">metodología de contrataciones abiertas.</a></p>
                     <div class="data-table">
                         <table class="table">
                             <thead>
@@ -155,7 +168,7 @@
         <div class="methodology">
             <div class="container">
                 <div class="col-md-12">
-                    <button class="btn btn-primary">Conoce la metodología</button>
+                    <button class="btn btn-primary" id="ocds">Conoce la metodología</button>
                 </div>
             </div>
         </div>
@@ -177,5 +190,12 @@
         <script src="/contratacionesabiertas/static/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="/contratacionesabiertas/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="/contratacionesabiertas/static/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+        <script>
+            $('#ocds').click(function () {
+                window.open('http://standard.open-contracting.org/latest/es/getting_started/');
+            });
+
+        </script>
     </body>
 </html>

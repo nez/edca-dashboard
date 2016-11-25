@@ -1,17 +1,141 @@
-// DONUT CHART
 $(document).ready(function () {
 
-    $.post('/contratacionesabiertas/donut-chart-data', function (data) {
+    // DONUT CHARTs
 
-        var newData = [];
-        var colors = [];
+    function donutChart1() {
+        $.post('/contratacionesabiertas/donut-chart-data', function (data) {
 
-        for (var i = 0; i < data.length; i++) {
-            newData.push([data[i].procurementmethod, Number(data [i].sum)]);
+            var newData = [];
+            var colors = [];
+
+            for (var i = 0; i < data.length; i++) {
+                newData.push([data[i].procurementmethod, Number(data [i].sum)]);
+            }
+
+
+            var plot4 = $.jqplot('chart4', [newData], {
+                //title: 'TIPOS DE CONTRATACION',
+                seriesDefaults: {
+                    // make this a donut chart.
+                    renderer: $.jqplot.DonutRenderer,
+                    rendererOptions: {
+                        // Donut's can be cut into slices like pies.
+                        sliceMargin: 0,
+                        // Pies and donuts can start at any arbitrary angle.
+                        startAngle: -90,
+                        showDataLabels: true,
+                        // By default, data labels show the percentage of the donut/pie.
+                        // You can show the data 'value' or data 'label' instead.
+                        //dataLabels: 'value',
+                        // "totalLabel=true" uses the centre of the donut for the total amount
+                        totalLabel: true,
+                        shadow: false
+                    },
+                    seriesColors: [
+                        'gray', // adhesión
+                        '#00cc99', // adjudicación
+                        '#663399', // contrato de fideicomiso
+                        '#ff6666', // convenio de colaboración
+                        '#ffcc00', // ITP
+                        '#ff6600' // Licitación
+                    ]
+                },
+                grid: {
+                    drawBorder: false,
+                    drawGridLines: true,        // wether to draw lines across the grid or not.
+                    shadow: false,
+                    backgroundColor: 'transparent'//'white'//'rgb(255, 255, 255)'
+                },
+                highlighter: {
+                    show: true,
+
+                    sizeAdjust: 1,
+                    tooltipLocation: 'n',
+                    tooltipAxes: 'yref',
+                    useAxesFormatters: false,
+
+                    //dataLabels: 'value',
+                    //tooltipFormatString: '%s'
+                    tooltipContentEditor: function (current, serie, index, plot) {
+                        //return "<div class='col-sm-2'><p style='color: black'><b>" + data[index][1] + " " + data[index][0] + "</b></p></div>";
+                        return "<div class='col-sm-2'><p style='color: black'><b>" + newData[index][0] + ":<br> $" +  ( (   newData[index][1]    ).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")  + "</b></p></div>";
+                    }
+                }
+            });
+        });
+    }
+
+
+    function donutChart2d3() {
+        var width = 400,
+            height = 350,
+            radius = Math.min(width, height) / 2;
+
+        var color = d3.scale.ordinal()
+            .range([
+                '#00cc99', // adjudicación
+                '#663399', // contrato de fideicomiso
+                //'#ff6666', // convenio de colaboración
+                //'#ffcc00', // ITP
+                '#ff6600' // Licitaci
+            ]);
+
+        var arc = d3.svg.arc()
+            .outerRadius(radius - 10)
+            .innerRadius(radius - 85);
+
+        var pie = d3.layout.pie()
+            .sort(null)
+            .value(function(d) { return d.population; });
+
+        var svg = d3.select("#donutchart2").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        d3.csv("/contratacionesabiertas/static/data.csv", type, function(error, data) {
+            if (error) throw error;
+
+            var g = svg.selectAll(".arc")
+                .data(pie(data))
+                .enter().append("g")
+                .attr("class", "arc");
+
+            g.append("path")
+                .attr("d", arc)
+                .style("fill", function(d) { return color(d.data.age); });
+
+            g.append("text")
+                .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+                .attr("dy", ".35em")
+                .text(function(d) { return d.data.age; });
+        });
+
+        function type(d) {
+            d.population = +d.population;
+            return d;
         }
 
+    }
 
-        var plot4 = $.jqplot('chart4', [newData], {
+    function donutChart2() {
+
+        //$.post('/contratacionesabiertas/donut-chart-data', function (data) {
+
+        var d = [
+            ['Adquisición de bienes y servicios', 2690410604.15],
+            ['Obra pública', 29471789070.68],
+            ['Servicios relacionados con la obra', 8796566811.17]
+        ];
+        // var colors = [];
+
+        /*for (var i = 0; i < data.length; i++) {
+         newData.push([data[i].procurementmethod, Number(data [i].sum)]);
+         }*/
+
+
+        var plot4 = $.jqplot('donutchart2', [d], {
             //title: 'TIPOS DE CONTRATACION',
             seriesDefaults: {
                 // make this a donut chart.
@@ -30,11 +154,11 @@ $(document).ready(function () {
                     shadow: false
                 },
                 seriesColors: [
-                    'gray', // adhesión
+                    //'gray', // adhesión
                     '#00cc99', // adjudicación
                     '#663399', // contrato de fideicomiso
-                    '#ff6666', // convenio de colaboración
-                    '#ffcc00', // ITP
+                    //'#ff6666', // convenio de colaboración
+                    //'#ffcc00', // ITP
                     '#ff6600' // Licitación
                 ]
             },
@@ -60,8 +184,18 @@ $(document).ready(function () {
                 }
             }
         });
-    });
+        //});
 
+    }
+
+
+    donutChart1();
+    donutChart2d3();
+
+    /*
+    $('#cat').click(function () {
+      donutChart2();
+    });*/
 
     // FIND CONTRACTS
     function searchbykeyword(keyword, table, param, filter) {
@@ -219,3 +353,6 @@ function drawSeriesChart() {
 
     });
 }
+
+
+
