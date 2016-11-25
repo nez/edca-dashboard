@@ -338,10 +338,17 @@ function drawSeriesChart() {
         google.visualization.events.addListener(chart, 'select', selectHandler);
         
         //chart.draw( data  , options);
-        chart.draw(google.visualization.arrayToDataTable(newData), options);
+
+        var dt = google.visualization.arrayToDataTable(newData);
+        chart.draw(dt/*google.visualization.arrayToDataTable(newData)*/, options);
+
+        var formatter = new google.visualization.NumberFormat(
+            {prefix: '$', negativeColor: 'red', negativeParens: true, decimalSymbol: '.', groupingSymbol: ','});
+        formatter.format(dt, 4); // Apply formatter to second column
+
 
         function resizeHandler () {
-            chart.draw(google.visualization.arrayToDataTable(newData), options);
+            chart.draw(/*google.visualization.arrayToDataTable(newData)*/dt, options);
         }
 
         if (window.addEventListener) {
