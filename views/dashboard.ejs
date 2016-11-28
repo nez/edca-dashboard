@@ -134,14 +134,14 @@
                                <% for (var i=0; i < metadata.total_procedimiento.length; i ++){%>
                                 <tr>
                                     <td> <%= metadata.total_procedimiento[i].procurementmethod %></td>
-                                    <td> <%= metadata.total_procedimiento[i].total %></td>
+                                    <td> $<%= metadata.total_procedimiento[i].total %></td>
                                     <td> <%= metadata.total_procedimiento[i].conteo%></td>
                                 </tr>
                                 <%}%>
 
                                <tr>
                                    <td><strong>Total</strong></td>
-                                   <td><%= metadata.contract_value_amount_total%></td>
+                                   <td>$<%= metadata.contract_value_amount_total%></td>
                                    <td><%= metadata.cp_count %></td>
                                </tr>
                                 </tbody>
