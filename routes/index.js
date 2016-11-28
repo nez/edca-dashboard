@@ -46,7 +46,9 @@ router.get('/contratos/',function (req, res) {
             this.one('select count (*)  as total from (select distinct identifier_id  from supplier) as t ;'),
             this.one('select count (*) as total from contractingprocess'),
             this.one('select count (*) as total from contract where value_amount > 0'),
-            this.one('select sum(value_amount) as total from contract')
+            this.one('select sum(value_amount) as total from contract'),
+            this.manyOrNone("select tender.procurementmethod, sum (contract.value_amount) as total , count(*) as conteo from contract, tender " +
+                "where contract.contractingprocess_id=tender.contractingprocess_id group by tender.procurementmethod order by tender.procurementmethod")
         ]);
     }).then(function (data) {
         res.render('dashboard',{ title: 'Contrataciones Abiertas',
@@ -54,7 +56,8 @@ router.get('/contratos/',function (req, res) {
                 supplier_count: +data[0].total,
                 cp_count: +data[1].total,
                 contract_count: +data[2].total,
-                contract_value_amount_total: data[3].total
+                contract_value_amount_total: data[3].total,
+                total_procedimiento: data[4]
             }
         });
 

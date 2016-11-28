@@ -131,41 +131,19 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                               <% for (var i=0; i < metadata.total_procedimiento.length; i ++){%>
                                 <tr>
-                                    <td> <span class="circle" style="background-color: gray"></span> Adhesión a licitación</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td> <%= metadata.total_procedimiento[i].procurementmethod %></td>
+                                    <td> <%= metadata.total_procedimiento[i].total %></td>
+                                    <td> <%= metadata.total_procedimiento[i].conteo%></td>
                                 </tr>
-                                <tr>
-                                    <td>Adjudicación directa</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>Contrato de fideicomiso</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>Convenio de colaboración</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>Invitación a tres</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>Adhesión a licitación</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Total</strong></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+                                <%}%>
+
+                               <tr>
+                                   <td><strong>Total</strong></td>
+                                   <td><%= metadata.contract_value_amount_total%></td>
+                                   <td><%= metadata.cp_count %></td>
+                               </tr>
                                 </tbody>
                             </table>
                         </div>
