@@ -1559,5 +1559,138 @@ var dt = {
                 ]
             }
         ]
+    },
+    "Adjudicación":{
+            "name": "Adjudicación",
+            "children": [{
+                "name": "Informaci\u00f3n General",
+                "children": [{
+                    "name": "Identificador del Concurso",
+                    "children": [{
+                        "info1":"985989",
+                        //"info1": "El numero ser\u00e1 asignado por COMPRANET al momento de la publicaci\u00f3n de la CONVOCATORIA DE LAS BASES DEL CONCURSO DE LA RED COMPARTIDA",
+                        "mouseover": "Es la clave que identifica el concurso en Compranet",
+                        "info2": "SCT/Direcci\u00f3n General de Pol\u00edtica de Telecomunicaciones  y Radiodifusi\u00f3n",
+                        "info3": "https://compranet.funcionpublica.gob.mx/web/login.html",
+                        "name": "Clave del procedimiento de contrataci\u00f3n"
+                    }]
+                }, {
+                    "name": "T\u00edtulo del Concurso",
+                    "children": [{
+                        "info1": "Concurso internacional n\u00famero app-009000896-e1-2016 para la adjudicaci\u00f3n de un proyecto de asociaci\u00f3n p\u00fablico-privada conforme a la ley de asociaciones p\u00fablico privadas, para la instalaci\u00f3n y operaci\u00f3n de la red p\u00fablica compartida de telecomunicaciones",
+                        "mouseover": "Es el nombre asignado al concurso",
+                        "info2": "SCT/Direcci\u00f3n General de Pol\u00edtica de Telecomunicaciones  y Radiodifusi\u00f3n",
+                        "info3": "http://www.sct.gob.mx/red-compartida/index.html",
+                        "name": "Nombre u objeto del procedimiento de contrataci\u00f3n"
+                    }]
+                }, {
+                    "name": "Descripci\u00f3n del Concurso",
+                    "children": [{
+                        "info1": "Asociaci\u00f3n p\u00fablico-privada (APP) para el dise\u00f1o, instalaci\u00f3n, despliegue, operaci\u00f3n, mantenimiento y actualizaci\u00f3n de una red de servicios de telecomunicaciones m\u00f3viles. La aportaci\u00f3n p\u00fablica ser\u00e1n los 90MHz en la banda de 700 MHz y un par de hilos de fibra \u00f3ptica de la Red Troncal, mientras que el dise\u00f1o, financiamiento, despliegue, operaci\u00f3n, comercializaci\u00f3n y mantenimiento de la red correr\u00e1 a cargo del particular. La red ser\u00e1 mayorista, es decir, comercializar\u00e1 todos sus servicios y capacidades a otros concesionarios y comercializadoras sin discriminaci\u00f3n",
+                        "mouseover": "Es la clave que identifica el bien o servicio a ser adquirido",
+                        "info2": "SCT/Direcci\u00f3n General de Pol\u00edtica de Telecomunicaciones  y Radiodifusi\u00f3n",
+                        "info3": "http://www.sct.gob.mx/red-compartida/index.html",
+                        "name": "Objeto y alcance del procedimiento de contrataci\u00f3n"
+                    }]
+                }, {
+                    "name": "Estatus del Concurso",
+                    "children": [{
+                        //"info1": "Publicaci\u00f3n de la CONVOCATORIA DE LAS BASES DEL CONCURSO DE LA RED COMPARTIDA y las BASES DEL CONCURSO DE LA RED COMPARTIDA. Est\u00e1 programada para el 29 de enero de 2016",
+                        "info1":"El plazo para presentar la solicitud al IFT de opinión en materia de competencia económica concluyó por lo que se espera la notificación de las resoluciones del IFT en la materia.",
+                        "mouseover": "Es la etapa hasta la cu\u00e1l ha avanzado el proceso",
+                        "info2": "SCT/Direcci\u00f3n General de Pol\u00edtica de Telecomunicaciones  y Radiodifusi\u00f3n",
+                        //"info3": "http://www.sct.gob.mx/red-compartida/index.html",
+                        "info3":"https://compranet.funcionpublica.gob.mx/web/login.html",
+                        "name": "Estatus del procedimiento de contrataci\u00f3n (seg\u00fan Compranet)"
+                    }]
+                }, {
+                    "name": "Identificador del \u00edtem en el Concurso",
+                    "children": [{
+                        "info1": "31602",
+                        "mouseover": "Es la clave que identifica el bien o servicio a ser adquirido",
+                        "info2": "SCT/Direcci\u00f3n General de Pol\u00edtica de Telecomunicaciones  y Radiodifusi\u00f3n",
+                        "info3": "https://compranet.funcionpublica.gob.mx/web/login.html",
+                        "name": "Clave CUCOP del bien o servicio"
+                    }]
+                }, {
+                    "name": "Descripci\u00f3n del \u00edtem en el Concurso",
+                    "children": [{
+                        "info1": "31600001",
+                        "mouseover": "Es la descripci\u00f3n de las caracter\u00edsticas de cada bien o servicio a ser adquirido",
+                        "info2": "SCT/Direcci\u00f3n General de Pol\u00edtica de Telecomunicaciones  y Radiodifusi\u00f3n",
+                        "info3": "https://compranet.funcionpublica.gob.mx/web/login.html",
+                        "name": "Descripci\u00f3n espec\u00edfica de la clave CUCOP del bien o servicio"
+                    }]
+                }, {
+                    "name": "Clasificaci\u00f3n del \u00edtem",
+                    "children": [{
+                        "info1": "Servicio de Telecomunicaciones",
+                        "mouseover": "Es la referencia a una categor\u00eda a la que pertenece el bien o servicio a ser adquirido y que permite identificarlo o agruparlo dentro de en un universo total bienes o servicios",
+                        "info2": "SCT/Direcci\u00f3n General de Pol\u00edtica de Telecomunicaciones  y Radiodifusi\u00f3n",
+                        "info3": "https://compranet.funcionpublica.gob.mx/web/login.html",
+                        "name": "Tipo de la clave CUCOP del bien o servicio"
+                    }]
+                }, {
+                    "name": "Otras clasificaciones aplicables al bien o servicios",
+                    "children": [{
+                        "info1": "C810800032",
+                        "mouseover": "Son formas alternativas que pueden ser utilizadas para clasificar el bien o servicio a ser adquirido",
+                        "info2": "SCT/Direcci\u00f3n General de Pol\u00edtica de Telecomunicaciones  y Radiodifusi\u00f3n",
+                        "info3": "https://compranet.funcionpublica.gob.mx/web/login.html",
+                        "name": "Clave en el Cat\u00e1logo de Bienes Muebles (CABM) \u0096 Opcional"
+                    }]
+                }, {
+                    "name": "Cantidad ",
+                    "children": [{
+                        "info1": "1",
+                        "mouseover": "Es el n\u00famero de bienes o servicios que ser\u00e1n adquiridos",
+                        "info2": "SCT/Direcci\u00f3n General de Pol\u00edtica de Telecomunicaciones  y Radiodifusi\u00f3n",
+                        "info3": "https://compranet.funcionpublica.gob.mx/web/login.html",
+                        "name": "Cantidad del bien o servicio"
+                    }]
+                }, {
+                    "name": "Unidad",
+                    "children": [{
+                        "info1": "Una red compartida mayorista",
+                        "mouseover": "Es la unidad de medida en la que se especifica la cantidad de bienes o servicios",
+                        "info2": "SCT/Direcci\u00f3n General de Pol\u00edtica de Telecomunicaciones  y Radiodifusi\u00f3n",
+                        "info3": "https://compranet.funcionpublica.gob.mx/web/login.html",
+                        "name": "Unidad del bien o servicio"
+                    }]
+                }, {
+                    "name": "Valor m\u00ednimo del Concurso",
+                    "children": [{
+                        "info1": "0",
+                        "mouseover": "Es el valor m\u00ednimo estimado del concurso, expresado en monto y moneda",
+                        "info2": "SCT/Direcci\u00f3n General de Pol\u00edtica de Telecomunicaciones  y Radiodifusi\u00f3n",
+                        "info3": "http://www.sct.gob.mx/red-compartida/index.html",
+                        "name": "Presupuesto m\u00ednimo (opcional)"
+                    }]
+                }, {
+                    "name": "Moneda",
+                    "children": [{
+                        "info1": "MXN",
+                        "mouseover": "Es la moneda del monto asignado al concurso en la fuente presupuestaria, expresado en tres letras seg\u00fan el formato ISO 4217",
+                        "info2": "No aplica",
+                        "info3": "",
+                        "name": "Moneda en formato ISO 4217"
+                    }]
+                }, {
+                    "name": "Valor m\u00e1ximo del concurso",
+                    "children": [{
+                        "info1": "La inversi\u00f3n m\u00e1xima depender\u00e1 de lo que establezca el concursante que oferte la mayor cobertura Poblacional agregada conforme al Censo de Poblaci\u00f3n y Vivienda del INEGI 2010",
+                        "mouseover": "Es el valor m\u00e1ximo estimado del concurso, expresado en monto y moneda",
+                        "info2": "SCT/Direcci\u00f3n General de Pol\u00edtica de Telecomunicaciones  y Radiodifusi\u00f3n",
+                        "info3": "http://www.sct.gob.mx/red-compartida/index.html",
+                        "name": "Presupuesto m\u00e1ximo (monto de la suficiencia presupuestaria)"
+                    }, {
+                        "info1": "MXN",
+                        "mouseover": "Es la moneda del monto asignado al concurso en la fuente presupuestaria, expresado en tres letras seg\u00fan el formato ISO 4217",
+                        "info2": "No aplica",
+                        "info3": "",
+                        "name": "Moneda en formato ISO 4217"
+                    }]
+                }]
+            }]
     }
 };
