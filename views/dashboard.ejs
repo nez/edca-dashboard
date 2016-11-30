@@ -1,3 +1,6 @@
+<% function formatAmount( amount ) {
+   return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+}%>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" lang="es-MX" xml:lang="es-MX">
 <head>
@@ -134,14 +137,14 @@
                                <% for (var i=0; i < metadata.total_procedimiento.length; i ++){%>
                                 <tr>
                                     <td> <%= metadata.total_procedimiento[i].procurementmethod %></td>
-                                    <td> $<%= metadata.total_procedimiento[i].total %></td>
+                                    <td> $<%= formatAmount( metadata.total_procedimiento[i].total ) %></td>
                                     <td> <%= metadata.total_procedimiento[i].conteo%></td>
                                 </tr>
                                 <%}%>
 
                                <tr>
                                    <td><strong>Total</strong></td>
-                                   <td>$<%= metadata.contract_value_amount_total%></td>
+                                   <td>$<%= formatAmount( metadata.contract_value_amount_total )%></td>
                                    <td><%= metadata.cp_count %></td>
                                </tr>
                                 </tbody>
