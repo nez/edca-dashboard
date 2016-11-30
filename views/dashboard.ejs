@@ -178,22 +178,22 @@
                                 <tbody>
                                 <tr>
                                     <td>Adquisición de bienes y servicios</td>
-                                    <td>$2,690,410,604.15</td>
+                                    <td>$2,689,551,907.69</td>
                                     <td>105</td>
                                 </tr>
                                 <tr>
                                     <td>Obra pública</td>
-                                    <td>$29,471,789,070.68</td>
+                                    <td>$29,471,789,071.26</td>
                                     <td>20</td>
                                 </tr>
                                 <tr>
                                     <td>Servicios relacionados con la obra</td>
-                                    <td>$8,796,566,811.17</td>
+                                    <td>$8,797,198,071.87</td>
                                     <td>102</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Total</strong></td>
-                                    <td>$40,958,766,486.00</td>
+                                    <td>$40,958,539,050.81</td>
                                     <td>227</td>
                                 </tr>
                                 </tbody>
@@ -545,12 +545,9 @@
 
                 <select id="filter" class="form-control bootstrap-select">
                     <option value="Todo">Mostrar todo </option>
-                    <option value="Adhesión">Adhesión a licitación pública </option>
-                    <option value="Adjudicación">Adjudicaciones directas </option>
-                    <option value="Convenio">Convenios de colaboración</option>
-                    <option value="Contrato de fideicomiso">Contratos de fideicomiso</option>
-                    <option value="Invitación">Invitaciónes a tres</option>
-                    <option value="Licitación">Licitaciones públicas</option>
+                    <%for ( var i=0; i< metadata.total_procedimiento.length;i++){%>
+                    <option value="<%= metadata.total_procedimiento[i].procurementmethod %>"><%= metadata.total_procedimiento[i].procurementmethod %></option>
+                    <%}%>
                 </select>
 
                 <select id="orderby" class="form-control bootstrap-select">
