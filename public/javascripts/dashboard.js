@@ -32,11 +32,11 @@ $(document).ready(function () {
                         shadow: false
                     },
                     seriesColors: [
-                        'gray', // adhesión
                         '#00cc99', // adjudicación
-                        '#663399', // contrato de fideicomiso
-                        '#ff6666', // convenio de colaboración
-                        '#ffcc00', // ITP
+                        'gray', // asa akira
+                        '#ffcc00', //conv
+                        //'#ff6666', // convenio de colaboración
+                        '#663399', // ITP
                         '#ff6600' // Licitación
                     ]
                 },
@@ -310,11 +310,12 @@ function drawSeriesChart() {
                 }
             },
             series: {
-                'Adhesión a licitación pública': {color: 'gray'},
+
                 'Adjudicación directa': {color: '#00cc99'},
-                'Contrato de fideicomiso': {color: '#663399'},
-                'Convenio de colaboración': {color: '#ff6666'},
-                'Invitación a cuando menos tres personas': {color: '#ffcc00'},
+                'Contratación ASA': {color: 'gray'},
+                'Convenio de colaboración': {color: '#ffcc00'},
+                'Invitación a cuando menos tres personas': {color: '#663399'},
+                //'Convenio de colaboración': {color: '#ff6666'},
                 'Licitación pública': {color: '#ff6600'}
             },
             legend: {
