@@ -338,4 +338,25 @@ router.get('/d3-bubble-chart-data', function (req, res) {
 });
 
 
+
+router.get('/donut-chart2-data', function ( req, res) {
+    res.json([
+        {
+            destino: "Adquisición de bienes y servicios",
+            total_amount: 2689551907.69,
+            percentage: "7%"
+        },
+        {
+            destino: "Obra pública",
+            total_amount: 29471789071.26,
+            percentage: "72%"},
+        {
+            destino: "Servicios relacionados con la obra",
+            total_amount: 8797198071.87,
+            percentage: "21%"
+
+        }
+    ]);
+});
+
 module.exports = router;
