@@ -111,7 +111,7 @@ $(document).ready(function () {
                 .attr("dy", ".35em")
                 .text(function(d) {
                     return d.data.percentage;
-                });
+                }).style('fill', 'white').style("font-size", "14px");
         });
 
         function type(d) {
@@ -123,11 +123,6 @@ $(document).ready(function () {
 
     donutChart1();
     donutChart2d3();
-
-    /*
-    $('#cat').click(function () {
-      donutChart2();
-    });*/
 
     // FIND CONTRACTS
     function searchbykeyword(keyword, table, param, filter) {
