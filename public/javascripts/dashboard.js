@@ -94,8 +94,6 @@ $(document).ready(function () {
             .append("g")
             .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-
-        //d3.csv("/contratacionesabiertas/static/data.csv", type, function(error, data) {
         d3.json('/contratacionesabiertas/donut-chart2-data/', function(error, data) {
             //alert(data[0].total_amount);
 
