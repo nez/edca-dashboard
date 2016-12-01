@@ -48,7 +48,9 @@ router.get('/contratos/',function (req, res) {
             this.one('select count (*) as total from contract where value_amount > 0'),
             this.one('select sum(value_amount) as total from contract'),
             this.manyOrNone("select tender.procurementmethod, sum (contract.value_amount) as total , count(*) as conteo from contract, tender " +
-                "where contract.contractingprocess_id=tender.contractingprocess_id group by tender.procurementmethod order by tender.procurementmethod")
+                "where contract.contractingprocess_id=tender.contractingprocess_id group by tender.procurementmethod order by tender.procurementmethod"),
+            this.manyOrNone("select destino, sum(contract.value_amount) as total_amount, count(*) as conteo from contract, contractingprocess " +
+                "where contract.contractingprocess_id= contractingprocess.id group by destino order by destino;")
         ]);
     }).then(function (data) {
         res.render('dashboard',{ title: 'Contrataciones Abiertas',
@@ -57,7 +59,8 @@ router.get('/contratos/',function (req, res) {
                 cp_count: +data[1].total,
                 contract_count: +data[2].total,
                 contract_value_amount_total: data[3].total,
-                total_procedimiento: data[4]
+                total_procedimiento: data[4],
+                destinos : data[5]
             }
         });
 
@@ -340,23 +343,16 @@ router.get('/d3-bubble-chart-data', function (req, res) {
 
 
 router.get('/donut-chart2-data', function ( req, res) {
-    res.json([
-        {
-            destino: "Adquisición de bienes y servicios",
-            total_amount: 2689551907.69,
-            percentage: "7%"
-        },
-        {
-            destino: "Obra pública",
-            total_amount: 29471789071.26,
-            percentage: "72%"},
-        {
-            destino: "Servicios relacionados con la obra",
-            total_amount: 8797198071.87,
-            percentage: "21%"
 
-        }
-    ]);
+    edca_db.manyOrNone("select destino, sum(contract.value_amount) as total_amount, " +
+        "concat (trunc (sum (value_amount)/(select sum(value_amount) from contract) * 100 , 2),'%') as percentage " +
+        "from contract, contractingprocess " +
+        "where  contract.contractingprocess_id= contractingprocess.id group by destino;").then(function (data) {
+        res.json(data);
+    }).catch(function (error) {
+        console.log(error);
+    });
+
 });
 
 module.exports = router;

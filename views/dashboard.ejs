@@ -176,25 +176,19 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+
+
+                                <% for (var i=0; i < metadata.destinos.length; i++){%>
                                 <tr>
-                                    <td>Adquisición de bienes y servicios</td>
-                                    <td>$2,689,551,907.69</td>
-                                    <td>105</td>
+                                    <td><%= metadata.destinos[i].destino %></td>
+                                    <td>$<%= formatAmount( metadata.destinos[i].total_amount) %></td>
+                                    <td><%= metadata.destinos[i].conteo%></td>
                                 </tr>
-                                <tr>
-                                    <td>Obra pública</td>
-                                    <td>$29,471,789,071.26</td>
-                                    <td>20</td>
-                                </tr>
-                                <tr>
-                                    <td>Servicios relacionados con la obra</td>
-                                    <td>$8,797,198,071.87</td>
-                                    <td>102</td>
-                                </tr>
+                                <%}%>
                                 <tr>
                                     <td><strong>Total</strong></td>
-                                    <td>$40,958,539,050.81</td>
-                                    <td>227</td>
+                                    <td>$<%= formatAmount( metadata.contract_value_amount_total )%></td>
+                                    <td><%= metadata.cp_count %></td>
                                 </tr>
                                 </tbody>
                             </table>
