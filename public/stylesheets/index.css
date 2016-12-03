@@ -1,4 +1,7 @@
-.bgimg                          { background-image: url('/contratacionesabiertas/static/images/bgc.png'); }
+.bgimg                          { margin-bottom:0; background-image: url('/contratacionesabiertas/static/images/bgc.png'); }
+/*.bgimg                          { margin-bottom: 0; height: 350px; background-image: url('/contratacionesabiertas/static/images/bg-contracts.png'); background-size: cover; }*/
+.bgimg h2                       { margin-bottom: 30px; }
+.bgimg h2 > span                { display: block; font-weight: 400; }
 
 .stages p                       { margin-bottom: 40px; }
 .stages-widget                  { margin-bottom: 30px; }
