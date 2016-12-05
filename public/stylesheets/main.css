@@ -53,7 +53,7 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 .btn-primary:hover,
 .btn-primary:active                         { background-color: #05aa81; }
 .nav-pills                                  { overflow: hidden; }
-.nav-pills > li                             { display: block; margin: 0; margin-right: 20px; width: 200px; float: left; }
+.nav-pills > li                             { display: block; margin: 0; margin-right: 20px; width: 250px; float: left; }
 .nav-pills > li:last-child                  { margin-right: 0; }
 .nav-pills > li + li                        { margin-left: 0; }
 .nav-pills > li > a                         { display: block; padding: 10px 0; background-color: #9b9b9b; font-weight: 600; color: #fff; text-transform: uppercase; text-align: center; }
