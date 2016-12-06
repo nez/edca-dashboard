@@ -92,7 +92,57 @@ $(document).ready(function () {
             .attr("width", width)
             .attr("height", height)
             .append("g")
-            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+
+            .on("mouseover", function () {
+                mouseover();
+            })
+            .on("mousemove", function(){
+                mousemove();
+            })
+            .on("mouseout", function(){
+                mouseout();
+            });
+
+        var div = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("display", "none");
+
+        function mouseover() {
+            div.style("display", "inline");
+        }
+
+        function mousemove() {
+
+            div
+                .text(d3.event.pageX + ", " + d3.event.pageY)
+               // .text(d.destino + ": " + d.total_amount)
+                .style("left", (d3.event.pageX - 34) + "px")
+                .style("top", (d3.event.pageY - 12) + "px");
+        }
+
+        function mouseout(d) {
+            div.style("display", "none");
+        }
+
+
+
+        // tip
+        /*
+        var tip1 = d3.tip()
+            .attr('class', 'd3-tip').offset(function() {
+                return [this.getBBox().height / 2, 0]
+            })
+            //.offset([-20, 0])
+            .html(function(d) {
+                //console.log(d);
+
+
+                return "<div style='background: white'><strong>"+d.data.destino+": <br>"+d.data.total_amount+"</strong></div>";
+            });*/
+
+        //svg.call(tip1);
+
 
         d3.json('/contratacionesabiertas/donut-chart2-data/', function(error, data) {
             //alert(data[0].total_amount);
@@ -107,7 +157,7 @@ $(document).ready(function () {
 
             g.append("path")
                 .attr("d", arc)
-                .style("fill", function(d) { return color(d.data.destino); });
+                .style("fill", function(d) { return color(d.data.destino); })//.on('mouseover', tip1.show).on('mouseout', tip1.hide);
 
             g.append("text")
                 .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
@@ -115,12 +165,16 @@ $(document).ready(function () {
                 .text(function(d) {
                     return d.data.percentage;
                 }).style('fill', 'white').style("font-size", "14px");
+
+
+
         });
 
+        /*
         function type(d) {
             d.total_amount = +d.total_amount;
             return d;
-        }
+        }*/
 
     }
 
