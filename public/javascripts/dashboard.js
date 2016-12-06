@@ -24,6 +24,7 @@ $(document).ready(function () {
                         // Pies and donuts can start at any arbitrary angle.
                         startAngle: -90,
                         showDataLabels: true,
+                        dataLabelFormatString: '%.1f%',
                         // By default, data labels show the percentage of the donut/pie.
                         // You can show the data 'value' or data 'label' instead.
                         //dataLabels: 'value',
@@ -65,6 +66,67 @@ $(document).ready(function () {
         });
     }
 
+    function donutChart2() {
+        $.get('/contratacionesabiertas/donut-chart2-data/', function (data) {
+
+            var newData = [];
+            //var colors = [];
+
+            for (var i = 0; i < data.length; i++) {
+                newData.push([data[i].destino, Number( data [i].total_amount )]);
+            }
+
+            //console.log(newData);
+
+
+            var plot4 = $.jqplot('donutchart2', [newData], {
+                //title: 'TIPOS DE CONTRATACION',
+                seriesDefaults: {
+                    // make this a donut chart.
+                    renderer: $.jqplot.DonutRenderer,
+                    rendererOptions: {
+                        // Donut's can be cut into slices like pies.
+                        sliceMargin: 0,
+                        // Pies and donuts can start at any arbitrary angle.
+                        startAngle: -90,
+                        showDataLabels: true,
+                        dataLabelFormatString: '%.1f%',
+                        // By default, data labels show the percentage of the donut/pie.
+                        // You can show the data 'value' or data 'label' instead.
+                        //dataLabels: 'value',
+                        // "totalLabel=true" uses the centre of the donut for the total amount
+                        totalLabel: true,
+                        shadow: false
+                    },
+                    seriesColors: [
+                        '#ff6600', // Licitación
+                        '#663399', // ITP
+                        '#00cc99' // adjudicación
+                    ]
+                },
+                grid: {
+                    drawBorder: false,
+                    drawGridLines: true,        // wether to draw lines across the grid or not.
+                    shadow: false,
+                    backgroundColor: 'transparent'//'white'//'rgb(255, 255, 255)'
+                },
+                highlighter: {
+                    show: true,
+
+                    sizeAdjust: 1,
+                    tooltipLocation: 'n',
+                    tooltipAxes: 'yref',
+                    useAxesFormatters: false,
+                    //dataLabels: 'value',
+                    //tooltipFormatString: '%s'
+                    tooltipContentEditor: function (current, serie, index, plot) {
+                        return "<div class='col-sm-2'><p style='color: black'><b>" + newData[index][0] + ":<br> $" +  ( (   newData[index][1]    ).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")  + "</b></p></div>";
+
+                    }
+                }
+            });
+        });
+    }
 
     function donutChart2d3() {
         var width = 400,
@@ -139,7 +201,7 @@ $(document).ready(function () {
 
             g.append("path")
                 .attr("d", arc)
-                .style("fill", function(d) { return color(d.data.destino); }):
+                .style("fill", function(d) { return color(d.data.destino); });
 
             g.append("text")
                 .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
@@ -148,14 +210,20 @@ $(document).ready(function () {
                     return d.data.percentage;
                 }).style('fill', 'white').style("font-size", "14px");
 
-
-
         });
 
     }
 
     donutChart1();
-    donutChart2d3();
+    donutChart2();
+    //donutChart2d3();
+
+
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        $('#donutchart2').html("");
+        donutChart2();
+    });
+
 
     // FIND CONTRACTS
     function searchbykeyword(keyword, table, param, filter) {
@@ -321,6 +389,8 @@ function drawSeriesChart() {
 
     });
 }
+
+
 
 
 

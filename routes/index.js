@@ -325,6 +325,22 @@ router.post('/donut-chart-data', function (req, res) {
     });
 });
 
+
+router.get('/donut-chart2-data', function ( req, res) {
+
+    edca_db.manyOrNone("select destino, sum(contract.value_amount) as total_amount, " +
+        "concat (trunc (sum (value_amount)/(select sum(value_amount) from contract) * 100 , 2),'%') as percentage " +
+        "from contract, contractingprocess " +
+        "where  contract.contractingprocess_id= contractingprocess.id group by destino;").then(function (data) {
+        res.json(data);
+    }).catch(function (error) {
+        console.log(error);
+    });
+
+});
+
+
+
 router.get('/d3-bubble-chart-data', function (req, res) {
     edca_db.manyOrNone("select supplier.identifier_id, supplier.identifier_legalname, contract.contractid, contract.title,tender.procurementmethod,"+
     "concat (cast (  ( DATE_PART('year', period_enddate) - DATE_PART('year', period_startdate) ) * 12  + ( DATE_PART('month', period_enddate) - DATE_PART('month', period_startdate))" +
@@ -342,17 +358,5 @@ router.get('/d3-bubble-chart-data', function (req, res) {
 
 
 
-router.get('/donut-chart2-data', function ( req, res) {
-
-    edca_db.manyOrNone("select destino, sum(contract.value_amount) as total_amount, " +
-        "concat (trunc (sum (value_amount)/(select sum(value_amount) from contract) * 100 , 2),'%') as percentage " +
-        "from contract, contractingprocess " +
-        "where  contract.contractingprocess_id= contractingprocess.id group by destino;").then(function (data) {
-        res.json(data);
-    }).catch(function (error) {
-        console.log(error);
-    });
-
-});
 
 module.exports = router;
