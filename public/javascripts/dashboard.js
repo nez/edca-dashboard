@@ -340,7 +340,7 @@ function drawSeriesChart() {
             series: {
 
                 'Adjudicación directa': {color: '#00cc99'},
-                'Contratación ASA': {color: 'gray'},
+                'Contrataciones ASA': {color: 'gray'},
                 'Convenio de colaboración': {color: '#ffcc00'},
                 'Invitación a tres': {color: '#663399'},
                 //'Convenio de colaboración': {color: '#ff6666'},
