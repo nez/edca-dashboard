@@ -8,8 +8,8 @@
         <p><%= budget.budget_budgetid %></p>
     </div>
     <div class="col-md-3">
-        <p class="small">Origen del presupuesto</p>
-        <p><%= budget.budget_source%></p>
+        <p class="small">Tipo</p>
+        <p><%= info.procurementmethod%></p>
     </div>
     <div class="col-md-3">
         <p class="small">Descripción</p>
@@ -17,10 +17,6 @@
     </div>
 </div>
 <div class="row contract-stats">
-    <div class="col-md-3">
-        <p class="small">Tipo</p>
-        <p><%= info.procurementmethod%></p>
-    </div>
     <div class="col-md-3">
         <p class="small">Monto</p>
         <p><strong>
@@ -30,6 +26,8 @@
                 En proceso
                 <%}%>
             </strong></p>
+    </div>
+    <div class="col-md-3">
         <p class="small">Moneda </p>
         <p><%= budget.budget_currency %></p>
     </div>

@@ -74,7 +74,7 @@
         </li>
         <%}%>
 
-        <!-- previas < 4 -->
+        <!-- previas -->
         <% if (cmetadata.current_page <= 4){
         for (var i=1; i < cmetadata.current_page; i++){
         %>
@@ -89,7 +89,7 @@
         <!-- actual -->
         <li  class="active" ><a href="#lista" data-page="<%= cmetadata.current_page%>"> <%= cmetadata.current_page %> </a></li>
 
-        <!-- siguientes < 4-->
+        <!-- siguientes -->
         <% if ( cmetadata.page_count - cmetadata.current_page <= 4){
         for (var i= cmetadata.current_page+1; i <= cmetadata.page_count; i++){ %>
         <li><a href="#lista" data-page="<%=i%>"> <%= i %> </a></li>
