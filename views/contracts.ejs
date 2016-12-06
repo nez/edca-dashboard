@@ -74,10 +74,32 @@
         </li>
         <%}%>
 
-        <%
-        for (var i=1; i <= cmetadata.page_count; i++){ %>
-        <li  class="<%= i == cmetadata.current_page ?'active':'' %>" ><a href="#lista" data-page="<%=i%>"> <%= i %> </a></li>
-        <% } %>
+        <!-- previas < 4 -->
+        <% if (cmetadata.current_page <= 4){
+        for (var i=1; i < cmetadata.current_page; i++){
+        %>
+        <li><a href="#lista" data-page="<%=i%>"> <%= i %> </a></li>
+        <%}}else{ %>
+        <li><a href="#lista" data-page="<%= 1 %>"> 1 </a></li>
+        <li><a href="#lista" data-page="<%= cmetadata.current_page - 1 %>"> ... </a></li>
+        <li><a href="#lista" data-page="<%= cmetadata.current_page - 2 %>"> <%= cmetadata.current_page - 2 %> </a></li>
+        <li><a href="#lista" data-page="<%= cmetadata.current_page - 1 %>"> <%= cmetadata.current_page -1 %> </a></li>
+        <%}%>
+
+        <!-- actual -->
+        <li  class="active" ><a href="#lista" data-page="<%= cmetadata.current_page%>"> <%= cmetadata.current_page %> </a></li>
+
+        <!-- siguientes < 4-->
+        <% if ( cmetadata.page_count - cmetadata.current_page <= 4){
+        for (var i= cmetadata.current_page+1; i <= cmetadata.page_count; i++){ %>
+        <li><a href="#lista" data-page="<%=i%>"> <%= i %> </a></li>
+        <% } }else {%>
+        <li><a href="#lista" data-page="<%= cmetadata.current_page + 1%>"> <%= cmetadata.current_page + 1 %> </a></li>
+        <li><a href="#lista" data-page="<%= cmetadata.current_page + 2%>"> <%= cmetadata.current_page + 2 %> </a></li>
+        <li><a href="#lista" data-page="<%= cmetadata.current_page + 1%>"> ... </a></li>
+        <li><a href="#lista" data-page="<%= cmetadata.page_count %>"> <%= cmetadata.page_count %> </a></li>
+
+        <%}%>
 
         <% if ( cmetadata.current_page < cmetadata.page_count){%>
         <li>
