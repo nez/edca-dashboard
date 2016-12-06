@@ -93,7 +93,6 @@ $(document).ready(function () {
             .attr("height", height)
             .append("g")
             .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
-
             .on("mouseover", function () {
                 mouseover();
             })
@@ -127,23 +126,6 @@ $(document).ready(function () {
 
 
 
-        // tip
-        /*
-        var tip1 = d3.tip()
-            .attr('class', 'd3-tip').offset(function() {
-                return [this.getBBox().height / 2, 0]
-            })
-            //.offset([-20, 0])
-            .html(function(d) {
-                //console.log(d);
-
-
-                return "<div style='background: white'><strong>"+d.data.destino+": <br>"+d.data.total_amount+"</strong></div>";
-            });*/
-
-        //svg.call(tip1);
-
-
         d3.json('/contratacionesabiertas/donut-chart2-data/', function(error, data) {
             //alert(data[0].total_amount);
 
@@ -157,7 +139,7 @@ $(document).ready(function () {
 
             g.append("path")
                 .attr("d", arc)
-                .style("fill", function(d) { return color(d.data.destino); })//.on('mouseover', tip1.show).on('mouseout', tip1.hide);
+                .style("fill", function(d) { return color(d.data.destino); }):
 
             g.append("text")
                 .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
@@ -169,12 +151,6 @@ $(document).ready(function () {
 
 
         });
-
-        /*
-        function type(d) {
-            d.total_amount = +d.total_amount;
-            return d;
-        }*/
 
     }
 
