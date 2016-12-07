@@ -44,11 +44,31 @@
                     <div class="stages">
                         <p><small>ETAPAS</small></p>
                         <ul>
-                            <li <%- (current_stage == 'planeacion')?"class='active'":''%> ><img class="normal-image" src="/contratacionesabiertas/static/images/ic-menu-planeacion.png"><img class="hover-image" src="/contratacionesabiertas/static/images/ic-planeacion.png"><a href="<%= "/contratacionesabiertas/contrato/"+info.cpid+"/planeacion" %>">Planeación </a></li>
-                            <li <%- (current_stage == 'licitacion')?"class='active'":''%>><img class="normal-image" src="/contratacionesabiertas/static/images/ic-menu-licitacion.png"><img class="hover-image" src="/contratacionesabiertas/static/images/ic-licitacion.png"><a href="<%= "/contratacionesabiertas/contrato/"+info.cpid+"/licitacion" %>">Licitación</a></li>
-                            <li <%- (current_stage == 'adjudicacion')?"class='active'":''%>><img class="normal-image" src="/contratacionesabiertas/static/images/ic-menu-adjudicacion.png"><img class="hover-image" src="/contratacionesabiertas/static/images/ic-adjudicacion.png"><a href="<%= "/contratacionesabiertas/contrato/"+info.cpid+"/adjudicacion" %>">Adjudicación</a></li>
-                            <li <%- (current_stage == 'contratacion')?"class='active'":''%>><img class="normal-image" src="/contratacionesabiertas/static/images/ic-menu-contratacion.png"><img class="hover-image" src="/contratacionesabiertas/static/images/ic-contratacion.png"><a href="<%= "/contratacionesabiertas/contrato/"+info.cpid+"/contratacion" %>">Contratación</a></li>
-                            <li <%- (current_stage == 'implementacion')?"class='active'":''%>><img class="normal-image" src="/contratacionesabiertas/static/images/ic-menu-implementacion.png"><img class="hover-image" src="/contratacionesabiertas/static/images/ic-implementacion.png"><a href="<%= "/contratacionesabiertas/contrato/"+info.cpid+"/implementacion" %>">Implementación</a></li>
+                            <li <%- (contractingprocess.stage >= 0 )?"class='active'":''%>>
+                                <img class="normal-image" src="/contratacionesabiertas/static/images/ic-menu-planeacion.png">
+                                <img class="hover-image" src="/contratacionesabiertas/static/images/ic-planeacion.png">
+                                <a href="<%= "/contratacionesabiertas/contrato/"+info.cpid+"/planeacion" %>">Planeación </a></li>
+                            <li <%- (contractingprocess.stage >= 1 )?"class='active'":''%>>
+                                <img class="normal-image" src="/contratacionesabiertas/static/images/ic-menu-licitacion.png">
+                                <img class="hover-image" src="/contratacionesabiertas/static/images/ic-licitacion.png">
+                                <a href="<%= "/contratacionesabiertas/contrato/"+info.cpid+"/licitacion" %>">Licitación</a></li>
+                            <li <%- (contractingprocess.stage >= 2) ?"class='active'":''%>>
+                                <img class="normal-image" src="/contratacionesabiertas/static/images/ic-menu-adjudicacion.png">
+                                <img class="hover-image" src="/contratacionesabiertas/static/images/ic-adjudicacion.png">
+                                <a href="<%= "/contratacionesabiertas/contrato/"+info.cpid+"/adjudicacion" %>">Adjudicación</a></li>
+                            <li <%- (contractingprocess.stage >= 3)?"class='active'":''%>>
+                                <img class="normal-image" src="/contratacionesabiertas/static/images/ic-menu-contratacion.png">
+                                <img class="hover-image" src="/contratacionesabiertas/static/images/ic-contratacion.png">
+                                <a href="<%= "/contratacionesabiertas/contrato/"+info.cpid+"/contratacion" %>">Contratación</a></li>
+                            <li <%- (contractingprocess.stage >= 4)?"class='active'":''%>>
+                                <img class="normal-image" src="/contratacionesabiertas/static/images/ic-menu-implementacion.png">
+                                <% if (contractingprocess.stage >= 4) {%>
+                                <img class="hover-image" src="/contratacionesabiertas/static/images/ic-implementacion.png">
+                                <a href="<%= "/contratacionesabiertas/contrato/"+info.cpid+"/implementacion" %>">Implementación</a>
+                            <%}else{%>
+                                <img src="/contratacionesabiertas/static/images/ic-menu-implementacion.png"> Implementación
+                                <%}%>
+                            </li>
                         </ul>
                     </div>
                 </div>
