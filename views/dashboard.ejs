@@ -152,13 +152,34 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                               <% for (var i=0; i < metadata.total_procedimiento.length; i ++){%>
-                                <tr>
-                                    <td> <%= metadata.total_procedimiento[i].procurementmethod %></td>
-                                    <td> $<%= formatAmount( metadata.total_procedimiento[i].total ) %></td>
-                                    <td> <%= metadata.total_procedimiento[i].conteo%></td>
-                                </tr>
-                                <%}%>
+
+                               <tr>
+                                   <td> <%= metadata.total_procedimiento[0].procurementmethod %></td>
+                                   <td> $<%= formatAmount( metadata.total_procedimiento[4].total ) %></td>
+                                   <td> <%= metadata.total_procedimiento[0].conteo%></td>
+                               </tr>
+                               <tr>
+                                   <td> <%= metadata.total_procedimiento[1].procurementmethod %></td>
+                                   <td> $<%= formatAmount( metadata.total_procedimiento[4].total ) %></td>
+                                   <td> <%= metadata.total_procedimiento[1].conteo%></td>
+                               </tr>
+                               <tr>
+                                   <td> <%= metadata.total_procedimiento[2].procurementmethod %></td>
+                                   <td> $<%= formatAmount( metadata.total_procedimiento[4].total ) %></td>
+                                   <td> <%= metadata.total_procedimiento[2].conteo%></td>
+                               </tr>
+                               <tr>
+                                   <td> <%= metadata.total_procedimiento[3].procurementmethod %></td>
+                                   <td> $<%= formatAmount( metadata.total_procedimiento[4].total ) %></td>
+                                   <td> <%= metadata.total_procedimiento[3].conteo%></td>
+                               </tr>
+                               <tr>
+                                   <td> <%= metadata.total_procedimiento[4].procurementmethod %> *</td>
+                                   <td> $<%= formatAmount( metadata.total_procedimiento[4].total ) %></td>
+                                   <td> <%= metadata.total_procedimiento[4].conteo%></td>
+                               </tr>
+
+
 
                                <tr>
                                    <td><strong>Total</strong></td>
@@ -172,7 +193,7 @@
                     </div>
                 </div>
 
-                <small>Incluye adhesión a licitaciónes realizadas por otras dependencias de la Administración Pública Federal. Actualización a noviembre de 2016.</small>
+                <small>* Incluye adhesión a licitaciónes realizadas por otras dependencias de la Administración Pública Federal. Actualización a noviembre de 2016.</small>
             </div>
         </div>
 
