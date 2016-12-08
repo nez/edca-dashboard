@@ -9,7 +9,7 @@ $(document).ready(function () {
             var colors = [];
 
             for (var i = 0; i < data.length; i++) {
-                newData.push([data[i].procurementmethod, Number(data [i].sum)]);
+                newData.push([data[i].procurementmethod, Number(data [i].sum), data[i].percentage]);
             }
 
 
@@ -59,7 +59,8 @@ $(document).ready(function () {
                     //tooltipFormatString: '%s'
                     tooltipContentEditor: function (current, serie, index, plot) {
                         //return "<div class='col-sm-2'><p style='color: black'><b>" + data[index][1] + " " + data[index][0] + "</b></p></div>";
-                        return "<div class='col-sm-2'><p style='color: black'><b>" + newData[index][0] + ":<br> $" +  ( (   newData[index][1]    ).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")  + "</b></p></div>";
+                        return "<div class='col-sm-2'><p style='color: black'><b>" + newData[index][0] + ":<br> $"
+                            +  ( (   newData[index][1]    ).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")  + " (" +newData[index][2]+")</b></p></div>";
                     }
                 }
             });
@@ -73,7 +74,7 @@ $(document).ready(function () {
             //var colors = [];
 
             for (var i = 0; i < data.length; i++) {
-                newData.push([data[i].destino, Number( data [i].total_amount )]);
+                newData.push([data[i].destino, Number( data [i].total_amount ), data[i].percentage ]);
             }
 
             //console.log(newData);
@@ -120,7 +121,8 @@ $(document).ready(function () {
                     //dataLabels: 'value',
                     //tooltipFormatString: '%s'
                     tooltipContentEditor: function (current, serie, index, plot) {
-                        return "<div class='col-sm-2'><p style='color: black'><b>" + newData[index][0] + ":<br> $" +  ( (   newData[index][1]    ).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")  + "</b></p></div>";
+                        return "<div class='col-sm-2'><p style='color: black'><b>" + newData[index][0] +
+                            ":<br> $" +  ( (   newData[index][1]    ).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")  + " ("+newData[index][2]+")</b></p></div>";
 
                     }
                 }
