@@ -245,15 +245,18 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 /*********************************
     FONTS STYLES
 *********************************/
-.nav-tabs                                   { border: none; margin-bottom: 10px; }
-.nav-tabs > li                              { margin-right: 20px; }
+.nav-tabs                                   { border: none; margin-left: 0; margin-top: 20px; }
+.nav-tabs > li                              { display: inline-block; padding: 0 30px; margin-right: 0; background-color: #d5d5d5; border-radius: 5px 5px 0 0; }
 .nav-tabs > li:last-child                   { margin-right: 0; }
+.nav-tabs > li:hover,
+.nav-tabs > li.active                       { background-color: #f6f6f6; }
 .nav-tabs > li.active > a,
 .nav-tabs > li:hover > a,
 .nav-tabs > li.active > a:focus,
 .nav-tabs > li.active > a:hover             { border: none; background-color: transparent; color: #00d2a9; }
 .nav-tabs > li.active > a                   { color: #00d2a9; }
-.nav-tabs > li > a                          { padding: 10px 0; background-color: transparent; font-size: 12px; font-weight: 600; color: #dfdfdf; text-transform: uppercase; border: none; border-radius: 0; }
+.nav-tabs > li > a                          { padding: 10px 0; background-color: transparent; font-size: 12px; font-weight: 600; color: #8b8b8b; text-transform: uppercase; border: none; border-radius: 0; }
+.tab-content .well                          { background-color: #f6f6f6; box-shadow: none; border-radius: 0 5px 5px 5px; }
 
 /*********************************
     ICONS STYLES
