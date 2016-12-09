@@ -97,10 +97,11 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 /********************************
     Pagination Styles
 ********************************/
-.pagination > .active > a,
-.pagination > .active > a:hover             { background-color: #0c9; border-color: #0c9; }
+.pagination > li:hover > a,
+.pagination > li > a:hover,
+.pagination > li.active > a,
+.pagination > li.active > a:hover           { background-color: #d8d8d8; border-color: #d8d8d8; color: #a1a1a1; }
 .pagination > li > a                        { color: #0c9; }
-.pagination > li > a:hover                  { color: #0a9; }
 
 /*********************************
     BANNER STYLES
