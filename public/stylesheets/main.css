@@ -68,7 +68,7 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 .progress-steps > li                        { display: block; width: 20%; margin-bottom: 0; float: left; text-align: left; font-size: 11px; font-weight: 300; }
 .progress-steps > li > span                 { float: right; }
 .progress                                   { height: 25px; margin-bottom: 20px; background-color: #d8d8d8; box-shadow: none; border-radius: 0; }
-.progress-bar                               { background-color: transparent; text-align: left; text-indent: 10px; font-size: 11px; font-weight: 600; line-height: 25px; color: #545454; box-shadow: none; }
+.progress-bar                               { background-color: transparent; text-align: left; text-indent: 10px; font-size: 11px; font-weight: 600; line-height: 25px; color: #fff; box-shadow: none; }
 .progress-bar-success                       { background-color: #0c9; }
 .progress-bar-primary                       { background-color: #096; }
 
