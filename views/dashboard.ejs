@@ -67,25 +67,27 @@
         </div>
         <div id="datos_duros">
             <div class="row">
-
-                <div class="col-sm-3 widget">
-                    <h5>CONTRATOS EN PROCESO</h5>
-                    <p class="stat"><%= metadata.cp_count %></p>
+                <div class="col-sm-4 widget">
+                    <h5>MONTO CONTRATADO EN MXN</h5>
+                    <p class="stat">$<%= ( parseInt( metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
                 </div>
 
+                <div class="col-sm-4 widget">
+                    <h5>PROCEDIMIENTOS DE CONTRATACIÓN</h5>
+                    <p class="stat"><%= metadata.cp_count %></p>
+                </div>
+<!--
                 <div class="col-sm-3 widget">
                     <h5>CONTRATOS ADJUDICADOS</h5>
                     <p class="stat"> <%= metadata.contract_count %></p>
                 </div>
+                -->
 
-                <div class="col-sm-3 widget">
-                    <h5>TOTAL DE PROVEEDORES</h5>
+                <div class="col-sm-4 widget">
+                    <h5>PROVEEDORES</h5>
                     <p class="stat"><%= metadata.supplier_count %></p>
                 </div>
-                <div class="col-sm-3 widget">
-                    <h5>MONTO TOTAL CONTRATADO<!--ADJUDICADO--></h5>
-                    <p class="stat">$<%= ( parseInt( metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
-                </div>
+
 
             </div>
         </div>
@@ -106,8 +108,8 @@
 </div>
 
 <div class="container statistics">
-    <h1>Tipo de procedimiento</h1>
-    <p style="font-size: large"> Visualiza la distribución de los tipos de procedimiento realizados por el NAICM</p>
+    <h1>Procedimiento de contratación</h1>
+    <p style="font-size: large"> Visualiza la distribución de los montos según el procedimiento de contratación usado por GACM o su destino.</p>
 
     <p>
     <ul class="nav nav-tabs">
@@ -193,7 +195,8 @@
                     </div>
                 </div>
 
-                <small>* Incluye adhesión a licitaciónes realizadas por otras dependencias de la Administración Pública Federal. Actualización a noviembre de 2016.</small>
+                <small>Actualización a noviembre de 2016. </small><br>
+                <small>* Incluye adhesión a licitaciónes realizadas por otras dependencias de la Administración Pública Federal.</small>
             </div>
         </div>
 
@@ -258,8 +261,8 @@
 
 
     <div id="proveedores">
-        <h1>Información general de proveedores</h1>
-        <p style="font-size: large">Explora los datos sobre los proveedores de acuerdo a su razón social, tipo de procedimiento o vigencia de su contrato</p>
+        <h1>Información general de contratos y proveedores</h1>
+        <p style="font-size: large">Explora contratos y proveedores de acuerdo con su razón social, procedimiento de contratación o vigencia del contrato.</p>
         <!--<p class="small">Conjunto de datos: Emisiones 2016</p>-->
         <div class="well">
             <nav class="navbar navbar-default" role="navigation">
@@ -304,8 +307,8 @@
     </div>
 
 
-    <h1>Presupuesto planeado en el tiempo</h1>
-    <p style="font-size: large">Visualiza el avance en la ejecución de los recursos totales planeados para la construcción del NAICM</p>
+    <h1>Avances en los contratos en ejecución para la construcción del NAICM</h1>
+    <!--<p style="font-size: large">Visualiza el avance en la ejecución de los recursos totales planeados para la construcción del NAICM</p>-->
     <!--<p class="small">Conjunto de datos: Emisiones 2016</p>-->
     <p>
     <ul class="nav nav-pills">
@@ -588,7 +591,7 @@
 
     <div id="contrataciones_tiempo">
         <h1>Contrataciones en el tiempo</h1>
-        <p style="font-size: large">Compara los procedimientos de adquisición por su vigencia, fecha de firma y monto asignado</p>
+        <p style="font-size: large">Visualiza las contrataciones por procedimiento de contratación, vigencia, fecha de forma y monto.</p>
         <!--<p class="small">Conjunto de datos: Emisiones 2016</p>-->
         <div class="well series-chart">
             <div id="series_chart_div" style="height: 400px;"></div>
