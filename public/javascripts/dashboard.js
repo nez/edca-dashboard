@@ -297,6 +297,8 @@ function drawSeriesChart() {
             tooltip: {isHtml: true},
 
             hAxis: {
+                //maxValue: new Date(2017, 1, 1),
+                //minValue: new Date(2013, 9, 9),
                 title: 'Fecha de firma',
                 textStyle: {
                     italic: false,
@@ -314,7 +316,8 @@ function drawSeriesChart() {
 
             },
             vAxis: {
-                //maxValue: 2000,
+                maxValue: 8000,
+                scaleType: 'log',
                 title: 'Vigencia en días naturales',
                 textStyle: {
                     italic: false,
