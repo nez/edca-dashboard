@@ -118,7 +118,7 @@ function render_filters_colors_and_groups(data) {
         // SELECCIONA LOS CAMPOS A FILTRAR
 
 
-        if (lookup.type == "Razón social" ||lookup.type =="Vigencia" || lookup.type == "Tipo de contratación"){
+        if (lookup.type == "Razón social" ||lookup.type =="Vigencia del contrato" || lookup.type == "Procedimiento de contratación"){
             lookups.push(lookup);
         }
 /*

@@ -283,7 +283,14 @@
                             </select>
                         </div>
                         <div id="search_form" class="navbar-form navbar-left">
-                            <input type="text" class="form-control" id="buscar_bubble" value="" placeholder="Buscar proveedores"/>
+                            <div class="input-group">
+
+                                <input type="text" id="buscar_bubble" value="" class="form-control" placeholder="Buscar proveedores" aria-describedby="basic-addon1">
+                                <span class="input-group-addon" id="basic-addon1">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </span>
+                            </div>
+                            <!--<input type="text" class="form-control" id="buscar_bubble" value="" placeholder="Buscar proveedores"/>-->
                         </div>
                     </ul>
                 </div>
