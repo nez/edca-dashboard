@@ -156,8 +156,8 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 /*********************************
     BREADCRUMB STYLES
 *********************************/
-.breadcrumb-container                       { background-color: #f5f5f5; }
-.breadcrumb                                 { min-height: 30px; margin-bottom: 0; padding: 10px 0; background-color: transparent; border-radius: 0; }
+.breadcrumb-container                       { background-color: transparent; }
+.breadcrumb                                 { min-height: 30px; margin-left: 0; margin-bottom: 0; padding: 10px 0; background-color: transparent; border-radius: 0; }
 .breadcrumb > li                            { font-size: 12px; font-weight: 400; line-height: 30px; }
 .breadcrumb > li + li::before               { padding: 0 3px 0 8px; font-size: 13px; }
 .breadcrumb > li > a                        { display: inline; color: #545454; text-transform: capitalize; }
