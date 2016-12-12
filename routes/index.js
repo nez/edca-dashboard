@@ -341,7 +341,7 @@ router.post('/donut-chart-data', function (req, res) {
 router.get('/donut-chart2-data', function ( req, res) {
 
     edca_db.manyOrNone("select destino, sum(contract.value_amount) as total_amount, " +
-        "concat (trunc (sum (value_amount)/(select sum(value_amount) from contract) * 100 , 1),'%') as percentage " +
+        "concat (round (sum (value_amount)/(select sum(value_amount) from contract) * 100 , 1),'%') as percentage " +
         "from contract, contractingprocess " +
         "where  contract.contractingprocess_id= contractingprocess.id group by destino;").then(function (data) {
         res.json(data);
