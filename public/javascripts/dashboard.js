@@ -67,7 +67,8 @@ $(document).ready(function () {
         });
     }
 
-    function donutChart2( ) {
+    function donutChart2(  ) {
+
         $.get('/contratacionesabiertas/donut-chart2-data/', function (data) {
 
             var newData = [];
@@ -77,14 +78,12 @@ $(document).ready(function () {
                 newData.push([data[i].destino, Number( data [i].total_amount ), data[i].percentage ]);
             }
 
-            //console.log(newData);
 
-
-            var plot4 = $.jqplot('donutchart2', [newData], {
+            var plot4 = ff('donutchart2', [newData], {
                 //title: 'TIPOS DE CONTRATACION',
                 seriesDefaults: {
                     // make this a donut chart.
-                    renderer: $.jqplot.DonutRenderer,
+                    renderer: ff.DonutRenderer,
                     rendererOptions: {
                         // Donut's can be cut into slices like pies.
                         sliceMargin: 0,
@@ -130,6 +129,7 @@ $(document).ready(function () {
         });
     }
 
+    /*
     function donutChart2d3() {
         var width = 400,
             height = 350,
@@ -214,14 +214,15 @@ $(document).ready(function () {
 
         });
 
-    }
+    }*/
 
     donutChart1();
-    donutChart2();
+    //donutChart2();
     //donutChart2d3();
 
+    var ff= $.jqplot;
 
-    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function ( e ) {
         $('#donutchart2').html("");
         donutChart2();
     });
