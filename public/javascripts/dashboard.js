@@ -67,7 +67,7 @@ $(document).ready(function () {
         });
     }
 
-    function donutChart2() {
+    function donutChart2( ) {
         $.get('/contratacionesabiertas/donut-chart2-data/', function (data) {
 
             var newData = [];
