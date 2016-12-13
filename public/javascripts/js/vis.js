@@ -32,7 +32,7 @@ BubbleChart = (function() {
         this.data = data;
         this.width = 1140;
         this.height = 600;
-        this.tooltip = CustomTooltip("my_tooltip", 150);
+        this.tooltip = CustomTooltip("my_tooltip", 240);
         this.center = {
             x: this.width / 2,
             y: this.height / 2
@@ -438,7 +438,7 @@ $(function() {
 
 function CustomTooltip(tooltipId, width){
     var tooltipId = tooltipId;
-    $("body").append("<div class='tooltip' id='"+tooltipId+"'></div>");
+    $("body").append("<div class='tooltipBubble' id='"+tooltipId+"'></div>");
 
     if(width){
         $("#"+tooltipId).css("width", width);
