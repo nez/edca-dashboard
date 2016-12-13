@@ -588,6 +588,17 @@
                         <th width="30%">Formato</th>
                     </tr>
                     </thead>
+                    <tbody>
+                    <tr id="naicm">
+                        <th>Contrataciones Abiertas</th>
+                        <th>NAICM</th>
+                        <th>
+                            <span class="label" data-format="json">JSON</span>
+                            <span class="label" data-format="xlsx">XLS</span>
+                            <span class="label" data-format="pdf">PDF</span>
+                        </th>
+                    </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -627,6 +638,10 @@
     (function () {
         $( '.bootstrap-select' ).selectpicker();
     })();
+
+    $('#naicm').click(function () {
+        window.location.href= "http://datos.gob.mx/busca/organization/gacm";
+    });
 </script>
 </body>
 </html>
