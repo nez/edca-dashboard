@@ -635,6 +635,18 @@
 <!-- Archivo que contiene las funciones para los eventos -->
 <script type="text/javascript" src="/contratacionesabiertas/static/javascripts/js/custom.js"></script>
 <script>
+
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip({
+            delay: { "show": 0, "hide": 0 },
+            html: true,
+            template: '<div class="tooltip" role="tooltip" style="min-width: 150px; background-color: transparent;">' +
+            '<div class="tooltip-inner" style="border-radius: 2px; min-height: 40px; background-color: white; color: black; font-size: 12px; font-weight: bold; font-family: Open Sans"></div></div>'
+        })
+    });
+
+
     (function () {
         $( '.bootstrap-select' ).selectpicker();
     })();
