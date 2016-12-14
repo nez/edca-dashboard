@@ -164,27 +164,27 @@
                                <tr>
                                    <td> <%= metadata.total_procedimiento[0].procurementmethod %>*</td>
                                    <td> <strong>$<%= formatAmount( metadata.total_procedimiento[0].total ) %></strong></td>
-                                   <td> <%= metadata.total_procedimiento[0].conteo%></td>
+                                   <td style="text-align: center"> <%= metadata.total_procedimiento[0].conteo%></td>
                                </tr>
                                <tr>
                                    <td> <%= metadata.total_procedimiento[1].procurementmethod %></td>
                                    <td> <strong>$<%= formatAmount( metadata.total_procedimiento[1].total ) %></strong></td>
-                                   <td> <%= metadata.total_procedimiento[1].conteo%></td>
+                                   <td style="text-align: center"> <%= metadata.total_procedimiento[1].conteo%></td>
                                </tr>
                                <tr>
                                    <td> <%= metadata.total_procedimiento[2].procurementmethod %></td>
                                    <td> <strong>$<%= formatAmount( metadata.total_procedimiento[2].total ) %></strong></td>
-                                   <td> <%= metadata.total_procedimiento[2].conteo%></td>
+                                   <td style="text-align: center"> <%= metadata.total_procedimiento[2].conteo%></td>
                                </tr>
                                <tr>
                                    <td> <%= metadata.total_procedimiento[3].procurementmethod %></td>
                                    <td> <strong>$<%= formatAmount( metadata.total_procedimiento[3].total ) %></strong></td>
-                                   <td> <%= metadata.total_procedimiento[3].conteo%></td>
+                                   <td style="text-align: center"> <%= metadata.total_procedimiento[3].conteo%></td>
                                </tr>
                                <tr>
                                    <td> <%= metadata.total_procedimiento[4].procurementmethod %></td>
                                    <td> <strong>$<%= formatAmount( metadata.total_procedimiento[4].total ) %></strong></td>
-                                   <td> <%= metadata.total_procedimiento[4].conteo%></td>
+                                   <td style="text-align: center"> <%= metadata.total_procedimiento[4].conteo%></td>
                                </tr>
 
 
@@ -192,7 +192,7 @@
                                <tr>
                                    <td><strong>Total</strong></td>
                                    <td><strong>$<%= formatAmount( metadata.contract_value_amount_total )%></strong></td>
-                                   <td><%= metadata.cp_count %></td>
+                                   <td style="text-align: center;"><%= metadata.cp_count %></td>
                                </tr>
                                 </tbody>
                             </table>
@@ -250,13 +250,13 @@
                                 <tr>
                                     <td><%= metadata.destinos[i].destino %></td>
                                     <td><strong>$<%= formatAmount( metadata.destinos[i].total_amount) %></strong></td>
-                                    <td><%= metadata.destinos[i].conteo%></td>
+                                    <td style="text-align: center"><%= metadata.destinos[i].conteo%></td>
                                 </tr>
                                 <%}%>
                                 <tr>
                                     <td><strong>Total</strong></td>
                                     <td><strong>$<%= formatAmount( metadata.contract_value_amount_total )%></strong></td>
-                                    <td><%= metadata.cp_count %></td>
+                                    <td style="text-align: center"><%= metadata.cp_count %></td>
                                 </tr>
                                 </tbody>
                             </table>
