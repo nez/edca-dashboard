@@ -57,13 +57,24 @@
 
 <div class="row contract-stats no-border">
     <div class="col-md-3 col-md-offset-6">
+        <% if ( links != null){%>
         <p class="small">Descargar datos abiertos</p>
-        <span class="label" data-format="csv">CSV</span>
-        <span class="label" data-format="json">JSON</span>
+        <%if (links.json != null){%>
+        <a href="<%= links.json %>" download="json"><span class="label" data-format="json">JSON</span></a>
+        <%}%>
+
+        <%if (links.xlsx != null){%>
+        <a href="<%= links.xlsx %>" download="xlsx">  <span class="label" data-format="xlsx">XLSX</span></a>
+        <%}%>
+        <%}%>
     </div>
     <div class="col-md-3">
-        <p class="small">Descargar contrato</p>
-        <span class="label" data-format="pdf">PDF</span>
+        <% if ( links != null && links.pdf != null){%>
+        <a href="<%= links.pdf%>" download="pdf">
+            <p class="small">Descargar contrato</p>
+            <span class="label" data-format="pdf">PDF</span>
+        </a>
+        <%}%>
     </div>
 </div>
 <p class="small">Procesos</p>

@@ -166,7 +166,8 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     this.manyOrNone(q1,[ 'tendermilestone', cpid ]),
                     this.manyOrNone(q1,[ 'tenderdocuments', cpid ]),
                     this.manyOrNone(q1,[ 'tenderamendmentchanges', cpid ]),
-                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ])
+                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
+                    this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
                 ]);
             }).then(function (data) {
                 res.render('contract',{
@@ -178,7 +179,8 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     milestones: data[4],
                     documents: data[5],
                     changes: data[6],
-                    contractingprocess: data[7]
+                    contractingprocess: data[7],
+                    links: data[8]
                 });
             }).catch(function (error) {
                 console.log("ERROR: ", error);
@@ -196,7 +198,8 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     this.manyOrNone(q1 ,[ 'awarditem', cpid ]),
                     this.manyOrNone(q1 ,[ 'awarddocuments', cpid ]),
                     this.manyOrNone(q1 ,[ 'awardamendmentchanges', cpid ]),
-                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ])
+                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
+                    this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
                 ]);
             }).then(function (data) {
                 res.render('contract',{
@@ -208,7 +211,8 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     items: data[4],
                     documents: data[5],
                     changes: data[6],
-                    contractingprocess: data[7]
+                    contractingprocess: data[7],
+                    links: data[8]
                 });
             }).catch(function (error) {
                 console.log("ERROR: ", error);
@@ -225,7 +229,8 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     this.manyOrNone(q1 ,[ 'contractitem', cpid ]),
                     this.manyOrNone(q1 ,[ 'contractdocuments', cpid ]),
                     this.manyOrNone(q1 ,[ 'contractamendmentchanges', cpid ]),
-                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ])
+                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
+                    this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
                 ]);
             }).then(function (data) {
                 res.render('contract',{
@@ -236,7 +241,8 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     items : data[3],
                     documents : data[4],
                     changes : data[5],
-                    contractingprocess : data[6]
+                    contractingprocess : data[6],
+                    links: data[7]
                 });
             }).catch(function (error) {
                 console.log("ERROR: ", error);
@@ -252,7 +258,8 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     this.manyOrNone(q1, ['implementationtransactions', cpid ]),
                     this.manyOrNone(q1, ['implementationmilestone', cpid ]),
                     this.manyOrNone(q1, ['implementationdocuments', cpid ]),
-                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ])
+                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
+                    this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
                 ]);
             }).then(function (data) {
                 res.render('contract',{
@@ -262,7 +269,8 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     transactions: data[2],
                     milestones: data[3],
                     documents: data[4],
-                    contractingprocess : data[5]
+                    contractingprocess : data[5],
+                    links: data[6]
                 });
             }).catch(function (error) {
                 console.log("ERROR: ", error);
@@ -277,7 +285,8 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     this.one(q1, ['buyer', cpid]),
                     this.one(q1 ,['budget', cpid]),
                     this.manyOrNone(q1,['planningdocuments', cpid]),
-                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ])
+                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
+                    this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
                 ]);
             }).then(function (data) {
                 res.render('contract',{
@@ -286,7 +295,8 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
                     buyer: data[1],
                     budget : data[2],
                     documents: data[3],
-                    contractingprocess: data[4]
+                    contractingprocess: data[4],
+                    links: data[5]
                 });
             }).catch(function (error) {
                 console.log("ERROR: ", error);

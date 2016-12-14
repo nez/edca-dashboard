@@ -298,7 +298,7 @@ function drawSeriesChart() {
             tooltip: {isHtml: true},
 
             hAxis: {
-                //maxValue: new Date(2017, 1, 1),
+                maxValue: new Date(2017, 2, 2),
                 //minValue: new Date(2013, 9, 9),
                 title: 'Fecha de firma',
                 textStyle: {
