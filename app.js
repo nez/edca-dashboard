@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 //var contrataciones = require('./routes/contrataciones');
 var puertos = require('./routes/puertos');
-var redcompartida = require('./routes/redcompartida');
+//var redcompartida = require('./routes/redcompartida');
 
 var app = express();
 
