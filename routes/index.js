@@ -72,8 +72,8 @@ router.get('/contratos/',function (req, res) {
 //PAGINATION
 router.post('/pagination', function (req, res) {
     //contracts per page
-    //var limit = 10;
-    var limit = 3;
+    var limit = 10;
+    //var limit = 3;
 
     var npage = 1;
     if ( !isNaN( +(req.body.npage) )){
