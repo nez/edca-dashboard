@@ -22,6 +22,8 @@
 .top_labels {
     font-family: 'Open Sans'; /*'Raleway', sans-serif;*/
     font-size: 12px;
+    text-anchor: end;
+    alignment-baseline: text-before-edge;
 }
 
 #chartWrapper {
