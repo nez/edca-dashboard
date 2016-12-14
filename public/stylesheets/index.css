@@ -37,11 +37,10 @@ and (max-device-width: 736px){
     #icono_con{
         display: none;
     }
-    #conoce{
-        font-size: 16px;
-    }
 
 
+    h1 {font-size: 16px;}
+    #conoce { font-size: 14px; line-height: normal;}
     .statistics h1 {font-size: 16px;}
     .statistics p { font-size: 14px;}
 

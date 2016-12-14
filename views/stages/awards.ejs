@@ -5,11 +5,11 @@
     </div>
     <div class="col-md-3">
         <p class="small">Identificador</p>
-        <p><%= award.awardid %></p>
+        <p class="semi-bold"><%= award.awardid %></p>
     </div>
     <div class="col-md-6">
         <p class="small">Fecha de adjudicación</p>
-        <p>
+        <p class="semi-bold">
             <% if ( award.award_date instanceof Date ){%>
             <%= award.award_date.toLocaleDateString() %>
             <%}%>
@@ -20,7 +20,7 @@
 <div class="row contract-stats">
     <div class="col-md-3">
         <p class="small">Tipo</p>
-        <p><%= info.procurementmethod%></p>
+        <p class="semi-bold"><%= info.procurementmethod%></p>
     </div>
 
     <div class="col-md-3">
@@ -33,25 +33,25 @@
                 <%}%>
             </strong></p>
         <p class="small">Moneda </p>
-        <p><%= award.value_currency %></p>
+        <p class="semi-bold"><%= award.value_currency %></p>
     </div>
     <div class="col-md-6">
         <p class="small">Título</p>
-        <p><%= award.title%> </p>
+        <p class="semi-bold"><%= award.title%> </p>
     </div>
 
 </div>
 <div class="row contract-stats">
     <div class="col-md-12">
         <p class="small">Descripción</p>
-        <p><%= award.description%></p>
+        <p class="semi-bold"><%= award.description%></p>
     </div>
 </div>
 
 <div class="row contract-stats">
     <div class="col-md-12">
         <p class="small">Comprador</p>
-        <p><%= buyer.identifier_legalname %></p>
+        <p class="semi-bold"><%= buyer.identifier_legalname %></p>
     </div>
 </div>
 

@@ -5,11 +5,11 @@
     </div>
     <div class="col-md-3">
         <p class="small">Identificador</p>
-        <p><%=  contract.contractid %></p>
+        <p class="semi-bold"><%=  contract.contractid %></p>
     </div>
     <div class="col-md-6">
         <p class="small">Fecha de firma</p>
-        <p>
+        <p class="semi-bold">
             <% if (contract.datesigned instanceof Date){%>
             <%= contract.datesigned.toLocaleDateString()%>
             <%}%>
@@ -19,7 +19,7 @@
 <div class="row contract-stats">
     <div class="col-md-3">
         <p class="small">Tipo</p>
-        <p><%= info.procurementmethod%></p>
+        <p class="semi-bold"><%= info.procurementmethod%></p>
     </div>
     <div class="col-md-3">
         <p class="small">Monto</p>
@@ -31,23 +31,23 @@
                 <%}%>
             </strong></p>
         <p class="small">Moneda </p>
-        <p><%= contract.value_currency%></p>
+        <p class="semi-bold"><%= contract.value_currency%></p>
     </div>
     <div class="col-md-6">
         <p class="small">Título</p>
-        <p><%= contract.title%> </p>
+        <p class="semi-bold"><%= contract.title%> </p>
     </div>
 </div>
 <div class="row contract-stats">
     <div class="col-md-12">
         <p class="small">Descripción</p>
-        <p><%= contract.description %></p>
+        <p class="semi-bold"><%= contract.description %></p>
     </div>
 </div>
 <div class="row contract-stats">
     <div class="col-md-12">
         <p class="small">Comprador</p>
-        <p><%= buyer.identifier_legalname%></p>
+        <p class="semi-bold"><%= buyer.identifier_legalname%></p>
     </div>
 </div>
 <div class="row contract-stats no-border">
