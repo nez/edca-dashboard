@@ -257,8 +257,8 @@ BubbleChart = (function() {
         numCenters = allValuesArray.length;
         this.group_centers = {};
         this.group_labels = {};
-        position = 2; // Posicion dentro del DIV
-        total_slots = allValuesArray.length + 3;
+        position = 1.8; // Posicion dentro del DIV
+        total_slots = allValuesArray.length + 2;
         allValuesArray.forEach(function(i) {
             var x_position;
             x_position = _this.width * position / total_slots;
@@ -315,19 +315,17 @@ BubbleChart = (function() {
         label_data = d3.keys(group_labels);
         //console.log(group_labels);
         labels = this.vis.selectAll(".top_labels").data(label_data);
-        labels.enter().append("foreignObject").attr("class", "top_labels").attr("width", 80).attr("x", function(d) {
+        labels.enter().append("text").attr("class", "top_labels").attr("width", 80).attr("x", function(d) {
             return group_labels[d];
         }).attr("y", 10).text(function(d) {
             return d;
         });
     };
 
-
     BubbleChart.prototype.hide_labels = function() {
         var labels;
         labels = this.vis.selectAll(".top_labels").remove();
     };
-
 
     BubbleChart.prototype.show_details = function(data, i, element) {
         var content, key, title, value, _ref;
@@ -337,12 +335,10 @@ BubbleChart = (function() {
         this.tooltip.showTooltip(content, d3.event);
     };
 
-
     BubbleChart.prototype.hide_details = function(data, i, element) {
         d3.select(element)./*attr("stroke", "#404040").*/style("fill-opacity", 0.55);
         this.tooltip.hideTooltip();
     };
-
 
     BubbleChart.prototype.use_filters = function(filters, targets) {
         var filteredCircles = this.nodes.filter(function(d) {
