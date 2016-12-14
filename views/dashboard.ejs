@@ -52,7 +52,11 @@
             pointer-events: none;
         }
 
-
+        .nav-pills{
+            padding-bottom: 30px;
+            padding-top: 20px;
+            margin-left: 0px !important;
+        }
 
     </style>
 
@@ -114,18 +118,18 @@
 <div class="container statistics">
     <h1>Procedimiento y destino de la contratación</h1>
     <p style="font-size: large"> Visualiza la distribución de los montos según el procedimiento de contratación<!-- usado por GACM o su destino.--> utilizado</p>
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-pills">
         <li class="active"><a data-toggle="tab" href="#home">Procedimiento de contratación</a></li>
         <li><a data-toggle="tab" href="#categoria" id="cat" >Destino de la Contratación</a></li>
     </ul>
     <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
             <div class="well">
+
+
                 <div class="row">
-                    <div class="col-sm-5">
+                    <div class="col-sm-6">
                         <div id="chart4" style="color: #fff; font-size: 12pt; height: 400px;"></div>
-                    </div>
-                    <div class="col-sm-7">
 
                         <div class="row">
                             <div class="col-sm-6">
@@ -143,6 +147,8 @@
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-sm-6">
 
                         <div class="data-table">
                             <table class="table">
@@ -157,27 +163,27 @@
 
                                <tr>
                                    <td> <%= metadata.total_procedimiento[0].procurementmethod %></td>
-                                   <td> $<%= formatAmount( metadata.total_procedimiento[0].total ) %></td>
+                                   <td> <strong>$<%= formatAmount( metadata.total_procedimiento[0].total ) %></strong></td>
                                    <td> <%= metadata.total_procedimiento[0].conteo%></td>
                                </tr>
                                <tr>
                                    <td> <%= metadata.total_procedimiento[1].procurementmethod %></td>
-                                   <td> $<%= formatAmount( metadata.total_procedimiento[1].total ) %></td>
+                                   <td> <strong>$<%= formatAmount( metadata.total_procedimiento[1].total ) %></strong></td>
                                    <td> <%= metadata.total_procedimiento[1].conteo%></td>
                                </tr>
                                <tr>
                                    <td> <%= metadata.total_procedimiento[2].procurementmethod %></td>
-                                   <td> $<%= formatAmount( metadata.total_procedimiento[2].total ) %></td>
+                                   <td> <strong>$<%= formatAmount( metadata.total_procedimiento[2].total ) %></strong></td>
                                    <td> <%= metadata.total_procedimiento[2].conteo%></td>
                                </tr>
                                <tr>
                                    <td> <%= metadata.total_procedimiento[3].procurementmethod %></td>
-                                   <td> $<%= formatAmount( metadata.total_procedimiento[3].total ) %></td>
+                                   <td> <strong>$<%= formatAmount( metadata.total_procedimiento[3].total ) %></strong></td>
                                    <td> <%= metadata.total_procedimiento[3].conteo%></td>
                                </tr>
                                <tr>
                                    <td> <%= metadata.total_procedimiento[4].procurementmethod %> *</td>
-                                   <td> $<%= formatAmount( metadata.total_procedimiento[4].total ) %></td>
+                                   <td> <strong>$<%= formatAmount( metadata.total_procedimiento[4].total ) %></strong></td>
                                    <td> <%= metadata.total_procedimiento[4].conteo%></td>
                                </tr>
 
@@ -185,18 +191,26 @@
 
                                <tr>
                                    <td><strong>Total</strong></td>
-                                   <td>$<%= formatAmount( metadata.contract_value_amount_total )%></td>
+                                   <td><strong>$<%= formatAmount( metadata.contract_value_amount_total )%></strong></td>
                                    <td><%= metadata.cp_count %></td>
                                </tr>
                                 </tbody>
                             </table>
                         </div>
 
+                        <div class="row">
+                            <div class="col-sm-6"></div>
+                            <div class="col-sm-6">
+                                <small>Actualización a noviembre de 2016. </small><br>
+                                <small>* Incluye adhesión a licitaciónes realizadas por otras dependencias de la Administración Pública Federal.</small>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
-                <small>Actualización a noviembre de 2016. </small><br>
-                <small>* Incluye adhesión a licitaciónes realizadas por otras dependencias de la Administración Pública Federal.</small>
+
             </div>
         </div>
 
@@ -205,25 +219,20 @@
             <div class="well">
 
                 <div class="row">
-                    <div class="col-sm-5">
+                    <div class="col-sm-6">
                         <div id="donutchart2" style="color: #fff; font-size: 12pt; height: 400px;"></div>
-                    </div>
 
-                    <div class="col-sm-7">
 
-                        <div class="row">
-                            <div class="col-sm-6">
                                 <ul class="chart-legend">
                                     <li><span class="circle" style="background-color: #00cc99"></span>Adquisición de bienes y servicios</li>
                                     <li><span class="circle" style="background-color: #663399"></span>Obra pública</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="chart-legend">
                                     <li><span class="circle" style="background-color: #ff6600"></span>Servicios relacionados con la obra</li>
                                 </ul>
-                            </div>
-                        </div>
+
+
+                    </div>
+
+                    <div class="col-sm-6">
 
                         <div class="data-table">
                             <table class="table">
@@ -240,21 +249,29 @@
                                 <% for (var i=0; i < metadata.destinos.length; i++){%>
                                 <tr>
                                     <td><%= metadata.destinos[i].destino %></td>
-                                    <td>$<%= formatAmount( metadata.destinos[i].total_amount) %></td>
+                                    <td><strong>$<%= formatAmount( metadata.destinos[i].total_amount) %></strong></td>
                                     <td><%= metadata.destinos[i].conteo%></td>
                                 </tr>
                                 <%}%>
                                 <tr>
                                     <td><strong>Total</strong></td>
-                                    <td>$<%= formatAmount( metadata.contract_value_amount_total )%></td>
+                                    <td><strong>$<%= formatAmount( metadata.contract_value_amount_total )%></strong></td>
                                     <td><%= metadata.cp_count %></td>
                                 </tr>
                                 </tbody>
                             </table>
                         </div>
+
+                        <div class="row">
+                            <div class="col-sm-6"></div>
+                            <div class="col-sm-6">
+                                <small>Actualización a noviembre de 2016</small>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <small>Actualización a noviembre de 2016</small>
+
             </div>
         </div>
     </div>
@@ -268,6 +285,16 @@
             <nav class="navbar navbar-default" role="navigation">
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul id="visualizador" class="nav navbar-nav">
+                        <div id="search_form" class="navbar-form navbar-left">
+                            <div class="input-group">
+
+                                <input type="text" id="buscar_bubble" value="" class="form-control" placeholder="Buscar proveedores" aria-describedby="basic-addon1">
+                                <span class="input-group-addon" id="basic-addon1">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </span>
+                            </div>
+                            <!--<input type="text" class="form-control" id="buscar_bubble" value="" placeholder="Buscar proveedores"/>-->
+                        </div>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Filtrar <span class="caret"></span></strong></a>
                             <ul id="filtros" class="dropdown-menu scrollable-menu">
@@ -286,16 +313,7 @@
                                 <option value=''>Colorear</option>
                             </select>
                         </div>
-                        <div id="search_form" class="navbar-form navbar-left">
-                            <div class="input-group">
 
-                                <input type="text" id="buscar_bubble" value="" class="form-control" placeholder="Buscar proveedores" aria-describedby="basic-addon1">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <i class="glyphicon glyphicon-search"></i>
-                                </span>
-                            </div>
-                            <!--<input type="text" class="form-control" id="buscar_bubble" value="" placeholder="Buscar proveedores"/>-->
-                        </div>
                     </ul>
                 </div>
             </nav>
@@ -318,7 +336,7 @@
     <!--<p style="font-size: large">Visualiza el avance en la ejecución de los recursos totales planeados para la construcción del NAICM</p>-->
     <!--<p class="small">Conjunto de datos: Emisiones 2016</p>-->
     <p style="font-size: large"> Visualiza el progreso físico y financiero, programado y real para las diferentes obras y servicios.</p>
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-pills">
         <li class="active"><a data-toggle="tab" href="#tab1">Avance físico</a></li>
         <li><a data-toggle="tab" href="#tab2">Avance financiero</a></li>
     </ul>

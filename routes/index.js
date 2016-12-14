@@ -48,9 +48,9 @@ router.get('/contratos/',function (req, res) {
             this.one('select count (*) as total from contract where value_amount > 0'),
             this.one('select sum(value_amount) as total from contract'),
             this.manyOrNone("select tender.procurementmethod, sum (contract.value_amount) as total , count(*) as conteo from contract, tender " +
-                "where contract.contractingprocess_id=tender.contractingprocess_id group by tender.procurementmethod order by tender.procurementmethod"),
+                "where contract.contractingprocess_id=tender.contractingprocess_id group by tender.procurementmethod order by total"),
             this.manyOrNone("select destino, sum(contract.value_amount) as total_amount, count(*) as conteo from contract, contractingprocess " +
-                "where contract.contractingprocess_id= contractingprocess.id group by destino order by destino;")
+                "where contract.contractingprocess_id= contractingprocess.id group by destino order by total_amount;")
         ]);
     }).then(function (data) {
         res.render('dashboard',{ title: 'Contrataciones Abiertas',

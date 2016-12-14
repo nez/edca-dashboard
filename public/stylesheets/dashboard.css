@@ -152,8 +152,9 @@ div.google-visualization-tooltip {
 .search-form > .form-control.bootstrap-select .dropdown-menu.open .dropdown-menu li.selected > a > span,
 .search-form > .form-control.bootstrap-select .dropdown-menu.open .dropdown-menu li:hover > a > span       { color: #fff; }
 
+
 .statistics ul.chart-legend > li{
-    font-size: larger;
+    font-size: 14px;
 }
 
 @media only screen
