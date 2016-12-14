@@ -227,10 +227,14 @@ $(document).ready(function () {
     //donutChart2d3();
 
     var ff= $.jqplot;
+    var st= false;
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function ( e ) {
-        $('#donutchart2').html("");
-        donutChart2();
+        //$('#donutchart2').html("")
+        if (!st) {
+            donutChart2();
+            st = true;
+        }
     });
 
 
