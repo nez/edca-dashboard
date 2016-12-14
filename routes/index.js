@@ -72,7 +72,8 @@ router.get('/contratos/',function (req, res) {
 //PAGINATION
 router.post('/pagination', function (req, res) {
     //contracts per page
-    var limit = 10;
+    //var limit = 10;
+    var limit = 3;
 
     var npage = 1;
     if ( !isNaN( +(req.body.npage) )){
@@ -84,10 +85,11 @@ router.post('/pagination', function (req, res) {
         var q1, q2 ;
 
         if ( typeof req.body.keyword != 'undefined' && typeof req.body.orderby != 'undefined' && typeof req.body.orderby != 'undefined') {
-            q1 = this.manyOrNone("select contractingprocess.id as localid, contractingprocess.ocid, contractingprocess.stage, contract.title," +
+            q1 = this.manyOrNone("select json, contractingprocess.id as localid, contractingprocess.ocid, contractingprocess.stage, contract.title," +
                 "contract.datesigned, contract.value_amount, tender.procurementmethod, " +
                 "(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )" +
-                " from contract, tender, contractingprocess where contract.contractingprocess_id = tender.contractingprocess_id " +
+                " from contract, tender, contractingprocess, links " +
+                "where contract.contractingprocess_id = tender.contractingprocess_id and tender.contractingprocess_id= links.contractingprocess_id" +
                 " and contract.contractingprocess_id = contractingprocess.id " +
                 "and (contract.title ilike '%$1#%' or contract.contractid ilike '%$1#%') " +
                 ( req.body.filter != 'Todo' ? " and tender.procurementmethod ilike '$2#%' " : "") +
@@ -106,11 +108,11 @@ router.post('/pagination', function (req, res) {
                 req.body.filter
             ]);
         } else {
-            q1 = this.manyOrNone('select contractingprocess.id as localid, contractingprocess.ocid, contractingprocess.stage, contract.title,' +
+            q1 = this.manyOrNone('select json, contractingprocess.id as localid, contractingprocess.ocid, contractingprocess.stage, contract.title,' +
                 'contract.datesigned, contract.value_amount, tender.procurementmethod,' +
                 '(select count(*) as nsuppliers from supplier where supplier.contractingprocess_id = tender.contractingprocess_id )' +
-                ' from tender, contract, contractingprocess ' +
-                ' where tender.contractingprocess_id = contractingprocess.id and tender.contractingprocess_id = contract.contractingprocess_id order by contract.value_amount desc limit $1 offset $2',
+                ' from tender, contract, contractingprocess, links ' +
+                ' where tender.contractingprocess_id= links.contractingprocess_id and tender.contractingprocess_id = contractingprocess.id and tender.contractingprocess_id = contract.contractingprocess_id order by contract.value_amount desc limit $1 offset $2',
                 [
                     limit, ( +( npage ) -1 )* limit
                 ]);
