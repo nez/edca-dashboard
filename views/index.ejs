@@ -55,24 +55,27 @@
             </div>
             <div id="datos_duros">
                 <div class="row">
-                    <div class="col-sm-3 widget">
-                        <h5>CONTRATOS EN PROCESO</h5>
-                        <p class="stat"><%= metadata.cp_count %></p>
+                    <div class="col-sm-4 widget">
+                        <h5>MONTO CONTRATADO EN MXN</h5>
+                        <p class="stat">$<%= ( parseInt( metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
                     </div>
 
+                    <div class="col-sm-4 widget">
+                        <h5>PROCEDIMIENTOS DE CONTRATACIÓN</h5>
+                        <p class="stat"><%= Number(metadata.cp_count) + 1%></p>
+                    </div>
+
+                    <!--
                     <div class="col-sm-3 widget">
                         <h5>CONTRATOS ADJUDICADOS</h5>
                         <p class="stat"> <%= metadata.contract_count %></p>
                     </div>
+-->
+                    <div class="col-sm-4 widget">
+                        <h5>PROVEEDORES</h5>
+                        <p class="stat"><%= Number(metadata.supplier_count)+1 %></p>
+                    </div>
 
-                    <div class="col-sm-3 widget">
-                        <h5>TOTAL DE PROVEEDORES</h5>
-                        <p class="stat"><%= metadata.supplier_count %></p>
-                    </div>
-                    <div class="col-sm-3 widget">
-                        <h5>MONTO TOTAL ADJUDICADO</h5>
-                        <p class="stat">$<%= ( parseInt( metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -107,7 +110,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><a href="/contratacionesabiertas/contratos/">Nuevo Aeropuerto Internacional de la Cd. de México</a></td>
+                                    <td><a href="/contratacionesabiertas/contratos/">Nuevo Aeropuerto Internacional de la Ciudad de México</a></td>
                                     <td>NAICM</td>
                                     <td>$<%= ( parseInt( metadata.contract_value_amount_total) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></td>
                                 </tr>
