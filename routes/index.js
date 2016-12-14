@@ -340,7 +340,8 @@ router.post('/bubble-chart-data', function (req, res) {
 router.post('/donut-chart-data', function (req, res) {
 //    edca_db.many("select procurementmethod, count(*) from tender  where procurementmethod not like '' group by procurementmethod order by procurementmethod;").then(function (data) {
     edca_db.manyOrNone("select tender.procurementmethod, sum(contract.value_amount), " +
-        "concat (trunc (sum (contract.value_amount)/(select sum(value_amount) from contract) * 100 , 1),'%') as percentage " +
+        "concat (trunc (sum (contract.value_amount)/(select sum(value_amount) from contract) * 100 , 1),'%') as percentage, " +
+        "count(*) as conteo " +
         "from tender, contract  where  tender.contractingprocess_id= contract.contractingprocess_id " +
         "and tender.procurementmethod not like '' group by tender.procurementmethod order by tender.procurementmethod;").then(function (data) {
         res.json (data);
@@ -353,7 +354,8 @@ router.post('/donut-chart-data', function (req, res) {
 router.get('/donut-chart2-data', function ( req, res) {
 
     edca_db.manyOrNone("select destino, sum(contract.value_amount) as total_amount, " +
-        "concat (round (sum (value_amount)/(select sum(value_amount) from contract) * 100 , 1),'%') as percentage " +
+        "concat (round (sum (value_amount)/(select sum(value_amount) from contract) * 100 , 1),'%') as percentage," +
+        "count(*) as conteo " +
         "from contract, contractingprocess " +
         "where  contract.contractingprocess_id= contractingprocess.id group by destino;").then(function (data) {
         res.json(data);
