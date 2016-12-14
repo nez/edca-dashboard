@@ -2,59 +2,67 @@
 <div class="contract-item">
     <div class="row">
         <div class="col-sm-12">
-            <div class="inner">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <%  if (!isNaN( contracts[i].value_amount ) && contracts[i].value_amount > 0 ){%>
-                        <h3>$<%= ( parseFloat(contracts [i].value_amount).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></h3>
-                        <%} else{%>
-                        <h3>En proceso</h3>
-                        <%}%>
+            <div class="contract-info">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <%  if (!isNaN( contracts[i].value_amount ) && contracts[i].value_amount > 0 ){%>
+                            <h3>$<%= ( parseFloat(contracts [i].value_amount).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></h3>
+                            <%} else{%>
+                            <h3>En proceso</h3>
+                            <%}%>
+                        </div>
+                        <div class="col-sm-9">
+                            <h4><a href="<%= "/contratacionesabiertas/contrato/" + contracts[i].localid +"/planeacion"%>" >
+                                    <% if ( typeof contracts[i].title == "string" ){%>
+                                    <%= (contracts[i].title.length < 110 )? contracts[i].title: contracts[i].title.substring(0,109)+'...' %>
+                                    <%} else{%>
+                                    En proceso
+                                    <%}%>
+                                </a></h4>
+                            <p class="small">ID Procedimiento: <%= contracts[i].ocid %></p>
+                        </div>
                     </div>
-                    <div class="col-sm-9">
-                        <h4><a href="<%= "/contratacionesabiertas/contrato/" + contracts[i].localid +"/planeacion"%>" >
-                                <% if ( typeof contracts[i].title == "string" ){%>
-                                <%= (contracts[i].title.length < 110 )? contracts[i].title: contracts[i].title.substring(0,109)+'...' %>
-                                <%} else{%>
-                                En proceso
-                                <%}%>
-                            </a></h4>
-                        <p class="small">ID Procedimiento: <%= contracts[i].ocid %></p>
+                </div>
+                <div class="inner item-footer">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="small">Etapa</p>
+                            <ul class="stages-icons">
+                                <li><img src="/contratacionesabiertas/static/images/ic-planeacion.png"></li>
+                                <li><img src=<%= (contracts[i].stage > 0 )?"/contratacionesabiertas/static/images/ic-licitacion.png" : "/contratacionesabiertas/static/images/ic-menu-licitacion.png" %> ></li>
+                                <li><img src=<%= (contracts[i].stage > 1 )?"/contratacionesabiertas/static/images/ic-adjudicacion.png" : "/contratacionesabiertas/static/images/ic-menu-adjudicacion.png" %> ></li>
+                                <li><img src=<%= (contracts[i].stage > 2 )?"/contratacionesabiertas/static/images/ic-contratacion.png" : "/contratacionesabiertas/static/images/ic-menu-contratacion.png" %>></li>
+                                <li><img src=<%= (contracts[i].stage > 3 )?"/contratacionesabiertas/static/images/ic-implementacion.png" : "/contratacionesabiertas/static/images/ic-menu-implementacion.png" %> ></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="small">Tipo</p>
+                            <p class="legend"><%= contracts[i].procurementmethod %></p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="small">Proveedores:</p>
+                            <% if ( contracts[i].nsuppliers > 0 ) {%>
+                            <p class="legend"><a href= "<%= "/contratacionesabiertas/contrato/"+ contracts[i].localid +"/adjudicacion" %>" > <%= contracts[i].nsuppliers %> </a></p>
+                            <%} else {%>
+                            <p class="legend">En proceso</p>
+                            <%}%>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="small">Fecha de firma:</p>
+                            <% if ( contracts[i].datesigned instanceof Date ){%>
+                            <p class="legend"><%= contracts [i].datesigned.toLocaleDateString() %></p>
+                            <%} else {%>
+                            <p class="legend">En proceso</p>
+                            <%}%>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="inner item-footer">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <p class="small">Etapa</p>
-                        <ul class="stages-icons">
-                            <li><img src="/contratacionesabiertas/static/images/ic-planeacion.png"></li>
-                            <li><img src=<%= (contracts[i].stage > 0 )?"/contratacionesabiertas/static/images/ic-licitacion.png" : "/contratacionesabiertas/static/images/ic-menu-licitacion.png" %> ></li>
-                            <li><img src=<%= (contracts[i].stage > 1 )?"/contratacionesabiertas/static/images/ic-adjudicacion.png" : "/contratacionesabiertas/static/images/ic-menu-adjudicacion.png" %> ></li>
-                            <li><img src=<%= (contracts[i].stage > 2 )?"/contratacionesabiertas/static/images/ic-contratacion.png" : "/contratacionesabiertas/static/images/ic-menu-contratacion.png" %>></li>
-                            <li><img src=<%= (contracts[i].stage > 3 )?"/contratacionesabiertas/static/images/ic-implementacion.png" : "/contratacionesabiertas/static/images/ic-menu-implementacion.png" %> ></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3">
-                        <p class="small">Tipo</p>
-                        <p class="legend"><%= contracts[i].procurementmethod %></p>
-                    </div>
-                    <div class="col-sm-3">
-                        <p class="small">Proveedores:</p>
-                        <% if ( contracts[i].nsuppliers > 0 ) {%>
-                        <p class="legend"><a href= "<%= "/contratacionesabiertas/contrato/"+ contracts[i].localid +"/adjudicacion" %>" > <%= contracts[i].nsuppliers %> </a></p>
-                        <%} else {%>
-                        <p class="legend">En proceso</p>
-                        <%}%>
-                    </div>
-                    <div class="col-sm-3">
-                        <p class="small">Fecha de firma:</p>
-                        <% if ( contracts[i].datesigned instanceof Date ){%>
-                        <p class="legend"><%= contracts [i].datesigned.toLocaleDateString() %></p>
-                        <%} else {%>
-                        <p class="legend">En proceso</p>
-                        <%}%>
-                    </div>
+            <div class="contract-download">
+                <p>Descargar</p>
+                <div>
+                    <span class="dataset-format" data-format="JSON">JSON</span>
                 </div>
             </div>
         </div>
