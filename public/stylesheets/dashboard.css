@@ -121,9 +121,10 @@ div.google-visualization-tooltip {
 .statistics .well               { margin-bottom: 50px; }
 .statistics .small              { margin-bottom: 30px; }
 
-.contract-item                  { background-color: #f6f6f6; margin-bottom: 30px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.contract-item                  { background-color: #f6f6f6; margin-bottom: 30px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; position: relative; }
+.contract-item .contract-info   { width: 90%; float: left; }
 .contract-item .inner           { padding: 10px 15px; }
-.contract-item .item-footer     { background-color: #e3e3e3; -webkit-border-radius: 0 0 5px 5px; -moz-border-radius: 0 0 5px 5px; border-radius: 0 0 5px 5px; }
+.contract-item .item-footer     { background-color: #e3e3e3; -webkit-border-radius: 0 0 0 5px; -moz-border-radius: 0 0 0 5px; border-radius: 0 0 0 5px; }
 .contract-item h3               { font-weight: 700; color: #545454 /*#0c9*/; }
 .contract-item h4 > a           { font-size: 14px; font-weight: 600; color: #0c9/*#545454*/; }
 .contract-item h4 > a:hover     { font-size: 14px; font-weight: 600; color: #096/*#545454*/; }
@@ -133,6 +134,44 @@ div.google-visualization-tooltip {
 .contract-item .stages-icons > li               { display: inline-block; margin-right: 5px; }
 .contract-item .stages-icons > li:last-child    { margin-right: 0; }
 .contract-item .stages-icons > li > img         { width: 20px; }
+.contract-item .contract-download               { width: 10%; float: right; background-color: #c0c0c0; position: absolute; right: 15px; top: 0; bottom: 0; -webkit-border-radius: 0 5px 5px 0; -moz-border-radius: 0 5px 5px 0; border-radius: 0 5px 5px 0; }
+.contract-item .contract-download > p           { margin-top: 20px; margin-bottom: 20px; font-family: "Open Sans"; font-size: 13px; color: #7a7a7a; text-align: center; text-transform: uppercase; }
+.contract-item .contract-download > div         { text-align: center; }
+
+/********************************
+    Badges Styles
+********************************/
+.dataset-format                             { font-size: 12px; font-weight: 700; color: #fff; text-transform: uppercase; border-radius: 0; padding: 5px 7px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.dataset-format[data-format="csv"],
+.dataset-format[data-format="CSV"]          { background-color: #ffd100; }
+.dataset-format[data-format="kml"],
+.dataset-format[data-format="KML"]          { background-color: #474747; }
+.dataset-format[data-format="geojson"],
+.dataset-format[data-format="GEOJSON"],
+.dataset-format[data-format="json"],
+.dataset-format[data-format="JSON"]         { background-color: #33ffd1; }
+.dataset-format[data-format="pdf"],
+.dataset-format[data-format="PDF"]          { background-color: #ff2200; }
+.dataset-format[data-format="arcgis"],
+.dataset-format[data-format="ARCGIS"]       { background-color: #d100FF; }
+.dataset-format[data-format="xlsx"],
+.dataset-format[data-format="xls"],
+.dataset-format[data-format="excel"],
+.dataset-format[data-format="vnd.ms-excel"],
+.dataset-format[data-format="EXCEL"],
+.dataset-format[data-format="VND.MS-EXCEL"],
+.dataset-format[data-format="XLS"],
+.dataset-format[data-format="XLSX"]         { background-color: #00d100; }
+.dataset-format[data-format="xml"],
+.dataset-format[data-format="XML"]          { background-color: #0000d1; }
+.dataset-format[data-format="oracle"],
+.dataset-format[data-format="ORACLE"]       { background-color: #55bada; }
+.dataset-format[data-format="shp"],
+.dataset-format[data-format="SHP"]          { background-color: #bada55; }
+.dataset-format[data-format="kmz"],
+.dataset-format[data-format="KMZ"]          { background-color: #55adab; }
+.dataset-format[data-format="zip"],
+.dataset-format[data-format="ZIP"]          { background-color: #669999; }
 
 .search-form > .form-control.bootstrap-select                           { display: inline-block; width: 17%; box-shadow: none; }
 .search-form > .form-control.bootstrap-select > .btn                    { border: none; text-align: center; text-transform: none; color: #9b9b9b; position: relative; left: 50%; transform: translateX(-50%); background-color: #fff; line-height: 20px; }
