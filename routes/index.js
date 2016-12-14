@@ -369,6 +369,9 @@ router.get('/d3-bubble-chart-data', function (req, res) {
 });
 
 
-
+/* GET home page. */
+router.get('/redcompartida', function(req, res, next) {
+    res.render('red', { title: 'Contrataciones Abiertas' });
+});
 
 module.exports = router;
