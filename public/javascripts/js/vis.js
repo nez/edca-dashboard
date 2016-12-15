@@ -330,7 +330,7 @@ BubbleChart = (function() {
     BubbleChart.prototype.show_details = function(data, i, element) {
         var content, key, title, value, _ref;
         d3.select(element)./*attr("stroke", "black").*/style("fill-opacity", 0.85).style("cursor", "pointer");
-        content = data.original['Razón social']; //.Elemento;
+        content = "Razón social:<br><b>"+data.original['Razón social']+"</b>"; //.Elemento;
         //content = data.original.identifier_legalname; //.Elemento;
         this.tooltip.showTooltip(content, d3.event);
     };

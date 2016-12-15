@@ -59,9 +59,9 @@ $(document).ready(function () {
                     //tooltipFormatString: '%s'
                     tooltipContentEditor: function (current, serie, index, plot) {
                         //return "<div class='col-sm-2'><p style='color: black'><b>" + data[index][1] + " " + data[index][0] + "</b></p></div>";
-                        return "<div class='col-sm-2'><p style='color: black'><b>" + newData[index][0] +  " (" +newData[index][2]+")" +":<br> $"
+                        return "<div class='col-sm-2'><p style='color: black'>" + newData[index][0] +  " (" +newData[index][2]+")" +":<br><b> $"
                             +  ( (   newData[index][1]    ).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")  +
-                                "<br>Número de contratos:<br>"+
+                                "</b><br>Número de contratos:<br><b>"+
                                newData[index][3]                            +
                             "</b></p></div>";
                     }
@@ -123,9 +123,9 @@ $(document).ready(function () {
                     //dataLabels: 'value',
                     //tooltipFormatString: '%s'
                     tooltipContentEditor: function (current, serie, index, plot) {
-                        return "<div class='col-sm-2'><p style='color: black'><b>" + newData[index][0] +" ("+newData[index][2]+")" +
-                            ":<br> $" +  ( (   newData[index][1]    ).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")  +
-                                "<br>Número de contratos: <br>"+
+                        return "<div class='col-sm-2'><p style='color: black'>" + newData[index][0] +" ("+newData[index][2]+")" +
+                            ":<br><b> $" +  ( (   newData[index][1]    ).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")  +
+                                "</b><br>Número de contratos: <br><b>"+
                                 newData[index][3]+
                             "</b></p></div>";
 
@@ -134,93 +134,6 @@ $(document).ready(function () {
             });
         });
     }
-
-    /*
-    function donutChart2d3() {
-        var width = 400,
-            height = 350,
-            radius = Math.min(width, height) / 2;
-
-        var color = d3.scale.ordinal()
-            .range([
-                '#00cc99', // adjudicación
-                '#663399', // contrato de fideicomiso
-                //'#ff6666', // convenio de colaboración
-                //'#ffcc00', // ITP
-                '#ff6600' // Licitaci
-            ]);
-
-        var arc = d3.svg.arc()
-            .outerRadius(radius - 10)
-            .innerRadius(radius - 85);
-
-        var pie = d3.layout.pie()
-            .sort(null)
-            .value(function(d) { return d.total_amount; });
-
-        var svg = d3.select("#donutchart2").append("svg")
-            .attr("width", width)
-            .attr("height", height)
-            .append("g")
-            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
-            .on("mouseover", function () {
-                mouseover();
-            })
-            .on("mousemove", function(){
-                mousemove();
-            })
-            .on("mouseout", function(){
-                mouseout();
-            });
-
-        var div = d3.select("body").append("div")
-            .attr("class", "tooltip")
-            .style("display", "none");
-
-        function mouseover() {
-            div.style("display", "inline");
-        }
-
-        function mousemove() {
-
-            div
-                .text(d3.event.pageX + ", " + d3.event.pageY)
-               // .text(d.destino + ": " + d.total_amount)
-                .style("left", (d3.event.pageX - 34) + "px")
-                .style("top", (d3.event.pageY - 12) + "px");
-        }
-
-        function mouseout(d) {
-            div.style("display", "none");
-        }
-
-
-
-        d3.json('/contratacionesabiertas/donut-chart2-data/', function(error, data) {
-            //alert(data[0].total_amount);
-
-            //console.log(data);
-            if (error) throw error;
-
-            var g = svg.selectAll(".arc")
-                .data(pie(data))
-                .enter().append("g")
-                .attr("class", "arc");
-
-            g.append("path")
-                .attr("d", arc)
-                .style("fill", function(d) { return color(d.data.destino); });
-
-            g.append("text")
-                .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-                .attr("dy", ".35em")
-                .text(function(d) {
-                    return d.data.percentage;
-                }).style('fill', 'white').style("font-size", "14px");
-
-        });
-
-    }*/
 
     donutChart1();
     //donutChart2();
@@ -328,6 +241,7 @@ function drawSeriesChart() {
             },
             vAxis: {
                 maxValue: 8000,
+                //minValue: -100,
                 scaleType: 'log',
                 title: 'Vigencia en días naturales',
                 textStyle: {
@@ -390,6 +304,10 @@ function drawSeriesChart() {
         var formatter = new google.visualization.NumberFormat(
             {prefix: '$', negativeColor: 'red', negativeParens: true, decimalSymbol: '.', groupingSymbol: ','});
         formatter.format(dt, 4); // Apply formatter to second column
+
+        var formatter1 = new google.visualization.NumberFormat(
+            {negativeColor: 'red', fractionDigits: 0, negativeParens: true, decimalSymbol: '.', groupingSymbol: ','});
+        formatter1.format(dt, 2); // Apply formatter to second column
 
 
         function resizeHandler () {
