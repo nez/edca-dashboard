@@ -44,7 +44,7 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 .data-table                                 { margin-bottom: 30px; padding: 30px 20px; background-color: #efefef; border-radius: 4px; }
 .data-table table                           { margin-bottom: 0; }
 .data-table table > tbody > tr              { cursor: pointer; }
-.data-table table > tbody > tr > td         { padding-bottom: 20px; border-top-color: #d8d8d8; }
+.data-table table > tbody > tr > td         { padding-bottom: 10px; border-top-color: #d8d8d8; }
 .data-table table > thead > tr > th         { font-size: 14px; font-weight: 700; }
 .data-table table > tbody > tr > td         { font-size: 14px; }
 .data-table table > tbody > tr > td > a     { font-weight: 500; color: #0c9; }

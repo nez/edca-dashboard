@@ -126,9 +126,9 @@
 
                 <div class="row">
                     <div class="col-sm-6">
-                        <div id="chart4" style="text-align: center; color: #fff; font-size: 12pt; height: 400px;"></div>
+                        <div id="chart4" style="text-align: center; color: #fff; font-size: 12pt; height: 430px;"></div>
 
-                        <div class="row" style="padding-top: 35px">
+                        <div class="row">
                             <div class="col-sm-6">
                                 <ul class="chart-legend">
                                     <li><span class="circle" style="background-color: #ff6600"></span>Licitación pública</li>
@@ -147,52 +147,54 @@
                     </div>
                     <div class="col-sm-6">
 
-                        <div class="data-table" style="background: #cdcdcd;">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>Procedimiento de contratación</th>
-                                    <th>Monto sin IVA</th>
-                                    <th>Contratos</th>
-                                </tr>
-                                </thead>
-                                <tbody>
+                        <div style="height: 430px">
+                            <div class="data-table" style="background: #cdcdcd;">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>Procedimiento de contratación</th>
+                                        <th>Monto sin IVA</th>
+                                        <th>Contratos</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
 
-                                <tr>
-                                    <td> <%= metadata.total_procedimiento[0].procurementmethod %>*</td>
-                                    <td> <strong>$<%= formatAmount( metadata.total_procedimiento[0].total ) %></strong></td>
-                                    <td style="text-align: center"> <%= metadata.total_procedimiento[0].conteo%></td>
-                                </tr>
-                                <tr>
-                                    <td> <%= metadata.total_procedimiento[1].procurementmethod %></td>
-                                    <td> <strong>$<%= formatAmount( metadata.total_procedimiento[1].total ) %></strong></td>
-                                    <td style="text-align: center"> <%= metadata.total_procedimiento[1].conteo%></td>
-                                </tr>
-                                <tr>
-                                    <td> <%= metadata.total_procedimiento[2].procurementmethod %></td>
-                                    <td> <strong>$<%= formatAmount( metadata.total_procedimiento[2].total ) %></strong></td>
-                                    <td style="text-align: center"> <%= metadata.total_procedimiento[2].conteo%></td>
-                                </tr>
-                                <tr>
-                                    <td> <%= metadata.total_procedimiento[3].procurementmethod %></td>
-                                    <td> <strong>$<%= formatAmount( metadata.total_procedimiento[3].total ) %></strong></td>
-                                    <td style="text-align: center"> <%= metadata.total_procedimiento[3].conteo%></td>
-                                </tr>
-                                <tr>
-                                    <td> <%= metadata.total_procedimiento[4].procurementmethod %></td>
-                                    <td> <strong>$<%= formatAmount( metadata.total_procedimiento[4].total ) %></strong></td>
-                                    <td style="text-align: center"> <%= metadata.total_procedimiento[4].conteo%></td>
-                                </tr>
+                                    <tr>
+                                        <td> <%= metadata.total_procedimiento[0].procurementmethod %>*</td>
+                                        <td> <strong>$<%= formatAmount( metadata.total_procedimiento[0].total ) %></strong></td>
+                                        <td style="text-align: center"> <%= metadata.total_procedimiento[0].conteo%></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <%= metadata.total_procedimiento[1].procurementmethod %></td>
+                                        <td> <strong>$<%= formatAmount( metadata.total_procedimiento[1].total ) %></strong></td>
+                                        <td style="text-align: center"> <%= metadata.total_procedimiento[1].conteo%></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <%= metadata.total_procedimiento[2].procurementmethod %></td>
+                                        <td> <strong>$<%= formatAmount( metadata.total_procedimiento[2].total ) %></strong></td>
+                                        <td style="text-align: center"> <%= metadata.total_procedimiento[2].conteo%></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <%= metadata.total_procedimiento[3].procurementmethod %></td>
+                                        <td> <strong>$<%= formatAmount( metadata.total_procedimiento[3].total ) %></strong></td>
+                                        <td style="text-align: center"> <%= metadata.total_procedimiento[3].conteo%></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <%= metadata.total_procedimiento[4].procurementmethod %></td>
+                                        <td> <strong>$<%= formatAmount( metadata.total_procedimiento[4].total ) %></strong></td>
+                                        <td style="text-align: center"> <%= metadata.total_procedimiento[4].conteo%></td>
+                                    </tr>
 
 
 
-                                <tr>
-                                    <td><strong>Total</strong></td>
-                                    <td><strong>$<%= formatAmount( metadata.contract_value_amount_total )%></strong></td>
-                                    <td style="text-align: center;"><%= metadata.cp_count %></td>
-                                </tr>
-                                </tbody>
-                            </table>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>$<%= formatAmount( metadata.contract_value_amount_total )%></strong></td>
+                                        <td style="text-align: center;"><%= metadata.cp_count %></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
                         <div class="row">
@@ -217,7 +219,7 @@
 
                 <div class="row">
                     <div class="col-sm-6">
-                        <div id="donutchart2" style="text-align: center; color: #fff; font-size: 12pt; height: 400px;"></div>
+                        <div id="donutchart2" style="text-align: center; color: #fff; font-size: 12pt; height: 430px;"></div>
 
 
                         <ul class="chart-legend">
@@ -230,36 +232,38 @@
                     </div>
 
                     <div class="col-sm-6">
+                        <div style="height: 430px">
 
-                        <div class="data-table" style="background-color: #cdcdcd">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>Categoría de contratación</th>
-                                    <th>Monto sin IVA</th>
-                                    <th>Contratos</th>
-                                </tr>
-                                </thead>
-                                <tbody>
+                            <div class="data-table" style="background-color: #cdcdcd">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>Categoría de contratación</th>
+                                        <th>Monto sin IVA</th>
+                                        <th>Contratos</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
 
 
-                                <% for (var i=0; i < metadata.destinos.length; i++){%>
-                                <tr>
-                                    <td><%= metadata.destinos[i].destino %></td>
-                                    <td><strong>$<%= formatAmount( metadata.destinos[i].total_amount) %></strong></td>
-                                    <td style="text-align: center"><%= metadata.destinos[i].conteo%></td>
-                                </tr>
-                                <%}%>
-                                <tr>
-                                    <td><strong>Total</strong></td>
-                                    <td><strong>$<%= formatAmount( metadata.contract_value_amount_total )%></strong></td>
-                                    <td style="text-align: center"><%= metadata.cp_count %></td>
-                                </tr>
-                                </tbody>
-                            </table>
+                                    <% for (var i=0; i < metadata.destinos.length; i++){%>
+                                    <tr>
+                                        <td><%= metadata.destinos[i].destino %></td>
+                                        <td><strong>$<%= formatAmount( metadata.destinos[i].total_amount) %></strong></td>
+                                        <td style="text-align: center"><%= metadata.destinos[i].conteo%></td>
+                                    </tr>
+                                    <%}%>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>$<%= formatAmount( metadata.contract_value_amount_total )%></strong></td>
+                                        <td style="text-align: center"><%= metadata.cp_count %></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
-                        <div class="row" style="padding-top: 75px">
+                        <div class="row" >
                             <div class="col-sm-6"></div>
                             <div class="col-sm-6">
                                 <small>Actualización a noviembre de 2016</small>
@@ -611,7 +615,7 @@
                         <th>NAICM</th>
                         <th>
                             <span class="label" data-format="json">JSON</span>
-                           <!-- <span class="label" data-format="xlsx">XLS</span>
+                            <!-- <span class="label" data-format="xlsx">XLS</span>
                             <span class="label" data-format="pdf">PDF</span>-->
                         </th>
                     </tr>
