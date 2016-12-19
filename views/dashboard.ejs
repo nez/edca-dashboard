@@ -17,6 +17,10 @@
     <link rel="import" href="/contratacionesabiertas/static/bower_components/dgm-navbar/dgm-navbar.html">
     <link rel="import" href="/contratacionesabiertas/static/bower_components/dgm-footer/dgm-footer.html">
 
+    <link rel="stylesheet" type="text/css" href="/contratacionesabiertas/static/bower_components/tooltipster/dist/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="/contratacionesabiertas/static/bower_components/tooltipster-follower/dist/css/tooltipster-follower.min.css"/>
+
+
     <style>
         .arc text {
             font: 10px sans-serif;
@@ -35,10 +39,6 @@
         .container {
             max-width: 1100px;
         }
-
-    </style>
-
-    <style>
 
         .tooltip {
             position: absolute;
@@ -61,6 +61,28 @@
         .nav-pills > li {
             padding-bottom: 10px;
         }
+
+        .tooltipster-default{
+            border-radius: 3px;
+            border: none;
+            background: white;
+        }
+
+
+        .tooltipster-default .tooltipster-content {
+            font: Open Sans;
+            font-size: 12px;
+            border: none;
+            color: black;
+            background: white;
+            /*padding: 1em 1em 1em 1em;
+            overflow: hidden;*/
+        }
+
+        .tooltipster-default .tooltipster-box{
+            border: none;
+        }
+
 
     </style>
 
@@ -347,7 +369,7 @@
             <div class="well">
                 <label>Estudios</label>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-success" style="width: 94.8%" data-toggle="tooltip" title="Avance programado: <br><b>94.8%</b>">
+                    <div class="progress-bar progress-bar-success" style="width: 94.8%"  title="Avance programado: <br><b>94.8%</b>">
                         <span>Programado</span>
                     </div>
                     <div class="progress-bar" style="width: 40%;">
@@ -355,7 +377,7 @@
                     </div>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-primary" style="width: 92.8%" data-toggle="tooltip" title="Avance real: <br><b>92.8%</b>">
+                    <div class="progress-bar progress-bar-primary" style="width: 92.8%" title="Avance real: <br><b>92.8%</b>">
                         <span>Real</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -371,7 +393,7 @@
                 </ul>
                 <label>Obras</label>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-success" style="width: 72.0%" data-toggle="tooltip" title="Avance programado: <br><b>72.0%</b>">
+                    <div class="progress-bar progress-bar-success" style="width: 72.0%" title="Avance programado: <br><b>72.0%</b>">
                         <span>Programado</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -379,7 +401,7 @@
                     </div>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-primary" style="width: 62.8%" data-toggle="tooltip" title="Avance real: <br><b>62.8%</b>">
+                    <div class="progress-bar progress-bar-primary" style="width: 62.8%" title="Avance real: <br><b>62.8%</b>">
                         <span>Real</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -395,7 +417,7 @@
                 </ul>
                 <label>Proyectos ejecutivos</label>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-success" style="width: 87.2%" data-toggle="tooltip" title="Avance programado: <br><b>87.2%</b>">
+                    <div class="progress-bar progress-bar-success" style="width: 87.2%" title="Avance programado: <br><b>87.2%</b>">
                         <span>Programado</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -403,7 +425,7 @@
                     </div>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-primary" style="width: 87.2%" data-toggle="tooltip" title="Avance real: <br><b>87.2%</b>">
+                    <div class="progress-bar progress-bar-primary" style="width: 87.2%" title="Avance real: <br><b>87.2%</b>">
                         <span>Real</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -419,7 +441,7 @@
                 </ul>
                 <label>Servicios varios</label>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-success" style="width: 72.6%" data-toggle="tooltip" title="Avance programado: <br><b>72.6%</b>">
+                    <div class="progress-bar progress-bar-success" style="width: 72.6%" title="Avance programado: <br><b>72.6%</b>">
                         <span>Programado</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -427,7 +449,7 @@
                     </div>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-primary" style="width: 56.5%" data-toggle="tooltip" title="Avance real: <br><b>56.5%</b>">
+                    <div class="progress-bar progress-bar-primary" style="width: 56.5%" title="Avance real: <br><b>56.5%</b>">
                         <span>Real</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -449,7 +471,7 @@
             <div class="well">
                 <label>Estudios</label>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-success" style="width: 93.2%" data-toggle="tooltip" title="Avance programado: <br><b>93.2%</b>">
+                    <div class="progress-bar progress-bar-success" style="width: 93.2%" title="Avance programado: <br><b>93.2%</b>">
                         <span>Programado</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -457,7 +479,7 @@
                     </div>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-primary" style="width: 89.4%" data-toggle="tooltip" title="Avance real: <br><b>89.4%</b>">
+                    <div class="progress-bar progress-bar-primary" style="width: 89.4%" title="Avance real: <br><b>89.4%</b>">
                         <span>Real</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -474,7 +496,7 @@
                 <label>Obras</label>
 
                 <div class="progress">
-                    <div class="progress-bar progress-bar-success" style="width: 61.8%" data-toggle="tooltip" title="Avance programado: <br><b>61.8%</b>">
+                    <div class="progress-bar progress-bar-success" style="width: 61.8%" title="Avance programado: <br><b>61.8%</b>">
                         <span>Programado</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -482,7 +504,7 @@
                     </div>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-primary" style="width: 52.9%" data-toggle="tooltip" title="Avance real: <br><b>52.9%</b>">
+                    <div class="progress-bar progress-bar-primary" style="width: 52.9%" title="Avance real: <br><b>52.9%</b>">
                         <span>Real</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -498,7 +520,7 @@
                 </ul>
                 <label>Proyectos ejecutivos</label>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-success" style="width: 86.6%" data-toggle="tooltip" title="Avance programado: <br><b>92.8%</b>">
+                    <div class="progress-bar progress-bar-success" style="width: 86.6%" title="Avance programado: <br><b>92.8%</b>">
                         <span>Programado</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -506,7 +528,7 @@
                     </div>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-primary" style="width: 86.6%" data-toggle="tooltip" title="Avance real: <br><b>86.6%</b>">
+                    <div class="progress-bar progress-bar-primary" style="width: 86.6%" title="Avance real: <br><b>86.6%</b>">
                         <span>Real</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -523,7 +545,7 @@
                 <label>Servicios varios</label>
 
                 <div class="progress">
-                    <div class="progress-bar progress-bar-success" style="width: 69.9%" data-toggle="tooltip" title="Avance programado: <br><b>69.9%</b>">
+                    <div class="progress-bar progress-bar-success" style="width: 69.9%" title="Avance programado: <br><b>69.9%</b>">
                         <span>Programado</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -531,7 +553,7 @@
                     </div>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-primary" style="width: 47.1%" data-toggle="tooltip" title="Avance real: <br><b>47.1%</b>">
+                    <div class="progress-bar progress-bar-primary" style="width: 47.1%" title="Avance real: <br><b>47.1%</b>">
                         <span>Real</span>
                     </div>
                     <div class="progress-bar" style="width: 40%">
@@ -651,6 +673,9 @@
 
 <script src="/contratacionesabiertas/static/javascripts/dashboard.js"></script>
 
+<script type="text/javascript" src="/contratacionesabiertas/static/bower_components/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+<script type="text/javascript" src="/contratacionesabiertas/static/bower_components/tooltipster-follower/dist/js/tooltipster-follower.min.js"></script>
+
 <!-- Sergio -->
 <!-- Archivo que contiene las funciones para la visualizacion de los elementos -->
 <script type="text/javascript" src="/contratacionesabiertas/static/javascripts/js/vis.js"></script>
@@ -658,17 +683,32 @@
 <script type="text/javascript" src="/contratacionesabiertas/static/javascripts/js/custom.js"></script>
 <script>
 
-
+/*
     $(function () {
         $('[data-toggle="tooltip"]').tooltip({
             delay: { "show": 0, "hide": 0 },
             html: true,
-            placement: 'rigth',
+            //placement: 'rigth',
+            placement: function(t_el, el) {
+                return (typeof $(el).data('placement') === 'undefined') ? 'bottom' :  $(el).data('placement');
+            },
+            trigger: 'hover',
             template: '<div class="tooltip" role="tooltip" style="min-width: 150px; background-color: transparent;">' +
             '<div class="tooltip-inner" style="border-radius: 2px; min-height: 40px; background-color: white; color: black; ' +
             'text-align: left; font-size: 12px; font-family: Open Sans"></div></div>'
         })
-    });
+    });*/
+
+$('.progress-bar').tooltipster({
+    //anchor: 'bottom-left',
+    delay : 0,
+    contentAsHTML: true,
+    minWidth: 150,
+    //maxWidth: 300,
+    offset: [20, 20],
+    plugins: ['follower'],
+    theme: ['tooltipster-default']
+});
 
 
     (function () {

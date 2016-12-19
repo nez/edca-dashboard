@@ -22,7 +22,9 @@
     "jqplot": "*",
     "webcomponentsjs": "^0.7.22",
     "polymer": "^1.5.0",
-    "dgm-navbar":"mxabierto/dgm-navbar#latest",
-    "dgm-footer":"mxabierto/dgm-footer#latest"
+    "dgm-navbar": "mxabierto/dgm-navbar#latest",
+    "dgm-footer": "mxabierto/dgm-footer#latest",
+    "tooltipster": "^4.1.6",
+    "tooltipster-follower": "^0.1.5"
   }
 }
