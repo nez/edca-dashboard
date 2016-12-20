@@ -1,8 +1,8 @@
 # Plataforma de Contrataciones Abiertas
 Tablero con gráficas y visualizaciones de información de Contrataciones Abiertas. Proyectos incluidos:
 - NAICM
-- Red compartida
-- Puertos
+- Red Compartida
+- Puertos Abiertos
 
 ## Instalación
 Instrucciones para instalar la Plataforma de Contrataciones Abiertas
