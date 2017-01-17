@@ -237,4 +237,5 @@ insert into links ("json","xlsx","pdf","contractingprocess_id") values
 ('https://drive.google.com/uc?export=download&id=0B61sw0OpVJcVeTFNbzdQYUozYUk','https://drive.google.com/uc?export=download&id=0B61sw0OpVJcVZzh6NnRzdkNmTm8','https://drive.google.com/uc?export=download&id=0B61sw0OpVJcVWGVnaHliY2tQTEk',242),
 ('https://drive.google.com/uc?export=download&id=0B61sw0OpVJcVelBWMEwxNTRfT00','https://drive.google.com/uc?export=download&id=0B61sw0OpVJcVMTVYbnlyaFA4T3M',null,251),
 ('https://drive.google.com/uc?export=download&id=0B61sw0OpVJcVNEVEcUZ1WnVpZkk','https://drive.google.com/uc?export=download&id=0B61sw0OpVJcVYnMxd2gyZGNXTkE',null,250),
-('https://drive.google.com/uc?export=download&id=0B61sw0OpVJcVYS1oT2Q3Tk5LWjA','https://drive.google.com/uc?export=download&id=0B61sw0OpVJcVVHprcWFHenFJc0U',null,246);
+('https://drive.google.com/uc?export=download&id=0B61sw0OpVJcVYS1oT2Q3Tk5LWjA','https://drive.google.com/uc?export=download&id=0B61sw0OpVJcVVHprcWFHenFJc0U',null,246),
+(null,null,null,256);

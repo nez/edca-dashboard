@@ -54,13 +54,13 @@ $(document).ready(function () {
                     tooltipLocation: 'n',
                     tooltipAxes: 'yref',
                     useAxesFormatters: false,
-                    //dataLabelFormatString: '%1.f',
+                    dataLabelFormatString: '%.1f',
                     //dataLabels: 'value',
                     //tooltipFormatString: '%s'
                     tooltipContentEditor: function (current, serie, index, plot) {
                         //return "<div class='col-sm-2'><p style='color: black'><b>" + data[index][1] + " " + data[index][0] + "</b></p></div>";
-                        return "<div class='col-sm-2'><p style='color: black'>" + newData[index][0] +  " (" +newData[index][2]+")" +":<br><b> $"
-                            +  ( (   newData[index][1]    ).toFixed(2) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")  +
+                        return "<div class='col-sm-2'><p style='color: black'>" + newData[index][0] +  " (" + newData[index][2]+")" +":<br><b> $"
+                            +  ( (   newData[index][1]    ).toFixed(1) ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")  +
                                 "</b><br>Número de contratos:<br><b>"+
                                newData[index][3]                            +
                             "</b></p></div>";
