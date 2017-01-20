@@ -49,5 +49,5 @@ and (max-device-width: 736px){
 
     .stages .stages-widget img {width: 25px}
     .stages h1 {font-size: 16px}
-
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {padding: 4px;}
 }

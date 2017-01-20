@@ -226,3 +226,15 @@ and (max-device-width: 736px){
     .stages h1 {font-size: 16px}
 
 }
+
+#tablaChartDonut { padding-bottom: 20px }
+
+@media (max-width: 768px) {
+    #tablaChartDonut { padding-bottom: 0px }
+}
+
+@media (min-width: 768px) {
+    .nav-pills {
+    margin-left: 0px;
+    }
+}
