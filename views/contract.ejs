@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" lang="es-MX" xml:lang="es-MX">
     <head>
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/contratacionesabiertas/static/bower_components/font-awesome/css/font-awesome.min.css">
         <!-- Bootstrap core CSS -->
         <link href="/contratacionesabiertas/static/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
         <div class="breadcrumb-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 hidden-xs">
                         <ul class="breadcrumb">
                             <li><a href="http://datos.gob.mx"><i class="glyphicon glyphicon-home"></i></a></li>
                             <li><a href="/contratacionesabiertas" style="text-transform: none">Contrataciones Abiertas</a></li>
@@ -46,7 +46,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div id="contract-sidebar" class="col-md-4">
+                <div id="contract-sidebar" class="col-md-4 col-sm-4 col-xs-12 sidebar">
                     <div class="info">
                         <h3>Proceso de contratación</h3>
                         <% if ( typeof info.title == 'string'){%>
@@ -111,7 +111,7 @@
                         </ul>
                     </div>
                 </div>
-                <div id="contract-content" class="col-md-8">
+                <div id="contract-content" class="col-md-8 col-sm-8 col-xs-12">
                     <% if ( current_stage == 'licitacion') { %>
                     <% include stages/tender %>
                     <%} else if ( current_stage == 'adjudicacion' ) {%>
