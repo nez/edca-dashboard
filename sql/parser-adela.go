@@ -10,7 +10,7 @@ import (
 
 func main() {
   // Load a TXT file.
-  f, _ := os.Open("/Users/beto/Downloads/json_filenames2.csv")
+  f, _ := os.Open("json_filenames.csv")
   r := csv.NewReader(bufio.NewReader(f))
   w := csv.NewWriter(os.Stdout)
 
@@ -65,3 +65,4 @@ func main() {
   w.Flush()
 
 }
+
