@@ -655,3 +655,9 @@ p.cover-image                               { margin-top: 30px; text-align: cent
 .guide #dgm-sidebar .guide-navigation .item-templates a,
 .guide #dgm-sidebar .guide-navigation .item-resources a     { font-weight: normal; }
 .guide #dgm-sidebar .guide-navigation li:last-child         { margin-bottom: 0; }
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 768px) {
+    .guide h2, h3 {
+        font-size: 16px;
+    }
+}
