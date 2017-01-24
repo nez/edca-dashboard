@@ -661,3 +661,8 @@ p.cover-image                               { margin-top: 30px; text-align: cent
         font-size: 16px;
     }
 }
+
+html *
+{
+   font-family: "Open Sans" !important;
+}
