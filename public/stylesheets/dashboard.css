@@ -234,7 +234,7 @@ and (max-device-width: 736px){
 }
 
 @media (min-width: 768px) {
-    .nav {
-    padding-left: 10px;
+    .nav-pills {
+    margin-left: 0px;
     }
 }
