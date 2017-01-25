@@ -115,7 +115,7 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 .bgimg p                                    { color: #fff; }
 .bgimg .widget                              { text-align: center; }
 .bgimg h5                                   { margin-bottom: 20px; font-size: 14px; font-weight: 600; color: #fff; }
-.bgimg .stat                                { font-size: 36px; }
+.bgimg .stat                                { font-size: 34px; }
 
 
 @media only screen
