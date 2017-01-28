@@ -26,7 +26,7 @@
                 </div>
                 <div class="inner item-footer">
                     <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-3 col-xs-6">
                             <p class="small">Etapa</p>
                             <ul class="stages-icons">
                                 <li><img src="/contratacionesabiertas/static/images/ic-planeacion.png"></li>
@@ -36,11 +36,11 @@
                                 <li><img src=<%= (contracts[i].stage > 3 )?"/contratacionesabiertas/static/images/ic-implementacion.png" : "/contratacionesabiertas/static/images/ic-menu-implementacion.png" %> ></li>
                             </ul>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-3 col-xs-6">
                             <p class="small">Tipo</p>
                             <p class="legend"><%= contracts[i].procurementmethod %></p>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-3 col-xs-6">
                             <p class="small">Proveedores:</p>
                             <% if ( contracts[i].nsuppliers > 0 ) {%>
                             <p class="legend"><a href= "<%= "/contratacionesabiertas/contrato/"+ contracts[i].localid +"/adjudicacion" %>" > <%= contracts[i].nsuppliers %> </a></p>
@@ -48,7 +48,7 @@
                             <p class="legend">En proceso</p>
                             <%}%>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-3 col-xs-6">
                             <p class="small">Fecha de firma:</p>
                             <% if ( contracts[i].datesigned instanceof Date ){%>
                             <p class="legend"><%= contracts [i].datesigned.toLocaleDateString() %></p>
@@ -56,10 +56,19 @@
                             <p class="legend">En proceso</p>
                             <%}%>
                         </div>
+
+                        <div class="col-xs-6 visible-xs">
+                            <p>Descargar</p>
+                            <div>
+                                <a href="<%= contracts[i].json %>" download="json">
+                                    <span class="dataset-format" data-format="JSON">JSON</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="contract-download">
+            <div class="contract-download hidden-xs">
                 <p>Descargar</p>
                 <div>
                     <a href="<%= contracts[i].json %>" download="json">
