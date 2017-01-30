@@ -82,7 +82,9 @@
     border-right: 1px solid #d4d4d4;
     /*border-radius: 5px;*/
     margin-bottom: 0;
-    margin-left: -15px;
+    /*margin-left: -15px;*/
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .actividades2 {
