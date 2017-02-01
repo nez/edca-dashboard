@@ -39,7 +39,7 @@ func main() {
 		   }
 		*/
 		row := []string{"", id + " " + title, record[3], keywords, "2017/01/23", contact, mbox, "", "", "", "",
-			"JSON de " + id + " " + title, record[3], "http://cdn.datos.gob.mx/public/gacm/" + id + "/" + record[2], "json", "", "", ""}
+			"JSON de " + id + " " + title, record[3], "http://cdn.datos.gob.mx/public/gacm/" + id + "/" + id + ".json", "json", "", "", ""}
 		w.Write(row)
 
 		row = []string{"", id + " " + title, record[3], keywords, "2017/01/23", contact, mbox, "", "", "", "",
