@@ -154,10 +154,6 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
     //buscar cpid
     edca_db.one('select id from contractingprocess where id = $1',[cpid]).then(function (data) {
 
-        if (data.count == 0){
-            cpid = 1;
-        }
-
         var qinfo = 'select tender.contractingprocess_id as cpid, tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, ' +
             'contract.value_currency, contract.period_startdate, contract.period_enddate from tender, contract ' +
             'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ';
