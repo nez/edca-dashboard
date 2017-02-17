@@ -150,162 +150,173 @@ router.get('/contrato/:cpid/:stage',function (req, res) {
         cpid = Math.abs( req.params.cpid );
     }
 
-    var qinfo = 'select tender.contractingprocess_id as cpid, tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, ' +
-        'contract.value_currency, contract.period_startdate, contract.period_enddate from tender, contract ' +
-        'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ';
 
-    var q1 = 'select * from $1~ where contractingprocess_id = $2';
+    //buscar cpid
+    edca_db.one('select id from contractingprocess where id = $1',[cpid]).then(function (data) {
 
-    switch ( stage ){
-        case 'licitacion':
-            edca_db.task( function (t) {
-                return this.batch([
-                    //información general
-                    this.one(qinfo, [ cpid ]),
-                    this.one( q1,[ 'buyer', cpid ]),
-                    this.one(q1,[ 'tender', cpid ]),
-                    this.manyOrNone(q1,[ 'tenderitem', cpid ]),
-                    this.manyOrNone(q1,[ 'tendermilestone', cpid ]),
-                    this.manyOrNone(q1,[ 'tenderdocuments', cpid ]),
-                    this.manyOrNone(q1,[ 'tenderamendmentchanges', cpid ]),
-                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
-                    this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
-                ]);
-            }).then(function (data) {
-                res.render('contract',{
-                    current_stage: stage,
-                    info: data[0],
-                    buyer: data[1],
-                    tender : data[2],
-                    items: data[3],
-                    milestones: data[4],
-                    documents: data[5],
-                    changes: data[6],
-                    contractingprocess: data[7],
-                    links: data[8]
+        var qinfo = 'select tender.contractingprocess_id as cpid, tender.procurementmethod, contract.contractid, contract.title, contract.datesigned, contract.value_amount, ' +
+            'contract.value_currency, contract.period_startdate, contract.period_enddate from tender, contract ' +
+            'where tender.contractingprocess_id = contract.contractingprocess_id and contract.contractingprocess_id = $1 ';
+
+        var q1 = 'select * from $1~ where contractingprocess_id = $2';
+
+        switch ( stage ){
+            case 'licitacion':
+                edca_db.task( function (t) {
+                    return this.batch([
+                        //información general
+                        this.one(qinfo, [ cpid ]),
+                        this.one( q1,[ 'buyer', cpid ]),
+                        this.one(q1,[ 'tender', cpid ]),
+                        this.manyOrNone(q1,[ 'tenderitem', cpid ]),
+                        this.manyOrNone(q1,[ 'tendermilestone', cpid ]),
+                        this.manyOrNone(q1,[ 'tenderdocuments', cpid ]),
+                        this.manyOrNone(q1,[ 'tenderamendmentchanges', cpid ]),
+                        this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
+                        this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
+                    ]);
+                }).then(function (data) {
+                    res.render('contract',{
+                        current_stage: stage,
+                        info: data[0],
+                        buyer: data[1],
+                        tender : data[2],
+                        items: data[3],
+                        milestones: data[4],
+                        documents: data[5],
+                        changes: data[6],
+                        contractingprocess: data[7],
+                        links: data[8]
+                    });
+                }).catch(function (error) {
+                    console.log("ERROR: ", error);
+                    res.render ('contract' );
                 });
-            }).catch(function (error) {
-                console.log("ERROR: ", error);
-                res.render ('contract' );
-            });
-            break;
-        case 'adjudicacion':
-            edca_db.task( function (t) {
-                return this.batch([
-                    //información general
-                    this.one(qinfo, [ cpid ]),
-                    this.one(q1,[ 'buyer',cpid ]),
-                    this.one(q1 ,[ 'award', cpid ]),
-                    this.manyOrNone(q1 ,[ 'supplier', cpid ]),
-                    this.manyOrNone(q1 ,[ 'awarditem', cpid ]),
-                    this.manyOrNone(q1 ,[ 'awarddocuments', cpid ]),
-                    this.manyOrNone(q1 ,[ 'awardamendmentchanges', cpid ]),
-                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
-                    this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
-                ]);
-            }).then(function (data) {
-                res.render('contract',{
-                    current_stage: stage,
-                    info: data[0],
-                    buyer: data[1],
-                    award : data[2],
-                    suppliers: data[3],
-                    items: data[4],
-                    documents: data[5],
-                    changes: data[6],
-                    contractingprocess: data[7],
-                    links: data[8]
+                break;
+            case 'adjudicacion':
+                edca_db.task( function (t) {
+                    return this.batch([
+                        //información general
+                        this.one(qinfo, [ cpid ]),
+                        this.one(q1,[ 'buyer',cpid ]),
+                        this.one(q1 ,[ 'award', cpid ]),
+                        this.manyOrNone(q1 ,[ 'supplier', cpid ]),
+                        this.manyOrNone(q1 ,[ 'awarditem', cpid ]),
+                        this.manyOrNone(q1 ,[ 'awarddocuments', cpid ]),
+                        this.manyOrNone(q1 ,[ 'awardamendmentchanges', cpid ]),
+                        this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
+                        this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
+                    ]);
+                }).then(function (data) {
+                    res.render('contract',{
+                        current_stage: stage,
+                        info: data[0],
+                        buyer: data[1],
+                        award : data[2],
+                        suppliers: data[3],
+                        items: data[4],
+                        documents: data[5],
+                        changes: data[6],
+                        contractingprocess: data[7],
+                        links: data[8]
+                    });
+                }).catch(function (error) {
+                    console.log("ERROR: ", error);
+                    res.render ('contract' );
                 });
-            }).catch(function (error) {
-                console.log("ERROR: ", error);
-                res.render ('contract' );
-            });
-            break;
-        case 'contratacion':
-            edca_db.task( function (t) {
-                return this.batch([
-                    //información general
-                    this.one(qinfo, [ cpid ]),
-                    this.one(q1,[ 'buyer', cpid ]),
-                    this.one(q1 ,[ 'contract', cpid ]),
-                    this.manyOrNone(q1 ,[ 'contractitem', cpid ]),
-                    this.manyOrNone(q1 ,[ 'contractdocuments', cpid ]),
-                    this.manyOrNone(q1 ,[ 'contractamendmentchanges', cpid ]),
-                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
-                    this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
-                ]);
-            }).then(function (data) {
-                res.render('contract',{
-                    current_stage: stage,
-                    info: data[0],
-                    buyer: data[1],
-                    contract : data[2],
-                    items : data[3],
-                    documents : data[4],
-                    changes : data[5],
-                    contractingprocess : data[6],
-                    links: data[7]
+                break;
+            case 'contratacion':
+                edca_db.task( function (t) {
+                    return this.batch([
+                        //información general
+                        this.one(qinfo, [ cpid ]),
+                        this.one(q1,[ 'buyer', cpid ]),
+                        this.one(q1 ,[ 'contract', cpid ]),
+                        this.manyOrNone(q1 ,[ 'contractitem', cpid ]),
+                        this.manyOrNone(q1 ,[ 'contractdocuments', cpid ]),
+                        this.manyOrNone(q1 ,[ 'contractamendmentchanges', cpid ]),
+                        this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
+                        this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
+                    ]);
+                }).then(function (data) {
+                    res.render('contract',{
+                        current_stage: stage,
+                        info: data[0],
+                        buyer: data[1],
+                        contract : data[2],
+                        items : data[3],
+                        documents : data[4],
+                        changes : data[5],
+                        contractingprocess : data[6],
+                        links: data[7]
+                    });
+                }).catch(function (error) {
+                    console.log("ERROR: ", error);
+                    res.render ('contract' );
                 });
-            }).catch(function (error) {
-                console.log("ERROR: ", error);
-                res.render ('contract' );
-            });
-            break;
-        case 'implementacion':
-            edca_db.task( function (t) {
-                return this.batch([
-                    //información general
-                    this.one(qinfo, [ cpid ]),
-                    this.one(q1,['buyer', cpid ]),
-                    this.manyOrNone(q1, ['implementationtransactions', cpid ]),
-                    this.manyOrNone(q1, ['implementationmilestone', cpid ]),
-                    this.manyOrNone(q1, ['implementationdocuments', cpid ]),
-                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
-                    this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
-                ]);
-            }).then(function (data) {
-                res.render('contract',{
-                    current_stage: stage,
-                    info: data[0],
-                    buyer: data[1],
-                    transactions: data[2],
-                    milestones: data[3],
-                    documents: data[4],
-                    contractingprocess : data[5],
-                    links: data[6]
+                break;
+            case 'implementacion':
+                edca_db.task( function (t) {
+                    return this.batch([
+                        //información general
+                        this.one(qinfo, [ cpid ]),
+                        this.one(q1,['buyer', cpid ]),
+                        this.manyOrNone(q1, ['implementationtransactions', cpid ]),
+                        this.manyOrNone(q1, ['implementationmilestone', cpid ]),
+                        this.manyOrNone(q1, ['implementationdocuments', cpid ]),
+                        this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
+                        this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
+                    ]);
+                }).then(function (data) {
+                    res.render('contract',{
+                        current_stage: stage,
+                        info: data[0],
+                        buyer: data[1],
+                        transactions: data[2],
+                        milestones: data[3],
+                        documents: data[4],
+                        contractingprocess : data[5],
+                        links: data[6]
+                    });
+                }).catch(function (error) {
+                    console.log("ERROR: ", error);
+                    res.render ('contract' );
                 });
-            }).catch(function (error) {
-                console.log("ERROR: ", error);
-                res.render ('contract' );
-            });
-            break;
-        default:
-            edca_db.task( function (t) {
-                return this.batch([
-                    //información general
-                    this.one(qinfo, [cpid]),
-                    this.one(q1, ['buyer', cpid]),
-                    this.one(q1 ,['budget', cpid]),
-                    this.manyOrNone(q1,['planningdocuments', cpid]),
-                    this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
-                    this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
-                ]);
-            }).then(function (data) {
-                res.render('contract',{
-                    current_stage: stage,
-                    info: data[0],
-                    buyer: data[1],
-                    budget : data[2],
-                    documents: data[3],
-                    contractingprocess: data[4],
-                    links: data[5]
+                break;
+            default:
+                edca_db.task( function (t) {
+                    return this.batch([
+                        //información general
+                        this.one(qinfo, [cpid]),
+                        this.one(q1, ['buyer', cpid]),
+                        this.one(q1 ,['budget', cpid]),
+                        this.manyOrNone(q1,['planningdocuments', cpid]),
+                        this.oneOrNone("select * from contractingprocess where id = $1",[ cpid ]),
+                        this.oneOrNone("select * from links where contractingprocess_id = $1",[ cpid ])
+                    ]);
+                }).then(function (data) {
+                    res.render('contract',{
+                        current_stage: stage,
+                        info: data[0],
+                        buyer: data[1],
+                        budget : data[2],
+                        documents: data[3],
+                        contractingprocess: data[4],
+                        links: data[5]
+                    });
+                }).catch(function (error) {
+                    console.log("ERROR: ", error);
+                    res.render ('error' ,{ message:'Proceso de contratación inexistente', error: error  });
                 });
-            }).catch(function (error) {
-                console.log("ERROR: ", error);
-                res.render ('error' ,{ message:'Proceso de contratación inexistente', error: error  });
-            });
-            break;
-    }
+                break;
+        }
+
+
+    }).catch(function (error) {
+        res.send("Atención: <b>Proceso no registrado</b>")
+        console.log(error);
+    });
+
 });
 
 

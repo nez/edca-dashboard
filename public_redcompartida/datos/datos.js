@@ -821,7 +821,12 @@ var dt = {
                 }, {
                     "name": "Inhabilitaciones",
                     "children": [{
-                        "info1": "Depender\u00e1 del an\u00e1lisis que realice el Instituto Federal de Telecomunicaciones (IFT). El IFT publicar\u00e1 en su p\u00e1gina de Internet (www.ift.org.mx), los elementos de referencia para identificar ex ante a los agentes econ\u00f3micos que, si bien podr\u00e1n participar en el Concurso como parte de un Consorcio, est\u00e1n impedidos para tener influencia en la operaci\u00f3n de la Red Compartida, y el instructivo para que los agentes econ\u00f3micos soliciten la Opini\u00f3n en Materia de Competencia Econ\u00f3mica al IFT para participar en el presente Concurso. Los Concursantes deber\u00e1n acudir ante el IFT, a m\u00e1s tardar el 9 de mayo de 2016, a solicitar la Opini\u00f3n en Materia de Competencia Econ\u00f3mica, atendiendo para ello los requisitos y plazos establecidos por dicho Instituto. Podr\u00e1n participar en el Concurso las personas que hayan obtenido una opini\u00f3n en sentido favorable o favorable sujeta a condiciones, siempre y cuando se encuentre en cumplimiento de tales condiciones, en opini\u00f3n del IFT",
+                        "info1": "Depender\u00e1 del an\u00e1lisis que realice el Instituto Federal de Telecomunicaciones (IFT). El IFT publicar\u00e1 en su p\u00e1gina de Internet (www.ift.org.mx)," +
+                        " los elementos de referencia para identificar ex ante a los agentes econ\u00f3micos que, si bien podr\u00e1n participar en el Concurso como parte de un Consorcio, est\u00e1n impedidos " +
+                        "para tener influencia en la operaci\u00f3n de la Red Compartida, y el instructivo para que los agentes econ\u00f3micos soliciten la Opini\u00f3n en Materia de Competencia Econ\u00f3mica al IFT " +
+                        "para participar en el presente Concurso. Los Concursantes deber\u00e1n acudir ante el IFT, a m\u00e1s tardar el 9 de mayo de 2016, a solicitar la Opini\u00f3n en Materia de Competencia " +
+                        "Econ\u00f3mica, atendiendo para ello los requisitos y plazos establecidos por dicho Instituto. Podr\u00e1n participar en el Concurso las personas que hayan obtenido una opini\u00f3n en " +
+                        "sentido favorable o favorable sujeta a condiciones, siempre y cuando se encuentre en cumplimiento de tales condiciones, en opini\u00f3n del IFT",
                         "mouseover": "Son las inhabilitaciones emitidas, referentes a las empresas que no pueden participar en el proceso de Concurso",
                         "info2": "IFT/Unidad de Competencia Econ\u00f3mica",
                         "info3": "",
@@ -1402,7 +1407,7 @@ var dt = {
                             "name": "Estatus",
                             "children": [{
                                 //"info1": "La informaci\u00f3n se publicar\u00e1 conforme se genere durante el proyecto",
-                                "info1": "ACTAS PUBLICADAS EN COMPRANET EN OCTUBRE Y NOVIEMBRE DE 2016",
+                                "info1": "CONCLUIDO",
                                 "mouseover": "Es el estatus actual del hito",
                                 "info2": "",
                                 "info3": "",
@@ -1412,7 +1417,7 @@ var dt = {
                             "name": "Documentos de soporte ",
                             "children": [{
                                 //"info1": "La informaci\u00f3n se publicar\u00e1 conforme se genere durante el proyecto",
-                                "info1": "ACTA",
+                                "info1": "ACTAS PUBLICADAS EN COMPRANET EN OCTUBRE Y NOVIEMBRE DE 2016",
                                 "mouseover": "Son los documento que demuestran que el hito fue cumplido",
                                 "info2": "",
                                 "info3": "",
@@ -1465,17 +1470,17 @@ var dt = {
                             "name": "Fecha modificada ",
                             "children": [{
                                 // "info1": "La informaci\u00f3n se publicar\u00e1 conforme se genere durante el proyecto",
-                                "info1": "A más tardar el 27/01/2017",
+                                "info1": "2017-01-24",
                                 "mouseover": "En caso de modificaci\u00f3n, se\u00f1alar la fecha en la que tiene que suceder el hito si es que no coincide con la originalmente establecida",
-                                "info2": "A más tardar el 27/01/2017",
-                                "info3": " A más tardar el 27/01/2017",
+                                "info2": "2017-01-24",
+                                "info3": "2017-01-24",
                                 "name": "Fecha modificada del hito del proceso de Concurso o contrataci\u00f3n (opcional)"
                             }]
                         }, {
                             "name": "Estatus",
                             "children": [{
                                 //"info1": "La informaci\u00f3n se publicar\u00e1 conforme se genere durante el proyecto",
-                                "info1": "EN PROCESO",
+                                "info1": "CONCLUIDA",
                                 "mouseover": "Es el estatus actual del hito",
                                 "info2": "",
                                 "info3": "",
@@ -1486,7 +1491,7 @@ var dt = {
                             "children": [{
                                 //"info1": "La informaci\u00f3n se publicar\u00e1 conforme se genere durante el proyecto",
                                 "info1": "Concesión Mayorista, de la Concesión de Espectro y celebración del Contrato de APP",
-                                "mouseover": "Son los documento que demuestran que el hito fue cumplido",
+                                "mouseover": "Son los documentos que demuestran que el hito fue cumplido",
                                 "info2": "",
                                 "info3": "",
                                 "name": "Documentos que comprueban que se cumpli\u00f3 el hito"
@@ -1504,7 +1509,7 @@ var dt = {
                             "children": [{
                                 // "info1": "La informaci\u00f3n se publicar\u00e1 conforme se genere durante el proyecto",
                                 "info1": "2016-06-07",
-                                "mouseover": "Es la fecha en que se realiza la modificaci\u00f3n a la Concurso",
+                                "mouseover": "Es la fecha en que se realiza la modificaci\u00f3n al Concurso",
                                 "info2": "",
                                 "info3": "",
                                 "name": "Fecha en que se realiza la modificaci\u00f3n"
@@ -1557,7 +1562,9 @@ var dt = {
                             "name": "Justificaci\u00f3n ",
                             "children": [{
                                 //"info1": "La informaci\u00f3n se publicar\u00e1 conforme se genere durante el proyecto",
-                                "info1": "En atención a las solicitudes realizadas en las juntas de aclaraciones y con el fin de permitir que los concursantes cuenten con más tiempo para avanzar en los trámites necesarios para el cierre del financiamiento, así como para que estructuren, propongan y negocien sus instrumentos de deuda, y corran los trámites necesarios para obtener las aprobaciones de los comités respectivos, se determinó modificar el calendario del concurso de la Red Compartida.",
+                                "info1": "En atención a las solicitudes realizadas en las juntas de aclaraciones y con el fin de permitir que los concursantes cuenten " +
+                                "con más tiempo para avanzar en los trámites necesarios para el cierre del financiamiento, así como para que estructuren, propongan y negocien " +
+                                "sus instrumentos de deuda, y corran los trámites necesarios para obtener las aprobaciones de los comités respectivos, se determinó modificar el calendario del concurso de la Red Compartida.",
                                 "mouseover": "Es la justificaci\u00f3n de la modificaci\u00f3n que se realiza a la concurso",
                                 "info2": "",
                                 "info3": "",

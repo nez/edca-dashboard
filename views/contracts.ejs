@@ -60,9 +60,11 @@
                         <div class="col-xs-6 visible-xs">
                             <p>Descargar</p>
                             <div>
+                                <% if (contracts[i].json != null) {%>
                                 <a href="<%= contracts[i].json %>" download="json">
                                     <span class="dataset-format" data-format="JSON">JSON</span>
                                 </a>
+                                <%}%>
                             </div>
                         </div>
                     </div>
@@ -71,9 +73,11 @@
             <div class="contract-download hidden-xs">
                 <p>Descargar</p>
                 <div>
+                    <% if (contracts[i].json != null) {%>
                     <a href="<%= contracts[i].json %>" download="json">
                         <span class="dataset-format" data-format="JSON">JSON</span>
                     </a>
+                    <%}%>
                 </div>
             </div>
         </div>
