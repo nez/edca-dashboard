@@ -9,6 +9,7 @@ var routes = require('./routes/index');
 //var contrataciones = require('./routes/contrataciones');
 var puertos = require('./routes/puertos');
 //var redcompartida = require('./routes/redcompartida');
+var red = require('./routes/red');
 
 var app = express();
 
@@ -24,11 +25,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/contratacionesabiertas/static',express.static(path.join(__dirname, 'public')));
 app.use('/puertosabiertos/static',express.static(path.join(__dirname, 'public_puertos')));
-app.use('/contratacionesabiertas/redcompartida/static',express.static(path.join(__dirname, 'public_redcompartida')));
+app.use('/redcompartida/static',express.static(path.join(__dirname, 'public_redcompartida')));
 
 //app.use('/', routes);
 app.use('/contratacionesabiertas', routes);
 app.use('/puertosabiertos', puertos);
+app.use('/redcompartida', red)
 //app.use('/redcompartida', redcompartida);
 
 // catch 404 and forward to error handler

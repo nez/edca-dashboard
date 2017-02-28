@@ -10,8 +10,8 @@ if ( typeof process.env.EDCA_DB != "undefined" ){
     edca_db = pgp( process.env.EDCA_DB );
 } else {
     console.log("Warning: EDCA_DB env variable is not set\n " +
-        " defaulting to -> postgres://tester:test@localhost/edca");
-    edca_db = pgp("postgres://tester:test@localhost/edca");
+        " defaulting to -> postgres://tester:test@0.0.0.0/edca");
+    edca_db = pgp("postgres://tester:test@0.0.0.0/edca");
 }
 
 /* GET home page. */
@@ -391,12 +391,6 @@ router.get('/d3-bubble-chart-data', function (req, res) {
     }).catch(function (error) {
         res.json(error);
     });
-});
-
-
-/* GET home page. */
-router.get('/redcompartida', function(req, res, next) {
-    res.render('red', { title: 'Contrataciones Abiertas' });
 });
 
 module.exports = router;
