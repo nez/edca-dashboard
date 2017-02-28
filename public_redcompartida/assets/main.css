@@ -106,7 +106,7 @@ p.big                                       { margin-bottom: 30px; font-size: 24
 
 .bgimg                                      { height: 400px; margin-bottom: 30px; padding: 50px 0; background: #424242; background-size: 1024px 270px; background-position: bottom; background-repeat: no-repeat; text-align: center; }
 
-.bgimg                                      { margin-bottom: 0; min-height: 400px; background-image: url('/contratacionesabiertas/redcompartida/static/images/bgr.png'); background-size: cover; background-position:center;}
+.bgimg                                      { margin-bottom: 0; min-height: 400px; background-image: url('/redcompartida/static/images/bgr.png'); background-size: cover; background-position:center;}
 
 
 .bgimg img                                  { width: 80px; }
